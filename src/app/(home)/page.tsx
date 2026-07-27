@@ -7,7 +7,6 @@ import {
 import BannerLeftRight from "@/components/home/BannerLeftRight";
 import BannerPopup from "@/components/home/BannerPopup";
 import HomeTrustBand from "@/components/home/HomeTrustBand";
-import { FeaturedCategories } from "@/components/home/featuredCategories";
 import { GroupBanner } from "@/components/home/groupBanner";
 import { LazySection } from "@/components/ui/lazySection";
 import { SkeletonLoader } from "@/components/ui/skeletonLoader";
@@ -55,14 +54,13 @@ export default async function Home() {
     <>
       <div className="bg-[#F1F8FE] pb-8">
         <Banner />
-
-        <HomeTrustBand />
-
-        <FeaturedCategories />
-
         <LazySection>
           <GroupBanner bannerKey="bannerBottom" columns={4} gap={3} />
         </LazySection>
+
+        {/* <FeaturedCategories /> */}
+
+
 
         <LazySection height="h-48">
           <TopSellingProducts data={getValidData(productsHot) ?? []} />

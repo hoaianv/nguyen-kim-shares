@@ -152,7 +152,9 @@ const CardProduct = ({ item }: { item: IProduct }) => {
             </h3>
           </Link>
 
+          <div>
 
+          </div>
 
           <div className="mt-auto space-y-2 border-t border-border pt-3">
             <div className="flex items-end justify-between gap-3">

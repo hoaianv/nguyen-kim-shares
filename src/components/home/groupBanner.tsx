@@ -6,7 +6,6 @@ import { motion, useReducedMotion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
 
-import HomeSectionHeader from "./HomeSectionHeader";
 
 interface BannerProps {
   bannerKey?: (typeof bannerKeys)[keyof typeof bannerKeys];
@@ -34,15 +33,8 @@ export const GroupBanner = ({
 
   if (!advertises.length) return null;
 
-  const title =
-    bannerKey === bannerKeys.bannerGroupFour
-      ? "Khuyến mãi trong tuần"
-      : "Ưu đãi theo ngành hàng";
 
-  const description =
-    bannerKey === bannerKeys.bannerGroupFour
-      ? "Các chương trình đang chạy được gom thành một dải dễ bấm."
-      : "Banner phụ cho từng nhóm nhu cầu mua sắm.";
+
 
   return (
     <motion.section
@@ -53,14 +45,10 @@ export const GroupBanner = ({
       transition={{ duration: 0.32, ease: "easeOut" }}
     >
       <div className="mx-auto mt-3 w-full max-w-[1520px] px-3 sm:px-4 lg:px-6">
-        <HomeSectionHeader
-          eyebrow="Ưu đãi"
-          title={title}
-          description={description}
-        />
+
 
         <div
-          className={`grid gap-3 rounded-b-md bg-white p-3 shadow-sm ${GRID_CLASSES[columns]}`}
+          className={`grid gap-3 rounded-b-md    shadow-sm ${GRID_CLASSES[columns]}`}
         >
           {advertises.slice(0, columns).map((item) => (
             <Link

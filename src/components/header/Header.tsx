@@ -135,6 +135,17 @@ const Header = () => {
     handleKeyDown(e);
   };
 
+  const openDesktopMenu = () => {
+    setDesktopMenuOpen(true);
+    setMobileDrawerOpen(false);
+    setMobileSearchOpen(false);
+    setDesktopSearchOpen(false);
+  };
+
+  const closeDesktopMenu = () => {
+    setDesktopMenuOpen(false);
+  };
+
   const renderAction = (item: (typeof itemsHeader)[number]) => {
     const trigger = item.renderItem?.();
     if (!trigger) return null;
@@ -161,7 +172,11 @@ const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-white text-slate-950 shadow-sm">
+    <header
+      className={`sticky top-0 bg-white text-slate-950 shadow-sm ${
+        desktopMenuOpen ? "z-[90]" : "z-50"
+      }`}
+    >
       <div className="bg-[#ffb716] text-slate-950">
         <div className="mx-auto flex h-9 max-w-[1370px] items-center justify-start gap-5 overflow-x-auto px-3 text-sm font-medium sm:px-4 lg:justify-center lg:gap-8">
           {utilityLinks.map((item) => {
@@ -182,13 +197,12 @@ const Header = () => {
       </div>
 
       <div className="border-b border-slate-100 bg-white">
-        <div className="mx-auto grid max-w-[1370px] grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-3 px-3 py-3 sm:px-4 lg:grid-cols-[130px_190px_minmax(0,1fr)_auto] lg:gap-5 lg:py-5">
+        <div className="mx-auto grid max-w-[1370px] grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-3 px-3 py-3 sm:px-4 lg:grid-cols-[140px_172px_minmax(0,1fr)_auto] lg:gap-5 lg:py-5">
           <button
-            ref={desktopMenuButtonRef}
             type="button"
             onClick={() => {
               setMobileDrawerOpen((prev) => !prev);
-              setDesktopMenuOpen(false);
+              closeDesktopMenu();
               setDesktopSearchOpen(false);
               setMobileSearchOpen(false);
             }}
@@ -198,7 +212,7 @@ const Header = () => {
             {mobileDrawerOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
 
-          <Link href="/" className="block w-[112px] shrink-0 lg:w-[126px]">
+          <Link href="/" className="block w-[112px] shrink-0 lg:w-[136px]">
             {config?.settingLogo?.logo && (
               <Image
                 src={config.settingLogo.logo}
@@ -212,14 +226,12 @@ const Header = () => {
           </Link>
 
           <button
+            ref={desktopMenuButtonRef}
             type="button"
-            onClick={() => {
-              setDesktopMenuOpen((prev) => !prev);
-              setMobileDrawerOpen(false);
-              setMobileSearchOpen(false);
-              setDesktopSearchOpen(false);
-            }}
-            className={`hidden h-10 items-center justify-center gap-2 rounded-sm border px-3 text-sm font-semibold transition lg:inline-flex ${
+            onClick={() =>
+              desktopMenuOpen ? closeDesktopMenu() : openDesktopMenu()
+            }
+            className={`relative z-[100] hidden h-9 items-center justify-center gap-1.5 rounded-sm border px-2.5 text-[13px] font-semibold transition lg:inline-flex ${
               desktopMenuOpen
                 ? "border-[#ffb716] bg-[#fff7da] text-[#e6a414] shadow-sm"
                 : "border-slate-200 bg-white text-slate-800 hover:border-[#ffb716] hover:text-[#e6a414]"
@@ -233,7 +245,7 @@ const Header = () => {
               desktopMenuOpen ? "Đóng danh mục sản phẩm" : "Mở danh mục sản phẩm"
             }
           >
-            {desktopMenuOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
+            {desktopMenuOpen ? <X className="h-3.5 w-3.5" /> : <Menu className="h-3.5 w-3.5" />}
             <span className="whitespace-nowrap">{desktopMenuOpen ? "Đóng danh mục" : "Danh mục sản phẩm"}</span>
           </button>
 
@@ -317,7 +329,7 @@ const Header = () => {
           mobileOpen={mobileDrawerOpen}
           id="desktop-category-panel"
           panelRef={desktopMenuPanelRef}
-          onClose={() => setDesktopMenuOpen(false)}
+          onClose={closeDesktopMenu}
           onMobileClose={() => setMobileDrawerOpen(false)}
         />
       </div>

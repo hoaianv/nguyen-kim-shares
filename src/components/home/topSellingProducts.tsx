@@ -1,13 +1,11 @@
 "use client";
 
 import { IProduct } from "@/interfaces/models/IProduct.interface";
-import { useTranslations } from "next-intl";
 import { motion, useReducedMotion } from "motion/react";
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { ArrowLeft, ArrowRight, Flame } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
-import HomeSectionHeader from "./HomeSectionHeader";
 import CardProduct from "@/components/ui/cardProduct";
 import {
   getResponsiveColumnCount,
@@ -25,7 +23,6 @@ const navBase =
   "flex h-9 w-9 items-center justify-center rounded bg-white/35 text-slate-950 transition hover:bg-white hover:text-[#e6a414]";
 
 const TopSellingProducts = ({ data }: ProductProps) => {
-  const t = useTranslations();
   const reduceMotion = useReducedMotion();
   const { ref, width } = useElementWidth<HTMLDivElement>();
 
@@ -48,14 +45,6 @@ const TopSellingProducts = ({ data }: ProductProps) => {
     >
       <div className="overflow-hidden rounded-md bg-white shadow-sm">
         <div className="relative">
-          <HomeSectionHeader
-            eyebrow="Hot"
-            title={t("TITLE.featured_products")}
-            description="Sản phẩm đang được quan tâm nhiều, ưu tiên hiển thị giá và tình trạng hàng."
-            actionLabel={t("COMMON.view_all")}
-            actionHref="/san-pham"
-            className="pr-24"
-          />
 
           <div className="absolute right-4 top-1/2 hidden -translate-y-1/2 items-center gap-2 sm:flex">
             <button
@@ -75,20 +64,7 @@ const TopSellingProducts = ({ data }: ProductProps) => {
           </div>
         </div>
 
-        <div className="grid gap-3 p-3 xl:grid-cols-[220px_minmax(0,1fr)]">
-          <aside className="hidden rounded-sm bg-[#fff7d6] p-4 xl:block">
-            <div className="flex h-12 w-12 items-center justify-center rounded bg-[#ffb716] text-slate-950">
-              <Flame className="h-6 w-6" />
-            </div>
-            <p className="mt-4 text-xl font-extrabold leading-tight text-slate-950">
-              Hàng bán chạy trong hệ thống
-            </p>
-            <p className="mt-2 text-sm leading-6 text-slate-600">
-              Lọc nhanh theo các sản phẩm có nhu cầu mua cao để khách dễ so sánh
-              ngay trên trang chủ.
-            </p>
-          </aside>
-
+        <div className="grid gap-3 p-3">
           <div ref={ref} className="min-w-0">
             <Swiper
               slidesPerView={slidesPerView}
