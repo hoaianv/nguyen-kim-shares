@@ -1,0 +1,102 @@
+{
+  "HEADER": {
+    "product_category": "Danh mục sản phẩm",
+    "promotion_news": "Tin khuyến mãi",
+    "product_page": "Trang sản phẩm",
+    "pc_builder": "Xây dựng cấu hình",
+    "tech_news": "Tin công nghệ",
+    "news": "Tin tức",
+    "contact": "Liên hệ",
+    "services": "Dịch vụ",
+    "careers": "Tuyển dụng",
+    "auth": "Đăng ký/ đăng nhập",
+    "notifications": "Thông báo",
+    "cart": "Giỏ hàng",
+    "search_placeholder": "Nhập từ khóa tìm kiếm...",
+    "no_notifications": "Chưa có thông báo nào",
+    "empty_cart": "Giỏ hàng trống",
+    "shop_now": "Mua sắm ngay",
+    "view_cart": "Xem giỏ hàng",
+    "hello": "Chào bạn",
+    "not_updated": "Chưa cập nhật"
+  },
+  "ACCOUNT": {
+    "personal_info": "Thông tin cá nhân",
+    "order_management": "Quản lý đơn hàng",
+    "viewed_products": "Sản phẩm đã xem",
+    "address_book": "Sổ địa chỉ",
+    "favorite_products": "Sản phẩm yêu thích",
+    "account_overview": "Tổng quan tài khoản",
+    "logout": "Đăng xuất"
+  },
+  "TITLE": {
+    "featured_categories": "Danh mục nổi bật",
+    "featured_products": "Sản phẩm nổi bật",
+    "you_may_like": "Có thể bạn quan tâm",
+    "latest_posts": "Bài viết mới nhất",
+    "most_viewed": "Xem nhiều nhất"
+  },
+  "FOOTER": {
+    "support_hotline": "Tổng đài hỗ trợ",
+    "policies_terms": "Chính sách & Điều khoản",
+    "our_location": "Vị trí của chúng tôi",
+    "about_nguyen_kim": "Về Nguyên Kim"
+  },
+  "COMMON": {
+    "view_all": "Xem tất cả",
+    "in_stock": "Còn hàng",
+    "temporarily_out_of_stock": "Tạm hết hàng",
+    "out_of_stock": "Hết hàng",
+    "contact": "Liên hệ",
+    "add_to_cart": "Thêm vào giỏ",
+    "get_expert_advice": "Nhận tư vấn từ chuyên gia",
+    "buy_now": "Mua ngay",
+    "brand": "Thương hiệu",
+    "choose": "Chọn",
+    "sort_by": "Sắp xếp theo",
+    "best_selling": "Bán chạy",
+    "price_asc": "Giá tăng dần",
+    "price_desc": "Giá giảm dần",
+    "select_brand": "Chọn thương hiệu",
+    "search": "Tìm kiếm",
+    "search_accessories": "Tìm kiếm phụ kiện",
+    "delete": "Xóa"
+  },
+  "BREADCRUMB": {
+    "home": "Trang chủ"
+  },
+  "PROMOTION": {
+    "ongoing_offers": "Ưu đãi đang diễn ra",
+    "promotion_news": "Tin khuyến mãi",
+    "daily_offers_summary": "Tổng hợp ưu đãi hấp dẫn, cập nhật liên tục mỗi ngày."
+  },
+  "BUILD_PC": {
+    "configuration": "Cấu hình",
+    "reload": "Tải lại",
+    "load_configuration": "Tải cấu hình",
+    "estimated_cost": "Chi phí dự tính",
+    "confirm_reload_configuration": "Bạn có chắc chắn muốn tải lại cấu hình này?",
+    "reload_configuration": "Tải lại cấu hình",
+    "select_component": "Chọn linh kiện",
+    "please_select_component": "Vui lòng chọn linh kiện"
+  },
+  "NEWS": {
+    "news": "Tin tức"
+  },
+  "PRODUCT": {
+    "product_code": "Mã sản phẩm",
+    "status": "Tình trạng",
+    "choose_promotion": "Chọn 1 trong những khuyến mãi sau",
+    "gift_included": "Quà tặng đi kèm",
+    "specifications": "Thông số kỹ thuật",
+    "related_products": "Sản phẩm liên quan",
+    "quantity": "Số lượng",
+    "compare_products": "So sánh sản phẩm",
+    "view_more": "Xem thêm",
+    "view_more_content": "Xem thêm nội dung",
+    "apply": "Áp dụng",
+    "view_details": "Xem chi tiết",
+    "show_less": "Ẩn bớt",
+    "remove": "Bỏ chọn"
+  }
+}

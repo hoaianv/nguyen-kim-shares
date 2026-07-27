@@ -1,0 +1,90 @@
+import { findOne, getAll } from "@/apis/models/policy.apis";
+import Breadcrumb from "@/components/ui/breadcrumb";
+import Post from "@/components/ui/Post";
+import { Props } from "@/interfaces/common";
+import { getValidData } from "@/lib/utils";
+import { Calendar } from "lucide-react";
+import Link from "next/link";
+
+export default async function page({ params }: Props) {
+  const [all, detail] = await Promise.all([getAll(), findOne(params.slug)]);
+
+  const detailData = getValidData(detail);
+  const allData = getValidData(all);
+
+  if (!detailData) return null;
+
+  const { breadcrumb, items } = detailData;
+  return detailData ? (
+    <main className="max-w-6xl mx-auto px-4 py-1 mt-2">
+      <Breadcrumb items={breadcrumb ?? []} />
+
+      <article className="bg-white rounded-lg shadow-sm overflow-hidden mt-4">
+        <div className="p-6 md:p-8">
+          {allData && (
+            <div className="mb-4">
+              <div
+                className={[
+                  "flex gap-2 overflow-x-auto -mx-2 px-2 whitespace-nowrap snap-x snap-mandatory",
+                  "[scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden",
+                  "md:flex-wrap md:justify-center md:overflow-visible md:whitespace-normal",
+                  "lg:flex lg:flex-wrap lg:justify-center lg:gap-2",
+                ].join(" ")}
+              >
+                {allData.map((item) => {
+                  const isActive = item.url === params.slug;
+                  return (
+                    <Link
+                      href={item.url}
+                      key={item.id}
+                      className="snap-start flex-shrink-0 md:flex-shrink"
+                    >
+                      <div
+                        className={[
+                          "inline-block rounded-lg font-medium transition-all duration-200 cursor-pointer",
+                          "px-3 py-1.5 text-sm md:px-4 md:py-2 md:text-base",
+                          isActive
+                            ? "bg-yellow-500 text-white border border-yellow-600 shadow-md"
+                            : "bg-white text-gray-800 border border-yellow-400/50 shadow-sm hover:bg-yellow-50 hover:border-yellow-500 hover:shadow-md active:translate-y-[1px] active:shadow-inner",
+                        ].join(" ")}
+                      >
+                        <h2 className="font-medium">{item.title}</h2>
+                      </div>
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+
+          <div>
+            <div className="text-center">
+              <h1
+                className="font-bold 
+                text-gray-900 
+                mb-4 
+                leading-tight
+                text-xl
+                sm:text-2xl
+                md:text-3xl
+                lg:text-4xl"
+              >
+                {items?.title}
+              </h1>
+            </div>
+
+            {/* Article Meta */}
+            <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500 mb-6">
+              <div className="flex items-center gap-1">
+                <Calendar size={16} />
+                <time dateTime={items?.createdAt}>{items?.createdAt}</time>
+              </div>
+            </div>
+          </div>
+
+          <Post data={items?.description} />
+        </div>
+      </article>
+    </main>
+  ) : null;
+}

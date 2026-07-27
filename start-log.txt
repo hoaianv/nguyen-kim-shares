@@ -1,0 +1,21 @@
+
+> nguyenkim-dl-next@0.1.0 dev
+> next dev -p 4002
+
+  ▲ Next.js 14.2.3
+  - Local:        http://localhost:4002
+
+ ✓ Starting...
+ ✓ Ready in 12.4s
+ ○ Compiling / ...
+ ✓ Compiled / in 11.1s (1964 modules)
+ ✓ Compiled in 734ms (902 modules)
+ GET / 200 in 13135ms
+ GET / 200 in 1099ms
+ ✓ Compiled /favicon.ico in 329ms (1092 modules)
+ GET /favicon.ico 200 in 536ms
+ ○ Compiling /[slug] ...
+ ✓ Compiled /[slug] in 5.9s (2338 modules)
+ GET /may-in-hp-laserjet-pro-4003dw-2z610a 200 in 10980ms
+ GET /favicon.ico 200 in 50ms
+[?25h
