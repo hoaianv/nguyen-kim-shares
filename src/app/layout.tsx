@@ -8,8 +8,14 @@ import { getMe } from "@/apis/common/auth.apis";
 import { getAll as getAllAdvertise } from "@/apis/models/advertise.apis";
 import { BannerInitializer } from "@/init/BannerInitializer";
 import { getAll as getAllSupport } from "@/apis/models/support.apis";
-import { getAll as getAllConfig } from "@/apis/common/footer.apis";
+import {
+  getAll as getAllConfig,
+  getAllSections as getAllFooterSections,
+} from "@/apis/common/footer.apis";
 import { ConfigInitializer } from "@/init/ConfigInitializer";
+import { FooterInitializer } from "@/init/FooterInitializer";
+import { CompanyAddressInitializer } from "@/init/CompanyAddressInitializer";
+import { getAll as getAllCompanyAddresses } from "@/apis/common/company-address.apis";
 import { NextIntlClientProvider } from "next-intl";
 
 import dynamic from "next/dynamic";
@@ -44,14 +50,26 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const [me, cart, advertises, supports, config, menu] = await Promise.all([
-    getMe(),
-    getAllCart(),
-    getAllAdvertise(),
-    getAllSupport(),
-    getAllConfig(),
-    getAllMenu(),
-  ]);
+  const [
+    me,
+    cart,
+    advertises,
+    supports,
+    config,
+    footerSections,
+    companyAddresses,
+    menu,
+  ] =
+    await Promise.all([
+      getMe(),
+      getAllCart(),
+      getAllAdvertise(),
+      getAllSupport(),
+      getAllConfig(),
+      getAllFooterSections(),
+      getAllCompanyAddresses(),
+      getAllMenu(),
+    ]);
 
   return (
     <html lang="vi" suppressHydrationWarning>
@@ -78,6 +96,8 @@ export default async function RootLayout({
         <BannerInitializer data={getValidData(advertises)} />
         <SupportInitializer data={getValidData(supports)} />
         <ConfigInitializer data={getValidData(config)} />
+        <FooterInitializer data={getValidData(footerSections)} />
+        <CompanyAddressInitializer data={getValidData(companyAddresses)} />
 
         <NextIntlClientProvider>
           <PageTransition>{children}</PageTransition>

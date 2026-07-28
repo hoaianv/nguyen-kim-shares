@@ -60,3 +60,40 @@ export interface IFooter {
 }
 
 export type IResponseFooter = IResponse<IFooter>;
+
+export interface FooterItem {
+  id: number;
+  key: string;
+  title: string;
+  description: string | null;
+  url: string | null;
+  isLink: boolean;
+  image: string | null;
+  items: FooterItem[];
+}
+
+export type FooterSection = FooterItem;
+
+export type IResponseFooterSections = IResponse<FooterSection[]>;
+
+export interface CompanyAddress {
+  id: number;
+  title: string;
+  company: string;
+  address: string | null;
+  certificate: string | null;
+  phone: string | null;
+  fax: string | null;
+  email: string | null;
+  emailOrder: string | null;
+  website: string | null;
+  workTime: string | null;
+  map: string | null;
+  mapLat: string | null;
+  mapLng: string | null;
+  socialFrame: string | null;
+  display: boolean;
+  order: number;
+}
+
+export type IResponseCompanyAddress = IResponse<CompanyAddress[]>;

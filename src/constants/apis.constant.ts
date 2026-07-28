@@ -34,6 +34,7 @@ export const CONST_APIS = {
       ADVISE: "advise",
       FAQS: "faqs",
       CONTACT: "contact",
+      COMPANY_ADDRESS: "company-address",
       EVENT_CHECKIN: "participants",
     },
   },

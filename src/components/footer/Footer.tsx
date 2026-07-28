@@ -9,11 +9,13 @@ import {
   QrCode,
   RefreshCcw,
   Truck,
+  type LucideIcon,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import FooterColumn from "@/components/footer/FooterColumn";
 import { bannerKeys } from "@/constants/values.constant";
+import type { FooterItem } from "@/interfaces/models/IFooter.interface";
 import { useStateStore } from "@/stores/stateStore";
 
 const serviceItems = [
@@ -39,46 +41,80 @@ const serviceItems = [
   },
 ];
 
-const informationLinks = [
-  { title: "Tin tức công nghệ", href: "/tin-tuc" },
-  { title: "Tư vấn mua hàng", href: "/tu-van" },
-  { title: "Liên hệ", href: "/lien-he-gop-y" },
-  { title: "Xây dựng cấu hình", href: "/xay-dung-cau-hinh" },
-];
+const paymentIcons: Record<string, LucideIcon> = {
+  qr_code: QrCode,
+  cash: Banknote,
+  installment: Clock,
+  internet_banking: CreditCard,
+};
 
-const hotlineItems = [
-  { label: "Hotline", value: "1900 88 88 77", href: "tel:1900888877" },
-  { label: "CSKH", value: "0949.56.94.94", href: "tel:0949569494" },
-  { label: "Kỹ thuật", value: "0933.808.960", href: "tel:0933808960" },
-  { label: "ĐT bàn", value: "282 247 247 2", href: "tel:2822472472" },
-];
+const isExternalHref = (href: string) => /^(https?:|mailto:|tel:)/i.test(href);
 
-const paymentMethods = [
-  { title: "QR Code", icon: QrCode },
-  { title: "Tiền mặt", icon: Banknote },
-  { title: "Trả góp", icon: Clock },
-  { title: "Internet Banking", icon: CreditCard },
-];
+const normalizeFooterHref = (url: string) =>
+  isExternalHref(url) ? url : `/${url.replace(/^\/+/, "")}`;
 
-const bankLogos = [
-  { name: "ACB", src: "/images/banks/acb.png" },
-  { name: "Vietcombank", src: "/images/banks/vietcom.png" },
-  { name: "VietinBank", src: "/images/banks/viettin.png" },
-];
+function FooterItemLink({
+  item,
+  showImage = false,
+}: {
+  item: FooterItem;
+  showImage?: boolean;
+}) {
+  const className =
+    "flex items-center gap-2 text-sm text-slate-600 transition hover:text-brand-strong";
+  const content = (
+    <>
+      {showImage && item.image ? (
+        <Image
+          src={item.image}
+          alt=""
+          width={18}
+          height={18}
+          className="h-[18px] w-[18px] shrink-0 object-contain"
+        />
+      ) : null}
+      <span>{item.title}</span>
+    </>
+  );
 
-const linkHref = (url?: string) => (url ? `/${url.replace(/^\/+/, "")}` : "/");
+  if (!item.isLink || !item.url) {
+    return <p className={className}>{content}</p>;
+  }
+
+  const href = normalizeFooterHref(item.url);
+
+  if (isExternalHref(href)) {
+    const opensNewTab = /^https?:/i.test(href);
+
+    return (
+      <a
+        href={href}
+        target={opensNewTab ? "_blank" : undefined}
+        rel={opensNewTab ? "noopener noreferrer" : undefined}
+        className={className}
+      >
+        {content}
+      </a>
+    );
+  }
+
+  return (
+    <Link href={href} className={className}>
+      {content}
+    </Link>
+  );
+}
 
 export default function Footer() {
-  const { config, banner } = useStateStore();
+  const { banner, companyAddress, footerSections } = useStateStore();
   const moitCertificate = banner?.[bannerKeys.bannerBoCongThuong];
   const certificate = moitCertificate?.advertises?.[0];
-
-  if (!config) return null;
-
-  const companyName =
-    config.companyInfo?.company || "Công ty TNHH Vi tính Nguyên Kim";
-  const address = config.companyInfo?.address || config.settingLogo?.address;
-  const supportEmail = "cskh@nguyenkimcomputer.vn";
+  const sectionByKey = new Map(footerSections.map((section) => [section.key, section]));
+  const navigationSections = ["about", "policy", "information", "support", "community"]
+    .map((key) => sectionByKey.get(key))
+    .filter((section): section is FooterItem => Boolean(section));
+  const paymentSection = sectionByKey.get("payment_method");
+  const bankSection = sectionByKey.get("online_bank");
 
   return (
     <footer className="border-t border-slate-200 bg-white text-slate-900">
@@ -104,188 +140,131 @@ export default function Footer() {
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-[1520px] px-3 py-8 sm:px-4 lg:px-6">
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-5">
-          <FooterColumn title="Về chúng tôi">
-            <div className="space-y-2">
-              {config.aboutCompany?.slice(0, 6).map((item) => (
-                <Link
-                  key={item.id}
-                  href={linkHref(item.url)}
-                  className="block text-sm text-slate-600 transition hover:text-brand-strong"
-                >
-                  {item.title}
-                </Link>
-              ))}
-            </div>
-          </FooterColumn>
-
-          <FooterColumn title="Chính sách & Điều khoản">
-            <div className="space-y-2">
-              {config.policies?.slice(0, 9).map((item) => (
-                <Link
-                  key={item.id}
-                  href={`/chinh-sach/${item.url ?? ""}`}
-                  className="block text-sm text-slate-600 transition hover:text-brand-strong"
-                >
-                  {item.title}
-                </Link>
-              ))}
-            </div>
-          </FooterColumn>
-
-          <FooterColumn title="Thông tin">
-            <div className="space-y-2">
-              {informationLinks.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="block text-sm text-slate-600 transition hover:text-brand-strong"
-                >
-                  {item.title}
-                </Link>
-              ))}
-            </div>
-          </FooterColumn>
-
-          <FooterColumn title="Tổng đài hỗ trợ">
-            <div className="space-y-2 text-sm text-slate-600">
-              {hotlineItems.map((item) => (
-                <p key={item.label}>
-                  <span className="font-medium text-slate-800">
-                    {item.label}:{" "}
-                  </span>
-                  <a
-                    className="font-semibold text-brand-hover hover:underline"
-                    href={item.href}
-                  >
-                    {item.value}
-                  </a>
-                </p>
-              ))}
-              <p>
-                <span className="font-medium text-slate-800">Email: </span>
-                <a
-                  className="break-all font-semibold text-brand-hover hover:underline"
-                  href={`mailto:${supportEmail}`}
-                >
-                  {supportEmail}
-                </a>
-              </p>
-            </div>
-          </FooterColumn>
-
-          <FooterColumn title="Cộng đồng Nguyên Kim Computer">
-            <div className="space-y-2">
-              {config.icons?.map((item) => (
-                <Link
-                  key={item.id}
-                  href={item.url || "#"}
-                  target={item.target || "_blank"}
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-sm text-slate-600 transition hover:text-brand-strong"
-                >
-                  {item.picture ? (
-                    <Image
-                      src={item.picture}
-                      alt=""
-                      width={18}
-                      height={18}
-                      className="h-[18px] w-[18px] object-contain"
-                    />
-                  ) : null}
-                  <span>{item.title}</span>
-                </Link>
-              ))}
-            </div>
-          </FooterColumn>
-        </div>
-
-        <div className="mt-8 grid gap-8 border-t border-slate-200 pt-6 lg:grid-cols-[minmax(280px,0.8fr)_minmax(0,1.7fr)]">
-          <div>
-            <h3 className="text-sm font-bold uppercase text-slate-950">
-              Phương thức thanh toán
-            </h3>
-            <div className="mt-4 flex flex-wrap gap-x-6 gap-y-4">
-              {paymentMethods.map((method) => {
-                const Icon = method.icon;
-                return (
-                  <div
-                    key={method.title}
-                    className="flex w-11 flex-col items-center text-center"
-                  >
-                    <Icon className="h-7 w-7 text-slate-700" />
-                    <span className="mt-1 text-xs leading-4 text-slate-700">
-                      {method.title}
-                    </span>
+      {(navigationSections.length > 0 || paymentSection || bankSection) && (
+        <section className="mx-auto w-full max-w-[1520px] px-3 py-8 sm:px-4 lg:px-6">
+          {navigationSections.length > 0 ? (
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-5">
+              {navigationSections.map((section) => (
+                <FooterColumn key={section.id} title={section.title}>
+                  <div className="space-y-2">
+                    {section.items.map((item) => (
+                      <FooterItemLink
+                        key={item.id}
+                        item={item}
+                        showImage={section.key === "community"}
+                      />
+                    ))}
                   </div>
-                );
-              })}
-            </div>
-          </div>
-
-          <div>
-            <h3 className="text-sm font-bold uppercase text-slate-950">
-              Danh sách các ngân hàng thanh toán online
-            </h3>
-            <div className="mt-4 flex flex-wrap gap-x-3 gap-y-2">
-              {bankLogos.map((bank) => (
-                <div key={bank.name} className="relative h-8 w-20">
-                  <Image
-                    src={bank.src}
-                    alt={bank.name}
-                    fill
-                    className="object-contain"
-                    sizes="80px"
-                  />
-                </div>
+                </FooterColumn>
               ))}
             </div>
-          </div>
-        </div>
-      </section>
+          ) : null}
+
+          {paymentSection || bankSection ? (
+            <div className="mt-8 grid gap-8 border-t border-slate-200 pt-6 lg:grid-cols-[minmax(280px,0.8fr)_minmax(0,1.7fr)]">
+              {paymentSection ? (
+                <div>
+                  <h3 className="text-sm font-bold uppercase text-slate-950">
+                    {paymentSection.title}
+                  </h3>
+                  <div className="mt-4 flex flex-wrap gap-x-6 gap-y-4">
+                    {paymentSection.items.map((method) => {
+                      const Icon = paymentIcons[method.key] ?? CreditCard;
+
+                      return (
+                        <div
+                          key={method.id}
+                          className="flex w-11 flex-col items-center text-center"
+                        >
+                          <Icon className="h-7 w-7 text-slate-700" />
+                          <span className="mt-1 text-xs leading-4 text-slate-700">
+                            {method.title}
+                          </span>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              ) : null}
+
+              {bankSection ? (
+                <div>
+                  <h3 className="text-sm font-bold uppercase text-slate-950">
+                    {bankSection.title}
+                  </h3>
+                  <div className="mt-4 flex flex-wrap gap-x-3 gap-y-2">
+                    {bankSection.items
+                      .filter((bank) => Boolean(bank.image))
+                      .map((bank) => (
+                        <div key={bank.id} className="relative h-8 w-20">
+                          <Image
+                            src={bank.image!}
+                            alt={bank.title}
+                            fill
+                            className="object-contain"
+                            sizes="80px"
+                          />
+                        </div>
+                      ))}
+                  </div>
+                </div>
+              ) : null}
+            </div>
+          ) : null}
+        </section>
+      )}
 
       <section className="bg-slate-200/70">
         <div className="mx-auto grid w-full max-w-[1520px] gap-6 px-3 py-8 text-sm text-slate-700 sm:px-4 md:grid-cols-2 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)_180px] lg:px-6">
           <div>
             <h3 className="text-sm font-bold uppercase text-slate-950">
-              {companyName}
+              {companyAddress?.company || "Công ty TNHH Vi tính Nguyên Kim"}
             </h3>
 
-            {config.companyInfo?.certificate ? (
+            {companyAddress?.certificate ? (
               <div
                 className="mt-1 leading-6 [&_a]:text-brand-strong [&_a]:hover:underline [&_p]:my-0"
                 dangerouslySetInnerHTML={{
-                  __html: config.companyInfo.certificate,
+                  __html: companyAddress.certificate,
                 }}
               />
             ) : null}
-            {config.companyInfo?.website ? (
+            {companyAddress?.phone ? (
+              <div
+                className="mt-1 leading-6 [&_a]:text-brand-strong [&_a]:hover:underline [&_p]:my-0"
+                dangerouslySetInnerHTML={{ __html: companyAddress.phone }}
+              />
+            ) : null}
+            {companyAddress?.website ? (
               <p className="mt-1 leading-6">
-                Website: {config.companyInfo.website}
+                Website: {companyAddress.website}
               </p>
             ) : null}
           </div>
 
           <div>
             <h3 className="text-sm font-bold text-slate-950">
-              Địa chỉ trụ sở chính
+              {companyAddress?.title || "Địa chỉ trụ sở chính"}
             </h3>
-            {address ? (
+            {companyAddress?.address ? (
               <div
                 className="mt-2 leading-6 [&_p]:my-0"
-                dangerouslySetInnerHTML={{ __html: address }}
+                dangerouslySetInnerHTML={{ __html: companyAddress.address }}
               />
             ) : null}
-            {config.companyInfo?.workTime ? (
+            {companyAddress?.workTime ? (
               <p className="mt-2 leading-6">
                 <span className="font-semibold text-slate-900">
                   Thời gian làm việc:{" "}
                 </span>
-                {config.companyInfo.workTime}
+                {companyAddress.workTime}
               </p>
             ) : null}
-            <p className="mt-2 break-all leading-6">Email: {supportEmail}</p>
+            {companyAddress?.email ? (
+              <p className="mt-2 break-all leading-6">
+                Email: {companyAddress.email}
+              </p>
+            ) : null}
           </div>
 
           <div className="flex items-start gap-3 lg:flex-col lg:items-end">

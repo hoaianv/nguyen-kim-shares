@@ -3,7 +3,11 @@ import { create } from "zustand";
 import type { ISearch } from "@/interfaces/common";
 import type { IAdPosition } from "@/interfaces/models/IAdvertise.interface";
 import { SupportGroups } from "@/interfaces/models/ISupport.interface";
-import { IFooter } from "@/interfaces/models/IFooter.interface";
+import {
+  CompanyAddress,
+  FooterSection,
+  IFooter,
+} from "@/interfaces/models/IFooter.interface";
 
 interface SearchState {
   search: ISearch;
@@ -18,6 +22,10 @@ interface SearchState {
   config: IFooter;
 
   setConfig: (config: IFooter) => void;
+  footerSections: FooterSection[];
+  setFooterSections: (footerSections: FooterSection[]) => void;
+  companyAddress: CompanyAddress | null;
+  setCompanyAddress: (companyAddress: CompanyAddress | null) => void;
 }
 
 export const useStateStore = create<SearchState>((set) => ({
@@ -34,6 +42,10 @@ export const useStateStore = create<SearchState>((set) => ({
     })),
   config: {} as IFooter,
   setConfig: (config) => set({ config }),
+  footerSections: [],
+  setFooterSections: (footerSections) => set({ footerSections }),
+  companyAddress: null,
+  setCompanyAddress: (companyAddress) => set({ companyAddress }),
   banner: {},
   setBanner: (banner) => set({ banner }),
 

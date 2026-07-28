@@ -253,19 +253,14 @@ const Header = () => {
                 : "Mở danh mục sản phẩm"
             }
           >
-<<<<<<< HEAD
             {desktopMenuOpen ? (
-              <X className="h-4 w-4" />
+              <X className="h-3.5 w-3.5" />
             ) : (
-              <Menu className="h-4 w-4" />
+              <Menu className="h-3.5 w-3.5" />
             )}
             <span className="whitespace-nowrap">
               {desktopMenuOpen ? "Đóng danh mục" : "Danh mục sản phẩm"}
             </span>
-=======
-            {desktopMenuOpen ? <X className="h-3.5 w-3.5" /> : <Menu className="h-3.5 w-3.5" />}
-            <span className="whitespace-nowrap">{desktopMenuOpen ? "Đóng danh mục" : "Danh mục sản phẩm"}</span>
->>>>>>> main
           </button>
 
           <div className="col-span-3 order-3 min-w-0 lg:col-span-1 lg:order-none">
