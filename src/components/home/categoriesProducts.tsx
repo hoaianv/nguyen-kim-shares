@@ -67,8 +67,8 @@ const CategoriesProductsSection = ({
                     type="button"
                     onClick={() => setActiveNeedId(need.id)}
                     className={`relative flex h-11 items-center justify-center  px-4 text-sm font-semibold transition ${isActive
-                      ? "bg-[#f5efff] text-[#e33b2f] shadow-[0_6px_18px_rgba(15,23,42,0.06)] ring-1 ring-white/70"
-                      : "bg-white/85 text-[#ea6158] hover:bg-[#f5efff] hover:text-[#e33b2f]"
+                      ? "bg-amber-50 text-[#e33b2f] shadow-[0_6px_18px_rgba(15,23,42,0.06)] ring-1 ring-white/70"
+                      : "bg-white/85 text-[#ea6158] hover:bg-amber-50 hover:text-[#e33b2f]"
                       }`}
                   >
                     <span className="truncate">{need.title}</span>
@@ -90,7 +90,7 @@ const CategoriesProductsSection = ({
           </div> */}
         </div>
 
-        <div className="grid items-center gap-3 p-3 sm:p-4 lg:grid-cols-[220px_minmax(0,1fr)] xl:grid-cols-[230px_minmax(0,1fr)]">
+        <div className="grid items-center gap-3 p-3 sm:p-4 bg-amber-50 lg:grid-cols-[220px_minmax(0,1fr)] xl:grid-cols-[230px_minmax(0,1fr)]">
           <Link
             href={item.url || "#"}
             className="group relative hidden min-h-[408px] overflow-hidden rounded-3xl bg-slate-950 lg:block lg:self-center"
