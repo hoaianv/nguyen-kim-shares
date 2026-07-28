@@ -18,6 +18,8 @@ import type { IPagination } from "@/interfaces/common";
 import CatalogToolbar from "./CatalogToolbar";
 import MobileFilterSheet from "./MobileFilterSheet";
 import CategoryFilterBar from "./CategoryFilterBar";
+import FilterBrand from "./FilterBrand";
+import FilterCustomerNeeds from "./FilterCustomerNeeds";
 
 type CategoryCatalogViewProps = {
   categoryTitle: string;
@@ -81,17 +83,8 @@ export default function CategoryCatalogView({
   return (
     <>
       <section className="min-w-0 space-y-4">
-        <CatalogToolbar
-          categoryTitle={categoryTitle}
-          totalProducts={pagination?.total ?? productList.length}
-          activeFilterCount={activeFilterCount}
-          searchParams={searchParams}
-          options={options}
-          listBrand={listBrand}
-          customerNeeds={customerNeeds}
-          onOpenFilters={() => setDrawerOpen(true)}
-          onResetAll={handleResetAll}
-        />
+        <FilterBrand listBrand={listBrand} />
+        <FilterCustomerNeeds needs={customerNeeds ?? []} />
 
         <CategoryFilterBar
           listBrand={listBrand}
@@ -100,6 +93,15 @@ export default function CategoryCatalogView({
           rangePrice={rangePrice}
           activeFilterCount={activeFilterCount}
           onResetAll={handleResetAll}
+        />
+
+        <CatalogToolbar
+          activeFilterCount={activeFilterCount}
+          searchParams={searchParams}
+          options={options}
+          listBrand={listBrand}
+          customerNeeds={customerNeeds}
+          onOpenFilters={() => setDrawerOpen(true)}
         />
 
         <div className="space-y-4">

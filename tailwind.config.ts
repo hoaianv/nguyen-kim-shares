@@ -8,6 +8,9 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    fontFamily: {
+      sans: ["Arial", "Helvetica", "sans-serif"],
+    },
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -20,6 +23,14 @@ const config: Config = {
         sm: "calc(var(--radius) - 4px)",
       },
       colors: {
+        brand: {
+          DEFAULT: "#FED41B",
+          hover: "#E2B90A",
+          soft: "#FFF9DD",
+          strong: "#7A6300",
+          deep: "#493B00",
+          glow: "#FDE68A",
+        },
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {

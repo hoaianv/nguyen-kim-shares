@@ -23,10 +23,9 @@ const RelatedProducts = ({ data }: ProductsProps) => {
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className="bg-white rounded-lg shadow-sm"
     >
       <div className="p-2 sm:p-3 border-b border-gray-200">
-        <h3 className="text-lg sm:text-xl font-semibold text-[#111827]">
+        <h3 className="text-lg font-bold sm:text-xl text-[#111827]">
           {t("PRODUCT.related_products")}
         </h3>
       </div>

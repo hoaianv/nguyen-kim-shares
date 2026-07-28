@@ -20,21 +20,21 @@ const CompareProducts = dynamic(
   {
     loading: () => <SkeletonLoader height="h-48" />,
     ssr: false,
-  }
+  },
 );
 const RelatedProducts = dynamic(
   () => import("@/components/product/RelatedProducts"),
   {
     loading: () => <SkeletonLoader height="h-48" />,
     ssr: false,
-  }
+  },
 );
 const PropertiesTable = dynamic(
   () => import("@/components/product/SpecificationsTable"),
   {
     loading: () => <SkeletonLoader height="h-48" />,
     ssr: false,
-  }
+  },
 );
 const Description = dynamic(() => import("@/components/product/Description"), {
   loading: () => <SkeletonLoader height="h-48" />,
@@ -43,7 +43,7 @@ const Description = dynamic(() => import("@/components/product/Description"), {
 
 const InfoRegisterForm = dynamic(
   () => import("@/components/product/InfoRegisterForm"),
-  { ssr: false, loading: () => <SkeletonLoader height="h-48" /> }
+  { ssr: false, loading: () => <SkeletonLoader height="h-48" /> },
 );
 
 type ProductProps = {
@@ -60,15 +60,16 @@ export default async function Product({ data, slug }: ProductProps) {
       getProductRelated(slug),
       getSchema(slug),
       getCompare(slug),
-    ]
+    ],
   );
+  const propertiesData = getValidData(properties);
 
   return (
-    <main className="bg-[#F1F8FE] pb-8 pt-3 sm:pb-10 sm:pt-4">
+    <main className="pb-8 pt-2 sm:pb-10 sm:pt-4">
       <Schema data={getValidData(schema) || null} />
 
       <div className="mx-auto w-full max-w-[1520px] space-y-3 px-3 sm:space-y-4 sm:px-4 lg:px-6">
-        <div className="border border-slate-200 bg-white px-3 py-2 shadow-sm sm:px-4">
+        <div className="bg-[#f5f5f5] rounded-sm px-3 py-2 shadow-sm sm:px-4">
           <Breadcrumb
             items={breadcrumb ?? []}
             className="text-xs text-slate-500 sm:text-sm"
@@ -76,7 +77,10 @@ export default async function Product({ data, slug }: ProductProps) {
         </div>
 
         <section aria-label="Product information" className="scroll-mt-24">
-          <ProductInfo data={items} />
+          <ProductInfo
+            data={items}
+            hasSpecifications={Boolean(propertiesData?.length)}
+          />
         </section>
 
         {items && !items.isInStock && (
@@ -102,20 +106,23 @@ export default async function Product({ data, slug }: ProductProps) {
           aria-label="Product description and specifications"
           className="scroll-mt-24"
         >
-          <div className="mb-2 flex items-center justify-between border-b-2 border-[#ffb716] bg-white px-3 py-2">
-            <h2 className="text-sm font-extrabold uppercase text-red-600 sm:text-base">
-              Thông tin sản phẩm
-            </h2>
-          </div>
           <div className="grid grid-cols-1 gap-3 lg:grid-cols-10 lg:items-start">
-            <div className="order-2 lg:order-1 lg:col-span-7">
+            <div
+              id="product-description"
+              tabIndex={-1}
+              className="order-2 scroll-mt-40 focus:outline-none lg:order-1 lg:col-span-7 lg:scroll-mt-44"
+            >
               <LazySection height="h-48">
                 <Description data={getValidData(description)} />
               </LazySection>
             </div>
-            <div className="order-1 lg:order-2 lg:col-span-3">
+            <div
+              id="product-specifications"
+              tabIndex={-1}
+              className="order-1 scroll-mt-40 focus:outline-none lg:order-2 lg:col-span-3 lg:scroll-mt-44"
+            >
               <LazySection height="h-48">
-                <PropertiesTable data={getValidData(properties)} />
+                <PropertiesTable data={propertiesData} />
               </LazySection>
             </div>
           </div>
@@ -123,7 +130,7 @@ export default async function Product({ data, slug }: ProductProps) {
 
         <section
           aria-label="Product comparison"
-          className="scroll-mt-24 border border-slate-200 bg-white p-3 shadow-sm sm:p-4"
+          className="scroll-mt-24"
         >
           <LazySection height="h-48">
             <CompareProducts data={getValidData(compare) || []} />

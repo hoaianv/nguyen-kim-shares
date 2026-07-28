@@ -30,7 +30,7 @@ const MenuCategories = dynamic(
   () => import("@/components/home/menuCategories"),
   {
     ssr: false,
-  }
+  },
 );
 
 const utilityLinks = [
@@ -59,7 +59,7 @@ const Header = () => {
 
   const itemsHeader = getHeaderItemsWithState(authenticated);
   const headerActions = itemsHeader.filter((item) =>
-    ["auth", "cart"].includes(item.value)
+    ["auth", "cart"].includes(item.value),
   );
 
   useEffect(() => {
@@ -195,7 +195,11 @@ const Header = () => {
             className="inline-flex h-10 w-10 items-center justify-center rounded-sm border border-slate-200 bg-white text-slate-900 lg:hidden"
             aria-label="Mở menu"
           >
-            {mobileDrawerOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            {mobileDrawerOpen ? (
+              <X className="h-5 w-5" />
+            ) : (
+              <Menu className="h-5 w-5" />
+            )}
           </button>
 
           <Link href="/" className="block w-[112px] shrink-0 lg:w-[126px]">
@@ -227,14 +231,24 @@ const Header = () => {
             aria-expanded={desktopMenuOpen}
             aria-controls="desktop-category-panel"
             aria-label={
-              desktopMenuOpen ? "Đóng danh mục sản phẩm" : "Mở danh mục sản phẩm"
+              desktopMenuOpen
+                ? "Đóng danh mục sản phẩm"
+                : "Mở danh mục sản phẩm"
             }
             title={
-              desktopMenuOpen ? "Đóng danh mục sản phẩm" : "Mở danh mục sản phẩm"
+              desktopMenuOpen
+                ? "Đóng danh mục sản phẩm"
+                : "Mở danh mục sản phẩm"
             }
           >
-            {desktopMenuOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
-            <span className="whitespace-nowrap">{desktopMenuOpen ? "Đóng danh mục" : "Danh mục sản phẩm"}</span>
+            {desktopMenuOpen ? (
+              <X className="h-4 w-4" />
+            ) : (
+              <Menu className="h-4 w-4" />
+            )}
+            <span className="whitespace-nowrap">
+              {desktopMenuOpen ? "Đóng danh mục" : "Danh mục sản phẩm"}
+            </span>
           </button>
 
           <div className="col-span-3 order-3 min-w-0 lg:col-span-1 lg:order-none">
@@ -255,7 +269,10 @@ const Header = () => {
                 onKeyDown={handleSearchKeyDown}
                 className="h-10 rounded-sm border-slate-200 bg-white pl-4 pr-[96px] text-sm"
               >
-                <ProductsSearch show={desktopSearchOpen} setShow={setDesktopSearchOpen} />
+                <ProductsSearch
+                  show={desktopSearchOpen}
+                  setShow={setDesktopSearchOpen}
+                />
               </InputSearch>
 
               <button
@@ -347,7 +364,9 @@ const Header = () => {
               className="absolute inset-x-0 top-0 mx-auto flex h-full max-w-[1370px] flex-col bg-white px-4 py-4"
             >
               <div className="flex items-center justify-between gap-3 border-b border-slate-100 pb-3">
-                <h2 className="text-base font-bold text-slate-950">Tìm kiếm sản phẩm</h2>
+                <h2 className="text-base font-bold text-slate-950">
+                  Tìm kiếm sản phẩm
+                </h2>
                 <button
                   type="button"
                   onClick={() => setMobileSearchOpen(false)}
@@ -367,7 +386,10 @@ const Header = () => {
                   onKeyDown={handleSearchKeyDown}
                   className="h-11 rounded-sm border-slate-200 bg-white pl-4 pr-4 text-sm"
                 >
-                  <ProductsSearch show={mobileSearchOpen} setShow={setMobileSearchOpen} />
+                  <ProductsSearch
+                    show={mobileSearchOpen}
+                    setShow={setMobileSearchOpen}
+                  />
                 </InputSearch>
               </div>
             </motion.div>

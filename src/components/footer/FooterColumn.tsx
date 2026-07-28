@@ -39,7 +39,7 @@ const FooterColumn: React.FC<FooterColumnProps> = ({
         </motion.span>
       </button>
 
-      <h3 className="hidden border-b-2 border-[#ffb716] pb-2 text-sm font-extrabold uppercase text-slate-950 md:block">
+      <h3 className="hidden text-sm font-bold uppercase text-slate-950 md:block">
         {title}
       </h3>
 
@@ -49,7 +49,9 @@ const FooterColumn: React.FC<FooterColumnProps> = ({
             <motion.div
               key="content"
               id={`${contentId}-mobile`}
-              initial={reduceMotion ? { opacity: 0 } : { height: 0, opacity: 0 }}
+              initial={
+                reduceMotion ? { opacity: 0 } : { height: 0, opacity: 0 }
+              }
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.22, ease: "easeOut" }}

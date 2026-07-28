@@ -41,51 +41,60 @@ export default function CategoryParentTabs({
   const currentPath = trimSlash(pathname || "/");
 
   return (
-    <div className="overflow-x-auto scrollbar-thin scrollbar-thumb-border scrollbar-track-transparent">
-      <div className="flex min-w-max items-center gap-2 pb-1">
-        {categories.map((cate) => {
+    <nav
+      aria-label="Danh mục nổi bật"
+      className="overflow-x-auto rounded-xl border border-black bg-white px-2 py-2 scrollbar-thin scrollbar-thumb-border scrollbar-track-transparent"
+    >
+      <div className="flex min-w-max items-center md:w-full">
+        {categories.map((cate, index) => {
           const catPath = toPathname(cate.url || "/");
           const isActive =
             currentPath === catPath || currentPath.startsWith(`${catPath}/`);
 
           return (
-            <Link
+            <div
               key={cate.id}
-              href={cate.url}
-              className={`inline-flex h-11 items-center gap-2 rounded-md border px-3 text-sm font-medium transition ${
-                isActive
-                  ? "border-amber-300 bg-amber-50 text-amber-800"
-                  : "border-border/60 bg-background text-foreground hover:border-amber-300 hover:bg-amber-50/70"
+              className={`flex items-center px-2 sm:px-3 md:flex-1 md:justify-center ${
+                index < categories.length - 1 ? "border-r border-slate-300" : ""
               }`}
-              aria-current={isActive ? "page" : undefined}
-              title={cate.title}
             >
-              <span
-                className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-sm border ${
+              <Link
+                href={cate.url}
+                className={`group inline-flex h-10 items-center justify-center gap-2 rounded-md px-3 text-sm font-semibold transition ${
                   isActive
-                    ? "border-amber-300 bg-amber-50"
-                    : "border-border/60 bg-muted/20"
+                    ? "border border-brand bg-brand-soft text-brand-deep"
+                    : "bg-white text-slate-900 hover:bg-brand-soft hover:text-brand-deep"
                 }`}
+                aria-current={isActive ? "page" : undefined}
+                title={cate.title}
               >
-                {cate.picture ? (
-                  <Image
-                    src={cate.picture}
-                    alt={cate.title}
-                    width={20}
-                    height={20}
-                    className="h-5 w-5 object-contain pointer-events-none"
-                    loading="lazy"
-                  />
-                ) : (
-                  <span className="h-4 w-4 rounded-sm bg-border" />
-                )}
-              </span>
+                <span
+                  className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full border transition ${
+                    isActive
+                      ? "border-brand bg-brand-soft"
+                      : "border-transparent bg-slate-50 group-hover:bg-brand-soft"
+                  }`}
+                >
+                  {cate.picture ? (
+                    <Image
+                      src={cate.picture}
+                      alt={cate.title}
+                      width={20}
+                      height={20}
+                      className="h-5 w-5 object-contain pointer-events-none"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <span className="h-4 w-4 rounded-sm bg-border" />
+                  )}
+                </span>
 
-              <span className="whitespace-nowrap">{cate.title}</span>
-            </Link>
+                <span className="whitespace-nowrap">{cate.title}</span>
+              </Link>
+            </div>
           );
         })}
       </div>
-    </div>
+    </nav>
   );
 }

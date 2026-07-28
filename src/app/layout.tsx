@@ -1,6 +1,5 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter, Sora } from "next/font/google";
 import { AuthInitializer } from "@/init/AuthInitializer";
 import { getAll as getAllCart } from "@/apis/models/cart.apis";
 import { CartInitializer } from "@/init/CartInitializer";
@@ -34,15 +33,6 @@ const PageTransition = dynamic(() => import("@/components/ui/PageTransition"), {
   ssr: false,
 });
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
-const sora = Sora({
-  subsets: ["latin"],
-  variable: "--font-display",
-});
-
 export const metadata: Metadata = {
   title: "Page Not Found - 404",
   description:
@@ -64,11 +54,7 @@ export default async function RootLayout({
   ]);
 
   return (
-    <html
-      lang="vi"
-      className={`${inter.variable} ${sora.variable}`}
-      suppressHydrationWarning
-    >
+    <html lang="vi" suppressHydrationWarning>
       <head>
         {/* Google Tag Manager */}
         <GTMScript />

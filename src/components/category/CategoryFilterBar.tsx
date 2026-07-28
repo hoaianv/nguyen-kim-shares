@@ -28,25 +28,37 @@ type FacetGroup = {
 };
 
 const formatVND = (value: number) =>
-  new Intl.NumberFormat("vi-VN").format(Math.max(0, Math.floor(value))) + "đ";
+  new Intl.NumberFormat("en-US").format(Math.max(0, Math.floor(value))) + "đ";
 
 export default function CategoryFilterBar({
   listBrand,
   customerNeeds,
   options,
-  rangePrice = { minPrice: 1, maxPrice: 184_970_000 },
+  rangePrice: inputRangePrice = { minPrice: 1, maxPrice: 200_000_000 },
   activeFilterCount,
   onResetAll,
 }: CategoryFilterBarProps) {
   const router = useRouter();
   const pathname = usePathname();
   const sp = useSearchParams();
+  const rangePrice = {
+    minPrice: inputRangePrice.minPrice,
+    maxPrice: 200_000_000,
+  };
   const [openKey, setOpenKey] = useState<string | null>(null);
   const [currentMinPrice, setCurrentMinPrice] = useState(
     Number(sp.get(ESlugType.MinPrice) ?? rangePrice.minPrice)
   );
   const [currentMaxPrice, setCurrentMaxPrice] = useState(
-    Number(sp.get(ESlugType.MaxPrice) ?? rangePrice.maxPrice)
+    Math.min(Number(sp.get(ESlugType.MaxPrice) ?? rangePrice.maxPrice), rangePrice.maxPrice)
+  );
+  const [minPriceInput, setMinPriceInput] = useState(() =>
+    formatVND(Number(sp.get(ESlugType.MinPrice) ?? rangePrice.minPrice))
+  );
+  const [maxPriceInput, setMaxPriceInput] = useState(() =>
+    formatVND(
+      Math.min(Number(sp.get(ESlugType.MaxPrice) ?? rangePrice.maxPrice), rangePrice.maxPrice)
+    )
   );
   const containerRef = useRef<HTMLDivElement | null>(null);
 
@@ -56,8 +68,15 @@ export default function CategoryFilterBar({
 
   useEffect(() => {
     if (openKey !== "price") {
-      setCurrentMinPrice(Number(selectedMinPrice ?? rangePrice.minPrice));
-      setCurrentMaxPrice(Number(selectedMaxPrice ?? rangePrice.maxPrice));
+      const minPrice = Number(selectedMinPrice ?? rangePrice.minPrice);
+      const maxPrice = Math.min(
+        Number(selectedMaxPrice ?? rangePrice.maxPrice),
+        rangePrice.maxPrice
+      );
+      setCurrentMinPrice(minPrice);
+      setCurrentMaxPrice(maxPrice);
+      setMinPriceInput(formatVND(minPrice));
+      setMaxPriceInput(formatVND(maxPrice));
     }
   }, [openKey, rangePrice.maxPrice, rangePrice.minPrice, selectedMaxPrice, selectedMinPrice]);
 
@@ -130,14 +149,18 @@ export default function CategoryFilterBar({
     setOpenKey(null);
   };
 
-  const applyPriceRange = () => {
+  const applyPriceRange = (
+    minPrice = currentMinPrice,
+    maxPrice = currentMaxPrice,
+    close = true
+  ) => {
     const next = new URLSearchParams(sp.toString());
-    next.set(ESlugType.MinPrice, String(currentMinPrice));
-    next.set(ESlugType.MaxPrice, String(currentMaxPrice));
+    next.set(ESlugType.MinPrice, String(minPrice));
+    next.set(ESlugType.MaxPrice, String(maxPrice));
     next.delete("page");
     const qs = next.toString();
     router.replace(qs ? `${pathname}?${qs}` : pathname, { scroll: false });
-    setOpenKey(null);
+    if (close) setOpenKey(null);
   };
 
   const clearPriceRange = () => {
@@ -155,11 +178,41 @@ export default function CategoryFilterBar({
   const clampPrice = (value: number, fallback: number) =>
     Number.isFinite(value) ? Math.min(Math.max(value, rangePrice.minPrice), rangePrice.maxPrice) : fallback;
 
+  const parsePriceInput = (value: string) => Number(value.replace(/\D/g, ""));
+
+  const commitPriceInput = (type: "min" | "max") => {
+    const value = parsePriceInput(type === "min" ? minPriceInput : maxPriceInput);
+
+    if (!value) {
+      if (type === "min") setMinPriceInput(formatVND(currentMinPrice));
+      else setMaxPriceInput(formatVND(currentMaxPrice));
+      return;
+    }
+
+    if (type === "min") {
+      const nextMinPrice = Math.min(
+        clampPrice(value, rangePrice.minPrice),
+        currentMaxPrice
+      );
+      setCurrentMinPrice(nextMinPrice);
+      setMinPriceInput(formatVND(nextMinPrice));
+      return;
+    }
+
+    const nextMaxPrice = Math.max(
+      clampPrice(value, rangePrice.maxPrice),
+      currentMinPrice
+    );
+    setCurrentMaxPrice(nextMaxPrice);
+    setMaxPriceInput(formatVND(nextMaxPrice));
+  };
+
   return (
     <div
       ref={containerRef}
-      className="hidden border-y border-border/60 bg-background py-3 lg:block"
+      className="hidden space-y-3 lg:block"
     >
+      <h2 className="text-xl font-bold text-slate-900">Chọn theo tiêu chí</h2>
       <div className="flex flex-wrap items-center gap-2">
         <div className="mr-1 inline-flex h-10 items-center gap-2 text-sm font-semibold text-foreground">
           <SlidersHorizontal className="h-4 w-4 text-muted-foreground" />
@@ -172,8 +225,8 @@ export default function CategoryFilterBar({
             onClick={() => setOpenKey((prev) => (prev === "price" ? null : "price"))}
             className={`inline-flex h-10 items-center gap-2 rounded-md border px-3 text-sm font-medium transition ${
               isPriceActive
-                ? "border-amber-300 bg-amber-50 text-amber-800"
-                : "border-border/60 bg-background text-foreground hover:border-amber-300 hover:bg-amber-50/70"
+                ? "border-brand bg-brand-soft text-brand-deep"
+                : "border-border/60 bg-white text-foreground hover:border-brand hover:bg-brand-soft"
             }`}
             aria-expanded={openKey === "price"}
           >
@@ -191,76 +244,105 @@ export default function CategoryFilterBar({
           </button>
 
           {openKey === "price" ? (
-            <div className="absolute left-0 top-full z-30 mt-2 w-[340px] rounded-md border border-border/60 bg-background p-4 shadow-lg">
-              <div className="mb-3 flex items-center justify-between gap-2">
-                <div>
-                  <p className="text-sm font-semibold text-foreground">Khoảng giá</p>
-                  <p className="text-xs text-muted-foreground">Giữ nguyên cách lọc theo URL hiện tại.</p>
-                </div>
-                {isPriceActive ? (
-                  <button
-                    type="button"
-                    onClick={clearPriceRange}
-                    className="text-xs font-medium text-muted-foreground hover:text-foreground"
-                  >
-                    Bỏ chọn
-                  </button>
-                ) : null}
-              </div>
-
+            <div className="absolute left-0 top-full z-30 mt-2 w-[320px] rounded-md border border-border/60 bg-white p-3 shadow-lg">
               <div className="grid grid-cols-2 gap-2">
-                <label className="space-y-1">
-                  <span className="text-[11px] font-medium uppercase tracking-[0.18em] text-muted-foreground">
-                    Tối thiểu
-                  </span>
+                <label>
                   <input
-                    type="number"
-                    min={rangePrice.minPrice}
-                    max={currentMaxPrice}
-                    value={currentMinPrice}
-                    onChange={(event) =>
-                      setCurrentMinPrice(
-                        clampPrice(Number(event.target.value), rangePrice.minPrice)
-                      )
-                    }
-                    className="h-10 w-full rounded-md border border-border/60 bg-background px-3 text-sm outline-none transition focus:border-amber-300"
+                    type="text"
+                    inputMode="numeric"
+                    value={minPriceInput}
+                    onFocus={(event) => event.currentTarget.select()}
+                    onChange={(event) => setMinPriceInput(event.target.value)}
+                    onBlur={() => commitPriceInput("min")}
+                    onKeyDown={(event) => {
+                      if (event.key === "Enter") event.currentTarget.blur();
+                    }}
+                    aria-label="Giá tối thiểu"
+                    className="h-10 w-full rounded-md border border-slate-200 bg-white px-3 text-sm text-slate-500 outline-none transition focus:border-brand focus:ring-2 focus:ring-brand/20"
                   />
                 </label>
-                <label className="space-y-1">
-                  <span className="text-[11px] font-medium uppercase tracking-[0.18em] text-muted-foreground">
-                    Tối đa
-                  </span>
+                <label>
                   <input
-                    type="number"
-                    min={currentMinPrice}
-                    max={rangePrice.maxPrice}
-                    value={currentMaxPrice}
-                    onChange={(event) =>
-                      setCurrentMaxPrice(
-                        clampPrice(Number(event.target.value), rangePrice.maxPrice)
-                      )
-                    }
-                    className="h-10 w-full rounded-md border border-border/60 bg-background px-3 text-sm outline-none transition focus:border-amber-300"
+                    type="text"
+                    inputMode="numeric"
+                    value={maxPriceInput}
+                    onFocus={(event) => event.currentTarget.select()}
+                    onChange={(event) => setMaxPriceInput(event.target.value)}
+                    onBlur={() => commitPriceInput("max")}
+                    onKeyDown={(event) => {
+                      if (event.key === "Enter") event.currentTarget.blur();
+                    }}
+                    aria-label="Giá tối đa"
+                    className="h-10 w-full rounded-md border border-slate-200 bg-white px-3 text-sm text-slate-500 outline-none transition focus:border-brand focus:ring-2 focus:ring-brand/20"
                   />
                 </label>
               </div>
 
-              <div className="mt-3 flex items-center gap-2">
-                <button
-                  type="button"
-                  onClick={() => setOpenKey(null)}
-                  className="inline-flex h-10 flex-1 items-center justify-center rounded-md border border-border/60 bg-background text-sm font-medium text-foreground transition hover:border-amber-300 hover:bg-amber-50/70"
-                >
-                  Đóng
-                </button>
-                <button
-                  type="button"
-                  onClick={applyPriceRange}
-                  className="inline-flex h-10 flex-1 items-center justify-center rounded-md border border-slate-950 bg-slate-950 text-sm font-medium text-white transition hover:bg-slate-800"
-                >
-                  Xem kết quả
-                </button>
+              <div className="nk-range relative mt-5 h-5">
+                <div className="absolute inset-x-0 top-1/2 h-1 -translate-y-1/2 rounded-full bg-slate-200" />
+                <div
+                  className="absolute top-1/2 h-1 -translate-y-1/2 rounded-full bg-brand"
+                  style={{
+                    left: `${
+                      ((Math.min(currentMinPrice, currentMaxPrice) - rangePrice.minPrice) /
+                        (rangePrice.maxPrice - rangePrice.minPrice)) *
+                      100
+                    }%`,
+                    width: `${
+                      ((Math.max(currentMinPrice, currentMaxPrice) -
+                        Math.min(currentMinPrice, currentMaxPrice)) /
+                        (rangePrice.maxPrice - rangePrice.minPrice)) *
+                      100
+                    }%`,
+                  }}
+                />
+                <input
+                  type="range"
+                  min={rangePrice.minPrice}
+                  max={currentMaxPrice}
+                  step={100000}
+                  value={Math.min(currentMinPrice, currentMaxPrice)}
+                  onChange={(event) => {
+                    const value = Number(event.target.value);
+                    setCurrentMinPrice(value);
+                    setMinPriceInput(formatVND(value));
+                  }}
+                  aria-label="Giá tối thiểu"
+                  className="absolute inset-0 w-full appearance-none bg-transparent"
+                />
+                <input
+                  type="range"
+                  min={currentMinPrice}
+                  max={rangePrice.maxPrice}
+                  step={100000}
+                  value={Math.max(currentMinPrice, currentMaxPrice)}
+                  onChange={(event) => {
+                    const value = Number(event.target.value);
+                    setCurrentMaxPrice(value);
+                    setMaxPriceInput(formatVND(value));
+                  }}
+                  aria-label="Giá tối đa"
+                  className="absolute inset-0 w-full appearance-none bg-transparent"
+                />
               </div>
+
+              {isPriceActive ? (
+                <button
+                  type="button"
+                  onClick={clearPriceRange}
+                  className="mt-3 text-xs font-medium text-brand-strong hover:text-brand-deep"
+                >
+                  Bỏ chọn khoảng giá
+                </button>
+              ) : null}
+
+              <button
+                type="button"
+                onClick={() => applyPriceRange()}
+                className="mt-3 inline-flex h-10 w-full items-center justify-center rounded-md border border-brand bg-brand px-3 text-sm font-semibold text-slate-950 transition hover:bg-brand-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
+              >
+                Áp dụng giá
+              </button>
             </div>
           ) : null}
         </div>
@@ -280,7 +362,7 @@ export default function CategoryFilterBar({
                 className={`inline-flex h-10 max-w-[220px] items-center gap-2 rounded-md border px-3 text-sm font-medium transition ${
                   selectedValue
                     ? "border-amber-300 bg-amber-50 text-amber-800"
-                    : "border-border/60 bg-background text-foreground hover:border-amber-300 hover:bg-amber-50/70"
+                    : "border-border/60 bg-white text-foreground hover:border-amber-300 hover:bg-amber-50/70"
                 }`}
                 aria-expanded={isOpen}
                 title={selectedLabel ? `${group.title}: ${selectedLabel}` : group.title}
@@ -296,7 +378,7 @@ export default function CategoryFilterBar({
               </button>
 
               {isOpen ? (
-                <div className="absolute left-0 top-full z-30 mt-2 w-[320px] rounded-md border border-border/60 bg-background p-3 shadow-lg xl:w-[380px]">
+                <div className="absolute left-0 top-full z-30 mt-2 w-[320px] rounded-md border border-border/60 bg-white p-3 shadow-lg xl:w-[380px]">
                   <div className="mb-3 flex items-center justify-between gap-2">
                     <p className="text-sm font-semibold text-foreground">{group.title}</p>
                     {selectedValue ? (
@@ -311,7 +393,7 @@ export default function CategoryFilterBar({
                     ) : null}
                   </div>
 
-                  <div className="grid max-h-[320px] grid-cols-2 gap-2 overflow-y-auto pr-1">
+                  <div className="grid max-h-[320px] grid-cols-2 gap-2 overflow-y-auto pr-1 scrollbar-thin scrollbar-thumb-slate-300 scrollbar-track-slate-100 hover:scrollbar-thumb-slate-400">
                     {group.options.map((item) => {
                       const isSelected = selectedValue === item.value;
                       return (
@@ -324,7 +406,7 @@ export default function CategoryFilterBar({
                           className={`min-h-10 rounded-md border px-3 py-2 text-left text-sm transition ${
                             isSelected
                               ? "border-amber-300 bg-amber-50 text-amber-800"
-                              : "border-border/60 bg-muted/10 text-foreground hover:border-amber-300 hover:bg-amber-50/70"
+                              : "border-border/60 bg-white text-foreground hover:border-amber-300 hover:bg-amber-50/70"
                           }`}
                           aria-pressed={isSelected}
                           title={item.label}
@@ -344,7 +426,7 @@ export default function CategoryFilterBar({
           <button
             type="button"
             onClick={onResetAll}
-            className="ml-auto inline-flex h-10 items-center rounded-md border border-border/60 bg-background px-3 text-sm font-medium text-muted-foreground transition hover:border-amber-300 hover:bg-amber-50/70 hover:text-foreground"
+            className="ml-auto inline-flex h-10 items-center rounded-md border border-border/60 bg-white px-3 text-sm font-medium text-muted-foreground transition hover:border-amber-300 hover:bg-amber-50/70 hover:text-foreground"
           >
             Xóa tất cả
           </button>

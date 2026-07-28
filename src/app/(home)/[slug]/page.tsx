@@ -23,7 +23,7 @@ const NotFoundPage = dynamic(() => import("@/components/common/NotFoundPage"), {
 
 export async function generateMetadata(
   { params, searchParams }: Props,
-  parent: ResolvingMetadata
+  parent: ResolvingMetadata,
 ): Promise<Metadata> {
   const slug = params.slug;
 
@@ -62,7 +62,7 @@ export default async function page({ params, searchParams }: Props) {
   const { type } = data;
 
   return (
-    <div className="mx-auto w-full max-w-[1520px] px-3 py-8 sm:px-4 lg:px-6">
+    <div className="mx-auto w-full max-w-[1520px] px-3 py-3 sm:px-4 lg:px-6">
       {(() => {
         switch (type) {
           case ESlug.Product:

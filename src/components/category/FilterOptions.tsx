@@ -80,7 +80,7 @@ export default function FilterOptions({ options }: FilterOptionsProps) {
           return (
             <div
               key={group.id}
-              className="space-y-2 rounded-md border border-border/60 bg-muted/10 p-3"
+              className="space-y-2 rounded-md border border-border/60 bg-white p-3"
             >
               <button
                 type="button"
@@ -91,7 +91,7 @@ export default function FilterOptions({ options }: FilterOptionsProps) {
                 className={`flex h-11 w-full items-center justify-between rounded-md border px-3 text-left transition ${
                   selectedValue
                     ? "border-amber-300 bg-amber-50 text-amber-800"
-                    : "border-border/60 bg-background text-foreground hover:border-amber-300 hover:bg-amber-50/70"
+                    : "border-border/60 bg-white text-foreground hover:border-amber-300 hover:bg-amber-50/70"
                 }`}
               >
                 <span className="inline-flex min-w-0 items-center gap-2">
@@ -128,12 +128,12 @@ export default function FilterOptions({ options }: FilterOptionsProps) {
                           setQueryParam(group.slug);
                           setOpenOptionId(null);
                         }}
-                        className="inline-flex h-10 items-center rounded-md border border-border/60 bg-background px-3 text-sm font-medium text-foreground transition hover:border-amber-300 hover:bg-amber-50/70"
+                        className="inline-flex h-10 items-center rounded-md border border-border/60 bg-white px-3 text-sm font-medium text-foreground transition hover:border-amber-300 hover:bg-amber-50/70"
                       >
                         Bỏ chọn
                       </button>
 
-                      <div className="grid grid-cols-2 gap-2 md:grid-cols-3 xl:grid-cols-2">
+                      <div className="grid max-h-[320px] grid-cols-2 gap-2 overflow-y-auto pr-1 scrollbar-thin scrollbar-thumb-slate-300 scrollbar-track-slate-100 hover:scrollbar-thumb-slate-400 md:grid-cols-3 xl:grid-cols-2">
                         {group.subCateOption.map((sub: ISubCateOption) => {
                           const isSelected = selectedValue === sub.url;
                           return (
@@ -148,7 +148,7 @@ export default function FilterOptions({ options }: FilterOptionsProps) {
                               className={`min-h-11 rounded-md border px-3 text-left text-sm transition ${
                                 isSelected
                                   ? "border-amber-300 bg-amber-50 text-amber-800"
-                                  : "border-border/60 bg-background text-foreground hover:border-amber-300 hover:bg-amber-50/70"
+                                  : "border-border/60 bg-white text-foreground hover:border-amber-300 hover:bg-amber-50/70"
                               }`}
                             >
                               <span className="line-clamp-2 leading-5">{sub.title}</span>
