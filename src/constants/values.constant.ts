@@ -27,6 +27,9 @@ export const bannerKeys = {
   bannerLeftScreen: "banner_left_screen",
   bannerRightScreen: "banner_right_screen",
   bannerBoCongThuong: "moit_certificate",
+    bannerTopSellingHome: "top_selling_home",
+    bannerFlashSale: "BannerFlashSale",
+
 };
 
 export const PARAMS_RECRUITMENT = {

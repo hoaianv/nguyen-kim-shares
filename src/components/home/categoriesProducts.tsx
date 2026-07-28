@@ -93,14 +93,14 @@ const CategoriesProductsSection = ({
         <div className="grid items-center gap-3 p-3 sm:p-4 bg-amber-50 lg:grid-cols-[220px_minmax(0,1fr)] xl:grid-cols-[230px_minmax(0,1fr)]">
           <Link
             href={item.url || "#"}
-            className="group relative hidden min-h-[408px] overflow-hidden rounded-3xl bg-slate-950 lg:block lg:self-center"
+            className="group relative hidden min-h-[408px] overflow-hidden rounded-3xl bg-slate-950 lg:block lg:self-center h-full"
           >
             <Image
               src={item.banner || item.picture}
               alt={item.title}
               fill
               sizes="230px"
-              className="object-cover opacity-95 transition duration-300 group-hover:scale-[1.03]"
+              className="object-cover h-full opacity-95 transition duration-300 group-hover:scale-[1.03]"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/82 via-slate-950/18 to-transparent" />
             <div className="absolute inset-x-0 bottom-0 p-4 text-white">

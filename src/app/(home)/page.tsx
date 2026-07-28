@@ -1,20 +1,22 @@
-import { getNewsLatest } from "@/apis/models/news.apis";
 import {
   getCategoriesProducts,
+  getProductsFlashSale,
   getProductsHot,
   getProductsRecommend,
 } from "@/apis/models/products.apis";
+import { getListPromotionHome } from "@/apis/models/promotion.apis";
 import BannerLeftRight from "@/components/home/BannerLeftRight";
 import BannerPopup from "@/components/home/BannerPopup";
-import HomeTrustBand from "@/components/home/HomeTrustBand";
 import { FeaturedCategories } from "@/components/home/featuredCategories";
 import { GroupBanner } from "@/components/home/groupBanner";
+import ProductCarouselSection from "@/components/home/ProductCarouselSection";
 import { LazySection } from "@/components/ui/lazySection";
 import { SkeletonLoader } from "@/components/ui/skeletonLoader";
+import { bannerKeys } from "@/constants/values.constant";
 import { getValidData } from "@/lib/utils";
 import dynamic from "next/dynamic";
 
-const NewsLatest = dynamic(() => import("@/components/home/newsLatest"), {
+const PromotionLatest = dynamic(() => import("@/components/home/PromotionLatest"), {
   ssr: false,
   loading: () => <SkeletonLoader height="h-64" />,
 });
@@ -34,21 +36,15 @@ const TopSellingProducts = dynamic(
   { loading: () => <SkeletonLoader height="h-48" />, ssr: false }
 );
 
-const ProductsRecommend = dynamic(
-  () => import("@/components/home/productsRecommend"),
-  {
-    loading: () => <SkeletonLoader height="h-48" />,
-    ssr: false,
-  }
-);
+
 
 export default async function Home() {
-  const [productsHot, categoriesProducts, productsRecommend, newsLatest] =
+  const [productsHot, categoriesProducts, promotionLatest, productsFlashSale] =
     await Promise.all([
       getProductsHot(),
       getCategoriesProducts(),
-      getProductsRecommend(),
-      getNewsLatest(),
+      getListPromotionHome(),
+      getProductsFlashSale(),
     ]);
 
   return (
@@ -66,6 +62,14 @@ export default async function Home() {
         <LazySection height="h-48">
           <TopSellingProducts data={getValidData(productsHot) ?? []} />
         </LazySection>
+
+        <LazySection height="h-48">
+          <ProductCarouselSection
+            data={getValidData(productsFlashSale) ?? []}
+            bannerKey={bannerKeys.bannerFlashSale}
+          />
+        </LazySection>
+
 
         <LazySection height="h-48">
           <CategoriesProducts data={getValidData(categoriesProducts) ?? []} />
@@ -86,7 +90,7 @@ export default async function Home() {
         </LazySection>
 
         <LazySection height="h-48">
-          <NewsLatest data={getValidData(newsLatest) ?? []} />
+          <PromotionLatest data={getValidData(promotionLatest) ?? []} />
         </LazySection>
       </div>
 

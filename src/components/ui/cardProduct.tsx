@@ -111,7 +111,7 @@ const CardProduct = ({ item }: { item: IProduct }) => {
     <>
       <div
         ref={cardRef}
-        className="group relative flex h-full w-full flex-col overflow-hidden rounded-sm  border border-border bg-white transition duration-200 hover:-translate-y-0.5 hover:border-amber-300"
+        className="group relative flex h-full w-full flex-col overflow-hidden  shadow-lg bg-white transition duration-200 hover:-translate-y-0.5 hover:border-amber-300"
         onMouseEnter={() => supportsHover && setIsHovered(true)}
         onMouseLeave={() => supportsHover && setIsHovered(false)}
       >
@@ -233,7 +233,7 @@ const CardProduct = ({ item }: { item: IProduct }) => {
                     }`}
                 >
                   <Zap size={18} />
-                  <span className="whitespace-nowrap">
+                  <span className="whitespace-nowrap font-bold">
                     {t("COMMON.buy_now")}
                   </span>
                 </button>

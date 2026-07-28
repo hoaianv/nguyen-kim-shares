@@ -31,3 +31,16 @@ export async function getSchema(payload: string) {
 
   return result;
 }
+
+export async function getListPromotionHome() {
+  const result = await api<IResponseListPromotion>({
+    url: `${CONST_APIS.SERVER_URL}/${CONST_APIS.FEATURES.MODEL.PROMOTION}/${
+      CONST_APIS_COMMON.TAKE_5_PROMOTION
+    }`,
+    options: {
+      method: CONST_METHODS.GET,
+    },
+  });
+
+  return result;
+}

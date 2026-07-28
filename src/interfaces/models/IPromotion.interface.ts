@@ -6,6 +6,7 @@ export interface IPromotion {
   title: string;
   slug: string;
   picture?: string;
+  categoryName: string;
   endDate: string;
   status: boolean;
   createdAt: string;
@@ -63,10 +64,7 @@ export interface IDetailPromotion extends IPromotion {
   description: string;
 }
 
-export type IResponseListPromotion = IResponse<{
-  items: IPromotion[];
-  pagination: IPagination;
-}>;
+export type IResponseListPromotion = IResponse<IPromotion[]>;
 export type IResponsePromotionCommon = IResponse<IPromotion[]>;
 
 export type IResponsePromotionSchema = IResponse<IPromotionSchema>;

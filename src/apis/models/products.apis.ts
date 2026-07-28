@@ -12,6 +12,7 @@ import {
   IResponseProductProperties,
   IResponseProductRelated,
   IResponseProductSchema,
+  IResponseProductsFlashSale,
   IResponseProductsHot,
   IResponseProductsRecommend,
   IResponseProductsViewed,
@@ -154,6 +155,19 @@ export async function getBestSeller(q?: string, page?: string) {
     url: `${CONST_APIS.SERVER_URL}/${CONST_APIS.FEATURES.MODEL.PRODUCT}/${
       CONST_APIS_COMMON.BEST_SELLERS
     }?${params.toString()}`,
+    options: {
+      method: CONST_METHODS.GET,
+    },
+  });
+
+  return result;
+}
+
+
+
+export async function getProductsFlashSale() {
+  const result = await api<IResponseProductsFlashSale>({
+    url: `${CONST_APIS.SERVER_URL}/${CONST_APIS.FEATURES.MODEL.PRODUCT}/${CONST_APIS_COMMON.FLASH_SALE}`,
     options: {
       method: CONST_METHODS.GET,
     },
