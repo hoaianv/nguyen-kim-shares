@@ -1,6 +1,5 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter, Sora } from "next/font/google";
 import { AuthInitializer } from "@/init/AuthInitializer";
 import { getAll as getAllCart } from "@/apis/models/cart.apis";
 import { CartInitializer } from "@/init/CartInitializer";
@@ -9,8 +8,14 @@ import { getMe } from "@/apis/common/auth.apis";
 import { getAll as getAllAdvertise } from "@/apis/models/advertise.apis";
 import { BannerInitializer } from "@/init/BannerInitializer";
 import { getAll as getAllSupport } from "@/apis/models/support.apis";
-import { getAll as getAllConfig } from "@/apis/common/footer.apis";
+import {
+  getAll as getAllConfig,
+  getAllSections as getAllFooterSections,
+} from "@/apis/common/footer.apis";
 import { ConfigInitializer } from "@/init/ConfigInitializer";
+import { FooterInitializer } from "@/init/FooterInitializer";
+import { CompanyAddressInitializer } from "@/init/CompanyAddressInitializer";
+import { getAll as getAllCompanyAddresses } from "@/apis/common/company-address.apis";
 import { NextIntlClientProvider } from "next-intl";
 
 import dynamic from "next/dynamic";
@@ -34,15 +39,6 @@ const PageTransition = dynamic(() => import("@/components/ui/PageTransition"), {
   ssr: false,
 });
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
-const sora = Sora({
-  subsets: ["latin"],
-  variable: "--font-display",
-});
-
 export const metadata: Metadata = {
   title: "Page Not Found - 404",
   description:
@@ -54,21 +50,29 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const [me, cart, advertises, supports, config, menu] = await Promise.all([
-    getMe(),
-    getAllCart(),
-    getAllAdvertise(),
-    getAllSupport(),
-    getAllConfig(),
-    getAllMenu(),
-  ]);
+  const [
+    me,
+    cart,
+    advertises,
+    supports,
+    config,
+    footerSections,
+    companyAddresses,
+    menu,
+  ] =
+    await Promise.all([
+      getMe(),
+      getAllCart(),
+      getAllAdvertise(),
+      getAllSupport(),
+      getAllConfig(),
+      getAllFooterSections(),
+      getAllCompanyAddresses(),
+      getAllMenu(),
+    ]);
 
   return (
-    <html
-      lang="vi"
-      className={`${inter.variable} ${sora.variable}`}
-      suppressHydrationWarning
-    >
+    <html lang="vi" suppressHydrationWarning>
       <head>
         {/* Google Tag Manager */}
         <GTMScript />
@@ -92,6 +96,8 @@ export default async function RootLayout({
         <BannerInitializer data={getValidData(advertises)} />
         <SupportInitializer data={getValidData(supports)} />
         <ConfigInitializer data={getValidData(config)} />
+        <FooterInitializer data={getValidData(footerSections)} />
+        <CompanyAddressInitializer data={getValidData(companyAddresses)} />
 
         <NextIntlClientProvider>
           <PageTransition>{children}</PageTransition>

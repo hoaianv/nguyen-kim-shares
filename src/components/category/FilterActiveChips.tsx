@@ -65,9 +65,9 @@ export default function FilterActiveChips({
 
     if (filterKey === ESlugType.Sort) {
       return filterValue?.toUpperCase() === "ASC"
-        ? "Giá thấp - cao"
+        ? "Giá tăng dần"
         : filterValue?.toUpperCase() === "DESC"
-        ? "Giá cao - thấp"
+        ? "Giá giảm dần"
         : `Sắp xếp: ${filterValue}`;
     }
 
@@ -107,7 +107,7 @@ export default function FilterActiveChips({
     : activeFilters;
 
   const formatVND = (value: number) =>
-    new Intl.NumberFormat("vi-VN").format(Math.max(0, Math.floor(value))) + "đ";
+    new Intl.NumberFormat("en-US").format(Math.max(0, Math.floor(value))) + "đ";
 
   const handleClearBothPrice = () => {
     const nextParams = new URLSearchParams(searchParamsHook.toString());
@@ -133,14 +133,14 @@ export default function FilterActiveChips({
 
   return (
     <div className="space-y-2">
-      <div className="text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
+      <div className="text-sm font-medium text-slate-600">
         Đang lọc theo {activeFilters.length} tiêu chí
       </div>
 
       <div className="flex gap-2 overflow-x-auto pb-1 scrollbar-thin scrollbar-thumb-border scrollbar-track-transparent lg:flex-wrap lg:overflow-visible lg:pb-0">
         {hasBothPrice ? (
           <div
-            className="inline-flex shrink-0 items-center gap-2 rounded-md border border-amber-300 bg-amber-50 px-3 py-1.5 text-sm text-amber-800"
+            className="inline-flex shrink-0 items-center gap-2 rounded-md border border-brand bg-brand-soft px-3 py-1.5 text-sm text-brand-deep"
             role="status"
           >
             <span className="max-w-[14rem] truncate text-sm leading-5">
@@ -155,7 +155,7 @@ export default function FilterActiveChips({
                 e.stopPropagation();
                 handleClearBothPrice();
               }}
-              className="inline-flex h-6 w-6 items-center justify-center rounded-sm border border-amber-300 bg-background transition hover:bg-amber-100"
+              className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-white text-brand-strong transition hover:bg-brand hover:text-slate-950"
             >
               <X size={12} />
             </button>
@@ -167,7 +167,7 @@ export default function FilterActiveChips({
           return (
             <div
               key={`${key}-${value}`}
-              className="inline-flex shrink-0 items-center gap-2 rounded-md border border-border/60 bg-background px-3 py-1.5 text-sm text-foreground"
+              className="inline-flex shrink-0 items-center gap-2 rounded-md border border-slate-200 bg-white px-3 py-1.5 text-sm text-foreground"
               role="status"
             >
               <span className="max-w-[14rem] truncate text-sm leading-5">
@@ -180,7 +180,7 @@ export default function FilterActiveChips({
                   e.stopPropagation();
                   handleRemoveFilter(key);
                 }}
-                className="inline-flex h-6 w-6 items-center justify-center rounded-sm border border-border/60 text-muted-foreground transition hover:border-amber-300 hover:bg-amber-50 hover:text-foreground"
+                className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-slate-100 text-slate-400 transition hover:bg-brand-soft hover:text-brand-deep"
               >
                 <X size={12} />
               </button>
@@ -191,7 +191,7 @@ export default function FilterActiveChips({
         <button
           type="button"
           onClick={handleClearAll}
-          className="ml-1 inline-flex h-9 shrink-0 items-center rounded-md border border-border/60 bg-background px-3 text-sm font-medium text-muted-foreground transition hover:border-amber-300 hover:bg-amber-50/70 hover:text-foreground"
+          className="ml-1 inline-flex h-9 shrink-0 items-center rounded-md border border-slate-200 bg-white px-3 text-sm font-medium text-slate-600 transition hover:border-brand hover:bg-brand-soft hover:text-brand-deep"
         >
           Bỏ chọn tất cả
         </button>

@@ -40,16 +40,11 @@ export default async function CategoryDetail({
       <div className="space-y-5">
         <section className="space-y-4">
           <CategoryHero
-            breadcrumb={categoryData.breadcrumb ?? []}
-            categorySlug={categorySlug}
             categoryTitle={categoryData?.nameCategory ?? ""}
-            searchParams={searchParameters}
-            totalProducts={pagination?.total ?? productList.length}
-            listBrand={categoryData.listBrand ?? []}
-            customerNeeds={categoryData.customerNeeds ?? []}
           />
 
           <CategoryParentTabsServer />
+          <CategoryBanners />
         </section>
 
         <CategoryCatalogView

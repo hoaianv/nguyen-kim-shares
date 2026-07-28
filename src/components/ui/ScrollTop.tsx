@@ -46,13 +46,13 @@ const ScrollTop = () => {
               sm:bottom-6 sm:right-6
               lg:bottom-8 lg:right-8
               inline-flex items-center justify-center
-              rounded-lg
-              border border-border
-              bg-background text-foreground
-              p-2 sm:p-2 lg:p-3
-              shadow-[0_18px_40px_-28px_rgba(15,23,42,0.4)]
+              h-11 w-11 sm:h-12 sm:w-12
+              rounded-full
+              border border-brand
+              bg-gradient-to-br from-brand to-brand-hover text-brand-deep
+              shadow-[0_14px_30px_-14px_rgba(226,185,10,0.8)]
               transition-all duration-300
-              hover:border-foreground/15 hover:bg-muted/60
+              hover:brightness-105
               touch-manipulation
               select-none
             "

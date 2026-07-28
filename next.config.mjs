@@ -41,6 +41,11 @@ const nextConfig = {
         hostname: "media.vitinhnguyenkim.com.vn",
         pathname: "/uploads/**",
       },
+      {
+        protocol: "https",
+        hostname: "media.vitinhnguyenkim.vn",
+        pathname: "/uploads/**",
+      },
     ],
   },
 

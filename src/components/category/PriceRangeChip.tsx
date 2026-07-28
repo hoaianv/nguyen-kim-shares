@@ -123,7 +123,7 @@ export default function PriceRangeChip({
         className={`flex h-12 w-full items-center justify-between rounded-md border px-3 text-sm font-medium transition ${
           isPriceActive
             ? "border-amber-300 bg-amber-50 text-amber-800"
-            : "border-border/60 bg-muted/20 text-foreground hover:border-amber-300 hover:bg-amber-50/70"
+            : "border-border/60 bg-white text-foreground hover:border-amber-300 hover:bg-amber-50/70"
         }`}
         title="Xem theo giá"
       >
@@ -143,7 +143,7 @@ export default function PriceRangeChip({
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.22, ease: "easeOut" }}
-            className="overflow-hidden rounded-md border border-border/60 bg-muted/10 p-3"
+            className="overflow-hidden rounded-md border border-border/60 bg-white p-3"
           >
             <div className="space-y-3">
               <div className="grid grid-cols-2 gap-2">
@@ -159,7 +159,7 @@ export default function PriceRangeChip({
                     onChange={(event) =>
                       setCurrentMinPrice(Number(event.target.value || 0))
                     }
-                    className="h-11 w-full rounded-md border border-border/60 bg-background px-3 text-sm outline-none transition focus:border-amber-300"
+                    className="h-11 w-full rounded-md border border-border/60 bg-white px-3 text-sm outline-none transition focus:border-amber-300"
                     placeholder={formatVND(rangePrice.minPrice)}
                   />
                 </label>
@@ -175,7 +175,7 @@ export default function PriceRangeChip({
                     onChange={(event) =>
                       setCurrentMaxPrice(Number(event.target.value || 0))
                     }
-                    className="h-11 w-full rounded-md border border-border/60 bg-background px-3 text-sm outline-none transition focus:border-amber-300"
+                    className="h-11 w-full rounded-md border border-border/60 bg-white px-3 text-sm outline-none transition focus:border-amber-300"
                     placeholder={formatVND(rangePrice.maxPrice)}
                   />
                 </label>
@@ -234,7 +234,7 @@ export default function PriceRangeChip({
                 <button
                   type="button"
                   onClick={() => setIsOpenDropdown(false)}
-                  className="inline-flex h-10 flex-1 items-center justify-center rounded-md border border-border/60 bg-background text-sm font-medium text-foreground transition hover:border-amber-300 hover:bg-amber-50/70"
+                  className="inline-flex h-10 flex-1 items-center justify-center rounded-md border border-border/60 bg-white text-sm font-medium text-foreground transition hover:border-amber-300 hover:bg-amber-50/70"
                 >
                   Đóng
                 </button>

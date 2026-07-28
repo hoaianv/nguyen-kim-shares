@@ -74,7 +74,7 @@ export default function MobileFilterSheet({
           />
 
           <motion.div
-            className="absolute inset-x-0 bottom-0 max-h-[88vh] overflow-hidden rounded-t-lg border-t border-border/60 bg-background shadow-[0_-24px_80px_-30px_rgba(15,23,42,0.55)]"
+            className="absolute inset-x-0 bottom-0 max-h-[88vh] overflow-hidden rounded-t-lg border-t border-border/60 bg-white shadow-[0_-24px_80px_-30px_rgba(15,23,42,0.55)]"
             initial={reduceMotion ? { y: 0 } : { y: 24 }}
             animate={{ y: 0 }}
             exit={reduceMotion ? { y: 0 } : { y: 24 }}
@@ -101,14 +101,14 @@ export default function MobileFilterSheet({
               <button
                 type="button"
                 onClick={onClose}
-                className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-border/60 bg-background text-foreground transition hover:border-amber-300 hover:bg-amber-50/70"
+                className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-border/60 bg-white text-foreground transition hover:border-amber-300 hover:bg-amber-50/70"
                 aria-label="Đóng"
               >
                 <X className="h-4 w-4" />
               </button>
             </div>
 
-            <div className="max-h-[calc(88vh-140px)] overflow-y-auto px-4 py-4">
+            <div className="max-h-[calc(88vh-140px)] overflow-y-auto px-4 py-4 scrollbar-thin scrollbar-thumb-slate-300 scrollbar-track-slate-100 hover:scrollbar-thumb-slate-400">
               <div className="space-y-4">
                 {!!listBrand?.length && <FilterBrand listBrand={listBrand} />}
                 {!!customerNeeds?.length && (
@@ -119,12 +119,12 @@ export default function MobileFilterSheet({
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-2 border-t border-border/60 bg-muted/20 p-4">
+            <div className="grid grid-cols-2 gap-2 border-t border-border/60 bg-white p-4">
               <button
                 type="button"
                 onClick={onResetAll}
                 disabled={activeFilterCount === 0}
-                className="inline-flex h-11 items-center justify-center rounded-md border border-border/60 bg-background text-sm font-medium text-foreground transition hover:border-amber-300 hover:bg-amber-50/70 disabled:cursor-not-allowed disabled:opacity-50"
+                className="inline-flex h-11 items-center justify-center rounded-md border border-border/60 bg-white text-sm font-medium text-foreground transition hover:border-amber-300 hover:bg-amber-50/70 disabled:cursor-not-allowed disabled:opacity-50"
               >
                 Xóa bộ lọc
               </button>

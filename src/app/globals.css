@@ -3,6 +3,14 @@
 @tailwind utilities;
 
 :root {
+  --font-sans: Arial, Helvetica, sans-serif;
+  --font-display: Arial, Helvetica, sans-serif;
+  --brand-primary: #fed41b;
+  --brand-primary-hover: #e2b90a;
+  --brand-primary-soft: #fff9dd;
+  --brand-primary-strong: #7a6300;
+  --brand-primary-deep: #493b00;
+  --brand-primary-glow: #fde68a;
   --foreground-rgb: 30, 41, 59;
   --background-start-rgb: 244, 248, 253;
   --background-end-rgb: 255, 255, 255;
@@ -47,7 +55,7 @@
   }
 
   .nk-focus-ring {
-    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ffb716] focus-visible:ring-offset-2 focus-visible:ring-offset-background;
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background;
   }
 
   .nk-section-title {
@@ -68,6 +76,14 @@
   background-color: white !important;
 }
 
+.product-gallery-inline .yarl__container,
+.product-gallery-inline .yarl__slide,
+.product-gallery-inline .yarl__slide_image {
+  background-color: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
 .yarl__thumbnails_bottom .yarl__thumbnails_vignette {
   background: linear-gradient(to right,
       #ffffff 0,
@@ -81,7 +97,106 @@
   }
 
 .yarl__thumbnails_thumbnail_active {
-  border-color: #aec6fd !important;
+  border-color: var(--brand-primary-strong) !important;
+}
+
+/* Compatibility palette for existing arbitrary Tailwind yellow classes.
+   New UI should use the semantic `brand-*` utilities from tailwind.config.ts. */
+[class~="bg-[#ffb716]"],
+[class~="bg-[#FFD400]"] {
+  background-color: var(--brand-primary) !important;
+}
+
+[class~="bg-[#FFD400]/10"] {
+  background-color: rgb(254 212 27 / 0.1) !important;
+}
+
+[class~="bg-[#fff7da]"] {
+  background-color: var(--brand-primary-soft) !important;
+}
+
+[class~="text-[#ffb716]"],
+[class~="text-[#e6a414]"],
+[class~="text-[#b77900]"] {
+  color: var(--brand-primary-strong) !important;
+}
+
+[class~="text-[#FFD400]"] {
+  color: var(--brand-primary) !important;
+}
+
+[class~="border-[#ffb716]"] {
+  border-color: var(--brand-primary) !important;
+}
+
+[class~="border-[#e6a414]"] {
+  border-color: var(--brand-primary-strong) !important;
+}
+
+[class~="hover:bg-[#e6a414]"]:hover {
+  background-color: var(--brand-primary-hover) !important;
+}
+
+[class~="hover:bg-[#fff7da]"]:hover {
+  background-color: var(--brand-primary-soft) !important;
+}
+
+[class~="hover:border-[#ffb716]"]:hover {
+  border-color: var(--brand-primary) !important;
+}
+
+[class~="hover:border-[#e6a414]"]:hover {
+  border-color: var(--brand-primary-strong) !important;
+}
+
+[class~="hover:text-[#e6a414]"]:hover {
+  color: var(--brand-primary-strong) !important;
+}
+
+[class~="focus-visible:ring-[#ffb716]"]:focus-visible {
+  --tw-ring-color: var(--brand-primary) !important;
+}
+
+.group:hover [class~="group-hover:bg-[#ffb716]"] {
+  background-color: var(--brand-primary) !important;
+}
+
+.group:hover [class~="group-hover:bg-[#fff7da]"] {
+  background-color: var(--brand-primary-soft) !important;
+}
+
+.group:hover [class~="group-hover:bg-[#e6a414]"] {
+  background-color: var(--brand-primary-hover) !important;
+}
+
+.group:hover [class~="group-hover:border-[#ffb716]"] {
+  border-color: var(--brand-primary) !important;
+}
+
+.group:hover [class~="group-hover:text-[#e6a414]"] {
+  color: var(--brand-primary-strong) !important;
+}
+
+[class~="from-[#ffb716]"] {
+  --tw-gradient-from: var(--brand-primary) var(--tw-gradient-from-position) !important;
+  --tw-gradient-to: rgb(254 212 27 / 0) var(--tw-gradient-to-position) !important;
+}
+
+[class~="via-[#ffc850]"] {
+  --tw-gradient-to: rgb(253 230 138 / 0) var(--tw-gradient-to-position) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--brand-primary-glow) var(--tw-gradient-via-position), var(--tw-gradient-to) !important;
+}
+
+[class~="to-[#ffb716]"] {
+  --tw-gradient-to: var(--brand-primary) var(--tw-gradient-to-position) !important;
+}
+
+[class~="to-[#ffa500]"] {
+  --tw-gradient-to: var(--brand-primary-strong) var(--tw-gradient-to-position) !important;
+}
+
+[class*="rgba(255,183,22"]:hover {
+  box-shadow: 0 10px 40px rgb(254 212 27 / 0.5) !important;
 }
 
 @layer base {
@@ -92,19 +207,19 @@
     --card-foreground: 222 24% 16%;
     --popover: 0 0% 100%;
     --popover-foreground: 222 24% 16%;
-    --primary: 42 100% 54%;
+    --primary: 47 99% 55%;
     --primary-foreground: 221 39% 11%;
     --secondary: 205 75% 97%;
     --secondary-foreground: 222 24% 16%;
     --muted: 220 20% 96%;
     --muted-foreground: 220 10% 42%;
-    --accent: 42 100% 54%;
+    --accent: 47 99% 55%;
     --accent-foreground: 222 24% 16%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     --border: 220 14% 87%;
     --input: 220 14% 87%;
-    --ring: 42 100% 54%;
+    --ring: 47 99% 55%;
     --chart-1: 224 28% 20%;
     --chart-2: 42 100% 54%;
     --chart-3: 195 85% 54%;
@@ -120,19 +235,19 @@
     --card-foreground: 0 0% 98%;
     --popover: 222 38% 12%;
     --popover-foreground: 0 0% 98%;
-    --primary: 42 100% 54%;
+    --primary: 47 99% 55%;
     --primary-foreground: 224 28% 12%;
     --secondary: 222 28% 18%;
     --secondary-foreground: 0 0% 98%;
     --muted: 222 28% 18%;
     --muted-foreground: 220 14% 68%;
-    --accent: 222 28% 18%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 47 99% 55%;
+    --accent-foreground: 224 28% 12%;
     --destructive: 0 62.8% 50.6%;
     --destructive-foreground: 0 0% 98%;
     --border: 222 20% 22%;
     --input: 222 20% 22%;
-    --ring: 42 100% 54%;
+    --ring: 47 99% 55%;
     --chart-1: 224 89% 65%;
     --chart-2: 42 100% 54%;
     --chart-3: 195 85% 54%;
@@ -210,7 +325,7 @@
 
 .nk-home-hero-swiper .swiper-pagination-bullet-active {
   width: 28px;
-  background: #ffb716;
+  background: var(--brand-primary);
 }
 
 .nk-range input[type="range"] {
@@ -230,8 +345,7 @@
   border-radius: 9999px;
   /* full */
   background: #ffffff;
-  border: 2px solid #2563eb;
-  /* blue-600 */
+  border: 2px solid var(--brand-primary);
   box-shadow: 0 1px 2px rgba(15, 23, 42, 0.15);
   cursor: pointer;
   /* Center the thumb on a 4px track (h-1): (thumb - track) / -2 */
@@ -246,8 +360,7 @@
 
 .nk-range input[type="range"]:active::-webkit-slider-thumb {
   transform: scale(1.05);
-  border-color: #1d4ed8;
-  /* blue-700 */
+  border-color: var(--brand-primary-hover);
 }
 
 .nk-range input[type="range"]::-moz-range-thumb {
@@ -255,7 +368,7 @@
   width: 18px;
   border-radius: 9999px;
   background: #ffffff;
-  border: 2px solid #2563eb;
+  border: 2px solid var(--brand-primary);
   box-shadow: 0 1px 2px rgba(15, 23, 42, 0.15);
   cursor: pointer;
 }
@@ -268,7 +381,7 @@
 
 .nk-range input[type="range"]:active::-moz-range-thumb {
   transform: scale(1.05);
-  border-color: #1d4ed8;
+  border-color: var(--brand-primary-hover);
 }
 
 .nk-range input[type="range"]::-ms-thumb {

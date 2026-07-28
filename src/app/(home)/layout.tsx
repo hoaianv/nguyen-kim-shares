@@ -22,7 +22,7 @@ const SupportWidget = dynamic(
     })),
   {
     ssr: false,
-  }
+  },
 );
 
 export const metadata: Metadata = {
@@ -84,7 +84,7 @@ export default async function RootLayout({
       </div>
       <ScrollTop />
       <Header />
-      <main className="min-h-screen bg-background">{children}</main>
+      <main className="min-h-screen bg-white">{children}</main>
       <Footer />
       <SupportWidget />
     </>

@@ -21,8 +21,8 @@ export default function FilterDropdownPanel({
   onClose,
 }: FilterDropdownPanelProps) {
   return (
-    <div className="border border-border bg-background">
-      <div className="grid max-h-[70vh] gap-4 overflow-y-auto p-4 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="border border-border bg-white">
+      <div className="grid max-h-[70vh] gap-4 overflow-y-auto p-4 scrollbar-thin scrollbar-thumb-slate-300 scrollbar-track-slate-100 hover:scrollbar-thumb-slate-400 sm:grid-cols-2 lg:grid-cols-3">
         {options.map((group) => (
           <div key={group.id} className="space-y-3">
             <div className="border-b border-border pb-2">
@@ -49,7 +49,7 @@ export default function FilterDropdownPanel({
                     className={`flex w-full items-center justify-between border px-3 py-2.5 text-left text-sm transition ${
                       selected
                         ? "border-amber-300 bg-amber-50 text-amber-800"
-                        : "border-border bg-background text-foreground hover:border-amber-200 hover:bg-amber-50/40"
+                        : "border-border bg-white text-foreground hover:border-amber-200 hover:bg-amber-50/40"
                     }`}
                   >
                     <span className="line-clamp-2">{sub.title}</span>
@@ -66,11 +66,11 @@ export default function FilterDropdownPanel({
         ))}
       </div>
 
-      <div className="flex items-center justify-end gap-3 border-t border-border bg-muted/20 p-4">
+      <div className="flex items-center justify-end gap-3 border-t border-border bg-white p-4">
         <button
           type="button"
           onClick={clearAllFilters}
-          className="inline-flex h-10 items-center border border-border bg-background px-4 text-sm font-medium text-foreground transition hover:border-amber-300 hover:bg-amber-50"
+          className="inline-flex h-10 items-center border border-border bg-white px-4 text-sm font-medium text-foreground transition hover:border-amber-300 hover:bg-amber-50"
         >
           Thiết lập lại
         </button>

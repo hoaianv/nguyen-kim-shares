@@ -48,7 +48,7 @@ export default function CompareProducts({ data }: { data: ICompareProduct[] }) {
     <div className="">
       <div className="flex items-start justify-between flex-wrap gap-2 sm:gap-3">
         <div>
-          <h1 className="text-lg sm:text-xl font-semibold text-[#111827]">
+          <h1 className="text-lg font-bold sm:text-xl text-[#111827]">
             {t("PRODUCT.compare_products")}
           </h1>
         </div>
@@ -62,7 +62,7 @@ export default function CompareProducts({ data }: { data: ICompareProduct[] }) {
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.25, delay: idx * 0.05 }}
-            className="relative rounded-lg bg-white shadow-sm overflow-hidden"
+            className="relative overflow-hidden rounded-lg border border-slate-200 bg-white shadow-[0_10px_24px_-16px_rgba(15,23,42,0.45)] transition-shadow duration-200 hover:shadow-[0_14px_30px_-16px_rgba(15,23,42,0.5)]"
           >
             <div className="flex items-stretch gap-2 sm:gap-3 p-2 sm:p-3">
               <div className="relative shrink-0 w-20 h-20 sm:w-24 sm:h-24 bg-gray-50 rounded-lg overflow-hidden">

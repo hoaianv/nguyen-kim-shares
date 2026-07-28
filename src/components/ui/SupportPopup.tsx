@@ -1,157 +1,122 @@
 "use client";
 
-import { X, Phone, Mail, User } from "lucide-react";
+import { ChevronRight, Headset, Mail, Phone, User, X } from "lucide-react";
 
 interface SupportPopupProps {
   isOpen: boolean;
   setIsOpen: (open: boolean) => void;
 }
 
+const supportContacts = [
+  {
+    label: "Zalo",
+    value: "0938808814",
+    href: "tel:0938808814",
+    icon: Phone,
+  },
+  {
+    label: "Email liên hệ",
+    value: "linhhtm@nguyenkimcomputer.vn",
+    href: "mailto:linhhtm@nguyenkimcomputer.vn",
+    icon: Mail,
+  },
+];
+
 export function SupportPopup({ isOpen, setIsOpen }: SupportPopupProps) {
   if (!isOpen) return null;
 
   return (
-    <>
-      {/* Overlay */}
-      <div
-        className="fixed inset-0 z-40 animate-in fade-in bg-slate-950/60 backdrop-blur-sm duration-300"
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center p-4"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="support-popup-title"
+    >
+      <button
+        type="button"
+        aria-label="Đóng hỗ trợ khách hàng"
+        className="absolute inset-0 bg-slate-950/45 backdrop-blur-[2px]"
         onClick={() => setIsOpen(false)}
       />
 
-      {/* Popup - Reduced max-width and padding */}
-      <div className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-50 w-[90%] max-w-sm animate-in zoom-in-95 fade-in slide-in-from-bottom-4 duration-300">
-        <div className="bg-white rounded-lg shadow-2xl overflow-hidden border border-gray-100">
-          <div className="relative bg-gradient-to-br from-[#ffb716] via-[#ffc850] to-[#ffb716] px-5 py-6">
-            <div className="absolute inset-0 bg-[url('/abstract-wave-pattern.png')] opacity-10 mix-blend-overlay" />
-            <div className="relative flex items-center justify-between">
-              <div>
-                <h2 className="text-xl font-bold text-white mb-1">
-                  Hỗ Trợ Khách Hàng
-                </h2>
-                <p className="text-white/90 text-xs">
-                  Chúng tôi luôn sẵn sàng hỗ trợ bạn
-                </p>
-              </div>
-              <button
-                onClick={() => setIsOpen(false)}
-                className="text-white/90 hover:text-white hover:bg-white/20 rounded-lg p-2 transition-all duration-200"
-                aria-label="Đóng"
+      <div className="relative w-full max-w-sm overflow-hidden rounded-xl border border-slate-200 bg-white shadow-[0_24px_70px_-32px_rgba(15,23,42,0.45)] animate-in fade-in zoom-in-95 slide-in-from-bottom-3 duration-200">
+        <div className="flex items-start justify-between border-b border-slate-200 px-5 py-4">
+          <div className="flex items-center gap-3">
+            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-soft text-brand-deep">
+              <Headset className="h-5 w-5" />
+            </span>
+            <div>
+              <h2
+                id="support-popup-title"
+                className="text-base font-bold text-slate-950"
               >
-                <X className="w-5 h-5" />
-              </button>
+                Hỗ trợ khách hàng
+              </h2>
+              <p className="mt-0.5 text-sm text-slate-500">
+                Chúng tôi luôn sẵn sàng hỗ trợ bạn.
+              </p>
+            </div>
+          </div>
+          <button
+            type="button"
+            onClick={() => setIsOpen(false)}
+            className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-slate-100 text-slate-500 transition hover:bg-brand-soft hover:text-brand-deep focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand"
+            aria-label="Đóng"
+          >
+            <X className="h-4 w-4" />
+          </button>
+        </div>
+
+        <div className="space-y-3 p-5">
+          <div className="flex items-center gap-3 rounded-lg border border-slate-200 bg-slate-50 p-4">
+            <div className="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-brand-soft text-brand-deep">
+              <User className="h-6 w-6" />
+              <span className="absolute bottom-0 right-0 h-3.5 w-3.5 rounded-full border-2 border-white bg-emerald-500" />
+            </div>
+            <div>
+              <p className="text-xs font-medium uppercase tracking-wide text-slate-500">
+                Kinh doanh Online
+              </p>
+              <p className="mt-0.5 text-base font-bold text-slate-950">
+                Hồ Thị Mỹ Linh
+              </p>
+              <p className="text-sm text-slate-600">
+                Tư vấn viên chuyên nghiệp
+              </p>
             </div>
           </div>
 
-          {/* Content - Reduced padding from p-6 to p-4 and space-y from 5 to 3 */}
-          <div className="p-4 space-y-3 bg-gradient-to-b from-gray-50/50 to-white">
-            <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-100">
-              <div className="flex items-start gap-3">
-                <div className="relative">
-                  <div className="w-14 h-14 rounded-lg bg-gradient-to-br from-[#ffb716] to-[#ffa500] flex items-center justify-center shadow-lg">
-                    <User className="w-7 h-7 text-white" />
-                  </div>
-                  <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 rounded-lg border-2 border-white" />
-                </div>
-                <div className="flex-1 pt-0.5">
-                  <p className="text-xs text-gray-500 font-medium uppercase tracking-wide mb-0.5">
-                    Kinh doanh Online
-                  </p>
-                  <p className="text-lg font-bold text-gray-900 mb-0.5">
-                    Trịnh Bảo Nhi
-                  </p>
-                  <p className="text-xs text-gray-600">
-                    Tư vấn viên chuyên nghiệp
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="space-y-2">
-              {/* Zalo - Reduced padding from p-4 to p-3 */}
-              <a
-                href="tel:0938808447"
-                className="flex items-center gap-3 p-3 bg-white rounded-lg hover:bg-blue-50 border border-gray-200 hover:border-blue-500 transition-all duration-200 group shadow-sm hover:shadow-md"
-              >
-                <div className="w-11 h-11 rounded-lg bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-200 shadow-md">
-                  <Phone className="w-5 h-5 text-white" />
-                </div>
-                <div className="flex-1">
-                  <p className="text-xs text-gray-500 font-medium mb-0.5">
-                    Zalo
-                  </p>
-                  <p className="text-base font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
-                    0938808105
-                  </p>
-                </div>
-                <div className="text-gray-400 group-hover:text-blue-500 transition-colors">
-                  <svg
-                    className="w-4 h-4"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
-                </div>
-              </a>
-
-              {/* Email - Reduced padding from p-4 to p-3 */}
-              <a
-                href="mailto:antt.vn"
-                className="flex items-center gap-3 p-3 bg-white rounded-lg hover:bg-blue-50 border border-gray-200 hover:border-blue-500 transition-all duration-200 group shadow-sm hover:shadow-md"
-              >
-                <div className="w-11 h-11 rounded-lg bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-200 shadow-md">
-                  <Mail className="w-5 h-5 text-white" />
-                </div>
-                <div className="flex-1">
-                  <p className="text-xs text-gray-500 font-medium mb-0.5">
-                    Email liên hệ
-                  </p>
-                  <p className="text-base font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
-                    nhitb@nguyenkimvn.vn
-                  </p>
-                </div>
-                <div className="text-gray-400 group-hover:text-blue-500 transition-colors">
-                  <svg
-                    className="w-4 h-4"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
-                </div>
-              </a>
-            </div>
-
-            <div className="flex items-center justify-center gap-2 text-xs text-gray-600 pt-1">
-              <svg
-                className="w-4 h-4 text-green-500"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                  clipRule="evenodd"
-                />
-              </svg>
-              <span>Phản hồi trong vòng 5 phút</span>
-            </div>
+          <div className="space-y-2">
+            {supportContacts.map((contact) => {
+              const Icon = contact.icon;
+              return (
+                <a
+                  key={contact.label}
+                  href={contact.href}
+                  className="group flex items-center gap-3 rounded-lg border border-slate-200 bg-white p-3 transition hover:border-brand hover:bg-brand-soft/40"
+                >
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-soft text-brand-deep transition group-hover:bg-brand group-hover:text-slate-950">
+                    <Icon className="h-5 w-5" />
+                  </span>
+                  <span className="min-w-0 flex-1">
+                    <span className="block text-xs font-medium text-slate-500">
+                      {contact.label}
+                    </span>
+                    <span className="block truncate text-sm font-semibold text-slate-900">
+                      {contact.value}
+                    </span>
+                  </span>
+                  <ChevronRight className="h-4 w-4 text-slate-400 transition group-hover:text-brand-deep" />
+                </a>
+              );
+            })}
           </div>
+
+          <p className="pt-1 text-center text-xs text-slate-500">
+            Phản hồi trong vòng 5 phút.
+          </p>
         </div>
       </div>
-    </>
+    </div>
   );
 }
-

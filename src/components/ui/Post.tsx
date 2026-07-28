@@ -5,17 +5,17 @@ export default function Post({ data }: { data: string }) {
         __html: data || "",
       }}
       className="
-        prose prose-sm sm:prose md:prose-lg w-full !max-w-none
-        prose-headings:text-slate-900 prose-headings:font-semibold prose-headings:leading-tight
-        prose-h1:text-2xl sm:prose-h1:text-3xl lg:prose-h1:text-4xl prose-h1:mt-8 prose-h1:mb-6 first:prose-h1:mt-0
-        prose-h2:text-xl sm:prose-h2:text-2xl lg:prose-h2:text-3xl prose-h2:mt-8 prose-h2:mb-4 prose-h2:pb-2 prose-h2:border-b prose-h2:border-slate-200
-        prose-h3:text-lg sm:prose-h3:text-xl lg:prose-h3:text-2xl prose-h3:mt-6 prose-h3:mb-3
-        prose-p:text-slate-700 sm:prose-p:text-lg prose-p:leading-relaxed prose-p:mb-5 first:prose-p:mt-0 last:prose-p:mb-0
+        prose prose-sm sm:prose-base w-full !max-w-none
+        prose-headings:text-slate-900 prose-headings:font-semibold prose-headings:leading-snug
+        prose-h1:text-xl sm:prose-h1:text-2xl lg:prose-h1:text-2xl prose-h1:mt-6 prose-h1:mb-4 first:prose-h1:mt-0
+        prose-h2:text-lg sm:prose-h2:text-xl lg:prose-h2:text-xl prose-h2:mt-6 prose-h2:mb-3 prose-h2:pb-1.5 prose-h2:border-b prose-h2:border-slate-200
+        prose-h3:text-base sm:prose-h3:text-lg lg:prose-h3:text-lg prose-h3:mt-5 prose-h3:mb-2
+        prose-p:text-sm sm:prose-p:text-base prose-p:leading-7 prose-p:mb-4 first:prose-p:mt-0 last:prose-p:mb-0
         prose-strong:text-slate-900 prose-strong:font-medium prose-em:text-slate-600
-        prose-ul:list-disc prose-ol:list-decimal prose-li:text-slate-700 sm:prose-li:text-lg prose-li:leading-relaxed prose-li:mb-2
+        prose-ul:list-disc prose-ol:list-decimal prose-li:text-slate-700 sm:prose-li:text-base prose-li:leading-7 prose-li:mb-1.5
         prose-img:block prose-img:mx-auto
         prose-img:!w-auto prose-img:max-w-full prose-img:h-auto
-        prose-img:rounded-lg prose-img:shadow-lg prose-img:mt-6 prose-img:mb-8
+        prose-img:bg-transparent prose-img:shadow-none prose-img:mt-6 prose-img:mb-8
         prose-img:max-h-[280px] sm:prose-img:max-h-[380px] md:prose-img:max-h-[480px] lg:prose-img:max-h-[580px]
         [&_img[style*='width']]:max-w-full
         [&_img[style*='height']]:h-auto
