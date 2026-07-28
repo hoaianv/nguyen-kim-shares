@@ -1,6 +1,7 @@
 "use client";
 
 import { useCartActions } from "@/hooks/useCartActions";
+import { useBuyAction } from "@/hooks/useBuyAction";
 import { IProduct } from "@/interfaces/models/IProduct.interface";
 import {
   calcDiscountPercentage,
@@ -8,21 +9,21 @@ import {
   getMarketPrice,
   getPrice,
 } from "@/lib/utils";
-import { ShoppingCart, Heart, Shuffle } from "lucide-react";
+import { ShoppingCart, Heart, Shuffle, Zap } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { memo, useEffect, useRef, useState } from "react";
-import ImageWithFallback from "../ImageWithFallback";
 import { useStateStore } from "@/stores/stateStore";
-import ProductCardPopup from "./ProductCardPopup";
+import { useCartStore } from "@/stores/useCartStore";
 import Portal from "./Portal";
-
-const stripHtml = (value?: string | null) =>
-  value ? value.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim() : "";
+import ImageWithFallback from "@/components/ImageWithFallback";
+import ProductCardPopup from "@/components/ui/ProductCardPopup";
 
 const CardProduct = ({ item }: { item: IProduct }) => {
   const { addToCart } = useCartActions();
+  const { setSelectedIds } = useCartStore();
+  const { buyNow } = useBuyAction(setSelectedIds);
   const t = useTranslations();
   const { config } = useStateStore();
   const [supportsHover, setSupportsHover] = useState(false);
@@ -42,7 +43,8 @@ const CardProduct = ({ item }: { item: IProduct }) => {
 
     if (typeof mediaQuery.addEventListener === "function") {
       mediaQuery.addEventListener("change", updateSupportsHover);
-      return () => mediaQuery.removeEventListener("change", updateSupportsHover);
+      return () =>
+        mediaQuery.removeEventListener("change", updateSupportsHover);
     }
 
     mediaQuery.addListener(updateSupportsHover);
@@ -95,7 +97,9 @@ const CardProduct = ({ item }: { item: IProduct }) => {
     };
   }, [isHovered, supportsHover]);
 
-  const specs = Array.isArray(item.technology) ? item.technology.slice(0, 3) : [];
+  const specs = Array.isArray(item.technology)
+    ? item.technology.slice(0, 3)
+    : [];
   const hasDiscount =
     item.marketPrice !== undefined &&
     item.marketPrice > item.price &&
@@ -107,7 +111,7 @@ const CardProduct = ({ item }: { item: IProduct }) => {
     <>
       <div
         ref={cardRef}
-        className="group relative flex h-full w-full flex-col overflow-hidden rounded-lg border border-border bg-background transition duration-200 hover:-translate-y-0.5 hover:border-amber-300"
+        className="group relative flex h-full w-full flex-col overflow-hidden rounded-sm  border border-border bg-white transition duration-200 hover:-translate-y-0.5 hover:border-amber-300"
         onMouseEnter={() => supportsHover && setIsHovered(true)}
         onMouseLeave={() => supportsHover && setIsHovered(false)}
       >
@@ -152,7 +156,29 @@ const CardProduct = ({ item }: { item: IProduct }) => {
             </h3>
           </Link>
 
+          {item?.technology && item?.technology?.length > 0 && (
+            <div className="mt-3 space-y-1.5 p-1 bg-[#ECECEC] rounded-sm ">
+              {item.technology.slice(0, 3).map((spec) => (
+                <div
+                  key={spec.id}
+                  className="grid grid-cols-[90px_minmax(0,1fr)] gap-x-1 text-xs leading-5"
+                >
+                  {/* Title */}
+                  <span className="font-semibold text-foreground">
+                    {spec.title}:
+                  </span>
 
+                  {/* Description */}
+                  <span
+                    className="line-clamp-2 min-w-0 text-muted-foreground [&_p]:m-0 [&_p]:inline [&_div]:inline [&_br]:hidden"
+                    dangerouslySetInnerHTML={{
+                      __html: spec.description ?? "",
+                    }}
+                  />
+                </div>
+              ))}
+            </div>
+          )}
 
           <div className="mt-auto space-y-2 border-t border-border pt-3">
             <div className="flex items-end justify-between gap-3">
@@ -177,26 +203,52 @@ const CardProduct = ({ item }: { item: IProduct }) => {
               </div>
             </div>
 
-            <button
-              type="button"
-              onClick={async () => {
-                if (item.isInStock) {
-                  const res = await addToCart([{ product: item, quantity: 1 }]);
-                  cartToast(res, router);
-                } else {
+            {item.isInStock ? (
+              <div className="flex items-center gap-2">
+
+
+
+                <button
+                  type="button"
+                  onClick={async () => {
+                    const res = await addToCart([
+                      { product: item, quantity: 1 },
+                    ]);
+                    cartToast(res, router);
+                  }}
+                  className={`inline-flex h-11 w-fit  px-4 items-center justify-center gap-2 rounded-lg border  text-sm font-semibold transition ${item.isInStock
+                    ? "border-amber-300   text-amber-800 hover:bg-amber-100"
+                    : "cursor-not-allowed border-border bg-muted/50 text-muted-foreground"
+                    }`}
+                >
+                  <ShoppingCart size={18} />
+                </button>
+
+                <button
+                  type="button"
+                  onClick={buyNow(item)}
+                  className={`inline-flex h-11 flex-1 items-center justify-center gap-2 rounded-lg border px-3 text-sm font-semibold transition ${item.isInStock
+                    ? "border-amber-300 bg-amber-50 text-amber-800 hover:bg-amber-100"
+                    : "cursor-not-allowed border-border bg-muted/50 text-muted-foreground"
+                    }`}
+                >
+                  <Zap size={18} />
+                  <span className="whitespace-nowrap">
+                    {t("COMMON.buy_now")}
+                  </span>
+                </button>
+              </div>
+            ) : (
+              <button
+                type="button"
+                onClick={() => {
                   window.location.href = `tel:${config.hotline ?? "#"}`;
-                }
-              }}
-              className={`inline-flex h-11 min-w-0 w-full items-center justify-center gap-2 rounded-lg border px-3 text-sm font-medium transition ${item.isInStock
-                ? "border-amber-300 bg-amber-50 text-amber-800 hover:bg-amber-100"
-                : "cursor-not-allowed border-border bg-muted/50 text-muted-foreground"
-                }`}
-            >
-              <ShoppingCart size={16} />
-              <span className="whitespace-nowrap">
-                {item.isInStock ? t("COMMON.add_to_cart") : t("COMMON.contact")}
-              </span>
-            </button>
+                }}
+                className="inline-flex h-11 w-full items-center justify-center gap-2 rounded-lg border border-slate-200 bg-white px-3 text-sm font-semibold text-slate-700 transition hover:border-amber-300 hover:bg-amber-50 hover:text-amber-800"
+              >
+                <span className="whitespace-nowrap">{t("COMMON.contact")}</span>
+              </button>
+            )}
           </div>
 
           {showMobileSpecs ? (
@@ -283,4 +335,3 @@ const CardProduct = ({ item }: { item: IProduct }) => {
 
 CardProduct.displayName = "CardProduct";
 export default memo(CardProduct);
-

@@ -1,12 +1,11 @@
 "use client";
 
 import "swiper/css";
-import "swiper/css/grid";
 import "swiper/css/navigation";
 
 import { IProduct } from "@/interfaces/models/IProduct.interface";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import { Navigation, Grid } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import CardProduct from "@/components/ui/cardProduct";
@@ -26,10 +25,10 @@ const navBase =
 function SwiperProducts({ data, id }: ProductProps) {
   const { ref, width } = useElementWidth<HTMLDivElement>();
   const slidesPerView = getResponsiveColumnCount(width, {
-    minWidth: 228,
+    minWidth: 190,
     maxColumns: 5,
-    gap: 10,
-    fallback: 2,
+    gap: 12,
+    fallback: 1,
   });
 
   return (
@@ -37,18 +36,15 @@ function SwiperProducts({ data, id }: ProductProps) {
       <Swiper
         slidesPerView={slidesPerView}
         slidesPerGroup={slidesPerView}
-        spaceBetween={10}
-        grid={{
-          rows: 2,
-          fill: "row",
-        }}
+        spaceBetween={12}
         navigation={{
           nextEl: `.nav-swiper-button--next-${id}`,
           prevEl: `.nav-swiper-button--prev-${id}`,
         }}
         loop={false}
-        modules={[Navigation, Grid]}
-        className="pb-2"
+        watchOverflow
+        modules={[Navigation]}
+        className="pb-1"
       >
         {data?.length > 0
           ? data.map((item) => (

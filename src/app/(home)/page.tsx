@@ -55,14 +55,13 @@ export default async function Home() {
     <>
       <div className="bg-[#F1F8FE] pb-8">
         <Banner />
-
-        <HomeTrustBand />
-
-        <FeaturedCategories />
-
         <LazySection>
           <GroupBanner bannerKey="bannerBottom" columns={4} gap={3} />
         </LazySection>
+
+
+
+
 
         <LazySection height="h-48">
           <TopSellingProducts data={getValidData(productsHot) ?? []} />
@@ -76,9 +75,11 @@ export default async function Home() {
           <GroupBanner bannerKey="bannerMiddle" columns={3} gap={3} />
         </LazySection>
 
-        <LazySection height="h-48">
+        {/* <LazySection height="h-48">
           <ProductsRecommend data={getValidData(productsRecommend) ?? []} />
-        </LazySection>
+        </LazySection> */}
+
+        <FeaturedCategories />
 
         <LazySection>
           <BannerLeftRight />

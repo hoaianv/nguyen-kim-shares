@@ -1,13 +1,15 @@
 import { IBreadcrumb, IPagination } from "@/interfaces/common";
 import { IResponse } from "@/interfaces/common/IResponse.interface";
 import { IProduct } from "@/interfaces/models/IProduct.interface";
+import type { ICustomerNeeds } from "@/interfaces/models/ICategoryDetail.interface";
 
 export interface ICategory {
   id: number;
   title: string;
   picture: string;
   banner: string;
-  description: string;
+  description?: string | null;
+  desciption?: string | null;
   url: string;
   children?: ICategory[];
 }
@@ -85,8 +87,12 @@ export interface ICategorySchema {
   };
 }
 
-export interface ICategoriesProducts extends ICategory {
+export interface ICategoryCustomerNeed extends ICustomerNeeds {
   items: IProduct[];
+}
+
+export interface ICategoriesProducts extends ICategory {
+  customerNeeds?: ICategoryCustomerNeed[];
 }
 
 export interface ICategoryProductSearch {

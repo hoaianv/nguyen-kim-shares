@@ -27,10 +27,7 @@ yarn-error.log*
 
 # local env files
 .env*.local
-<<<<<<< HEAD
-=======
 .env
->>>>>>> 568afe446178fbdf9953e595fe58883b8a176c92
 
 # vercel
 .vercel
@@ -38,3 +35,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+#
+.start-err.txt
+.start-log.txt
+.htaccess
+.gitignore
+
+.output/category-laptop-ui
