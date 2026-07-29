@@ -140,7 +140,7 @@ export function CartPopup() {
                   <div className="min-w-0 flex-1">
                     <Link
                       href={`/${item.url}`}
-                      className="line-clamp-2 text-sm font-medium text-foreground transition hover:text-[#e6a414]"
+                      className="line-clamp-2 text-sm font-medium text-foreground transition hover:text-brand"
                     >
                       {item.name}
                     </Link>

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { ReactNode, memo } from "react";
-import { Bell, ShoppingCart, UserRound } from "lucide-react";
+import { Bell, ChevronDown, ShoppingCart, UserRound } from "lucide-react";
 import { useAuthStore } from "@/stores/useAuth";
 import { useCartStore } from "@/stores/useCartStore";
 import { useTranslations } from "next-intl";
@@ -13,6 +13,8 @@ type HeaderIconItemProps = {
   href?: string;
   badgeCount?: number;
   className?: string;
+  eyebrow?: ReactNode;
+  showAccountCaret?: boolean;
 };
 
 const ItemHeader = memo(function ItemHeader({
@@ -21,37 +23,40 @@ const ItemHeader = memo(function ItemHeader({
   href,
   badgeCount,
   className = "",
+  eyebrow,
+  showAccountCaret = false,
 }: HeaderIconItemProps) {
   const Wrapper: any = href ? Link : "button";
   const wrapperProps = href ? { href } : { type: "button" };
 
-  const content = (
-    <div
-      className={`group inline-flex h-12 items-center gap-2 rounded-sm bg-white px-2 text-left transition-all duration-200 hover:text-[#e6a414] ${className}`}
-      role="button"
-      aria-label={typeof label === "string" ? label : "header-item"}
-    >
-      <span className="relative inline-flex h-10 w-10 flex-shrink-0 items-center justify-center text-slate-900 transition-colors group-hover:text-[#e6a414]">
-        {icon}
-        {!!badgeCount && badgeCount > 0 && (
-          <span className="absolute right-0 top-0 inline-flex h-4 min-w-4 items-center justify-center rounded-full bg-[#ffb716] px-1 text-[10px] leading-4 text-slate-950 shadow-sm">
-            {badgeCount > 99 ? "99+" : badgeCount}
+  return (
+    <Wrapper {...wrapperProps}>
+      <div
+        className={`group inline-flex h-12 items-center gap-2 rounded-sm bg-white px-2 text-left text-[#737373] transition-all duration-200 hover:text-brand ${className}`}
+        role="button"
+        aria-label={typeof label === "string" ? label : "header-item"}
+      >
+        <span className="relative inline-flex h-10 w-10 shrink-0 items-center justify-center text-[#737373] transition-colors group-hover:text-brand">
+          {icon}
+          {badgeCount !== undefined && (
+            <span className="absolute -right-0.5 -top-0.5 inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-[#df1f26] px-1 text-[11px] font-semibold leading-5 text-white shadow-sm">
+              {badgeCount > 99 ? "99+" : badgeCount}
+            </span>
+          )}
+        </span>
+
+        <span className="hidden min-w-0 flex-col leading-tight xl:flex">
+          {eyebrow ? (
+            <span className="text-[13px] text-[#737373]">{eyebrow}</span>
+          ) : null}
+          <span className="flex items-center gap-0.5 truncate text-[15px] font-bold text-[#595959] group-hover:text-brand">
+            {label}
+            {showAccountCaret ? <ChevronDown className="h-3 w-3" /> : null}
           </span>
-        )}
-      </span>
-
-      <span className="hidden min-w-0 flex-col leading-tight xl:flex">
-        <span className="text-xs text-slate-500">
-          {href === "/gio-hang" ? "Giỏ hàng" : "Đăng nhập/Đăng ký"}
         </span>
-        <span className="truncate text-sm font-bold text-slate-900 group-hover:text-[#e6a414]">
-          {label}
-        </span>
-      </span>
-    </div>
+      </div>
+    </Wrapper>
   );
-
-  return <Wrapper {...wrapperProps}>{content}</Wrapper>;
 });
 
 export function AuthItem() {
@@ -59,13 +64,15 @@ export function AuthItem() {
   const { user, authenticated } = useAuthStore();
   const lastName = user?.fullName?.split(" ").pop() ?? "";
   const label =
-    authenticated && user ? `${t("HEADER.hello")} ${lastName}` : t("HEADER.auth");
+    authenticated && user ? `${t("HEADER.hello")} ${lastName}` : "Tài khoản";
 
   return (
     <ItemHeader
-      icon={<UserRound size={24} strokeWidth={1.8} />}
+      icon={<UserRound size={28} strokeWidth={1.8} />}
+      eyebrow="Đăng nhập/Đăng ký"
       label={label}
       href={authenticated ? "/tai-khoan" : "/login"}
+      showAccountCaret
     />
   );
 }
@@ -76,7 +83,7 @@ export function NotificationItem() {
 
   return (
     <ItemHeader
-      icon={<Bell size={24} strokeWidth={1.8} />}
+      icon={<Bell size={27} strokeWidth={1.8} />}
       label={t("HEADER.notifications")}
       badgeCount={unread}
     />
@@ -89,11 +96,10 @@ export function CartItem() {
 
   return (
     <ItemHeader
-      icon={<ShoppingCart size={26} strokeWidth={1.8} />}
+      icon={<ShoppingCart size={30} strokeWidth={1.8} />}
       label={t("HEADER.cart")}
       href="/gio-hang"
       badgeCount={cart.totalItem}
     />
   );
 }
-

@@ -61,7 +61,7 @@ function FooterItemLink({
   showImage?: boolean;
 }) {
   const className =
-    "flex items-center gap-2 text-sm text-slate-600 transition hover:text-brand-strong";
+    "flex items-center gap-2 text-sm text-slate-600 transition hover:text-brand";
   const content = (
     <>
       {showImage && item.image ? (

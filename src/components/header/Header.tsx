@@ -4,6 +4,7 @@ import ProductsSearch from "@/components/header/ProductsSearch";
 import InputSearch from "@/components/ui/inputSearch";
 import Popover from "@/components/ui/Popover";
 import { name } from "@/constants/company.constant";
+import { bannerKeys } from "@/constants/values.constant";
 import { useSearchActions } from "@/hooks/useSearchActions";
 import { getHeaderItemsWithState } from "@/lib/utils";
 import { useStateStore } from "@/stores/stateStore";
@@ -47,7 +48,8 @@ const Header = () => {
   const t = useTranslations();
   const { debouncedChange, handleKeyDown } = useSearchActions();
   const { authenticated } = useAuthStore();
-  const { config } = useStateStore();
+  const { banner } = useStateStore();
+  const headerLogo = banner?.[bannerKeys.bannerHeaderLogo]?.advertises?.[0];
 
   const [desktopSearchOpen, setDesktopSearchOpen] = useState(false);
   const [desktopMenuOpen, setDesktopMenuOpen] = useState(false);
@@ -177,7 +179,7 @@ const Header = () => {
         desktopMenuOpen ? "z-[90]" : "z-50"
       }`}
     >
-      <div className="bg-[#ffb716] text-slate-950">
+      <div className="bg-brand text-slate-950">
         <div className="mx-auto flex h-9 max-w-[1370px] items-center justify-start gap-5 overflow-x-auto px-3 text-sm font-medium sm:px-4 lg:justify-center lg:gap-8">
           {utilityLinks.map((item) => {
             const Icon = item.icon;
@@ -197,7 +199,7 @@ const Header = () => {
       </div>
 
       <div className="border-b border-slate-100 bg-white">
-        <div className="mx-auto grid max-w-[1370px] grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-3 px-3 py-3 sm:px-4 lg:grid-cols-[140px_172px_minmax(0,1fr)_auto] lg:gap-5 lg:py-5">
+        <div className="mx-auto grid max-w-[1370px] grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-3 px-3 py-3 sm:px-4 lg:grid-cols-[180px_176px_minmax(0,1fr)_auto] lg:gap-5 lg:py-3.5">
           <button
             type="button"
             onClick={() => {
@@ -216,17 +218,17 @@ const Header = () => {
             )}
           </button>
 
-          <Link href="/" className="block w-[112px] shrink-0 lg:w-[136px]">
-            {config?.settingLogo?.logo && (
+          <Link href="/" className="block w-[144px] shrink-0 lg:w-[180px]">
+            {headerLogo?.picture ? (
               <Image
-                src={config.settingLogo.logo}
+                src={headerLogo.picture}
                 alt={name}
-                width={150}
-                height={90}
+                width={190}
+                height={80}
                 priority
-                className="h-auto w-full object-contain"
+                className="h-16 w-full object-contain lg:h-20"
               />
-            )}
+            ) : null}
           </Link>
 
           <button
@@ -235,10 +237,10 @@ const Header = () => {
             onClick={() =>
               desktopMenuOpen ? closeDesktopMenu() : openDesktopMenu()
             }
-            className={`relative z-[100] hidden h-9 items-center justify-center gap-1.5 rounded-sm border px-2.5 text-[13px] font-semibold transition lg:inline-flex ${
+            className={`relative z-[100] hidden h-11 items-center justify-center gap-2 rounded-sm border px-3 text-sm font-semibold transition lg:inline-flex ${
               desktopMenuOpen
-                ? "border-[#ffb716] bg-[#fff7da] text-[#e6a414] shadow-sm"
-                : "border-slate-200 bg-white text-slate-800 hover:border-[#ffb716] hover:text-[#e6a414]"
+                ? "border-brand bg-brand-soft text-brand shadow-sm"
+                : "border-slate-200 bg-white text-slate-800 hover:border-brand hover:text-brand"
             }`}
             aria-expanded={desktopMenuOpen}
             aria-controls="desktop-category-panel"
@@ -254,16 +256,16 @@ const Header = () => {
             }
           >
             {desktopMenuOpen ? (
-              <X className="h-3.5 w-3.5" />
+              <X className="h-4 w-4" />
             ) : (
-              <Menu className="h-3.5 w-3.5" />
+              <Menu className="h-4 w-4" />
             )}
             <span className="whitespace-nowrap">
               {desktopMenuOpen ? "Đóng danh mục" : "Danh mục sản phẩm"}
             </span>
           </button>
 
-          <div className="col-span-3 order-3 min-w-0 lg:col-span-1 lg:order-none">
+          <div className="relative col-span-3 order-3 min-w-0 lg:col-span-1 lg:order-none">
             <div className="relative">
               <InputSearch
                 placeholder={t("HEADER.search_placeholder")}
@@ -279,7 +281,7 @@ const Header = () => {
                 }}
                 onChange={debouncedChange}
                 onKeyDown={handleSearchKeyDown}
-                className="h-10 rounded-sm border-slate-200 bg-white pl-4 pr-[96px] text-sm"
+                className="h-11 rounded-sm border-slate-200 bg-white pl-4 pr-[102px] text-base"
               >
                 <ProductsSearch
                   show={desktopSearchOpen}
@@ -290,20 +292,20 @@ const Header = () => {
               <button
                 type="button"
                 onClick={() => setDesktopSearchOpen(true)}
-                className="absolute right-0 top-0 inline-flex h-10 w-[88px] items-center justify-center rounded-sm bg-[#ffb716] text-sm font-semibold text-slate-950 transition hover:bg-[#e6a414]"
+                className="absolute right-0 top-0 inline-flex h-11 w-[94px] items-center justify-center rounded-sm bg-brand text-sm font-semibold text-slate-950 transition hover:opacity-95"
                 aria-label="Tìm kiếm"
               >
-                <Search className="mr-1.5 h-4 w-4" />
+                <Search className="mr-1.5 h-[18px] w-[18px]" />
                 <span className="hidden sm:inline">Tìm kiếm</span>
               </button>
             </div>
 
-            <nav className="mt-2 hidden items-center gap-4 text-xs text-slate-600 lg:flex">
+            <nav className="absolute left-0 top-full mt-2 hidden items-center gap-4 text-sm text-slate-600 lg:flex">
               {hotKeywords.map((keyword) => (
                 <Link
                   key={keyword}
                   href={`/san-pham?keyword=${encodeURIComponent(keyword)}`}
-                  className="transition hover:text-[#e6a414]"
+                  className="transition hover:text-brand"
                 >
                   {keyword}
                 </Link>
@@ -311,7 +313,7 @@ const Header = () => {
             </nav>
           </div>
 
-          <div className="flex items-center justify-end gap-2">
+          <div className="flex items-start justify-end gap-2">
             <div className="hidden items-center gap-1 lg:flex">
               {headerActions.map(renderAction)}
             </div>
