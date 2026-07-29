@@ -111,7 +111,7 @@ const CardProduct = ({ item }: { item: IProduct }) => {
     <>
       <div
         ref={cardRef}
-        className="group relative flex h-full w-full flex-col overflow-hidden rounded-sm  border border-border bg-white transition duration-200 hover:-translate-y-0.5 hover:border-amber-300"
+        className="group relative flex h-full w-full flex-col overflow-hidden  shadow-lg bg-white transition duration-200 hover:-translate-y-0.5 hover:border-amber-300"
         onMouseEnter={() => supportsHover && setIsHovered(true)}
         onMouseLeave={() => supportsHover && setIsHovered(false)}
       >
@@ -151,32 +151,36 @@ const CardProduct = ({ item }: { item: IProduct }) => {
 
         <div className="flex flex-1 flex-col gap-3 p-3">
           <Link href={`/${item.url}`} className="block">
-            <h3 className="line-clamp-2 min-h-[39px] text-sm font-medium leading-snug text-foreground transition group-hover:text-slate-700">
+            <h3 className="line-clamp-2 min-h-[39px] text-sm  leading-snug text-foreground font-bold transition group-hover:text-slate-700">
               {item.name}
             </h3>
           </Link>
 
           {item?.technology && item?.technology?.length > 0 && (
-            <div className="mt-3 space-y-1.5 p-1 bg-[#ECECEC] rounded-sm ">
-              {item.technology.slice(0, 3).map((spec) => (
-                <div
-                  key={spec.id}
-                  className="grid grid-cols-[90px_minmax(0,1fr)] gap-x-1 text-xs leading-5"
-                >
-                  {/* Title */}
-                  <span className="font-semibold text-foreground">
-                    {spec.title}:
-                  </span>
+            <div className="mt-3  min-h-[140px]  rounded-sm  ">
+              <div className=" bg-[#ECECEC]  h-fit space-y-1.5 p-1">
 
-                  {/* Description */}
-                  <span
-                    className="line-clamp-2 min-w-0 text-muted-foreground [&_p]:m-0 [&_p]:inline [&_div]:inline [&_br]:hidden"
-                    dangerouslySetInnerHTML={{
-                      __html: spec.description ?? "",
-                    }}
-                  />
-                </div>
-              ))}
+                {item.technology.slice(0, 3).map((spec) => (
+                  <div
+                    key={spec.id}
+                    className="grid grid-cols-[90px_minmax(0,1fr)] gap-x-1 text-xs leading-5"
+                  >
+                    {/* Title */}
+                    <span className="font-semibold text-foreground">
+                      {spec.title}:
+                    </span>
+
+                    {/* Description */}
+                    <span
+                      className="line-clamp-2 min-w-0 text-muted-foreground [&_p]:m-0 [&_p]:inline [&_div]:inline [&_br]:hidden"
+                      dangerouslySetInnerHTML={{
+                        __html: spec.description ?? "",
+                      }}
+                    />
+                  </div>
+                ))}
+
+              </div>
             </div>
           )}
 
@@ -193,14 +197,7 @@ const CardProduct = ({ item }: { item: IProduct }) => {
                 ) : null}
               </div>
 
-              <div
-                className={`inline-flex h-6 items-center rounded-full border px-2 text-[11px] font-medium ${item.isInStock
-                  ? "border-emerald-200 bg-emerald-50 text-emerald-700"
-                  : "border-border bg-muted/30 text-muted-foreground"
-                  }`}
-              >
-                {item.isInStock ? t("COMMON.in_stock") : t("COMMON.contact")}
-              </div>
+
             </div>
 
             {item.isInStock ? (
@@ -228,12 +225,12 @@ const CardProduct = ({ item }: { item: IProduct }) => {
                   type="button"
                   onClick={buyNow(item)}
                   className={`inline-flex h-11 flex-1 items-center justify-center gap-2 rounded-lg border px-3 text-sm font-semibold transition ${item.isInStock
-                    ? "border-amber-300 bg-amber-50 text-amber-800 hover:bg-amber-100"
+                    ? "border-amber-300 bg-[#ffb716] text-white hover:bg-amber-100"
                     : "cursor-not-allowed border-border bg-muted/50 text-muted-foreground"
                     }`}
                 >
                   <Zap size={18} />
-                  <span className="whitespace-nowrap">
+                  <span className="whitespace-nowrap font-bold">
                     {t("COMMON.buy_now")}
                   </span>
                 </button>
@@ -244,9 +241,9 @@ const CardProduct = ({ item }: { item: IProduct }) => {
                 onClick={() => {
                   window.location.href = `tel:${config.hotline ?? "#"}`;
                 }}
-                className="inline-flex h-11 w-full items-center justify-center gap-2 rounded-lg border border-slate-200 bg-white px-3 text-sm font-semibold text-slate-700 transition hover:border-amber-300 hover:bg-amber-50 hover:text-amber-800"
+                className="inline-flex h-11 w-full items-center justify-center  bg-[#ffb716] gap-2 rounded-lg border border-amber-300   px-3 text-sm font-semibold text-slate-700 transition hover:border-amber-300 hover:bg-amber-50 hover:text-amber-800"
               >
-                <span className="whitespace-nowrap">{t("COMMON.contact")}</span>
+                <span className="whitespace-nowrap font-bold text-white">{t("COMMON.contact")}</span>
               </button>
             )}
           </div>

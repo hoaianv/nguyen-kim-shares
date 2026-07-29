@@ -64,6 +64,7 @@ export const CONST_APIS_COMMON = {
   GET_DESCRIPTION: "get-description",
   GET_RELATED_PRODUCT: "get-related-product",
   CATEGORY: "category",
+  TAKE_5_PROMOTION: "take-5",
   NEW: "new",
   PROMOTION: "promotion",
   TOP_VIEW: "top-view",
@@ -84,4 +85,5 @@ export const CONST_APIS_COMMON = {
   PARTICIPANTS_DELETE: "participants-delete",
   IMPORT: "import",
   GET_INFORMATION: "get-information",
+  FLASH_SALE: "flash-sale",
 };

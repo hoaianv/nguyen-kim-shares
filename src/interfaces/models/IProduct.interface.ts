@@ -185,5 +185,8 @@ export type IResponseProductDescription = IResponse<IDescription>;
 export type IResponseProductRelated = IResponse<IProduct[]>;
 
 export type IResponseProductsHot = IResponse<IProduct[]>;
+
+  
 export type IResponseProductsRecommend = IResponse<IProduct[]>;
+export type IResponseProductsFlashSale = IResponse<IProduct[]>;
 export type IResponseProductsViewed = IResponse<IProductsViewed>;
