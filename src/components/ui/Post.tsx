@@ -24,13 +24,13 @@ export default function Post({ data }: { data: string }) {
         prose-blockquote:border-l-4 prose-blockquote:border-blue-500 prose-blockquote:bg-blue-50
         prose-blockquote:rounded-r-lg prose-blockquote:py-4 prose-blockquote:my-6
         prose-code:bg-gray-100 prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:text-sm
-        prose-pre:bg-slate-900 prose-pre:text-slate-100 prose-pre:rounded-lg prose-pre:p-4 prose-pre:my-6 prose-pre:overflow-x-auto
-        overflow-x-auto [-webkit-overflow-scrolling:touch] mx-0 px-0
+        prose-pre:bg-slate-900 prose-pre:text-slate-100 prose-pre:rounded-lg prose-pre:p-4 prose-pre:my-6 prose-pre:overflow-x-auto prose-pre:scrollbar-thin prose-pre:scrollbar-thumb-gray-300 prose-pre:scrollbar-track-gray-100 prose-pre:hover:scrollbar-thumb-gray-400
+        overflow-x-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 hover:scrollbar-thumb-gray-400 [-webkit-overflow-scrolling:touch] mx-0 px-0
         [&_table]:!w-auto [&_table]:!h-auto [&_table]:!max-w-full
         [&_table]:!ml-0 [&_table]:!mr-0
         [&_table_*]:!w-auto [&_table_*]:!h-auto
         [&_table[style*='width']]:!w-auto [&_table[width]]:!w-auto
-        [&_table]:block [&_table]:w-full [&_table]:max-w-full [&_table]:overflow-x-auto
+        [&_table]:block [&_table]:w-full [&_table]:max-w-full [&_table]:overflow-x-auto [&_table]:scrollbar-thin [&_table]:scrollbar-thumb-gray-300 [&_table]:scrollbar-track-gray-100 [&_table:hover]:scrollbar-thumb-gray-400
         md:[&_table]:table md:[&_table]:overflow-visible
         [&_table]:border-collapse [&_table]:bg-white
         md:[&_table]:min-w-[1200px]

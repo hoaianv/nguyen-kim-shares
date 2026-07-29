@@ -20,7 +20,7 @@ export default function HomeSectionHeader({
   if (retail) {
     return (
       <div
-        className={`flex items-center justify-between gap-3 pr-3 pb-3  sm:pr-4 sm:pb-4   ${className}`}
+        className={`flex items-center   justify-between gap-3 pr-3 pb-3  sm:pr-4 sm:pb-4   ${className}`}
       >
         <div className="flex min-w-0 items-center gap-3">
           <div

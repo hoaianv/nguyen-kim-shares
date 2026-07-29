@@ -137,7 +137,7 @@ export default function FilterActiveChips({
         Đang lọc theo {activeFilters.length} tiêu chí
       </div>
 
-      <div className="flex gap-2 overflow-x-auto pb-1 scrollbar-thin scrollbar-thumb-border scrollbar-track-transparent lg:flex-wrap lg:overflow-visible lg:pb-0">
+      <div className="flex gap-2 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 hover:scrollbar-thumb-gray-400 pb-1 lg:flex-wrap lg:overflow-visible lg:pb-0">
         {hasBothPrice ? (
           <div
             className="inline-flex shrink-0 items-center gap-2 rounded-md border border-brand bg-brand-soft px-3 py-1.5 text-sm text-brand-deep"

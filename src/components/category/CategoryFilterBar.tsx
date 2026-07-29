@@ -393,7 +393,7 @@ export default function CategoryFilterBar({
                     ) : null}
                   </div>
 
-                  <div className="grid max-h-[320px] grid-cols-2 gap-2 overflow-y-auto pr-1 scrollbar-thin scrollbar-thumb-slate-300 scrollbar-track-slate-100 hover:scrollbar-thumb-slate-400">
+                  <div className="grid max-h-[320px] grid-cols-2 gap-2 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 hover:scrollbar-thumb-gray-400 pr-1">
                     {group.options.map((item) => {
                       const isSelected = selectedValue === item.value;
                       return (

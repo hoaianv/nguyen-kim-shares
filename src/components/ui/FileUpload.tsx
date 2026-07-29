@@ -220,7 +220,7 @@ const FileUpload: React.FC<FileUploadProps> = ({
             )}
           </div>
 
-          <div className="space-y-2 max-h-40 overflow-y-auto">
+          <div className="space-y-2 max-h-40 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 hover:scrollbar-thumb-gray-400">
             {selectedFiles.map((file, index) => (
               <div
                 key={`${file.name}-${file.size}-${index}`}

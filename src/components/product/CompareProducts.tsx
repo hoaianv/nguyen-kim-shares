@@ -132,7 +132,7 @@ export default function CompareProducts({ data }: { data: ICompareProduct[] }) {
         ))}
       </div>
 
-      <div className="mt-5 sm:mt-6 overflow-x-auto rounded-lg bg-white shadow-sm">
+      <div className="mt-5 sm:mt-6 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 hover:scrollbar-thumb-gray-400 rounded-lg bg-white shadow-sm">
         {/* Header row */}
         <div
           className="grid sticky top-0 z-10 border-b border-gray-200 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/70 min-w-[720px] sm:min-w-[860px] lg:min-w-0"

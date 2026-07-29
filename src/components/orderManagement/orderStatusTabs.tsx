@@ -16,7 +16,7 @@ export default function OrderStatusTabs() {
 
   return (
     <div className="mb-5 rounded-[24px] border border-slate-200/80 bg-white/90 p-2 shadow-sm">
-      <div className="flex gap-2 overflow-x-auto px-1 py-1">
+      <div className="flex gap-2 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 hover:scrollbar-thumb-gray-400 px-1 py-1">
         {Object.entries(ORDER_STATUS_LABEL).map(([key, label]) => {
           const isActive = currentStatus === key;
           return (

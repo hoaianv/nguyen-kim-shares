@@ -36,16 +36,17 @@ export const FeaturedCategories = () => {
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.32, ease: "easeOut" }}
     >
-      <div className="bg-white">
-        <HomeSectionHeader
-          title={t("TITLE.featured_categories")}
-          actionLabel={t("COMMON.view_all")}
-          actionHref="/san-pham"
-        />
 
-      </div>
 
-      <div className="overflow-hidden rounded-b-md shadow-sm">
+      <div className="overflow-hidden rounded-md shadow-sm">
+        <div className="bg-white rounded-md">
+          <HomeSectionHeader
+            title={t("TITLE.featured_categories")}
+            actionLabel={t("COMMON.view_all")}
+            actionHref="/san-pham"
+          />
+
+        </div>
         <div className="grid grid-cols-2 gap-[2px] bg-slate-200 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-7">
           {visibleCategories.map((item) => (
             <Link

@@ -238,7 +238,7 @@ export default function ConfirmPopover({
               "animate-in fade-in-0 zoom-in-95",
 
               // Kích thước & scroll an toàn
-              "w-80 max-w-[calc(100vw-2rem)] max-h-[70vh] overflow-auto",
+              "w-80 max-w-[calc(100vw-2rem)] max-h-[70vh] overflow-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 hover:scrollbar-thumb-gray-400",
 
               // Mobile & tablet: center màn hình
               "fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2",

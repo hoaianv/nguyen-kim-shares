@@ -165,12 +165,11 @@ const Header = () => {
 
   return (
     <header
-      className={`sticky top-0 bg-white text-slate-950 shadow-sm ${
-        desktopMenuOpen ? "z-[90]" : "z-50"
-      }`}
+      className={`sticky top-0 bg-white text-slate-950 shadow-sm ${desktopMenuOpen ? "z-[90]" : "z-50"
+        }`}
     >
       <div className="bg-brand text-slate-950">
-        <div className="mx-auto flex h-9 max-w-[1370px] items-center justify-start gap-5 overflow-x-auto px-3 text-sm font-medium sm:px-4 lg:justify-center lg:gap-8">
+        <div className="mx-auto flex h-9 max-w-[1370px] items-center justify-start gap-5 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 hover:scrollbar-thumb-gray-400 px-3 text-sm font-medium sm:px-4 lg:justify-center lg:gap-8">
           {utilityLinks.map((item) => {
             const Icon = item.icon;
 
@@ -226,11 +225,10 @@ const Header = () => {
             onClick={() =>
               desktopMenuOpen ? closeDesktopMenu() : openDesktopMenu()
             }
-            className={`relative z-[100] hidden h-11 items-center justify-center gap-2 rounded-sm border px-3 text-sm font-semibold transition lg:inline-flex ${
-              desktopMenuOpen
+            className={`relative z-[100] hidden h-8 items-center justify-center gap-2 rounded-sm border px-3 text-sm font-semibold transition lg:inline-flex ${desktopMenuOpen
                 ? "border-brand bg-brand-soft text-brand shadow-sm"
                 : "border-slate-200 bg-white text-slate-800 hover:border-brand hover:text-brand"
-            }`}
+              }`}
             aria-expanded={desktopMenuOpen}
             aria-controls="desktop-category-panel"
             aria-label={
@@ -315,7 +313,7 @@ const Header = () => {
       </div>
 
       <div className="border-b border-slate-100 bg-white lg:hidden">
-        <div className="mx-auto flex max-w-[1370px] items-center gap-4 overflow-x-auto px-3 pb-3 text-sm text-slate-700 sm:px-4">
+        <div className="mx-auto flex max-w-[1370px] items-center gap-4 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 hover:scrollbar-thumb-gray-400 px-3 pb-3 text-sm text-slate-700 sm:px-4">
           {hotKeywords.map((keyword) => (
             <Link
               key={keyword}

@@ -258,7 +258,7 @@ export default function JobDetail({ data, relatedJobs }: JobDetailProps) {
 
                     <div className="flex items-start justify-center gap-3 text-sm text-gray-600">
                       <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0 text-gray-400" />
-                      <div className="text-left leading-relaxed whitespace-nowrap overflow-x-auto">
+                      <div className="text-left leading-relaxed whitespace-nowrap overflow-x-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 hover:scrollbar-thumb-gray-400">
                         245B Trần Quang Khải, Phường Tân Định, TP. Hồ Chí Minh
                       </div>
                     </div>

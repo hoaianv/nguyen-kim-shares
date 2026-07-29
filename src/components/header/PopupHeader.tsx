@@ -180,7 +180,9 @@ export function CartPopup() {
                         {getMarketPrice(item)}
                       </s>
                     ) : null}
-                    <span className="text-xs text-slate-500">x{item.quantity}</span>
+                    <span className="text-xs text-slate-500">
+                      x{item.quantity}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -248,7 +250,10 @@ export function ContactPopup() {
                     {m.title}
                   </div>
                   <div className="mt-1 flex items-center text-muted-foreground">
-                    <Mail size={14} className="mr-1 flex-shrink-0 text-[#e6a414]" />
+                    <Mail
+                      size={14}
+                      className="mr-1 flex-shrink-0 text-[#e6a414]"
+                    />
                     <a
                       href={`mailto:${m.email}`}
                       className="truncate text-xs transition hover:underline md:text-sm"
@@ -257,8 +262,14 @@ export function ContactPopup() {
                     </a>
                   </div>
                   <div className="mt-1 flex items-center text-muted-foreground">
-                    <Phone size={14} className="mr-1 flex-shrink-0 text-emerald-600" />
-                    <a href={`tel:${m.phone}`} className="text-xs transition hover:underline md:text-sm">
+                    <Phone
+                      size={14}
+                      className="mr-1 flex-shrink-0 text-emerald-600"
+                    />
+                    <a
+                      href={`tel:${m.phone}`}
+                      className="text-xs transition hover:underline md:text-sm"
+                    >
                       {m.phone}
                     </a>
                   </div>

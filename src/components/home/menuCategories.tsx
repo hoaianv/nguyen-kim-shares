@@ -182,7 +182,7 @@ export default function MenuCategories({
               >
                 <nav
                   aria-label="Danh mục sản phẩm"
-                  className="h-full overflow-y-auto py-1.5"
+                  className="h-full overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 hover:scrollbar-thumb-gray-400 py-1.5"
                 >
                   {categories.map((item, index) => {
                     const isActive = index === activeIndex;
@@ -195,14 +195,7 @@ export default function MenuCategories({
                         onMouseEnter={() => setActiveIndex(index)}
                         onFocus={() => setActiveIndex(index)}
                         onClick={onClose}
-                        className={`
-                          group relative flex min-h-11 w-full
-                          items-center gap-3 px-3 py-1.5
-                          text-left text-sm transition-colors
-                          focus-visible:outline-none
-                          focus-visible:ring-2
-                          focus-visible:ring-inset
-                          focus-visible:ring-primary/30
+                        className={`group relative flex min-h-11 w-full items-center justify-between gap-3 px-3 text-left text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary/30
                           ${isActive
                             ? "bg-muted/70 text-foreground"
                             : "text-foreground hover:bg-muted/40"
@@ -219,31 +212,35 @@ export default function MenuCategories({
                             }
                           `}
                         />
+                        <div className="flex justify-center items-center">
 
-                        {item.picture ? (
-                          <span
-                            className="
-                              relative h-9 w-9 shrink-0
-                              overflow-hidden rounded-sm bg-muted/30
-                            "
-                          >
-                            <Image
-                              src={item.picture}
-                              alt={item.title}
-                              fill
-                              sizes="36px"
-                              className="
-                                object-contain p-0.5
-                                transition-transform duration-200
-                                group-hover:scale-105
-                              "
-                            />
+
+                          {item.picture ? (
+                            <div
+                              className=" 
+    relative h-7 w-[50px] shrink-0
+    overflow-hidden rounded-sm bg-muted/30
+  "
+                            >
+                              <Image
+                                src={item.picture}
+                                alt={item.title}
+                                fill
+                                sizes="50px"
+                                className="
+      object-contain p-0.5
+      transition-transform duration-200
+      group-hover:scale-105
+    "
+                              />
+                            </div>
+                          ) : null}
+
+                          <span className="min-w-0 flex-1 truncate font-semibold">
+                            {item.title}
                           </span>
-                        ) : null}
 
-                        <span className="min-w-0 flex-1 truncate font-medium">
-                          {item.title}
-                        </span>
+                        </div>
 
                         <ChevronRight
                           className={`
@@ -269,7 +266,7 @@ export default function MenuCategories({
                   shadow-[0_18px_50px_-24px_rgba(0,0,0,0.45)]
                 "
               >
-                <div className="h-full overflow-y-auto p-5">
+                <div className="h-full overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 hover:scrollbar-thumb-gray-400 p-5">
                   {activeCategory?.children?.length ? (
                     <div
                       className="
@@ -525,7 +522,7 @@ export default function MenuCategories({
                 </button>
               </div>
 
-              <div className="flex-1 overflow-y-auto">
+              <div className="flex-1 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 hover:scrollbar-thumb-gray-400">
                 <div className="border-b border-border px-4 py-3">
                   <button
                     type="button"

@@ -133,7 +133,7 @@ export default function FilterOptions({ options }: FilterOptionsProps) {
                         Bỏ chọn
                       </button>
 
-                      <div className="grid max-h-[320px] grid-cols-2 gap-2 overflow-y-auto pr-1 scrollbar-thin scrollbar-thumb-slate-300 scrollbar-track-slate-100 hover:scrollbar-thumb-slate-400 md:grid-cols-3 xl:grid-cols-2">
+                      <div className="grid max-h-[320px] grid-cols-2 gap-2 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 hover:scrollbar-thumb-gray-400 pr-1 md:grid-cols-3 xl:grid-cols-2">
                         {group.subCateOption.map((sub: ISubCateOption) => {
                           const isSelected = selectedValue === sub.url;
                           return (
