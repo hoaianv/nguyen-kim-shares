@@ -71,7 +71,7 @@ const CategoriesProductsSection = ({
                       : "bg-white/85 text-[#ea6158] hover:bg-amber-50 hover:text-[#e33b2f]"
                       }`}
                   >
-                    <span className="truncate">{need.title}</span>
+                    <span className="truncate text-base font-bold">{need.title}</span>
 
                   </button>
                 );

@@ -3,14 +3,15 @@
 import "swiper/css";
 import "swiper/css/navigation";
 
-import { IPromotion } from "@/interfaces/models/IPromotion.interface";
-import { motion, useReducedMotion } from "motion/react";
-import Image from "next/image";
-import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import { motion, useReducedMotion } from "motion/react";
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+
 import CardPromotion from "@/components/promotion/cardPromotion";
+import { IPromotion } from "@/interfaces/models/IPromotion.interface";
+
+import HomeSectionHeader from "./HomeSectionHeader";
 
 type PromotionLatestProps = {
   data: IPromotion[];
@@ -35,25 +36,11 @@ export default function PromotionLatest({ data }: PromotionLatestProps) {
       transition={{ duration: 0.4, ease: "easeOut" }}
     >
       <div className="overflow-hidden rounded-xl bg-white shadow-sm ring-1 ring-slate-200/70">
-        <div className="flex items-start justify-between gap-3 px-3 pb-3 pt-3 sm:px-4 sm:pb-4 sm:pt-4">
-          <div className="flex min-w-0 items-center gap-3">
-            <div
-              className={[
-                "relative inline-flex h-10 items-center bg-[#ffb716] pl-4 pr-5 text-sm font-extrabold uppercase tracking-[0.12em] text-slate-950 sm:h-11 sm:text-base",
-                "after:absolute after:right-[-18px] after:top-0 after:h-full after:w-0 after:border-y-[22px] after:border-y-transparent after:border-l-[18px] after:border-l-[#ffb716] sm:after:border-y-[22px] sm:after:border-l-[18px]",
-              ].join(" ")}
-            >
-              Tổng hợp khuyến mãi
-            </div>
-          </div>
-
-          <Link
-            href="/tin-khuyen-mai"
-            className="mt-1 text-xs font-semibold uppercase tracking-[0.14em] text-slate-900 transition hover:text-[#c69208] sm:text-sm"
-          >
-            Xem tất cả
-          </Link>
-        </div>
+        <HomeSectionHeader
+          title="Tổng hợp khuyến mãi"
+          actionLabel="Xem tất cả"
+          actionHref="/tin-khuyen-mai"
+        />
 
         <div className="relative px-3 pb-4 sm:px-4 sm:pb-5">
           <div className="absolute left-1 top-[44%] z-10 -translate-y-1/2 sm:left-2">
@@ -105,15 +92,11 @@ export default function PromotionLatest({ data }: PromotionLatestProps) {
               "[--swiper-navigation-size:18px]",
             ].join(" ")}
           >
-            {data.map((item) => {
-
-
-              return (
-                <SwiperSlide key={item.id} className="h-auto">
-                  <CardPromotion item={item} />
-                </SwiperSlide>
-              );
-            })}
+            {data.map((item) => (
+              <SwiperSlide key={item.id} className="h-auto">
+                <CardPromotion item={item} />
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
       </div>

@@ -29,9 +29,7 @@ export default function ProductsRecommend({ data }: ProductRecommendProps) {
     >
       <div className="overflow-hidden rounded-md bg-white shadow-sm">
         <HomeSectionHeader
-          eyebrow="Gợi ý"
           title={t("TITLE.you_may_like")}
-          description="Các sản phẩm phù hợp để tiếp tục so sánh sau nhóm bán chạy."
           actionLabel={t("COMMON.view_all")}
           actionHref="/san-pham"
         />
