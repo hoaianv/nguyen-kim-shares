@@ -42,7 +42,7 @@ const InputSearch = forwardRef<HTMLInputElement, InputSearchProps>(
           onClick={() => onClick?.()}
           onKeyDown={onKeyDown}
           onChange={(e) => onChange?.(e.target.value)}
-          className={`nk-focus-ring w-full rounded-lg border border-input bg-background/95 py-3 pl-11 pr-4 text-sm text-foreground shadow-[0_10px_28px_-24px_rgba(15,23,42,0.42)] placeholder:text-muted-foreground transition-all hover:border-foreground/20 focus:border-amber-500 ${className}`}
+          className={`nk-focus-ring w-full rounded-lg border border-input bg-background/95 py-3 pl-12 pr-4 text-sm text-foreground shadow-[0_10px_28px_-24px_rgba(15,23,42,0.42)] placeholder:text-muted-foreground transition-all hover:border-foreground/20 focus:border-amber-500 ${className}`}
           placeholder={placeholder}
           autoComplete="off"
         />

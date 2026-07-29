@@ -193,7 +193,7 @@ function Table<T extends Record<string, any>>({
         </div>
       )}
 
-      <div className="overflow-x-auto">
+      <div className="overflow-x-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 hover:scrollbar-thumb-gray-400">
         <table className={`min-w-full ${sizeClasses[size]}`}>
           <thead className="bg-muted/40">
             <tr className="border-b border-border">

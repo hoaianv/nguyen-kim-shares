@@ -126,7 +126,7 @@ export default async function page({ params, searchParams }: Props) {
                       <div
                         className="
     prose prose-sm sm:prose md:prose-lg max-w-none
-    overflow-x-auto
+    overflow-x-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 hover:scrollbar-thumb-gray-400
     prose-img:w-full
     [&_table]:min-w-[640px] [&_table]:w-full [&_th]:text-left [&_td]:align-top
   "

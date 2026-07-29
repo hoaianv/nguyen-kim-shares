@@ -43,7 +43,7 @@ export default function CategoryParentTabs({
   return (
     <nav
       aria-label="Danh mục nổi bật"
-      className="overflow-x-auto rounded-xl border border-black bg-white px-2 py-2 scrollbar-thin scrollbar-thumb-border scrollbar-track-transparent"
+      className="overflow-x-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 hover:scrollbar-thumb-gray-400 rounded-xl border border-black bg-white px-2 py-2"
     >
       <div className="flex min-w-max items-center md:w-full">
         {categories.map((cate, index) => {

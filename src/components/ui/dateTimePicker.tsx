@@ -215,7 +215,7 @@ const DateTimePicker = ({
 
             {/* Year Picker */}
             {showYearPicker && (
-              <div className="mb-4 max-h-48 overflow-y-auto border border-gray-200  rounded-lg ">
+              <div className="mb-4 max-h-48 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 hover:scrollbar-thumb-gray-400 border border-gray-200 rounded-lg">
                 <div className="grid grid-cols-4 gap-1 p-2">
                   {generateYears().map((year) => (
                     <button

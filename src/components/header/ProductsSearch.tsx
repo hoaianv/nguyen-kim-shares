@@ -170,7 +170,7 @@ const ProductsSearch = ({
             ) : null}
 
             {!error && hasResults ? (
-              <div className="max-h-[min(62vh,32rem)] overflow-y-auto">
+              <div className="max-h-[min(62vh,32rem)] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 hover:scrollbar-thumb-gray-400">
                 <div className="flex items-center justify-between border-b border-border px-4 py-3">
                   <span className="text-xs uppercase tracking-[0.22em] text-muted-foreground">
                     Kết quả

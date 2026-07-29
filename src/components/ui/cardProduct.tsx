@@ -231,7 +231,7 @@ const CardProduct = ({ item }: { item: IProduct }) => {
                 >
                   <Zap size={18} />
                   <span className="whitespace-nowrap font-bold">
-                    {t("COMMON.buy_now")}
+                    {t("COMMON.buy_now").toUpperCase()}
                   </span>
                 </button>
               </div>
@@ -243,7 +243,7 @@ const CardProduct = ({ item }: { item: IProduct }) => {
                 }}
                 className="inline-flex h-11 w-full items-center justify-center  bg-[#ffb716] gap-2 rounded-lg border border-amber-300   px-3 text-sm font-semibold text-slate-700 transition hover:border-amber-300 hover:bg-amber-50 hover:text-amber-800"
               >
-                <span className="whitespace-nowrap font-bold text-white">{t("COMMON.contact")}</span>
+                <span className="whitespace-nowrap font-bold text-white">{t("COMMON.contact").toUpperCase()}</span>
               </button>
             )}
           </div>

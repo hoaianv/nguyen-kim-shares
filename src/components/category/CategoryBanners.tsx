@@ -13,7 +13,7 @@ export default function CategoryBanners() {
   if (!bannerCategoryAdsList.length) return null;
 
   return (
-    <div className="flex gap-3 overflow-x-auto pb-1 scrollbar-thin scrollbar-thumb-border scrollbar-track-transparent md:grid md:grid-cols-2 md:overflow-visible md:pb-0">
+    <div className="flex gap-3 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 hover:scrollbar-thumb-gray-400 pb-1 md:grid md:grid-cols-2 md:overflow-visible md:pb-0">
       {bannerCategoryAdsList.map((bannerItem, index) => (
         <Link
           key={bannerItem.id}

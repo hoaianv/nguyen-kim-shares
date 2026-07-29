@@ -231,9 +231,9 @@ export const classPost = `prose
     prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline
 
     /* Thêm tối ưu gọn */
-    overflow-x-auto md:overflow-visible break-words
-    prose-pre:overflow-x-auto
-    [&_table]:w-full [&_table]:min-w-[640px] [&_th]:text-left [&_td]:align-top`;
+    overflow-x-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 hover:scrollbar-thumb-gray-400 md:overflow-visible break-words
+    prose-pre:overflow-x-auto prose-pre:scrollbar-thin prose-pre:scrollbar-thumb-gray-300 prose-pre:scrollbar-track-gray-100 prose-pre:hover:scrollbar-thumb-gray-400
+    [&_table]:w-full [&_table]:min-w-[640px] [&_table]:overflow-x-auto [&_table]:scrollbar-thin [&_table]:scrollbar-thumb-gray-300 [&_table]:scrollbar-track-gray-100 [&_table:hover]:scrollbar-thumb-gray-400 [&_th]:text-left [&_td]:align-top`;
 
 export const classDetailPost = `prose 
   prose-sm sm:prose md:prose-lg
@@ -250,10 +250,10 @@ export const classDetailPost = `prose
 
   /* Tối ưu hiển thị & cuộn ngang khi nội dung rộng */
   break-words
-  prose-pre:overflow-x-auto
+  prose-pre:overflow-x-auto prose-pre:scrollbar-thin prose-pre:scrollbar-thumb-gray-300 prose-pre:scrollbar-track-gray-100 prose-pre:hover:scrollbar-thumb-gray-400
 
   /* Table: rộng tối thiểu và cho phép scroll ngang trên màn nhỏ */
-  [&_table]:block [&_table]:w-full [&_table]:min-w-[640px] [&_table]:overflow-x-auto
+  [&_table]:block [&_table]:w-full [&_table]:min-w-[640px] [&_table]:overflow-x-auto [&_table]:scrollbar-thin [&_table]:scrollbar-thumb-gray-300 [&_table]:scrollbar-track-gray-100 [&_table:hover]:scrollbar-thumb-gray-400
   [&_th]:text-left [&_td]:align-top
   [&_th]:p-2 [&_td]:p-2
   [&_thead]:bg-gray-50 [&_tbody_tr:nth-child(even)]:bg-gray-50/40

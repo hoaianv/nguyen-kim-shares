@@ -22,7 +22,7 @@ export default function FilterDropdownPanel({
 }: FilterDropdownPanelProps) {
   return (
     <div className="border border-border bg-white">
-      <div className="grid max-h-[70vh] gap-4 overflow-y-auto p-4 scrollbar-thin scrollbar-thumb-slate-300 scrollbar-track-slate-100 hover:scrollbar-thumb-slate-400 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid max-h-[70vh] gap-4 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 hover:scrollbar-thumb-gray-400 p-4 sm:grid-cols-2 lg:grid-cols-3">
         {options.map((group) => (
           <div key={group.id} className="space-y-3">
             <div className="border-b border-border pb-2">

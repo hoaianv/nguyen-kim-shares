@@ -108,7 +108,7 @@ export default function MobileFilterSheet({
               </button>
             </div>
 
-            <div className="max-h-[calc(88vh-140px)] overflow-y-auto px-4 py-4 scrollbar-thin scrollbar-thumb-slate-300 scrollbar-track-slate-100 hover:scrollbar-thumb-slate-400">
+            <div className="max-h-[calc(88vh-140px)] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 hover:scrollbar-thumb-gray-400 px-4 py-4">
               <div className="space-y-4">
                 {!!listBrand?.length && <FilterBrand listBrand={listBrand} />}
                 {!!customerNeeds?.length && (

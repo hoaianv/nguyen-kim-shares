@@ -56,7 +56,7 @@ const CategoriesProductsSection = ({
     >
       <div className="overflow-hidden rounded-md bg-[#f5efff] shadow-sm ring-1 ring-white/60">
         <div className="border-b border-white/80 bg-white/70 ">
-          <div className=" overflow-x-auto  ">
+          <div className="overflow-x-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 hover:scrollbar-thumb-gray-400">
             <div className="grid min-w-max grid-flow-col auto-cols-[minmax(140px,1fr)] lg:min-w-0 lg:auto-cols-fr">
               {needs.map((need: ICategoryCustomerNeed) => {
                 const isActive = need.id === activeNeed.id;

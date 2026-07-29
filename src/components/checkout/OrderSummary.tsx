@@ -176,7 +176,7 @@ const OrderSummary = ({ payload }: { payload: IPayloadOrder }) => {
             size="md"
             title="Khuyến mãi và mã giảm giá"
           >
-            <div className="max-h-[400px] overflow-y-auto p-1 scrollbar-thin scrollbar-thumb-slate-300 scrollbar-track-slate-100 hover:scrollbar-thumb-slate-400 sm:max-h-[600px]">
+            <div className="max-h-[400px] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 hover:scrollbar-thumb-gray-400 p-1 sm:max-h-[600px]">
               {quote?.coupon?.flatMap(
                 (item) =>
                   item?.couponDes?.map((i) => (

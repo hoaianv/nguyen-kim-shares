@@ -83,7 +83,7 @@ const Modal: React.FC<ModalProps> = ({
   if (!isVisible) return null;
 
   return (
-    <div className="fixed inset-0 z-50 overflow-y-auto">
+    <div className="fixed inset-0 z-50 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 hover:scrollbar-thumb-gray-400">
       <div
         className={`fixed inset-0 bg-slate-950/55 backdrop-blur-sm transition-opacity duration-200 ease-out ${
           isAnimating ? "opacity-0" : "opacity-100"

@@ -125,7 +125,7 @@ export function CartPopup() {
           </div>
         ) : (
           <>
-            <div className="max-h-64 divide-y divide-border overflow-auto">
+            <div className="max-h-64 divide-y divide-border overflow-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 hover:scrollbar-thumb-gray-400">
               {cart.items.map((item) => (
                 <div key={item.id} className="flex gap-3 py-3">
                   <div className="h-14 w-14 shrink-0 overflow-hidden border border-border bg-muted">

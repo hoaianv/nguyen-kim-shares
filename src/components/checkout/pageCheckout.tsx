@@ -62,7 +62,7 @@ export default function PageCheckout({
     <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
       <div className="order-2 space-y-4 lg:order-1 lg:col-span-2">
         <div className="overflow-hidden rounded-[28px] border border-slate-200/80 bg-white/90 shadow-sm ring-1 ring-white/60 backdrop-blur">
-          <div className="flex overflow-x-auto border-b border-slate-200/80 bg-slate-50/80">
+          <div className="flex overflow-x-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 hover:scrollbar-thumb-gray-400 border-b border-slate-200/80 bg-slate-50/80">
             <button
               onClick={() =>
                 setPayload((prev) => ({ ...prev, shippingMethod: "delivery" }))
