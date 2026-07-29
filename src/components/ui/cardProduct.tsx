@@ -155,7 +155,20 @@ const CardProduct = ({ item }: { item: IProduct }) => {
               {item.name}
             </h3>
           </Link>
+          <div className="flex items-end justify-between gap-3">
+            <div className="min-w-0">
+              <div className="text-base font-semibold tracking-tight text-rose-600 md:text-[1.05rem]">
+                {getPrice(item)}
+              </div>
+              {getMarketPrice(item) ? (
+                <s className="text-xs text-muted-foreground">
+                  {getMarketPrice(item)}
+                </s>
+              ) : null}
+            </div>
 
+
+          </div>
           {item?.technology && item?.technology?.length > 0 && (
             <div className="mt-3  min-h-[140px]  rounded-sm  ">
               <div className=" bg-[#ECECEC]  h-fit space-y-1.5 p-1">
@@ -185,20 +198,7 @@ const CardProduct = ({ item }: { item: IProduct }) => {
           )}
 
           <div className="mt-auto space-y-2 border-t border-border pt-3">
-            <div className="flex items-end justify-between gap-3">
-              <div className="min-w-0">
-                <div className="text-base font-semibold tracking-tight text-rose-600 md:text-[1.05rem]">
-                  {getPrice(item)}
-                </div>
-                {getMarketPrice(item) ? (
-                  <s className="text-xs text-muted-foreground">
-                    {getMarketPrice(item)}
-                  </s>
-                ) : null}
-              </div>
 
-
-            </div>
 
             {item.isInStock ? (
               <div className="flex items-center gap-2">
