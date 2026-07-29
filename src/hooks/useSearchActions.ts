@@ -5,7 +5,7 @@ import { debounce } from "lodash";
 import { useStateStore } from "@/stores/stateStore";
 
 export function useSearchActions() {
-  const { search, setSearch } = useStateStore();
+  const { setSearch } = useStateStore();
   const router = useRouter();
 
   const debouncedChange = useMemo(
@@ -16,13 +16,17 @@ export function useSearchActions() {
     [setSearch]
   );
 
+  const handleSearch = (keyword: string) => {
+    const q = encodeURIComponent(keyword.trim());
+    if (!q) return;
+    router.replace(`/san-pham?q=${q}`);
+  };
+
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
-      const q = encodeURIComponent(search.keyword?.trim() ?? "");
-      if (!q) return;
-      router.replace(`/san-pham?q=${q}`);
+      handleSearch(e.currentTarget.value);
     }
   };
 
-  return { debouncedChange, handleKeyDown };
+  return { debouncedChange, handleKeyDown, handleSearch };
 }

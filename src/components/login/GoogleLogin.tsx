@@ -4,7 +4,7 @@ import { getGoogleAuthUrl } from "@/apis/common/auth.apis";
 import { getValidData } from "@/lib/utils";
 import { useState } from "react";
 
-export default function GoogleLogin() {
+export default function GoogleLogin({ className }: { className?: string }) {
   const [loading, setLoading] = useState(false);
 
   const handleGoogleLogin = async () => {
@@ -36,7 +36,10 @@ export default function GoogleLogin() {
     <button
       onClick={handleGoogleLogin}
       disabled={loading}
-      className="w-full mt-2  flex items-center justify-center gap-2 bg-white border border-gray-300 rounded-md px-4 py-2 hover:bg-gray-50 disabled:opacity-50 transition-colors"
+      className={
+        className ??
+        "mt-2 flex w-full items-center justify-center gap-2 rounded-md border border-gray-300 bg-white px-4 py-2 transition-colors hover:bg-gray-50 disabled:opacity-50"
+      }
     >
       {loading ? (
         <span>Đang xử lý...</span>

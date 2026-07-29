@@ -11,6 +11,7 @@ interface InputSearchProps {
   children?: React.ReactNode;
   onClick?: () => void;
   onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
+  showSearchIcon?: boolean;
 }
 
 const InputSearch = forwardRef<HTMLInputElement, InputSearchProps>(
@@ -25,14 +26,17 @@ const InputSearch = forwardRef<HTMLInputElement, InputSearchProps>(
       children,
       onClick,
       onKeyDown,
+      showSearchIcon = true,
     },
     ref
   ) => {
     return (
       <div className="relative w-full">
-        <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4">
-          <Search className="h-4 w-4 text-muted-foreground" />
-        </div>
+        {showSearchIcon ? (
+          <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4">
+            <Search className="h-4 w-4 text-muted-foreground" />
+          </div>
+        ) : null}
         <input
           ref={ref}
           type="text"

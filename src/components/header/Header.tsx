@@ -1,14 +1,12 @@
 "use client";
 
-import ProductsSearch from "@/components/header/ProductsSearch";
 import InputSearch from "@/components/ui/inputSearch";
 import Popover from "@/components/ui/Popover";
 import { name } from "@/constants/company.constant";
+import { HEADER_ITEMS } from "@/constants";
 import { bannerKeys } from "@/constants/values.constant";
 import { useSearchActions } from "@/hooks/useSearchActions";
-import { getHeaderItemsWithState } from "@/lib/utils";
 import { useStateStore } from "@/stores/stateStore";
-import { useAuthStore } from "@/stores/useAuth";
 import {
   CreditCard,
   FileText,
@@ -46,20 +44,19 @@ const hotKeywords = ["PC Gaming", "Laptop", "CPU", "VGA", "RAM", "Mainboard"];
 
 const Header = () => {
   const t = useTranslations();
-  const { debouncedChange, handleKeyDown } = useSearchActions();
-  const { authenticated } = useAuthStore();
+  const { debouncedChange, handleKeyDown, handleSearch } = useSearchActions();
   const { banner } = useStateStore();
   const headerLogo = banner?.[bannerKeys.bannerHeaderLogo]?.advertises?.[0];
 
-  const [desktopSearchOpen, setDesktopSearchOpen] = useState(false);
   const [desktopMenuOpen, setDesktopMenuOpen] = useState(false);
   const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
   const [mobileSearchOpen, setMobileSearchOpen] = useState(false);
+  const [searchValue, setSearchValue] = useState("");
   const [isDesktop, setIsDesktop] = useState(false);
   const desktopMenuButtonRef = useRef<HTMLButtonElement>(null);
   const desktopMenuPanelRef = useRef<HTMLDivElement>(null);
 
-  const itemsHeader = getHeaderItemsWithState(authenticated);
+  const itemsHeader = HEADER_ITEMS;
   const headerActions = itemsHeader.filter((item) =>
     ["auth", "cart"].includes(item.value),
   );
@@ -82,19 +79,6 @@ const Header = () => {
       document.body.style.overflow = previousOverflow;
     };
   }, [mobileDrawerOpen, mobileSearchOpen]);
-
-  useEffect(() => {
-    if (!desktopSearchOpen) return;
-
-    const handleEscape = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        setDesktopSearchOpen(false);
-      }
-    };
-
-    document.addEventListener("keydown", handleEscape);
-    return () => document.removeEventListener("keydown", handleEscape);
-  }, [desktopSearchOpen]);
 
   useEffect(() => {
     if (!desktopMenuOpen) return;
@@ -129,19 +113,20 @@ const Header = () => {
 
   const handleSearchKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Escape") {
-      setDesktopSearchOpen(false);
       setMobileSearchOpen(false);
       return;
     }
 
     handleKeyDown(e);
+    if (e.key === "Enter") {
+      setMobileSearchOpen(false);
+    }
   };
 
   const openDesktopMenu = () => {
     setDesktopMenuOpen(true);
     setMobileDrawerOpen(false);
     setMobileSearchOpen(false);
-    setDesktopSearchOpen(false);
   };
 
   const closeDesktopMenu = () => {
@@ -167,6 +152,11 @@ const Header = () => {
         title=""
         openOn="hover"
         position="bottom"
+        className={
+          item.value === "cart"
+            ? "border-slate-200 shadow-[0_18px_42px_-28px_rgba(15,23,42,0.28)]"
+            : "border-0 shadow-[0_16px_36px_-20px_rgba(15,23,42,0.32)]"
+        }
       >
         {item.renderPopup()}
       </Popover>
@@ -205,7 +195,6 @@ const Header = () => {
             onClick={() => {
               setMobileDrawerOpen((prev) => !prev);
               closeDesktopMenu();
-              setDesktopSearchOpen(false);
               setMobileSearchOpen(false);
             }}
             className="inline-flex h-10 w-10 items-center justify-center rounded-sm border border-slate-200 bg-white text-slate-900 lg:hidden"
@@ -268,30 +257,27 @@ const Header = () => {
           <div className="relative col-span-3 order-3 min-w-0 lg:col-span-1 lg:order-none">
             <div className="relative">
               <InputSearch
-                placeholder={t("HEADER.search_placeholder")}
+                placeholder="Bạn tìm gì..."
                 onClick={() => {
-                  setDesktopSearchOpen(true);
                   setMobileSearchOpen(false);
                   setDesktopMenuOpen(false);
                 }}
                 onFocus={() => {
-                  setDesktopSearchOpen(true);
                   setMobileSearchOpen(false);
                   setDesktopMenuOpen(false);
                 }}
-                onChange={debouncedChange}
+                onChange={(value) => {
+                  setSearchValue(value);
+                  debouncedChange(value);
+                }}
                 onKeyDown={handleSearchKeyDown}
-                className="h-11 rounded-sm border-slate-200 bg-white pl-4 pr-[102px] text-base"
-              >
-                <ProductsSearch
-                  show={desktopSearchOpen}
-                  setShow={setDesktopSearchOpen}
-                />
-              </InputSearch>
+                showSearchIcon={false}
+                className="h-11 rounded-sm border-transparent bg-[#f1f1f1] pl-4 pr-[102px] text-base placeholder:text-slate-500 hover:border-transparent focus:border-transparent"
+              />
 
               <button
                 type="button"
-                onClick={() => setDesktopSearchOpen(true)}
+                onClick={() => handleSearch(searchValue)}
                 className="absolute right-0 top-0 inline-flex h-11 w-[94px] items-center justify-center rounded-sm bg-brand text-sm font-semibold text-slate-950 transition hover:opacity-95"
                 aria-label="Tìm kiếm"
               >
@@ -396,15 +382,13 @@ const Header = () => {
                   placeholder={t("HEADER.search_placeholder")}
                   onFocus={() => setMobileSearchOpen(true)}
                   onClick={() => setMobileSearchOpen(true)}
-                  onChange={debouncedChange}
+                  onChange={(value) => {
+                    setSearchValue(value);
+                    debouncedChange(value);
+                  }}
                   onKeyDown={handleSearchKeyDown}
                   className="h-11 rounded-sm border-slate-200 bg-white pl-4 pr-4 text-sm"
-                >
-                  <ProductsSearch
-                    show={mobileSearchOpen}
-                    setShow={setMobileSearchOpen}
-                  />
-                </InputSearch>
+                />
               </div>
             </motion.div>
           </motion.div>
