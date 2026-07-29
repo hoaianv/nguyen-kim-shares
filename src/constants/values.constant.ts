@@ -8,6 +8,7 @@ export const BANNER_SHOWN_KEY = "banner_popup_shown";
 export const bannerKeys = {
   bannerMainHome: "middle",
   bannerTopHeader: "bannerTop",
+  bannerHeaderLogo: "header_logo",
   bannerMainRight: "bannerRight",
   bannerGroupFour: "bannerBottom",
   bannerGroupThree: "bannerMiddle",
@@ -27,9 +28,8 @@ export const bannerKeys = {
   bannerLeftScreen: "banner_left_screen",
   bannerRightScreen: "banner_right_screen",
   bannerBoCongThuong: "moit_certificate",
-    bannerTopSellingHome: "top_selling_home",
-    bannerFlashSale: "BannerFlashSale",
-
+  bannerTopSellingHome: "top_selling_home",
+  bannerFlashSale: "BannerFlashSale",
 };
 
 export const PARAMS_RECRUITMENT = {
