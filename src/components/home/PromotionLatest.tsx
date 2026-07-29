@@ -35,7 +35,7 @@ export default function PromotionLatest({ data }: PromotionLatestProps) {
       viewport={{ once: true, amount: 0.18 }}
       transition={{ duration: 0.4, ease: "easeOut" }}
     >
-      <div className="overflow-hidden rounded-xl bg-white shadow-sm ring-1 ring-slate-200/70">
+      <div className="overflow-hidden rounded-md bg-white shadow-sm ring-1 ring-slate-200/70">
         <HomeSectionHeader
           title="Tổng hợp khuyến mãi"
           actionLabel="Xem tất cả"

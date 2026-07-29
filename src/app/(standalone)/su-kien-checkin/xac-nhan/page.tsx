@@ -33,18 +33,18 @@ function CheckinContent() {
 
         if (result?.status && result?.errorCode === 200 && result?.data) {
           setGuestData(result.data);
-          
+
           if (result.data.status === ECheckinStatus.Checked) {
-             setState("success");
-             setMessage("Khách mời này đã được check-in trước đó.");
+            setState("success");
+            setMessage("Khách mời này đã được check-in trước đó.");
           } else {
-             setState("info");
+            setState("info");
           }
         } else {
           setState("error");
           setMessage(
             result?.message ||
-              "Không tìm thấy thông tin khách mời. Vui lòng liên hệ ban tổ chức.",
+            "Không tìm thấy thông tin khách mời. Vui lòng liên hệ ban tổ chức.",
           );
         }
       } catch (error) {
@@ -63,11 +63,11 @@ function CheckinContent() {
 
   const handleConfirmCheckin = async () => {
     if (!uid) return;
-    
+
     setState("confirming");
     try {
       const result = await checkinEventGuest(uid, true);
-      
+
       if (result?.status && result?.errorCode === 200) {
         setState("success");
         setMessage("Check-in thành công! Chào mừng bạn đến với sự kiện.");
@@ -75,9 +75,9 @@ function CheckinContent() {
         setState("error");
         setMessage(result?.message || "Check-in thất bại. Vui lòng liên hệ ban tổ chức.");
       }
-    } catch(error) {
-       setState("error");
-       setMessage("Lỗi kết nối khi xác nhận. Vui lòng thử lại.");
+    } catch (error) {
+      setState("error");
+      setMessage("Lỗi kết nối khi xác nhận. Vui lòng thử lại.");
     }
   };
 
@@ -91,42 +91,42 @@ function CheckinContent() {
         {/* Dynamic Header Illustration */}
         {state === "loading" || state === "confirming" ? (
           <>
-             <Loader2 className={`w-16 h-16 animate-spin mb-4 ${state === 'confirming' ? 'text-blue-500' : 'text-slate-400'}`} />
-             <h2 className={`text-xl font-bold ${state === 'confirming' ? 'text-slate-800' : 'text-slate-800'}`}>
-               {state === "confirming" ? "Đang xác nhận..." : "Đang xử lý..."}
-             </h2>
+            <Loader2 className={`w-16 h-16 animate-spin mb-4 ${state === 'confirming' ? 'text-blue-500' : 'text-slate-400'}`} />
+            <h2 className={`text-xl font-bold ${state === 'confirming' ? 'text-slate-800' : 'text-slate-800'}`}>
+              {state === "confirming" ? "Đang xác nhận..." : "Đang xử lý..."}
+            </h2>
           </>
         ) : state === "success" ? (
-           <>
-              <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mb-4 backdrop-blur-sm">
-                <CheckCircle2 className="w-10 h-10 text-white" />
-              </div>
-              <h2 className="text-2xl font-bold">Thành công!</h2>
-           </>
+          <>
+            <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mb-4 backdrop-blur-sm">
+              <CheckCircle2 className="w-10 h-10 text-white" />
+            </div>
+            <h2 className="text-2xl font-bold">Thành công!</h2>
+          </>
         ) : state === "error" || state === "invalid" ? (
-           <>
-              <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mb-4 backdrop-blur-sm">
-                {state === "error" ? <XCircle className="w-10 h-10 text-white" /> : <AlertCircle className="w-10 h-10 text-white" />}
-              </div>
-              <h2 className="text-2xl font-bold">{state === "error" ? "Thất bại" : "Không hợp lệ"}</h2>
-           </>
+          <>
+            <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mb-4 backdrop-blur-sm">
+              {state === "error" ? <XCircle className="w-10 h-10 text-white" /> : <AlertCircle className="w-10 h-10 text-white" />}
+            </div>
+            <h2 className="text-2xl font-bold">{state === "error" ? "Thất bại" : "Không hợp lệ"}</h2>
+          </>
         ) : state === "info" ? (
-           <>
-              <div className="w-20 h-20 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mb-4">
-                 <CalendarCheck className="w-10 h-10" />
-              </div>
-              <h2 className="text-2xl font-bold text-slate-800">Xác nhận thông tin</h2>
-              <p className="text-slate-500 text-sm mt-1">Vui lòng kiểm tra lại thông tin khách mời</p>
-           </>
+          <>
+            <div className="w-20 h-20 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mb-4">
+              <CalendarCheck className="w-10 h-10" />
+            </div>
+            <h2 className="text-2xl font-bold text-slate-800">Xác nhận thông tin</h2>
+            <p className="text-slate-500 text-sm mt-1">Vui lòng kiểm tra lại thông tin khách mời</p>
+          </>
         ) : null}
       </div>
 
       {/* Detail Content Section */}
       <div className={`px-6 sm:px-8 pb-8 ${state === 'success' || state === 'error' || state === 'invalid' ? 'pt-6 bg-white rounded-t-[2rem] -mt-6' : 'pt-4'}`}>
         {(state === "loading" || state === "confirming") && (
-           <div className="text-center pt-2">
-              <p className="text-slate-500 text-sm">{state === "confirming" ? "Hệ thống đang lưu trạng thái check-in, vui lòng chờ..." : message}</p>
-           </div>
+          <div className="text-center pt-2">
+            <p className="text-slate-500 text-sm">{state === "confirming" ? "Hệ thống đang lưu trạng thái check-in, vui lòng chờ..." : message}</p>
+          </div>
         )}
 
         {(state === "info" || state === "success") && guestData && (
@@ -135,11 +135,11 @@ function CheckinContent() {
               <h3 className="text-sm font-bold text-slate-800 mb-4 pb-3 border-b border-slate-200 flex items-center gap-2">
                 Thông tin khách mời
               </h3>
-              
+
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center shrink-0">
-                     <User className="w-5 h-5 text-slate-500" />
+                    <User className="w-5 h-5 text-slate-500" />
                   </div>
                   <div className="pt-0.5">
                     <p className="text-[11px] text-slate-500 font-bold uppercase tracking-wider mb-0.5">Họ và tên</p>
@@ -150,7 +150,7 @@ function CheckinContent() {
                 {guestData.companyName && (
                   <div className="flex items-start gap-4">
                     <div className="w-10 h-10 flex flex-col items-center shrink-0">
-                       <Building className="w-5 h-5 text-slate-400 mt-2" />
+                      <Building className="w-5 h-5 text-slate-400 mt-2" />
                     </div>
                     <div>
                       <p className="text-[11px] text-slate-500 font-bold uppercase tracking-wider mb-0.5">Công ty</p>
@@ -162,7 +162,7 @@ function CheckinContent() {
                 {guestData.position && (
                   <div className="flex items-start gap-4">
                     <div className="w-10 h-10 flex flex-col items-center shrink-0">
-                       <Briefcase className="w-5 h-5 text-slate-400 mt-1" />
+                      <Briefcase className="w-5 h-5 text-slate-400 mt-1" />
                     </div>
                     <div>
                       <p className="text-[11px] text-slate-500 font-bold uppercase tracking-wider mb-0.5">Chức vụ</p>
@@ -175,13 +175,13 @@ function CheckinContent() {
                   <div className="grid grid-cols-2 gap-4 mt-2 pt-4 border-t border-slate-200">
                     {guestData.phone && (
                       <div className="flex flex-col gap-1">
-                        <p className="text-[11px] text-slate-500 font-bold uppercase tracking-wider flex items-center gap-1.5"><Phone className="w-3 h-3"/> Số điện thoại</p>
+                        <p className="text-[11px] text-slate-500 font-bold uppercase tracking-wider flex items-center gap-1.5"><Phone className="w-3 h-3" /> Số điện thoại</p>
                         <p className="text-sm font-medium text-slate-800 break-all">{guestData.phone}</p>
                       </div>
                     )}
                     {guestData.email && (
                       <div className="flex flex-col gap-1">
-                        <p className="text-[11px] text-slate-500 font-bold uppercase tracking-wider flex items-center gap-1.5"><Mail className="w-3 h-3"/> Email</p>
+                        <p className="text-[11px] text-slate-500 font-bold uppercase tracking-wider flex items-center gap-1.5"><Mail className="w-3 h-3" /> Email</p>
                         <p className="text-sm font-medium text-slate-800 break-all">{guestData.email}</p>
                       </div>
                     )}
@@ -202,7 +202,7 @@ function CheckinContent() {
 
             {state === "success" && (
               <div className="text-center pt-2">
-                 <p className="text-emerald-600 font-medium">{message}</p>
+                <p className="text-emerald-600 font-medium">{message}</p>
               </div>
             )}
           </div>
@@ -231,7 +231,7 @@ export default function CheckinConfirmationPage() {
     <div className="min-h-[100dvh] pb-10 bg-slate-50/50 flex flex-col p-4 font-sans before:absolute before:inset-0 before:bg-blue-600/5 before:h-[40vh] before:-z-10 items-center justify-center">
       <Suspense
         fallback={
-          <div className="w-full max-w-sm mx-auto bg-white rounded-3xl shadow-sm p-12 text-center flex flex-col items-center">
+          <div className="w-full max-w-sm mx-auto bg-white rounded-md  shadow-sm p-12 text-center flex flex-col items-center">
             <Loader2 className="w-12 h-12 text-blue-500 animate-spin" />
           </div>
         }

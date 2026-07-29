@@ -54,7 +54,7 @@ const CategoriesProductsSection = ({
       viewport={{ once: true, amount: 0.18 }}
       transition={{ duration: 0.32, ease: "easeOut" }}
     >
-      <div className="overflow-hidden rounded-3xl bg-[#f5efff] shadow-sm ring-1 ring-white/60">
+      <div className="overflow-hidden rounded-md bg-[#f5efff] shadow-sm ring-1 ring-white/60">
         <div className="border-b border-white/80 bg-white/70 ">
           <div className=" overflow-x-auto  ">
             <div className="grid min-w-max grid-flow-col auto-cols-[minmax(140px,1fr)] lg:min-w-0 lg:auto-cols-fr">
@@ -93,7 +93,7 @@ const CategoriesProductsSection = ({
         <div className="grid items-center gap-3 p-3 sm:p-4 bg-amber-50 lg:grid-cols-[220px_minmax(0,1fr)] xl:grid-cols-[230px_minmax(0,1fr)]">
           <Link
             href={item.url || "#"}
-            className="group relative hidden min-h-[408px] overflow-hidden rounded-3xl bg-slate-950 lg:block lg:self-center h-full"
+            className="group relative hidden min-h-[408px] overflow-hidden rounded-md  bg-slate-950 lg:block lg:self-center h-full"
           >
             <Image
               src={item.banner || item.picture}
