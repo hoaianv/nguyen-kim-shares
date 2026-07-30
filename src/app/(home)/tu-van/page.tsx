@@ -21,10 +21,10 @@ export default async function page({ params, searchParams }: Props) {
   const { breadcrumb, title, faqs } = detailData;
 
   return detailData ? (
-    <main className="max-w-6xl mx-auto px-4 py-1 mt-2">
+    <main className="max-w-6xl mx-auto px-4 pt-1 pb-8">
       <Breadcrumb items={breadcrumb ?? []} />
 
-      <article className="bg-white rounded-lg shadow-sm overflow-hidden mt-4">
+      <article className="mt-4 overflow-hidden rounded-lg bg-white shadow-[0_14px_32px_-20px_rgba(15,23,42,0.38)]">
         <div className="p-6 md:p-8">
           {allData && (
             <div className="mb-4">
@@ -115,4 +115,3 @@ export default async function page({ params, searchParams }: Props) {
     </main>
   ) : null;
 }
-
