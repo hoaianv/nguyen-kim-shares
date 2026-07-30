@@ -30,6 +30,7 @@ export const bannerKeys = {
   bannerBoCongThuong: "moit_certificate",
   bannerTopSellingHome: "top_selling_home",
   bannerFlashSale: "BannerFlashSale",
+  paymentBankQr: "payment_bank_qr",
 };
 
 export const PARAMS_RECRUITMENT = {
