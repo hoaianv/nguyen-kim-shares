@@ -1,54 +1,124 @@
 "use client";
 
+import AddressGrid from "@/components/checkout/AddressGrid";
+import ModalUserInfo from "@/components/checkout/ModalUserInfo";
 import OrderSummary from "@/components/checkout/OrderSummary";
 import PaymentSection from "@/components/checkout/PaymentSection";
-import { IPayloadOrder } from "@/interfaces/models/IOrder.interface";
-import { useAuthStore } from "@/stores/useAuth";
-import { MapPinHouse } from "lucide-react";
-import { useEffect, useState } from "react";
-import { motion } from "motion/react";
 import TextArea from "@/components/ui/TextArea";
-import ModalUserInfo from "@/components/checkout/ModalUserInfo";
 import { address } from "@/constants/company.constant";
+import { IPayloadOrder } from "@/interfaces/models/IOrder.interface";
 import { useCartStore } from "@/stores/useCartStore";
+import { useAuthStore } from "@/stores/useAuth";
+import { useRouter } from "next/navigation";
+import { MapPinHouse } from "lucide-react";
+import { motion } from "motion/react";
+import { useEffect, useMemo, useState } from "react";
+import { toast } from "sonner";
 import { IAddress } from "@/interfaces/models/IAddress.interface";
-import AddressGrid from "@/components/checkout/AddressGrid";
 
 export default function PageCheckout({
   data,
-  selected,
 }: {
   data: IAddress[];
-  selected: IAddress | null;
 }) {
-  const { selectedIds, couponCode } = useCartStore();
+  const { cart, selectedIds, couponCode } = useCartStore();
   const [editAddress, setEditAddress] = useState<IAddress | null>(null);
   const { user } = useAuthStore();
+  const router = useRouter();
+
+  const selectedItems = useMemo(
+    () => cart.items.filter((item) => selectedIds.includes(item.id)),
+    [cart.items, selectedIds]
+  );
+  const hasSelectedItems = selectedItems.length > 0;
+  const userAddress = useMemo(
+    () => ({
+      name: user?.fullName,
+      email: user?.email,
+      phone: user?.phone,
+      address: user?.address,
+    }),
+    [user?.address, user?.email, user?.fullName, user?.phone]
+  );
+  const isUserAddressValid =
+    userAddress.name &&
+    userAddress.email &&
+    userAddress.phone &&
+    userAddress.address;
+  const initialSelectedAddress = useMemo(() => {
+    const defaultAddress = data.find((item) => item.isDefault);
+
+    if (defaultAddress) {
+      return defaultAddress;
+    }
+
+    if (data.length > 0) {
+      return data[0];
+    }
+
+    if (isUserAddressValid) {
+      return {
+        ...userAddress,
+        id: "user" as const,
+      };
+    }
+
+    return null;
+  }, [data, isUserAddressValid, userAddress]);
+  const initialSelectedAddressId = initialSelectedAddress?.id ?? null;
+  const [selectedAddressId, setSelectedAddressId] = useState<
+    number | "user" | null
+  >(initialSelectedAddressId);
+
   const [payload, setPayload] = useState<IPayloadOrder>({
-    name: selected?.name || "",
-    phone: selected?.phone || "",
-    address: selected?.address || "",
-    email: selected?.email || "",
+    name: initialSelectedAddress?.name || "",
+    phone: initialSelectedAddress?.phone || "",
+    address: initialSelectedAddress?.address || "",
+    email: initialSelectedAddress?.email || "",
     shippingMethod: "delivery",
     note: "",
-    couponCode: couponCode,
-    cartId: selectedIds,
+    couponCode,
+    cartId: selectedItems.map((item) => item.id),
   });
   const [open, setOpen] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (!initialSelectedAddress) return;
+
+    setSelectedAddressId(initialSelectedAddressId);
+    setPayload((prev) => ({
+      ...prev,
+      name: initialSelectedAddress.name ?? "",
+      phone: initialSelectedAddress.phone ?? "",
+      address: initialSelectedAddress.address ?? "",
+      email: initialSelectedAddress.email ?? "",
+    }));
+  }, [initialSelectedAddress, initialSelectedAddressId]);
+
+  useEffect(() => {
+    if (hasSelectedItems) return;
+
+    toast.warning("Hãy chọn ít nhất 1 sản phẩm trước khi thanh toán.", {
+      position: "top-center",
+    });
+    router.replace("/gio-hang");
+  }, [hasSelectedItems, router]);
+
+  useEffect(() => {
+    setPayload((prev) => ({
+      ...prev,
+      couponCode,
+      cartId: selectedItems.map((item) => item.id),
+    }));
+  }, [couponCode, selectedItems]);
 
   const handleEditAddress = (data: IAddress) => {
     setEditAddress(data);
     setOpen(true);
   };
 
-  useEffect(() => {
-    setPayload((prev) => ({
-      ...prev,
-      couponCode,
-    }));
-  }, [couponCode]);
-
   const handleSelectAddress = (data: IAddress) => {
+    setSelectedAddressId(data.id ?? "user");
     setPayload((prev) => ({
       ...prev,
       email: data.email,
@@ -58,11 +128,15 @@ export default function PageCheckout({
     }));
   };
 
+  if (!hasSelectedItems) {
+    return null;
+  }
+
   return (
     <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
       <div className="order-2 space-y-4 lg:order-1 lg:col-span-2">
         <div className="overflow-hidden rounded-[28px] border border-slate-200/80 bg-white/90 shadow-sm ring-1 ring-white/60 backdrop-blur">
-          <div className="flex overflow-x-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 hover:scrollbar-thumb-gray-400 border-b border-slate-200/80 bg-slate-50/80">
+          <div className="flex overflow-x-auto border-b border-slate-200/80 bg-slate-50/80 scrollbar-thin scrollbar-track-gray-100 scrollbar-thumb-gray-300 hover:scrollbar-thumb-gray-400">
             <button
               onClick={() =>
                 setPayload((prev) => ({ ...prev, shippingMethod: "delivery" }))
@@ -107,7 +181,7 @@ export default function PageCheckout({
                   strokeWidth={1.75}
                   className="mt-1 flex-shrink-0 text-amber-600"
                 />
-                <span className="text-sm leading-relaxed font-medium text-slate-700 sm:text-base">
+                <span className="text-sm font-medium leading-relaxed text-slate-700 sm:text-base">
                   {address}
                 </span>
               </motion.div>
@@ -116,7 +190,7 @@ export default function PageCheckout({
             <AddressGrid
               user={user}
               addresses={data}
-              selectedPayload={payload}
+              selectedAddressId={selectedAddressId}
               onEditAddress={handleEditAddress}
               onSelectAddress={handleSelectAddress}
               onAddAddress={() => {
@@ -132,7 +206,7 @@ export default function PageCheckout({
               <TextArea
                 id="note"
                 label="Mô tả"
-                value={payload?.note || ""}
+                value={payload.note || ""}
                 onChange={(e) =>
                   setPayload((prev) => ({ ...prev, note: e.target.value }))
                 }
