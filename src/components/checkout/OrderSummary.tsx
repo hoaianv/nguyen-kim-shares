@@ -94,7 +94,7 @@ const OrderSummary = ({ payload }: { payload: IPayloadOrder }) => {
         </Link>
       </div>
 
-      <div className="mb-4 flex flex-col gap-3">
+      <div className="mb-4 flex max-h-[clamp(220px,28vh,360px)] flex-col gap-3 overflow-y-auto pr-1 scrollbar-thin scrollbar-track-gray-100 scrollbar-thumb-gray-300 hover:scrollbar-thumb-gray-400">
         {items?.length ? (
           items.map((product) => (
             <div

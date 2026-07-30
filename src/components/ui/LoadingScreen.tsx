@@ -21,7 +21,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-background/80 px-4 backdrop-blur-sm">
-      <div className="nk-surface-elevated flex w-full max-w-sm flex-col items-center gap-4 px-8 py-7 text-center">
+      <div className=" flex w-full max-w-sm flex-col items-center gap-4 px-8 py-7 text-center">
         <Loading message={message} size={size} variant={variant} />
       </div>
     </div>

@@ -133,7 +133,7 @@ export default function PageCheckout({
   }
 
   return (
-    <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
+    <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 pt-3">
       <div className="order-2 space-y-4 lg:order-1 lg:col-span-2">
         <div className="overflow-hidden rounded-[28px] border border-slate-200/80 bg-white/90 shadow-sm ring-1 ring-white/60 backdrop-blur">
           <div className="flex overflow-x-auto border-b border-slate-200/80 bg-slate-50/80 scrollbar-thin scrollbar-track-gray-100 scrollbar-thumb-gray-300 hover:scrollbar-thumb-gray-400">
@@ -141,11 +141,10 @@ export default function PageCheckout({
               onClick={() =>
                 setPayload((prev) => ({ ...prev, shippingMethod: "delivery" }))
               }
-              className={`flex-1 px-4 py-3 text-center text-sm font-medium transition sm:px-6 sm:py-4 sm:text-base ${
-                payload.shippingMethod === "delivery"
-                  ? "border-b-2 border-amber-500 bg-white text-slate-950"
-                  : "text-slate-500 hover:text-slate-900"
-              }`}
+              className={`flex-1 px-4 py-3 text-center text-sm font-medium transition sm:px-6 sm:py-4 sm:text-base ${payload.shippingMethod === "delivery"
+                ? "border-b-2 border-amber-500 bg-white text-slate-950"
+                : "text-slate-500 hover:text-slate-900"
+                }`}
             >
               Nhận hàng tại nhà
             </button>
@@ -154,11 +153,10 @@ export default function PageCheckout({
               onClick={() =>
                 setPayload((prev) => ({ ...prev, shippingMethod: "pickup" }))
               }
-              className={`flex-1 px-4 py-3 text-center text-sm font-medium transition sm:px-6 sm:py-4 sm:text-base ${
-                payload.shippingMethod === "pickup"
-                  ? "border-b-2 border-amber-500 bg-white text-slate-950"
-                  : "text-slate-500 hover:text-slate-900"
-              }`}
+              className={`flex-1 px-4 py-3 text-center text-sm font-medium transition sm:px-6 sm:py-4 sm:text-base ${payload.shippingMethod === "pickup"
+                ? "border-b-2 border-amber-500 bg-white text-slate-950"
+                : "text-slate-500 hover:text-slate-900"
+                }`}
             >
               Nhận tại cửa hàng
             </button>

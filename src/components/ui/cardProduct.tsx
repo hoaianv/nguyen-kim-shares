@@ -116,7 +116,7 @@ const CardProduct = ({ item }: { item: IProduct }) => {
         onMouseLeave={() => supportsHover && setIsHovered(false)}
       >
         <Link href={`/${item.url}`} className="block">
-          <div className="relative aspect-[16/10] overflow-hidden bg-muted/20 p-4">
+          <div className="relative aspect-[16/10] overflow-hidden bg-muted/20 p-1.5 sm:p-2.5">
             <ImageWithFallback
               loading="lazy"
               width={280}
