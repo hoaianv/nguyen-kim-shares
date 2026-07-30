@@ -1,5 +1,8 @@
+"use client";
+
 import React, { useEffect, useState } from "react";
 import { X } from "lucide-react";
+import Portal from "@/components/ui/Portal";
 
 interface ModalProps {
   isOpen: boolean;
@@ -26,6 +29,8 @@ const Modal: React.FC<ModalProps> = ({
   const [isAnimating, setIsAnimating] = useState(false);
 
   useEffect(() => {
+    const previousOverflow = document.body.style.overflow;
+
     if (isOpen) {
       setIsVisible(true);
       setIsAnimating(true);
@@ -35,7 +40,10 @@ const Modal: React.FC<ModalProps> = ({
         setIsAnimating(false);
       }, 50);
 
-      return () => clearTimeout(timer);
+      return () => {
+        clearTimeout(timer);
+        document.body.style.overflow = previousOverflow;
+      };
     }
 
     if (isVisible) {
@@ -43,11 +51,18 @@ const Modal: React.FC<ModalProps> = ({
       const timer = setTimeout(() => {
         setIsVisible(false);
         setIsAnimating(false);
-        document.body.style.overflow = "unset";
+        document.body.style.overflow = previousOverflow;
       }, 180);
 
-      return () => clearTimeout(timer);
+      return () => {
+        clearTimeout(timer);
+        document.body.style.overflow = previousOverflow;
+      };
     }
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
   }, [isOpen, isVisible]);
 
   useEffect(() => {
@@ -83,45 +98,47 @@ const Modal: React.FC<ModalProps> = ({
   if (!isVisible) return null;
 
   return (
-    <div className="fixed inset-0 z-50 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 hover:scrollbar-thumb-gray-400">
-      <div
-        className={`fixed inset-0 bg-slate-950/55 backdrop-blur-sm transition-opacity duration-200 ease-out ${
-          isAnimating ? "opacity-0" : "opacity-100"
-        }`}
-        onClick={handleOverlayClick}
-      />
-
-      <div className="flex min-h-screen items-center justify-center p-4">
+    <Portal>
+      <div className="fixed inset-0 z-[100] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 hover:scrollbar-thumb-gray-400">
         <div
-          className={`relative w-full ${sizeClasses[size]} transform overflow-hidden rounded-lg border border-border bg-popover shadow-[0_30px_100px_-42px_rgba(15,23,42,0.45)] transition-all duration-200 ease-out ${
-            isAnimating
-              ? "opacity-0 scale-95 translate-y-4"
-              : "opacity-100 scale-100 translate-y-0"
+          className={`fixed inset-0 bg-slate-950/55 backdrop-blur-sm transition-opacity duration-200 ease-out ${
+            isAnimating ? "opacity-0" : "opacity-100"
           }`}
-        >
-          {(title || showCloseButton) && (
-            <div className="flex items-center justify-between border-b border-border px-5 py-4">
-              {title && (
-                <h2 className="nk-section-title text-lg font-semibold text-foreground">
-                  {title}
-                </h2>
-              )}
-              {showCloseButton && (
-                <button
-                  onClick={onClose}
-                  className="rounded-lg p-2 text-muted-foreground transition hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-                  aria-label="Close modal"
-                >
-                  <X className="h-5 w-5" />
-                </button>
-              )}
-            </div>
-          )}
+          onClick={handleOverlayClick}
+        />
 
-          <div className="px-5 py-5 sm:px-6">{children}</div>
+        <div className="flex min-h-screen items-center justify-center p-4">
+          <div
+            className={`relative w-full ${sizeClasses[size]} transform overflow-hidden rounded-lg border border-border bg-popover shadow-[0_30px_100px_-42px_rgba(15,23,42,0.45)] transition-all duration-200 ease-out ${
+              isAnimating
+                ? "opacity-0 scale-95 translate-y-4"
+                : "opacity-100 scale-100 translate-y-0"
+            }`}
+          >
+            {(title || showCloseButton) && (
+              <div className="flex items-center justify-between border-b border-border px-5 py-4">
+                {title && (
+                  <h2 className="nk-section-title text-lg font-semibold text-foreground">
+                    {title}
+                  </h2>
+                )}
+                {showCloseButton && (
+                  <button
+                    onClick={onClose}
+                    className="rounded-lg p-2 text-muted-foreground transition hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                    aria-label="Close modal"
+                  >
+                    <X className="h-5 w-5" />
+                  </button>
+                )}
+              </div>
+            )}
+
+            <div className="px-5 py-5 sm:px-6">{children}</div>
+          </div>
         </div>
       </div>
-    </div>
+    </Portal>
   );
 };
 

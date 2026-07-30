@@ -99,7 +99,10 @@ export const useCartStore = create<CartState>((set, get) => {
         const updated = state.cart.items.filter(
           (item) => !ids.includes(item.id)
         );
-        return { cart: computeCart(updated) };
+        return {
+          cart: computeCart(updated),
+          selectedIds: state.selectedIds.filter((id) => !ids.includes(id)),
+        };
       }),
 
     selectedIds: [],

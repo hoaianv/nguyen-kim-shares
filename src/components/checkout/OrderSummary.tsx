@@ -43,8 +43,16 @@ const OrderSummary = ({ payload }: { payload: IPayloadOrder }) => {
     const selectedSet = new Set(selectedIds);
     return cart.items.filter((i) => selectedSet.has(i.id));
   }, [cart.items, selectedIds]);
+  const hasSelectedItems = items.length > 0;
 
   const handleOrder = (data: IPayloadOrder) => {
+    if (!hasSelectedItems) {
+      toast.warning("Hãy chọn ít nhất 1 sản phẩm trước khi thanh toán.", {
+        position: "top-center",
+      });
+      return;
+    }
+
     startTransition(async () => {
       try {
         setLoading(true);
@@ -241,16 +249,22 @@ const OrderSummary = ({ payload }: { payload: IPayloadOrder }) => {
         </div>
       </div>
 
-      <Button
-        onClick={() => handleOrder(payload)}
-        fullWidth
-        variant="primary"
-        size="md"
-        className="mt-4 py-3 text-sm sm:py-4 sm:text-base"
-        disabled={loading}
-      >
-        THANH TOÁN
-      </Button>
+        <Button
+          onClick={() => handleOrder(payload)}
+          fullWidth
+          variant="primary"
+          size="md"
+          className="mt-4 py-3 text-sm sm:py-4 sm:text-base"
+          disabled={loading || !hasSelectedItems}
+        >
+          THANH TOÁN
+        </Button>
+
+      {!hasSelectedItems ? (
+        <p className="mt-3 text-xs leading-relaxed text-amber-700">
+          Hãy chọn ít nhất 1 sản phẩm trong giỏ hàng để tiếp tục thanh toán.
+        </p>
+      ) : null}
 
       <p className="mt-4 text-xs leading-relaxed text-slate-500">
         Nhấn Thanh toán đồng nghĩa với việc bạn đã đọc và đồng ý tuân theo{" "}
