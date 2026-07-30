@@ -108,7 +108,7 @@ export default function ContentCart() {
                     Giỏ hàng trống.
                   </p>
                 ) : (
-                  <div className="divide-y divide-gray-100">
+                  <div className="divide-y divide-gray-100 md:max-h-[calc(100vh-340px)] md:overflow-y-auto md:pr-1 scrollbar-thin scrollbar-track-gray-100 scrollbar-thumb-gray-300 hover:scrollbar-thumb-gray-400">
                     {cart.items.map((item) => (
                       <CardCart key={item.id} id={item.id} />
                     ))}

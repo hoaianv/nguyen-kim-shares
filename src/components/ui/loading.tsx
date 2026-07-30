@@ -43,7 +43,7 @@ const Loading: React.FC<LoadingProps> = ({
   const renderSpinner = () => (
     <div className="relative flex items-center justify-center">
       <div
-        className={`${getSizeClasses()} animate-spin rounded-lg border-4 border-border border-t-amber-500`}
+        className={`${getSizeClasses()} animate-spin rounded-full border-4 border-border border-t-amber-500`}
         role="status"
         aria-label="Loading"
       />
