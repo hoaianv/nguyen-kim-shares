@@ -35,7 +35,7 @@ export default function ContentCart() {
   const router = useRouter();
 
   const invoiceTableHeaders = [
-    { id: 1, text: "Sản phẩm" },
+    { id: 1, text: "Chọn tất cả" },
     { id: 2, text: "Mô tả" },
     { id: 3, text: "Giá" },
     { id: 4, text: "Số lượng" },
@@ -73,21 +73,35 @@ export default function ContentCart() {
             <div className="rounded-lg bg-white">
               <div className="hidden rounded-t-md border-y border-gray-200 bg-gray-50 md:block">
                 <div className="grid grid-cols-[120px_minmax(0,2fr)_minmax(140px,1fr)_120px_140px_56px] gap-3 px-4 py-3">
-                  {invoiceTableHeaders.map((item, index) => (
-                    <div
-                      key={item.id}
-                      className={`flex items-center ${index === 0 ? "justify-start" : "justify-center"
-                        }`}
-                    >
-                      <span className="text-sm font-medium text-gray-700">
-                        {item.text}
-                      </span>
-                    </div>
-                  ))}
+                  {invoiceTableHeaders.map((item) =>
+                    item.id === 1 ? (
+                      <div key={item.id} className="flex items-center gap-2">
+                        <CheckboxField
+                          id="checkbox-all-desktop"
+                          checked={isAllSelected}
+                          onChange={() =>
+                            isAllSelected ? clearSelected() : selectAll()
+                          }
+                        />
+                        <span className="text-sm font-medium text-gray-700">
+                          {item.text}
+                        </span>
+                      </div>
+                    ) : (
+                      <div
+                        key={item.id}
+                        className="flex items-center justify-center"
+                      >
+                        <span className="text-sm font-medium text-gray-700">
+                          {item.text}
+                        </span>
+                      </div>
+                    )
+                  )}
                 </div>
               </div>
 
-              <div className="md:hidden rounded-t-md border-b border-gray-200 bg-gray-50 px-3 py-3">
+              <div className="rounded-t-md border-b border-gray-200 bg-gray-50 px-3 py-3 md:hidden">
                 <div className="flex items-center gap-2">
                   <CheckboxField
                     id="checkbox-all-mobile"
@@ -118,7 +132,7 @@ export default function ContentCart() {
             </div>
           </div>
 
-          <div className="lg:col-span-4 space-y-4">
+          <div className="space-y-4 lg:col-span-4">
             <div className="rounded-lg bg-white p-3 sm:p-4">
               <div className="mb-3 flex items-center justify-between">
                 <span className="text-sm font-semibold sm:text-base">
@@ -134,24 +148,24 @@ export default function ContentCart() {
               </div>
 
               {couponActive &&
-                quote?.coupon?.some((c) => c.id === couponActive.id) &&
-                couponActive.couponDes?.length
+              quote?.coupon?.some((c) => c.id === couponActive.id) &&
+              couponActive.couponDes?.length
                 ? couponActive.couponDes.map(
-                  (i) =>
-                    i.code === couponCode && (
-                      <CouponCard
-                        key={i.id}
-                        coupon={couponActive}
-                        des={i}
-                        isSelected
-                        onToggle={() => {
-                          setCouponCode("");
-                          setCouponActive(null);
-                        }}
-                        removable
-                      />
-                    )
-                )
+                    (i) =>
+                      i.code === couponCode && (
+                        <CouponCard
+                          key={i.id}
+                          coupon={couponActive}
+                          des={i}
+                          isSelected
+                          onToggle={() => {
+                            setCouponCode("");
+                            setCouponActive(null);
+                          }}
+                          removable
+                        />
+                      )
+                  )
                 : null}
 
               {(quote?.coupon?.length ?? 0) === 0 ? (
@@ -176,9 +190,7 @@ export default function ContentCart() {
                             des={i}
                             isSelected={i.code === couponCode}
                             onToggle={() => {
-                              setCouponCode(
-                                i.code === couponCode ? "" : i.code
-                              );
+                              setCouponCode(i.code === couponCode ? "" : i.code);
                               setCouponActive(
                                 i.code === couponCode ? null : item
                               );
@@ -246,7 +258,7 @@ export default function ContentCart() {
                 <div className="flex items-center gap-1 pt-3">
                   <button
                     onClick={() => router.push("/san-pham")}
-                    className="w-full cursor-pointer font-bold rounded-lg border border-amber-300 px-4 py-2.5 text-center text-xs   text-amber-800 transition-colors duration-200 sm:py-2 sm:text-sm"
+                    className="w-full cursor-pointer rounded-lg border border-amber-300 px-4 py-2.5 text-center text-xs font-bold text-amber-800 transition-colors duration-200 sm:py-2 sm:text-sm"
                   >
                     Tiếp tục mua sắm
                   </button>
