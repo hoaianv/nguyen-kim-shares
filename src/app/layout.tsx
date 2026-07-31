@@ -59,24 +59,22 @@ export default async function RootLayout({
     footerSections,
     companyAddresses,
     menu,
-  ] =
-    await Promise.all([
-      getMe(),
-      getAllCart(),
-      getAllAdvertise(),
-      getAllSupport(),
-      getAllConfig(),
-      getAllFooterSections(),
-      getAllCompanyAddresses(),
-      getAllMenu(),
-    ]);
+  ] = await Promise.all([
+    getMe(),
+    getAllCart(),
+    getAllAdvertise(),
+    getAllSupport(),
+    getAllConfig(),
+    getAllFooterSections(),
+    getAllCompanyAddresses(),
+    getAllMenu(),
+  ]);
 
   return (
     <html lang="vi" suppressHydrationWarning>
       <head>
         {/* Google Tag Manager */}
         <GTMScript />
-
 
         <meta name="google" content="notranslate" />
       </head>

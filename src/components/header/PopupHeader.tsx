@@ -224,7 +224,7 @@ export function ContactPopup() {
       initial={{ opacity: 0, y: 12, scale: 0.98 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ duration: 0.22, ease: "easeOut" }}
-      className="w-[320px] border border-border bg-popover p-3 text-popover-foreground shadow-[0_24px_70px_-34px_rgba(15,23,42,0.45)] sm:w-[520px] lg:w-[620px]"
+      className="w-[min(320px,calc(100vw-2rem))] text-slate-900 sm:w-[520px] lg:w-[620px]"
     >
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
         {Object.entries(support).map(([group, members], groupIndex) => (
@@ -233,47 +233,46 @@ export function ContactPopup() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: groupIndex * 0.05 }}
-            className="border border-border bg-background p-3"
+            className="rounded-lg bg-white p-4 shadow-[0_10px_24px_-18px_rgba(15,23,42,0.28)]"
           >
-            <h4 className="mb-2 text-sm font-semibold text-foreground">
+            <h4 className="mb-4 flex items-center gap-2 text-sm font-bold text-slate-950">
+              <span
+                aria-hidden="true"
+                className="h-4 w-1 shrink-0 rounded-full bg-brand"
+              />
               {group}
             </h4>
-            <ul className="space-y-2">
+            <ul className="space-y-6">
               {members.map((m) => (
-                <motion.li
-                  key={m.id}
-                  whileHover={{ x: 2 }}
-                  transition={{ type: "spring", stiffness: 220, damping: 20 }}
-                  className="border border-border px-2 py-2 transition hover:bg-muted/50"
-                >
-                  <div className="text-sm font-medium text-foreground">
+                <li key={m.id} className="flex flex-col text-sm">
+                  <div className="order-1 text-[11px] font-medium uppercase tracking-wide text-slate-500">
                     {m.title}
                   </div>
-                  <div className="mt-1 flex items-center text-muted-foreground">
+                  <div className="order-2 mt-1 flex items-center gap-1.5 text-xs text-slate-600 sm:order-3 sm:mt-1.5">
                     <Mail
                       size={14}
-                      className="mr-1 flex-shrink-0 text-[#e6a414]"
+                      className="shrink-0 text-brand-deep"
                     />
                     <a
                       href={`mailto:${m.email}`}
-                      className="truncate text-xs transition hover:underline md:text-sm"
+                      className="truncate transition hover:text-brand-strong hover:underline"
                     >
                       {m.email}
                     </a>
                   </div>
-                  <div className="mt-1 flex items-center text-muted-foreground">
+                  <div className="order-3 mt-3 flex items-center gap-2 rounded-md bg-slate-50 px-3 py-2 sm:order-2 sm:mt-1.5 sm:bg-transparent sm:p-0">
                     <Phone
-                      size={14}
-                      className="mr-1 flex-shrink-0 text-emerald-600"
+                      size={16}
+                      className="shrink-0 text-brand-deep"
                     />
                     <a
                       href={`tel:${m.phone}`}
-                      className="text-xs transition hover:underline md:text-sm"
+                      className="text-base font-bold tracking-wide text-slate-950 transition hover:text-brand-strong hover:underline"
                     >
                       {m.phone}
                     </a>
                   </div>
-                </motion.li>
+                </li>
               ))}
             </ul>
           </motion.div>

@@ -119,18 +119,18 @@ export default function Footer() {
   return (
     <footer className="border-t border-slate-200 bg-white text-slate-900">
       <section>
-        <div className="mx-auto grid w-full max-w-[1520px] gap-6 px-3 py-5 sm:grid-cols-2 sm:px-4 lg:grid-cols-4 lg:px-6">
+        <div className="mx-auto grid w-full max-w-[1520px] gap-7 px-3 py-6 sm:grid-cols-2 sm:px-4 lg:grid-cols-4 lg:px-6">
           {serviceItems.map((item) => {
             const Icon = item.icon;
 
             return (
-              <div key={item.title} className="flex items-center gap-3">
-                <Icon className="h-7 w-7 shrink-0 text-brand-hover" />
+              <div key={item.title} className="flex items-center gap-4">
+                <Icon className="h-8 w-8 shrink-0 text-brand-hover sm:h-9 sm:w-9" />
                 <div>
-                  <p className="text-sm font-bold uppercase text-slate-950">
+                  <p className="text-base font-bold uppercase leading-tight text-slate-950">
                     {item.title}
                   </p>
-                  <p className="mt-0.5 text-sm text-slate-500">
+                  <p className="mt-1 text-sm leading-5 text-slate-500">
                     {item.description}
                   </p>
                 </div>

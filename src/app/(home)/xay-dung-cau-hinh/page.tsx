@@ -11,14 +11,14 @@ const Configuration = dynamic(
   () => import("@/components/buildPc/configuration"),
   {
     loading: () => <SkeletonLoader height="h-48" />,
-  }
+  },
 );
 
 const TotalConfiguration = dynamic(
   () => import("@/components/buildPc/TotalConfiguration"),
   {
     loading: () => <SkeletonLoader height="h-48" />,
-  }
+  },
 );
 export default async function page() {
   const response = await getAll();
@@ -26,7 +26,7 @@ export default async function page() {
 
   return data ? (
     <div
-      className="mt-3 mx-auto h-full w-full max-w-7xl 2xl:max-w-[1520px]
+      className="pt-3 mx-auto h-full w-full max-w-7xl 2xl:max-w-[1520px]
 px-4 sm:px-6 lg:px-8 xl:px-16 2xl:px-20
 "
     >

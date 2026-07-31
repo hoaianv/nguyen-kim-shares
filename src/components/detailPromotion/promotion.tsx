@@ -1,7 +1,6 @@
 import { getSchema } from "@/apis/models/promotion.apis";
 import Schema from "@/components/detailPromotion/schema";
 import Breadcrumb from "@/components/ui/breadcrumb";
-import { classPost } from "@/constants";
 import { ESlug, SlugData } from "@/interfaces/models/ISlug.interface";
 import { getValidData } from "@/lib/utils";
 import { Calendar, Eye } from "lucide-react";
