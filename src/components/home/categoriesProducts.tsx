@@ -31,7 +31,7 @@ const CategoriesProductsSection = ({
   const t = useTranslations();
   const needs = item.customerNeeds ?? [];
   const [activeNeedId, setActiveNeedId] = useState<number | null>(
-    needs[0]?.id ?? null
+    needs[0]?.id ?? null,
   );
 
   useEffect(() => {
@@ -43,9 +43,6 @@ const CategoriesProductsSection = ({
 
   if (!needs.length || !activeNeed) return null;
 
-  const categoryDescription =
-    item.description ?? item.desciption ?? activeNeed.description;
-
   return (
     <motion.section
       className="mx-auto mt-3 w-full max-w-[1520px] px-3 sm:px-4 lg:px-6"
@@ -55,24 +52,39 @@ const CategoriesProductsSection = ({
       transition={{ duration: 0.32, ease: "easeOut" }}
     >
       <div className="overflow-hidden rounded-md bg-[#f5efff] shadow-sm ring-1 ring-white/60">
-        <div className="border-b border-white/80 bg-white/70 ">
+        <div className=" bg-white/70 ">
           <div className="overflow-x-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 hover:scrollbar-thumb-gray-400">
             <div className="grid min-w-max grid-flow-col auto-cols-[minmax(140px,1fr)] lg:min-w-0 lg:auto-cols-fr">
               {needs.map((need: ICategoryCustomerNeed) => {
                 const isActive = need.id === activeNeed.id;
+
+                const itemColor = item?.color
+                  ? `#${item.color.replace(/^#/, "")}`
+                  : "#f5efff";
 
                 return (
                   <button
                     key={need.id}
                     type="button"
                     onClick={() => setActiveNeedId(need.id)}
-                    className={`relative flex h-11 items-center justify-center  px-4 text-sm font-semibold transition ${isActive
-                      ? "bg-amber-50 text-[#e33b2f] shadow-[0_6px_18px_rgba(15,23,42,0.06)] ring-1 ring-white/70"
-                      : "bg-white/85 text-[#ea6158] hover:bg-amber-50 hover:text-[#e33b2f]"
-                      }`}
+                    style={
+                      {
+                        "--item-color": itemColor,
+                      } as React.CSSProperties
+                    }
+                    className={`
+        relative flex h-11 items-center justify-center px-4
+        text-sm font-semibold
+        transition-colors duration-200
+        ${isActive
+                        ? "bg-[var(--item-color)] text-white shadow-[0_6px_18px_rgba(15,23,42,0.06)] ring-1 ring-white/70"
+                        : "bg-white/85 text-[#ea6158] hover:bg-[var(--item-color)] hover:text-white"
+                      }
+      `}
                   >
-                    <span className="truncate text-base font-bold">{need.title}</span>
-
+                    <span className="truncate text-base font-bold">
+                      {need.title}
+                    </span>
                   </button>
                 );
               })}
@@ -90,7 +102,14 @@ const CategoriesProductsSection = ({
           </div> */}
         </div>
 
-        <div className="grid items-center gap-3 p-3 sm:p-4 bg-amber-50 lg:grid-cols-[220px_minmax(0,1fr)] xl:grid-cols-[230px_minmax(0,1fr)]">
+        <div
+          style={{
+            backgroundColor: item?.color
+              ? `#${item.color.replace(/^#/, "")}`
+              : "#f5efff",
+          }}
+          className="grid items-center gap-3 p-3 sm:p-4 lg:grid-cols-[220px_minmax(0,1fr)] xl:grid-cols-[230px_minmax(0,1fr)]"
+        >
           <Link
             href={item.url || "#"}
             className="group relative hidden min-h-[408px] overflow-hidden rounded-md  bg-slate-950 lg:block lg:self-center h-full"
@@ -102,7 +121,6 @@ const CategoriesProductsSection = ({
               sizes="230px"
               className="object-cover h-full opacity-95 transition duration-300 group-hover:scale-[1.03]"
             />
-
           </Link>
 
           <div className="min-w-0 lg:self-center">

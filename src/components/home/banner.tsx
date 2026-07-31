@@ -218,18 +218,7 @@ export default function Banner() {
                     {item.title}
                   </span>
 
-                  {item.description && (
-                    <span
-                      className={[
-                        "mt-0.5 w-full truncate text-xs leading-5 sm:text-sm",
-                        isActive
-                          ? "font-semibold text-slate-800"
-                          : "font-normal text-slate-500",
-                      ].join(" ")}
-                    >
-                      {item.description}
-                    </span>
-                  )}
+
 
                   <span
                     className={[

@@ -9,11 +9,12 @@ export interface ICategory {
   picture: string;
   banner: string;
   description?: string | null;
-  desciption?: string | null;
   url: string;
   children?: ICategory[];
 }
-
+export interface ICategoryExtended extends ICategory {
+ color:  string;
+}
 export interface ICategoryMeta {
   title: string;
   description: string;
@@ -91,7 +92,7 @@ export interface ICategoryCustomerNeed extends ICustomerNeeds {
   items: IProduct[];
 }
 
-export interface ICategoriesProducts extends ICategory {
+export interface ICategoriesProducts extends ICategoryExtended {
   customerNeeds?: ICategoryCustomerNeed[];
 }
 
