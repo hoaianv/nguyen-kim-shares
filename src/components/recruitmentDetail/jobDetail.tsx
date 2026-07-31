@@ -46,21 +46,21 @@ export default function JobDetail({ data, relatedJobs }: JobDetailProps) {
     <>
       <div className="min-h-screen bg-muted/30 bg-gray-50">
         {/* Main Content */}
-        <main className="container mx-auto px-4 py-8">
-          <div className="grid lg:grid-cols-3 gap-6">
+        <main className="container mx-auto max-w-full px-4 py-8">
+          <div className="grid min-w-0 gap-6 lg:grid-cols-3">
             {/* Left Column - Main Content */}
-            <div className="lg:col-span-2 space-y-6">
+            <div className="min-w-0 space-y-6 lg:col-span-2">
               {/* Job Header Card */}
-              <Card className="border-none shadow-sm bg-white min-h-[220px] sm:min-h-[240px] md:min-h-[260px] lg:min-h-[280px]">
-                <CardContent className="p-4 sm:p-4 h-full flex flex-col justify-center">
-                  <div className="space-y-4">
-                    <div>
-                      <h1 className="text-3xl font-bold text-balance mb-2 text-[#1435C3]">
+              <Card className="min-w-0 max-w-full border-none bg-white shadow-sm min-h-[220px] sm:min-h-[240px] md:min-h-[260px] lg:min-h-[280px]">
+                <CardContent className="flex h-full min-w-0 flex-col justify-center p-4 sm:p-4">
+                  <div className="min-w-0 space-y-4">
+                    <div className="min-w-0">
+                      <h1 className="mb-2 break-words text-3xl font-bold text-balance text-[#1435C3]">
                         {job?.name}
                       </h1>
                     </div>
 
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-3 bg-gradient-to-br from-[#eab108]/10 to-[#d4a006]/5 p-4 rounded-lg border border-[#eab108]/20">
+                    <div className="grid min-w-0 grid-cols-2 gap-3 rounded-lg border border-[#eab108]/20 bg-gradient-to-br from-[#eab108]/10 to-[#d4a006]/5 p-4 md:grid-cols-3">
                       <div>
                         <div className="text-xs text-muted-foreground mb-1 text-gray-500">
                           Mức lương
@@ -117,28 +117,28 @@ export default function JobDetail({ data, relatedJobs }: JobDetailProps) {
                       </div>
                     </div>
 
-                    <div className="flex items-center gap-1.5 text-sm text-gray-600">
-                      <MapPin className="h-4 w-4 text-muted-foreground" />
-                      <span>{job?.address}</span>
+                    <div className="flex min-w-0 items-center gap-1.5 text-sm text-gray-600">
+                      <MapPin className="h-4 w-4 shrink-0 text-muted-foreground" />
+                      <span className="min-w-0 break-words">{job?.address}</span>
                     </div>
 
-                    <div className="flex gap-3 pt-2 flex-wrap items-center">
+                    <div className="flex min-w-0 flex-wrap items-center gap-3 pt-2">
                       <Button
                         onClick={() => setOpen(true)}
-                        className="flex-1 sm:flex-none h-10 px-6 bg-gradient-to-r from-[#FFD500] to-[#F59E0B] hover:from-[#F59E0B] hover:to-[#D97706] text-white border-none font-medium shadow-sm transition-all"
+                        className="h-10 min-w-0 flex-1 border-none bg-gradient-to-r from-[#FFD500] to-[#F59E0B] px-6 font-medium text-white shadow-sm transition-all hover:from-[#F59E0B] hover:to-[#D97706] sm:flex-none"
                       >
                         Ứng tuyển ngay
                       </Button>
 
-                      <DownloadDoc className="h-10 px-6 flex-1 sm:flex-none" />
+                      <DownloadDoc className="h-10 min-w-0 flex-1 px-6 sm:flex-none" />
                     </div>
                   </div>
                 </CardContent>
               </Card>
 
               {/* Job Description */}
-              <Card className="border-none shadow-sm bg-white">
-                <CardContent className="p-4 sm:p-4 space-y-6">
+              <Card className="min-w-0 max-w-full border-none bg-white shadow-sm">
+                <CardContent className="min-w-0 space-y-6 p-4 sm:p-4">
                   <section>
                     <h2 className="text-xl font-semibold mb-3 text-[#1435C3]">
                       Chi tiết công việc
@@ -156,7 +156,7 @@ export default function JobDetail({ data, relatedJobs }: JobDetailProps) {
                     <h2 className="text-xl font-semibold mb-4 text-[#1435C3]">
                       Thông tin tóm tắt
                     </h2>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div className="grid min-w-0 grid-cols-1 gap-4 sm:grid-cols-2">
                       <div className="flex items-start gap-3">
                         <TrendingUp className="h-5 w-5 text-[#1435C3] flex-shrink-0 mt-0.5" />
                         <div>
@@ -217,9 +217,9 @@ export default function JobDetail({ data, relatedJobs }: JobDetailProps) {
             </div>
 
             {/* Right Column - Sidebar */}
-            <div className="space-y-6">
+            <div className="min-w-0 space-y-6">
               {/* Company Card */}
-              <Card className="border-none shadow-sm bg-white overflow-hidden min-h-[220px] sm:min-h-[240px] md:min-h-[260px] lg:min-h-[280px]">
+              <Card className="min-w-0 max-w-full overflow-hidden border-none bg-white shadow-sm min-h-[220px] sm:min-h-[240px] md:min-h-[260px] lg:min-h-[280px]">
                 {/* Banner Background */}
                 <div className="h-24 relative overflow-hidden bg-gray-100">
                   <Image
@@ -231,7 +231,7 @@ export default function JobDetail({ data, relatedJobs }: JobDetailProps) {
                   <div className="absolute inset-0 bg-slate-950/10" />
                 </div>
 
-                <CardContent className="p-6 pt-0 relative h-full flex flex-col justify-center items-center">
+                <CardContent className="relative flex h-full min-w-0 flex-col items-center justify-center p-6 pt-0">
                   {/* Logo Centered & Overlapping */}
                   <div className="flex justify-center -mt-12 mb-4">
                     <div className="h-24 w-24 rounded-xl bg-white border shadow-sm flex items-center justify-center p-2 relative z-10">
@@ -251,12 +251,12 @@ export default function JobDetail({ data, relatedJobs }: JobDetailProps) {
                   </div>
 
                   {/* Company Info */}
-                  <div className="text-center space-y-3">
-                    <h3 className="font-bold text-lg text-gray-900">
+                  <div className="min-w-0 space-y-3 text-center">
+                    <h3 className="break-words text-lg font-bold text-gray-900">
                       Công ty TNHH Vi tính Nguyên Kim
                     </h3>
 
-                    <div className="flex items-start justify-center gap-3 text-sm text-gray-600">
+                    <div className="flex min-w-0 items-start justify-center gap-3 text-sm text-gray-600">
                       <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0 text-gray-400" />
                       <div className="text-left leading-relaxed whitespace-nowrap overflow-x-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 hover:scrollbar-thumb-gray-400">
                         245B Trần Quang Khải, Phường Tân Định, TP. Hồ Chí Minh
@@ -277,8 +277,8 @@ export default function JobDetail({ data, relatedJobs }: JobDetailProps) {
 
               {/* Similar Jobs */}
               {relatedJobs?.length > 0 && (
-                <Card className="border-none shadow-sm bg-white">
-                  <CardContent className="p-4 sm:p-4 space-y-4">
+                <Card className="min-w-0 max-w-full border-none bg-white shadow-sm">
+                  <CardContent className="min-w-0 space-y-4 p-4 sm:p-4">
                     <h3 className="font-semibold">Việc làm liên quan</h3>
 
                     <div className="space-y-3">
@@ -286,9 +286,9 @@ export default function JobDetail({ data, relatedJobs }: JobDetailProps) {
                         <Link
                           key={item.id}
                           href={`/tuyen-dung/${item.slug}`}
-                          className="block border border-gray-200 rounded-lg bg-white p-3 hover:shadow-sm transition-shadow"
+                          className="block min-w-0 rounded-lg border border-gray-200 bg-white p-3 transition-shadow hover:shadow-sm"
                         >
-                          <div className="flex items-start justify-between gap-3">
+                          <div className="flex min-w-0 items-start justify-between gap-3">
                             <div className="flex-1 min-w-0">
                               <h4 className="font-medium text-sm text-[#1435C3] mb-1 truncate">
                                 {item.name}

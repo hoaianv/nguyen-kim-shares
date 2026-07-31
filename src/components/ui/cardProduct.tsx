@@ -155,7 +155,7 @@ const CardProduct = ({ item }: { item: IProduct }) => {
               {item.name}
             </h3>
           </Link>
-          <div className="flex items-end justify-between gap-3">
+          <div className="flex items-end justify-between gap-3 min-h-12">
             <div className="min-w-0">
               <div className="text-base font-semibold tracking-tight text-rose-600 md:text-[1.05rem]">
                 {getPrice(item)}
@@ -169,33 +169,7 @@ const CardProduct = ({ item }: { item: IProduct }) => {
 
 
           </div>
-          {item?.technology && item?.technology?.length > 0 && (
-            <div className="mt-3  min-h-[140px]  rounded-sm  ">
-              <div className=" bg-[#ECECEC]  h-fit space-y-1.5 p-1">
 
-                {item.technology.slice(0, 3).map((spec) => (
-                  <div
-                    key={spec.id}
-                    className="grid grid-cols-[90px_minmax(0,1fr)] gap-x-1 text-xs leading-5"
-                  >
-                    {/* Title */}
-                    <span className="font-semibold text-foreground">
-                      {spec.title}:
-                    </span>
-
-                    {/* Description */}
-                    <span
-                      className="line-clamp-2 min-w-0 text-muted-foreground [&_p]:m-0 [&_p]:inline [&_div]:inline [&_br]:hidden"
-                      dangerouslySetInnerHTML={{
-                        __html: spec.description ?? "",
-                      }}
-                    />
-                  </div>
-                ))}
-
-              </div>
-            </div>
-          )}
 
           <div className="mt-auto space-y-2 border-t border-border pt-3">
 
