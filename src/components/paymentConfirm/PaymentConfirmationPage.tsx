@@ -356,7 +356,7 @@ export default function PaymentConfirmationPage({
             </h2>
           </div>
           <div className="flex flex-col p-5 sm:p-6 lg:min-h-0 lg:flex-1">
-            <div className="max-h-[420px] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-slate-300 scrollbar-track-transparent hover:scrollbar-thumb-slate-400 lg:min-h-0 lg:max-h-none lg:flex-1">
+            <div className="max-h-[420px] overflow-y-auto pr-2 lg:min-h-0 lg:max-h-none lg:flex-1">
               {data.items?.length ? (
               <div className="space-y-4">
                 {data.items.map((item, index) => (
