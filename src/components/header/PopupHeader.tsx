@@ -233,7 +233,7 @@ export function ContactPopup() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: groupIndex * 0.05 }}
-            className="rounded-lg bg-white p-4 shadow-[0_10px_24px_-18px_rgba(15,23,42,0.28)]"
+            className="rounded-lg bg-white p-4 shadow-2xl border border-gray-100"
           >
             <h4 className="mb-4 flex items-center gap-2 text-sm font-bold text-slate-950">
               <span
@@ -245,7 +245,7 @@ export function ContactPopup() {
             <ul className="space-y-6">
               {members.map((m) => (
                 <li key={m.id} className="flex flex-col text-sm">
-                  <div className="order-1 text-[11px] font-medium uppercase tracking-wide text-slate-500">
+                  <div className="order-1 text-sm font-bold uppercase tracking-wide text-slate-500">
                     {m.title}
                   </div>
                   <div className="order-2 mt-1 flex items-center gap-1.5 text-xs text-slate-600 sm:order-3 sm:mt-1.5">

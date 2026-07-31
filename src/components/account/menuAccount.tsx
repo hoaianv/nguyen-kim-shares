@@ -13,7 +13,7 @@ export default function MenuAccount() {
 
   return (
     <aside
-      className="h-fit rounded-[28px] border border-slate-200/80 bg-white/90 p-3 shadow-sm ring-1 ring-white/60 backdrop-blur"
+      className="h-fit rounded-md border border-slate-200/80 bg-white/90 p-3 shadow-sm ring-1 ring-white/60 backdrop-blur"
       aria-label={t("ACCOUNT.account_overview")}
     >
       <div className="p-3 pb-2">
@@ -26,7 +26,7 @@ export default function MenuAccount() {
       </div>
 
       <nav className="px-1 pb-2">
-        <ul className="overflow-hidden rounded-[24px] border border-slate-200/80 bg-slate-50/70">
+        <ul className="overflow-hidden rounded-md border border-slate-200/80 bg-slate-50/70">
           {ACCOUNT_LINKS.map((item) => {
             const Icon = ICONS[item.icon];
             const isActive = pathname === item.href;
@@ -57,7 +57,7 @@ export default function MenuAccount() {
       </nav>
 
       <div className="px-1 pb-1">
-        <div className="mt-3 overflow-hidden rounded-[24px] border border-rose-200/80 bg-rose-50/60">
+        <div className="mt-3 overflow-hidden rounded-md border border-rose-200/80 bg-rose-50/60">
           <ButtonLogout
             className={[
               "group flex w-full items-center gap-3 px-4 py-3 text-sm",

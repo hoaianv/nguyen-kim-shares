@@ -155,13 +155,13 @@ const CardProduct = ({ item }: { item: IProduct }) => {
               {item.name}
             </h3>
           </Link>
-          <div className="flex items-end justify-between gap-3 min-h-12">
-            <div className="min-w-0">
-              <div className="text-base font-semibold tracking-tight text-rose-600 md:text-[1.05rem]">
+          <div className="flex items-center justify-center gap-3 min-h-12">
+            <div className="min-w-0 flex items-center gap-2 justify-center">
+              <div className="text-base font-bold tracking-tight text-rose-600 md:text-[1.05rem]">
                 {getPrice(item)}
               </div>
               {getMarketPrice(item) ? (
-                <s className="text-xs text-muted-foreground">
+                <s className="text-xs text-muted-foreground font-bold">
                   {getMarketPrice(item)}
                 </s>
               ) : null}
@@ -187,7 +187,7 @@ const CardProduct = ({ item }: { item: IProduct }) => {
                     ]);
                     cartToast(res, router);
                   }}
-                  className={`inline-flex h-11 w-fit  px-4 items-center justify-center gap-2 rounded-lg border  text-sm font-semibold transition ${item.isInStock
+                  className={`inline-flex h-10 w-fit  px-4 items-center justify-center gap-2 rounded-lg border  text-sm font-semibold transition ${item.isInStock
                     ? "border-amber-300   text-amber-800 hover:bg-amber-100"
                     : "cursor-not-allowed border-border bg-muted/50 text-muted-foreground"
                     }`}
@@ -198,7 +198,7 @@ const CardProduct = ({ item }: { item: IProduct }) => {
                 <button
                   type="button"
                   onClick={buyNow(item)}
-                  className={`inline-flex h-11 flex-1 items-center justify-center gap-2 rounded-lg border px-3 text-sm font-semibold transition ${item.isInStock
+                  className={`inline-flex h-10 flex-1 items-center justify-center gap-2 rounded-lg border px-3 text-sm font-semibold transition ${item.isInStock
                     ? "border-amber-300 bg-[#ffb716] text-white hover:bg-amber-100"
                     : "cursor-not-allowed border-border bg-muted/50 text-muted-foreground"
                     }`}
