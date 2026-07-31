@@ -102,18 +102,7 @@ const CategoriesProductsSection = ({
               sizes="230px"
               className="object-cover h-full opacity-95 transition duration-300 group-hover:scale-[1.03]"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/82 via-slate-950/18 to-transparent" />
-            <div className="absolute inset-x-0 bottom-0 p-4 text-white">
-              <p className="w-fit rounded-full bg-[#ffb716] px-3 py-1 text-xs font-extrabold uppercase text-slate-950">
-                {activeNeed.title}
-              </p>
-              <p className="mt-3 text-2xl font-extrabold leading-tight">
-                {item.title}
-              </p>
-              <p className="mt-2 line-clamp-3 text-sm leading-6 text-white/78">
-                {activeNeed.description || categoryDescription}
-              </p>
-            </div>
+
           </Link>
 
           <div className="min-w-0 lg:self-center">
