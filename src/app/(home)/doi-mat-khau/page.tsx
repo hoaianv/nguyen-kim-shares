@@ -4,7 +4,7 @@ import ChangePasswordForm from "@/components/account/changePasswordForm";
 
 export default function ChangePasswordPage() {
   return (
-    <div className="min-h-0 bg-gradient-to-br from-blue-50 to-indigo-100 flex flex-col">
+    <div className="min-h-0 flex flex-col">
       <div className="container mx-auto px-4 py-8 flex-1 flex flex-col justify-center">
         {/* Main content: 2 cột */}
         <div className="mx-auto max-w-7xl w-full">

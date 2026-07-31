@@ -118,7 +118,7 @@ const RegisterForm = () => {
             position: "top-center",
             action: {
               label: "Đăng nhập",
-              onClick: () => router.push("/login"),
+              onClick: () => router.push("/dang-nhap"),
             },
           });
         } else {
@@ -384,7 +384,7 @@ const RegisterForm = () => {
       {/* Link đăng nhập */}
       <p className="text-center text-sm text-neutral-700">
         Bạn đã có tài khoản?{" "}
-        <Link href="/login" className="text-blue-600 hover:underline">
+        <Link href="/dang-nhap" className="text-blue-600 hover:underline">
           Đăng nhập
         </Link>
       </p>

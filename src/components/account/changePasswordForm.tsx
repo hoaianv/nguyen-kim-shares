@@ -100,7 +100,7 @@ export default function ResetPasswordForm() {
 
           // Redirect to login after success
           setTimeout(() => {
-            router.push("/login");
+            router.push("/dang-nhap");
           }, 3000);
         } else {
           toast.error(response.message || "Có lỗi xảy ra!", {
@@ -183,8 +183,8 @@ export default function ResetPasswordForm() {
           <div className="flex items-center gap-2">
             <span
               className={`w-2 h-2 rounded-full ${emailFromUrl || watchedValues.email
-                  ? "bg-green-500"
-                  : "bg-gray-300"
+                ? "bg-green-500"
+                : "bg-gray-300"
                 }`}
             ></span>
             <span>Email xác thực</span>
@@ -192,8 +192,8 @@ export default function ResetPasswordForm() {
           <div className="flex items-center gap-2">
             <span
               className={`w-2 h-2 rounded-full ${watchedValues.password && watchedValues.password.length >= 6
-                  ? "bg-green-500"
-                  : "bg-gray-300"
+                ? "bg-green-500"
+                : "bg-gray-300"
                 }`}
             ></span>
             <span>Mật khẩu mới (tối thiểu 6 ký tự)</span>
@@ -201,9 +201,9 @@ export default function ResetPasswordForm() {
           <div className="flex items-center gap-2">
             <span
               className={`w-2 h-2 rounded-full ${watchedValues.passwordConfirm &&
-                  watchedValues.password === watchedValues.passwordConfirm
-                  ? "bg-green-500"
-                  : "bg-gray-300"
+                watchedValues.password === watchedValues.passwordConfirm
+                ? "bg-green-500"
+                : "bg-gray-300"
                 }`}
             ></span>
             <span>Xác nhận mật khẩu khớp</span>
@@ -214,7 +214,7 @@ export default function ResetPasswordForm() {
       {/* Back to login link */}
       <div className="text-center">
         <Link
-          href="/login"
+          href="/dang-nhap"
           className="text-blue-600 hover:text-blue-700 inline-flex items-center gap-2 text-sm font-medium underline hover:no-underline transition-colors duration-200"
         >
           <ArrowLeft className="w-4 h-4" />

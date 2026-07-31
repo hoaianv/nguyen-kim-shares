@@ -24,7 +24,7 @@ export function AuthPopup() {
       <div className="-mx-3 -my-2 w-[260px] rounded-lg bg-white p-3">
         <div className="space-y-2">
           <Link
-            href="/login"
+            href="/dang-nhap"
             className="flex h-10 w-full items-center justify-center rounded-md bg-brand px-3 text-sm font-semibold text-slate-950 transition hover:opacity-95"
           >
             Đăng nhập

@@ -32,7 +32,7 @@ export default function Login() {
 
   return (
     <>
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
+      <div className="min-h-screen flex items-center justify-center p-4">
         <div className="w-full max-w-5xl">
           <div className="bg-white rounded-lg shadow-2xl overflow-hidden">
             {/* Mobile và Desktop layout khác nhau */}
@@ -89,7 +89,7 @@ export default function Login() {
                     {/* Register Button */}
                     <Link
                       href="/vai-tro"
-                    className="block w-full rounded-lg bg-[#ffd500] px-4 py-2.5 text-sm font-semibold text-white text-center transition-all duration-200 hover:bg-[#ffd500]/90"
+                      className="block w-full rounded-lg bg-[#ffd500] px-4 py-2.5 text-sm font-semibold text-white text-center transition-all duration-200 hover:bg-[#ffd500]/90"
                     >
                       Đăng ký tài khoản
                     </Link>

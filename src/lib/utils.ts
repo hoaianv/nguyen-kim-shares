@@ -110,13 +110,13 @@ export function cartToast(
       action: {
         label: "Đăng nhập",
         onClick: () => {
-          router?.push("/login");
+          router?.push("/dang-nhap");
         },
       },
     });
 
     setTimeout(() => {
-      router?.push("/login");
+      router?.push("/dang-nhap");
     }, 3000);
 
     return false;

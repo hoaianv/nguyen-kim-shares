@@ -4,7 +4,7 @@ import RegisterForm from "@/components/register/registerForm";
 
 export default function RegisterPage() {
   return (
-    <div className="min-h-0 bg-gradient-to-br from-blue-50 to-indigo-100">
+    <div className="min-h-0 ">
       <div className="container mx-auto px-4 py-8">
         {/* Main content: 2 cột */}
         <div className="mx-auto max-w-7xl">

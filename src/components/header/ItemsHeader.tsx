@@ -64,14 +64,14 @@ export function AuthItem() {
   const { user, authenticated } = useAuthStore();
   const lastName = user?.fullName?.split(" ").pop() ?? "";
   const label =
-    authenticated && user ? `${t("HEADER.hello")} ${lastName}` : "Tài khoản";
+    authenticated && user ? `${lastName}` : "Tài khoản";
 
   return (
     <ItemHeader
       icon={<UserRound size={28} strokeWidth={1.8} />}
-      eyebrow="Đăng nhập/Đăng ký"
+      eyebrow={authenticated && user ? t("HEADER.hello") : 'Đăng nhập/Đăng ký'}
       label={label}
-      href={authenticated ? "/tai-khoan" : "/login"}
+      href={authenticated ? "/tai-khoan" : "/dang-nhap"}
       showAccountCaret
     />
   );

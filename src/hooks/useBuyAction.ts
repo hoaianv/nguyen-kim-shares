@@ -22,7 +22,7 @@ export function useBuyAction(setSelectedIds: (ids: number[]) => void) {
       position: "top-center",
       action: {
         label: "Đăng nhập",
-        onClick: () => router.push("/login?redirect=/thanh-toan"),
+        onClick: () => router.push("/dang-nhap?redirect=/thanh-toan"),
       },
     });
 

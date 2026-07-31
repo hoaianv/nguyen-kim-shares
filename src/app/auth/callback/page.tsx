@@ -19,7 +19,7 @@ export default function CallbackPage() {
 
     if (error) {
       setStatus("error");
-      router.push("/login");
+      router.push("/dang-nhap");
       return;
     }
 
@@ -29,7 +29,7 @@ export default function CallbackPage() {
       router.push("/");
     } else {
       setStatus("error");
-      router.push("/login");
+      router.push("/dang-nhap");
     }
   }, [params, router]);
 

@@ -4,7 +4,7 @@ import { CONST_VALUES } from "@/constants/values.constant";
 import { checkToken } from "@/apis/common/auth.apis";
 import { getValidData } from "@/lib/utils";
 
-const LOGIN = "/login";
+const LOGIN = "/dang-nhap";
 const PROTECTED_BASE = [
   "/tai-khoan",
   "/dat-hang",
@@ -42,7 +42,7 @@ export async function middleware(request: NextRequest) {
   const token = request.cookies.get(CONST_VALUES.TOKEN)?.value;
 
   // Trang đăng nhập
-  if (/^\/login(?:\/|$)/.test(pathname)) {
+  if (/^\/dang-nhap(?:\/|$)/.test(pathname)) {
     if (token) {
       // Verify token trước khi redirect
       const isValid = await isAuthed();
@@ -90,7 +90,7 @@ export async function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    "/login/:path*",
+    "/dang-nhap/:path*",
     "/tai-khoan/:path*",
     "/dat-hang/:path*",
     "/gio-hang/:path*",
