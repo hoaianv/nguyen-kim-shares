@@ -48,11 +48,11 @@ const ScrollTop = () => {
               inline-flex items-center justify-center
               h-11 w-11 sm:h-12 sm:w-12
               rounded-full
-              border border-brand
-              bg-gradient-to-br from-brand to-brand-hover text-brand-deep
-              shadow-[0_14px_30px_-14px_rgba(226,185,10,0.8)]
+              bg-brand text-white
+              shadow-[0_12px_28px_-14px_rgba(122,99,0,0.42)]
               transition-all duration-300
-              hover:brightness-105
+              hover:bg-brand-hover
+              focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2
               touch-manipulation
               select-none
             "

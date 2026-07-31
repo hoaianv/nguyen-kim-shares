@@ -23,7 +23,7 @@ const FooterColumn: React.FC<FooterColumnProps> = ({
     <div className={className}>
       <button
         type="button"
-        className="flex w-full items-center justify-between border-b border-slate-200 py-3 text-left text-sm font-bold uppercase text-slate-950 md:hidden"
+        className="flex w-full items-center justify-between border-b border-slate-200 py-3 text-left text-base font-bold uppercase text-slate-950 md:hidden"
         onClick={() => setIsOpen((v) => !v)}
         aria-expanded={isOpen}
         aria-controls={`${contentId}-mobile`}
@@ -39,7 +39,7 @@ const FooterColumn: React.FC<FooterColumnProps> = ({
         </motion.span>
       </button>
 
-      <h3 className="hidden text-sm font-bold uppercase text-slate-950 md:block">
+      <h3 className="hidden text-base font-bold uppercase leading-tight text-slate-950 md:block">
         {title}
       </h3>
 

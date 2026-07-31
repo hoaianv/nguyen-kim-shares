@@ -2,22 +2,13 @@
 
 import InputSearch from "@/components/ui/inputSearch";
 import Popover from "@/components/ui/Popover";
+import { ContactPopup } from "@/components/header/PopupHeader";
 import { name } from "@/constants/company.constant";
-import { HEADER_ITEMS } from "@/constants";
+import { HEADER_ITEMS, MENU_ITEMS } from "@/constants";
 import { bannerKeys } from "@/constants/values.constant";
 import { useSearchActions } from "@/hooks/useSearchActions";
 import { useStateStore } from "@/stores/stateStore";
-import {
-  CreditCard,
-  FileText,
-  Gift,
-  Menu,
-  PhoneCall,
-  Search,
-  Settings2,
-  ShoppingCart,
-  X,
-} from "lucide-react";
+import { Menu, Search, ShoppingCart, X } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
@@ -32,12 +23,13 @@ const MenuCategories = dynamic(
   },
 );
 
-const utilityLinks = [
-  { label: "Khuyến mãi", href: "/tin-khuyen-mai", icon: Gift },
-  { label: "Trả góp", href: "/chinh-sach", icon: CreditCard },
-  { label: "Chính sách chung", href: "/chinh-sach", icon: FileText },
-  { label: "Xây dựng cấu hình", href: "/xay-dung-cau-hinh", icon: Settings2 },
-  { label: "Thông tin hỗ trợ", href: "/lien-he-gop-y", icon: PhoneCall },
+const utilityLinkValues = [
+  "promotion_news",
+  "pc_builder",
+  "business_solutions",
+  "news",
+  "contact",
+  "careers",
 ];
 
 const hotKeywords = ["PC Gaming", "Laptop", "CPU", "VGA", "RAM", "Mainboard"];
@@ -60,6 +52,9 @@ const Header = () => {
   const headerActions = itemsHeader.filter((item) =>
     ["auth", "cart"].includes(item.value),
   );
+  const utilityLinks = utilityLinkValues
+    .map((value) => MENU_ITEMS.find((item) => item.value === value))
+    .filter((item): item is (typeof MENU_ITEMS)[number] => Boolean(item));
 
   useEffect(() => {
     const mq = window.matchMedia("(min-width: 1024px)");
@@ -169,18 +164,39 @@ const Header = () => {
         }`}
     >
       <div className="bg-brand text-slate-950">
-        <div className="mx-auto flex h-9 max-w-[1370px] items-center justify-start gap-5 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 hover:scrollbar-thumb-gray-400 px-3 text-sm font-medium sm:px-4 lg:justify-center lg:gap-8">
+        <div className="mx-auto flex h-9 max-w-[1370px] items-center justify-start gap-5 overflow-x-auto px-3 text-sm font-medium sm:px-4 lg:justify-center lg:gap-8 lg:overflow-visible">
           {utilityLinks.map((item) => {
             const Icon = item.icon;
+            const triggerClassName =
+              "inline-flex shrink-0 items-center gap-1.5 text-slate-950 transition hover:text-slate-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950/70 focus-visible:ring-offset-2 focus-visible:ring-offset-brand";
+
+            if (item.value === "contact") {
+              return (
+                <Popover
+                  key={item.value}
+                  trigger={
+                    <button type="button" className={triggerClassName}>
+                      <Icon className="h-4 w-4" />
+                      {t(item.labelKey)}
+                    </button>
+                  }
+                  openOn={isDesktop ? "hover" : "click"}
+                  position="bottom"
+                  className="fixed left-1/2 top-12 -translate-x-1/2 border-0 bg-transparent p-0 shadow-none lg:absolute lg:top-full lg:mt-2"
+                >
+                  <ContactPopup />
+                </Popover>
+              );
+            }
 
             return (
               <Link
-                key={item.label}
-                href={item.href}
-                className="inline-flex shrink-0 items-center gap-1.5 text-slate-950/90 transition hover:text-slate-700"
+                key={item.value}
+                href={item.link ?? "#"}
+                className={triggerClassName}
               >
                 <Icon className="h-4 w-4" />
-                {item.label}
+                {t(item.labelKey)}
               </Link>
             );
           })}

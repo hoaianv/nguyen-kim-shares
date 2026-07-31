@@ -1,6 +1,6 @@
 import { findOne } from "@/apis/models/services.apis";
 import Breadcrumb from "@/components/ui/breadcrumb";
-import { classPost } from "@/constants";
+import RichContent from "@/components/ui/RichContent";
 import { Props } from "@/interfaces/common";
 import { getValidData } from "@/lib/utils";
 import { Calendar } from "lucide-react";
@@ -70,9 +70,9 @@ export default async function page({ params, searchParams }: Props) {
             </div>
           </div>
 
-          <div
-            className={classPost}
-            dangerouslySetInnerHTML={{ __html: items?.description }}
+          <RichContent
+            data={items?.description}
+            className="prose prose-sm !max-w-none break-words sm:prose md:prose-lg prose-headings:text-gray-900 prose-p:leading-relaxed prose-p:text-gray-700 prose-img:mx-auto prose-img:w-full prose-img:rounded-lg prose-img:shadow-md prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline"
           />
         </div>
       </article>

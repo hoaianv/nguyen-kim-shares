@@ -297,6 +297,73 @@
   }
 }
 
+.rich-content,
+.rich-content * {
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.rich-content :is(pre, pre *, code, code *) {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+}
+
+.rich-content {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.rich-content .rich-table-scroll {
+  max-width: 100%;
+  margin-block: 1.25rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #9ca3af #f3f4f6;
+}
+
+.rich-content .rich-table-scroll:focus-visible {
+  outline: 2px solid var(--brand-primary-strong);
+  outline-offset: 2px;
+}
+
+.rich-content .rich-table-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.rich-content .rich-table-scroll::-webkit-scrollbar-track {
+  background: #f3f4f6;
+}
+
+.rich-content .rich-table-scroll::-webkit-scrollbar-thumb {
+  border-radius: 9999px;
+  background: #9ca3af;
+}
+
+.rich-content .rich-table-scroll::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+.rich-content .rich-table-scroll > table {
+  margin: 0 !important;
+  border-collapse: collapse !important;
+}
+
+.rich-content .rich-table-scroll :is(th, td) {
+  border: 1px solid #cbd5e1 !important;
+  padding: 0.625rem 0.75rem !important;
+  vertical-align: top;
+}
+
+.rich-content .rich-table-scroll th {
+  background: #f8fafc;
+  color: #0f172a;
+  font-weight: 600;
+  text-align: left;
+}
+
+.rich-content .rich-table-scroll tbody tr:hover {
+  background: #f8fafc;
+}
+
 @layer utilities {
   .font-medium {
     font-weight: 450;

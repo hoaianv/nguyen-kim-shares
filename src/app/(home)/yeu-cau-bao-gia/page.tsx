@@ -3,7 +3,7 @@ import QuoteForm from "@/components/quote/QuoteForm";
 export default async function page() {
   return (
     <div
-      className="mt-3 mx-auto h-full w-full max-w-7xl 2xl:max-w-[1520px]
+      className="pt-3 mx-auto h-full w-full max-w-7xl 2xl:max-w-[1520px]
 px-4 sm:px-6 lg:px-8 xl:px-16 2xl:px-20
 "
     >
@@ -27,4 +27,3 @@ px-4 sm:px-6 lg:px-8 xl:px-16 2xl:px-20
     </div>
   );
 }
-
