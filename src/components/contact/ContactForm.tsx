@@ -1,4 +1,5 @@
 "use client";
+import { i18nText } from "@/lib/i18nText";
 import React, { useTransition } from "react";
 import { useForm, Controller } from "react-hook-form";
 import { z } from "zod";
@@ -16,16 +17,16 @@ import { getValidData } from "@/lib/utils";
 import { create } from "@/apis/models/contact.apis";
 
 const contactSchema = z.object({
-  name: z.string().min(1, "Họ tên là bắt buộc"),
-  email: z.string().email("Email không hợp lệ").optional().or(z.literal("")),
+  name: z.string().min(1, i18nText("AUTO.components.contact.contactform.line19_0_ho_ten_bat_buoc")),
+  email: z.string().email(i18nText("AUTO.components.contact.contactform.line20_1_email_khong_hop_le")).optional().or(z.literal("")),
   address: z.string().optional(),
   phone: z
     .string()
-    .min(8, "Số điện thoại không hợp lệ")
-    .max(15, "Số điện thoại quá dài"),
-  staffId: z.string().min(1, "Vui lòng chọn bộ phận"), // select trả về string
-  subject: z.string().min(1, "Vui lòng nhập tiêu đề liên hệ"),
-  content: z.string().min(1, "Vui lòng nhập nội dung liên hệ"),
+    .min(8, i18nText("AUTO.components.contact.contactform.line24_2_so_dien_thoai_khong_hop"))
+    .max(15, i18nText("AUTO.components.contact.contactform.line25_3_so_dien_thoai_qua_dai")),
+  staffId: z.string().min(1, i18nText("AUTO.components.contact.contactform.line26_4_vui_long_chon_bo_phan")), // select trả về string
+  subject: z.string().min(1, i18nText("AUTO.components.contact.contactform.line27_5_vui_long_nhap_tieu_lien")),
+  content: z.string().min(1, i18nText("AUTO.components.contact.contactform.line28_6_vui_long_nhap_noi_dung")),
 });
 
 type ContactFormData = z.infer<typeof contactSchema>;
@@ -66,19 +67,19 @@ const ContactForm: React.FC<ContactFormProps> = ({ categories }) => {
 
         if (getValidData(response)) {
           toast.success(response.message, {
-            description: "Chúng tôi sẽ phản hồi bạn sớm nhất.",
+            description: i18nText("AUTO.components.contact.contactform.line69_7_chung_toi_se_phan_hoi"),
             position: "top-center",
           });
           reset();
         } else {
           toast.success(response.message, {
-            description: "Có vấn đề trong quá trình gửi tư vấn.",
+            description: i18nText("AUTO.components.contact.contactform.line75_8_van_qua_trinh_gui_tu"),
             position: "top-center",
           });
         }
       } catch (err) {
-        toast.error("Có lỗi xảy ra!", {
-          description: "Vui lòng thử lại sau.",
+        toast.error(i18nText("AUTO.components.contact.contactform.line80_9_loi_xay_ra"), {
+          description: i18nText("AUTO.components.contact.contactform.line81_10_vui_long_thu_lai_sau"),
           position: "top-center",
         });
       } finally {
@@ -94,7 +95,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ categories }) => {
         name="name"
         control={control}
         render={({ field }) => (
-          <InputField {...field} id="name" label="Họ tên" error={errors.name} />
+          <InputField {...field} id="name" label={i18nText("AUTO.components.contact.contactform.line97_11_ho_ten")} error={errors.name} />
         )}
       />
 
@@ -106,7 +107,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ categories }) => {
           <InputField
             {...field}
             id="email"
-            label="Email"
+            label={i18nText("AUTO.components.contact.contactform.extra110_0_email")}
             type="email"
             error={errors.email}
           />
@@ -121,7 +122,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ categories }) => {
           <InputField
             {...field}
             id="address"
-            label="Địa chỉ"
+            label={i18nText("AUTO.components.contact.contactform.line124_12_dia_chi")}
             error={errors.address}
           />
         )}
@@ -135,7 +136,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ categories }) => {
           <InputField
             {...field}
             id="phone"
-            label="Số điện thoại"
+            label={i18nText("AUTO.components.contact.contactform.line138_13_so_dien_thoai")}
             type="tel"
             error={errors.phone}
           />
@@ -157,7 +158,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ categories }) => {
               value: item.id.toString(),
               label: item.title,
             }))}
-            placeholder="Chọn bộ phận"
+            placeholder={i18nText("AUTO.components.contact.contactform.line160_14_chon_bo_phan")}
           />
         )}
       />
@@ -170,7 +171,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ categories }) => {
           <InputField
             {...field}
             id="subject"
-            label="Tiêu đề liên hệ"
+            label={i18nText("AUTO.components.contact.contactform.line173_15_tieu_lien_he")}
             error={errors.subject}
           />
         )}
@@ -184,7 +185,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ categories }) => {
           <InputField
             {...field}
             id="content"
-            label="Nội dung liên hệ"
+            label={i18nText("AUTO.components.contact.contactform.line187_16_noi_dung_lien_he")}
             type="textarea"
             error={errors.content}
           />
@@ -196,9 +197,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ categories }) => {
         variant="success"
         size="md"
         className="mt-3"
-      >
-        Gửi liên hệ
-      </Button>
+      >{i18nText("AUTO.components.contact.contactform.line200_17_gui_lien_he")}</Button>
     </form>
   );
 };

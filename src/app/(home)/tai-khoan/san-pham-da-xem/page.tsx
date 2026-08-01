@@ -1,3 +1,4 @@
+import { i18nText } from "@/lib/i18nText";
 import { getProductsViewed } from "@/apis/models/products.apis";
 import EmptyViewed from "@/components/productViewed/EmptyViewed";
 import ProductsViewed from "@/components/productViewed/ProductsViewed";
@@ -22,7 +23,7 @@ export default async function Page({
 
   return (
     <div className="  lg:p-3">
-      <h2 className="text-2xl font-semibold mb-3">Sản phẩm đã xem</h2>
+      <h2 className="text-2xl font-semibold mb-3">{i18nText("AUTO.app.khoan.san.pham.da.line25_0_san_pham_da_xem")}</h2>
       {hasItems ? (
         <ProductsViewed data={data.items} pagination={data.pagination} />
       ) : (

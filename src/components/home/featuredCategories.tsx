@@ -1,5 +1,6 @@
 "use client";
 
+import { i18nText } from "@/lib/i18nText";
 import { useState } from "react";
 
 import { ChevronDown, ChevronUp } from "lucide-react";
@@ -82,14 +83,10 @@ export const FeaturedCategories = () => {
               className="mx-auto inline-flex h-9 items-center gap-1.5 rounded-md border border-slate-300 bg-white px-4 text-sm font-semibold text-slate-700 transition hover:border-[#e6a414] hover:bg-[#fff7da] hover:text-slate-900"
             >
               {expanded ? (
-                <>
-                  Thu gọn
-                  <ChevronUp className="h-4 w-4" />
+                <>{i18nText("AUTO.components.home.featuredcategories.line86_0_thu_gon")}<ChevronUp className="h-4 w-4" />
                 </>
               ) : (
-                <>
-                  Xem thêm
-                  <ChevronDown className="h-4 w-4" />
+                <>{i18nText("AUTO.components.home.featuredcategories.line91_1_xem_them")}<ChevronDown className="h-4 w-4" />
                 </>
               )}
             </button>

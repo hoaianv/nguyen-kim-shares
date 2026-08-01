@@ -1,5 +1,6 @@
 "use client";
 
+import { i18nText } from "@/lib/i18nText";
 import "swiper/css";
 import "swiper/css/navigation";
 
@@ -37,8 +38,8 @@ export default function PromotionLatest({ data }: PromotionLatestProps) {
     >
       <div className="overflow-hidden rounded-md bg-white shadow-sm ring-1 ring-slate-200/70">
         <HomeSectionHeader
-          title="Tổng hợp khuyến mãi"
-          actionLabel="Xem tất cả"
+          title={i18nText("AUTO.components.home.promotionlatest.line40_0_tong_hop_khuyen_mai")}
+          actionLabel={i18nText("AUTO.components.home.promotionlatest.extra42_0_xem_tat_ca")}
           actionHref="/tin-khuyen-mai"
         />
 
@@ -47,7 +48,7 @@ export default function PromotionLatest({ data }: PromotionLatestProps) {
             <button
               type="button"
               className={`${navBase} promotion-swiper-button--prev`}
-              aria-label="Xem khuyến mãi trước"
+              aria-label={i18nText("AUTO.components.home.promotionlatest.line50_1_xem_khuyen_mai_truoc")}
             >
               <ArrowLeft size={18} strokeWidth={2} />
             </button>
@@ -57,7 +58,7 @@ export default function PromotionLatest({ data }: PromotionLatestProps) {
             <button
               type="button"
               className={`${navBase} promotion-swiper-button--next`}
-              aria-label="Xem khuyến mãi tiếp theo"
+              aria-label={i18nText("AUTO.components.home.promotionlatest.line60_2_xem_khuyen_mai_tiep_theo")}
             >
               <ArrowRight size={18} strokeWidth={2} />
             </button>

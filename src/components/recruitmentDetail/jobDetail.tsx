@@ -1,5 +1,6 @@
 "use client";
 
+import { i18nText } from "@/lib/i18nText";
 import Image from "next/image";
 import { IHirePost } from "@/interfaces/models/IRecruitment.interfaces";
 import { IBreadcrumb } from "@/interfaces/common";
@@ -62,18 +63,14 @@ export default function JobDetail({ data, relatedJobs }: JobDetailProps) {
 
                     <div className="grid min-w-0 grid-cols-2 gap-3 rounded-lg border border-[#eab108]/20 bg-gradient-to-br from-[#eab108]/10 to-[#d4a006]/5 p-4 md:grid-cols-3">
                       <div>
-                        <div className="text-xs text-muted-foreground mb-1 text-gray-500">
-                          Mức lương
-                        </div>
+                        <div className="text-xs text-muted-foreground mb-1 text-gray-500">{i18nText("AUTO.components.recruitmentdetail.jobdetail.line66_0_muc_luong")}</div>
                         <div className="flex items-center gap-1.5 text-sm font-medium">
                           <Wallet className="h-4 w-4 text-[#eab108]" />
                           <span>{job?.salary}</span>
                         </div>
                       </div>
                       <div>
-                        <div className="text-xs text-muted-foreground mb-1 text-gray-500">
-                          Kinh nghiệm
-                        </div>
+                        <div className="text-xs text-muted-foreground mb-1 text-gray-500">{i18nText("AUTO.components.recruitmentdetail.jobdetail.line75_1_kinh_nghiem")}</div>
                         <div className="flex items-center gap-1.5 text-sm font-medium">
                           <Briefcase className="h-4 w-4 text-[#1435C3]" />
                           <span>{job?.experience}</span>
@@ -85,31 +82,25 @@ export default function JobDetail({ data, relatedJobs }: JobDetailProps) {
                         </div>
                         <div className="flex items-center gap-1.5 text-sm font-medium">
                           <Users className="h-4 w-4 text-[#1435C3]" />
-                          <span>{job?.quantity} người</span>
+                          <span>{job?.quantity}{i18nText("AUTO.components.recruitmentdetail.jobdetail.line88_2_nguoi")}</span>
                         </div>
                       </div>
                       <div>
-                        <div className="text-xs text-muted-foreground mb-1 text-gray-500">
-                          Hình thức
-                        </div>
+                        <div className="text-xs text-muted-foreground mb-1 text-gray-500">{i18nText("AUTO.components.recruitmentdetail.jobdetail.line93_3_hinh_thuc")}</div>
                         <div className="flex items-center gap-1.5 text-sm font-medium">
                           <Clock className="h-4 w-4 text-[#1435C3]" />
                           <span>{job?.form}</span>
                         </div>
                       </div>
                       <div>
-                        <div className="text-xs text-muted-foreground mb-1 text-gray-500">
-                          Bằng cấp
-                        </div>
+                        <div className="text-xs text-muted-foreground mb-1 text-gray-500">{i18nText("AUTO.components.recruitmentdetail.jobdetail.line102_4_bang_cap")}</div>
                         <div className="flex items-center gap-1.5 text-sm font-medium">
                           <GraduationCap className="h-4 w-4 text-[#1435C3]" />
                           <span>{job?.degree}</span>
                         </div>
                       </div>
                       <div>
-                        <div className="text-xs text-muted-foreground mb-1 text-gray-500">
-                          Hạn nộp
-                        </div>
+                        <div className="text-xs text-muted-foreground mb-1 text-gray-500">{i18nText("AUTO.components.recruitmentdetail.jobdetail.line111_5_han_nop")}</div>
                         <div className="flex items-center gap-1.5 text-sm font-medium">
                           <Calendar className="h-4 w-4 text-[#1435C3]" />
                           <span>{job?.deadline}</span>
@@ -126,9 +117,7 @@ export default function JobDetail({ data, relatedJobs }: JobDetailProps) {
                       <Button
                         onClick={() => setOpen(true)}
                         className="h-10 min-w-0 flex-1 border-none bg-gradient-to-r from-[#FFD500] to-[#F59E0B] px-6 font-medium text-white shadow-sm transition-all hover:from-[#F59E0B] hover:to-[#D97706] sm:flex-none"
-                      >
-                        Ứng tuyển ngay
-                      </Button>
+                      >{i18nText("AUTO.components.recruitmentdetail.jobdetail.line130_6_ung_tuyen_ngay")}</Button>
 
                       <DownloadDoc className="h-10 min-w-0 flex-1 px-6 sm:flex-none" />
                     </div>
@@ -140,9 +129,7 @@ export default function JobDetail({ data, relatedJobs }: JobDetailProps) {
               <Card className="min-w-0 max-w-full border-none bg-white shadow-sm">
                 <CardContent className="min-w-0 space-y-6 p-4 sm:p-4">
                   <section>
-                    <h2 className="text-xl font-semibold mb-3 text-[#1435C3]">
-                      Chi tiết công việc
-                    </h2>
+                    <h2 className="text-xl font-semibold mb-3 text-[#1435C3]">{i18nText("AUTO.components.recruitmentdetail.jobdetail.line144_7_chi_tiet_cong_viec")}</h2>
                     <div
                       className="prose prose-base max-w-none prose-headings:text-[#1435C3] prose-a:text-[#1435C3] hover:prose-a:text-[#FFD500] text-gray-600"
                       dangerouslySetInnerHTML={{
@@ -153,16 +140,12 @@ export default function JobDetail({ data, relatedJobs }: JobDetailProps) {
 
                   {/* Additional Info Grid based on available data */}
                   <section className="pt-6 border-t">
-                    <h2 className="text-xl font-semibold mb-4 text-[#1435C3]">
-                      Thông tin tóm tắt
-                    </h2>
+                    <h2 className="text-xl font-semibold mb-4 text-[#1435C3]">{i18nText("AUTO.components.recruitmentdetail.jobdetail.line157_8_thong_tin_tom_tat")}</h2>
                     <div className="grid min-w-0 grid-cols-1 gap-4 sm:grid-cols-2">
                       <div className="flex items-start gap-3">
                         <TrendingUp className="h-5 w-5 text-[#1435C3] flex-shrink-0 mt-0.5" />
                         <div>
-                          <div className="text-xs text-muted-foreground mb-1 text-gray-500">
-                            VỊ TRÍ
-                          </div>
+                          <div className="text-xs text-muted-foreground mb-1 text-gray-500">{i18nText("AUTO.components.recruitmentdetail.jobdetail.line164_9_vi_tri")}</div>
                           <div className="text-sm font-medium">
                             {job?.position}
                           </div>
@@ -171,9 +154,7 @@ export default function JobDetail({ data, relatedJobs }: JobDetailProps) {
                       <div className="flex items-start gap-3">
                         <GraduationCap className="h-5 w-5 text-[#1435C3] flex-shrink-0 mt-0.5" />
                         <div>
-                          <div className="text-xs text-muted-foreground mb-1 text-gray-500">
-                            BẰNG CẤP
-                          </div>
+                          <div className="text-xs text-muted-foreground mb-1 text-gray-500">{i18nText("AUTO.components.recruitmentdetail.jobdetail.line175_10_bang_cap")}</div>
                           <div className="text-sm font-medium">
                             {job?.degree}
                           </div>
@@ -182,9 +163,7 @@ export default function JobDetail({ data, relatedJobs }: JobDetailProps) {
                       <div className="flex items-start gap-3">
                         <Award className="h-5 w-5 text-[#1435C3] flex-shrink-0 mt-0.5" />
                         <div>
-                          <div className="text-xs text-muted-foreground mb-1 text-gray-500">
-                            KINH NGHIỆM
-                          </div>
+                          <div className="text-xs text-muted-foreground mb-1 text-gray-500">{i18nText("AUTO.components.recruitmentdetail.jobdetail.line186_11_kinh_nghiem")}</div>
                           <div className="text-sm font-medium">
                             {job?.experience}
                           </div>
@@ -193,18 +172,14 @@ export default function JobDetail({ data, relatedJobs }: JobDetailProps) {
                       <div className="flex items-start gap-3">
                         <Languages className="h-5 w-5 text-[#1435C3] flex-shrink-0 mt-0.5" />
                         <div>
-                          <div className="text-xs text-muted-foreground mb-1 text-gray-500">
-                            HÌNH THỨC
-                          </div>
+                          <div className="text-xs text-muted-foreground mb-1 text-gray-500">{i18nText("AUTO.components.recruitmentdetail.jobdetail.line197_12_hinh_thuc")}</div>
                           <div className="text-sm font-medium">{job?.form}</div>
                         </div>
                       </div>
                       <div className="flex items-start gap-3">
                         <MapPin className="h-5 w-5 text-[#1435C3] flex-shrink-0 mt-0.5" />
                         <div>
-                          <div className="text-xs text-muted-foreground mb-1 text-gray-500">
-                            ĐỊA ĐIỂM LÀM VIỆC
-                          </div>
+                          <div className="text-xs text-muted-foreground mb-1 text-gray-500">{i18nText("AUTO.components.recruitmentdetail.jobdetail.line206_13_dia_diem_lam_viec")}</div>
                           <div className="text-sm font-medium">
                             {job?.address}
                           </div>
@@ -224,7 +199,7 @@ export default function JobDetail({ data, relatedJobs }: JobDetailProps) {
                 <div className="h-24 relative overflow-hidden bg-gray-100">
                   <Image
                     src={`/images/banner-recruiment.jpg`}
-                    alt="Company banner"
+                    alt={i18nText("AUTO.components.recruitmentdetail.jobdetail.line227_14_company_banner")}
                     fill
                     className="object-cover"
                   />
@@ -252,15 +227,11 @@ export default function JobDetail({ data, relatedJobs }: JobDetailProps) {
 
                   {/* Company Info */}
                   <div className="min-w-0 space-y-3 text-center">
-                    <h3 className="break-words text-lg font-bold text-gray-900">
-                      Công ty TNHH Vi tính Nguyên Kim
-                    </h3>
+                    <h3 className="break-words text-lg font-bold text-gray-900">{i18nText("AUTO.components.recruitmentdetail.jobdetail.line256_15_cong_ty_tnhh_vi_tinh")}</h3>
 
                     <div className="flex min-w-0 items-start justify-center gap-3 text-sm text-gray-600">
                       <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0 text-gray-400" />
-                      <div className="text-left leading-relaxed whitespace-nowrap overflow-x-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 hover:scrollbar-thumb-gray-400">
-                        245B Trần Quang Khải, Phường Tân Định, TP. Hồ Chí Minh
-                      </div>
+                      <div className="text-left leading-relaxed whitespace-nowrap overflow-x-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 hover:scrollbar-thumb-gray-400">{i18nText("AUTO.components.recruitmentdetail.jobdetail.line262_16_245b_tran_quang_khai_phuong")}</div>
                     </div>
 
                     <a
@@ -268,9 +239,7 @@ export default function JobDetail({ data, relatedJobs }: JobDetailProps) {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-[#1435C3] text-sm inline-block hover:underline font-medium"
-                    >
-                      (Xem bản đồ)
-                    </a>
+                    >{i18nText("AUTO.components.recruitmentdetail.jobdetail.line272_17_xem_do")}</a>
                   </div>
                 </CardContent>
               </Card>
@@ -279,7 +248,7 @@ export default function JobDetail({ data, relatedJobs }: JobDetailProps) {
               {relatedJobs?.length > 0 && (
                 <Card className="min-w-0 max-w-full border-none bg-white shadow-sm">
                   <CardContent className="min-w-0 space-y-4 p-4 sm:p-4">
-                    <h3 className="font-semibold">Việc làm liên quan</h3>
+                    <h3 className="font-semibold">{i18nText("AUTO.components.recruitmentdetail.jobdetail.line282_18_viec_lam_lien_quan")}</h3>
 
                     <div className="space-y-3">
                       {relatedJobs.map((item) => (
@@ -332,7 +301,7 @@ export default function JobDetail({ data, relatedJobs }: JobDetailProps) {
         isOpen={open}
         onClose={() => setOpen(false)}
         size="lg"
-        title={`Ứng tuyển vị trí: ${data.job.name}`}
+        title={i18nText("AUTO.components.recruitmentdetail.jobdetail.line335_19_ung_tuyen_vi_tri", { value0: data.job.name })}
       >
         <FormApply />
       </Modal>

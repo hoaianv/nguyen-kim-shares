@@ -1,5 +1,6 @@
 "use client";
 
+import { i18nText } from "@/lib/i18nText";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 import { useAuthStore } from "@/stores/useAuth";
@@ -17,18 +18,18 @@ export function useBuyAction(setSelectedIds: (ids: number[]) => void) {
   const authenticated = useAuthStore((s) => s.authenticated);
 
   const showLoginToast = () =>
-    toast.error("Mua ngay không thành công", {
-      description: "Vui lòng đăng nhập để tiếp tục mua ngay.",
+    toast.error(i18nText("AUTO.hooks.usebuyaction.line20_0_mua_ngay_khong_thanh_cong"), {
+      description: i18nText("AUTO.hooks.usebuyaction.line21_1_vui_long_dang_nhap_tiep"),
       position: "top-center",
       action: {
-        label: "Đăng nhập",
+        label: i18nText("AUTO.hooks.usebuyaction.line24_2_dang_nhap"),
         onClick: () => router.push("/dang-nhap?redirect=/thanh-toan"),
       },
     });
 
   const showGenericError = () =>
-    toast.error("Không thể mua ngay", {
-      description: "Đã xảy ra lỗi. Vui lòng thử lại sau ít phút.",
+    toast.error(i18nText("AUTO.hooks.usebuyaction.line30_3_khong_mua_ngay"), {
+      description: i18nText("AUTO.hooks.usebuyaction.line31_4_da_xay_ra_loi_vui"),
       position: "top-center",
     });
 

@@ -1,4 +1,5 @@
 "use client";
+import { i18nText } from "@/lib/i18nText";
 import { ORDER_STATUS_LABEL, STATUS_STYLE } from "@/constants";
 import { useCartActions } from "@/hooks/useCartActions";
 import { IOrderDetail } from "@/interfaces/models/IOrder.interface";
@@ -37,11 +38,10 @@ export default function OrderDetail({ order }: { order: IOrderDetail }) {
     <div className="mx-auto  col-span-8 px-3 py-4 md:py-6">
       <div className="mb-4 flex flex-col gap-2 md:mb-6 md:flex-row md:items-center md:justify-between">
         <div>
-          <h1 className="text-xl font-bold tracking-tight text-gray-900 dark:text-gray-100 md:text-2xl">
-            Đơn hàng #{order.orderCode}
+          <h1 className="text-xl font-bold tracking-tight text-gray-900 dark:text-gray-100 md:text-2xl">{i18nText("AUTO.components.orderdetail.orderdetail.line41_0_don_hang")}{order.orderCode}
           </h1>
           <div className="mt-1 flex flex-wrap items-center gap-2 text-sm text-gray-500">
-            <span>Ngày đặt: {order.dateOrder}</span>
+            <span>{i18nText("AUTO.components.orderdetail.orderdetail.line44_1_ngay_dat")}{order.dateOrder}</span>
             <span className="hidden md:inline">·</span>
             <span
               className={`inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-medium ring-1 ${
@@ -81,8 +81,7 @@ export default function OrderDetail({ order }: { order: IOrderDetail }) {
             }}
             className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-blue-700 active:scale-[0.99]"
           >
-            <RotateCcw className="h-4 w-4" /> Mua lại
-          </button>
+            <RotateCcw className="h-4 w-4" />{i18nText("AUTO.components.orderdetail.orderdetail.line84_2_mua_lai")}</button>
         </div>
       </div>
 
@@ -93,11 +92,9 @@ export default function OrderDetail({ order }: { order: IOrderDetail }) {
           <div className="rounded-lg border border-gray-100 bg-white shadow-sm dark:border-gray-800 dark:bg-gray-900">
             <div className="border-b border-gray-100 px-4 py-3 dark:border-gray-800">
               <div className="flex items-center justify-between">
-                <div className="text-sm font-semibold text-gray-900 dark:text-gray-100">
-                  Sản phẩm ({order.items.length})
+                <div className="text-sm font-semibold text-gray-900 dark:text-gray-100">{i18nText("AUTO.components.orderdetail.orderdetail.line97_3_san_pham")}{order.items.length})
                 </div>
-                <div className="text-xs text-gray-500">
-                  Mã đơn: {order.orderCode}
+                <div className="text-xs text-gray-500">{i18nText("AUTO.components.orderdetail.orderdetail.line100_4_ma_don")}{order.orderCode}
                 </div>
               </div>
             </div>
@@ -124,13 +121,12 @@ export default function OrderDetail({ order }: { order: IOrderDetail }) {
                         )}
                       </div>
                       <div className="mt-1 text-xs text-gray-500">
-                        {t("PRODUCT.quantity")}: x{it.quantity}
+                        {t("PRODUCT.quantity")}{i18nText("AUTO.components.orderdetail.orderdetail.line127_5_x")}{it.quantity}
                       </div>
                     </div>
                     <div className="text-right text-sm font-medium text-gray-900 dark:text-gray-100">
                       <div>{formatPrice(it.price)}</div>
-                      <div className="text-xs text-gray-500">
-                        Tạm tính: {formatPrice(it.price * it.quantity)}
+                      <div className="text-xs text-gray-500">{i18nText("AUTO.components.orderdetail.orderdetail.line133_6_tam_tinh")}{formatPrice(it.price * it.quantity)}
                       </div>
                     </div>
                   </div>
@@ -143,9 +139,7 @@ export default function OrderDetail({ order }: { order: IOrderDetail }) {
           {order.note && (
             <div className="rounded-lg border border-gray-100 bg-white shadow-sm dark:border-gray-800 dark:bg-gray-900">
               <div className="border-b border-gray-100 px-4 py-3 dark:border-gray-800">
-                <div className="text-sm font-semibold text-gray-900 dark:text-gray-100">
-                  Ghi chú
-                </div>
+                <div className="text-sm font-semibold text-gray-900 dark:text-gray-100">{i18nText("AUTO.components.orderdetail.orderdetail.line147_7_ghi_chu")}</div>
               </div>
               <div className="p-4">
                 <div className="text-sm text-gray-700 dark:text-gray-300">
@@ -161,39 +155,31 @@ export default function OrderDetail({ order }: { order: IOrderDetail }) {
           {/* Price summary */}
           <div className="rounded-lg border border-gray-100 bg-white shadow-sm dark:border-gray-800 dark:bg-gray-900">
             <div className="border-b border-gray-100 px-4 py-3 dark:border-gray-800">
-              <div className="text-sm font-semibold text-gray-900 dark:text-gray-100">
-                Tổng kết thanh toán
-              </div>
+              <div className="text-sm font-semibold text-gray-900 dark:text-gray-100">{i18nText("AUTO.components.orderdetail.orderdetail.line165_8_tong_ket_thanh_toan")}</div>
             </div>
             <div className="p-4">
               <div className="space-y-2 text-sm">
                 <div className="flex items-center justify-between">
-                  <span className="text-gray-600 dark:text-gray-300">
-                    Tổng tiền hàng
-                  </span>
+                  <span className="text-gray-600 dark:text-gray-300">{i18nText("AUTO.components.orderdetail.orderdetail.line172_9_tong_tien_hang")}</span>
                   <span className="font-medium">
                     {formatPrice(order.totalPrice)}
                   </span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-gray-600 dark:text-gray-300">
-                    Phí vận chuyển
-                  </span>
-                  <span className="font-medium">Kinh doanh phản hồi</span>
+                  <span className="text-gray-600 dark:text-gray-300">{i18nText("AUTO.components.orderdetail.orderdetail.line180_10_phi_van_chuyen")}</span>
+                  <span className="font-medium">{i18nText("AUTO.components.orderdetail.orderdetail.line182_11_kinh_doanh_phan_hoi")}</span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-gray-600 dark:text-gray-300">
-                    Giảm giá
-                  </span>
+                  <span className="text-gray-600 dark:text-gray-300">{i18nText("AUTO.components.orderdetail.orderdetail.line186_12_giam_gia")}</span>
                   <span className="font-medium text-emerald-600">
                     {order.couponValue
                       ? -formatPrice(order.couponValue)
-                      : "Chưa có"}
+                      : i18nText("AUTO.components.orderdetail.orderdetail.line191_13_chua")}
                   </span>
                 </div>
                 <div className="h-px w-full bg-gray-100 dark:bg-gray-800" />
                 <div className="flex items-center justify-between text-base">
-                  <span className="font-semibold">Thành tiền</span>
+                  <span className="font-semibold">{i18nText("AUTO.components.orderdetail.orderdetail.line196_14_thanh_tien")}</span>
                   <span className="font-semibold text-blue-600">
                     {formatPrice(order.finalPrice)}
                   </span>
@@ -206,15 +192,12 @@ export default function OrderDetail({ order }: { order: IOrderDetail }) {
           <div className="rounded-lg border border-gray-100 bg-white shadow-sm dark:border-gray-800 dark:bg-gray-900">
             <div className="border-b border-gray-100 px-4 py-3 dark:border-gray-800">
               <div className="flex items-center gap-2 text-sm font-semibold text-gray-900 dark:text-gray-100">
-                <Truck className="h-4 w-4" /> Vận chuyển
-              </div>
+                <Truck className="h-4 w-4" />{i18nText("AUTO.components.orderdetail.orderdetail.line209_15_van_chuyen")}</div>
             </div>
             <div className="p-4">
               <div className="space-y-2 text-sm">
                 <div className="text-gray-600 dark:text-gray-300">
-                  <div className="mb-1 text-xs font-semibold uppercase tracking-wide">
-                    Địa chỉ giao
-                  </div>
+                  <div className="mb-1 text-xs font-semibold uppercase tracking-wide">{i18nText("AUTO.components.orderdetail.orderdetail.line216_16_dia_chi_giao")}</div>
                   <div className="space-y-1">
                     <div className="font-medium">{order.nameDelivery}</div>
                     <div className="flex items-start gap-2">
@@ -227,10 +210,7 @@ export default function OrderDetail({ order }: { order: IOrderDetail }) {
                   </div>
                 </div>
                 {order.status === "delivered" && (
-                  <div className="rounded-lg bg-sky-50 p-3 text-xs text-sky-700 ring-1 ring-sky-200">
-                    Hàng đang được giao. Vui lòng giữ liên lạc điện thoại để
-                    shipper liên hệ.
-                  </div>
+                  <div className="rounded-lg bg-sky-50 p-3 text-xs text-sky-700 ring-1 ring-sky-200">{i18nText("AUTO.components.orderdetail.orderdetail.line231_17_hang_dang_duoc_giao_vui")}</div>
                 )}
               </div>
             </div>
@@ -239,8 +219,7 @@ export default function OrderDetail({ order }: { order: IOrderDetail }) {
           <div className="rounded-lg border border-gray-100 bg-white shadow-sm dark:border-gray-800 dark:bg-gray-900">
             <div className="border-b border-gray-100 px-4 py-3 dark:border-gray-800">
               <div className="flex items-center gap-2 text-sm font-semibold text-gray-900 dark:text-gray-100">
-                <Building2 className="h-4 w-4" /> Thông tin xuất hóa đơn
-              </div>
+                <Building2 className="h-4 w-4" />{i18nText("AUTO.components.orderdetail.orderdetail.line242_18_thong_tin_xuat_hoa_don")}</div>
             </div>
             <div className="p-4">
               <div className="space-y-1 text-sm">

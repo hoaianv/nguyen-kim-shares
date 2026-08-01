@@ -1,5 +1,6 @@
 "use client";
 
+import { i18nText } from "@/lib/i18nText";
 import { useEffect, useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { CheckCircle2, XCircle, Loader2, AlertCircle, User, Mail, Phone, Building, Briefcase, CalendarCheck } from "lucide-react";
@@ -13,14 +14,14 @@ function CheckinContent() {
   const uid = searchParams.get("uid");
 
   const [state, setState] = useState<CheckinState>("loading");
-  const [message, setMessage] = useState<string>("Đang tải thông tin khách mời...");
+  const [message, setMessage] = useState<string>(i18nText("AUTO.app.standalone.su.kien.checkin.extra17_0_dang_thong_tin_khach_moi"));
   const [guestData, setGuestData] = useState<IEventCheckinGuest | null>(null);
 
   useEffect(() => {
     // Prevent double execution in dev mode or unnecessary calls
     if (!uid) {
       setState("invalid");
-      setMessage("Mã QR không hợp lệ hoặc thiếu thông tin định danh.");
+      setMessage(i18nText("AUTO.app.standalone.su.kien.checkin.extra24_1_ma_qr_khong_hop_le"));
       return;
     }
 
@@ -36,7 +37,7 @@ function CheckinContent() {
 
           if (result.data.status === ECheckinStatus.Checked) {
             setState("success");
-            setMessage("Khách mời này đã được check-in trước đó.");
+            setMessage(i18nText("AUTO.app.standalone.su.kien.checkin.extra40_2_khach_moi_nay_da_duoc"));
           } else {
             setState("info");
           }
@@ -44,13 +45,13 @@ function CheckinContent() {
           setState("error");
           setMessage(
             result?.message ||
-            "Không tìm thấy thông tin khách mời. Vui lòng liên hệ ban tổ chức.",
+            i18nText("AUTO.app.standalone.su.kien.checkin.extra48_3_khong_tim_thay_thong_tin"),
           );
         }
       } catch (error) {
         if (!isMounted) return;
         setState("error");
-        setMessage("Lỗi kết nối. Vui lòng thử lại sau.");
+        setMessage(i18nText("AUTO.app.standalone.su.kien.checkin.extra54_4_loi_ket_noi_vui_long"));
       }
     };
 
@@ -70,14 +71,14 @@ function CheckinContent() {
 
       if (result?.status && result?.errorCode === 200) {
         setState("success");
-        setMessage("Check-in thành công! Chào mừng bạn đến với sự kiện.");
+        setMessage(i18nText("AUTO.app.standalone.su.kien.checkin.extra74_5_check_in_thanh_cong_chao"));
       } else {
         setState("error");
-        setMessage(result?.message || "Check-in thất bại. Vui lòng liên hệ ban tổ chức.");
+        setMessage(result?.message || i18nText("AUTO.app.standalone.su.kien.checkin.extra77_6_check_in_that_bai_vui"));
       }
     } catch (error) {
       setState("error");
-      setMessage("Lỗi kết nối khi xác nhận. Vui lòng thử lại.");
+      setMessage(i18nText("AUTO.app.standalone.su.kien.checkin.extra81_7_loi_ket_noi_khi_xac"));
     }
   };
 
@@ -93,7 +94,7 @@ function CheckinContent() {
           <>
             <Loader2 className={`w-16 h-16 animate-spin mb-4 ${state === 'confirming' ? 'text-blue-500' : 'text-slate-400'}`} />
             <h2 className={`text-xl font-bold ${state === 'confirming' ? 'text-slate-800' : 'text-slate-800'}`}>
-              {state === "confirming" ? "Đang xác nhận..." : "Đang xử lý..."}
+              {state === "confirming" ? i18nText("AUTO.app.standalone.su.kien.checkin.line96_0_dang_xac_nhan") : i18nText("AUTO.app.standalone.su.kien.checkin.line96_1_dang_xu_ly")}
             </h2>
           </>
         ) : state === "success" ? (
@@ -101,22 +102,22 @@ function CheckinContent() {
             <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mb-4 backdrop-blur-sm">
               <CheckCircle2 className="w-10 h-10 text-white" />
             </div>
-            <h2 className="text-2xl font-bold">Thành công!</h2>
+            <h2 className="text-2xl font-bold">{i18nText("AUTO.app.standalone.su.kien.checkin.line104_2_thanh_cong")}</h2>
           </>
         ) : state === "error" || state === "invalid" ? (
           <>
             <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mb-4 backdrop-blur-sm">
               {state === "error" ? <XCircle className="w-10 h-10 text-white" /> : <AlertCircle className="w-10 h-10 text-white" />}
             </div>
-            <h2 className="text-2xl font-bold">{state === "error" ? "Thất bại" : "Không hợp lệ"}</h2>
+            <h2 className="text-2xl font-bold">{state === "error" ? i18nText("AUTO.app.standalone.su.kien.checkin.line111_3_that_bai") : i18nText("AUTO.app.standalone.su.kien.checkin.line111_4_khong_hop_le")}</h2>
           </>
         ) : state === "info" ? (
           <>
             <div className="w-20 h-20 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mb-4">
               <CalendarCheck className="w-10 h-10" />
             </div>
-            <h2 className="text-2xl font-bold text-slate-800">Xác nhận thông tin</h2>
-            <p className="text-slate-500 text-sm mt-1">Vui lòng kiểm tra lại thông tin khách mời</p>
+            <h2 className="text-2xl font-bold text-slate-800">{i18nText("AUTO.app.standalone.su.kien.checkin.line118_5_xac_nhan_thong_tin")}</h2>
+            <p className="text-slate-500 text-sm mt-1">{i18nText("AUTO.app.standalone.su.kien.checkin.line119_6_vui_long_kiem_tra_lai")}</p>
           </>
         ) : null}
       </div>
@@ -125,16 +126,14 @@ function CheckinContent() {
       <div className={`px-6 sm:px-8 pb-8 ${state === 'success' || state === 'error' || state === 'invalid' ? 'pt-6 bg-white rounded-t-[2rem] -mt-6' : 'pt-4'}`}>
         {(state === "loading" || state === "confirming") && (
           <div className="text-center pt-2">
-            <p className="text-slate-500 text-sm">{state === "confirming" ? "Hệ thống đang lưu trạng thái check-in, vui lòng chờ..." : message}</p>
+            <p className="text-slate-500 text-sm">{state === "confirming" ? i18nText("AUTO.app.standalone.su.kien.checkin.line128_7_he_thong_dang_luu_trang") : message}</p>
           </div>
         )}
 
         {(state === "info" || state === "success") && guestData && (
           <div className="space-y-6">
             <div className="bg-slate-50 rounded-2xl p-5 border border-slate-100">
-              <h3 className="text-sm font-bold text-slate-800 mb-4 pb-3 border-b border-slate-200 flex items-center gap-2">
-                Thông tin khách mời
-              </h3>
+              <h3 className="text-sm font-bold text-slate-800 mb-4 pb-3 border-b border-slate-200 flex items-center gap-2">{i18nText("AUTO.app.standalone.su.kien.checkin.line136_8_thong_tin_khach_moi")}</h3>
 
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
@@ -142,7 +141,7 @@ function CheckinContent() {
                     <User className="w-5 h-5 text-slate-500" />
                   </div>
                   <div className="pt-0.5">
-                    <p className="text-[11px] text-slate-500 font-bold uppercase tracking-wider mb-0.5">Họ và tên</p>
+                    <p className="text-[11px] text-slate-500 font-bold uppercase tracking-wider mb-0.5">{i18nText("AUTO.app.standalone.su.kien.checkin.line145_9_ho_ten")}</p>
                     <p className="text-base font-bold text-slate-800">{guestData.name}</p>
                   </div>
                 </div>
@@ -153,7 +152,7 @@ function CheckinContent() {
                       <Building className="w-5 h-5 text-slate-400 mt-2" />
                     </div>
                     <div>
-                      <p className="text-[11px] text-slate-500 font-bold uppercase tracking-wider mb-0.5">Công ty</p>
+                      <p className="text-[11px] text-slate-500 font-bold uppercase tracking-wider mb-0.5">{i18nText("AUTO.app.standalone.su.kien.checkin.line156_10_cong_ty")}</p>
                       <p className="text-sm font-semibold text-slate-700">{guestData.companyName}</p>
                     </div>
                   </div>
@@ -165,7 +164,7 @@ function CheckinContent() {
                       <Briefcase className="w-5 h-5 text-slate-400 mt-1" />
                     </div>
                     <div>
-                      <p className="text-[11px] text-slate-500 font-bold uppercase tracking-wider mb-0.5">Chức vụ</p>
+                      <p className="text-[11px] text-slate-500 font-bold uppercase tracking-wider mb-0.5">{i18nText("AUTO.app.standalone.su.kien.checkin.line168_11_chuc_vu")}</p>
                       <p className="text-sm font-semibold text-slate-700">{guestData.position}</p>
                     </div>
                   </div>
@@ -175,13 +174,13 @@ function CheckinContent() {
                   <div className="grid grid-cols-2 gap-4 mt-2 pt-4 border-t border-slate-200">
                     {guestData.phone && (
                       <div className="flex flex-col gap-1">
-                        <p className="text-[11px] text-slate-500 font-bold uppercase tracking-wider flex items-center gap-1.5"><Phone className="w-3 h-3" /> Số điện thoại</p>
+                        <p className="text-[11px] text-slate-500 font-bold uppercase tracking-wider flex items-center gap-1.5"><Phone className="w-3 h-3" />{i18nText("AUTO.app.standalone.su.kien.checkin.line178_12_so_dien_thoai")}</p>
                         <p className="text-sm font-medium text-slate-800 break-all">{guestData.phone}</p>
                       </div>
                     )}
                     {guestData.email && (
                       <div className="flex flex-col gap-1">
-                        <p className="text-[11px] text-slate-500 font-bold uppercase tracking-wider flex items-center gap-1.5"><Mail className="w-3 h-3" /> Email</p>
+                        <p className="text-[11px] text-slate-500 font-bold uppercase tracking-wider flex items-center gap-1.5"><Mail className="w-3 h-3" />{i18nText("AUTO.app.standalone.su.kien.checkin.extra183_8_email")}</p>
                         <p className="text-sm font-medium text-slate-800 break-all">{guestData.email}</p>
                       </div>
                     )}
@@ -195,9 +194,7 @@ function CheckinContent() {
                 onClick={handleConfirmCheckin}
                 className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-4 rounded-xl transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] flex justify-center items-center gap-2"
               >
-                <CheckCircle2 className="w-5 h-5" />
-                Xác nhận Check-in
-              </button>
+                <CheckCircle2 className="w-5 h-5" />{i18nText("AUTO.app.standalone.su.kien.checkin.line199_13_xac_nhan_check_in")}</button>
             )}
 
             {state === "success" && (
@@ -215,9 +212,7 @@ function CheckinContent() {
               <button
                 onClick={() => window.location.reload()}
                 className="px-8 py-3 bg-slate-900 text-white rounded-xl font-medium hover:bg-slate-800 transition-colors shadow-sm w-full"
-              >
-                Thử lại
-              </button>
+              >{i18nText("AUTO.app.standalone.su.kien.checkin.line219_14_thu_lai")}</button>
             )}
           </div>
         )}

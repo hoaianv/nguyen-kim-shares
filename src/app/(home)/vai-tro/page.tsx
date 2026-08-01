@@ -1,5 +1,6 @@
 "use client";
 
+import { i18nText } from "@/lib/i18nText";
 import Link from "next/link";
 import { useState } from "react";
 import { Users, UserCheck } from "lucide-react";
@@ -12,12 +13,8 @@ export default function RoleSelection() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-10">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Lựa chọn vai trò của bạn
-          </h1>
-          <p className="text-xl text-gray-600">
-            Chọn vai trò phù hợp để bắt đầu hành trình của bạn với chúng tôi
-          </p>
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{i18nText("AUTO.app.vai.tro.line16_0_lua_chon_vai_tro")}</h1>
+          <p className="text-xl text-gray-600">{i18nText("AUTO.app.vai.tro.line19_1_chon_vai_tro_phu_hop")}</p>
         </div>
 
         {/* Role Selection Grid */}
@@ -48,9 +45,7 @@ export default function RoleSelection() {
                 </div>
 
                 {/* Title */}
-                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
-                  Đối Tác
-                </h2>
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">{i18nText("AUTO.app.vai.tro.line52_2_doi_tac")}</h2>
 
                 {/* Badge */}
                 <div className="inline-block mb-4">
@@ -60,38 +55,29 @@ export default function RoleSelection() {
                 </div>
 
                 {/* Description */}
-                <p className="text-gray-600 mb-8 flex-grow">
-                  Đồng hành cùng chúng tôi để tăng trưởng bứt phá. Trở thành đối
-                  tác để nhận ưu đãi riêng, chính sách giá linh hoạt và hỗ trợ
-                  24/7. Cùng nhau mở rộng thị trường bền vững.
-                </p>
+                <p className="text-gray-600 mb-8 flex-grow">{i18nText("AUTO.app.vai.tro.line64_3_dong_hanh_cung_chung_toi")}</p>
 
                 {/* Benefits */}
                 <ul className="space-y-2 mb-8 text-sm text-gray-600">
                   <li className="flex items-start gap-2">
                     <span className="w-2 h-2 bg-gradient-to-r from-[#ffd500] to-amber-400 rounded-full mt-2"></span>
-                    <span>Được hưởng đầy đủ các ưu đãi mua hàng</span>
+                    <span>{i18nText("AUTO.app.vai.tro.line73_4_duoc_huong_day_du_cac")}</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="w-2 h-2 bg-gradient-to-r from-[#ffd500] to-amber-400 rounded-full mt-2"></span>
-                    <span>
-                      Cập nhật thông tin sản phẩm mới, tin tức công nghệ, tin
-                      khuyến mại
-                    </span>
+                    <span>{i18nText("AUTO.app.vai.tro.line78_5_cap_nhat_thong_tin_san")}</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="w-2 h-2 bg-gradient-to-r from-[#ffd500] to-amber-400 rounded-full mt-2"></span>
-                    <span>Cập nhật giá sản phẩm, báo giá hàng ngày</span>
+                    <span>{i18nText("AUTO.app.vai.tro.line84_6_cap_nhat_gia_san_pham")}</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="w-2 h-2 bg-gradient-to-r from-[#ffd500] to-amber-400 rounded-full mt-2"></span>
-                    <span>Theo dõi quản lý đơn hàng, điểm thưởng mua hàng</span>
+                    <span>{i18nText("AUTO.app.vai.tro.line88_7_theo_doi_quan_ly_don")}</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="w-2 h-2 bg-gradient-to-r from-[#ffd500] to-amber-400 rounded-full mt-2"></span>
-                    <span>
-                      Ưu đãi bảo hành, giảm giá mua hàng và phí dịch vụ
-                    </span>
+                    <span>{i18nText("AUTO.app.vai.tro.line93_8_uu_dai_bao_hanh_giam")}</span>
                   </li>
                 </ul>
 
@@ -104,7 +90,7 @@ export default function RoleSelection() {
                         : "bg-gradient-to-r from-[#ffd500] to-amber-400 text-white hover:from-amber-500 hover:to-orange-500 shadow-md"
                     }`}
                   >
-                    <span>Đăng ký Đối Tác</span>
+                    <span>{i18nText("AUTO.app.vai.tro.line107_9_dang_ky_doi_tac")}</span>
                     <span
                       className={`transition-transform ${
                         hoveredRole === "partner" ? "translate-x-1" : ""
@@ -144,9 +130,7 @@ export default function RoleSelection() {
                 </div>
 
                 {/* Title */}
-                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
-                  Thành Viên
-                </h2>
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">{i18nText("AUTO.app.vai.tro.line148_10_thanh_vien")}</h2>
 
                 {/* Badge */}
                 <div className="inline-block mb-4">
@@ -156,26 +140,16 @@ export default function RoleSelection() {
                 </div>
 
                 {/* Description */}
-                <p className="text-gray-600 mb-8 flex-grow">
-                  Trở thành thành viên để nhận các chương trình đặc biệt, ưu đãi
-                  khuyến mãi dành riêng cho bạn, cùng hệ thống tích điểm và
-                  thăng hạng để nâng cấp lên thành viên cao cấp.
-                </p>
+                <p className="text-gray-600 mb-8 flex-grow">{i18nText("AUTO.app.vai.tro.line160_11_tro_thanh_thanh_vien_nhan")}</p>
 
                 {/* Benefits */}
                 <ul className="space-y-2 mb-8 text-sm text-gray-600">
                   <li className="flex items-center gap-2">
-                    <span className="w-2 h-2 bg-gradient-to-r from-emerald-400 to-teal-400 rounded-full"></span>
-                    Truy cập nội dung độc quyền
-                  </li>
+                    <span className="w-2 h-2 bg-gradient-to-r from-emerald-400 to-teal-400 rounded-full"></span>{i18nText("AUTO.app.vai.tro.line169_12_truy_cap_noi_dung_doc")}</li>
                   <li className="flex items-center gap-2">
-                    <span className="w-2 h-2 bg-gradient-to-r from-emerald-400 to-teal-400 rounded-full"></span>
-                    Ưu đãi và giảm giá đặc biệt
-                  </li>
+                    <span className="w-2 h-2 bg-gradient-to-r from-emerald-400 to-teal-400 rounded-full"></span>{i18nText("AUTO.app.vai.tro.line173_13_uu_dai_giam_gia_dac")}</li>
                   <li className="flex items-center gap-2">
-                    <span className="w-2 h-2 bg-gradient-to-r from-emerald-400 to-teal-400 rounded-full"></span>
-                    Tham gia các sự kiện thành viên
-                  </li>
+                    <span className="w-2 h-2 bg-gradient-to-r from-emerald-400 to-teal-400 rounded-full"></span>{i18nText("AUTO.app.vai.tro.line177_14_tham_gia_cac_su_kien")}</li>
                 </ul>
 
                 {/* Button */}
@@ -190,7 +164,7 @@ export default function RoleSelection() {
                         : "bg-gradient-to-r from-[#ffd500] to-amber-400 text-white hover:from-amber-500 hover:to-orange-500 shadow-md"
                     }`}
                   >
-                    <span>Đăng ký Thành Viên</span>
+                    <span>{i18nText("AUTO.app.vai.tro.line193_15_dang_ky_thanh_vien")}</span>
                     <span
                       className={`transition-transform ${
                         hoveredRole === "member" ? "translate-x-1" : ""
@@ -210,9 +184,7 @@ export default function RoleSelection() {
           <Link
             href="/"
             className="text-gray-600 hover:text-gray-900 font-medium transition-colors"
-          >
-            ← Quay lại
-          </Link>
+          >{i18nText("AUTO.app.vai.tro.line214_16_quay_lai")}</Link>
         </div>
       </div>
     </main>

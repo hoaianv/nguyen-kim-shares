@@ -1,5 +1,6 @@
 "use client";
 
+import { i18nText } from "@/lib/i18nText";
 import { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { name } from "@/constants/company.constant";
@@ -41,36 +42,23 @@ export default function CallbackPage() {
         {/* Trạng thái */}
         {status === "loading" && (
           <>
-            <h2 className="text-xl font-semibold text-gray-800 mb-2">
-              Đang xử lý đăng nhập Google...
-            </h2>
-            <p className="text-gray-500 text-sm">
-              Vui lòng đợi trong giây lát, hệ thống {name} đang xác thực tài
-              khoản của bạn.
-            </p>
+            <h2 className="text-xl font-semibold text-gray-800 mb-2">{i18nText("AUTO.app.auth.callback.line45_0_dang_xu_ly_dang_nhap")}</h2>
+            <p className="text-gray-500 text-sm">{i18nText("AUTO.app.auth.callback.line48_1_vui_long_doi_giay_lat")}{name}{i18nText("AUTO.app.auth.callback.line48_2_dang_xac_thuc_khoan")}</p>
           </>
         )}
 
         {status === "success" && (
           <>
-            <h2 className="text-xl font-semibold text-green-600 mb-2">
-              Đăng nhập thành công!
-            </h2>
-            <p className="text-gray-500 text-sm">
-              Hệ thống đang chuyển hướng bạn về trang chủ {name}...
+            <h2 className="text-xl font-semibold text-green-600 mb-2">{i18nText("AUTO.app.auth.callback.line57_3_dang_nhap_thanh_cong")}</h2>
+            <p className="text-gray-500 text-sm">{i18nText("AUTO.app.auth.callback.line60_4_he_thong_dang_chuyen_huong")}{name}...
             </p>
           </>
         )}
 
         {status === "error" && (
           <>
-            <h2 className="text-xl font-semibold text-red-600 mb-2">
-              Đăng nhập thất bại!
-            </h2>
-            <p className="text-gray-500 text-sm">
-              Đã có lỗi xảy ra, vui lòng thử lại hoặc đăng nhập bằng tài khoản
-              khác.
-            </p>
+            <h2 className="text-xl font-semibold text-red-600 mb-2">{i18nText("AUTO.app.auth.callback.line68_5_dang_nhap_that_bai")}</h2>
+            <p className="text-gray-500 text-sm">{i18nText("AUTO.app.auth.callback.line71_6_da_loi_xay_ra_vui")}</p>
           </>
         )}
       </div>

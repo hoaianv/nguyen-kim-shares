@@ -1,3 +1,4 @@
+import { i18nText } from "@/lib/i18nText";
 import { List, CheckCircle } from "lucide-react";
 import { calcDiscountPercentage, getMarketPrice, getPrice } from "@/lib/utils";
 import { hotline } from "@/constants/company.constant";
@@ -34,9 +35,7 @@ export default function ProductCardPopup({
             <div className="flex flex-wrap items-baseline gap-2">
               <span className="text-lg font-semibold text-rose-600">
                 {getPrice(data)}
-                <span className="ml-1 text-xs font-normal text-muted-foreground">
-                  (Đã bao gồm VAT)
-                </span>
+                <span className="ml-1 text-xs font-normal text-muted-foreground">{i18nText("AUTO.components.ui.productcardpopup.line38_0_da_bao_gom_vat")}</span>
               </span>
               {data.isInStock &&
                 data.marketPrice &&
@@ -50,9 +49,7 @@ export default function ProductCardPopup({
 
           {getMarketPrice(data) && (
             <div className="flex items-center gap-2">
-              <span className="text-sm font-medium text-muted-foreground">
-                Giá thị trường:
-              </span>
+              <span className="text-sm font-medium text-muted-foreground">{i18nText("AUTO.components.ui.productcardpopup.line54_1_gia_thi_truong")}</span>
               <span className="text-xs text-muted-foreground line-through">
                 {getMarketPrice(data)}
               </span>
@@ -60,7 +57,7 @@ export default function ProductCardPopup({
           )}
 
           <div className="flex items-center gap-2">
-            <span className="text-sm font-medium text-muted-foreground">Bảo hành:</span>
+            <span className="text-sm font-medium text-muted-foreground">{i18nText("AUTO.components.ui.productcardpopup.line63_2_bao_hanh")}</span>
             <span className="text-xs font-medium text-foreground">
               <span
                 className="text-xs font-medium text-foreground"
@@ -70,19 +67,15 @@ export default function ProductCardPopup({
           </div>
 
           <div className="flex items-center gap-2">
-            <span className="text-sm font-medium text-muted-foreground">Tình trạng:</span>
+            <span className="text-sm font-medium text-muted-foreground">{i18nText("AUTO.components.ui.productcardpopup.line73_3_tinh_trang")}</span>
             {data?.isInStock ? (
               <p className="flex items-center gap-1 text-xs font-medium text-emerald-700">
-                <CheckCircle size={14} />
-                Sẵn sàng giao ngay
-              </p>
+                <CheckCircle size={14} />{i18nText("AUTO.components.ui.productcardpopup.line77_4_san_sang_giao_ngay")}</p>
             ) : (
               <h3
                 onClick={() => (window.location.href = `tel:${hotline}`)}
                 className="flex cursor-pointer items-center gap-1 text-xs font-medium text-rose-700"
-              >
-                Liên hệ để được hỗ trợ
-              </h3>
+              >{i18nText("AUTO.components.ui.productcardpopup.line84_5_lien_he_duoc_ho_tro")}</h3>
             )}
           </div>
         </div>
@@ -90,9 +83,7 @@ export default function ProductCardPopup({
 
       <div className="px-4 py-3">
         <button className="flex w-full items-center justify-center gap-2 rounded-lg border border-border bg-background px-4 py-2.5 text-sm font-semibold text-foreground transition hover:border-amber-300 hover:bg-amber-50">
-          <List size={18} />
-          Thông số sản phẩm
-        </button>
+          <List size={18} />{i18nText("AUTO.components.ui.productcardpopup.line94_6_thong_so_san_pham")}</button>
       </div>
 
       <div className="space-y-2 px-4 pb-4 text-sm">

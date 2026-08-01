@@ -1,5 +1,6 @@
 "use client";
 
+import { i18nText } from "@/lib/i18nText";
 import "swiper/css";
 import "swiper/css/navigation";
 
@@ -57,14 +58,14 @@ export default function ProductCarouselSection({
             <button
               type="button"
               className={`${navBase} nav-button--prev`}
-              aria-label="Previous product"
+              aria-label={i18nText("AUTO.components.home.productcarouselsection.line60_0_previous_product")}
             >
               <ArrowLeft size={18} strokeWidth={2} />
             </button>
             <button
               type="button"
               className={`${navBase} nav-button--next`}
-              aria-label="Next product"
+              aria-label={i18nText("AUTO.components.home.productcarouselsection.line67_1_next_product")}
             >
               <ArrowRight size={18} strokeWidth={2} />
             </button>

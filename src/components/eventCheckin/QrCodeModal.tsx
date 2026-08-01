@@ -1,5 +1,6 @@
 "use client";
 
+import { i18nText } from "@/lib/i18nText";
 import { Download } from "lucide-react";
 import Modal from "@/components/ui/Modal";
 import { IEventCheckinGuest } from "@/interfaces/models/IEventCheckin.interface";
@@ -28,7 +29,7 @@ export default function QrCodeModal({
   };
 
   return (
-    <Modal isOpen={isOpen} onClose={onClose} title="Mã QR Check-in" size="sm">
+    <Modal isOpen={isOpen} onClose={onClose} title={i18nText("AUTO.components.eventcheckin.qrcodemodal.line31_0_ma_qr_check_in")} size="sm">
       <div className="flex flex-col items-center py-4 space-y-5">
         {/* QR Image */}
         {guest.qrCode ? (
@@ -41,7 +42,7 @@ export default function QrCodeModal({
           </div>
         ) : (
           <div className="w-56 h-56 flex items-center justify-center bg-gray-50 border border-gray-200 rounded-xl">
-            <span className="text-sm text-gray-400">Chưa có mã QR</span>
+            <span className="text-sm text-gray-400">{i18nText("AUTO.components.eventcheckin.qrcodemodal.line44_1_chua_ma_qr")}</span>
           </div>
         )}
 
@@ -57,9 +58,7 @@ export default function QrCodeModal({
             onClick={handleDownload}
             className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg shadow-sm transition-colors"
           >
-            <Download className="w-4 h-4" />
-            Tải mã QR
-          </button>
+            <Download className="w-4 h-4" />{i18nText("AUTO.components.eventcheckin.qrcodemodal.line61_2_ma_qr")}</button>
         )}
       </div>
     </Modal>

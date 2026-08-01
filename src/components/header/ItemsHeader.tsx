@@ -1,5 +1,6 @@
 "use client";
 
+import { i18nText } from "@/lib/i18nText";
 import Link from "next/link";
 import { ReactNode, memo } from "react";
 import { Bell, ChevronDown, ShoppingCart, UserRound } from "lucide-react";
@@ -64,12 +65,12 @@ export function AuthItem() {
   const { user, authenticated } = useAuthStore();
   const lastName = user?.fullName?.split(" ").pop() ?? "";
   const label =
-    authenticated && user ? `${lastName}` : "Tài khoản";
+    authenticated && user ? `${lastName}` : i18nText("AUTO.components.header.itemsheader.extra68_0_khoan");
 
   return (
     <ItemHeader
       icon={<UserRound size={28} strokeWidth={1.8} />}
-      eyebrow={authenticated && user ? t("HEADER.hello") : 'Đăng nhập/Đăng ký'}
+      eyebrow={authenticated && user ? t("HEADER.hello") : i18nText("AUTO.components.header.itemsheader.line72_0_dang_nhap_dang_ky")}
       label={label}
       href={authenticated ? "/tai-khoan" : "/dang-nhap"}
       showAccountCaret

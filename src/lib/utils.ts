@@ -1,15 +1,20 @@
+import { getCurrentLocale, i18nText } from "@/lib/i18nText";
 import { HEADER_ITEMS, HeaderItemI18n } from "@/constants";
 import { IBaseProduct, MenuItem } from "@/interfaces/common";
 import { IResponse } from "@/interfaces/common/IResponse.interface";
 import { ICartItem, IQuote } from "@/interfaces/models/ICart.interfaces";
 import { toast } from "sonner";
 
-const vnFormatter = new Intl.NumberFormat("vi-VN", {
-  style: "currency",
-  currency: "VND",
-  minimumFractionDigits: 0,
-  maximumFractionDigits: 0,
-});
+function getCurrencyFormatter() {
+  const locale = getCurrentLocale() === "en" ? "en-US" : "vi-VN";
+
+  return new Intl.NumberFormat(locale, {
+    style: "currency",
+    currency: "VND",
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0,
+  });
+}
 
 /**
  * Định dạng giá theo VND.
@@ -19,14 +24,14 @@ const vnFormatter = new Intl.NumberFormat("vi-VN", {
 export function formatPrice(
   amount: number | string | null | undefined
 ): string {
-  if (amount == null) return "Liên hệ";
+  if (amount == null) return i18nText("AUTO.lib.utils.extra23_0_lien_he");
   const num =
     typeof amount === "string"
       ? Number(amount.replace(/[^\d.-]/g, ""))
       : amount;
 
-  if (isNaN(num) || num <= 0) return "Liên hệ";
-  return vnFormatter.format(num);
+  if (isNaN(num) || num <= 0) return i18nText("AUTO.lib.utils.extra29_1_lien_he");
+  return getCurrencyFormatter().format(num);
 }
 
 /**
@@ -54,7 +59,7 @@ export function getValidData<T>(res?: IResponse<T>): T | null {
 }
 
 export function getPrice(product: IBaseProduct, valueCoupon?: number): string {
-  if (!product.isInStock) return "Liên hệ";
+  if (!product.isInStock) return i18nText("AUTO.lib.utils.extra58_2_lien_he");
 
   const basePrice: number = checkMarketPrice(product.price, product.marketPrice)
     ? product.marketPrice ?? 0
@@ -95,8 +100,8 @@ export function cartToast(
       .filter(Boolean)
       .join(", ");
 
-    toast.success(message ?? "Thành công", {
-      description: names ? `Đã thêm ${names} vào giỏ` : "Đã thêm vào giỏ",
+    toast.success(message ?? i18nText("AUTO.lib.utils.extra99_3_thanh_cong"), {
+      description: names ? i18nText("AUTO.lib.utils.extra100_4_da_them_vao_gio", { value0: names }) : i18nText("AUTO.lib.utils.extra100_5_da_them_vao_gio"),
       position: "top-center",
     });
 
@@ -104,11 +109,11 @@ export function cartToast(
   }
 
   if (!status && errorCode === 401) {
-    toast.warning("Thêm vào giỏ thất bại", {
+    toast.warning(i18nText("AUTO.lib.utils.line107_0_them_vao_gio_that_bai"), {
       description: message,
       position: "top-center",
       action: {
-        label: "Đăng nhập",
+        label: i18nText("AUTO.lib.utils.line111_1_dang_nhap"),
         onClick: () => {
           router?.push("/dang-nhap");
         },
@@ -122,8 +127,8 @@ export function cartToast(
     return false;
   }
 
-  toast.warning("Thêm vào giỏ thất bại", {
-    description: "Có lỗi gì đó vừa xảy ra vui lòng thử lại.",
+  toast.warning(i18nText("AUTO.lib.utils.line125_2_them_vao_gio_that_bai"), {
+    description: i18nText("AUTO.lib.utils.line126_3_loi_gi_do_vua_xay"),
     position: "top-center",
   });
   return false;

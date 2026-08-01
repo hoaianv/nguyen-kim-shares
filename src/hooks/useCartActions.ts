@@ -1,3 +1,4 @@
+import { i18nText } from "@/lib/i18nText";
 import { useCallback, useMemo } from "react";
 import { IProduct } from "@/interfaces/models/IProduct.interface";
 import { getValidData } from "@/lib/utils";
@@ -28,7 +29,7 @@ export const useCartActions = () => {
       if (!authenticated) {
         return {
           status: false,
-          message: "Bạn cần đăng nhập để thêm sản phẩm vào giỏ hàng!",
+          message: i18nText("AUTO.hooks.usecartactions.line31_0_can_dang_nhap_them_san"),
           data: { items: [] },
           errorCode: 401,
         };
@@ -37,7 +38,7 @@ export const useCartActions = () => {
       if (!Array.isArray(items) || items.length === 0) {
         return {
           status: false,
-          message: "Không có sản phẩm để thêm.",
+          message: i18nText("AUTO.hooks.usecartactions.line40_1_khong_san_pham_them"),
           data: { items: [] },
           errorCode: 400,
         };
@@ -53,7 +54,7 @@ export const useCartActions = () => {
       if (available.length === 0) {
         return {
           status: false,
-          message: "Tất cả sản phẩm đều hết hàng.",
+          message: i18nText("AUTO.hooks.usecartactions.line56_2_tat_ca_san_pham_deu"),
           data: { items: [] },
           errorCode: 400,
         };
@@ -73,15 +74,15 @@ export const useCartActions = () => {
 
         return {
           status: true,
-          message: "Đã thêm sản phẩm vào giỏ hàng.",
+          message: i18nText("AUTO.hooks.usecartactions.line76_3_da_them_san_pham_vao"),
           data: { items: data },
           errorCode: 200,
         };
       } catch (error: any) {
-        console.error("Lỗi khi addToCart:", error);
+        console.error("addToCart error:", error);
         return {
           status: false,
-          message: "Lỗi khi thêm vào giỏ hàng.",
+          message: i18nText("AUTO.hooks.usecartactions.line84_4_loi_khi_them_vao_gio"),
           data: { items: [] },
           errorCode: 500,
           errors: error,
@@ -98,7 +99,7 @@ export const useCartActions = () => {
         return {
           status: false,
           errorCode: 400,
-          message: "Dữ liệu không hợp lệ",
+          message: i18nText("AUTO.hooks.usecartactions.line101_5_du_lieu_khong_hop_le"),
           data: {} as ICartItem,
         };
       }
@@ -113,7 +114,7 @@ export const useCartActions = () => {
             return {
               status: false,
               errorCode: res.errorCode ?? 500,
-              message: res.message ?? "Cập nhật thất bại",
+              message: res.message ?? i18nText("AUTO.hooks.usecartactions.extra117_0_cap_nhat_that_bai"),
               data: {} as ICartItem,
             };
           }
@@ -123,7 +124,7 @@ export const useCartActions = () => {
           return {
             status: true,
             errorCode: 200,
-            message: res.message ?? "Cập nhật số lượng thành công",
+            message: res.message ?? i18nText("AUTO.hooks.usecartactions.extra127_1_cap_nhat_so_luong_thanh"),
             data,
           };
         } else {
@@ -136,16 +137,16 @@ export const useCartActions = () => {
           return {
             status: true,
             errorCode: 200,
-            message: "Đã cập nhật giỏ hàng (local).",
+            message: i18nText("AUTO.hooks.usecartactions.line139_6_da_cap_nhat_gio_hang"),
             data: snap,
           };
         }
       } catch (error: any) {
-        console.error("Lỗi khi updateCart:", error);
+        console.error("updateCart error:", error);
         return {
           status: false,
           errorCode: 500,
-          message: "Lỗi khi cập nhật giỏ hàng.",
+          message: i18nText("AUTO.hooks.usecartactions.line148_7_loi_khi_cap_nhat_gio"),
           data: {} as ICartItem,
           errors: error,
         };
@@ -162,7 +163,7 @@ export const useCartActions = () => {
         return {
           status: false,
           errorCode: 400,
-          message: "Không có sản phẩm để xóa.",
+          message: i18nText("AUTO.hooks.usecartactions.line165_8_khong_san_pham_xoa"),
           data: { removedIds: [] },
         };
       }
@@ -176,7 +177,7 @@ export const useCartActions = () => {
             return {
               status: false,
               errorCode: errorCode ?? 500,
-              message: message ?? "Xóa thất bại",
+              message: message ?? i18nText("AUTO.hooks.usecartactions.extra180_2_xoa_that_bai"),
             };
           }
 
@@ -185,14 +186,14 @@ export const useCartActions = () => {
           return {
             status: true,
             errorCode: 200,
-            message: message ?? "Đã xóa sản phẩm khỏi giỏ hàng.",
+            message: message ?? i18nText("AUTO.hooks.usecartactions.extra189_3_da_xoa_san_pham_khoi"),
           };
         } else {
           removeItems(ids);
           return {
             status: true,
             errorCode: 200,
-            message: "Đã xóa sản phẩm khỏi giỏ hàng (local).",
+            message: i18nText("AUTO.hooks.usecartactions.line195_9_da_xoa_san_pham_khoi"),
             data: { removedIds: ids },
           };
         }
@@ -201,7 +202,7 @@ export const useCartActions = () => {
         return {
           status: false,
           errorCode: 500,
-          message: "Lỗi khi xóa sản phẩm.",
+          message: i18nText("AUTO.hooks.usecartactions.line204_10_loi_khi_xoa_san_pham"),
           data: { removedIds: [] },
           errors: error,
         };

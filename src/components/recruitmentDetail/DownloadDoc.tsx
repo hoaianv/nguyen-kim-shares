@@ -1,4 +1,5 @@
 "use client";
+import { i18nText } from "@/lib/i18nText";
 import { CONST_APIS, CONST_APIS_COMMON } from "@/constants/apis.constant";
 import { Download } from "lucide-react";
 import React, { useState } from "react";
@@ -12,7 +13,7 @@ interface DownloadDocProps {
 const DownloadDoc: React.FC<DownloadDocProps> = ({
   className,
   fileName = "phieu-thong-tin-ung-vien.doc",
-  ariaLabel = "Tải phiếu điền thông tin ứng viên",
+  ariaLabel = i18nText("AUTO.components.recruitmentdetail.downloaddoc.extra16_0_phieu_dien_thong_tin_ung"),
 }) => {
   const [isLoading, setIsLoading] = useState(false);
 
@@ -28,7 +29,7 @@ const DownloadDoc: React.FC<DownloadDocProps> = ({
       );
 
       if (!response.ok) {
-        throw new Error("Không thể tải file");
+        throw new Error(i18nText("AUTO.components.recruitmentdetail.downloaddoc.extra32_1_khong_file"));
       }
 
       const blob = await response.blob();
@@ -43,7 +44,7 @@ const DownloadDoc: React.FC<DownloadDocProps> = ({
       window.URL.revokeObjectURL(url);
     } catch (error) {
       console.error(error);
-      alert("Có lỗi xảy ra khi tải file.");
+      alert(i18nText("AUTO.components.recruitmentdetail.downloaddoc.line46_0_loi_xay_ra_khi_file"));
     } finally {
       setIsLoading(false);
     }
@@ -63,7 +64,7 @@ const DownloadDoc: React.FC<DownloadDocProps> = ({
       className={`${baseClasses} ${className ?? ""}`}
     >
       <Download className="w-4 h-4" />
-      <span className="text-sm">{isLoading ? "Đang tải..." : "Tải phiếu"}</span>
+      <span className="text-sm">{isLoading ? i18nText("AUTO.components.recruitmentdetail.downloaddoc.line66_1_dang") : i18nText("AUTO.components.recruitmentdetail.downloaddoc.line66_2_phieu")}</span>
     </button>
   );
 };

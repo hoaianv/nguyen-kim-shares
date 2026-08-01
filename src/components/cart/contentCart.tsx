@@ -1,5 +1,6 @@
 "use client";
 
+import { i18nText } from "@/lib/i18nText";
 import { CardCart } from "@/components/cart/cardCart";
 import CouponCard from "@/components/common/couponCard";
 import Breadcrumb from "@/components/ui/breadcrumb";
@@ -35,36 +36,33 @@ export default function ContentCart() {
   const router = useRouter();
 
   const invoiceTableHeaders = [
-    { id: 1, text: "Chọn tất cả" },
-    { id: 2, text: "Mô tả" },
-    { id: 3, text: "Giá" },
-    { id: 4, text: "Số lượng" },
-    { id: 5, text: "Tổng" },
-    { id: 6, text: "Xóa" },
+    { id: 1, text: i18nText("AUTO.components.cart.contentcart.extra39_0_chon_tat_ca") },
+    { id: 2, text: i18nText("AUTO.components.cart.contentcart.extra40_1_mo_ta") },
+    { id: 3, text: i18nText("AUTO.components.cart.contentcart.extra41_2_gia") },
+    { id: 4, text: i18nText("AUTO.components.cart.contentcart.extra42_3_so_luong") },
+    { id: 5, text: i18nText("AUTO.components.cart.contentcart.extra43_4_tong") },
+    { id: 6, text: i18nText("AUTO.components.cart.contentcart.extra44_5_xoa") },
   ];
 
   return (
     <div>
       <div className="pt-2">
-        <Breadcrumb items={[{ name: "Giỏ hàng", url: "/cart" }]} />
+        <Breadcrumb items={[{ name: i18nText("AUTO.components.cart.contentcart.line49_0_gio_hang"), url: "/cart" }]} />
       </div>
 
       <div className="py-2">
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-12">
           <div className="lg:col-span-8">
             <div className="mb-4 flex items-center justify-between">
-              <span className="text-lg font-semibold sm:text-xl">
-                Giỏ hàng ({cart.totalItem})
+              <span className="text-lg font-semibold sm:text-xl">{i18nText("AUTO.components.cart.contentcart.line57_1_gio_hang")}{cart.totalItem})
               </span>
 
               <ConfirmPopover
                 trigger={
-                  <button className="text-xs text-red-600 hover:text-red-700 sm:text-sm">
-                    Xóa tất cả
-                  </button>
+                  <button className="text-xs text-red-600 hover:text-red-700 sm:text-sm">{i18nText("AUTO.components.cart.contentcart.line63_2_xoa_tat_ca")}</button>
                 }
-                title="Xóa sản phẩm"
-                description="Bạn có chắc chắn muốn xóa sản phẩm này?"
+                title={i18nText("AUTO.components.cart.contentcart.line66_3_xoa_san_pham")}
+                description={i18nText("AUTO.components.cart.contentcart.extra65_6_chac_chan_muon_xoa_san")}
                 onConfirm={() => removeCart(selectedIds)}
                 position="bottom"
               />
@@ -110,17 +108,13 @@ export default function ContentCart() {
                       isAllSelected ? clearSelected() : selectAll()
                     }
                   />
-                  <span className="text-sm font-medium text-gray-700">
-                    Chọn tất cả
-                  </span>
+                  <span className="text-sm font-medium text-gray-700">{i18nText("AUTO.components.cart.contentcart.line114_4_chon_tat_ca")}</span>
                 </div>
               </div>
 
               <div className="px-1 py-3 sm:px-2">
                 {cart.items.length === 0 ? (
-                  <p className="py-8 text-center text-sm text-gray-600">
-                    Giỏ hàng trống.
-                  </p>
+                  <p className="py-8 text-center text-sm text-gray-600">{i18nText("AUTO.components.cart.contentcart.line122_5_gio_hang")}</p>
                 ) : (
                   <div className="divide-y divide-gray-100 md:max-h-[calc(100vh-340px)] md:overflow-y-auto md:pr-1 scrollbar-thin scrollbar-track-gray-100 scrollbar-thumb-gray-300 hover:scrollbar-thumb-gray-400">
                     {cart.items.map((item) => (
@@ -135,16 +129,12 @@ export default function ContentCart() {
           <div className="space-y-4 lg:col-span-4">
             <div className="rounded-lg bg-white p-3 sm:p-4">
               <div className="mb-3 flex items-center justify-between">
-                <span className="text-sm font-semibold sm:text-base">
-                  Khuyến mãi
-                </span>
+                <span className="text-sm font-semibold sm:text-base">{i18nText("AUTO.components.cart.contentcart.line139_6_khuyen_mai")}</span>
                 <button
                   disabled={!quote?.coupon?.length}
                   onClick={() => setOpen(true)}
                   className="text-xs text-blue-600 hover:underline disabled:text-gray-400 sm:text-sm"
-                >
-                  Chọn hoặc nhập khuyến mãi
-                </button>
+                >{i18nText("AUTO.components.cart.contentcart.line146_7_chon_hoac_nhap_khuyen_mai")}</button>
               </div>
 
               {couponActive &&
@@ -169,16 +159,13 @@ export default function ContentCart() {
                 : null}
 
               {(quote?.coupon?.length ?? 0) === 0 ? (
-                <span className="block text-xs text-gray-500 sm:text-sm">
-                  Đơn hàng chưa đủ điều kiện áp dụng khuyến mãi. Vui lòng mua
-                  thêm để áp dụng
-                </span>
+                <span className="block text-xs text-gray-500 sm:text-sm">{i18nText("AUTO.components.cart.contentcart.line173_8_don_hang_chua_du_dieu")}</span>
               ) : (
                 <Modal
                   isOpen={open}
                   onClose={() => setOpen(false)}
                   size="md"
-                  title="Khuyến mãi và mã giảm giá"
+                  title={i18nText("AUTO.components.cart.contentcart.line181_9_khuyen_mai_ma_giam_gia")}
                 >
                   <div className="max-h-[70vh] overflow-y-auto p-1 scrollbar-thin scrollbar-track-gray-100 scrollbar-thumb-gray-300 hover:scrollbar-thumb-gray-400 sm:max-h-[600px]">
                     {quote?.coupon?.flatMap(
@@ -204,24 +191,18 @@ export default function ContentCart() {
             </div>
 
             <div className="rounded-lg border-t border-gray-200 bg-white p-3 sm:p-4">
-              <span className="mb-3 block text-sm font-semibold sm:text-base">
-                Thanh toán
-              </span>
+              <span className="mb-3 block text-sm font-semibold sm:text-base">{i18nText("AUTO.components.cart.contentcart.line208_10_thanh_toan")}</span>
 
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
-                  <span className="text-xs text-gray-600 sm:text-sm">
-                    Tổng tạm tính
-                  </span>
+                  <span className="text-xs text-gray-600 sm:text-sm">{i18nText("AUTO.components.cart.contentcart.line214_11_tong_tam_tinh")}</span>
                   <span className="text-xs font-semibold sm:text-sm">
                     {formatPrice(quote?.totalPrice)}
                   </span>
                 </div>
 
                 <div className="flex justify-between">
-                  <span className="text-xs text-gray-600 sm:text-sm">
-                    Giảm giá:
-                  </span>
+                  <span className="text-xs text-gray-600 sm:text-sm">{i18nText("AUTO.components.cart.contentcart.line223_12_giam_gia")}</span>
                   <span className="font-medium">
                     {couponCode ? (
                       <div className="flex items-center gap-2">
@@ -235,50 +216,40 @@ export default function ContentCart() {
                         </span>
                       </div>
                     ) : (
-                      "0đ"
+                      i18nText("AUTO.components.cart.contentcart.line238_13_0d")
                     )}
                   </span>
                 </div>
 
                 <div className="flex items-center justify-between border-t border-gray-100 pt-2">
-                  <span className="text-xs text-gray-600 sm:text-sm">
-                    Thành tiền
-                  </span>
+                  <span className="text-xs text-gray-600 sm:text-sm">{i18nText("AUTO.components.cart.contentcart.line245_14_thanh_tien")}</span>
                   <span className="text-base font-semibold text-gray-900 sm:text-lg">
                     {formatPrice(quote?.finalPrice)}
                   </span>
                 </div>
 
                 <div className="flex justify-end">
-                  <span className="text-xs text-gray-500">
-                    (Đã bao gồm VAT)
-                  </span>
+                  <span className="text-xs text-gray-500">{i18nText("AUTO.components.cart.contentcart.line254_15_da_bao_gom_vat")}</span>
                 </div>
 
                 <div className="flex items-center gap-1 pt-3">
                   <button
                     onClick={() => router.push("/san-pham")}
                     className="w-full cursor-pointer rounded-lg border border-amber-300 px-4 py-2.5 text-center text-xs font-bold text-amber-800 transition-colors duration-200 sm:py-2 sm:text-sm"
-                  >
-                    Tiếp tục mua sắm
-                  </button>
+                  >{i18nText("AUTO.components.cart.contentcart.line263_16_tiep_tuc_mua_sam")}</button>
                   <button
                     disabled={!hasSelectedItems}
                     onClick={() => router.push("/thanh-toan")}
                     title={
                       hasSelectedItems
-                        ? "Tiến hành đặt hàng"
-                        : "Hãy chọn ít nhất 1 sản phẩm trước khi đặt hàng"
+                        ? i18nText("AUTO.components.cart.contentcart.line270_17_tien_hanh_dat_hang")
+                        : i18nText("AUTO.components.cart.contentcart.line271_18_hay_chon_it_nhat_1")
                     }
                     className="w-full cursor-pointer rounded-lg border border-amber-300 bg-[#ffb716] px-4 py-2.5 font-bold text-white transition-colors duration-200 hover:bg-amber-100 disabled:cursor-not-allowed disabled:border-gray-200 disabled:bg-gray-200 disabled:text-gray-500 sm:py-2 sm:text-sm"
-                  >
-                    Tiến hành đặt hàng
-                  </button>
+                  >{i18nText("AUTO.components.cart.contentcart.line275_19_tien_hanh_dat_hang")}</button>
                 </div>
                 {!hasSelectedItems ? (
-                  <p className="text-xs text-amber-700">
-                    Hãy chọn ít nhất 1 sản phẩm trước khi đặt hàng.
-                  </p>
+                  <p className="text-xs text-amber-700">{i18nText("AUTO.components.cart.contentcart.line280_20_hay_chon_it_nhat_1")}</p>
                 ) : null}
               </div>
             </div>

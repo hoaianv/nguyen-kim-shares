@@ -1,5 +1,6 @@
 "use client";
 
+import { i18nText } from "@/lib/i18nText";
 import { useEffect, useState } from "react";
 import { X } from "lucide-react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
@@ -109,7 +110,7 @@ export default function BannerPopup() {
               type="button"
               onClick={closePopup}
               className="absolute right-3 top-3 z-10 inline-flex h-9 w-9 items-center justify-center rounded-lg border border-border bg-background text-foreground transition hover:border-[#ffb716] hover:bg-[#fff7da]"
-              aria-label="Đóng"
+              aria-label={i18nText("AUTO.components.home.bannerpopup.line112_0_dong")}
             >
               <X size={18} />
             </button>

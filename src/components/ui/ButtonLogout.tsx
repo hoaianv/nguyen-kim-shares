@@ -1,5 +1,6 @@
 "use client";
 
+import { i18nText } from "@/lib/i18nText";
 import { ButtonHTMLAttributes } from "react";
 import { useRouter } from "next/navigation";
 
@@ -33,18 +34,18 @@ export default function ButtonLogout({
         logout();
 
         toast.success(message, {
-          description: "Bạn đã đăng xuất tài khoản!",
+          description: i18nText("AUTO.components.ui.buttonlogout.line36_0_da_dang_xuat_khoan"),
           position: "top-center",
         });
       } else {
         toast.warning(message, {
-          description: "Bạn chưa đăng xuất tài khoản!",
+          description: i18nText("AUTO.components.ui.buttonlogout.line41_1_chua_dang_xuat_khoan"),
           position: "top-center",
         });
       }
     } catch (err: any) {
-      toast.success("Đăng xuất thất bại", {
-        description: "Bạn chưa đăng xuất tài khoản!",
+      toast.success(i18nText("AUTO.components.ui.buttonlogout.line46_2_dang_xuat_that_bai"), {
+        description: i18nText("AUTO.components.ui.buttonlogout.line47_3_chua_dang_xuat_khoan"),
         position: "top-center",
       });
     } finally {

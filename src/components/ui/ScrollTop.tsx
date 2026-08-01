@@ -1,5 +1,6 @@
 "use client";
 
+import { i18nText } from "@/lib/i18nText";
 import React, { useState, useEffect } from "react";
 import { ChevronUp } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
@@ -57,7 +58,7 @@ const ScrollTop = () => {
               select-none
             "
           style={{ WebkitTapHighlightColor: "transparent" }}
-          aria-label="Scroll to top"
+          aria-label={i18nText("AUTO.components.ui.scrolltop.line60_0_scroll_top")}
         >
           <motion.div
             animate={{ y: [0, -2, 0] }}

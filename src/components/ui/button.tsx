@@ -1,3 +1,4 @@
+import { i18nText } from "@/lib/i18nText";
 import {
   ShoppingCart,
   Zap,
@@ -136,7 +137,7 @@ const Button = ({
 const ButtonDemo = () => {
   return (
     <div className="p-8 space-y-4">
-      <h2 className="text-2xl font-bold mb-6">Button Component Demo</h2>
+      <h2 className="text-2xl font-bold mb-6">{i18nText("AUTO.components.ui.button.line139_0_button_component_demo")}</h2>
 
       {/* Basic variants */}
       <div className="flex flex-wrap gap-4">
@@ -183,19 +184,15 @@ const ButtonDemo = () => {
 
       {/* Icon positions */}
       <div className="flex flex-wrap gap-4">
-        <Button icon={Download} iconPosition="left">
-          Left Icon
-        </Button>
-        <Button icon={Download} iconPosition="right">
-          Right Icon
-        </Button>
+        <Button icon={Download} iconPosition="left">{i18nText("AUTO.components.ui.button.line187_1_left_icon")}</Button>
+        <Button icon={Download} iconPosition="right">{i18nText("AUTO.components.ui.button.line190_2_right_icon")}</Button>
       </div>
 
       {/* States */}
       <div className="flex flex-wrap gap-4">
         <Button loading>Loading</Button>
         <Button disabled>Disabled</Button>
-        <Button fullWidth>Full Width</Button>
+        <Button fullWidth>{i18nText("AUTO.components.ui.button.line198_3_full_width")}</Button>
       </div>
     </div>
   );

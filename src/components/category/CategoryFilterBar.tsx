@@ -1,5 +1,6 @@
 "use client";
 
+import { getCurrentLocale, i18nText } from "@/lib/i18nText";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { ChevronDown, CircleDollarSign, SlidersHorizontal, X } from "lucide-react";
@@ -28,7 +29,11 @@ type FacetGroup = {
 };
 
 const formatVND = (value: number) =>
-  new Intl.NumberFormat("en-US").format(Math.max(0, Math.floor(value))) + "đ";
+  new Intl.NumberFormat(getCurrentLocale() === "en" ? "en-US" : "vi-VN", {
+    style: "currency",
+    currency: "VND",
+    maximumFractionDigits: 0,
+  }).format(Math.max(0, Math.floor(value)));
 
 export default function CategoryFilterBar({
   listBrand,
@@ -104,7 +109,7 @@ export default function CategoryFilterBar({
     if (customerNeeds?.length) {
       groups.push({
         key: ESlugType.Demand,
-        title: "Nhu cầu",
+        title: i18nText("AUTO.components.category.categoryfilterbar.line107_0_nhu_cau"),
         options: customerNeeds
           .filter((need) => Boolean(need.url))
           .map((need) => ({ label: need.title, value: need.url })),
@@ -114,7 +119,7 @@ export default function CategoryFilterBar({
     if (listBrand?.length) {
       groups.push({
         key: ESlugType.Brand,
-        title: "Thương hiệu",
+        title: i18nText("AUTO.components.category.categoryfilterbar.line117_1_thuong_hieu"),
         options: listBrand
           .map((brand) => ({
             label: brand.title,
@@ -212,12 +217,10 @@ export default function CategoryFilterBar({
       ref={containerRef}
       className="hidden space-y-3 lg:block"
     >
-      <h2 className="text-xl font-bold text-slate-900">Chọn theo tiêu chí</h2>
+      <h2 className="text-xl font-bold text-slate-900">{i18nText("AUTO.components.category.categoryfilterbar.line215_2_chon_theo_tieu_chi")}</h2>
       <div className="flex flex-wrap items-center gap-2">
         <div className="mr-1 inline-flex h-10 items-center gap-2 text-sm font-semibold text-foreground">
-          <SlidersHorizontal className="h-4 w-4 text-muted-foreground" />
-          Bộ lọc
-        </div>
+          <SlidersHorizontal className="h-4 w-4 text-muted-foreground" />{i18nText("AUTO.components.category.categoryfilterbar.line219_3_bo_loc")}</div>
 
         <div className="relative">
           <button
@@ -235,7 +238,7 @@ export default function CategoryFilterBar({
               ? `${formatVND(Number(selectedMinPrice ?? rangePrice.minPrice))} - ${formatVND(
                   Number(selectedMaxPrice ?? rangePrice.maxPrice)
                 )}`
-              : "Mức giá"}
+              : i18nText("AUTO.components.category.categoryfilterbar.line238_4_muc_gia")}
             <ChevronDown
               className={`h-4 w-4 transition-transform ${
                 openKey === "price" ? "rotate-180" : ""
@@ -257,7 +260,7 @@ export default function CategoryFilterBar({
                     onKeyDown={(event) => {
                       if (event.key === "Enter") event.currentTarget.blur();
                     }}
-                    aria-label="Giá tối thiểu"
+                    aria-label={i18nText("AUTO.components.category.categoryfilterbar.line260_5_gia_toi_thieu")}
                     className="h-10 w-full rounded-md border border-slate-200 bg-white px-3 text-sm text-slate-500 outline-none transition focus:border-brand focus:ring-2 focus:ring-brand/20"
                   />
                 </label>
@@ -272,7 +275,7 @@ export default function CategoryFilterBar({
                     onKeyDown={(event) => {
                       if (event.key === "Enter") event.currentTarget.blur();
                     }}
-                    aria-label="Giá tối đa"
+                    aria-label={i18nText("AUTO.components.category.categoryfilterbar.line275_6_gia_toi_da")}
                     className="h-10 w-full rounded-md border border-slate-200 bg-white px-3 text-sm text-slate-500 outline-none transition focus:border-brand focus:ring-2 focus:ring-brand/20"
                   />
                 </label>
@@ -307,7 +310,7 @@ export default function CategoryFilterBar({
                     setCurrentMinPrice(value);
                     setMinPriceInput(formatVND(value));
                   }}
-                  aria-label="Giá tối thiểu"
+                  aria-label={i18nText("AUTO.components.category.categoryfilterbar.line310_7_gia_toi_thieu")}
                   className="absolute inset-0 w-full appearance-none bg-transparent"
                 />
                 <input
@@ -321,7 +324,7 @@ export default function CategoryFilterBar({
                     setCurrentMaxPrice(value);
                     setMaxPriceInput(formatVND(value));
                   }}
-                  aria-label="Giá tối đa"
+                  aria-label={i18nText("AUTO.components.category.categoryfilterbar.line324_8_gia_toi_da")}
                   className="absolute inset-0 w-full appearance-none bg-transparent"
                 />
               </div>
@@ -331,18 +334,14 @@ export default function CategoryFilterBar({
                   type="button"
                   onClick={clearPriceRange}
                   className="mt-3 text-xs font-medium text-brand-strong hover:text-brand-deep"
-                >
-                  Bỏ chọn khoảng giá
-                </button>
+                >{i18nText("AUTO.components.category.categoryfilterbar.line335_9_bo_chon_khoang_gia")}</button>
               ) : null}
 
               <button
                 type="button"
                 onClick={() => applyPriceRange()}
                 className="mt-3 inline-flex h-10 w-full items-center justify-center rounded-md border border-brand bg-brand px-3 text-sm font-semibold text-slate-950 transition hover:bg-brand-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
-              >
-                Áp dụng giá
-              </button>
+              >{i18nText("AUTO.components.category.categoryfilterbar.line344_10_ap_dung_gia")}</button>
             </div>
           ) : null}
         </div>
@@ -387,9 +386,7 @@ export default function CategoryFilterBar({
                         onClick={() => setQueryParam(group.key)}
                         className="inline-flex items-center gap-1 text-xs font-medium text-muted-foreground hover:text-foreground"
                       >
-                        <X className="h-3 w-3" />
-                        Bỏ chọn
-                      </button>
+                        <X className="h-3 w-3" />{i18nText("AUTO.components.category.categoryfilterbar.line391_11_bo_chon")}</button>
                     ) : null}
                   </div>
 
@@ -427,9 +424,7 @@ export default function CategoryFilterBar({
             type="button"
             onClick={onResetAll}
             className="ml-auto inline-flex h-10 items-center rounded-md border border-border/60 bg-white px-3 text-sm font-medium text-muted-foreground transition hover:border-amber-300 hover:bg-amber-50/70 hover:text-foreground"
-          >
-            Xóa tất cả
-          </button>
+          >{i18nText("AUTO.components.category.categoryfilterbar.line431_12_xoa_tat_ca")}</button>
         ) : null}
       </div>
     </div>

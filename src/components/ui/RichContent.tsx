@@ -1,4 +1,5 @@
 "use client";
+import { i18nText } from "@/lib/i18nText";
 
 import { useEffect, useRef } from "react";
 
@@ -23,7 +24,7 @@ export default function RichContent({ data, className = "" }: RichContentProps) 
       wrapper.className = "rich-table-scroll";
       wrapper.tabIndex = 0;
       wrapper.setAttribute("role", "region");
-      wrapper.setAttribute("aria-label", "Bảng nội dung");
+      wrapper.setAttribute("aria-label", i18nText("AUTO.components.ui.richcontent.extra26_0_bang_noi_dung"));
 
       table.parentNode?.insertBefore(wrapper, table);
       wrapper.appendChild(table);

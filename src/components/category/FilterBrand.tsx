@@ -1,5 +1,6 @@
 "use client";
 
+import { i18nText } from "@/lib/i18nText";
 import Image from "next/image";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { IBrand } from "@/interfaces/models/ICategoryDetail.interface";
@@ -24,7 +25,7 @@ function FilterBrand({ listBrand }: { listBrand: IBrand[] }) {
 
   return (
     <section className="space-y-3">
-      <h2 className="text-xl font-bold text-slate-900">Chọn theo thương hiệu</h2>
+      <h2 className="text-xl font-bold text-slate-900">{i18nText("AUTO.components.category.filterbrand.line27_0_chon_theo_thuong_hieu")}</h2>
       <div className="flex flex-wrap gap-2">
         {listBrand.map((brand) => {
           const slug = brand.slug || (brand as { url?: string }).url || "";

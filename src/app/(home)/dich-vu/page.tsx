@@ -1,3 +1,4 @@
+import { i18nText } from "@/lib/i18nText";
 import { getAll } from "@/apis/models/services.apis";
 import CardService from "@/components/service/cardService";
 import { ServiceEmpty } from "@/components/service/ServiceEmpty";
@@ -22,7 +23,7 @@ px-4 sm:px-6 lg:px-8 xl:px-16 2xl:px-20
 "
     >
       <div className="pt-2">
-        <Breadcrumb items={[{ name: "Dịch vụ", url: "/dich-vu" }]} />
+        <Breadcrumb items={[{ name: i18nText("AUTO.app.dich.vu.line25_0_dich_vu"), url: "/dich-vu" }]} />
       </div>
 
       {data && data?.items.length > 0 ? (

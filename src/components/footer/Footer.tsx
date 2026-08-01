@@ -1,5 +1,6 @@
 "use client";
 
+import { i18nText } from "@/lib/i18nText";
 import {
   BadgePercent,
   Banknote,
@@ -20,23 +21,23 @@ import { useStateStore } from "@/stores/stateStore";
 
 const serviceItems = [
   {
-    title: "Chính sách giao hàng",
-    description: "Nhận hàng và thanh toán tại nhà",
+    title: i18nText("AUTO.components.footer.footer.line23_0_chinh_sach_giao_hang"),
+    description: i18nText("AUTO.components.footer.footer.line24_1_nhan_hang_thanh_toan_nha"),
     icon: Truck,
   },
   {
-    title: "Đổi trả dễ dàng",
-    description: "1 đổi 1 trong 7 ngày",
+    title: i18nText("AUTO.components.footer.footer.line28_2_doi_tra_dang"),
+    description: i18nText("AUTO.components.footer.footer.line29_3_1_doi_1_7_ngay"),
     icon: RefreshCcw,
   },
   {
-    title: "Giá luôn luôn tốt nhất",
-    description: "Giá cả hợp lý, nhiều ưu đãi tốt",
+    title: i18nText("AUTO.components.footer.footer.line33_4_gia_luon_luon_tot_nhat"),
+    description: i18nText("AUTO.components.footer.footer.line34_5_gia_ca_hop_ly_nhieu"),
     icon: BadgePercent,
   },
   {
-    title: "Hỗ trợ nhiệt tình",
-    description: "Tư vấn, giải đáp mọi thắc mắc",
+    title: i18nText("AUTO.components.footer.footer.line38_6_ho_tro_nhiet_tinh"),
+    description: i18nText("AUTO.components.footer.footer.line39_7_tu_van_giai_dap_moi"),
     icon: Headset,
   },
 ];
@@ -218,7 +219,7 @@ export default function Footer() {
         <div className="mx-auto grid w-full max-w-[1520px] gap-6 px-3 py-8 text-sm text-slate-700 sm:px-4 md:grid-cols-2 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)_180px] lg:px-6">
           <div>
             <h3 className="text-sm font-bold uppercase text-slate-950">
-              {companyAddress?.company || "Công ty TNHH Vi tính Nguyên Kim"}
+              {companyAddress?.company || i18nText("AUTO.components.footer.footer.line221_8_cong_ty_tnhh_vi_tinh")}
             </h3>
 
             {companyAddress?.certificate ? (
@@ -244,7 +245,7 @@ export default function Footer() {
 
           <div>
             <h3 className="text-sm font-bold text-slate-950">
-              {companyAddress?.title || "Địa chỉ trụ sở chính"}
+              {companyAddress?.title || i18nText("AUTO.components.footer.footer.line247_9_dia_chi_tru_so_chinh")}
             </h3>
             {companyAddress?.address ? (
               <div
@@ -254,15 +255,13 @@ export default function Footer() {
             ) : null}
             {companyAddress?.workTime ? (
               <p className="mt-2 leading-6">
-                <span className="font-semibold text-slate-900">
-                  Thời gian làm việc:{" "}
+                <span className="font-semibold text-slate-900">{i18nText("AUTO.components.footer.footer.line258_10_thoi_gian_lam_viec")}{" "}
                 </span>
                 {companyAddress.workTime}
               </p>
             ) : null}
             {companyAddress?.email ? (
-              <p className="mt-2 break-all leading-6">
-                Email: {companyAddress.email}
+              <p className="mt-2 break-all leading-6">{i18nText("AUTO.components.footer.footer.extra265_0_email")}{companyAddress.email}
               </p>
             ) : null}
           </div>
@@ -277,17 +276,13 @@ export default function Footer() {
               >
                 <Image
                   src={certificate.picture}
-                  alt={certificate.title || "Đã thông báo Bộ Công Thương"}
+                  alt={certificate.title || i18nText("AUTO.components.footer.footer.line280_11_da_thong_bao_bo_cong")}
                   fill
                   className="object-contain object-left lg:object-right"
                 />
               </Link>
             ) : (
-              <span className="inline-flex h-14 items-center rounded-md bg-sky-600 px-3 text-xs font-bold text-white">
-                ĐÃ THÔNG BÁO
-                <br />
-                BỘ CÔNG THƯƠNG
-              </span>
+              <span className="inline-flex h-14 items-center rounded-md bg-sky-600 px-3 text-xs font-bold text-white">{i18nText("AUTO.components.footer.footer.line287_12_da_thong_bao")}<br />{i18nText("AUTO.components.footer.footer.line289_13_bo_cong_thuong")}</span>
             )}
           </div>
         </div>

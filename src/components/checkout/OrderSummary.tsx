@@ -1,5 +1,6 @@
 "use client";
 
+import { i18nText } from "@/lib/i18nText";
 import { checkout } from "@/apis/models/cart.apis";
 import CouponCard from "@/components/common/couponCard";
 import Button from "@/components/ui/button";
@@ -47,7 +48,7 @@ const OrderSummary = ({ payload }: { payload: IPayloadOrder }) => {
 
   const handleOrder = (data: IPayloadOrder) => {
     if (!hasSelectedItems) {
-      toast.warning("Hãy chọn ít nhất 1 sản phẩm trước khi thanh toán.", {
+      toast.warning(i18nText("AUTO.components.checkout.ordersummary.line50_0_hay_chon_it_nhat_1"), {
         position: "top-center",
       });
       return;
@@ -61,20 +62,20 @@ const OrderSummary = ({ payload }: { payload: IPayloadOrder }) => {
 
         if (responseData?.orderId) {
           router.replace(`/xac-nhan-thanh-toan/${responseData.orderId}`);
-          toast.success(response.message || "Thanh toán thành công", {
-            description: "Thanh toán đơn hàng thành công",
+          toast.success(response.message || i18nText("AUTO.components.checkout.ordersummary.extra65_0_thanh_toan_thanh_cong"), {
+            description: i18nText("AUTO.components.checkout.ordersummary.line65_1_thanh_toan_don_hang_thanh"),
             position: "top-center",
           });
         } else {
           toast.error(response.message, {
-            description: "Thanh toán đơn hàng không thành công",
+            description: i18nText("AUTO.components.checkout.ordersummary.line70_2_thanh_toan_don_hang_khong"),
             position: "top-center",
           });
         }
       } catch (error) {
         console.error("Checkout error:", error);
-        toast.error("Đã xảy ra lỗi hệ thống", {
-          description: "Vui lòng thử lại sau!",
+        toast.error(i18nText("AUTO.components.checkout.ordersummary.line76_3_da_xay_ra_loi_he"), {
+          description: i18nText("AUTO.components.checkout.ordersummary.line77_4_vui_long_thu_lai_sau"),
           position: "top-center",
         });
       } finally {
@@ -86,12 +87,8 @@ const OrderSummary = ({ payload }: { payload: IPayloadOrder }) => {
   return (
     <div className="overflow-hidden rounded-[28px] border border-slate-200/80 bg-white/90 p-4 shadow-sm sm:p-6">
       <div className="mb-4 flex items-center justify-between">
-        <h3 className="text-base font-semibold text-slate-950 sm:text-lg">
-          Thông tin đơn hàng
-        </h3>
-        <Link href="/gio-hang" className="text-xs font-medium text-amber-700 hover:underline sm:text-sm">
-          Chỉnh sửa
-        </Link>
+        <h3 className="text-base font-semibold text-slate-950 sm:text-lg">{i18nText("AUTO.components.checkout.ordersummary.line90_5_thong_tin_don_hang")}</h3>
+        <Link href="/gio-hang" className="text-xs font-medium text-amber-700 hover:underline sm:text-sm">{i18nText("AUTO.components.checkout.ordersummary.line93_6_chinh_sua")}</Link>
       </div>
 
       <div className="mb-4 flex max-h-[clamp(220px,28vh,360px)] flex-col gap-3 overflow-y-auto pr-1 scrollbar-thin scrollbar-track-gray-100 scrollbar-thumb-gray-300 hover:scrollbar-thumb-gray-400">
@@ -131,24 +128,18 @@ const OrderSummary = ({ payload }: { payload: IPayloadOrder }) => {
             </div>
           ))
         ) : (
-          <p className="text-sm text-slate-500">
-            Không có sản phẩm nào được chọn.
-          </p>
+          <p className="text-sm text-slate-500">{i18nText("AUTO.components.checkout.ordersummary.line135_7_khong_san_pham_nao_duoc")}</p>
         )}
       </div>
 
       <div className="my-3 sm:my-4">
         <div className="mb-2 flex items-center justify-between">
-          <span className="text-sm font-semibold text-slate-900 sm:text-base">
-            Khuyến mãi
-          </span>
+          <span className="text-sm font-semibold text-slate-900 sm:text-base">{i18nText("AUTO.components.checkout.ordersummary.line143_8_khuyen_mai")}</span>
           <button
             disabled={!quote?.coupon?.length}
             onClick={() => setOpen(true)}
             className="text-xs font-medium text-amber-700 hover:underline disabled:text-slate-400 sm:text-sm"
-          >
-            Chọn hoặc nhập khuyến mãi
-          </button>
+          >{i18nText("AUTO.components.checkout.ordersummary.line150_9_chon_hoac_nhap_khuyen_mai")}</button>
         </div>
 
         {couponActive &&
@@ -173,16 +164,13 @@ const OrderSummary = ({ payload }: { payload: IPayloadOrder }) => {
           : null}
 
         {(quote?.coupon?.length ?? 0) === 0 ? (
-          <span className="block text-xs leading-relaxed text-slate-500 sm:text-sm">
-            Đơn hàng chưa đủ điều kiện áp dụng khuyến mãi. Vui lòng mua thêm để
-            áp dụng
-          </span>
+          <span className="block text-xs leading-relaxed text-slate-500 sm:text-sm">{i18nText("AUTO.components.checkout.ordersummary.line177_10_don_hang_chua_du_dieu")}</span>
         ) : (
           <Modal
             isOpen={open}
             onClose={() => setOpen(false)}
             size="md"
-            title="Khuyến mãi và mã giảm giá"
+            title={i18nText("AUTO.components.checkout.ordersummary.line185_11_khuyen_mai_ma_giam_gia")}
           >
             <div className="max-h-[400px] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 hover:scrollbar-thumb-gray-400 p-1 sm:max-h-[600px]">
               {quote?.coupon?.flatMap(
@@ -207,7 +195,7 @@ const OrderSummary = ({ payload }: { payload: IPayloadOrder }) => {
 
       <div className="space-y-3 border-t border-slate-200/80 pt-4">
         <div className="flex items-center justify-between gap-3">
-          <span className="text-sm text-slate-600 sm:text-base">Giảm giá:</span>
+          <span className="text-sm text-slate-600 sm:text-base">{i18nText("AUTO.components.checkout.ordersummary.line210_12_giam_gia")}</span>
           <span className="text-sm font-medium sm:text-base">
             {couponCode ? (
               <div className="flex items-center gap-2">
@@ -217,34 +205,30 @@ const OrderSummary = ({ payload }: { payload: IPayloadOrder }) => {
                 <span>{formatPrice(couponActive?.value)}</span>
               </div>
             ) : (
-              "0đ"
+              i18nText("AUTO.components.checkout.ordersummary.line220_13_0d")
             )}
           </span>
         </div>
 
         <div className="flex items-center justify-between">
-          <span className="text-sm text-slate-600 sm:text-base">
-            Phí vận chuyển:
-          </span>
-          <span className="text-sm font-medium text-slate-900 sm:text-base">
-            Kinh doanh phản hồi
-          </span>
+          <span className="text-sm text-slate-600 sm:text-base">{i18nText("AUTO.components.checkout.ordersummary.line227_14_phi_van_chuyen")}</span>
+          <span className="text-sm font-medium text-slate-900 sm:text-base">{i18nText("AUTO.components.checkout.ordersummary.line230_15_kinh_doanh_phan_hoi")}</span>
         </div>
 
         <div className="flex items-center justify-between">
-          <span className="text-sm text-slate-900 sm:text-base">Tổng tạm tính</span>
+          <span className="text-sm text-slate-900 sm:text-base">{i18nText("AUTO.components.checkout.ordersummary.line235_16_tong_tam_tinh")}</span>
           <span className="text-sm font-medium text-slate-900 sm:text-base">
             {formatPrice(quote?.totalPrice)}
           </span>
         </div>
 
         <div className="flex items-end justify-between border-t border-slate-200/80 pt-3">
-          <span className="text-lg font-semibold text-slate-950">Thành tiền</span>
+          <span className="text-lg font-semibold text-slate-950">{i18nText("AUTO.components.checkout.ordersummary.line242_17_thanh_tien")}</span>
           <div className="text-right">
             <div className="text-2xl font-bold text-rose-600">
               {formatPrice(quote?.finalPrice)}
             </div>
-            <div className="text-xs text-slate-500">(Đã bao gồm VAT)</div>
+            <div className="text-xs text-slate-500">{i18nText("AUTO.components.checkout.ordersummary.line247_18_da_bao_gom_vat")}</div>
           </div>
         </div>
       </div>
@@ -256,21 +240,14 @@ const OrderSummary = ({ payload }: { payload: IPayloadOrder }) => {
           size="md"
           className="mt-4 py-3 text-sm sm:py-4 sm:text-base"
           disabled={loading || !hasSelectedItems}
-        >
-          THANH TOÁN
-        </Button>
+        >{i18nText("AUTO.components.checkout.ordersummary.line260_19_thanh_toan")}</Button>
 
       {!hasSelectedItems ? (
-        <p className="mt-3 text-xs leading-relaxed text-amber-700">
-          Hãy chọn ít nhất 1 sản phẩm trong giỏ hàng để tiếp tục thanh toán.
-        </p>
+        <p className="mt-3 text-xs leading-relaxed text-amber-700">{i18nText("AUTO.components.checkout.ordersummary.line265_20_hay_chon_it_nhat_1")}</p>
       ) : null}
 
-      <p className="mt-4 text-xs leading-relaxed text-slate-500">
-        Nhấn Thanh toán đồng nghĩa với việc bạn đã đọc và đồng ý tuân theo{" "}
-        <Link href={"/"} className="text-amber-700 hover:underline">
-          Điều khoản và Điều kiện
-        </Link>
+      <p className="mt-4 text-xs leading-relaxed text-slate-500">{i18nText("AUTO.components.checkout.ordersummary.line270_21_nhan_thanh_toan_dong_nghia")}{" "}
+        <Link href={"/"} className="text-amber-700 hover:underline">{i18nText("AUTO.components.checkout.ordersummary.line272_22_dieu_khoan_dieu_kien")}</Link>
       </p>
     </div>
   );

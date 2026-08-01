@@ -1,5 +1,6 @@
 "use client";
 
+import { i18nText } from "@/lib/i18nText";
 import { useTransition } from "react";
 import { useForm, Controller } from "react-hook-form";
 import { z } from "zod";
@@ -11,12 +12,12 @@ import { useStateStore } from "@/stores/stateStore";
 import { productNotifyRegister } from "@/apis/models/products.apis";
 
 const schema = z.object({
-  fullName: z.string().min(1, "Họ tên là bắt buộc"),
+  fullName: z.string().min(1, i18nText("AUTO.components.product.inforegisterform.line14_0_ho_ten_bat_buoc")),
   phone: z
     .string()
-    .min(1, "Số điện thoại là bắt buộc")
-    .regex(/^\d{10}$/, "Số điện thoại phải có đúng 10 chữ số"),
-  email: z.string().email("Email không hợp lệ").or(z.literal("")),
+    .min(1, i18nText("AUTO.components.product.inforegisterform.line17_1_so_dien_thoai_bat_buoc"))
+    .regex(/^\d{10}$/, i18nText("AUTO.components.product.inforegisterform.line18_2_so_dien_thoai_phai_dung")),
+  email: z.string().email(i18nText("AUTO.components.product.inforegisterform.line19_3_email_khong_hop_le")).or(z.literal("")),
   address: z.string().optional().or(z.literal("")),
 });
 
@@ -59,8 +60,8 @@ export default function InfoRegisterForm({
         await productNotifyRegister(payload, slug);
 
         // Hiển thị thông báo thành công
-        toast.success("Đăng ký nhận thông tin đã được gửi", {
-          description: "Sẽ có nhân viên kinh doanh liên hệ với bạn",
+        toast.success(i18nText("AUTO.components.product.inforegisterform.line62_4_dang_ky_nhan_thong_tin"), {
+          description: i18nText("AUTO.components.product.inforegisterform.line63_5_se_nhan_vien_kinh_doanh"),
           duration: 4000,
         });
 
@@ -68,8 +69,8 @@ export default function InfoRegisterForm({
         reset();
       } catch (error) {
         console.error("Error registering product notify:", error);
-        toast.error("Gửi đăng ký thất bại", {
-          description: "Vui lòng thử lại hoặc liên hệ hotline để được hỗ trợ",
+        toast.error(i18nText("AUTO.components.product.inforegisterform.line71_6_gui_dang_ky_that_bai"), {
+          description: i18nText("AUTO.components.product.inforegisterform.line72_7_vui_long_thu_lai_hoac"),
           duration: 4000,
         });
       } finally {
@@ -83,9 +84,7 @@ export default function InfoRegisterForm({
       {/* Header - giảm padding */}
       <div className="px-3 py-2 border-b border-gray-200 flex items-center gap-2">
         <span className="text-base">🎁</span>
-        <h3 className="text-md font-semibold text-gray-800">
-          ĐĂNG KÝ NHẬN THÔNG TIN
-        </h3>
+        <h3 className="text-md font-semibold text-gray-800">{i18nText("AUTO.components.product.inforegisterform.line87_8_dang_ky_nhan_thong_tin")}</h3>
       </div>
 
       {/* Form - giảm padding và spacing */}
@@ -99,7 +98,7 @@ export default function InfoRegisterForm({
                 onChange={field.onChange}
                 value={field.value}
                 id="fullName"
-                label="Họ tên (bắt buộc)"
+                label={i18nText("AUTO.components.product.inforegisterform.line102_9_ho_ten_bat_buoc")}
                 error={errors.fullName}
               />
             )}
@@ -112,7 +111,7 @@ export default function InfoRegisterForm({
                 onChange={field.onChange}
                 value={field.value}
                 id="phone"
-                label="Số điện thoại (bắt buộc)"
+                label={i18nText("AUTO.components.product.inforegisterform.line115_10_so_dien_thoai_bat_buoc")}
                 error={errors.phone}
               />
             )}
@@ -125,7 +124,7 @@ export default function InfoRegisterForm({
                 onChange={field.onChange}
                 value={field.value}
                 id="email"
-                label="Email (để nhận phản hồi qua email)"
+                label={i18nText("AUTO.components.product.inforegisterform.line128_11_email_nhan_phan_hoi_qua")}
                 type="email"
                 error={errors.email}
               />
@@ -139,7 +138,7 @@ export default function InfoRegisterForm({
                 onChange={field.onChange}
                 value={field.value}
                 id="address"
-                label="Địa chỉ"
+                label={i18nText("AUTO.components.product.inforegisterform.line142_12_dia_chi")}
                 error={errors.address as any}
               />
             )}
@@ -153,7 +152,7 @@ export default function InfoRegisterForm({
           size="md"
           className="w-full bg-gradient-to-r from-indigo-500 via-blue-500 to-indigo-600 hover:from-indigo-600 hover:via-blue-600 hover:to-indigo-700"
         >
-          {loading ? "Đang gửi..." : "Đăng ký nhận thông tin"}
+          {loading ? i18nText("AUTO.components.product.inforegisterform.line156_13_dang_gui") : i18nText("AUTO.components.product.inforegisterform.line156_14_dang_ky_nhan_thong_tin")}
         </Button>
       </form>
     </div>

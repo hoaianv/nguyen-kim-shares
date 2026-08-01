@@ -1,4 +1,5 @@
 "use client";
+import { i18nText } from "@/lib/i18nText";
 import React, { useState, useTransition } from "react";
 import { useForm, Controller } from "react-hook-form";
 import { z } from "zod";
@@ -17,10 +18,10 @@ import Image from "next/image";
 import { bannerKeys } from "@/constants/values.constant";
 
 const adviseSchema = z.object({
-  fullName: z.string().min(1, "Họ tên là bắt buộc"),
-  email: z.string().email("Email không hợp lệ"),
-  catId: z.string().min(1, "Chuyên mục là bắt buộc"),
-  content: z.string().min(1, "Vui lòng nhập nội dung câu hỏi"),
+  fullName: z.string().min(1, i18nText("AUTO.components.advise.formadvise.line20_0_ho_ten_bat_buoc")),
+  email: z.string().email(i18nText("AUTO.components.advise.formadvise.line21_1_email_khong_hop_le")),
+  catId: z.string().min(1, i18nText("AUTO.components.advise.formadvise.line22_2_chuyen_muc_bat_buoc")),
+  content: z.string().min(1, i18nText("AUTO.components.advise.formadvise.line23_3_vui_long_nhap_noi_dung")),
 });
 
 type AdviseFormData = z.infer<typeof adviseSchema>;
@@ -60,19 +61,19 @@ const FormAdvise: React.FC<AdviseFormProps> = ({ advises }) => {
 
         if (getValidData(response)) {
           toast.success(response.message, {
-            description: "Chúng tôi sẽ phản hồi bạn sớm nhất.",
+            description: i18nText("AUTO.components.advise.formadvise.line63_4_chung_toi_se_phan_hoi"),
             position: "top-center",
           });
           reset();
         } else {
           toast.success(response.message, {
-            description: "Có vấn đề trong quá trình gửi tư vấn.",
+            description: i18nText("AUTO.components.advise.formadvise.line69_5_van_qua_trinh_gui_tu"),
             position: "top-center",
           });
         }
       } catch (err) {
-        toast.error("Có lỗi xảy ra!", {
-          description: "Vui lòng thử lại sau.",
+        toast.error(i18nText("AUTO.components.advise.formadvise.line74_6_loi_xay_ra"), {
+          description: i18nText("AUTO.components.advise.formadvise.line75_7_vui_long_thu_lai_sau"),
           position: "top-center",
         });
       } finally {
@@ -98,9 +99,7 @@ const FormAdvise: React.FC<AdviseFormProps> = ({ advises }) => {
               variant={"success"}
               size="md"
               className="mt-3"
-            >
-              Gửi câu hỏi ngay
-            </Button>
+            >{i18nText("AUTO.components.advise.formadvise.line102_8_gui_cau_hoi_ngay")}</Button>
           </div>
         </div>
       )}
@@ -109,7 +108,7 @@ const FormAdvise: React.FC<AdviseFormProps> = ({ advises }) => {
         isOpen={open}
         onClose={() => setOpen(false)}
         size="md"
-        title="Đặt câu hỏi tư vấn "
+        title={i18nText("AUTO.components.advise.formadvise.line112_9_dat_cau_hoi_tu_van")}
       >
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-7">
           <Controller
@@ -119,7 +118,7 @@ const FormAdvise: React.FC<AdviseFormProps> = ({ advises }) => {
               <InputField
                 {...field}
                 id="fullName"
-                label="Họ tên"
+                label={i18nText("AUTO.components.advise.formadvise.line122_10_ho_ten")}
                 error={errors.fullName}
               />
             )}
@@ -132,7 +131,7 @@ const FormAdvise: React.FC<AdviseFormProps> = ({ advises }) => {
               <InputField
                 {...field}
                 id="email"
-                label="Email"
+                label={i18nText("AUTO.components.advise.formadvise.extra134_0_email")}
                 type="email"
                 error={errors.email}
               />
@@ -145,7 +144,7 @@ const FormAdvise: React.FC<AdviseFormProps> = ({ advises }) => {
             render={({ field }) => (
               <SelectField
                 id="catId"
-                label="Chuyên mục"
+                label={i18nText("AUTO.components.advise.formadvise.line148_11_chuyen_muc")}
                 value={field.value}
                 onChange={field.onChange}
                 error={errors.catId}
@@ -153,7 +152,7 @@ const FormAdvise: React.FC<AdviseFormProps> = ({ advises }) => {
                   value: item.id.toString(),
                   label: item.title,
                 }))}
-                placeholder="Chọn chuyên mục "
+                placeholder={i18nText("AUTO.components.advise.formadvise.line156_12_chon_chuyen_muc")}
               />
             )}
           />
@@ -165,7 +164,7 @@ const FormAdvise: React.FC<AdviseFormProps> = ({ advises }) => {
               <TextArea
                 {...field}
                 id="content"
-                label="Nội dung câu hỏi"
+                label={i18nText("AUTO.components.advise.formadvise.line168_13_noi_dung_cau_hoi")}
                 error={errors.content}
               />
             )}
@@ -176,9 +175,7 @@ const FormAdvise: React.FC<AdviseFormProps> = ({ advises }) => {
             variant="success"
             size="md"
             className="mt-3"
-          >
-            Gửi liên hệ
-          </Button>
+          >{i18nText("AUTO.components.advise.formadvise.line180_14_gui_lien_he")}</Button>
         </form>
       </Modal>
     </>

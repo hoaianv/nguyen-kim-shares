@@ -1,4 +1,5 @@
 "use client";
+import { i18nText } from "@/lib/i18nText";
 import Button from "@/components/ui/button";
 import { MessageSquare } from "lucide-react";
 
@@ -13,16 +14,11 @@ export default function EmptyAdvise() {
       </div>
 
       {/* Tiêu đề */}
-      <h3 className="text-xl font-semibold text-gray-800">
-        Hiện chưa có câu hỏi tư vấn nào
-      </h3>
+      <h3 className="text-xl font-semibold text-gray-800">{i18nText("AUTO.components.advise.emptyadvise.line17_0_hien_chua_cau_hoi_tu")}</h3>
 
       {/* Mô tả */}
-      <p className="mt-2 text-gray-600 max-w-md mx-auto">
-        Hãy là người đầu tiên gửi câu hỏi để được đội ngũ{" "}
-        <span className="font-medium text-gray-900">chuyên gia</span> của chúng
-        tôi tư vấn chi tiết và nhanh chóng ✨
-      </p>
+      <p className="mt-2 text-gray-600 max-w-md mx-auto">{i18nText("AUTO.components.advise.emptyadvise.line22_1_hay_nguoi_dau_tien_gui")}{" "}
+        <span className="font-medium text-gray-900">{i18nText("AUTO.components.advise.emptyadvise.line23_2_chuyen_gia")}</span>{i18nText("AUTO.components.advise.emptyadvise.line23_3_chung_toi_tu_van_chi")}</p>
     </div>
   );
 }

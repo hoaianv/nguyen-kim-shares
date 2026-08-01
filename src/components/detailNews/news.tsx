@@ -1,3 +1,4 @@
+import { i18nText } from "@/lib/i18nText";
 import { getSchema } from "@/apis/models/news.apis";
 import Schema from "@/components/detailNews/schema";
 import Breadcrumb from "@/components/ui/breadcrumb";
@@ -60,7 +61,7 @@ export default async function News({ data, slug }: NewsProps) {
 
                 <div className="flex items-center gap-1">
                   <Eye size={14} className="sm:w-4 sm:h-4" />
-                  <span>{items?.views} lượt xem</span>
+                  <span>{items?.views}{i18nText("AUTO.components.detailnews.news.line63_0_luot_xem")}</span>
                 </div>
               </div>
             </div>

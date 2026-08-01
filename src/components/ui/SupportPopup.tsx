@@ -1,5 +1,6 @@
 "use client";
 
+import { i18nText } from "@/lib/i18nText";
 import { ChevronRight, Headset, Mail, Phone, User, X } from "lucide-react";
 
 interface SupportPopupProps {
@@ -15,7 +16,7 @@ const supportContacts = [
     icon: Phone,
   },
   {
-    label: "Email liên hệ",
+    label: i18nText("AUTO.components.ui.supportpopup.line18_0_email_lien_he"),
     value: "linhhtm@nguyenkimcomputer.vn",
     href: "mailto:linhhtm@nguyenkimcomputer.vn",
     icon: Mail,
@@ -34,7 +35,7 @@ export function SupportPopup({ isOpen, setIsOpen }: SupportPopupProps) {
     >
       <button
         type="button"
-        aria-label="Đóng hỗ trợ khách hàng"
+        aria-label={i18nText("AUTO.components.ui.supportpopup.line37_1_dong_ho_tro_khach_hang")}
         className="absolute inset-0 bg-slate-950/45 backdrop-blur-[2px]"
         onClick={() => setIsOpen(false)}
       />
@@ -49,19 +50,15 @@ export function SupportPopup({ isOpen, setIsOpen }: SupportPopupProps) {
               <h2
                 id="support-popup-title"
                 className="text-base font-bold text-slate-950"
-              >
-                Hỗ trợ khách hàng
-              </h2>
-              <p className="mt-0.5 text-sm text-slate-500">
-                Chúng tôi luôn sẵn sàng hỗ trợ bạn.
-              </p>
+              >{i18nText("AUTO.components.ui.supportpopup.line53_2_ho_tro_khach_hang")}</h2>
+              <p className="mt-0.5 text-sm text-slate-500">{i18nText("AUTO.components.ui.supportpopup.line56_3_chung_toi_luon_san_sang")}</p>
             </div>
           </div>
           <button
             type="button"
             onClick={() => setIsOpen(false)}
             className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-slate-100 text-slate-500 transition hover:bg-brand-soft hover:text-brand-deep focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand"
-            aria-label="Đóng"
+            aria-label={i18nText("AUTO.components.ui.supportpopup.line64_4_dong")}
           >
             <X className="h-4 w-4" />
           </button>
@@ -74,15 +71,9 @@ export function SupportPopup({ isOpen, setIsOpen }: SupportPopupProps) {
               <span className="absolute bottom-0 right-0 h-3.5 w-3.5 rounded-full border-2 border-white bg-emerald-500" />
             </div>
             <div>
-              <p className="text-xs font-medium uppercase tracking-wide text-slate-500">
-                Kinh doanh Online
-              </p>
-              <p className="mt-0.5 text-base font-bold text-slate-950">
-                Hồ Thị Mỹ Linh
-              </p>
-              <p className="text-sm text-slate-600">
-                Tư vấn viên chuyên nghiệp
-              </p>
+              <p className="text-xs font-medium uppercase tracking-wide text-slate-500">{i18nText("AUTO.components.ui.supportpopup.line78_5_kinh_doanh_online")}</p>
+              <p className="mt-0.5 text-base font-bold text-slate-950">{i18nText("AUTO.components.ui.supportpopup.line81_6_ho_thi_my_linh")}</p>
+              <p className="text-sm text-slate-600">{i18nText("AUTO.components.ui.supportpopup.line84_7_tu_van_vien_chuyen_nghiep")}</p>
             </div>
           </div>
 
@@ -112,9 +103,7 @@ export function SupportPopup({ isOpen, setIsOpen }: SupportPopupProps) {
             })}
           </div>
 
-          <p className="pt-1 text-center text-xs text-slate-500">
-            Phản hồi trong vòng 5 phút.
-          </p>
+          <p className="pt-1 text-center text-xs text-slate-500">{i18nText("AUTO.components.ui.supportpopup.line116_8_phan_hoi_vong_5_phut")}</p>
         </div>
       </div>
     </div>

@@ -1,3 +1,4 @@
+import { i18nText } from "@/lib/i18nText";
 import { IPromotion } from "@/interfaces/models/IPromotion.interface";
 import Image from "next/image";
 import Link from "next/link";
@@ -46,10 +47,8 @@ export default function CardPromotion({ item }: { item: IPromotion }) {
                 font-semibold 
                 uppercase 
                 tracking-wide"
-              aria-label="Đã hết hạn"
-            >
-              Hết hạn
-            </span>
+              aria-label={i18nText("AUTO.components.promotion.cardpromotion.line49_0_da_het_han")}
+            >{i18nText("AUTO.components.promotion.cardpromotion.line51_1_het_han")}</span>
           )}
 
           <Image
@@ -96,7 +95,7 @@ export default function CardPromotion({ item }: { item: IPromotion }) {
               text-xs
               sm:text-sm"
             >
-              <span>Đến ngày {item.endDate}</span>
+              <span>{i18nText("AUTO.components.promotion.cardpromotion.line99_2_den_ngay")}{item.endDate}</span>
             </div>
           )}
         </div>

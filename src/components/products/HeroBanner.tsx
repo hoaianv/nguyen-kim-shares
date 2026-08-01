@@ -1,4 +1,5 @@
 "use client";
+import { i18nText } from "@/lib/i18nText";
 import { bannerKeys } from "@/constants/values.constant";
 import { useStateStore } from "@/stores/stateStore";
 import Image from "next/image";
@@ -118,7 +119,7 @@ const HeroBanner: React.FC = () => {
                 width={bannerMain.width}
                 height={bannerMain.height}
                 src={bannerMain.picture}
-                alt={bannerMain.title || "Main Banner"}
+                alt={bannerMain.title || i18nText("AUTO.components.products.herobanner.line121_0_main_banner")}
                 className="w-full h-full object-cover"
                 priority
               />
@@ -164,7 +165,7 @@ const HeroBanner: React.FC = () => {
                         width={item.width}
                         height={item.height}
                         src={item.picture}
-                        alt={item.title || `Mini Banner ${index + 1}`}
+                        alt={item.title || i18nText("AUTO.components.products.herobanner.line167_1_mini_banner", { value0: index + 1 })}
                         className="w-full h-full object-cover"
                       />
                     </motion.div>

@@ -1,4 +1,5 @@
 "use client";
+import { i18nText } from "@/lib/i18nText";
 import { FC, useEffect, useState, useTransition } from "react";
 import { useForm, Controller } from "react-hook-form";
 import { z } from "zod";
@@ -15,14 +16,14 @@ import { useStateStore } from "@/stores/stateStore";
 import { toast } from "sonner";
 
 const updateSchema = z.object({
-  fullName: z.string().min(1, "Họ tên là bắt buộc"),
+  fullName: z.string().min(1, i18nText("AUTO.components.account.accountform.line18_0_ho_ten_bat_buoc")),
   phone: z
     .string()
-    .min(1, "Số điện thoại là bắt buộc")
-    .regex(/^(0|\+84)[1-9][0-9]{8,9}$/, "Số điện thoại không hợp lệ"),
-  email: z.string().email("Email không hợp lệ").min(1, "Email là bắt buộc"),
+    .min(1, i18nText("AUTO.components.account.accountform.line21_1_so_dien_thoai_bat_buoc"))
+    .regex(/^(0|\+84)[1-9][0-9]{8,9}$/, i18nText("AUTO.components.account.accountform.line22_2_so_dien_thoai_khong_hop")),
+  email: z.string().email(i18nText("AUTO.components.account.accountform.line23_3_email_khong_hop_le")).min(1, i18nText("AUTO.components.account.accountform.line23_4_email_bat_buoc")),
   gender: z.enum(["male", "female", "other"], {
-    message: "Giới tính là bắt buộc",
+    message: i18nText("AUTO.components.account.accountform.line25_5_gioi_tinh_bat_buoc"),
   }),
   dateOfBirth: z.date().nullable().optional(),
 });
@@ -74,12 +75,12 @@ const UpdateUserForm: FC = () => {
 
       if (response?.status && response?.errorCode === 200) {
         toast.success(response.message, {
-          description: "Bạn đã cập nhật thông tin thành công",
+          description: i18nText("AUTO.components.account.accountform.line77_6_da_cap_nhat_thong_tin"),
           position: "top-center",
         });
       } else {
         toast.error(response.message, {
-          description: "Có lỗi trong quá trình cập nhật thông tin",
+          description: i18nText("AUTO.components.account.accountform.line82_7_loi_qua_trinh_cap_nhat"),
           position: "top-center",
         });
       }
@@ -89,25 +90,23 @@ const UpdateUserForm: FC = () => {
   return (
     <>
       <div className="flex items-center justify-between mb-5">
-        <span className="text-lg font-medium">Thông tin tài khoản</span>
+        <span className="text-lg font-medium">{i18nText("AUTO.components.account.accountform.line92_8_thong_tin_khoan")}</span>
         <span
           className="text-sm text-[#3f68e0] cursor-pointer"
           onClick={() => setDisabled(false)}
-        >
-          Chỉnh sửa
-        </span>
+        >{i18nText("AUTO.components.account.accountform.line97_9_chinh_sua")}</span>
       </div>
       {user && (
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
           {/* Thông tin cá nhân */}
           <div className="border-b border-gray-200 pb-4">
-            <h3 className="text-md font-medium mb-3">Thông tin cá nhân</h3>
+            <h3 className="text-md font-medium mb-3">{i18nText("AUTO.components.account.accountform.line104_10_thong_tin_ca_nhan")}</h3>
 
             {/* Username (chỉ xem) */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <InputField
                 id="username"
-                label="Tên đăng nhập"
+                label={i18nText("AUTO.components.account.accountform.line110_11_ten_dang_nhap")}
                 value={user?.username ?? ""}
                 readonly
               />
@@ -121,7 +120,7 @@ const UpdateUserForm: FC = () => {
                 render={({ field }) => (
                   <InputField
                     id="fullName"
-                    label="Họ và tên"
+                    label={i18nText("AUTO.components.account.accountform.line124_12_ho_ten")}
                     value={field.value}
                     onChange={field.onChange}
                     error={errors.fullName}
@@ -134,7 +133,7 @@ const UpdateUserForm: FC = () => {
                 render={({ field }) => (
                   <InputField
                     id="phone"
-                    label="Số điện thoại"
+                    label={i18nText("AUTO.components.account.accountform.line137_13_so_dien_thoai")}
                     value={field.value}
                     onChange={field.onChange}
                     error={errors.phone}
@@ -150,7 +149,7 @@ const UpdateUserForm: FC = () => {
                 render={({ field }) => (
                   <InputField
                     id="email"
-                    label="Email"
+                    label={i18nText("AUTO.components.account.accountform.extra152_0_email")}
                     value={field.value}
                     onChange={field.onChange}
                     error={errors.email}
@@ -170,10 +169,10 @@ const UpdateUserForm: FC = () => {
                     error={errors.gender}
                     options={[
                       { value: "male", label: "Nam" },
-                      { value: "female", label: "Nữ" },
-                      { value: "other", label: "Khác" },
+                      { value: "female", label: i18nText("AUTO.components.account.accountform.line173_14_nu") },
+                      { value: "other", label: i18nText("AUTO.components.account.accountform.line174_15_khac") },
                     ]}
-                    placeholder="Chọn giới tính"
+                    placeholder={i18nText("AUTO.components.account.accountform.line176_16_chon_gioi_tinh")}
                   />
                 )}
               />
@@ -190,7 +189,7 @@ const UpdateUserForm: FC = () => {
                     value={field.value}
                     minYear={1950}
                     maxYear={2010}
-                    placeholder="Chọn ngày sinh"
+                    placeholder={i18nText("AUTO.components.account.accountform.line193_17_chon_ngay_sinh")}
                     className="w-full max-w-sm"
                   />
                 )}
@@ -203,24 +202,20 @@ const UpdateUserForm: FC = () => {
           {/* Thông tin công ty (chỉ xem) */}
           <div>
             <div className="flex items-baseline gap-2 mb-3">
-              <h3 className="text-md font-medium leading-none">
-                Thông tin công ty
-              </h3>
-              <span className="text-gray-400 text-xs leading-none">
-                (Không thể chỉnh sửa)
-              </span>
+              <h3 className="text-md font-medium leading-none">{i18nText("AUTO.components.account.accountform.line207_18_thong_tin_cong_ty")}</h3>
+              <span className="text-gray-400 text-xs leading-none">{i18nText("AUTO.components.account.accountform.line210_19_khong_chinh_sua")}</span>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <InputField
                 id="companyName"
-                label="Tên công ty"
+                label={i18nText("AUTO.components.account.accountform.line217_20_ten_cong_ty")}
                 value={user?.companyName ?? ""}
                 readonly
               />
               <InputField
                 id="taxCode"
-                label="Mã số thuế"
+                label={i18nText("AUTO.components.account.accountform.line223_21_ma_so_thue")}
                 value={user?.taxCode ?? ""}
                 readonly
               />
@@ -228,7 +223,7 @@ const UpdateUserForm: FC = () => {
 
             <InputField
               id="companyAddress"
-              label="Địa chỉ công ty"
+              label={i18nText("AUTO.components.account.accountform.line231_22_dia_chi_cong_ty")}
               value={user?.companyAddress ?? ""}
               readonly
             />
@@ -236,13 +231,13 @@ const UpdateUserForm: FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
               <InputField
                 id="companyPhone"
-                label="Số điện thoại công ty"
+                label={i18nText("AUTO.components.account.accountform.line239_23_so_dien_thoai_cong_ty")}
                 value={user?.companyPhone ?? ""}
                 readonly
               />
               <InputField
                 id="companyEmail"
-                label="Email công ty"
+                label={i18nText("AUTO.components.account.accountform.line245_24_email_cong_ty")}
                 value={user?.companyEmail ?? ""}
                 readonly
               />
@@ -256,9 +251,7 @@ const UpdateUserForm: FC = () => {
               className="mt-3"
               type="submit"
               disabled={loading || !isValid}
-            >
-              Cập nhật
-            </Button>
+            >{i18nText("AUTO.components.account.accountform.line260_25_cap_nhat")}</Button>
 
             {!disabled && (
               <Button
@@ -267,9 +260,7 @@ const UpdateUserForm: FC = () => {
                 size="xs"
                 className="mt-3"
                 type="button"
-              >
-                Hủy bỏ
-              </Button>
+              >{i18nText("AUTO.components.account.accountform.line271_26_huy_bo")}</Button>
             )}
           </div>
         </form>

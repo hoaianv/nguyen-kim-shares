@@ -1,15 +1,16 @@
+import { i18nText } from "@/lib/i18nText";
 import { name, urlWebsite } from "@/constants/company.constant";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: `Xác nhận thanh toán | ${name}`,
-  description: `Xác nhận đơn hàng và hướng dẫn thanh toán chi tiết tại ${name}. Theo dõi tình trạng đơn hàng và nhận thông tin chuyển khoản.`,
+  title: i18nText("AUTO.app.xac.nhan.thanh.toan.line5_0_xac_nhan_thanh_toan", { value0: name }),
+  description: i18nText("AUTO.app.xac.nhan.thanh.toan.line6_1_xac_nhan_don_hang_huong", { value0: name }),
   alternates: {
     canonical: `${urlWebsite}xac-nhan-thanh-toan`,
   },
   openGraph: {
-    title: `Xác nhận thanh toán | ${name}`,
-    description: `Đơn hàng đã được xác nhận thành công. Vui lòng kiểm tra email và thực hiện thanh toán theo hướng dẫn tại ${name}`,
+    title: i18nText("AUTO.app.xac.nhan.thanh.toan.line11_2_xac_nhan_thanh_toan", { value0: name }),
+    description: i18nText("AUTO.app.xac.nhan.thanh.toan.line12_3_don_hang_da_duoc_xac", { value0: name }),
     url: `${urlWebsite}xac-nhan-thanh-toan`,
     siteName: name,
     type: "website",

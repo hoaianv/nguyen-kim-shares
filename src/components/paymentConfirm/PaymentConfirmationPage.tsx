@@ -1,5 +1,6 @@
 "use client";
 
+import { i18nText } from "@/lib/i18nText";
 import {
   Building2,
   CheckCircle2,
@@ -29,23 +30,23 @@ import { useStateStore } from "@/stores/stateStore";
 
 const statusPresentation: Record<string, { label: string; className: string }> =
   {
-    pending: { label: "Chờ xử lý", className: "bg-amber-100 text-amber-800" },
+    pending: { label: i18nText("AUTO.components.paymentconfirm.paymentconfirmationpage.line32_0_xu_ly"), className: "bg-amber-100 text-amber-800" },
     payment: {
-      label: "Chờ thanh toán",
+      label: i18nText("AUTO.components.paymentconfirm.paymentconfirmationpage.line34_1_thanh_toan"),
       className: "bg-amber-100 text-amber-800",
     },
     paid: {
-      label: "Đã thanh toán",
+      label: i18nText("AUTO.components.paymentconfirm.paymentconfirmationpage.line38_2_da_thanh_toan"),
       className: "bg-emerald-100 text-emerald-800",
     },
-    delivered: { label: "Đã giao hàng", className: "bg-sky-100 text-sky-800" },
+    delivered: { label: i18nText("AUTO.components.paymentconfirm.paymentconfirmationpage.line41_3_da_giao_hang"), className: "bg-sky-100 text-sky-800" },
     finished: {
-      label: "Hoàn tất",
+      label: i18nText("AUTO.components.paymentconfirm.paymentconfirmationpage.line43_4_hoan_tat"),
       className: "bg-emerald-100 text-emerald-800",
     },
-    fail: { label: "Không thành công", className: "bg-rose-100 text-rose-800" },
+    fail: { label: i18nText("AUTO.components.paymentconfirm.paymentconfirmationpage.line46_5_khong_thanh_cong"), className: "bg-rose-100 text-rose-800" },
     "customer-cancels": {
-      label: "Đã hủy",
+      label: i18nText("AUTO.components.paymentconfirm.paymentconfirmationpage.line48_6_da_huy"),
       className: "bg-slate-200 text-slate-700",
     },
   };
@@ -53,14 +54,14 @@ const statusPresentation: Record<string, { label: string; className: string }> =
 function getStatusPresentation(status: OrderStatus) {
   return (
     statusPresentation[status] ?? {
-      label: status || "Đã ghi nhận",
+      label: status || i18nText("AUTO.components.paymentconfirm.paymentconfirmationpage.extra57_0_da_ghi_nhan"),
       className: "bg-slate-100 text-slate-700",
     }
   );
 }
 
 function getShippingMethodText(method: string) {
-  return method === "delivery" ? "Giao hàng tận nơi" : "Nhận tại cửa hàng";
+  return method === "delivery" ? i18nText("AUTO.components.paymentconfirm.paymentconfirmationpage.extra64_1_giao_hang_tan_noi") : i18nText("AUTO.components.paymentconfirm.paymentconfirmationpage.extra64_2_nhan_hang");
 }
 
 function normalizeBankKey(value: string) {
@@ -164,9 +165,9 @@ export default function PaymentConfirmationPage({
   const copyOrderCode = async () => {
     try {
       await navigator.clipboard.writeText(data.orderCode);
-      toast.success("Đã sao chép mã đơn hàng");
+      toast.success(i18nText("AUTO.components.paymentconfirm.paymentconfirmationpage.line167_7_da_sao_chep_ma_don"));
     } catch {
-      toast.error("Không thể sao chép mã đơn hàng");
+      toast.error(i18nText("AUTO.components.paymentconfirm.paymentconfirmationpage.line169_8_khong_sao_chep_ma_don"));
     }
   };
 
@@ -178,42 +179,31 @@ export default function PaymentConfirmationPage({
             <CheckCircle2 className="h-7 w-7 text-emerald-700" />
           </div>
           <div className="min-w-0 flex-1">
-            <h1 className="text-xl font-bold text-slate-950 sm:text-2xl">
-              Cảm ơn quý khách đã đặt hàng tại Nguyên Kim JSC
-            </h1>
-            <p className="mt-2 text-sm leading-6 text-slate-600 sm:text-base">
-              Đơn hàng của quý khách đã được ghi nhận thành công. Vui lòng quét
-              mã QR để thanh toán chuyển khoản.
-            </p>
+            <h1 className="text-xl font-bold text-slate-950 sm:text-2xl">{i18nText("AUTO.components.paymentconfirm.paymentconfirmationpage.line182_9_cam_on_quy_khach_da")}</h1>
+            <p className="mt-2 text-sm leading-6 text-slate-600 sm:text-base">{i18nText("AUTO.components.paymentconfirm.paymentconfirmationpage.line185_10_don_hang_quy_khach_da")}</p>
           </div>
         </div>
 
         <div className="mt-5 grid gap-4 border-t border-slate-200 pt-5 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <p className="text-xs font-medium uppercase tracking-wide text-slate-500">
-              Mã đơn hàng
-            </p>
+            <p className="text-xs font-medium uppercase tracking-wide text-slate-500">{i18nText("AUTO.components.paymentconfirm.paymentconfirmationpage.line194_11_ma_don_hang")}</p>
             <button
               type="button"
               onClick={copyOrderCode}
               className="mt-1 inline-flex items-center gap-1.5 font-semibold text-slate-950 hover:text-brand"
-              aria-label="Sao chép mã đơn hàng"
+              aria-label={i18nText("AUTO.components.paymentconfirm.paymentconfirmationpage.line200_12_sao_chep_ma_don_hang")}
             >
               #{data.orderCode} <Clipboard className="h-4 w-4" />
             </button>
           </div>
           <div>
-            <p className="text-xs font-medium uppercase tracking-wide text-slate-500">
-              Ngày đặt hàng
-            </p>
+            <p className="text-xs font-medium uppercase tracking-wide text-slate-500">{i18nText("AUTO.components.paymentconfirm.paymentconfirmationpage.line207_13_ngay_dat_hang")}</p>
             <p className="mt-1 font-semibold text-slate-950">
               {data.dateOrder}
             </p>
           </div>
           <div>
-            <p className="text-xs font-medium uppercase tracking-wide text-slate-500">
-              Trạng thái đơn hàng
-            </p>
+            <p className="text-xs font-medium uppercase tracking-wide text-slate-500">{i18nText("AUTO.components.paymentconfirm.paymentconfirmationpage.line215_14_trang_thai_don_hang")}</p>
             <span
               className={`mt-1 inline-flex rounded-full px-3 py-1 text-xs font-semibold ${status.className}`}
             >
@@ -221,12 +211,8 @@ export default function PaymentConfirmationPage({
             </span>
           </div>
           <div>
-            <p className="text-xs font-medium uppercase tracking-wide text-slate-500">
-              Phương thức thanh toán
-            </p>
-            <p className="mt-1 font-semibold text-slate-950">
-              Chuyển khoản ngân hàng
-            </p>
+            <p className="text-xs font-medium uppercase tracking-wide text-slate-500">{i18nText("AUTO.components.paymentconfirm.paymentconfirmationpage.line225_15_phuong_thuc_thanh_toan")}</p>
+            <p className="mt-1 font-semibold text-slate-950">{i18nText("AUTO.components.paymentconfirm.paymentconfirmationpage.line228_16_chuyen_khoan_ngan_hang")}</p>
           </div>
         </div>
       </Card>
@@ -237,18 +223,14 @@ export default function PaymentConfirmationPage({
             <div className="flex items-center gap-3">
               <Building2 className="h-6 w-6 text-slate-900" />
               <div>
-                <h2 className="text-lg font-bold text-slate-950">
-                  Thanh toán chuyển khoản
-                </h2>
-                <p className="mt-0.5 text-sm text-slate-600">
-                  Quét mã bằng ứng dụng ngân hàng để thanh toán đơn hàng.
-                </p>
+                <h2 className="text-lg font-bold text-slate-950">{i18nText("AUTO.components.paymentconfirm.paymentconfirmationpage.line241_17_thanh_toan_chuyen_khoan")}</h2>
+                <p className="mt-0.5 text-sm text-slate-600">{i18nText("AUTO.components.paymentconfirm.paymentconfirmationpage.line244_18_quet_ma_bang_ung_dung")}</p>
               </div>
             </div>
 
             <div className="mt-5">
               <h3 className="text-sm font-semibold text-slate-950">
-                {bankSection?.title || "Danh sách các ngân hàng thanh toán online"}
+                {bankSection?.title || i18nText("AUTO.components.paymentconfirm.paymentconfirmationpage.line251_19_danh_sach_cac_ngan_hang")}
               </h3>
               {supportedBanks.length ? (
                 <div className="mt-3 flex flex-wrap gap-2">
@@ -279,9 +261,7 @@ export default function PaymentConfirmationPage({
                   })}
                 </div>
               ) : (
-                <p className="mt-2 text-sm text-slate-500">
-                  Chưa có QR thanh toán được cấu hình cho ngân hàng hỗ trợ.
-                </p>
+                <p className="mt-2 text-sm text-slate-500">{i18nText("AUTO.components.paymentconfirm.paymentconfirmationpage.line283_20_chua_qr_thanh_toan_duoc")}</p>
               )}
             </div>
 
@@ -291,22 +271,28 @@ export default function PaymentConfirmationPage({
                   type="button"
                   onClick={() => setIsQrPreviewOpen(true)}
                   className="group relative block w-full cursor-zoom-in text-left nk-focus-ring"
-                  aria-label="Phóng to mã QR thanh toán"
+                  aria-label={i18nText("AUTO.components.paymentconfirm.paymentconfirmationpage.line294_21_phong_ma_qr_thanh_toan")}
                 >
                   <Image
                     src={activeQrBanner.picture}
-                    alt={`Mã QR và thông tin chuyển khoản ${
-                      supportedBanks.find((bank) => bank.key === activeBankKey)
-                        ?.title || "ngân hàng"
-                    }`}
+                    alt={i18nText(
+                      "AUTO.components.paymentconfirm.paymentconfirmationpage.line298_22_ma_qr_thong_tin_chuyen",
+                      {
+                        value0:
+                          supportedBanks.find((bank) => bank.key === activeBankKey)
+                            ?.title ||
+                          i18nText(
+                            "AUTO.components.paymentconfirm.paymentconfirmationpage.line300_23_ngan_hang",
+                          ),
+                      },
+                    )}
                     width={activeQrBanner.width || 800}
                     height={activeQrBanner.height || 800}
                     priority
                     className="h-auto w-full"
                   />
                   <span className="absolute bottom-3 right-3 inline-flex items-center gap-1.5 rounded-md bg-slate-950/80 px-3 py-1.5 text-xs font-medium text-white opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100">
-                    <ZoomIn className="h-4 w-4" /> Phóng to
-                  </span>
+                    <ZoomIn className="h-4 w-4" />{i18nText("AUTO.components.paymentconfirm.paymentconfirmationpage.line308_24_phong")}</span>
                 </button>
               </div>
             ) : null}
@@ -318,28 +304,28 @@ export default function PaymentConfirmationPage({
             data.addressCompany ||
             data.phoneCompany ||
             data.emailCompany ? (
-              <DetailCard icon={Building2} title="Thông tin mua hàng">
+              <DetailCard icon={Building2} title={i18nText("AUTO.components.paymentconfirm.paymentconfirmationpage.line321_25_thong_tin_mua_hang")}>
                 <div className="space-y-3">
-                  <InfoRow label="Tên công ty" value={data.nameCompany} />
-                  <InfoRow label="Điện thoại" value={data.phoneCompany} />
-                  <InfoRow label="Email" value={data.emailCompany} />
-                  <InfoRow label="Địa chỉ" value={data.addressCompany} />
+                  <InfoRow label={i18nText("AUTO.components.paymentconfirm.paymentconfirmationpage.line323_26_ten_cong_ty")} value={data.nameCompany} />
+                  <InfoRow label={i18nText("AUTO.components.paymentconfirm.paymentconfirmationpage.line324_27_dien_thoai")} value={data.phoneCompany} />
+                  <InfoRow label={i18nText("AUTO.components.paymentconfirm.paymentconfirmationpage.extra311_3_email")} value={data.emailCompany} />
+                  <InfoRow label={i18nText("AUTO.components.paymentconfirm.paymentconfirmationpage.line326_28_dia_chi")} value={data.addressCompany} />
                 </div>
               </DetailCard>
             ) : null}
-            <DetailCard icon={UserRound} title="Thông tin nhận hàng">
+            <DetailCard icon={UserRound} title={i18nText("AUTO.components.paymentconfirm.paymentconfirmationpage.line330_29_thong_tin_nhan_hang")}>
               <div className="space-y-3">
-                <InfoRow label="Người nhận" value={data.nameDelivery} />
-                <InfoRow label="Điện thoại" value={data.phoneDelivery} />
-                <InfoRow label="Địa chỉ" value={data.addressDelivery} />
+                <InfoRow label={i18nText("AUTO.components.paymentconfirm.paymentconfirmationpage.line332_30_nguoi_nhan")} value={data.nameDelivery} />
+                <InfoRow label={i18nText("AUTO.components.paymentconfirm.paymentconfirmationpage.line333_31_dien_thoai")} value={data.phoneDelivery} />
+                <InfoRow label={i18nText("AUTO.components.paymentconfirm.paymentconfirmationpage.line334_32_dia_chi")} value={data.addressDelivery} />
                 {data.note ? (
-                  <InfoRow label="Ghi chú" value={data.note} />
+                  <InfoRow label={i18nText("AUTO.components.paymentconfirm.paymentconfirmationpage.line336_33_ghi_chu")} value={data.note} />
                 ) : null}
               </div>
             </DetailCard>
             <DetailCard
               icon={Truck}
-              title="Phương thức vận chuyển"
+              title={i18nText("AUTO.components.paymentconfirm.paymentconfirmationpage.line342_34_phuong_thuc_van_chuyen")}
               defaultOpen={false}
             >
               <p className="font-medium text-slate-900">
@@ -351,9 +337,7 @@ export default function PaymentConfirmationPage({
 
         <Card className="border border-slate-200 bg-white shadow-sm lg:sticky lg:top-5 lg:flex lg:max-h-[calc(100vh-2.5rem)] lg:flex-col">
           <div className="shrink-0 border-b border-slate-200 p-5 sm:p-6">
-            <h2 className="text-lg font-bold text-slate-950">
-              Tóm tắt đơn hàng
-            </h2>
+            <h2 className="text-lg font-bold text-slate-950">{i18nText("AUTO.components.paymentconfirm.paymentconfirmationpage.line355_35_tom_tat_don_hang")}</h2>
           </div>
           <div className="flex flex-col p-5 sm:p-6 lg:min-h-0 lg:flex-1">
             <div className="max-h-[420px] overflow-y-auto pr-2 lg:min-h-0 lg:max-h-none lg:flex-1">
@@ -364,7 +348,7 @@ export default function PaymentConfirmationPage({
                     <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-lg border border-slate-200 bg-slate-50">
                       <Image
                         src={item.picture || "/placeholder.svg"}
-                        alt={item.name || "Sản phẩm"}
+                        alt={item.name || i18nText("AUTO.components.paymentconfirm.paymentconfirmationpage.line367_36_san_pham")}
                         fill
                         sizes="64px"
                         className="object-contain p-1"
@@ -388,23 +372,20 @@ export default function PaymentConfirmationPage({
               </div>
             ) : (
               <div className="flex items-center gap-2 text-sm text-slate-500">
-                <Package className="h-4 w-4" /> Không có sản phẩm trong đơn
-                hàng.
-              </div>
+                <Package className="h-4 w-4" />{i18nText("AUTO.components.paymentconfirm.paymentconfirmationpage.line391_37_khong_san_pham_don_hang")}</div>
               )}
             </div>
 
             <div className="mt-5 shrink-0 space-y-3 border-t border-slate-200 pt-5 text-sm">
               <div className="flex justify-between gap-4">
-                <span className="text-slate-600">Tạm tính</span>
+                <span className="text-slate-600">{i18nText("AUTO.components.paymentconfirm.paymentconfirmationpage.line399_38_tam_tinh")}</span>
                 <span className="font-medium text-slate-900">
                   {data.totalPrice.toLocaleString("vi-VN")}₫
                 </span>
               </div>
               {data.couponCode ? (
                 <div className="flex justify-between gap-4">
-                  <span className="text-slate-600">
-                    Giảm giá ({data.couponCode})
+                  <span className="text-slate-600">{i18nText("AUTO.components.paymentconfirm.paymentconfirmationpage.line407_39_giam_gia")}{data.couponCode})
                   </span>
                   <span className="font-medium text-emerald-700">
                     -{(data.couponValue || 0).toLocaleString("vi-VN")}₫
@@ -412,9 +393,7 @@ export default function PaymentConfirmationPage({
                 </div>
               ) : null}
               <div className="flex items-end justify-between gap-4 border-t border-slate-200 pt-4">
-                <span className="text-base font-bold text-slate-950">
-                  Tổng tiền
-                </span>
+                <span className="text-base font-bold text-slate-950">{i18nText("AUTO.components.paymentconfirm.paymentconfirmationpage.line416_40_tong_tien")}</span>
                 <span className="text-xl font-bold text-rose-600">
                   {data.finalPrice.toLocaleString("vi-VN")}₫
                 </span>
@@ -426,9 +405,7 @@ export default function PaymentConfirmationPage({
               fullWidth
               size="lg"
               className="mt-6 shrink-0"
-            >
-              Tiếp tục mua sắm
-            </Button>
+            >{i18nText("AUTO.components.paymentconfirm.paymentconfirmationpage.line430_41_tiep_tuc_mua_sam")}</Button>
           </div>
         </Card>
       </div>
@@ -437,15 +414,22 @@ export default function PaymentConfirmationPage({
         <Modal
           isOpen={isQrPreviewOpen}
           onClose={() => setIsQrPreviewOpen(false)}
-          title="Mã QR thanh toán"
+          title={i18nText("AUTO.components.paymentconfirm.paymentconfirmationpage.line440_42_ma_qr_thanh_toan")}
           size="xl"
         >
           <Image
             src={activeQrBanner.picture}
-            alt={`Mã QR và thông tin chuyển khoản ${
-              supportedBanks.find((bank) => bank.key === activeBankKey)?.title ||
-              "ngân hàng"
-            }`}
+            alt={i18nText(
+              "AUTO.components.paymentconfirm.paymentconfirmationpage.line445_43_ma_qr_thong_tin_chuyen",
+              {
+                value0:
+                  supportedBanks.find((bank) => bank.key === activeBankKey)
+                    ?.title ||
+                  i18nText(
+                    "AUTO.components.paymentconfirm.paymentconfirmationpage.line447_44_ngan_hang",
+                  ),
+              },
+            )}
             width={activeQrBanner.width || 800}
             height={activeQrBanner.height || 800}
             className="mx-auto h-auto max-h-[70vh] w-auto max-w-full object-contain"

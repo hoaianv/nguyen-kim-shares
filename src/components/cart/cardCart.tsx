@@ -1,5 +1,6 @@
 "use client";
 
+import { i18nText } from "@/lib/i18nText";
 import React, { memo, useCallback, useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -118,7 +119,7 @@ const CardCart = memo(function CardCart({ id }: Props) {
                 }
               }}
               className="h-10 w-14 rounded border border-gray-300 text-center text-sm outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
-              aria-label="Số lượng"
+              aria-label={i18nText("AUTO.components.cart.cardcart.line121_0_so_luong")}
             />
           </div>
 
@@ -134,13 +135,13 @@ const CardCart = memo(function CardCart({ id }: Props) {
                 <button
                   type="button"
                   className="inline-flex h-9 w-9 items-center justify-center rounded-full text-gray-400 transition hover:bg-red-50 hover:text-red-600"
-                  aria-label="Xóa sản phẩm"
+                  aria-label={i18nText("AUTO.components.cart.cardcart.line137_1_xoa_san_pham")}
                 >
                   <Trash2 className="h-4 w-4" />
                 </button>
               }
-              title="Xóa sản phẩm"
-              description="Bạn có chắc chắn muốn xóa sản phẩm này?"
+              title={i18nText("AUTO.components.cart.cardcart.line142_2_xoa_san_pham")}
+              description={i18nText("AUTO.components.cart.cardcart.extra144_0_chac_chan_muon_xoa_san")}
               onConfirm={() => removeCart([id])}
               position="bottom"
             />
@@ -162,8 +163,8 @@ const CardCart = memo(function CardCart({ id }: Props) {
                   {t("COMMON.delete")}
                 </button>
               }
-              title="Xóa sản phẩm"
-              description="Bạn có chắc chắn muốn xóa sản phẩm này?"
+              title={i18nText("AUTO.components.cart.cardcart.line165_3_xoa_san_pham")}
+              description={i18nText("AUTO.components.cart.cardcart.extra167_1_chac_chan_muon_xoa_san")}
               onConfirm={() => removeCart([id])}
               position="bottom"
             />
@@ -205,7 +206,7 @@ const CardCart = memo(function CardCart({ id }: Props) {
                 className={`h-8 w-8 text-sm text-gray-400 ${
                   item.quantity <= 1 ? "cursor-not-allowed" : "cursor-pointer"
                 }`}
-                aria-label="Giảm số lượng"
+                aria-label={i18nText("AUTO.components.cart.cardcart.line208_4_giam_so_luong")}
               >
                 −
               </button>
@@ -213,14 +214,14 @@ const CardCart = memo(function CardCart({ id }: Props) {
               <button
                 onClick={() => updateCart(id, item.quantity + 1)}
                 className="h-8 w-8 cursor-pointer text-sm text-gray-400"
-                aria-label="Tăng số lượng"
+                aria-label={i18nText("AUTO.components.cart.cardcart.line216_5_tang_so_luong")}
               >
                 +
               </button>
             </div>
 
             <div className="text-right">
-              <div className="text-xs text-gray-500">Thành tiền</div>
+              <div className="text-xs text-gray-500">{i18nText("AUTO.components.cart.cardcart.line223_6_thanh_tien")}</div>
               <div className="text-sm font-semibold text-gray-900">
                 {formatPrice(total)}
               </div>
@@ -266,15 +267,14 @@ const CardCart = memo(function CardCart({ id }: Props) {
                       {t("COMMON.delete")}
                     </button>
                   }
-                  title="Xóa sản phẩm"
-                  description="Bạn có chắc chắn muốn xóa sản phẩm này?"
+                  title={i18nText("AUTO.components.cart.cardcart.line269_7_xoa_san_pham")}
+                  description={i18nText("AUTO.components.cart.cardcart.extra271_2_chac_chan_muon_xoa_san")}
                   onConfirm={() => removeCart([id])}
                   position="right"
                 />
               </div>
 
-              <div className="mt-2 text-sm text-gray-600">
-                Đơn giá: <span className="font-medium text-gray-900">{getPrice(item)}</span>
+              <div className="mt-2 text-sm text-gray-600">{i18nText("AUTO.components.cart.cardcart.line277_8_don_gia")}<span className="font-medium text-gray-900">{getPrice(item)}</span>
               </div>
 
               <div className="mt-3 flex items-center justify-between">
@@ -287,7 +287,7 @@ const CardCart = memo(function CardCart({ id }: Props) {
                         ? "cursor-not-allowed"
                         : "cursor-pointer"
                     }`}
-                    aria-label="Giảm số lượng"
+                    aria-label={i18nText("AUTO.components.cart.cardcart.line290_9_giam_so_luong")}
                   >
                     −
                   </button>
@@ -297,14 +297,14 @@ const CardCart = memo(function CardCart({ id }: Props) {
                   <button
                     onClick={() => updateCart(id, item.quantity + 1)}
                     className="h-8 w-8 cursor-pointer text-gray-400"
-                    aria-label="Tăng số lượng"
+                    aria-label={i18nText("AUTO.components.cart.cardcart.line300_10_tang_so_luong")}
                   >
                     +
                   </button>
                 </div>
 
                 <div className="text-right">
-                  <div className="text-xs text-gray-500">Thành tiền</div>
+                  <div className="text-xs text-gray-500">{i18nText("AUTO.components.cart.cardcart.line307_11_thanh_tien")}</div>
                   <div className="text-sm font-semibold text-gray-900">
                     {formatPrice(total)}
                   </div>

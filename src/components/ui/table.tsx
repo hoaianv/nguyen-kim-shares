@@ -1,5 +1,6 @@
 "use client";
 
+import { i18nText } from "@/lib/i18nText";
 import React, { useState } from "react";
 import { ChevronUp, ChevronDown, Search } from "lucide-react";
 import { Column, IPagination } from "@/interfaces/common";
@@ -53,7 +54,7 @@ const EmptyState = () => (
         />
       </svg>
     </div>
-    <p className="text-sm text-slate-500">Không có dữ liệu</p>
+    <p className="text-sm text-slate-500">{i18nText("AUTO.components.ui.table.line56_0_khong_du_lieu")}</p>
   </div>
 );
 
@@ -63,7 +64,7 @@ function Table<T extends Record<string, any>>({
   loading = false,
   pagination,
   showSearch = false,
-  searchPlaceholder = "Tìm kiếm...",
+  searchPlaceholder = i18nText("AUTO.components.ui.table.extra67_0_tim_kiem"),
   onSearch,
   rowKey,
   onRowClick,

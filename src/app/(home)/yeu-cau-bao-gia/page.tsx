@@ -1,3 +1,4 @@
+import { i18nText } from "@/lib/i18nText";
 import QuoteForm from "@/components/quote/QuoteForm";
 
 export default async function page() {
@@ -10,13 +11,8 @@ px-4 sm:px-6 lg:px-8 xl:px-16 2xl:px-20
       <div className="bg-white rounded-lg shadow-md p-6 sm:p-10">
         {/* Header */}
         <div className="text-center mb-8">
-          <h1 className="text-2xl sm:text-3xl font-bold text-gray-800">
-            Yêu cầu báo giá
-          </h1>
-          <p className="mt-2 text-gray-500 text-sm sm:text-base max-w-[500px] mx-auto">
-            Vui lòng điền đầy đủ thông tin bên dưới. Chúng tôi sẽ phản hồi và
-            gửi báo giá chi tiết đến bạn trong thời gian sớm nhất.
-          </p>
+          <h1 className="text-2xl sm:text-3xl font-bold text-gray-800">{i18nText("AUTO.app.yeu.cau.bao.gia.line14_0_yeu_cau_bao_gia")}</h1>
+          <p className="mt-2 text-gray-500 text-sm sm:text-base max-w-[500px] mx-auto">{i18nText("AUTO.app.yeu.cau.bao.gia.line17_1_vui_long_dien_day_du")}</p>
         </div>
 
         {/* Form */}

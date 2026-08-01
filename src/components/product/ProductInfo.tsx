@@ -1,5 +1,6 @@
 "use client";
 
+import { i18nText } from "@/lib/i18nText";
 import React, { useState } from "react";
 import {
   PackageCheck,
@@ -51,7 +52,7 @@ const ProductInfo = ({ data, hasSpecifications }: ProductsProps) => {
 
   const handleCopy = () => {
     navigator.clipboard.writeText(window.location.href);
-    toast.success("Sao chép thành công", {
+    toast.success(i18nText("AUTO.components.product.productinfo.line54_0_sao_chep_thanh_cong"), {
       description: data?.name,
       position: "top-center",
     });
@@ -108,7 +109,7 @@ const ProductInfo = ({ data, hasSpecifications }: ProductsProps) => {
                   type="button"
                   onClick={handleCopy}
                   className="inline-flex h-9 w-9 items-center justify-center rounded-sm border border-slate-200 bg-white text-slate-500 transition hover:border-brand hover:text-slate-950"
-                  aria-label="Chia sẻ sản phẩm"
+                  aria-label={i18nText("AUTO.components.product.productinfo.line111_1_chia_se_san_pham")}
                 >
                   <Share2 className="h-4 w-4" />
                 </button>
@@ -116,8 +117,7 @@ const ProductInfo = ({ data, hasSpecifications }: ProductsProps) => {
             </div>
 
             <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm">
-              <span className="text-slate-600">
-                Mã sản phẩm:{" "}
+              <span className="text-slate-600">{i18nText("AUTO.components.product.productinfo.line120_2_ma_san_pham")}{" "}
                 <span className="font-semibold text-slate-900">
                   {data.productCode || "-"}
                 </span>
@@ -127,7 +127,7 @@ const ProductInfo = ({ data, hasSpecifications }: ProductsProps) => {
               </span>
               <div
                 className="flex items-center gap-0.5"
-                aria-label={`Đánh giá ${data.rating ?? 0} sao`}
+                aria-label={i18nText("AUTO.components.product.productinfo.line130_3_danh_gia_sao", { value0: data.rating ?? 0 })}
               >
                 {[...Array(5)].map((_, i) => (
                   <Star
@@ -148,12 +148,12 @@ const ProductInfo = ({ data, hasSpecifications }: ProductsProps) => {
             </div>
 
             <div className="text-sm text-slate-700">
-              <span className="font-medium">Thương hiệu:</span>{" "}
-              <span>{data.brand || "Đang cập nhật"}</span>
+              <span className="font-medium">{i18nText("AUTO.components.product.productinfo.line151_4_thuong_hieu")}</span>{" "}
+              <span>{data.brand || i18nText("AUTO.components.product.productinfo.line152_5_dang_cap_nhat")}</span>
             </div>
 
             <div className="flex flex-wrap items-center gap-2 text-sm text-slate-700">
-              <span className="font-medium">Tình trạng:</span>
+              <span className="font-medium">{i18nText("AUTO.components.product.productinfo.line156_6_tinh_trang")}</span>
               <span
                 className={`inline-flex items-center rounded-sm px-2 py-1 text-[11px] font-extrabold uppercase ${
                   data.isInStock
@@ -161,7 +161,7 @@ const ProductInfo = ({ data, hasSpecifications }: ProductsProps) => {
                     : "bg-rose-50 text-rose-700"
                 }`}
               >
-                {data.isInStock ? t("COMMON.in_stock") : "Hết hàng"}
+                {data.isInStock ? t("COMMON.in_stock") : i18nText("AUTO.components.product.productinfo.line164_7_het_hang")}
               </span>
             </div>
           </div>
@@ -182,9 +182,7 @@ const ProductInfo = ({ data, hasSpecifications }: ProductsProps) => {
                 </span>
               ) : null}
             </div>
-            <span className="mt-1 block text-xs font-medium text-slate-500">
-              (Đã bao gồm VAT)
-            </span>
+            <span className="mt-1 block text-xs font-medium text-slate-500">{i18nText("AUTO.components.product.productinfo.line186_8_da_bao_gom_vat")}</span>
           </div>
 
           <div className="space-y-3">
@@ -197,7 +195,7 @@ const ProductInfo = ({ data, hasSpecifications }: ProductsProps) => {
                   type="button"
                   onClick={() => quantity > 1 && setQuantity(quantity - 1)}
                   className="h-10 w-10 border-r border-slate-200 text-lg text-slate-500 transition hover:bg-slate-50 hover:text-slate-950"
-                  aria-label="Giảm số lượng"
+                  aria-label={i18nText("AUTO.components.product.productinfo.line200_9_giam_so_luong")}
                 >
                   -
                 </button>
@@ -208,7 +206,7 @@ const ProductInfo = ({ data, hasSpecifications }: ProductsProps) => {
                   type="button"
                   onClick={() => setQuantity(quantity + 1)}
                   className="h-10 w-10 border-l border-slate-200 text-lg text-slate-700 transition hover:bg-slate-50 hover:text-slate-950"
-                  aria-label="Tăng số lượng"
+                  aria-label={i18nText("AUTO.components.product.productinfo.line211_10_tang_so_luong")}
                 >
                   +
                 </button>

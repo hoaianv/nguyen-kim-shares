@@ -1,3 +1,4 @@
+import { i18nText } from "@/lib/i18nText";
 import { ChevronDown } from "lucide-react";
 import React, { forwardRef } from "react";
 import { FieldError } from "react-hook-form";
@@ -29,7 +30,7 @@ const SelectField = forwardRef<HTMLSelectElement, SelectFieldProps>(
       onChange,
       value = "",
       classProps,
-      placeholder = "Chọn",
+      placeholder = i18nText("AUTO.components.ui.select.extra32_0_chon"),
       disabled,
     },
     ref

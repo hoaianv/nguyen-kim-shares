@@ -1,7 +1,8 @@
+import { i18nText } from "@/lib/i18nText";
 export const formatCurrency = (amount: number) => {
   const validAmount = Number(amount);
 
-  if (isNaN(validAmount) || validAmount <= 0) return "Liên hệ";
+  if (isNaN(validAmount) || validAmount <= 0) return i18nText("AUTO.until.index.extra4_0_lien_he");
 
   return validAmount.toLocaleString("vi-VN", {
     style: "currency",

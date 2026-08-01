@@ -1,3 +1,4 @@
+import { i18nText } from "@/lib/i18nText";
 import React from "react";
 import Image from "next/image";
 import { calcDiscountPercentage, getMarketPrice, getPrice } from "@/lib/utils";
@@ -260,7 +261,7 @@ const BuildItem = React.memo(function BuildItem({
                       ? "cursor-not-allowed"
                       : "cursor-pointer"
                   }`}
-                aria-label="Giảm số lượng"
+                aria-label={i18nText("AUTO.components.buildpc.builditem.line263_0_giam_so_luong")}
               >
                 −
               </button>
@@ -292,7 +293,7 @@ const BuildItem = React.memo(function BuildItem({
                   
                   lg:h-8 
                   lg:w-8"
-                aria-label="Tăng số lượng"
+                aria-label={i18nText("AUTO.components.buildpc.builditem.line295_1_tang_so_luong")}
               >
                 +
               </button>
@@ -317,8 +318,8 @@ const BuildItem = React.memo(function BuildItem({
                     {t("COMMON.delete")}
                   </span>
                 }
-                title="Xóa sản phẩm"
-                description="Bạn có chắc chắn muốn xóa sản phẩm này?"
+                title={i18nText("AUTO.components.buildpc.builditem.line320_2_xoa_san_pham")}
+                description={i18nText("AUTO.components.buildpc.builditem.line321_3_chac_chan_muon_xoa_san")}
                 onConfirm={() => onRemove(item.url)}
                 position="bottom"
               />

@@ -1,5 +1,6 @@
 "use client";
 
+import { i18nText } from "@/lib/i18nText";
 import { MENU_ITEMS } from "@/constants";
 import { useCategoriesStore } from "@/stores/useCategories";
 import { ArrowLeft, ChevronRight, X } from "lucide-react";
@@ -118,7 +119,7 @@ export default function MenuCategories({
         {open && (
           <motion.button
             type="button"
-            aria-label="Đóng danh mục sản phẩm"
+            aria-label={i18nText("AUTO.components.home.menucategories.line121_0_dong_danh_muc_san_pham")}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -140,7 +141,7 @@ export default function MenuCategories({
             ref={panelRef}
             role="dialog"
             aria-modal="true"
-            aria-label="Danh mục sản phẩm"
+            aria-label={i18nText("AUTO.components.home.menucategories.line143_1_danh_muc_san_pham")}
             initial={
               reduceMotion
                 ? { opacity: 0 }
@@ -181,7 +182,7 @@ export default function MenuCategories({
                 "
               >
                 <nav
-                  aria-label="Danh mục sản phẩm"
+                  aria-label={i18nText("AUTO.components.home.menucategories.line184_2_danh_muc_san_pham")}
                   className="h-full overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 hover:scrollbar-thumb-gray-400 py-1.5"
                 >
                   {categories.map((item, index) => {
@@ -409,7 +410,7 @@ export default function MenuCategories({
 
                       <p className="mt-2 max-w-md text-sm text-muted-foreground">
                         {activeCategory?.description ||
-                          "Danh mục này hiện chưa có danh mục con."}
+                          i18nText("AUTO.components.home.menucategories.line412_3_danh_muc_nay_hien_chua")}
                       </p>
 
                       <Link
@@ -422,9 +423,7 @@ export default function MenuCategories({
                           px-4 text-sm font-medium text-foreground
                           transition-colors hover:bg-muted/50
                         "
-                      >
-                        Xem danh mục
-                        <ChevronRight className="h-4 w-4" />
+                      >{i18nText("AUTO.components.home.menucategories.line426_4_xem_danh_muc")}<ChevronRight className="h-4 w-4" />
                       </Link>
                     </div>
                   )}
@@ -448,7 +447,7 @@ export default function MenuCategories({
           >
             <button
               type="button"
-              aria-label="Đóng danh mục"
+              aria-label={i18nText("AUTO.components.home.menucategories.line451_5_dong_danh_muc")}
               className="absolute inset-0 bg-foreground/60"
               onClick={onMobileClose}
             />
@@ -476,7 +475,7 @@ export default function MenuCategories({
               }}
               role="dialog"
               aria-modal="true"
-              aria-label="Danh mục sản phẩm"
+              aria-label={i18nText("AUTO.components.home.menucategories.line479_6_danh_muc_san_pham")}
               className="
                 relative flex h-full w-[88vw]
                 max-w-[380px] flex-col
@@ -509,7 +508,7 @@ export default function MenuCategories({
                 <button
                   type="button"
                   onClick={onMobileClose}
-                  aria-label="Đóng menu"
+                  aria-label={i18nText("AUTO.components.home.menucategories.line512_7_dong_menu")}
                   className="
                     inline-flex h-10 w-10 items-center
                     justify-center rounded-sm
@@ -533,9 +532,7 @@ export default function MenuCategories({
                       transition-colors hover:text-primary
                     "
                   >
-                    <ArrowLeft className="h-4 w-4" />
-                    Quay lại
-                  </button>
+                    <ArrowLeft className="h-4 w-4" />{i18nText("AUTO.components.home.menucategories.line537_8_quay_lai")}</button>
                 </div>
 
                 <div className="divide-y divide-border">
@@ -586,8 +583,8 @@ export default function MenuCategories({
                               aria-expanded={isOpen}
                               aria-label={
                                 isOpen
-                                  ? `Đóng ${item.title}`
-                                  : `Mở ${item.title}`
+                                  ? i18nText("AUTO.components.home.menucategories.line589_9_dong", { value0: item.title })
+                                  : i18nText("AUTO.components.home.menucategories.line590_10_mo", { value0: item.title })
                               }
                               className="
                                 inline-flex h-9 w-9 shrink-0
@@ -672,8 +669,8 @@ export default function MenuCategories({
                                             aria-expanded={childIsOpen}
                                             aria-label={
                                               childIsOpen
-                                                ? `Đóng ${child.title}`
-                                                : `Mở ${child.title}`
+                                                ? i18nText("AUTO.components.home.menucategories.line675_11_dong", { value0: child.title })
+                                                : i18nText("AUTO.components.home.menucategories.line676_12_mo", { value0: child.title })
                                             }
                                             className="
                                               inline-flex h-8 w-8
@@ -767,9 +764,7 @@ export default function MenuCategories({
                       text-xs uppercase tracking-[0.24em]
                       text-muted-foreground
                     "
-                  >
-                    Điều hướng nhanh
-                  </p>
+                  >{i18nText("AUTO.components.home.menucategories.line771_13_dieu_huong_nhanh")}</p>
 
                   <div className="mt-3 space-y-2">
                     {MENU_ITEMS.filter((item) => item.link).map(

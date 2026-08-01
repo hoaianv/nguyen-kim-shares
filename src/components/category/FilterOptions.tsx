@@ -1,5 +1,6 @@
 "use client";
 
+import { i18nText } from "@/lib/i18nText";
 import { useEffect, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { ChevronDown, Filter } from "lucide-react";
@@ -57,9 +58,7 @@ export default function FilterOptions({ options }: FilterOptionsProps) {
   return (
     <section className="space-y-3">
       <div className="flex items-center justify-between gap-3">
-        <h2 className="text-xs font-semibold uppercase tracking-[0.24em] text-muted-foreground">
-          Thuộc tính
-        </h2>
+        <h2 className="text-xs font-semibold uppercase tracking-[0.24em] text-muted-foreground">{i18nText("AUTO.components.category.filteroptions.line61_0_thuoc_tinh")}</h2>
         <button
           type="button"
           onClick={clearAllFilters}
@@ -129,9 +128,7 @@ export default function FilterOptions({ options }: FilterOptionsProps) {
                           setOpenOptionId(null);
                         }}
                         className="inline-flex h-10 items-center rounded-md border border-border/60 bg-white px-3 text-sm font-medium text-foreground transition hover:border-amber-300 hover:bg-amber-50/70"
-                      >
-                        Bỏ chọn
-                      </button>
+                      >{i18nText("AUTO.components.category.filteroptions.line133_1_bo_chon")}</button>
 
                       <div className="grid max-h-[320px] grid-cols-2 gap-2 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 hover:scrollbar-thumb-gray-400 pr-1 md:grid-cols-3 xl:grid-cols-2">
                         {group.subCateOption.map((sub: ISubCateOption) => {

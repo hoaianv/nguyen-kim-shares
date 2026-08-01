@@ -1,5 +1,6 @@
 "use client";
 
+import { getCurrentLocale, i18nText } from "@/lib/i18nText";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { CircleDollarSign, ChevronDown } from "lucide-react";
@@ -98,22 +99,22 @@ export default function PriceRangeChip({
   };
 
   const formatVND = (value: number) =>
-    new Intl.NumberFormat("vi-VN").format(Math.max(0, Math.floor(value))) + "đ";
+    new Intl.NumberFormat(getCurrentLocale() === "en" ? "en-US" : "vi-VN", {
+      style: "currency",
+      currency: "VND",
+      maximumFractionDigits: 0,
+    }).format(Math.max(0, Math.floor(value)));
 
   return (
     <section ref={containerRef} className={`space-y-3 ${className ?? ""}`}>
       <div className="flex items-center justify-between gap-3">
-        <h2 className="text-xs font-semibold uppercase tracking-[0.24em] text-muted-foreground">
-          Mức giá
-        </h2>
+        <h2 className="text-xs font-semibold uppercase tracking-[0.24em] text-muted-foreground">{i18nText("AUTO.components.category.pricerangechip.line107_0_muc_gia")}</h2>
         {isPriceActive ? (
           <button
             type="button"
             onClick={clearPriceRange}
             className="text-xs font-medium text-muted-foreground transition hover:text-foreground"
-          >
-            Bỏ chọn
-          </button>
+          >{i18nText("AUTO.components.category.pricerangechip.line115_1_bo_chon")}</button>
         ) : null}
       </div>
 
@@ -125,13 +126,13 @@ export default function PriceRangeChip({
             ? "border-amber-300 bg-amber-50 text-amber-800"
             : "border-border/60 bg-white text-foreground hover:border-amber-300 hover:bg-amber-50/70"
         }`}
-        title="Xem theo giá"
+        title={i18nText("AUTO.components.category.pricerangechip.line128_2_xem_theo_gia")}
       >
         <span className="inline-flex items-center gap-2">
           <CircleDollarSign size={16} />
           {isPriceActive
             ? `${formatVND(currentMinPrice)} - ${formatVND(currentMaxPrice)}`
-            : "Chọn khoảng giá"}
+            : i18nText("AUTO.components.category.pricerangechip.line134_3_chon_khoang_gia")}
         </span>
         <ChevronDown size={14} />
       </button>
@@ -148,9 +149,7 @@ export default function PriceRangeChip({
             <div className="space-y-3">
               <div className="grid grid-cols-2 gap-2">
                 <label className="space-y-1">
-                  <span className="text-[11px] font-medium uppercase tracking-[0.18em] text-muted-foreground">
-                    Tối thiểu
-                  </span>
+                  <span className="text-[11px] font-medium uppercase tracking-[0.18em] text-muted-foreground">{i18nText("AUTO.components.category.pricerangechip.line152_4_toi_thieu")}</span>
                   <input
                     type="number"
                     min={rangePrice.minPrice}
@@ -164,9 +163,7 @@ export default function PriceRangeChip({
                   />
                 </label>
                 <label className="space-y-1">
-                  <span className="text-[11px] font-medium uppercase tracking-[0.18em] text-muted-foreground">
-                    Tối đa
-                  </span>
+                  <span className="text-[11px] font-medium uppercase tracking-[0.18em] text-muted-foreground">{i18nText("AUTO.components.category.pricerangechip.line168_5_toi_da")}</span>
                   <input
                     type="number"
                     min={currentMinPrice}
@@ -209,7 +206,7 @@ export default function PriceRangeChip({
                   onChange={(event) =>
                     setCurrentMinPrice(Number(event.target.value))
                   }
-                  aria-label="Giá tối thiểu"
+                  aria-label={i18nText("AUTO.components.category.pricerangechip.line212_6_gia_toi_thieu")}
                   onMouseUp={() => autoApplyOnRelease && applyPriceRange()}
                   onTouchEnd={() => autoApplyOnRelease && applyPriceRange()}
                   className="absolute inset-0 w-full appearance-none bg-transparent"
@@ -223,7 +220,7 @@ export default function PriceRangeChip({
                   onChange={(event) =>
                     setCurrentMaxPrice(Number(event.target.value))
                   }
-                  aria-label="Giá tối đa"
+                  aria-label={i18nText("AUTO.components.category.pricerangechip.line226_7_gia_toi_da")}
                   onMouseUp={() => autoApplyOnRelease && applyPriceRange()}
                   onTouchEnd={() => autoApplyOnRelease && applyPriceRange()}
                   className="absolute inset-0 w-full appearance-none bg-transparent"
@@ -235,16 +232,12 @@ export default function PriceRangeChip({
                   type="button"
                   onClick={() => setIsOpenDropdown(false)}
                   className="inline-flex h-10 flex-1 items-center justify-center rounded-md border border-border/60 bg-white text-sm font-medium text-foreground transition hover:border-amber-300 hover:bg-amber-50/70"
-                >
-                  Đóng
-                </button>
+                >{i18nText("AUTO.components.category.pricerangechip.line239_8_dong")}</button>
                 <button
                   type="button"
                   onClick={applyPriceRange}
                   className="inline-flex h-10 flex-1 items-center justify-center rounded-md border border-slate-950 bg-slate-950 text-sm font-medium text-white transition hover:bg-slate-800"
-                >
-                  Xem kết quả
-                </button>
+                >{i18nText("AUTO.components.category.pricerangechip.line246_9_xem_ket_qua")}</button>
               </div>
             </div>
           </motion.div>

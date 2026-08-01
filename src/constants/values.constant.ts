@@ -1,3 +1,4 @@
+import { i18nText } from "@/lib/i18nText";
 export const CONST_VALUES = {
   TOKEN: "token",
   LANGUAGES_CODE: "languages_code",
@@ -47,7 +48,7 @@ export const LANGUAGES = [
   },
   {
     code: "vi",
-    label: "Tiếng Việt",
+    label: i18nText("AUTO.constants.values.constant.line50_0_tieng_viet"),
     flag: "🇻🇳",
     shortLabel: "VI",
   },

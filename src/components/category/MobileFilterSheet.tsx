@@ -1,5 +1,6 @@
 "use client";
 
+import { i18nText } from "@/lib/i18nText";
 import { useEffect } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { X } from "lucide-react";
@@ -68,7 +69,7 @@ export default function MobileFilterSheet({
         >
           <button
             type="button"
-            aria-label="Đóng bộ lọc"
+            aria-label={i18nText("AUTO.components.category.mobilefiltersheet.line71_0_dong_bo_loc")}
             className="absolute inset-0 bg-slate-950/55 backdrop-blur-[2px]"
             onClick={onClose}
           />
@@ -81,13 +82,11 @@ export default function MobileFilterSheet({
             transition={{ duration: 0.22, ease: "easeOut" }}
             role="dialog"
             aria-modal="true"
-            aria-label="Bộ lọc danh mục"
+            aria-label={i18nText("AUTO.components.category.mobilefiltersheet.line84_1_bo_loc_danh_muc")}
           >
             <div className="flex items-center justify-between border-b border-border/60 px-4 py-4">
               <div className="min-w-0">
-                <p className="text-[11px] uppercase tracking-[0.24em] text-muted-foreground">
-                  bộ lọc
-                </p>
+                <p className="text-[11px] uppercase tracking-[0.24em] text-muted-foreground">{i18nText("AUTO.components.category.mobilefiltersheet.line89_2_bo_loc")}</p>
                 <div className="mt-1 flex items-center gap-2">
                   <h3 className="text-base font-semibold text-foreground">{title}</h3>
                   {activeFilterCount > 0 ? (
@@ -102,7 +101,7 @@ export default function MobileFilterSheet({
                 type="button"
                 onClick={onClose}
                 className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-border/60 bg-white text-foreground transition hover:border-amber-300 hover:bg-amber-50/70"
-                aria-label="Đóng"
+                aria-label={i18nText("AUTO.components.category.mobilefiltersheet.line105_3_dong")}
               >
                 <X className="h-4 w-4" />
               </button>
@@ -125,16 +124,12 @@ export default function MobileFilterSheet({
                 onClick={onResetAll}
                 disabled={activeFilterCount === 0}
                 className="inline-flex h-11 items-center justify-center rounded-md border border-border/60 bg-white text-sm font-medium text-foreground transition hover:border-amber-300 hover:bg-amber-50/70 disabled:cursor-not-allowed disabled:opacity-50"
-              >
-                Xóa bộ lọc
-              </button>
+              >{i18nText("AUTO.components.category.mobilefiltersheet.line129_4_xoa_bo_loc")}</button>
               <button
                 type="button"
                 onClick={onClose}
                 className="inline-flex h-11 items-center justify-center rounded-md border border-amber-300 bg-amber-50 text-sm font-medium text-amber-800 transition hover:bg-amber-100"
-              >
-                Xem kết quả
-              </button>
+              >{i18nText("AUTO.components.category.mobilefiltersheet.line136_5_xem_ket_qua")}</button>
             </div>
           </motion.div>
         </motion.div>

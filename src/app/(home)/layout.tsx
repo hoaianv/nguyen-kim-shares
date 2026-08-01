@@ -9,7 +9,9 @@ import {
 import { domain } from "@/constants/routes";
 import { Metadata } from "next";
 import ScrollTop from "@/components/ui/ScrollTop";
-import GoogleTranslate from "@/components/GoogleTranslate";
+import LanguageSwitcher from "@/components/ui/LanguageSwitcher";
+import { cookies } from "next/headers";
+import { CONST_VALUES } from "@/constants/values.constant";
 
 const Footer = dynamic(() => import("@/components/footer/Footer"), {
   ssr: false,
@@ -77,11 +79,14 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const currentLocale =
+    cookies().get(CONST_VALUES.LANGUAGES_CODE)?.value === "en" ? "en" : "vi";
+
   return (
     <>
-      <div className="fixed right-4 top-4 z-[9999]">
-        <GoogleTranslate />
-      </div>
+      {/* <div className="fixed right-4 top-4 z-[9999]">
+        <LanguageSwitcher currentLocale={currentLocale} />
+      </div> */}
       <ScrollTop />
       <Header />
       <main className="min-h-screen bg-white">{children}</main>

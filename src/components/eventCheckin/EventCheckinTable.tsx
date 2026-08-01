@@ -1,5 +1,6 @@
 "use client";
 
+import { i18nText } from "@/lib/i18nText";
 import { useMemo } from "react";
 import { Pencil, Trash2 } from "lucide-react";
 import Table from "@/components/ui/table";
@@ -16,12 +17,12 @@ const STATUS_CONFIG: Record<
   { label: string; className: string }
 > = {
   [ECheckinStatus.Checked]: {
-    label: "Đã check-in",
+    label: i18nText("AUTO.components.eventcheckin.eventcheckintable.line19_0_da_check_in"),
     className:
       "bg-emerald-50 text-emerald-700 border border-emerald-200 ring-1 ring-emerald-500/10",
   },
   [ECheckinStatus.NotChecked]: {
-    label: "Chưa check-in",
+    label: i18nText("AUTO.components.eventcheckin.eventcheckintable.line24_1_chua_check_in"),
     className:
       "bg-amber-50 text-amber-700 border border-amber-200 ring-1 ring-amber-500/10",
   },
@@ -52,7 +53,7 @@ export default function EventCheckinTable({
     () => [
       {
         key: "name",
-        title: "Khách hàng",
+        title: i18nText("AUTO.components.eventcheckin.eventcheckintable.line55_2_khach_hang"),
         sortable: true,
         render: (_, record) => (
           <div className="flex flex-col gap-0.5">
@@ -71,7 +72,7 @@ export default function EventCheckinTable({
       },
       {
         key: "company",
-        title: "Công ty / Chức vụ",
+        title: i18nText("AUTO.components.eventcheckin.eventcheckintable.line74_3_cong_ty_chuc_vu"),
         render: (_, record) => (
           <div className="flex flex-col gap-0.5">
             <span className="font-medium text-gray-800 text-sm leading-snug line-clamp-2" title={record.companyName}>
@@ -87,7 +88,7 @@ export default function EventCheckinTable({
       },
       {
         key: "saleName",
-        title: "Sale phụ trách",
+        title: i18nText("AUTO.components.eventcheckin.eventcheckintable.line90_4_sale_phu_trach"),
         width: "140px",
         render: (_, record) => (
           <span className="text-sm text-gray-600 font-medium bg-gray-100/70 px-2 py-1 rounded-md inline-block whitespace-nowrap overflow-hidden text-ellipsis max-w-full">
@@ -97,7 +98,7 @@ export default function EventCheckinTable({
       },
       {
         key: "qrCode",
-        title: "Mã QR",
+        title: i18nText("AUTO.components.eventcheckin.eventcheckintable.line100_5_ma_qr"),
         width: "80px",
         align: "center" as const,
         render: (_, record) => (
@@ -110,7 +111,7 @@ export default function EventCheckinTable({
       },
       {
         key: "status",
-        title: "Trạng thái",
+        title: i18nText("AUTO.components.eventcheckin.eventcheckintable.line113_6_trang_thai"),
         width: "130px",
         align: "center" as const,
         render: (_, record) => {
@@ -128,7 +129,7 @@ export default function EventCheckinTable({
       },
       {
         key: "actions" as string,
-        title: "Tác vụ",
+        title: i18nText("AUTO.components.eventcheckin.eventcheckintable.line131_7_tac_vu"),
         width: "90px",
         align: "center" as const,
         render: (_, record) => (
@@ -139,7 +140,7 @@ export default function EventCheckinTable({
                 onEdit(record);
               }}
               className="p-1.5 rounded-md hover:bg-blue-50 text-gray-400 hover:text-blue-600 transition-colors"
-              title="Chỉnh sửa"
+              title={i18nText("AUTO.components.eventcheckin.eventcheckintable.line142_8_chinh_sua")}
             >
               <Pencil className="w-4 h-4" />
             </button>
@@ -149,10 +150,10 @@ export default function EventCheckinTable({
                   <Trash2 className="w-4 h-4" />
                 </span>
               }
-              title="Xác nhận xóa"
-              description={`Bạn có chắc muốn xóa khách "${record.name}"?`}
-              confirmText="Xóa"
-              cancelText="Hủy"
+              title={i18nText("AUTO.components.eventcheckin.eventcheckintable.line152_9_xac_nhan_xoa")}
+              description={i18nText("AUTO.components.eventcheckin.eventcheckintable.line153_10_chac_muon_xoa_khach", { value0: record.name })}
+              confirmText={i18nText("AUTO.components.eventcheckin.eventcheckintable.extra155_0_xoa")}
+              cancelText={i18nText("AUTO.components.eventcheckin.eventcheckintable.extra156_1_huy")}
               variant="danger"
               position="left"
               onConfirm={() => onDelete(record)}

@@ -1,3 +1,4 @@
+import { i18nText } from "@/lib/i18nText";
 import { IHirePost } from "@/interfaces/models/IRecruitment.interfaces";
 import {
   Briefcase,
@@ -33,7 +34,7 @@ const JobCard = ({ item }: { item: IHirePost }) => {
           <div className="absolute top-4 left-4">
             <div className="flex items-center gap-1 px-3 py-1 text-xs font-medium text-white bg-green-600/90 backdrop-blur-sm rounded-full border border-white/20">
               <Users className="w-3 h-3" />
-              <span>{item.quantity} vị trí</span>
+              <span>{item.quantity}{i18nText("AUTO.components.recruitment.jobcard.line36_0_vi_tri")}</span>
             </div>
           </div>
 
@@ -59,14 +60,12 @@ const JobCard = ({ item }: { item: IHirePost }) => {
           </div>
           <div className="flex items-center gap-2 text-gray-600 ">
             <Briefcase className="w-4 h-4" />
-            <span className="text-sm line-clamp-1">
-              Kinh nghiệm: {item.experience}
+            <span className="text-sm line-clamp-1">{i18nText("AUTO.components.recruitment.jobcard.line63_1_kinh_nghiem")}{item.experience}
             </span>
           </div>
           <div className="flex items-center gap-2 text-gray-600  ">
             <Calendar className="w-4 h-4" />
-            <span className="text-sm line-clamp-1">
-              Hạn nộp: {item.deadline}
+            <span className="text-sm line-clamp-1">{i18nText("AUTO.components.recruitment.jobcard.line69_2_han_nop")}{item.deadline}
             </span>
           </div>
         </div>
@@ -85,7 +84,7 @@ const JobCard = ({ item }: { item: IHirePost }) => {
           <Link href={`/tuyen-dung/${item.slug}`}>
             <div className="flex items-center justify-center gap-2">
               <Clock className="w-4 h-4" />
-              <span>Ứng tuyển ngay</span>
+              <span>{i18nText("AUTO.components.recruitment.jobcard.line88_3_ung_tuyen_ngay")}</span>
             </div>
           </Link>
         </div>

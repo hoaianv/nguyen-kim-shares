@@ -1,5 +1,6 @@
 "use client";
 
+import { i18nText } from "@/lib/i18nText";
 import Image from "next/image";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { ESlugType } from "@/interfaces/models/ISlug.interface";
@@ -24,7 +25,7 @@ export default function FilterCustomerNeeds({ needs }: { needs: ICustomerNeeds[]
 
   return (
     <section className="space-y-3">
-      <h2 className="text-xl font-bold text-slate-900">Chọn theo nhu cầu</h2>
+      <h2 className="text-xl font-bold text-slate-900">{i18nText("AUTO.components.category.filtercustomerneeds.line27_0_chon_theo_nhu_cau")}</h2>
       <div className="flex flex-wrap gap-3">
         {needs.map((need) => {
           const active = selected === need.url;

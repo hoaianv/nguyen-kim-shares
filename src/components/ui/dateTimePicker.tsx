@@ -1,3 +1,4 @@
+import { i18nText } from "@/lib/i18nText";
 import React, { useState, useRef, useEffect } from "react";
 import { Calendar, ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -14,7 +15,7 @@ type DateTimePickerProps = {
 const DateTimePicker = ({
   value,
   onChange,
-  placeholder = "Chọn ngày",
+  placeholder = i18nText("AUTO.components.ui.datetimepicker.extra17_0_chon_ngay"),
   className = "",
   disabled = false,
   minYear = 1900,
@@ -128,18 +129,18 @@ const DateTimePicker = ({
 
   const days = getDaysInMonth(currentDate);
   const months = [
-    "Tháng 1",
-    "Tháng 2",
-    "Tháng 3",
-    "Tháng 4",
-    "Tháng 5",
-    "Tháng 6",
-    "Tháng 7",
-    "Tháng 8",
-    "Tháng 9",
-    "Tháng 10",
-    "Tháng 11",
-    "Tháng 12",
+    i18nText("AUTO.components.ui.datetimepicker.extra131_1_thang_1"),
+    i18nText("AUTO.components.ui.datetimepicker.extra132_2_thang_2"),
+    i18nText("AUTO.components.ui.datetimepicker.extra133_3_thang_3"),
+    i18nText("AUTO.components.ui.datetimepicker.extra134_4_thang_4"),
+    i18nText("AUTO.components.ui.datetimepicker.extra135_5_thang_5"),
+    i18nText("AUTO.components.ui.datetimepicker.extra136_6_thang_6"),
+    i18nText("AUTO.components.ui.datetimepicker.extra137_7_thang_7"),
+    i18nText("AUTO.components.ui.datetimepicker.extra138_8_thang_8"),
+    i18nText("AUTO.components.ui.datetimepicker.extra139_9_thang_9"),
+    i18nText("AUTO.components.ui.datetimepicker.extra140_10_thang_10"),
+    i18nText("AUTO.components.ui.datetimepicker.extra141_11_thang_11"),
+    i18nText("AUTO.components.ui.datetimepicker.extra142_12_thang_12"),
   ];
 
   return (

@@ -1,3 +1,4 @@
+import { i18nText } from "@/lib/i18nText";
 import {
   getCompare,
   getProductDescription,
@@ -76,7 +77,7 @@ export default async function Product({ data, slug }: ProductProps) {
           />
         </div>
 
-        <section aria-label="Product information" className="scroll-mt-24">
+        <section aria-label={i18nText("AUTO.components.product.product.line79_0_product_information")} className="scroll-mt-24">
           <ProductInfo
             data={items}
             hasSpecifications={Boolean(propertiesData?.length)}
@@ -85,7 +86,7 @@ export default async function Product({ data, slug }: ProductProps) {
 
         {items && !items.isInStock && (
           <section
-            aria-label="Back in stock registration"
+            aria-label={i18nText("AUTO.components.product.product.line88_1_back_in_stock_registration")}
             className="scroll-mt-24"
           >
             <div className="grid grid-cols-1 gap-3 lg:grid-cols-10 lg:items-stretch">
@@ -103,7 +104,7 @@ export default async function Product({ data, slug }: ProductProps) {
         )}
 
         <section
-          aria-label="Product description and specifications"
+          aria-label={i18nText("AUTO.components.product.product.line106_2_product_description_specifications")}
           className="scroll-mt-24"
         >
           <div className="grid grid-cols-1 gap-3 lg:grid-cols-10 lg:items-start">
@@ -129,7 +130,7 @@ export default async function Product({ data, slug }: ProductProps) {
         </section>
 
         <section
-          aria-label="Product comparison"
+          aria-label={i18nText("AUTO.components.product.product.line132_3_product_comparison")}
           className="scroll-mt-24"
         >
           <LazySection height="h-48">
@@ -137,7 +138,7 @@ export default async function Product({ data, slug }: ProductProps) {
           </LazySection>
         </section>
 
-        <section aria-label="Related products" className="scroll-mt-24">
+        <section aria-label={i18nText("AUTO.components.product.product.line140_4_related_products")} className="scroll-mt-24">
           <LazySection height="h-48">
             <RelatedProducts data={getValidData(related)} />
           </LazySection>

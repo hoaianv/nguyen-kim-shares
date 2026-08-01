@@ -1,3 +1,4 @@
+import { i18nText } from "@/lib/i18nText";
 import InfoUserCard from "@/components/checkout/InfoUserCard";
 import { IAddress } from "@/interfaces/models/IAddress.interface";
 import { IMember } from "@/interfaces/models/member.interfaces";
@@ -64,7 +65,7 @@ const AddressGrid = ({
             strokeWidth={1.5}
             className="sm:h-[30px] sm:w-[30px]"
           />
-          <span className="mt-2 text-xs sm:text-sm">Thêm địa chỉ</span>
+          <span className="mt-2 text-xs sm:text-sm">{i18nText("AUTO.components.checkout.addressgrid.line67_0_them_dia_chi")}</span>
         </div>
       </div>
     </div>

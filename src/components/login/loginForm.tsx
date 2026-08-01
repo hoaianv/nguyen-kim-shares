@@ -1,4 +1,5 @@
 "use client";
+import { i18nText } from "@/lib/i18nText";
 import React, { useTransition, useState } from "react";
 import { useForm, Controller } from "react-hook-form";
 import { z } from "zod";
@@ -13,8 +14,8 @@ import { login } from "@/apis/common/auth.apis";
 import { useStateStore } from "@/stores/stateStore";
 
 const loginSchema = z.object({
-  username: z.string().min(1, "Tên tài khoản là bắt buộc"),
-  password: z.string().min(1, "Mật khẩu là bắt buộc"),
+  username: z.string().min(1, i18nText("AUTO.components.login.loginform.line16_0_ten_khoan_bat_buoc")),
+  password: z.string().min(1, i18nText("AUTO.components.login.loginform.line17_1_mat_khau_bat_buoc")),
 });
 
 type LoginFormData = z.infer<typeof loginSchema>;
@@ -50,12 +51,12 @@ const LoginForm = () => {
         reset();
         router.push("/");
         toast.success(response.message, {
-          description: "Chào mừng bạn đến với hệ thống!",
+          description: i18nText("AUTO.components.login.loginform.line53_2_chao_mung_den_he_thong"),
           position: "top-center",
         });
       } else {
         toast.error(response.message, {
-          description: "Tài khoản hoặc mật khẩu chưa đúng!",
+          description: i18nText("AUTO.components.login.loginform.line58_3_khoan_hoac_mat_khau_chua"),
           position: "top-center",
         });
       }
@@ -73,7 +74,7 @@ const LoginForm = () => {
               onChange={field.onChange}
               value={field.value}
               id="username"
-              label="Tên tài khoản"
+              label={i18nText("AUTO.components.login.loginform.line76_4_ten_khoan")}
               error={errors.username}
             />
           )}
@@ -86,7 +87,7 @@ const LoginForm = () => {
               onChange={field.onChange}
               value={field.value}
               id="password"
-              label="Mật khẩu"
+              label={i18nText("AUTO.components.login.loginform.line89_5_mat_khau")}
               type="password"
               error={errors.password}
             />
@@ -98,9 +99,7 @@ const LoginForm = () => {
             type="button"
             onClick={() => setShowForgotModal(true)}
             className="text-blue-600 hover:text-blue-800 text-sm font-medium underline hover:no-underline transition-colors duration-200"
-          >
-            Quên mật khẩu?
-          </button>
+          >{i18nText("AUTO.components.login.loginform.line102_6_quen_mat_khau")}</button>
         </div>
 
         <Button
@@ -109,7 +108,7 @@ const LoginForm = () => {
           size="md"
           className="mt-3"
         >
-          {loading ? "Đang đăng nhập..." : "Đăng nhập"}
+          {loading ? i18nText("AUTO.components.login.loginform.line112_7_dang_dang_nhap") : i18nText("AUTO.components.login.loginform.line112_8_dang_nhap")}
         </Button>
       </form>
 

@@ -1,5 +1,6 @@
 "use client";
 
+import { i18nText } from "@/lib/i18nText";
 import { useState, useEffect, useCallback } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { IPagination } from "@/interfaces/common";
@@ -81,8 +82,8 @@ export function useEventCheckin() {
       setGuests([]);
       setPagination(EMPTY_PAGINATION);
       setStats(EMPTY_STATS);
-      toast.error("Không thể tải dữ liệu", {
-        description: "Vui lòng thử lại sau.",
+      toast.error(i18nText("AUTO.hooks.useeventcheckin.line84_0_khong_du_lieu"), {
+        description: i18nText("AUTO.hooks.useeventcheckin.line85_1_vui_long_thu_lai_sau"),
         position: "top-center",
       });
     } finally {
@@ -156,17 +157,17 @@ export function useEventCheckin() {
       try {
         const result = await createEventCheckinGuest(data);
         if (result?.status && result?.errorCode === 200) {
-          toast.success("Thêm khách thành công", { position: "top-center" });
+          toast.success(i18nText("AUTO.hooks.useeventcheckin.line159_2_them_khach_thanh_cong"), { position: "top-center" });
           closeFormModal();
           fetchGuests();
           return true;
         }
-        toast.error(result?.message || "Thêm khách thất bại", {
+        toast.error(result?.message || i18nText("AUTO.hooks.useeventcheckin.extra165_0_them_khach_that_bai"), {
           position: "top-center",
         });
         return false;
       } catch {
-        toast.error("Có lỗi xảy ra", { position: "top-center" });
+        toast.error(i18nText("AUTO.hooks.useeventcheckin.line169_3_loi_xay_ra"), { position: "top-center" });
         return false;
       }
     },
@@ -178,17 +179,17 @@ export function useEventCheckin() {
       try {
         const result = await updateEventCheckinGuest(id, data);
         if (result?.status && result?.errorCode === 200) {
-          toast.success("Cập nhật thành công", { position: "top-center" });
+          toast.success(i18nText("AUTO.hooks.useeventcheckin.line181_4_cap_nhat_thanh_cong"), { position: "top-center" });
           closeFormModal();
           fetchGuests();
           return true;
         }
-        toast.error(result?.message || "Cập nhật thất bại", {
+        toast.error(result?.message || i18nText("AUTO.hooks.useeventcheckin.extra187_1_cap_nhat_that_bai"), {
           position: "top-center",
         });
         return false;
       } catch {
-        toast.error("Có lỗi xảy ra", { position: "top-center" });
+        toast.error(i18nText("AUTO.hooks.useeventcheckin.line191_5_loi_xay_ra"), { position: "top-center" });
         return false;
       }
     },
@@ -200,16 +201,16 @@ export function useEventCheckin() {
       try {
         const result = await deleteEventCheckinGuest(id);
         if (result?.status && result?.errorCode === 200) {
-          toast.success("Xóa thành công", { position: "top-center" });
+          toast.success(i18nText("AUTO.hooks.useeventcheckin.line203_6_xoa_thanh_cong"), { position: "top-center" });
           fetchGuests();
           return true;
         }
-        toast.error(result?.message || "Xóa thất bại", {
+        toast.error(result?.message || i18nText("AUTO.hooks.useeventcheckin.extra208_2_xoa_that_bai"), {
           position: "top-center",
         });
         return false;
       } catch {
-        toast.error("Có lỗi xảy ra", { position: "top-center" });
+        toast.error(i18nText("AUTO.hooks.useeventcheckin.line212_7_loi_xay_ra"), { position: "top-center" });
         return false;
       }
     },
@@ -222,19 +223,19 @@ export function useEventCheckin() {
       const ids = selectedGuests.map((g) => g.id);
       const result = await bulkDeleteEventCheckinGuests(ids);
       if (result?.status && result?.errorCode === 200) {
-        toast.success(`Đã xóa ${ids.length} khách`, {
+        toast.success(i18nText("AUTO.hooks.useeventcheckin.line225_8_da_xoa_khach", { value0: ids.length }), {
           position: "top-center",
         });
         clearSelection();
         fetchGuests();
         return true;
       }
-      toast.error(result?.message || "Xóa thất bại", {
+      toast.error(result?.message || i18nText("AUTO.hooks.useeventcheckin.extra233_3_xoa_that_bai"), {
         position: "top-center",
       });
       return false;
     } catch {
-      toast.error("Có lỗi xảy ra", { position: "top-center" });
+      toast.error(i18nText("AUTO.hooks.useeventcheckin.line237_9_loi_xay_ra"), { position: "top-center" });
       return false;
     }
   }, [selectedGuests, clearSelection, fetchGuests]);
@@ -247,17 +248,17 @@ export function useEventCheckin() {
         );
         const result = await importEventCheckinGuests(formData);
         if (result?.status && result?.errorCode === 200) {
-          toast.success("Import hành công", { position: "top-center" });
+          toast.success(i18nText("AUTO.hooks.useeventcheckin.line250_10_import_hanh_cong"), { position: "top-center" });
           fetchGuests();
           closeImportModal();
           return true;
         }
-        toast.error(result?.message || "Import thất bại", {
+        toast.error(result?.message || i18nText("AUTO.hooks.useeventcheckin.extra256_4_import_that_bai"), {
           position: "top-center",
         });
         return false;
       } catch {
-        toast.error("Có lỗi xảy ra", { position: "top-center" });
+        toast.error(i18nText("AUTO.hooks.useeventcheckin.line260_11_loi_xay_ra"), { position: "top-center" });
         return false;
       }
     },
@@ -292,10 +293,10 @@ export function useEventCheckin() {
       document.body.removeChild(link);
       window.URL.revokeObjectURL(downloadUrl);
 
-      toast.success("Export thành công", { position: "top-center" });
+      toast.success(i18nText("AUTO.hooks.useeventcheckin.line295_12_export_thanh_cong"), { position: "top-center" });
     } catch {
-      toast.error("Export thất bại", {
-        description: "Vui lòng thử lại sau.",
+      toast.error(i18nText("AUTO.hooks.useeventcheckin.line297_13_export_that_bai"), {
+        description: i18nText("AUTO.hooks.useeventcheckin.line298_14_vui_long_thu_lai_sau"),
         position: "top-center",
       });
     } finally {

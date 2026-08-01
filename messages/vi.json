@@ -99,5 +99,1674 @@
     "view_details": "Xem chi tiết",
     "show_less": "Ẩn bớt",
     "remove": "Bỏ chọn"
+  },
+  "AUTO": {
+    "app": {
+      "dang": {
+        "ky": {
+          "line19_4_trai_nghiem_dich_vu_nhan": "để trải nghiệm dịch vụ và nhận ưu đãi độc quyền.",
+          "line17_3_tao_khoan_moi": "Tạo tài khoản mới tại",
+          "line15_2_dang_ky": "Đăng ký | {value0}",
+          "line10_1_dang_ky_khoan_mua_sam": "{value0} – Đăng ký tài khoản để mua sắm laptop, PC và thiết bị công nghệ chính hãng với nhiều ưu đãi.",
+          "line9_0_dang_ky": "Đăng ký | {value0}",
+          "line57_4_dieu_khoan_su_dung": "Điều khoản sử dụng",
+          "line53_3_tro_giup": "Trợ giúp",
+          "line49_2_chinh_sach_bao_mat": "Chính sách bảo mật",
+          "line33_1_dien_thong_tin_tro_thanh": "Điền thông tin để trở thành thành viên của chúng tôi",
+          "line30_0_dang_ky_khoan": "Đăng ký tài khoản"
+        },
+        "nhap": {
+          "line19_4_quan_ly_don_hang_trai": "để quản lý đơn hàng và trải nghiệm dịch vụ nhanh chóng.",
+          "line17_3_dang_nhap_vao": "Đăng nhập vào",
+          "line15_2_dang_nhap": "Đăng nhập | {value0}",
+          "line10_1_dang_nhap_khoan_tiep_tuc": "{value0} – Đăng nhập tài khoản để tiếp tục mua sắm laptop, PC và thiết bị công nghệ chính hãng.",
+          "line9_0_dang_nhap": "Đăng nhập | {value0}",
+          "line120_9_tin_tuc_khuyen_mai_moi": "Tin tức & khuyến mại mới nhất",
+          "line116_8_theo_doi_don_hang_diem": "Theo dõi đơn hàng & điểm thưởng",
+          "line112_7_uu_dai_mua_hang_bao": "Ưu đãi mua hàng & báo giá hàng ngày",
+          "line107_6_uu_dai_danh_doi_tac": "Ưu đãi dành cho đối tác",
+          "line94_5_dang_ky_khoan": "Đăng ký tài khoản",
+          "line73_4_lien_he_dang_ky_khoan": "Liên hệ để đăng ký tài khoản bán sỉ",
+          "line70_3_chua_khoan": "Chưa có tài khoản?",
+          "line60_2_chao_mung_tro_lai": "Chào mừng bạn trở lại",
+          "line57_1_dang_nhap": "Đăng nhập",
+          "line46_0_banner_login": "Banner login"
+        }
+      },
+      "dich": {
+        "vu": {
+          "line15_1_dich_vu": "Dịch vụ | {value0}",
+          "line9_0_dich_vu": "Dịch vụ | {value0}",
+          "line25_0_dich_vu": "Dịch vụ"
+        }
+      },
+      "doi": {
+        "mat": {
+          "khau": {
+            "line32_1_nhap_email_mat_khau_moi": "Nhập email và mật khẩu mới để thay đổi mật khẩu",
+            "line29_0_doi_mat_khau": "Đổi mật khẩu"
+          }
+        }
+      },
+      "giai": {
+        "phap": {
+          "doanh": {
+            "nghiep": {
+              "line12_3_giai_phap_toan_dien_doanh": "Giải pháp toàn diện cho doanh nghiệp: Điện máy, công nghệ, dự án và quà tặng doanh nghiệp từ {value0}.",
+              "line11_2_giai_phap_doanh_nghiep": "Giải pháp cho doanh nghiệp | {value0}",
+              "line6_1_cung_cap_cac_giai_phap": "Cung cấp các giải pháp công nghệ, thiết bị điện máy và dịch vụ B2B chuyên nghiệp dành cho doanh nghiệp từ {value0}. Tối ưu hóa vận hành và chi phí.",
+              "line5_0_giai_phap_doanh_nghiep": "Giải pháp cho doanh nghiệp | {value0}",
+              "line24_1_cap_nhat_nhung_giai_phap": "Cập nhật những giải pháp công nghệ mới nhất dành cho doanh nghiệp",
+              "line21_0_giai_phap_doanh_nghiep": "Giải pháp cho doanh nghiệp"
+            }
+          }
+        }
+      },
+      "gio": {
+        "hang": {
+          "line14_3_gio_hang_mua_sam": "Giỏ hàng mua sắm tại",
+          "line13_2_gio_hang": "Giỏ hàng | {value0}",
+          "line7_1_xem_quan_ly_cac_san": "Xem và quản lý các sản phẩm trong giỏ hàng của bạn trước khi đặt mua tại",
+          "line5_0_gio_hang": "Giỏ hàng | {value0}"
+        }
+      },
+      "lien": {
+        "he": {
+          "gop": {
+            "y": {
+              "line20_4_nhan_ho_tro_nhanh_chong": "để nhận hỗ trợ nhanh chóng.",
+              "line18_3_gui_gop_y_hoac_lien": "Gửi góp ý hoặc liên hệ trực tiếp với",
+              "line16_2_lien_he_gop_y": "Liên hệ và góp ý | {value0}",
+              "line11_1_lien_he_qua_hotline_hoac": "Liên hệ {value0} qua hotline {value1} hoặc ghé địa chỉ {value2} để được tư vấn và hỗ trợ.",
+              "line10_0_lien_he_gop_y": "Liên hệ và góp ý | {value0}",
+              "line25_2_xin_chan_thanh_cam_on": "Xin chân thành cảm ơn sự tin tưởng và đồng hành của Quý khách!",
+              "line21_1_chung_toi_luon_lang_nghe": "Chúng tôi luôn lắng nghe ý kiến của bạn. Vui lòng để lại thông tin và nội dung góp ý, bộ phận chăm sóc khách hàng sẽ phản hồi trong thời gian sớm nhất.",
+              "line18_0_lien_he_gop_y": "Liên hệ & Góp ý"
+            }
+          }
+        }
+      },
+      "san": {
+        "pham": {
+          "line15_3_duyet_toan_bo_san_pham": "Duyệt toàn bộ sản phẩm và danh mục tại {value0}.",
+          "line14_2_tat_ca_san_pham_danh": "Tất cả sản phẩm & Danh mục | {value0}",
+          "line11_1_xem_toan_bo_san_pham": "Xem toàn bộ sản phẩm và tất cả danh mục tại {value0}. Giá tốt, giao nhanh. Hotline {value1}.",
+          "line10_0_trang_san_pham": "Trang sản phẩm | {value0}",
+          "line118_13_san_pham": "sản phẩm",
+          "line114_12_san_pham_noi_bat": "Sản phẩm nổi bật",
+          "line111_11_best_seller": "best seller",
+          "line100_10_kham_pha_nhanh": "Khám phá nhanh",
+          "line97_9_danh_muc_phu": "danh mục phụ",
+          "line83_8_kham_pha": "Khám phá",
+          "line69_7_nhom": "nhóm",
+          "line66_6_loi_vao_nhanh": "lối vào nhanh",
+          "line57_5_tu_khoa": "Từ khóa:",
+          "line53_4_danh_muc": "danh mục",
+          "line50_3_san_pham": "sản phẩm",
+          "line44_2_kham_pha_nhom_hang_theo": "Khám phá nhóm hàng theo bố cục rõ ràng, ưu tiên khả năng quét nhanh sản phẩm, giá và phân nhóm.",
+          "line41_1_danh_muc_san_pham": "Danh mục sản phẩm",
+          "line38_0_catalog_showroom": "catalog showroom",
+          "extra21_1_danh_muc_san_pham": "danh mục sản phẩm",
+          "extra21_0_tat_ca_san_pham": "tất cả sản phẩm"
+        }
+      },
+      "khoan": {
+        "quan": {
+          "ly": {
+            "don": {
+              "line12_3_xem_chi_tiet_quan_ly": "Xem chi tiết và quản lý đơn hàng của bạn tại",
+              "line11_2_quan_ly_don_hang": "Quản lý đơn hàng | {value0}",
+              "line6_1_theo_doi_quan_ly_don": "Theo dõi và quản lý đơn hàng đã mua tại {value0}. Xem trạng thái giao hàng và lịch sử mua sắm của bạn.",
+              "line5_0_quan_ly_don_hang": "Quản lý đơn hàng | {value0}",
+              "line13_3_thong_tin_chi_tiet_don": "Thông tin chi tiết đơn hàng và trạng thái giao hàng tại",
+              "line11_2_chi_tiet_don_hang": "Chi tiết đơn hàng | {value0}",
+              "line6_1_xem_chi_tiet_don_hang": "Xem chi tiết đơn hàng đã mua tại {value0}, bao gồm sản phẩm, giá và trạng thái giao hàng.",
+              "line5_0_chi_tiet_don_hang": "Chi tiết đơn hàng | {value0}",
+              "extra25_0_tim_kiem_don_hang": "Tìm kiếm đơn hàng..."
+            }
+          }
+        },
+        "san": {
+          "pham": {
+            "da": {
+              "line12_3_danh_sach_san_pham_da": "Danh sách sản phẩm bạn đã xem gần đây tại",
+              "line11_2_san_pham_da_xem": "Sản phẩm đã xem | {value0}",
+              "line6_1_xem_lai_cac_san_pham": "Xem lại các sản phẩm công nghệ bạn đã xem tại {value0}, dễ dàng so sánh và chọn mua.",
+              "line5_0_san_pham_da_xem": "Sản phẩm đã xem | {value0}",
+              "line25_0_san_pham_da_xem": "Sản phẩm đã xem"
+            },
+            "yeu": {
+              "line12_3_danh_sach_san_pham_da": "Danh sách sản phẩm bạn đã thêm vào yêu thích tại",
+              "line11_2_san_pham_yeu_thich": "Sản phẩm yêu thích | {value0}",
+              "line6_1_xem_quan_ly_danh_sach": "Xem và quản lý danh sách sản phẩm yêu thích tại {value0}, dễ dàng mua sắm và theo dõi ưu đãi.",
+              "line5_0_san_pham_yeu_thich": "Sản phẩm yêu thích | {value0}",
+              "line26_0_san_pham_yeu_thich": "Sản phẩm yêu thích"
+            }
+          }
+        },
+        "so": {
+          "dia": {
+            "chi": {
+              "line12_3_danh_sach_quan_ly_dia": "Danh sách và quản lý địa chỉ cá nhân của bạn tại",
+              "line11_2_so_dia_chi": "Sổ địa chỉ | {value0}",
+              "line6_1_quan_ly_cap_nhat_dia": "Quản lý và cập nhật địa chỉ giao hàng, địa chỉ thanh toán trong tài khoản của bạn tại {value0}.",
+              "line5_0_so_dia_chi": "Sổ địa chỉ | {value0}",
+              "line16_0_so_dia_chi": "Sổ địa chỉ"
+            }
+          }
+        }
+      },
+      "thanh": {
+        "toan": {
+          "line12_3_trang_thanh_toan_don_hang": "Trang thanh toán đơn hàng nhanh chóng và an toàn tại",
+          "line11_2_thanh_toan": "Thanh toán | {value0}",
+          "line6_1_hoan_tat_don_hang_thanh": "Hoàn tất đơn hàng và thanh toán an toàn tại {value0}. Hỗ trợ nhiều phương thức thanh toán tiện lợi.",
+          "line5_0_thanh_toan": "Thanh toán | {value0}"
+        }
+      },
+      "tin": {
+        "khuyen": {
+          "mai": {
+            "line12_3_tin_tuc_bai_viet_su": "Tin tức, bài viết và sự kiện nổi bật từ",
+            "line11_2_tin_tuc": "Tin tức | {value0}",
+            "line6_1_cap_nhat_tin_tuc_cong": "Cập nhật tin tức công nghệ, khuyến mãi và sự kiện mới nhất từ {value0}.",
+            "line5_0_tin_tuc": "Tin tức | {value0}",
+            "line28_0_tin_khuyen_mai": "Tin khuyến mãi"
+          }
+        },
+        "tuc": {
+          "line12_3_tin_tuc_bai_viet_su": "Tin tức, bài viết và sự kiện nổi bật từ",
+          "line11_2_tin_tuc": "Tin tức | {value0}",
+          "line6_1_cap_nhat_tin_tuc_cong": "Cập nhật tin tức công nghệ, khuyến mãi và sự kiện mới nhất từ {value0}.",
+          "line5_0_tin_tuc": "Tin tức | {value0}"
+        }
+      },
+      "tu": {
+        "van": {
+          "line13_3_chuyen_muc_tu_van_chon": "Chuyên mục tư vấn chọn mua và sử dụng sản phẩm công nghệ tại",
+          "line11_2_tu_van": "Tư vấn | {value0}",
+          "line6_1_nhan_cac_bai_viet_tu": "Nhận các bài viết tư vấn mua sắm và sử dụng thiết bị công nghệ từ {value0}.",
+          "line5_0_tu_van": "Tư vấn | {value0}",
+          "line104_2_admin_tra_loi": "Chờ admin trả lời...",
+          "line95_1_admin_tra_loi": "Admin trả lời",
+          "line88_0_khach_hang_hoi": "Khách hàng hỏi",
+          "slug": {
+            "line13_3_chuyen_muc_tu_van_chon": "Chuyên mục tư vấn chọn mua và sử dụng sản phẩm công nghệ tại",
+            "line11_2_tu_van": "Tư vấn | {value0}",
+            "line6_1_nhan_cac_bai_viet_tu": "Nhận các bài viết tư vấn mua sắm và sử dụng thiết bị công nghệ từ {value0}.",
+            "line5_0_tu_van": "Tư vấn | {value0}",
+            "line137_2_admin_tra_loi": "Chờ admin trả lời...",
+            "line123_1_admin_tra_loi": "Admin trả lời",
+            "line113_0_khach_hang_hoi": "Khách hàng hỏi"
+          }
+        }
+      },
+      "tuyen": {
+        "dung": {
+          "line16_3_kham_pha_cac_vi_tri": "Khám phá các vị trí tuyển dụng hấp dẫn tại",
+          "line15_2_tuyen_dung": "Tuyển dụng | {value0}",
+          "line10_1_hoi_viec_lam_linh_vuc": "{value0} – Cơ hội việc làm trong lĩnh vực công nghệ, gia nhập đội ngũ và cùng phát triển sự nghiệp.",
+          "line9_0_tuyen_dung": "Tuyển dụng | {value0}"
+        }
+      },
+      "vai": {
+        "tro": {
+          "line214_16_quay_lai": "← Quay lại",
+          "line193_15_dang_ky_thanh_vien": "Đăng ký Thành Viên",
+          "line177_14_tham_gia_cac_su_kien": "Tham gia các sự kiện thành viên",
+          "line173_13_uu_dai_giam_gia_dac": "Ưu đãi và giảm giá đặc biệt",
+          "line169_12_truy_cap_noi_dung_doc": "Truy cập nội dung độc quyền",
+          "line160_11_tro_thanh_thanh_vien_nhan": "Trở thành thành viên để nhận các chương trình đặc biệt, ưu đãi khuyến mãi dành riêng cho bạn, cùng hệ thống tích điểm và thăng hạng để nâng cấp lên thành viên cao cấp.",
+          "line148_10_thanh_vien": "Thành Viên",
+          "line107_9_dang_ky_doi_tac": "Đăng ký Đối Tác",
+          "line93_8_uu_dai_bao_hanh_giam": "Ưu đãi bảo hành, giảm giá mua hàng và phí dịch vụ",
+          "line88_7_theo_doi_quan_ly_don": "Theo dõi quản lý đơn hàng, điểm thưởng mua hàng",
+          "line84_6_cap_nhat_gia_san_pham": "Cập nhật giá sản phẩm, báo giá hàng ngày",
+          "line78_5_cap_nhat_thong_tin_san": "Cập nhật thông tin sản phẩm mới, tin tức công nghệ, tin khuyến mại",
+          "line73_4_duoc_huong_day_du_cac": "Được hưởng đầy đủ các ưu đãi mua hàng",
+          "line64_3_dong_hanh_cung_chung_toi": "Đồng hành cùng chúng tôi để tăng trưởng bứt phá. Trở thành đối tác để nhận ưu đãi riêng, chính sách giá linh hoạt và hỗ trợ 24/7. Cùng nhau mở rộng thị trường bền vững.",
+          "line52_2_doi_tac": "Đối Tác",
+          "line19_1_chon_vai_tro_phu_hop": "Chọn vai trò phù hợp để bắt đầu hành trình của bạn với chúng tôi",
+          "line16_0_lua_chon_vai_tro": "Lựa chọn vai trò của bạn"
+        }
+      },
+      "xac": {
+        "nhan": {
+          "thanh": {
+            "toan": {
+              "line335_40_quay_lai_trang_chu": "Quay lại trang chủ",
+              "line324_39_tong_cong": "Tổng cộng:",
+              "line315_38_ma_giam_gia": "Mã giảm giá (",
+              "line309_37_kinh_doanh_phan_hoi": "Kinh doanh phản hồi",
+              "line307_36_phi_van_chuyen": "Phí vận chuyển:",
+              "line301_35_tam_tinh": "Tạm tính:",
+              "line294_34_khong_san_pham_nao": "Không có sản phẩm nào",
+              "line277_33_so_luong": "Số lượng:",
+              "line264_32_san_pham": "Sản phẩm",
+              "line254_31_danh_sach_san_pham": "Danh sách sản phẩm",
+              "line244_30_ma_so_thue_da_dang": "Mã số thuế đã đăng ký",
+              "line241_29_noi_dung_chuyen_khoan": "Nội dung chuyển khoản:",
+              "line231_28_qr_code_payment": "QR Code Payment",
+              "line219_27_ghi_chu": "Ghi chú",
+              "line208_26_phuong_thuc_van_chuyen": "Phương thức vận chuyển",
+              "line202_25_thanh_toan_chuyen_khoan_truc": "Thanh toán chuyển khoản trực tiếp",
+              "line199_24_phuong_thuc_thanh_toan": "Phương thức thanh toán",
+              "line186_23_so_dien_thoai": "Số điện thoại:",
+              "line174_22_dia_chi": "Địa chỉ:",
+              "line168_21_ho_ten": "Họ và tên:",
+              "line164_20_thong_tin_nhan_hang": "Thông tin nhận hàng",
+              "line156_19_khong": "Không có",
+              "line154_18_so_dien_thoai_cong_ty": "Số điện thoại công ty:",
+              "line150_17_khong": "Không có",
+              "line148_16_email_cong_ty": "Email công ty:",
+              "line144_15_khong": "Không có",
+              "line142_14_dia_chi_cong_ty": "Địa chỉ công ty:",
+              "line138_13_khong": "Không có",
+              "line136_12_ten_cong_ty": "Tên công ty:",
+              "line132_11_thong_tin_mua_hang": "Thông tin mua hàng",
+              "line122_10_xin_vui_long_kiem_tra": "Xin vui lòng kiểm tra email của bạn.",
+              "line116_9_email_xac_nhan_da_duoc": "Email xác nhận đã được gửi đến:",
+              "line113_8_ngay_dat_hang": "Ngày đặt hàng:",
+              "line107_7_ma_don_hang": "Mã đơn hàng:",
+              "line104_6_cam_on_quy_khach_da": "Cảm ơn quý khách đã đặt hàng tại Nguyên Kim",
+              "line75_5_quay_lai_trang_chu": "Quay lại trang chủ",
+              "line72_4_khong_tim_thay_thong_tin": "Không tìm thấy thông tin đơn hàng",
+              "line61_3_dang_thong_tin_don_hang": "Đang tải thông tin đơn hàng...",
+              "line47_2_da_xay_ra_loi_khi": "Đã xảy ra lỗi khi tải thông tin đơn hàng",
+              "line43_1_khong_thong_tin_don_hang": "Không thể tải thông tin đơn hàng",
+              "line27_0_khong_tim_thay_thong_tin": "Không tìm thấy thông tin đơn hàng",
+              "line12_3_don_hang_da_duoc_xac": "Đơn hàng đã được xác nhận thành công. Vui lòng kiểm tra email và thực hiện thanh toán theo hướng dẫn tại {value0}",
+              "line11_2_xac_nhan_thanh_toan": "Xác nhận thanh toán | {value0}",
+              "line6_1_xac_nhan_don_hang_huong": "Xác nhận đơn hàng và hướng dẫn thanh toán chi tiết tại {value0}. Theo dõi tình trạng đơn hàng và nhận thông tin chuyển khoản.",
+              "line5_0_xac_nhan_thanh_toan": "Xác nhận thanh toán | {value0}",
+              "extra166_2_email": "Email:",
+              "extra84_1_nhan_hang": "Nhận tại cửa hàng",
+              "extra84_0_giao_hang_tan_noi": "Giao hàng tận nơi"
+            }
+          }
+        }
+      },
+      "xay": {
+        "dung": {
+          "cau": {
+            "hinh": {
+              "line12_3_cong_cu_chon_linh_kien": "Công cụ chọn linh kiện và lắp ráp cấu hình PC tại",
+              "line11_2_xay_dung_cau_hinh": "Xây dựng cấu hình | {value0}",
+              "line6_1_tu_chon_linh_kien_xay": "Tự chọn linh kiện và xây dựng cấu hình PC phù hợp nhu cầu tại {value0}.",
+              "line5_0_xay_dung_cau_hinh": "Xây dựng cấu hình | {value0}"
+            }
+          }
+        }
+      },
+      "yeu": {
+        "cau": {
+          "bao": {
+            "gia": {
+              "line12_3_trang_gui_yeu_cau_bao": "Trang gửi yêu cầu báo giá trực tiếp tới",
+              "line11_2_yeu_cau_bao_gia": "Yêu cầu báo giá | {value0}",
+              "line6_1_gui_yeu_cau_bao_gia": "Gửi yêu cầu báo giá sản phẩm và dịch vụ công nghệ tại {value0}. Nhận phản hồi nhanh chóng và chi tiết.",
+              "line5_0_yeu_cau_bao_gia": "Yêu cầu báo giá | {value0}",
+              "line17_1_vui_long_dien_day_du": "Vui lòng điền đầy đủ thông tin bên dưới. Chúng tôi sẽ phản hồi và gửi báo giá chi tiết đến bạn trong thời gian sớm nhất.",
+              "line14_0_yeu_cau_bao_gia": "Yêu cầu báo giá"
+            }
+          }
+        }
+      },
+      "standalone": {
+        "line5_1_quan_ly_check_in_su": "Quản lý check-in sự kiện",
+        "line4_0_admin_check_in": "Admin Check-in",
+        "su": {
+          "kien": {
+            "checkin": {
+              "line58_1_quan_ly_danh_sach_khach": "Quản lý danh sách khách mời và trạng thái check-in",
+              "line55_0_quan_ly_check_in_su": "Quản lý Check-in Sự kiện",
+              "line219_14_thu_lai": "Thử lại",
+              "line199_13_xac_nhan_check_in": "Xác nhận Check-in",
+              "line178_12_so_dien_thoai": "Số điện thoại",
+              "line168_11_chuc_vu": "Chức vụ",
+              "line156_10_cong_ty": "Công ty",
+              "line145_9_ho_ten": "Họ và tên",
+              "line136_8_thong_tin_khach_moi": "Thông tin khách mời",
+              "line128_7_he_thong_dang_luu_trang": "Hệ thống đang lưu trạng thái check-in, vui lòng chờ...",
+              "line119_6_vui_long_kiem_tra_lai": "Vui lòng kiểm tra lại thông tin khách mời",
+              "line118_5_xac_nhan_thong_tin": "Xác nhận thông tin",
+              "line111_4_khong_hop_le": "Không hợp lệ",
+              "line111_3_that_bai": "Thất bại",
+              "line104_2_thanh_cong": "Thành công!",
+              "line96_1_dang_xu_ly": "Đang xử lý...",
+              "line96_0_dang_xac_nhan": "Đang xác nhận...",
+              "extra183_8_email": "Email",
+              "extra81_7_loi_ket_noi_khi_xac": "Lỗi kết nối khi xác nhận. Vui lòng thử lại.",
+              "extra77_6_check_in_that_bai_vui": "Check-in thất bại. Vui lòng liên hệ ban tổ chức.",
+              "extra74_5_check_in_thanh_cong_chao": "Check-in thành công! Chào mừng bạn đến với sự kiện.",
+              "extra54_4_loi_ket_noi_vui_long": "Lỗi kết nối. Vui lòng thử lại sau.",
+              "extra48_3_khong_tim_thay_thong_tin": "Không tìm thấy thông tin khách mời. Vui lòng liên hệ ban tổ chức.",
+              "extra40_2_khach_moi_nay_da_duoc": "Khách mời này đã được check-in trước đó.",
+              "extra24_1_ma_qr_khong_hop_le": "Mã QR không hợp lệ hoặc thiếu thông tin định danh.",
+              "extra17_0_dang_thong_tin_khach_moi": "Đang tải thông tin khách mời..."
+            }
+          }
+        }
+      },
+      "auth": {
+        "callback": {
+          "line28_5_trang_trung_gian_xac_thuc": "Trang trung gian xác thực Google của {value0}.",
+          "line27_4_dang_xu_ly_dang_nhap": "Đang xử lý đăng nhập Google | {value0}",
+          "line20_3_trang_trung_gian_xu_ly": "Trang trung gian xử lý xác thực Google của {value0}.",
+          "line19_2_dang_xu_ly_dang_nhap": "Đang xử lý đăng nhập Google | {value0}",
+          "line10_1_dang_xu_ly_dang_nhap": "{value0} – Đang xử lý đăng nhập Google, vui lòng đợi trong giây lát...",
+          "line9_0_xu_ly_dang_nhap_google": "Xử lý đăng nhập Google | {value0}",
+          "line71_6_da_loi_xay_ra_vui": "Đã có lỗi xảy ra, vui lòng thử lại hoặc đăng nhập bằng tài khoản khác.",
+          "line68_5_dang_nhap_that_bai": "Đăng nhập thất bại!",
+          "line60_4_he_thong_dang_chuyen_huong": "Hệ thống đang chuyển hướng bạn về trang chủ",
+          "line57_3_dang_nhap_thanh_cong": "Đăng nhập thành công!",
+          "line48_2_dang_xac_thuc_khoan": "đang xác thực tài khoản của bạn.",
+          "line48_1_vui_long_doi_giay_lat": "Vui lòng đợi trong giây lát, hệ thống",
+          "line45_0_dang_xu_ly_dang_nhap": "Đang xử lý đăng nhập Google..."
+        }
+      },
+      "error": {
+        "line96_5_laptop_pc_server_thiet_bi": "Laptop, PC, Server, thiết bị mạng từ HP, Dell, Asus, Lenovo",
+        "line94_4_giai_phap_cong_nghe_chinh": "- Giải pháp công nghệ chính hãng",
+        "line88_3_quay_lai_trang_truoc": "Quay lại trang trước",
+        "line68_2_ve_trang_chu": "Về trang chủ",
+        "line45_1_trang_dang_tim_kiem_da": "Trang bạn đang tìm kiếm đã bị ngắt kết nối hoặc không tồn tại. Hãy quay về trang chủ để khám phá các sản phẩm công nghệ chính hãng của",
+        "line42_0_trang_khong_tim_thay": "Trang không tìm thấy"
+      },
+      "line45_1_trang_dang_tim_kiem_khong": "Trang bạn đang tìm kiếm không tồn tại. Vui lòng kiểm tra lại URL hoặc quay lại trang chủ để tiếp tục khám phá các sản phẩm và giải pháp năng lượng của EcoFlow.",
+      "line43_0_page_not_found_404": "Page Not Found - 404",
+      "not": {
+        "found": {
+          "line119_5_kham_pha_giai_phap_cong": "Khám phá giải pháp công nghệ thông tin chuyên nghiệp",
+          "line117_4_cong_nghe_chinh_hang_dich": "- Công nghệ chính hãng, Dịch vụ tận tâm",
+          "line111_3_san_pham": "Sản phẩm",
+          "line87_2_ve_trang_chu": "Về trang chủ",
+          "line62_1_trang_dang_tim_kiem_da": "Trang bạn đang tìm kiếm đã ngắt kết nối hoặc không tồn tại. Hãy quay về trang chính để khám phá các giải pháp công nghệ chính hãng của Vi Tính Nguyên Kim.",
+          "line59_0_he_thong_khong_phan_hoi": "Hệ thống không phản hồi"
+        }
+      },
+      "extra91_0_dang_xu_ly": "Đang xử lý..."
+    },
+    "components": {
+      "account": {
+        "accountform": {
+          "line271_26_huy_bo": "Hủy bỏ",
+          "line260_25_cap_nhat": "Cập nhật",
+          "line245_24_email_cong_ty": "Email công ty",
+          "line239_23_so_dien_thoai_cong_ty": "Số điện thoại công ty",
+          "line231_22_dia_chi_cong_ty": "Địa chỉ công ty",
+          "line223_21_ma_so_thue": "Mã số thuế",
+          "line217_20_ten_cong_ty": "Tên công ty",
+          "line210_19_khong_chinh_sua": "(Không thể chỉnh sửa)",
+          "line207_18_thong_tin_cong_ty": "Thông tin công ty",
+          "line193_17_chon_ngay_sinh": "Chọn ngày sinh",
+          "line176_16_chon_gioi_tinh": "Chọn giới tính",
+          "line174_15_khac": "Khác",
+          "line173_14_nu": "Nữ",
+          "line137_13_so_dien_thoai": "Số điện thoại",
+          "line124_12_ho_ten": "Họ và tên",
+          "line110_11_ten_dang_nhap": "Tên đăng nhập",
+          "line104_10_thong_tin_ca_nhan": "Thông tin cá nhân",
+          "line97_9_chinh_sua": "Chỉnh sửa",
+          "line92_8_thong_tin_khoan": "Thông tin tài khoản",
+          "line82_7_loi_qua_trinh_cap_nhat": "Có lỗi trong quá trình cập nhật thông tin",
+          "line77_6_da_cap_nhat_thong_tin": "Bạn đã cập nhật thông tin thành công",
+          "line25_5_gioi_tinh_bat_buoc": "Giới tính là bắt buộc",
+          "line23_4_email_bat_buoc": "Email là bắt buộc",
+          "line23_3_email_khong_hop_le": "Email không hợp lệ",
+          "line22_2_so_dien_thoai_khong_hop": "Số điện thoại không hợp lệ",
+          "line21_1_so_dien_thoai_bat_buoc": "Số điện thoại là bắt buộc",
+          "line18_0_ho_ten_bat_buoc": "Họ tên là bắt buộc",
+          "extra152_0_email": "Email"
+        },
+        "changepasswordform": {
+          "line221_18_quay_lai_trang_dang_nhap": "Quay lại trang đăng nhập",
+          "line209_17_xac_nhan_mat_khau_khop": "Xác nhận mật khẩu khớp",
+          "line199_16_mat_khau_moi_toi_thieu": "Mật khẩu mới (tối thiểu 6 ký tự)",
+          "line190_15_email_xac_thuc": "Email xác thực",
+          "line178_14_dat_lai_mat_khau": "Đặt lại mật khẩu",
+          "line178_13_dang_dat_lai_mat_khau": "Đang đặt lại mật khẩu...",
+          "line164_12_xac_nhan_mat_khau_moi": "Xác nhận mật khẩu mới",
+          "line149_11_mat_khau_moi": "Mật khẩu mới",
+          "line114_10_vui_long_thu_lai_sau": "Vui lòng thử lại sau",
+          "line113_9_loi_xay_ra": "Có lỗi xảy ra!",
+          "line107_8_vui_long_thu_lai_sau": "Vui lòng thử lại sau",
+          "line96_7_mat_khau_da_duoc_dat": "Mật khẩu đã được đặt lại thành công!",
+          "line95_6_thanh_cong": "Thành công!",
+          "line27_5_mat_khau_xac_nhan_khong": "Mật khẩu xác nhận không khớp",
+          "line24_4_xac_nhan_mat_khau_bat": "Xác nhận mật khẩu là bắt buộc",
+          "line23_3_mat_khau_moi_bat_buoc": "Mật khẩu mới là bắt buộc",
+          "line22_2_mat_khau_moi_phai_it": "Mật khẩu mới phải có ít nhất 6 ký tự",
+          "line19_1_email_khong_hop_le": "Email không hợp lệ",
+          "line19_0_email_bat_buoc": "Email là bắt buộc",
+          "extra134_1_email": "Email",
+          "extra107_0_loi_xay_ra": "Có lỗi xảy ra!"
+        },
+        "forgotpassword": {
+          "line112_7_gui_email": "Gửi email",
+          "line112_6_dang_gui": "Đang gửi...",
+          "line102_5_huy": "Hủy",
+          "line81_4_nhap_email_nhan_link_khoi": "Nhập email của bạn để nhận link khôi phục mật khẩu",
+          "line70_3_quen_mat_khau": "Quên mật khẩu",
+          "line39_2_mot_email_da_duoc_gui": "Một email đã được gửi đến mail của bạn. Hãy vào hộp thư thực hiện xác nhận để đổi mật khẩu.",
+          "line37_1_thanh_cong": "Thành công!",
+          "line27_0_vui_long_nhap_email_hop": "Vui lòng nhập email hợp lệ",
+          "extra88_1_email": "Email",
+          "extra47_0_loi_xay_ra": "Có lỗi xảy ra!"
+        },
+        "verificationmodal": {
+          "line84_3_bat_dau_dang_nhap": "Bắt đầu đăng nhập",
+          "line70_2_gio_day_dang_nhap_mua": "Giờ đây bạn có thể đăng nhập để mua hàng và trải nghiệm đầy đủ các tính năng của chúng tôi.",
+          "line67_1_khoan_da_duoc_xac_thuc": "Tài khoản đã được xác thực",
+          "line50_0_xac_thuc_thanh_cong": "Xác thực thành công!"
+        }
+      },
+      "address": {
+        "createaddress": {
+          "line93_6_chac_chan_muon_xoa_dia": "Bạn có chắc chắn muốn xóa địa chỉ này?",
+          "line92_5_xoa_dia_chi": "Xóa địa chỉ",
+          "line80_4_chinh_sua": "Chỉnh sửa",
+          "line67_3_dien_thoai": "Điện thoại:",
+          "line64_2_dia_chi": "Địa chỉ:",
+          "line59_1_mac_dinh": "Mặc định",
+          "line42_0_them_dia_chi_moi": "Thêm địa chỉ mới",
+          "extra65_0_email": "Email:"
+        }
+      },
+      "advise": {
+        "emptyadvise": {
+          "line23_3_chung_toi_tu_van_chi": "của chúng tôi tư vấn chi tiết và nhanh chóng ✨",
+          "line23_2_chuyen_gia": "chuyên gia",
+          "line22_1_hay_nguoi_dau_tien_gui": "Hãy là người đầu tiên gửi câu hỏi để được đội ngũ",
+          "line17_0_hien_chua_cau_hoi_tu": "Hiện chưa có câu hỏi tư vấn nào"
+        },
+        "formadvise": {
+          "line180_14_gui_lien_he": "Gửi liên hệ",
+          "line168_13_noi_dung_cau_hoi": "Nội dung câu hỏi",
+          "line156_12_chon_chuyen_muc": "Chọn chuyên mục",
+          "line148_11_chuyen_muc": "Chuyên mục",
+          "line122_10_ho_ten": "Họ tên",
+          "line112_9_dat_cau_hoi_tu_van": "Đặt câu hỏi tư vấn",
+          "line102_8_gui_cau_hoi_ngay": "Gửi câu hỏi ngay",
+          "line75_7_vui_long_thu_lai_sau": "Vui lòng thử lại sau.",
+          "line74_6_loi_xay_ra": "Có lỗi xảy ra!",
+          "line69_5_van_qua_trinh_gui_tu": "Có vấn đề trong quá trình gửi tư vấn.",
+          "line63_4_chung_toi_se_phan_hoi": "Chúng tôi sẽ phản hồi bạn sớm nhất.",
+          "line23_3_vui_long_nhap_noi_dung": "Vui lòng nhập nội dung câu hỏi",
+          "line22_2_chuyen_muc_bat_buoc": "Chuyên mục là bắt buộc",
+          "line21_1_email_khong_hop_le": "Email không hợp lệ",
+          "line20_0_ho_ten_bat_buoc": "Họ tên là bắt buộc",
+          "extra134_0_email": "Email"
+        }
+      },
+      "buildpc": {
+        "builditem": {
+          "line321_3_chac_chan_muon_xoa_san": "Bạn có chắc chắn muốn xóa sản phẩm này?",
+          "line320_2_xoa_san_pham": "Xóa sản phẩm",
+          "line295_1_tang_so_luong": "Tăng số lượng",
+          "line263_0_giam_so_luong": "Giảm số lượng"
+        },
+        "modalaccessories": {
+          "line403_2_khong_phu_kien_nao": "Không có phụ kiện nào",
+          "line361_1_da_chon_linh_kien": "Đã chọn linh kiện",
+          "line209_0_chon_thuong_hieu": "Chọn thương hiệu",
+          "extra363_0_da_chon": "Đã chọn"
+        }
+      },
+      "businesssolution": {
+        "businesssolutioncard": {
+          "line58_4_xem_chi_tiet": "Xem chi tiết",
+          "line52_3_luot_xem": "lượt xem",
+          "line50_2_luot_xem": "Lượt xem",
+          "line45_1_ngay_dang": "Ngày đăng",
+          "line32_0_giai_phap": "Giải pháp"
+        },
+        "listbusinesssolutions": {
+          "line22_0_hien_chua_bai_viet_nao": "Hiện chưa có bài viết nào trong mục Giải pháp doanh nghiệp."
+        }
+      },
+      "cart": {
+        "cardcart": {
+          "line307_11_thanh_tien": "Thành tiền",
+          "line300_10_tang_so_luong": "Tăng số lượng",
+          "line290_9_giam_so_luong": "Giảm số lượng",
+          "line277_8_don_gia": "Đơn giá:",
+          "line269_7_xoa_san_pham": "Xóa sản phẩm",
+          "line223_6_thanh_tien": "Thành tiền",
+          "line216_5_tang_so_luong": "Tăng số lượng",
+          "line208_4_giam_so_luong": "Giảm số lượng",
+          "line165_3_xoa_san_pham": "Xóa sản phẩm",
+          "line142_2_xoa_san_pham": "Xóa sản phẩm",
+          "line137_1_xoa_san_pham": "Xóa sản phẩm",
+          "line121_0_so_luong": "Số lượng",
+          "extra271_2_chac_chan_muon_xoa_san": "Bạn có chắc chắn muốn xóa sản phẩm này?",
+          "extra167_1_chac_chan_muon_xoa_san": "Bạn có chắc chắn muốn xóa sản phẩm này?",
+          "extra144_0_chac_chan_muon_xoa_san": "Bạn có chắc chắn muốn xóa sản phẩm này?"
+        },
+        "contentcart": {
+          "line280_20_hay_chon_it_nhat_1": "Hãy chọn ít nhất 1 sản phẩm trước khi đặt hàng.",
+          "line275_19_tien_hanh_dat_hang": "Tiến hành đặt hàng",
+          "line271_18_hay_chon_it_nhat_1": "Hãy chọn ít nhất 1 sản phẩm trước khi đặt hàng",
+          "line270_17_tien_hanh_dat_hang": "Tiến hành đặt hàng",
+          "line263_16_tiep_tuc_mua_sam": "Tiếp tục mua sắm",
+          "line254_15_da_bao_gom_vat": "(Đã bao gồm VAT)",
+          "line245_14_thanh_tien": "Thành tiền",
+          "line238_13_0d": "0đ",
+          "line223_12_giam_gia": "Giảm giá:",
+          "line214_11_tong_tam_tinh": "Tổng tạm tính",
+          "line208_10_thanh_toan": "Thanh toán",
+          "line181_9_khuyen_mai_ma_giam_gia": "Khuyến mãi và mã giảm giá",
+          "line173_8_don_hang_chua_du_dieu": "Đơn hàng chưa đủ điều kiện áp dụng khuyến mãi. Vui lòng mua thêm để áp dụng",
+          "line146_7_chon_hoac_nhap_khuyen_mai": "Chọn hoặc nhập khuyến mãi",
+          "line139_6_khuyen_mai": "Khuyến mãi",
+          "line122_5_gio_hang": "Giỏ hàng trống.",
+          "line114_4_chon_tat_ca": "Chọn tất cả",
+          "line66_3_xoa_san_pham": "Xóa sản phẩm",
+          "line63_2_xoa_tat_ca": "Xóa tất cả",
+          "line57_1_gio_hang": "Giỏ hàng (",
+          "line49_0_gio_hang": "Giỏ hàng",
+          "extra65_6_chac_chan_muon_xoa_san": "Bạn có chắc chắn muốn xóa sản phẩm này?",
+          "extra44_5_xoa": "Xóa",
+          "extra43_4_tong": "Tổng",
+          "extra42_3_so_luong": "Số lượng",
+          "extra41_2_gia": "Giá",
+          "extra40_1_mo_ta": "Mô tả",
+          "extra39_0_chon_tat_ca": "Chọn tất cả"
+        }
+      },
+      "category": {
+        "catalogtoolbar": {
+          "line39_1_bo_loc": "Bộ lọc",
+          "line32_0_sap_xep_theo": "Sắp xếp theo:"
+        },
+        "categorybanners": {
+          "line27_1_banner": "Banner {value0}",
+          "line22_0_banner": "Banner {value0}"
+        },
+        "categoryfilterbar": {
+          "line431_12_xoa_tat_ca": "Xóa tất cả",
+          "line391_11_bo_chon": "Bỏ chọn",
+          "line344_10_ap_dung_gia": "Áp dụng giá",
+          "line335_9_bo_chon_khoang_gia": "Bỏ chọn khoảng giá",
+          "line324_8_gia_toi_da": "Giá tối đa",
+          "line310_7_gia_toi_thieu": "Giá tối thiểu",
+          "line275_6_gia_toi_da": "Giá tối đa",
+          "line260_5_gia_toi_thieu": "Giá tối thiểu",
+          "line238_4_muc_gia": "Mức giá",
+          "line219_3_bo_loc": "Bộ lọc",
+          "line215_2_chon_theo_tieu_chi": "Chọn theo tiêu chí",
+          "line117_1_thuong_hieu": "Thương hiệu",
+          "line107_0_nhu_cau": "Nhu cầu"
+        },
+        "categoryparenttabs": {
+          "line45_0_danh_muc_noi_bat": "Danh mục nổi bật"
+        },
+        "filteractivechips": {
+          "line196_5_bo_chon_tat_ca": "Bỏ chọn tất cả",
+          "line178_4_xoa_bo_loc": "Xóa bộ lọc {value0}",
+          "line153_3_xoa_bo_loc_gia": "Xóa bộ lọc giá",
+          "line147_2_gia_tu": "Giá từ {value0} - {value1}",
+          "line137_1_tieu_chi": "tiêu chí",
+          "line137_0_dang_loc_theo": "Đang lọc theo",
+          "extra72_4_sap_xep": "Sắp xếp: {value0}",
+          "extra71_3_gia_giam_dan": "Giá giảm dần",
+          "extra69_2_gia_tang_dan": "Giá tăng dần",
+          "extra64_1_nhu_cau": "Nhu cầu: {value0}",
+          "extra57_0_thuong_hieu": "Thương hiệu: {value0}"
+        },
+        "filterbrand": {
+          "line27_0_chon_theo_thuong_hieu": "Chọn theo thương hiệu"
+        },
+        "filtercustomerneeds": {
+          "line27_0_chon_theo_nhu_cau": "Chọn theo nhu cầu"
+        },
+        "filterdropdownpanel": {
+          "line82_1_xem_ket_qua": "Xem kết quả",
+          "line75_0_thiet_lap_lai": "Thiết lập lại"
+        },
+        "filteroptions": {
+          "line133_1_bo_chon": "Bỏ chọn",
+          "line61_0_thuoc_tinh": "Thuộc tính"
+        },
+        "mobilefiltersheet": {
+          "line136_5_xem_ket_qua": "Xem kết quả",
+          "line129_4_xoa_bo_loc": "Xóa bộ lọc",
+          "line105_3_dong": "Đóng",
+          "line89_2_bo_loc": "bộ lọc",
+          "line84_1_bo_loc_danh_muc": "Bộ lọc danh mục",
+          "line71_0_dong_bo_loc": "Đóng bộ lọc"
+        },
+        "noproductsfound": {
+          "line27_2_quay_lai_danh_muc": "Quay lại danh mục",
+          "line20_1_thu_bot_bo_loc_hoac": "Thử bớt bộ lọc hoặc quay lại danh mục để xem thêm lựa chọn khác.",
+          "line17_0_khong_san_pham_phu_hop": "Không có sản phẩm phù hợp với tiêu chí bạn đang chọn"
+        },
+        "pricerangechip": {
+          "line246_9_xem_ket_qua": "Xem kết quả",
+          "line239_8_dong": "Đóng",
+          "line226_7_gia_toi_da": "Giá tối đa",
+          "line212_6_gia_toi_thieu": "Giá tối thiểu",
+          "line168_5_toi_da": "Tối đa",
+          "line152_4_toi_thieu": "Tối thiểu",
+          "line134_3_chon_khoang_gia": "Chọn khoảng giá",
+          "line128_2_xem_theo_gia": "Xem theo giá",
+          "line115_1_bo_chon": "Bỏ chọn",
+          "line107_0_muc_gia": "Mức giá"
+        },
+        "sortbyprice": {
+          "line9_1_gia_giam_dan": "Giá giảm dần",
+          "line8_0_gia_tang_dan": "Giá tăng dần"
+        }
+      },
+      "checkout": {
+        "addressgrid": {
+          "line67_0_them_dia_chi": "Thêm địa chỉ"
+        },
+        "modaluserinfo": {
+          "line243_17_luu_thong_tin": "Lưu thông tin",
+          "line242_16_cap_nhat": "Cập nhật",
+          "line240_15_dang_luu": "Đang lưu...",
+          "line239_14_dang_cap_nhat": "Đang cập nhật...",
+          "line228_13_huy": "Hủy",
+          "line212_12_dia_chi_mac_dinh": "Địa chỉ mặc định",
+          "line198_11_so_dien_thoai": "Số điện thoại",
+          "line185_10_dia_chi": "Địa chỉ",
+          "line156_9_ho_ten": "Họ và tên",
+          "line144_8_thong_tin_nguoi_nhan_hang": "Thông tin người nhận hàng",
+          "line143_7_cap_nhat_thong_tin_nguoi": "Cập nhật thông tin người nhận",
+          "line118_6_vui_long_thu_lai_sau": "Vui lòng thử lại sau!",
+          "line117_5_da_xay_ra_loi_he": "Đã xảy ra lỗi hệ thống",
+          "line22_4_so_dien_thoai_qua_dai": "Số điện thoại quá dài",
+          "line21_3_so_dien_thoai_khong_hop": "Số điện thoại không hợp lệ",
+          "line18_2_dia_chi_bat_buoc": "Địa chỉ là bắt buộc",
+          "line17_1_email_khong_hop_le": "Email không hợp lệ",
+          "line16_0_ho_ten_bat_buoc": "Họ và tên là bắt buộc",
+          "extra170_4_email": "Email",
+          "extra109_3_tao_dia_chi_that_bai": "Tạo địa chỉ thất bại, vui lòng thử lại!",
+          "extra108_2_cap_nhat_dia_chi_that": "Cập nhật địa chỉ thất bại, vui lòng thử lại!",
+          "extra102_1_da_tao_dia_chi_moi": "Đã tạo địa chỉ mới thành công",
+          "extra101_0_da_cap_nhat_dia_chi": "Đã cập nhật địa chỉ thành công"
+        },
+        "ordersummary": {
+          "line272_22_dieu_khoan_dieu_kien": "Điều khoản và Điều kiện",
+          "line270_21_nhan_thanh_toan_dong_nghia": "Nhấn Thanh toán đồng nghĩa với việc bạn đã đọc và đồng ý tuân theo",
+          "line265_20_hay_chon_it_nhat_1": "Hãy chọn ít nhất 1 sản phẩm trong giỏ hàng để tiếp tục thanh toán.",
+          "line260_19_thanh_toan": "THANH TOÁN",
+          "line247_18_da_bao_gom_vat": "(Đã bao gồm VAT)",
+          "line242_17_thanh_tien": "Thành tiền",
+          "line235_16_tong_tam_tinh": "Tổng tạm tính",
+          "line230_15_kinh_doanh_phan_hoi": "Kinh doanh phản hồi",
+          "line227_14_phi_van_chuyen": "Phí vận chuyển:",
+          "line220_13_0d": "0đ",
+          "line210_12_giam_gia": "Giảm giá:",
+          "line185_11_khuyen_mai_ma_giam_gia": "Khuyến mãi và mã giảm giá",
+          "line177_10_don_hang_chua_du_dieu": "Đơn hàng chưa đủ điều kiện áp dụng khuyến mãi. Vui lòng mua thêm để áp dụng",
+          "line150_9_chon_hoac_nhap_khuyen_mai": "Chọn hoặc nhập khuyến mãi",
+          "line143_8_khuyen_mai": "Khuyến mãi",
+          "line135_7_khong_san_pham_nao_duoc": "Không có sản phẩm nào được chọn.",
+          "line93_6_chinh_sua": "Chỉnh sửa",
+          "line90_5_thong_tin_don_hang": "Thông tin đơn hàng",
+          "line77_4_vui_long_thu_lai_sau": "Vui lòng thử lại sau!",
+          "line76_3_da_xay_ra_loi_he": "Đã xảy ra lỗi hệ thống",
+          "line70_2_thanh_toan_don_hang_khong": "Thanh toán đơn hàng không thành công",
+          "line65_1_thanh_toan_don_hang_thanh": "Thanh toán đơn hàng thành công",
+          "line50_0_hay_chon_it_nhat_1": "Hãy chọn ít nhất 1 sản phẩm trước khi thanh toán.",
+          "extra65_0_thanh_toan_thanh_cong": "Thanh toán thành công"
+        },
+        "pagecheckout": {
+          "line206_5_mo_ta": "Mô tả",
+          "line202_4_ghi_chu_don_hang": "Ghi chú cho đơn hàng",
+          "line167_3_thong_tin_nhan_hang": "Thông tin nhận hàng",
+          "line161_2_nhan_hang": "Nhận tại cửa hàng",
+          "line149_1_nhan_hang_nha": "Nhận hàng tại nhà",
+          "line101_0_hay_chon_it_nhat_1": "Hãy chọn ít nhất 1 sản phẩm trước khi thanh toán."
+        },
+        "paymentsection": {
+          "line34_4_ho_tro_thanh_toan_qua": "Hỗ trợ thanh toán qua tất cả ngân hàng",
+          "line30_3_pho_bien_nhat": "Phổ biến nhất",
+          "line27_2_thanh_toan_chuyen_khoan_truc": "Thanh toán chuyển khoản trực tiếp",
+          "line12_1_thong_tin_thanh_toan_se": "Thông tin thanh toán của bạn sẽ luôn được bảo mật",
+          "line9_0_phuong_thuc_thanh_toan": "Phương thức thanh toán"
+        }
+      },
+      "common": {
+        "notfoundpage": {
+          "line55_3_quay_lai_trang_truoc": "Quay lại trang trước",
+          "line51_2_trang_chu": "Trang Chủ",
+          "line39_1_xin_loi_trang_dang_tim": "Xin lỗi, trang bạn đang tìm kiếm không tồn tại hoặc đã bị xóa.",
+          "line36_0_404_khong_tim_thay_trang": "404 - Không tìm thấy trang"
+        }
+      },
+      "contact": {
+        "contactform": {
+          "line200_17_gui_lien_he": "Gửi liên hệ",
+          "line187_16_noi_dung_lien_he": "Nội dung liên hệ",
+          "line173_15_tieu_lien_he": "Tiêu đề liên hệ",
+          "line160_14_chon_bo_phan": "Chọn bộ phận",
+          "line138_13_so_dien_thoai": "Số điện thoại",
+          "line124_12_dia_chi": "Địa chỉ",
+          "line97_11_ho_ten": "Họ tên",
+          "line81_10_vui_long_thu_lai_sau": "Vui lòng thử lại sau.",
+          "line80_9_loi_xay_ra": "Có lỗi xảy ra!",
+          "line75_8_van_qua_trinh_gui_tu": "Có vấn đề trong quá trình gửi tư vấn.",
+          "line69_7_chung_toi_se_phan_hoi": "Chúng tôi sẽ phản hồi bạn sớm nhất.",
+          "line28_6_vui_long_nhap_noi_dung": "Vui lòng nhập nội dung liên hệ",
+          "line27_5_vui_long_nhap_tieu_lien": "Vui lòng nhập tiêu đề liên hệ",
+          "line26_4_vui_long_chon_bo_phan": "Vui lòng chọn bộ phận",
+          "line25_3_so_dien_thoai_qua_dai": "Số điện thoại quá dài",
+          "line24_2_so_dien_thoai_khong_hop": "Số điện thoại không hợp lệ",
+          "line20_1_email_khong_hop_le": "Email không hợp lệ",
+          "line19_0_ho_ten_bat_buoc": "Họ tên là bắt buộc",
+          "extra110_0_email": "Email"
+        }
+      },
+      "detailnews": {
+        "news": {
+          "line63_0_luot_xem": "lượt xem"
+        }
+      },
+      "eventcheckin": {
+        "eventcheckinfilters": {
+          "line143_12_tim_theo_ten_email_sdt": "Tìm theo tên, email, SĐT...",
+          "line121_11_export_excel": "Export Excel",
+          "line110_10_huy": "Hủy",
+          "line109_9_xoa_khach": "Xóa {value0} khách",
+          "line108_8_chac_muon_xoa_khach_da": "Bạn có chắc muốn xóa {value0} khách đã chọn? Thao tác này không thể hoàn tác.",
+          "line107_7_xac_nhan_xoa_hang_loat": "Xác nhận xóa hàng loạt",
+          "line104_6_xoa": "Xóa (",
+          "line93_5_import_danh_sach": "Import Danh sách",
+          "line87_4_them": "Thêm",
+          "line86_3_them_khach": "Thêm khách",
+          "line16_2_chua_check_in": "Chưa check-in",
+          "line15_1_da_check_in": "Đã check-in",
+          "line14_0_tat_ca": "Tất cả"
+        },
+        "eventcheckinstats": {
+          "line58_2_chua_check_in": "Chưa check-in",
+          "line51_1_da_check_in": "Đã check-in",
+          "line44_0_tong_khach_moi": "Tổng khách mời"
+        },
+        "eventcheckintable": {
+          "line153_10_chac_muon_xoa_khach": "Bạn có chắc muốn xóa khách \"{value0}\"?",
+          "line152_9_xac_nhan_xoa": "Xác nhận xóa",
+          "line142_8_chinh_sua": "Chỉnh sửa",
+          "line131_7_tac_vu": "Tác vụ",
+          "line113_6_trang_thai": "Trạng thái",
+          "line100_5_ma_qr": "Mã QR",
+          "line90_4_sale_phu_trach": "Sale phụ trách",
+          "line74_3_cong_ty_chuc_vu": "Công ty / Chức vụ",
+          "line55_2_khach_hang": "Khách hàng",
+          "line24_1_chua_check_in": "Chưa check-in",
+          "line19_0_da_check_in": "Đã check-in",
+          "extra156_1_huy": "Hủy",
+          "extra155_0_xoa": "Xóa"
+        },
+        "guestformmodal": {
+          "line245_13_them_khach": "Thêm khách",
+          "line245_12_cap_nhat": "Cập nhật",
+          "line236_11_huy": "Hủy",
+          "line217_10_trang_thai_check_in": "Trạng thái check-in",
+          "line199_9_sale_phu_trach": "Sale phụ trách",
+          "line186_8_so_dien_thoai": "Số điện thoại",
+          "line156_7_chuc_vu": "Chức vụ",
+          "line139_6_ten_cong_ty": "Tên công ty",
+          "line126_5_ten_khach_hang": "Tên khách hàng *",
+          "line112_4_them_khach_moi": "Thêm khách mời",
+          "line112_3_chinh_sua_khach_moi": "Chỉnh sửa khách mời",
+          "line30_2_da_check_in": "Đã check-in",
+          "line29_1_chua_check_in": "Chưa check-in",
+          "line19_0_ten_khach_hang_bat_buoc": "Tên khách hàng là bắt buộc",
+          "extra170_0_email": "Email"
+        },
+        "importguestmodal": {
+          "line178_11_import_du_lieu": "Import dữ liệu",
+          "line178_10_dang_xu_ly": "Đang xử lý...",
+          "line170_9_huy": "Hủy",
+          "line137_8_ho_tro_xls_xlsx_toi": "Hỗ trợ XLS, XLSX (Tối đa 5MB)",
+          "line135_7_nhan_len_hoac_keo_tha": "Nhấn để tải lên hoặc kéo thả file",
+          "line127_6_xlsx_xls_application_vnd_openxmlformats": ".xlsx, .xls, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel",
+          "line108_5_len_tep_excel_xlsx_xls": "Tải lên tệp Excel (.xlsx, .xls) để thêm khách mời hàng loạt vào sự kiện.",
+          "line104_4_import_danh_sach_khach_moi": "Import Danh sách Khách mời",
+          "line47_3_kich_thuoc_file_khong_duoc": "Kích thước file không được vượt quá 5MB",
+          "line46_2_file_qua_lon": "File quá lớn",
+          "line40_1_vui_long_chon_file_excel": "Vui lòng chọn file Excel (.xlsx, .xls)",
+          "line39_0_dinh_dang_file_khong_hop": "Định dạng file không hợp lệ"
+        },
+        "qrcodemodal": {
+          "line61_2_ma_qr": "Tải mã QR",
+          "line44_1_chua_ma_qr": "Chưa có mã QR",
+          "line31_0_ma_qr_check_in": "Mã QR Check-in"
+        },
+        "qrthumbnail": {
+          "line56_2_qr": "Tải QR",
+          "line46_1_xem_qr": "Xem QR",
+          "line28_0_chua_qr": "Chưa có QR"
+        }
+      },
+      "footer": {
+        "footer": {
+          "line289_13_bo_cong_thuong": "BỘ CÔNG THƯƠNG",
+          "line287_12_da_thong_bao": "ĐÃ THÔNG BÁO",
+          "line280_11_da_thong_bao_bo_cong": "Đã thông báo Bộ Công Thương",
+          "line258_10_thoi_gian_lam_viec": "Thời gian làm việc:",
+          "line247_9_dia_chi_tru_so_chinh": "Địa chỉ trụ sở chính",
+          "line221_8_cong_ty_tnhh_vi_tinh": "Công ty TNHH Vi tính Nguyên Kim",
+          "line39_7_tu_van_giai_dap_moi": "Tư vấn, giải đáp mọi thắc mắc",
+          "line38_6_ho_tro_nhiet_tinh": "Hỗ trợ nhiệt tình",
+          "line34_5_gia_ca_hop_ly_nhieu": "Giá cả hợp lý, nhiều ưu đãi tốt",
+          "line33_4_gia_luon_luon_tot_nhat": "Giá luôn luôn tốt nhất",
+          "line29_3_1_doi_1_7_ngay": "1 đổi 1 trong 7 ngày",
+          "line28_2_doi_tra_dang": "Đổi trả dễ dàng",
+          "line24_1_nhan_hang_thanh_toan_nha": "Nhận hàng và thanh toán tại nhà",
+          "line23_0_chinh_sach_giao_hang": "Chính sách giao hàng",
+          "extra265_0_email": "Email:"
+        },
+        "googlemapembed": {
+          "line26_0_do": "Bản đồ {value0}"
+        },
+        "socialicons": {
+          "line20_0_theo_doi_chung_toi_tren": "Theo dõi chúng tôi trên {value0}"
+        }
+      },
+      "header": {
+        "cardsearchproduct": {
+          "line105_2_uu_dai_gia": "Ưu đãi giá",
+          "line99_1_het_hang": "Hết hàng",
+          "line99_0_con_hang": "Còn hàng"
+        },
+        "header": {
+          "line388_13_dong_tim_kiem": "Đóng tìm kiếm",
+          "line382_12_tim_kiem_san_pham": "Tìm kiếm sản phẩm",
+          "line368_11_dong_tim_kiem": "Đóng tìm kiếm",
+          "line323_10_gio_hang": "Giỏ hàng",
+          "line299_9_tim_kiem": "Tìm kiếm",
+          "line296_8_tim_kiem": "Tìm kiếm",
+          "line274_7_tim_gi": "Bạn tìm gì...",
+          "line267_6_danh_muc_san_pham": "Danh mục sản phẩm",
+          "line267_5_dong_danh_muc": "Đóng danh mục",
+          "line258_4_mo_danh_muc_san_pham": "Mở danh mục sản phẩm",
+          "line257_3_dong_danh_muc_san_pham": "Đóng danh mục sản phẩm",
+          "line253_2_mo_danh_muc_san_pham": "Mở danh mục sản phẩm",
+          "line252_1_dong_danh_muc_san_pham": "Đóng danh mục sản phẩm",
+          "line216_0_mo_menu": "Mở menu"
+        },
+        "itemsheader": {
+          "line72_0_dang_nhap_dang_ky": "Đăng nhập/Đăng ký",
+          "extra68_0_khoan": "Tài khoản"
+        },
+        "popupheader": {
+          "line217_10_chua_thong_tin_lien_he": "Chưa có thông tin liên hệ",
+          "line203_9_xem_gio_hang": "Xem giỏ hàng",
+          "line193_8_tong_cong": "Tổng cộng",
+          "line149_7_xem_gio_hang": "Xem giỏ hàng",
+          "line143_6_mua_sam_ngay": "Mua sắm ngay",
+          "line136_5_gio_hang_dang": "Giỏ hàng của bạn đang trống",
+          "line127_4_san_pham": "sản phẩm",
+          "line125_3_gio_hang": "Giỏ hàng",
+          "line111_2_chua_thong_bao_nao": "Chưa có thông báo nào",
+          "line36_1_tao_khoan": "Tạo tài khoản",
+          "line30_0_dang_nhap": "Đăng nhập"
+        },
+        "productssearch": {
+          "line223_10_thu_tim_tu_khoa_khac": "Thử tìm với từ khóa khác hoặc kiểm tra lại chính tả.",
+          "line220_9_khong_tim_thay_san_pham": "Không tìm thấy sản phẩm nào",
+          "line207_8_xem_them_ket_qua": "Xem thêm kết quả",
+          "line200_7_dang_them": "Đang tải thêm...",
+          "line176_6_ket_qua": "Kết quả",
+          "line165_5_thu_lai_tu_khoa_khac": "Thử lại với từ khóa khác hoặc mở lại ô tìm kiếm.",
+          "line153_4_tim_nhanh": "Tìm nhanh",
+          "line148_3_nhap_tu_khoa_xem_ket": "Nhập từ khóa để xem kết quả từ dữ liệu hiện có.",
+          "line145_2_tim_san_pham_danh_muc": "Tìm sản phẩm, danh mục hoặc thương hiệu",
+          "line136_1_dang_tim_kiem_san_pham": "Đang tìm kiếm sản phẩm...",
+          "line59_0_khong_ket_qua_tim_kiem": "Không thể tải kết quả tìm kiếm.",
+          "extra119_0_tim_thay_san_pham": "Tìm thấy {value0} sản phẩm"
+        },
+        "promotionbar": {
+          "line58_1_xem_ngay": "Xem ngay",
+          "line54_0_khuyen_mai_uu_dai_cap": "Khuyến mãi, ưu đãi và cập nhật mới nhất"
+        }
+      },
+      "home": {
+        "banner": {
+          "line199_0_chuyen_den_banner": "Chuyển đến banner {value0}"
+        },
+        "bannerpopup": {
+          "line112_0_dong": "Đóng"
+        },
+        "featuredcategories": {
+          "line91_1_xem_them": "Xem thêm",
+          "line86_0_thu_gon": "Thu gọn"
+        },
+        "hometrustband": {
+          "line58_8_goi_ngay": "Gọi ngay",
+          "line53_7_tong_dai_hang": "Tổng đài bán hàng",
+          "line28_6_tu_van_ky_thuat": "Tư vấn kỹ thuật",
+          "line23_5_theo_doi_ho_tro_sau": "Theo dõi và hỗ trợ sau bán",
+          "line22_4_bao_hanh_tan_tam": "Bảo hành tận tâm",
+          "line17_3_quy_trinh_tiep_nhan_minh": "Quy trình tiếp nhận minh bạch",
+          "line16_2_doi_tra_linh_hoat": "Đổi trả linh hoạt",
+          "line11_1_nguon_hang_ro_rang_hoa": "Nguồn hàng rõ ràng, hóa đơn đầy đủ",
+          "line10_0_cam_ket_chinh_hang": "Cam kết chính hãng"
+        },
+        "menucategories": {
+          "line771_13_dieu_huong_nhanh": "Điều hướng nhanh",
+          "line676_12_mo": "Mở {value0}",
+          "line675_11_dong": "Đóng {value0}",
+          "line590_10_mo": "Mở {value0}",
+          "line589_9_dong": "Đóng {value0}",
+          "line537_8_quay_lai": "Quay lại",
+          "line512_7_dong_menu": "Đóng menu",
+          "line479_6_danh_muc_san_pham": "Danh mục sản phẩm",
+          "line451_5_dong_danh_muc": "Đóng danh mục",
+          "line426_4_xem_danh_muc": "Xem danh mục",
+          "line412_3_danh_muc_nay_hien_chua": "Danh mục này hiện chưa có danh mục con.",
+          "line184_2_danh_muc_san_pham": "Danh mục sản phẩm",
+          "line143_1_danh_muc_san_pham": "Danh mục sản phẩm",
+          "line121_0_dong_danh_muc_san_pham": "Đóng danh mục sản phẩm"
+        },
+        "productcarouselsection": {
+          "line67_1_next_product": "Next product",
+          "line60_0_previous_product": "Previous product"
+        },
+        "promotionlatest": {
+          "line60_2_xem_khuyen_mai_tiep_theo": "Xem khuyến mãi tiếp theo",
+          "line50_1_xem_khuyen_mai_truoc": "Xem khuyến mãi trước",
+          "line40_0_tong_hop_khuyen_mai": "Tổng hợp khuyến mãi",
+          "extra42_0_xem_tat_ca": "Xem tất cả"
+        }
+      },
+      "login": {
+        "googlelogin": {
+          "line66_3_dang_nhap_google": "Đăng nhập với Google",
+          "line45_2_dang_xu_ly": "Đang xử lý...",
+          "line30_1_loi_xay_ra_vui_long": "Có lỗi xảy ra, vui lòng thử lại!",
+          "line25_0_loi_xay_ra_vui_long": "Có lỗi xảy ra, vui lòng thử lại!"
+        },
+        "loginform": {
+          "line112_8_dang_nhap": "Đăng nhập",
+          "line112_7_dang_dang_nhap": "Đang đăng nhập...",
+          "line102_6_quen_mat_khau": "Quên mật khẩu?",
+          "line89_5_mat_khau": "Mật khẩu",
+          "line76_4_ten_khoan": "Tên tài khoản",
+          "line58_3_khoan_hoac_mat_khau_chua": "Tài khoản hoặc mật khẩu chưa đúng!",
+          "line53_2_chao_mung_den_he_thong": "Chào mừng bạn đến với hệ thống!",
+          "line17_1_mat_khau_bat_buoc": "Mật khẩu là bắt buộc",
+          "line16_0_ten_khoan_bat_buoc": "Tên tài khoản là bắt buộc"
+        }
+      },
+      "news": {
+        "listnews": {
+          "line121_0_luot_xem": "lượt xem"
+        },
+        "mostviewednews": {
+          "line76_0_hinh_anh": "Hình ảnh"
+        },
+        "newscard": {
+          "line21_0_hinh_anh": "Hình ảnh"
+        }
+      },
+      "orderdetail": {
+        "orderdetail": {
+          "line242_18_thong_tin_xuat_hoa_don": "Thông tin xuất hóa đơn",
+          "line231_17_hang_dang_duoc_giao_vui": "Hàng đang được giao. Vui lòng giữ liên lạc điện thoại để shipper liên hệ.",
+          "line216_16_dia_chi_giao": "Địa chỉ giao",
+          "line209_15_van_chuyen": "Vận chuyển",
+          "line196_14_thanh_tien": "Thành tiền",
+          "line191_13_chua": "Chưa có",
+          "line186_12_giam_gia": "Giảm giá",
+          "line182_11_kinh_doanh_phan_hoi": "Kinh doanh phản hồi",
+          "line180_10_phi_van_chuyen": "Phí vận chuyển",
+          "line172_9_tong_tien_hang": "Tổng tiền hàng",
+          "line165_8_tong_ket_thanh_toan": "Tổng kết thanh toán",
+          "line147_7_ghi_chu": "Ghi chú",
+          "line133_6_tam_tinh": "Tạm tính:",
+          "line127_5_x": ": x",
+          "line100_4_ma_don": "Mã đơn:",
+          "line97_3_san_pham": "Sản phẩm (",
+          "line84_2_mua_lai": "Mua lại",
+          "line44_1_ngay_dat": "Ngày đặt:",
+          "line41_0_don_hang": "Đơn hàng #"
+        }
+      },
+      "ordermanagement": {
+        "ordercolumns": {
+          "line134_8_xem_chi_tiet": "Xem chi tiết",
+          "line131_7_xem_chi_tiet_don_hang": "Xem chi tiết đơn hàng {value0}",
+          "line125_6_thao_tac": "Thao tác",
+          "line117_5_trang_thai": "Trạng thái",
+          "line109_4_ngay_dat": "Ngày đặt",
+          "line92_3_sdt": "SĐT",
+          "line82_2_dia_chi_giao_hang": "Địa chỉ giao hàng",
+          "line75_1_nguoi_nhan": "Người nhận",
+          "line60_0_ma_don_hang": "Mã đơn hàng",
+          "extra99_6_email": "Email",
+          "extra41_5_da_huy": "Đã hủy",
+          "extra39_4_da_giao": "Đã giao",
+          "extra37_3_da_gui": "Đã gửi",
+          "extra35_2_dang_xu_ly": "Đang xử lý",
+          "extra33_1_da_xac_nhan": "Đã xác nhận",
+          "extra31_0_xu_ly": "Chờ xử lý"
+        }
+      },
+      "paymentconfirm": {
+        "emptyorder": {
+          "line13_1_quay_lai_trang_chu": "Quay lại trang chủ",
+          "line10_0_khong_tim_thay_thong_tin": "Không tìm thấy thông tin đơn hàng"
+        },
+        "paymentconfirmationpage": {
+          "line447_44_ngan_hang": "ngân hàng",
+          "line445_43_ma_qr_thong_tin_chuyen": "Mã QR và thông tin chuyển khoản {value0}",
+          "line440_42_ma_qr_thanh_toan": "Mã QR thanh toán",
+          "line430_41_tiep_tuc_mua_sam": "Tiếp tục mua sắm",
+          "line416_40_tong_tien": "Tổng tiền",
+          "line407_39_giam_gia": "Giảm giá (",
+          "line399_38_tam_tinh": "Tạm tính",
+          "line391_37_khong_san_pham_don_hang": "Không có sản phẩm trong đơn hàng.",
+          "line367_36_san_pham": "Sản phẩm",
+          "line355_35_tom_tat_don_hang": "Tóm tắt đơn hàng",
+          "line342_34_phuong_thuc_van_chuyen": "Phương thức vận chuyển",
+          "line336_33_ghi_chu": "Ghi chú",
+          "line334_32_dia_chi": "Địa chỉ",
+          "line333_31_dien_thoai": "Điện thoại",
+          "line332_30_nguoi_nhan": "Người nhận",
+          "line330_29_thong_tin_nhan_hang": "Thông tin nhận hàng",
+          "line326_28_dia_chi": "Địa chỉ",
+          "line324_27_dien_thoai": "Điện thoại",
+          "line323_26_ten_cong_ty": "Tên công ty",
+          "line321_25_thong_tin_mua_hang": "Thông tin mua hàng",
+          "line308_24_phong": "Phóng to",
+          "line300_23_ngan_hang": "ngân hàng",
+          "line298_22_ma_qr_thong_tin_chuyen": "Mã QR và thông tin chuyển khoản {value0}",
+          "line294_21_phong_ma_qr_thanh_toan": "Phóng to mã QR thanh toán",
+          "line283_20_chua_qr_thanh_toan_duoc": "Chưa có QR thanh toán được cấu hình cho ngân hàng hỗ trợ.",
+          "line251_19_danh_sach_cac_ngan_hang": "Danh sách các ngân hàng thanh toán online",
+          "line244_18_quet_ma_bang_ung_dung": "Quét mã bằng ứng dụng ngân hàng để thanh toán đơn hàng.",
+          "line241_17_thanh_toan_chuyen_khoan": "Thanh toán chuyển khoản",
+          "line228_16_chuyen_khoan_ngan_hang": "Chuyển khoản ngân hàng",
+          "line225_15_phuong_thuc_thanh_toan": "Phương thức thanh toán",
+          "line215_14_trang_thai_don_hang": "Trạng thái đơn hàng",
+          "line207_13_ngay_dat_hang": "Ngày đặt hàng",
+          "line200_12_sao_chep_ma_don_hang": "Sao chép mã đơn hàng",
+          "line194_11_ma_don_hang": "Mã đơn hàng",
+          "line185_10_don_hang_quy_khach_da": "Đơn hàng của quý khách đã được ghi nhận thành công. Vui lòng quét mã QR để thanh toán chuyển khoản.",
+          "line182_9_cam_on_quy_khach_da": "Cảm ơn quý khách đã đặt hàng tại Nguyên Kim JSC",
+          "line169_8_khong_sao_chep_ma_don": "Không thể sao chép mã đơn hàng",
+          "line167_7_da_sao_chep_ma_don": "Đã sao chép mã đơn hàng",
+          "line48_6_da_huy": "Đã hủy",
+          "line46_5_khong_thanh_cong": "Không thành công",
+          "line43_4_hoan_tat": "Hoàn tất",
+          "line41_3_da_giao_hang": "Đã giao hàng",
+          "line38_2_da_thanh_toan": "Đã thanh toán",
+          "line34_1_thanh_toan": "Chờ thanh toán",
+          "line32_0_xu_ly": "Chờ xử lý",
+          "extra311_3_email": "Email",
+          "extra64_2_nhan_hang": "Nhận tại cửa hàng",
+          "extra64_1_giao_hang_tan_noi": "Giao hàng tận nơi",
+          "extra57_0_da_ghi_nhan": "Đã ghi nhận"
+        }
+      },
+      "product": {
+        "buttonfavorite": {
+          "line28_0_san_pham": "{value0} sản phẩm \"{value1}\" {value2}",
+          "extra43_1_loi_xay_ra_khi_cap": "Có lỗi xảy ra khi cập nhật yêu thích",
+          "extra36_0_loi_xay_ra_khi_cap": "Có lỗi xảy ra khi cập nhật yêu thích"
+        },
+        "compareproducts": {
+          "line175_4_dong": "dòng",
+          "line175_3_xem_them": "Xem thêm",
+          "line170_2_thu_gon": "Thu gọn",
+          "line147_1_san_pham": "Sản phẩm",
+          "line142_0_thong_so": "Thông số"
+        },
+        "customerreviews": {
+          "line202_13_load_more_reviews": "Load More Reviews",
+          "line187_12_helpful": "Helpful (",
+          "line179_11_photos_attached": "photos attached",
+          "line147_10_verified_buyer": "Verified Buyer",
+          "line97_9_based_on": "Based on",
+          "line75_8_customer_reviews": "Customer Reviews",
+          "line53_7_solid_choice_for_price": "Solid choice for the price",
+          "line47_6_emily_davis": "Emily Davis",
+          "line40_5_perfect_for_content_creation": "Perfect for content creation",
+          "line34_4_mike_rodriguez": "Mike Rodriguez",
+          "line27_3_great_laptop_minor_heating_issues": "Great laptop, minor heating issues",
+          "line21_2_sarah_chen": "Sarah Chen",
+          "line14_1_excellent_gaming_performance": "Excellent gaming performance!",
+          "line8_0_alex_johnson": "Alex Johnson"
+        },
+        "description": {
+          "line32_2_noi_dung_san_pham_se": "Nội dung sản phẩm sẽ được bổ sung sớm nhất.",
+          "line30_1_dang_qua_trinh_cap_nhat": "Đang trong quá trình cập nhật",
+          "line21_0_mo_ta_san_pham": "Mô tả sản phẩm"
+        },
+        "inforegisterform": {
+          "line156_14_dang_ky_nhan_thong_tin": "Đăng ký nhận thông tin",
+          "line156_13_dang_gui": "Đang gửi...",
+          "line142_12_dia_chi": "Địa chỉ",
+          "line128_11_email_nhan_phan_hoi_qua": "Email (để nhận phản hồi qua email)",
+          "line115_10_so_dien_thoai_bat_buoc": "Số điện thoại (bắt buộc)",
+          "line102_9_ho_ten_bat_buoc": "Họ tên (bắt buộc)",
+          "line87_8_dang_ky_nhan_thong_tin": "ĐĂNG KÝ NHẬN THÔNG TIN",
+          "line72_7_vui_long_thu_lai_hoac": "Vui lòng thử lại hoặc liên hệ hotline để được hỗ trợ",
+          "line71_6_gui_dang_ky_that_bai": "Gửi đăng ký thất bại",
+          "line63_5_se_nhan_vien_kinh_doanh": "Sẽ có nhân viên kinh doanh liên hệ với bạn",
+          "line62_4_dang_ky_nhan_thong_tin": "Đăng ký nhận thông tin đã được gửi",
+          "line19_3_email_khong_hop_le": "Email không hợp lệ",
+          "line18_2_so_dien_thoai_phai_dung": "Số điện thoại phải có đúng 10 chữ số",
+          "line17_1_so_dien_thoai_bat_buoc": "Số điện thoại là bắt buộc",
+          "line14_0_ho_ten_bat_buoc": "Họ tên là bắt buộc"
+        },
+        "policiescard": {
+          "line25_6_chinh_sach_mua_hang": "CHÍNH SÁCH MUA HÀNG",
+          "line14_5_huong_dan_mua_hang_online": "Hướng dẫn mua hàng online",
+          "line13_4_quy_dinh_thanh_toan": "Quy định thanh toán",
+          "line12_3_chinh_sach_bao_hanh_doi": "Chính sách bảo hành đổi, trả",
+          "line11_2_giao_hang_lap_dat": "Giao hàng và lắp đặt",
+          "line10_1_chinh_sach_bao_mat_tt": "Chính sách bảo mật TT cá nhân",
+          "line9_0_chinh_sach_cookie": "Chính sách cookie"
+        },
+        "product": {
+          "line140_4_related_products": "Related products",
+          "line132_3_product_comparison": "Product comparison",
+          "line106_2_product_description_specifications": "Product description and specifications",
+          "line88_1_back_in_stock_registration": "Back in stock registration",
+          "line79_0_product_information": "Product information"
+        },
+        "productgallery": {
+          "line183_11_gia_luon_tot_nhat": "Giá luôn tốt nhất",
+          "line178_10_theo_tieu_chuan_hang": "Theo tiêu chuẩn hãng",
+          "line178_9_bao_hanh": "Bảo hành:",
+          "line172_8_xem_chi_tiet": "Xem chi tiết",
+          "line167_7_chinh_sach_bao_hanh": "Chính sách bảo hành",
+          "line160_6_mo_ta_san_pham": "Mô tả sản phẩm",
+          "line150_5_thong_so_ky_thuat": "Thông số kỹ thuật",
+          "line143_4_san_pham_chua_thong_so": "Sản phẩm chưa có thông số kỹ thuật",
+          "line142_3_xem_thong_so_ky_thuat": "Xem thông số kỹ thuật",
+          "line133_2_hinh_anh_noi_bat": "Hình ảnh nổi bật",
+          "line87_1_hinh": "{value0} - hình {value1}",
+          "line74_0_chon_hinh_anh": "Chọn hình ảnh {value0} của {value1}"
+        },
+        "productinfo": {
+          "line211_10_tang_so_luong": "Tăng số lượng",
+          "line200_9_giam_so_luong": "Giảm số lượng",
+          "line186_8_da_bao_gom_vat": "(Đã bao gồm VAT)",
+          "line164_7_het_hang": "Hết hàng",
+          "line156_6_tinh_trang": "Tình trạng:",
+          "line152_5_dang_cap_nhat": "Đang cập nhật",
+          "line151_4_thuong_hieu": "Thương hiệu:",
+          "line130_3_danh_gia_sao": "Đánh giá {value0} sao",
+          "line120_2_ma_san_pham": "Mã sản phẩm:",
+          "line111_1_chia_se_san_pham": "Chia sẻ sản phẩm",
+          "line54_0_sao_chep_thanh_cong": "Sao chép thành công"
+        },
+        "specificationstable": {
+          "line67_2_thong_so_ky_thuat": "Thông số kỹ thuật",
+          "line63_1_xem_them": "Xem thêm",
+          "line46_0_thong_so_ky_thuat": "Thông số kỹ thuật"
+        }
+      },
+      "products": {
+        "emptyproducts": {
+          "line23_2_quay_lai_trang_chu": "Quay lại trang chủ",
+          "line16_1_thu_lai_tu_khoa_khac": "Thử lại với từ khóa khác hoặc quay về danh mục để xem thêm lựa chọn.",
+          "line12_0_khong_san_pham_nao_phu": "Không có sản phẩm nào phù hợp"
+        },
+        "herobanner": {
+          "line167_1_mini_banner": "Mini Banner {value0}",
+          "line121_0_main_banner": "Main Banner"
+        }
+      },
+      "productsfavorites": {
+        "emptyfavorites": {
+          "line23_2_kham_pha_ngay": "Khám phá ngay",
+          "line16_1_hay_them_san_pham_vao": "Hãy thêm sản phẩm vào danh sách yêu thích để tiện theo dõi sau này.",
+          "line13_0_chua_san_pham_yeu_thich": "Chưa có sản phẩm yêu thích nào"
+        }
+      },
+      "productviewed": {
+        "emptyviewed": {
+          "line23_2_tiep_tuc_mua_sam": "Tiếp tục mua sắm",
+          "line16_1_hay_kham_pha_san_pham": "Hãy khám phá sản phẩm trong cửa hàng để bắt đầu lịch sử xem của bạn.",
+          "line13_0_khong_san_pham_nao_da": "Không có sản phẩm nào đã xem"
+        }
+      },
+      "promotion": {
+        "cardpromotion": {
+          "line99_2_den_ngay": "Đến ngày",
+          "line51_1_het_han": "Hết hạn",
+          "line49_0_da_het_han": "Đã hết hạn"
+        },
+        "promotionempty": {
+          "line70_6_ve_trang_chu": "Về trang chủ",
+          "line67_5_quay_ve_trang_chu": "Quay về trang chủ",
+          "line61_4_lai": "Tải lại",
+          "line58_3_lai_danh_sach_khuyen_mai": "Tải lại danh sách khuyến mãi",
+          "line49_2_hien_chua_chuong_trinh_khuyen": "Hiện tại chưa có chương trình khuyến mãi nào. Vui lòng quay lại sau hoặc khám phá các sản phẩm khác.",
+          "line44_1_chua_khuyen_mai_nao": "Chưa có khuyến mãi nào",
+          "line30_0_khong_tin_khuyen_mai": "Không có tin khuyến mãi"
+        }
+      },
+      "quote": {
+        "quoteform": {
+          "line170_16_gui_yeu_cau_bao_gia": "Gửi yêu cầu báo giá",
+          "line158_15_noi_dung": "Nội dung",
+          "line144_14_dia_chi": "Địa chỉ",
+          "line130_13_ten_cong_ty_khach_le": "Tên công ty / Khách lẻ",
+          "line100_12_so_dien_thoai": "Số điện thoại",
+          "line88_11_ho_ten": "Họ tên",
+          "line72_10_vui_long_thu_lai_sau": "Vui lòng thử lại sau.",
+          "line71_9_loi_xay_ra": "Có lỗi xảy ra!",
+          "line66_8_van_qua_trinh_gui_tu": "Có vấn đề trong quá trình gửi tư vấn.",
+          "line59_7_chung_toi_se_phan_hoi": "Chúng tôi sẽ phản hồi bạn sớm nhất.",
+          "line23_6_vui_long_nhap_noi_dung": "Vui lòng nhập nội dung yêu cầu",
+          "line22_5_dia_chi_bat_buoc": "Địa chỉ là bắt buộc",
+          "line21_4_vui_long_nhap_ten_cong": "Vui lòng nhập tên công ty hoặc khách lẻ",
+          "line20_3_email_khong_hop_le": "Email không hợp lệ",
+          "line19_2_so_dien_thoai_qua_dai": "Số điện thoại quá dài",
+          "line18_1_so_dien_thoai_khong_hop": "Số điện thoại không hợp lệ",
+          "line15_0_ho_ten_bat_buoc": "Họ tên là bắt buộc",
+          "extra116_0_email": "Email"
+        }
+      },
+      "recruitment": {
+        "jobcard": {
+          "line88_3_ung_tuyen_ngay": "Ứng tuyển ngay",
+          "line69_2_han_nop": "Hạn nộp:",
+          "line63_1_kinh_nghiem": "Kinh nghiệm:",
+          "line36_0_vi_tri": "vị trí"
+        },
+        "jobgrid": {
+          "line262_11_lam_moi_bo_loc": "Làm mới bộ lọc",
+          "line255_10_thu_doi_tu_khoa_hoac": "Thử đổi từ khóa hoặc chọn phòng ban khác nhé.",
+          "line252_9_khong_tim_thay_vi_tri": "Không tìm thấy vị trí phù hợp",
+          "line203_8_xoa_tu_khoa": "Xóa từ khóa",
+          "line183_7_bo_loc_phong": "Bỏ lọc phòng ban",
+          "line161_6_vi_tri_phu_hop": "vị trí phù hợp",
+          "line153_5_xoa": "Xóa",
+          "line150_4_xoa_bo_loc": "Xóa bộ lọc",
+          "line142_3_chon_phong": "Chọn phòng ban",
+          "line117_2_tim_theo_ten_cong_viec": "Tìm theo tên công việc",
+          "line97_1_tham_gia_doi_ngu_nang": "Tham gia đội ngũ năng động và phát triển sự nghiệp cùng Nguyên Kim",
+          "line89_0_hoi_nghe_nghiep": "Cơ hội nghề nghiệp"
+        }
+      },
+      "recruitmentdetail": {
+        "downloaddoc": {
+          "line66_2_phieu": "Tải phiếu",
+          "line66_1_dang": "Đang tải...",
+          "line46_0_loi_xay_ra_khi_file": "Có lỗi xảy ra khi tải file.",
+          "extra32_1_khong_file": "Không thể tải file",
+          "extra16_0_phieu_dien_thong_tin_ung": "Tải phiếu điền thông tin ứng viên"
+        },
+        "formapply": {
+          "line276_38_chung_toi": "của chúng tôi.",
+          "line274_37_chinh_sach_bao_mat": "chính sách bảo mật",
+          "line272_36_bang_viec_gui_don_ung": "Bằng việc gửi đơn ứng tuyển, bạn đồng ý với",
+          "line265_35_gui_don_ung_tuyen": "Gửi đơn ứng tuyển",
+          "line265_34_dang_gui": "Đang gửi...",
+          "line251_33_chi_1_file_toi_da": "Chỉ 1 file, tối đa 5MB",
+          "line246_32_pdf_doc_docx_jpg_jpeg": ".pdf,.doc,.docx,.jpg,.jpeg,.png,.gif",
+          "line245_31_phieu_thong_tin_ung_vien": "Phiếu thông tin ứng viên *",
+          "line233_30_chap_nhan_pdf_doc_docx": "Chấp nhận PDF, DOC, DOCX (tối đa 5MB)",
+          "line228_29_pdf_doc_docx": ".pdf,.doc,.docx",
+          "line227_28_cv_resume": "CV/Resume *",
+          "line213_27_hay_chung_toi_biet_ly": "Hãy cho chúng tôi biết lý do bạn muốn ứng tuyển vị trí này...",
+          "line212_26_loi_nhan": "Lời nhắn *",
+          "line196_25_so_dien_thoai": "Số điện thoại *",
+          "line180_24_email": "Email *",
+          "line165_23_ho_ten": "Họ và tên *",
+          "line151_22_vui_long_dien_day_du": "Vui lòng điền đầy đủ thông tin để chúng tôi có thể liên hệ với bạn.",
+          "line133_21_vui_long_kiem_tra_ket": "Vui lòng kiểm tra kết nối internet và thử lại.",
+          "line132_20_loi_ket_noi": "Lỗi kết nối",
+          "line126_19_vui_long_kiem_tra_lai": "Vui lòng kiểm tra lại thông tin và thử lại.",
+          "line121_18_chung_toi_se_lien_he": "Chúng tôi sẽ liên hệ với bạn sớm nhất có thể.",
+          "line64_17_loi_nhan_khong_duoc_qua": "Lời nhắn không được quá 1000 ký tự",
+          "line63_16_loi_nhan_phai_it_nhat": "Lời nhắn phải có ít nhất 10 ký tự",
+          "line62_15_loi_nhan_bat_buoc": "Lời nhắn là bắt buộc",
+          "line58_14_so_dien_thoai_phai_it": "Số điện thoại phải có ít nhất 10 số",
+          "line57_13_so_dien_thoai_khong_hop": "Số điện thoại không hợp lệ",
+          "line56_12_so_dien_thoai_bat_buoc": "Số điện thoại là bắt buộc",
+          "line52_11_email_khong_duoc_qua_100": "Email không được quá 100 ký tự",
+          "line51_10_email_khong_hop_le": "Email không hợp lệ",
+          "line50_9_email_bat_buoc": "Email là bắt buộc",
+          "line46_8_ho_ten_khong_duoc_qua": "Họ và tên không được quá 100 ký tự",
+          "line45_7_ho_ten_phai_it_nhat": "Họ và tên phải có ít nhất 2 ký tự",
+          "line44_6_ho_ten_bat_buoc": "Họ và tên là bắt buộc",
+          "line39_5_file_bo_sung_khong_vuot": "File bổ sung không vượt quá 5MB",
+          "line38_4_file_bo_sung_phai_pdf": "File bổ sung phải là PDF, DOC, DOCX, JPG, PNG hoặc GIF",
+          "line33_3_vui_long_nop_phieu_thong": "Vui lòng nộp Phiếu thông tin ứng viên: tải mẫu, điền và tải lên tại đây",
+          "line26_2_kich_thuoc_cv_khong_duoc": "Kích thước CV không được vượt quá 5MB",
+          "line22_1_cv_phai_pdf_doc_hoac": "CV phải là PDF, DOC hoặc DOCX",
+          "line19_0_vui_long_len_cv": "Vui lòng tải lên CV"
+        },
+        "jobdetail": {
+          "line335_19_ung_tuyen_vi_tri": "Ứng tuyển vị trí: {value0}",
+          "line282_18_viec_lam_lien_quan": "Việc làm liên quan",
+          "line272_17_xem_do": "(Xem bản đồ)",
+          "line262_16_245b_tran_quang_khai_phuong": "245B Trần Quang Khải, Phường Tân Định, TP. Hồ Chí Minh",
+          "line256_15_cong_ty_tnhh_vi_tinh": "Công ty TNHH Vi tính Nguyên Kim",
+          "line227_14_company_banner": "Company banner",
+          "line206_13_dia_diem_lam_viec": "ĐỊA ĐIỂM LÀM VIỆC",
+          "line197_12_hinh_thuc": "HÌNH THỨC",
+          "line186_11_kinh_nghiem": "KINH NGHIỆM",
+          "line175_10_bang_cap": "BẰNG CẤP",
+          "line164_9_vi_tri": "VỊ TRÍ",
+          "line157_8_thong_tin_tom_tat": "Thông tin tóm tắt",
+          "line144_7_chi_tiet_cong_viec": "Chi tiết công việc",
+          "line130_6_ung_tuyen_ngay": "Ứng tuyển ngay",
+          "line111_5_han_nop": "Hạn nộp",
+          "line102_4_bang_cap": "Bằng cấp",
+          "line93_3_hinh_thuc": "Hình thức",
+          "line88_2_nguoi": "người",
+          "line75_1_kinh_nghiem": "Kinh nghiệm",
+          "line66_0_muc_luong": "Mức lương"
+        }
+      },
+      "register": {
+        "registerform": {
+          "line388_47_dang_nhap": "Đăng nhập",
+          "line386_46_da_khoan": "Bạn đã có tài khoản?",
+          "line381_45_tao_khoan": "Tạo tài khoản",
+          "line381_44_dang_xu_ly": "Đang xử lý...",
+          "line365_43_chinh_sach_bao_mat_nguyen": "Chính sách bảo mật của Nguyên Kim",
+          "line361_42_dieu_khoan_su_dung": "Điều khoản sử dụng",
+          "line359_41_toi_da_dong_y": "Tôi đã đồng ý",
+          "line336_40_dia_chi_cong_ty": "Địa chỉ công ty",
+          "line321_39_so_dien_thoai_cong_ty": "Số điện thoại công ty",
+          "line308_38_email_cong_ty": "Email công ty",
+          "line295_37_ma_so_thue": "Mã số thuế",
+          "line282_36_ten_cong_ty": "Tên công ty",
+          "line273_35_thong_tin_cong_ty": "Thông tin công ty",
+          "line260_34_dia_chi_nhan_hang": "Địa chỉ nhận hàng",
+          "line247_33_ho_ten_nguoi_nhan": "Họ và tên người nhận",
+          "line238_32_thong_tin_nhan_hang": "Thông tin nhận hàng",
+          "line225_31_so_dien_thoai": "Số điện thoại",
+          "line211_30_xac_nhan_mat_khau": "Xác nhận mật khẩu",
+          "line183_29_mat_khau": "Mật khẩu",
+          "line169_28_ho_ten_nguoi_dai_dien": "Họ tên người đại diện",
+          "line155_27_ten_dang_nhap": "Tên đăng nhập",
+          "line146_26_thong_tin_khoan_nguoi_dai": "Thông tin tài khoản / Người đại diện",
+          "line131_25_dang_ky_that_bai": "Đăng ký thất bại",
+          "line126_24_vui_long_kiem_tra_lai": "Vui lòng kiểm tra lại thông tin.",
+          "line120_23_dang_nhap": "Đăng nhập",
+          "line117_22_khoan_se_duoc_kich_hoat": "Tài khoản của bạn sẽ được kích hoạt sau khi xác minh. Bạn có thể đăng nhập ngay khi tài khoản được kích hoạt.",
+          "line115_21_dang_ky_thanh_cong": "Đăng ký thành công",
+          "line59_20_mat_khau_xac_nhan_mat": "Mật khẩu và xác nhận mật khẩu không trùng khớp",
+          "line51_19_dia_chi_cong_ty_bat": "Địa chỉ công ty là bắt buộc",
+          "line50_18_so_dien_thoai_cong_ty": "Số điện thoại công ty không hợp lệ",
+          "line49_17_so_dien_thoai_cong_ty": "Số điện thoại công ty là bắt buộc",
+          "line46_16_email_cong_ty_bat_buoc": "Email công ty là bắt buộc",
+          "line45_15_email_cong_ty_khong_hop": "Email công ty không hợp lệ",
+          "line42_14_ma_so_thue_chi_gom": "Mã số thuế chỉ gồm số, 10-13 ký tự",
+          "line41_13_ma_so_thue_tu_10": "Mã số thuế từ 10-13 ký tự số",
+          "line40_12_ma_so_thue_tu_10": "Mã số thuế từ 10-13 ký tự số",
+          "line37_11_ten_cong_ty_bat_buoc": "Tên công ty là bắt buộc",
+          "line36_10_dia_chi_nhan_hang_bat": "Địa chỉ nhận hàng là bắt buộc",
+          "line35_9_ho_ten_nguoi_nhan_bat": "Họ và tên người nhận là bắt buộc",
+          "line34_8_so_dien_thoai_khong_hop": "Số điện thoại không hợp lệ",
+          "line33_7_so_dien_thoai_bat_buoc": "Số điện thoại là bắt buộc",
+          "line30_6_email_bat_buoc": "Email là bắt buộc",
+          "line30_5_email_khong_hop_le": "Email không hợp lệ",
+          "line29_4_ho_ten_nguoi_dai_dien": "Họ tên người đại diện là bắt buộc",
+          "line27_3_xac_nhan_mat_khau_bat": "Xác nhận mật khẩu là bắt buộc",
+          "line23_2_mat_khau_phai_chua_it": "Mật khẩu phải chứa ít nhất 1 chữ hoa, 1 chữ thường và 1 số",
+          "line20_1_mat_khau_phai_it_nhat": "Mật khẩu phải có ít nhất 8 ký tự",
+          "line17_0_ten_dang_nhap_phai_it": "Tên đăng nhập phải có ít nhất 3 ký tự",
+          "extra197_3_email": "Email",
+          "extra133_2_vui_long_thu_lai_sau": "Vui lòng thử lại sau.",
+          "extra126_1_dang_ky_that_bai": "Đăng ký thất bại",
+          "extra104_0_vui_long_dong_y_dieu": "Vui lòng đồng ý Điều khoản sử dụng và Chính sách bảo mật"
+        }
+      },
+      "service": {
+        "serviceempty": {
+          "line67_6_ve_trang_chu": "Về trang chủ",
+          "line64_5_quay_ve_trang_chu": "Quay về trang chủ",
+          "line58_4_lai": "Tải lại",
+          "line55_3_lai_danh_sach_dich_vu": "Tải lại danh sách dịch vụ",
+          "line46_2_hien_chua_dich_vu_nao": "Hiện tại chưa có dịch vụ nào được cung cấp. Vui lòng quay lại sau hoặc khám phá các trang khác của chúng tôi.",
+          "line41_1_chua_dich_vu_nao": "Chưa có dịch vụ nào",
+          "line27_0_khong_dich_vu": "Không có dịch vụ"
+        }
+      },
+      "ui": {
+        "button": {
+          "line198_3_full_width": "Full Width",
+          "line190_2_right_icon": "Right Icon",
+          "line187_1_left_icon": "Left Icon",
+          "line139_0_button_component_demo": "Button Component Demo"
+        },
+        "buttonlogout": {
+          "line47_3_chua_dang_xuat_khoan": "Bạn chưa đăng xuất tài khoản!",
+          "line46_2_dang_xuat_that_bai": "Đăng xuất thất bại",
+          "line41_1_chua_dang_xuat_khoan": "Bạn chưa đăng xuất tài khoản!",
+          "line36_0_da_dang_xuat_khoan": "Bạn đã đăng xuất tài khoản!"
+        },
+        "cardproduct": {
+          "line297_7_dang_cap_nhat": "Đang cập nhật",
+          "line270_6_bao_hanh": "Bảo hành:",
+          "line247_5_muc": "mục",
+          "line246_4_thong_so_nhanh": "Thông số nhanh",
+          "line236_3_text": "Ẩn",
+          "line234_2_thong_so": "Thông số",
+          "line139_1_so_sanh": "So sánh",
+          "line133_0_yeu_thich": "Yêu thích"
+        },
+        "fileupload": {
+          "line244_5_xoa_file": "Xóa file",
+          "line218_4_xoa_tat_ca": "Xóa tất cả",
+          "line210_3_file_da_chon": "File đã chọn (",
+          "line195_2_hoac_keo_tha_vao_day": "hoặc kéo thả vào đây",
+          "line193_1_nhap_chon_file": "Nhấp để chọn file",
+          "line189_0_tha_file_vao_day": "Thả file vào đây..."
+        },
+        "languageswitcher": {
+          "line132_1_dang_bo_dich": "Đang tải bộ dịch...",
+          "line66_0_dang_bo_dich": "Đang tải bộ dịch..."
+        },
+        "loading": {
+          "line98_2_logo_loading": "Logo loading",
+          "line68_1_logo_loading": "Logo loading",
+          "line55_0_logo_loading": "Logo loading",
+          "extra16_0_dang": "Đang tải..."
+        },
+        "modal": {
+          "line129_0_close_modal": "Close modal"
+        },
+        "pagination": {
+          "line149_0_truoc": "Trước"
+        },
+        "productcardpopup": {
+          "line94_6_thong_so_san_pham": "Thông số sản phẩm",
+          "line84_5_lien_he_duoc_ho_tro": "Liên hệ để được hỗ trợ",
+          "line77_4_san_sang_giao_ngay": "Sẵn sàng giao ngay",
+          "line73_3_tinh_trang": "Tình trạng:",
+          "line63_2_bao_hanh": "Bảo hành:",
+          "line54_1_gia_thi_truong": "Giá thị trường:",
+          "line38_0_da_bao_gom_vat": "(Đã bao gồm VAT)"
+        },
+        "scrolltop": {
+          "line60_0_scroll_top": "Scroll to top"
+        },
+        "supportbutton": {
+          "line25_1_ho_tro_khach_hang": "Hỗ trợ khách hàng",
+          "line14_0_ho_tro_khach_hang": "Hỗ trợ khách hàng"
+        },
+        "supportpopup": {
+          "line116_8_phan_hoi_vong_5_phut": "Phản hồi trong vòng 5 phút.",
+          "line84_7_tu_van_vien_chuyen_nghiep": "Tư vấn viên chuyên nghiệp",
+          "line81_6_ho_thi_my_linh": "Hồ Thị Mỹ Linh",
+          "line78_5_kinh_doanh_online": "Kinh doanh Online",
+          "line64_4_dong": "Đóng",
+          "line56_3_chung_toi_luon_san_sang": "Chúng tôi luôn sẵn sàng hỗ trợ bạn.",
+          "line53_2_ho_tro_khach_hang": "Hỗ trợ khách hàng",
+          "line37_1_dong_ho_tro_khach_hang": "Đóng hỗ trợ khách hàng",
+          "line18_0_email_lien_he": "Email liên hệ"
+        },
+        "table": {
+          "line56_0_khong_du_lieu": "Không có dữ liệu",
+          "extra67_0_tim_kiem": "Tìm kiếm..."
+        },
+        "confirmpopover": {
+          "extra28_3_huy": "Hủy",
+          "extra27_2_xoa": "Xóa",
+          "extra26_1_chac_chan_muon_xoa_san": "Bạn có chắc chắn muốn xóa sản phẩm này khỏi giỏ hàng?",
+          "extra25_0_xac_nhan_xoa": "Xác nhận xóa"
+        },
+        "datetimepicker": {
+          "extra142_12_thang_12": "Tháng 12",
+          "extra141_11_thang_11": "Tháng 11",
+          "extra140_10_thang_10": "Tháng 10",
+          "extra139_9_thang_9": "Tháng 9",
+          "extra138_8_thang_8": "Tháng 8",
+          "extra137_7_thang_7": "Tháng 7",
+          "extra136_6_thang_6": "Tháng 6",
+          "extra135_5_thang_5": "Tháng 5",
+          "extra134_4_thang_4": "Tháng 4",
+          "extra133_3_thang_3": "Tháng 3",
+          "extra132_2_thang_2": "Tháng 2",
+          "extra131_1_thang_1": "Tháng 1",
+          "extra17_0_chon_ngay": "Chọn ngày"
+        },
+        "inputsearch": {
+          "extra21_0_nhap_tu_khoa_tim_kiem": "Nhập từ khóa tìm kiếm..."
+        },
+        "loadingscreen": {
+          "extra14_0_dang": "Đang tải..."
+        },
+        "richcontent": {
+          "extra26_0_bang_noi_dung": "Bảng nội dung"
+        },
+        "select": {
+          "extra32_0_chon": "Chọn"
+        }
+      }
+    },
+    "constants": {
+      "index": {
+        "line210_7_trang_dang_tim_khong_ton": "Trang bạn đang tìm không tồn tại hoặc đã bị xóa.",
+        "line209_6_404_not_found": "404 - Not Found",
+        "line205_5_gia_giam_dan": "Giá giảm dần",
+        "line204_4_gia_tang_dan": "Giá tăng dần",
+        "line203_3_chay": "Bán chạy",
+        "line198_2_cau_hinh_3": "Cấu hình 3",
+        "line194_1_cau_hinh_2": "Cấu hình 2",
+        "line190_0_cau_hinh_1": "Cấu hình 1",
+        "extra239_8_prose_prose_sm_sm_prose": "prose prose-sm sm:prose md:prose-lg !max-w-none prose-headings:text-gray-900 prose-p:text-gray-700 prose-p:leading-relaxed /* Ảnh & iframe responsive - ảnh luôn nằm giữa */ prose-img:w-full prose-img:h-auto prose-img:rounded-lg prose-img:shadow-md prose-img:mx-auto [&_iframe]:w-full [&_iframe]:h-auto [&_iframe]:aspect-video /* Link */ prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline /* Tối ưu hiển thị & cuộn ngang khi nội dung rộng */ break-words prose-pre:overflow-x-auto prose-pre:scrollbar-thin prose-pre:scrollbar-thumb-gray-300 prose-pre:scrollbar-track-gray-100 prose-pre:hover:scrollbar-thumb-gray-400 /* Table: rộng tối thiểu và cho phép scroll ngang trên màn nhỏ */ [&_table]:block [&_table]:w-full [&_table]:min-w-[640px] [&_table]:overflow-x-auto [&_table]:scrollbar-thin [&_table]:scrollbar-thumb-gray-300 [&_table]:scrollbar-track-gray-100 [&_table:hover]:scrollbar-thumb-gray-400 [&_th]:text-left [&_td]:align-top [&_th]:p-2 [&_td]:p-2 [&_thead]:bg-gray-50 [&_tbody_tr:nth-child(even)]:bg-gray-50/40",
+        "extra226_7_prose_prose_sm_sm_prose": "prose prose-sm sm:prose md:prose-lg !max-w-none prose-headings:text-gray-900 prose-p:text-gray-700 prose-p:leading-relaxed prose-img:w-full prose-img:rounded-lg prose-img:shadow-md prose-img:mx-auto prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline /* Thêm tối ưu gọn */ overflow-x-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 hover:scrollbar-thumb-gray-400 md:overflow-visible break-words prose-pre:overflow-x-auto prose-pre:scrollbar-thin prose-pre:scrollbar-thumb-gray-300 prose-pre:scrollbar-track-gray-100 prose-pre:hover:scrollbar-thumb-gray-400 [&_table]:w-full [&_table]:min-w-[640px] [&_table]:overflow-x-auto [&_table]:scrollbar-thin [&_table]:scrollbar-thumb-gray-300 [&_table]:scrollbar-track-gray-100 [&_table:hover]:scrollbar-thumb-gray-400 [&_th]:text-left [&_td]:align-top",
+        "extra175_6_khach_hang_huy_bo": "Khách hàng hủy bỏ",
+        "extra174_5_da_huy_bo": "Đã hủy bỏ",
+        "extra173_4_da_hoan_tat": "Đã hoàn tất",
+        "extra172_3_dang_giao_hang": "Đang giao hàng",
+        "extra171_2_da_thanh_toan": "Đã thanh toán",
+        "extra170_1_thanh_toan": "Chờ thanh toán",
+        "extra169_0_xu_ly": "Chờ xử lý"
+      },
+      "values": {
+        "constant": {
+          "line50_0_tieng_viet": "Tiếng Việt"
+        }
+      }
+    },
+    "hooks": {
+      "usebuyaction": {
+        "line31_4_da_xay_ra_loi_vui": "Đã xảy ra lỗi. Vui lòng thử lại sau ít phút.",
+        "line30_3_khong_mua_ngay": "Không thể mua ngay",
+        "line24_2_dang_nhap": "Đăng nhập",
+        "line21_1_vui_long_dang_nhap_tiep": "Vui lòng đăng nhập để tiếp tục mua ngay.",
+        "line20_0_mua_ngay_khong_thanh_cong": "Mua ngay không thành công"
+      },
+      "usecartactions": {
+        "line204_10_loi_khi_xoa_san_pham": "Lỗi khi xóa sản phẩm.",
+        "line195_9_da_xoa_san_pham_khoi": "Đã xóa sản phẩm khỏi giỏ hàng (local).",
+        "line165_8_khong_san_pham_xoa": "Không có sản phẩm để xóa.",
+        "line148_7_loi_khi_cap_nhat_gio": "Lỗi khi cập nhật giỏ hàng.",
+        "line139_6_da_cap_nhat_gio_hang": "Đã cập nhật giỏ hàng (local).",
+        "line101_5_du_lieu_khong_hop_le": "Dữ liệu không hợp lệ",
+        "line84_4_loi_khi_them_vao_gio": "Lỗi khi thêm vào giỏ hàng.",
+        "line76_3_da_them_san_pham_vao": "Đã thêm sản phẩm vào giỏ hàng.",
+        "line56_2_tat_ca_san_pham_deu": "Tất cả sản phẩm đều hết hàng.",
+        "line40_1_khong_san_pham_them": "Không có sản phẩm để thêm.",
+        "line31_0_can_dang_nhap_them_san": "Bạn cần đăng nhập để thêm sản phẩm vào giỏ hàng!",
+        "extra189_3_da_xoa_san_pham_khoi": "Đã xóa sản phẩm khỏi giỏ hàng.",
+        "extra180_2_xoa_that_bai": "Xóa thất bại",
+        "extra127_1_cap_nhat_so_luong_thanh": "Cập nhật số lượng thành công",
+        "extra117_0_cap_nhat_that_bai": "Cập nhật thất bại"
+      },
+      "useeventcheckin": {
+        "line298_14_vui_long_thu_lai_sau": "Vui lòng thử lại sau.",
+        "line297_13_export_that_bai": "Export thất bại",
+        "line295_12_export_thanh_cong": "Export thành công",
+        "line260_11_loi_xay_ra": "Có lỗi xảy ra",
+        "line250_10_import_hanh_cong": "Import hành công",
+        "line237_9_loi_xay_ra": "Có lỗi xảy ra",
+        "line225_8_da_xoa_khach": "Đã xóa {value0} khách",
+        "line212_7_loi_xay_ra": "Có lỗi xảy ra",
+        "line203_6_xoa_thanh_cong": "Xóa thành công",
+        "line191_5_loi_xay_ra": "Có lỗi xảy ra",
+        "line181_4_cap_nhat_thanh_cong": "Cập nhật thành công",
+        "line169_3_loi_xay_ra": "Có lỗi xảy ra",
+        "line159_2_them_khach_thanh_cong": "Thêm khách thành công",
+        "line85_1_vui_long_thu_lai_sau": "Vui lòng thử lại sau.",
+        "line84_0_khong_du_lieu": "Không thể tải dữ liệu",
+        "extra256_4_import_that_bai": "Import thất bại",
+        "extra233_3_xoa_that_bai": "Xóa thất bại",
+        "extra208_2_xoa_that_bai": "Xóa thất bại",
+        "extra187_1_cap_nhat_that_bai": "Cập nhật thất bại",
+        "extra165_0_them_khach_that_bai": "Thêm khách thất bại"
+      },
+      "usequoteactions": {
+        "line77_0_quote_failed": "Quote failed"
+      }
+    },
+    "json": {
+      "schemahome": {
+        "line143_6_san_pham": "Sản phẩm",
+        "line137_5_trang_chu": "Trang chủ",
+        "line77_4_tp_ho_chi_minh": "TP Hồ Chí Minh",
+        "line76_3_quan_1": "Quận 1",
+        "line75_2_245b_tran_quang_khai": "245B Trần Quang Khải",
+        "line62_1_ho_tro_ky_thuat": "Hỗ trợ kỹ thuật",
+        "line48_0_dich_vu_khach_hang": "Dịch vụ khách hàng"
+      }
+    },
+    "lib": {
+      "utils": {
+        "line126_3_loi_gi_do_vua_xay": "Có lỗi gì đó vừa xảy ra vui lòng thử lại.",
+        "line125_2_them_vao_gio_that_bai": "Thêm vào giỏ thất bại",
+        "line111_1_dang_nhap": "Đăng nhập",
+        "line107_0_them_vao_gio_that_bai": "Thêm vào giỏ thất bại",
+        "extra100_5_da_them_vao_gio": "Đã thêm vào giỏ",
+        "extra100_4_da_them_vao_gio": "Đã thêm {value0} vào giỏ",
+        "extra99_3_thanh_cong": "Thành công",
+        "extra58_2_lien_he": "Liên hệ",
+        "extra29_1_lien_he": "Liên hệ",
+        "extra23_0_lien_he": "Liên hệ"
+      }
+    },
+    "until": {
+      "index": {
+        "extra4_0_lien_he": "Liên hệ"
+      }
+    }
+  },
+  "COMPANY": {
+    "altLogo": "Logo C?ng ty Vi T?nh Nguy?n Kim",
+    "jsonHomePrimary": "Vi T?nh Nguy?n Kim - Chuy?n Laptop, PC & Thi?t B? C?ng Ngh?",
+    "jsonHomeSecondary": "Vi T?nh Nguy?n Kim - C?a h?ng c?ng ngh? ch?nh h?ng v?i gi? t?t nh?t",
+    "descriptionCompany": "C?ng ty TNHH Vi T?nh Nguy?n Kim ???c th?p l?n t? n?m 2004, l? n?i giao thoa gi?a c?ng ngh? v? con ng??i, l? c?u n?i ??a nh?ng tinh hoa k? thu?t s? ??n v?i m?i gia ??nh Vi?t.",
+    "description": "Chuy?n cung c?p laptop, m?y t?nh PC, m?y in, m?y scan v? c?c thi?t b? c?ng ngh? ch?nh h?ng v?i gi? t?t nh?t th? tr??ng. B?o h?nh ch?nh h?ng, uy t?n, ch?t l??ng.",
+    "keywords": {
+      "wholesaleComputerComponents": "b?n s? linh ki?n m?y t?nh",
+      "wholesaleComputerPartsSupplier": "cung c?p linh ki?n m?y t?nh gi? s?",
+      "computerPartsDistributor": "ph?n ph?i linh ki?n m?y t?nh",
+      "officeComputerWholesaler": "b?n bu?n m?y t?nh v?n ph?ng",
+      "wholesaleOfficeEquipmentSupplier": "cung c?p thi?t b? v?n ph?ng gi? s?",
+      "technologyEquipmentDistributor": "??i l? ph?n ph?i thi?t b? c?ng ngh?",
+      "computerAccessoriesDistributor": "ph?n ph?i ph? ki?n m?y t?nh",
+      "technologyEquipmentSupplier": "nh? cung c?p thi?t b? c?ng ngh?",
+      "bulkComputerComponents": "linh ki?n m?y t?nh s? l??ng l?n",
+      "wholesalePrintersOfficeEquipment": "b?n s? m?y in & thi?t b? v?n ph?ng"
+    }
   }
 }

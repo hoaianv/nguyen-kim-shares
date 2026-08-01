@@ -1,5 +1,6 @@
 "use client";
 
+import { i18nText } from "@/lib/i18nText";
 import type {
   IOptionsDetail,
   ISubCateOption,
@@ -71,16 +72,12 @@ export default function FilterDropdownPanel({
           type="button"
           onClick={clearAllFilters}
           className="inline-flex h-10 items-center border border-border bg-white px-4 text-sm font-medium text-foreground transition hover:border-amber-300 hover:bg-amber-50"
-        >
-          Thiết lập lại
-        </button>
+        >{i18nText("AUTO.components.category.filterdropdownpanel.line75_0_thiet_lap_lai")}</button>
         <button
           type="button"
           onClick={onClose}
           className="inline-flex h-10 items-center border border-slate-950 bg-slate-950 px-4 text-sm font-medium text-white transition hover:bg-slate-800"
-        >
-          Xem kết quả
-        </button>
+        >{i18nText("AUTO.components.category.filterdropdownpanel.line82_1_xem_ket_qua")}</button>
       </div>
     </div>
   );

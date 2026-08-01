@@ -1,5 +1,6 @@
 "use client";
 
+import { i18nText } from "@/lib/i18nText";
 import type React from "react";
 import { useTransition, useEffect } from "react";
 import { useForm, Controller } from "react-hook-form";
@@ -16,15 +17,15 @@ import { resetPassword } from "@/apis/common/auth.apis";
 
 const resetPasswordSchema = z
   .object({
-    email: z.string().min(1, "Email là bắt buộc").email("Email không hợp lệ"),
+    email: z.string().min(1, i18nText("AUTO.components.account.changepasswordform.line19_0_email_bat_buoc")).email(i18nText("AUTO.components.account.changepasswordform.line19_1_email_khong_hop_le")),
     password: z
       .string()
-      .min(6, "Mật khẩu mới phải có ít nhất 6 ký tự")
-      .min(1, "Mật khẩu mới là bắt buộc"),
-    passwordConfirm: z.string().min(1, "Xác nhận mật khẩu là bắt buộc"),
+      .min(6, i18nText("AUTO.components.account.changepasswordform.line22_2_mat_khau_moi_phai_it"))
+      .min(1, i18nText("AUTO.components.account.changepasswordform.line23_3_mat_khau_moi_bat_buoc")),
+    passwordConfirm: z.string().min(1, i18nText("AUTO.components.account.changepasswordform.line24_4_xac_nhan_mat_khau_bat")),
   })
   .refine((data) => data.password === data.passwordConfirm, {
-    message: "Mật khẩu xác nhận không khớp",
+    message: i18nText("AUTO.components.account.changepasswordform.line27_5_mat_khau_xac_nhan_khong"),
     path: ["passwordConfirm"],
   });
 
@@ -92,8 +93,8 @@ export default function ResetPasswordForm() {
 
         if (response?.status && response?.errorCode === 200) {
           reset();
-          toast.success("Thành công!", {
-            description: "Mật khẩu đã được đặt lại thành công!",
+          toast.success(i18nText("AUTO.components.account.changepasswordform.line95_6_thanh_cong"), {
+            description: i18nText("AUTO.components.account.changepasswordform.line96_7_mat_khau_da_duoc_dat"),
             position: "top-center",
             duration: 2000,
           });
@@ -103,15 +104,15 @@ export default function ResetPasswordForm() {
             router.push("/dang-nhap");
           }, 3000);
         } else {
-          toast.error(response.message || "Có lỗi xảy ra!", {
-            description: "Vui lòng thử lại sau",
+          toast.error(response.message || i18nText("AUTO.components.account.changepasswordform.extra107_0_loi_xay_ra"), {
+            description: i18nText("AUTO.components.account.changepasswordform.line107_8_vui_long_thu_lai_sau"),
             position: "top-center",
           });
         }
       } catch (error) {
         setLoading(false);
-        toast.error("Có lỗi xảy ra!", {
-          description: "Vui lòng thử lại sau",
+        toast.error(i18nText("AUTO.components.account.changepasswordform.line113_9_loi_xay_ra"), {
+          description: i18nText("AUTO.components.account.changepasswordform.line114_10_vui_long_thu_lai_sau"),
           position: "top-center",
         });
       }
@@ -130,7 +131,7 @@ export default function ResetPasswordForm() {
               onChange={field.onChange}
               value={emailFromUrl || field.value}
               id="email"
-              label="Email"
+              label={i18nText("AUTO.components.account.changepasswordform.extra134_1_email")}
               type="email"
               disabled={true}
               error={errors.email}
@@ -146,7 +147,7 @@ export default function ResetPasswordForm() {
               onChange={field.onChange}
               value={field.value}
               id="password"
-              label="Mật khẩu mới"
+              label={i18nText("AUTO.components.account.changepasswordform.line149_11_mat_khau_moi")}
               type="password"
               error={errors.password}
             />
@@ -161,7 +162,7 @@ export default function ResetPasswordForm() {
               onChange={field.onChange}
               value={field.value}
               id="passwordConfirm"
-              label="Xác nhận mật khẩu mới"
+              label={i18nText("AUTO.components.account.changepasswordform.line164_12_xac_nhan_mat_khau_moi")}
               type="password"
               error={errors.passwordConfirm}
             />
@@ -175,7 +176,7 @@ export default function ResetPasswordForm() {
           size="md"
           className="w-full"
         >
-          {loading ? "Đang đặt lại mật khẩu..." : "Đặt lại mật khẩu"}
+          {loading ? i18nText("AUTO.components.account.changepasswordform.line178_13_dang_dat_lai_mat_khau") : i18nText("AUTO.components.account.changepasswordform.line178_14_dat_lai_mat_khau")}
         </Button>
 
         {/* Progress indicator */}
@@ -187,7 +188,7 @@ export default function ResetPasswordForm() {
                 : "bg-gray-300"
                 }`}
             ></span>
-            <span>Email xác thực</span>
+            <span>{i18nText("AUTO.components.account.changepasswordform.line190_15_email_xac_thuc")}</span>
           </div>
           <div className="flex items-center gap-2">
             <span
@@ -196,7 +197,7 @@ export default function ResetPasswordForm() {
                 : "bg-gray-300"
                 }`}
             ></span>
-            <span>Mật khẩu mới (tối thiểu 6 ký tự)</span>
+            <span>{i18nText("AUTO.components.account.changepasswordform.line199_16_mat_khau_moi_toi_thieu")}</span>
           </div>
           <div className="flex items-center gap-2">
             <span
@@ -206,7 +207,7 @@ export default function ResetPasswordForm() {
                 : "bg-gray-300"
                 }`}
             ></span>
-            <span>Xác nhận mật khẩu khớp</span>
+            <span>{i18nText("AUTO.components.account.changepasswordform.line209_17_xac_nhan_mat_khau_khop")}</span>
           </div>
         </div>
       </form>
@@ -217,9 +218,7 @@ export default function ResetPasswordForm() {
           href="/dang-nhap"
           className="text-blue-600 hover:text-blue-700 inline-flex items-center gap-2 text-sm font-medium underline hover:no-underline transition-colors duration-200"
         >
-          <ArrowLeft className="w-4 h-4" />
-          Quay lại trang đăng nhập
-        </Link>
+          <ArrowLeft className="w-4 h-4" />{i18nText("AUTO.components.account.changepasswordform.line221_18_quay_lai_trang_dang_nhap")}</Link>
       </div>
     </div>
   );

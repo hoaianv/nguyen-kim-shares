@@ -1,3 +1,4 @@
+import { i18nText } from "@/lib/i18nText";
 import React from "react";
 
 interface GoogleMapEmbedProps {
@@ -23,7 +24,7 @@ const GoogleMapEmbed: React.FC<GoogleMapEmbedProps> = ({
         allowFullScreen
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
-        title={`Bản đồ ${address}`}
+        title={i18nText("AUTO.components.footer.googlemapembed.line26_0_do", { value0: address })}
         className="filter grayscale hover:grayscale-0 transition-all duration-300"
       />
     </div>

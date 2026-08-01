@@ -1,3 +1,4 @@
+import { i18nText } from "@/lib/i18nText";
 import {
   descriptionCompany,
   name,
@@ -6,17 +7,17 @@ import {
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: `Đăng nhập | ${name}`,
-  description: `${descriptionCompany} – Đăng nhập tài khoản để tiếp tục mua sắm laptop, PC và thiết bị công nghệ chính hãng.`,
+  title: i18nText("AUTO.app.dang.nhap.line9_0_dang_nhap", { value0: name }),
+  description: i18nText("AUTO.app.dang.nhap.line10_1_dang_nhap_khoan_tiep_tuc", { value0: descriptionCompany }),
   alternates: {
     canonical: `${urlWebsite}login`,
   },
   openGraph: {
-    title: `Đăng nhập | ${name}`,
+    title: i18nText("AUTO.app.dang.nhap.line15_2_dang_nhap", { value0: name }),
     description:
-      "Đăng nhập vào " +
+      i18nText("AUTO.app.dang.nhap.line17_3_dang_nhap_vao") +
       name +
-      " để quản lý đơn hàng và trải nghiệm dịch vụ nhanh chóng.",
+      i18nText("AUTO.app.dang.nhap.line19_4_quan_ly_don_hang_trai"),
     url: `${urlWebsite}login`,
     siteName: name,
     type: "website",

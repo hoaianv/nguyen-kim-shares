@@ -1,3 +1,4 @@
+import { i18nText } from "@/lib/i18nText";
 import React from "react";
 
 interface PaginationProps {
@@ -145,9 +146,7 @@ const Pagination = ({
               strokeWidth={2}
               d="M15 19l-7-7 7-7"
             />
-          </svg>
-          Trước
-        </button>
+          </svg>{i18nText("AUTO.components.ui.pagination.line149_0_truoc")}</button>
 
         <div className="flex items-center gap-2">{renderPageNumbers()}</div>
 

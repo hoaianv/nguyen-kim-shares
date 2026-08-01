@@ -1,3 +1,4 @@
+import { i18nText } from "@/lib/i18nText";
 import { name } from "@/constants/company.constant";
 import Link from "next/link";
 
@@ -55,14 +56,8 @@ export default function NotFound() {
           <h1 className="mb-4 text-6xl font-semibold" style={{ color: "#ffd500" }}>
             404
           </h1>
-          <h2 className="mb-4 text-2xl font-semibold text-slate-800">
-            Hệ thống không phản hồi
-          </h2>
-          <p className="mb-6 leading-relaxed text-slate-600">
-            Trang bạn đang tìm kiếm đã ngắt kết nối hoặc không tồn tại. Hãy quay về
-            trang chính để khám phá các giải pháp công nghệ chính hãng của Vi Tính
-            Nguyên Kim.
-          </p>
+          <h2 className="mb-4 text-2xl font-semibold text-slate-800">{i18nText("AUTO.app.not.found.line59_0_he_thong_khong_phan_hoi")}</h2>
+          <p className="mb-6 leading-relaxed text-slate-600">{i18nText("AUTO.app.not.found.line62_1_trang_dang_tim_kiem_da")}</p>
         </div>
 
         <div className="mb-8 flex flex-col justify-center gap-4 sm:flex-row">
@@ -83,9 +78,7 @@ export default function NotFound() {
                 strokeWidth={2}
                 d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
               />
-            </svg>
-            Về trang chủ
-          </Link>
+            </svg>{i18nText("AUTO.app.not.found.line87_2_ve_trang_chu")}</Link>
 
           <Link
             href="/products"
@@ -107,16 +100,14 @@ export default function NotFound() {
                 strokeWidth={2}
                 d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"
               />
-            </svg>
-            Sản phẩm {name}
+            </svg>{i18nText("AUTO.app.not.found.line111_3_san_pham")}{name}
           </Link>
         </div>
 
         <div className="text-sm text-slate-500">
           <p className="mb-1 font-medium" style={{ color: "#1435c3" }}>
-            {name} - Công nghệ chính hãng, Dịch vụ tận tâm
-          </p>
-          <p>Khám phá giải pháp công nghệ thông tin chuyên nghiệp</p>
+            {name}{i18nText("AUTO.app.not.found.line117_4_cong_nghe_chinh_hang_dich")}</p>
+          <p>{i18nText("AUTO.app.not.found.line119_5_kham_pha_giai_phap_cong")}</p>
         </div>
       </div>
     </div>

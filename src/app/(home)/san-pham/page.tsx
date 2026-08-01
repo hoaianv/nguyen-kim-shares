@@ -1,3 +1,4 @@
+import { i18nText } from "@/lib/i18nText";
 import { getAll } from "@/apis/models/menu.apis";
 import { getBestSeller } from "@/apis/models/products.apis";
 import PaginationDynamic from "@/components/ui/PaginationDynamic";
@@ -34,27 +35,17 @@ export default async function page({ searchParams }: Props) {
       <section className="border border-border bg-background p-4 sm:p-5">
         <div className="grid gap-4 lg:grid-cols-[minmax(0,1.3fr)_minmax(280px,0.7fr)]">
           <div className="space-y-3">
-            <p className="text-[11px] uppercase tracking-[0.28em] text-muted-foreground">
-              catalog showroom
-            </p>
-            <h1 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
-              Danh mục sản phẩm
-            </h1>
-            <p className="max-w-2xl text-sm leading-6 text-muted-foreground">
-              Khám phá nhóm hàng theo bố cục rõ ràng, ưu tiên khả năng quét nhanh
-              sản phẩm, giá và phân nhóm.
-            </p>
+            <p className="text-[11px] uppercase tracking-[0.28em] text-muted-foreground">{i18nText("AUTO.app.san.pham.line38_0_catalog_showroom")}</p>
+            <h1 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">{i18nText("AUTO.app.san.pham.line41_1_danh_muc_san_pham")}</h1>
+            <p className="max-w-2xl text-sm leading-6 text-muted-foreground">{i18nText("AUTO.app.san.pham.line44_2_kham_pha_nhom_hang_theo")}</p>
 
             <div className="flex flex-wrap gap-2 pt-1">
               <span className="inline-flex h-9 items-center border border-border bg-background px-3 text-xs font-medium uppercase tracking-[0.18em] text-foreground">
-                {dataProducts?.items?.length ?? 0} sản phẩm
-              </span>
+                {dataProducts?.items?.length ?? 0}{i18nText("AUTO.app.san.pham.line50_3_san_pham")}</span>
               <span className="inline-flex h-9 items-center border border-border bg-background px-3 text-xs font-medium uppercase tracking-[0.18em] text-foreground">
-                {dataCategories?.length ?? 0} danh mục
-              </span>
+                {dataCategories?.length ?? 0}{i18nText("AUTO.app.san.pham.line53_4_danh_muc")}</span>
               {query ? (
-                <span className="inline-flex h-9 items-center border border-amber-300 bg-amber-50 px-3 text-xs font-medium uppercase tracking-[0.18em] text-amber-800">
-                  Từ khóa: {query}
+                <span className="inline-flex h-9 items-center border border-amber-300 bg-amber-50 px-3 text-xs font-medium uppercase tracking-[0.18em] text-amber-800">{i18nText("AUTO.app.san.pham.line57_5_tu_khoa")}{query}
                 </span>
               ) : null}
             </div>
@@ -62,12 +53,9 @@ export default async function page({ searchParams }: Props) {
 
           <div className="border border-border bg-muted/20 p-3">
             <div className="mb-3 flex items-center justify-between">
-              <p className="text-[11px] uppercase tracking-[0.24em] text-muted-foreground">
-                lối vào nhanh
-              </p>
+              <p className="text-[11px] uppercase tracking-[0.24em] text-muted-foreground">{i18nText("AUTO.app.san.pham.line66_6_loi_vao_nhanh")}</p>
               <p className="text-xs text-muted-foreground">
-                {dataCategories?.length ?? 0} nhóm
-              </p>
+                {dataCategories?.length ?? 0}{i18nText("AUTO.app.san.pham.line69_7_nhom")}</p>
             </div>
             <div className="grid grid-cols-2 gap-2">
               {(dataCategories ?? []).slice(0, 4).map((item) => (
@@ -79,9 +67,7 @@ export default async function page({ searchParams }: Props) {
                   <span className="line-clamp-2 text-sm font-medium text-foreground">
                     {item.title}
                   </span>
-                  <span className="text-[11px] uppercase tracking-[0.16em] text-muted-foreground">
-                    Khám phá
-                  </span>
+                  <span className="text-[11px] uppercase tracking-[0.16em] text-muted-foreground">{i18nText("AUTO.app.san.pham.line83_8_kham_pha")}</span>
                 </Link>
               ))}
             </div>
@@ -93,12 +79,8 @@ export default async function page({ searchParams }: Props) {
         <aside className="hidden lg:block">
           <div className="sticky top-24 border border-border bg-background p-3">
             <div className="mb-3 border-b border-border pb-3">
-              <p className="text-[11px] uppercase tracking-[0.24em] text-muted-foreground">
-                danh mục phụ
-              </p>
-              <h2 className="mt-1 text-lg font-semibold tracking-tight text-foreground">
-                Khám phá nhanh
-              </h2>
+              <p className="text-[11px] uppercase tracking-[0.24em] text-muted-foreground">{i18nText("AUTO.app.san.pham.line97_9_danh_muc_phu")}</p>
+              <h2 className="mt-1 text-lg font-semibold tracking-tight text-foreground">{i18nText("AUTO.app.san.pham.line100_10_kham_pha_nhanh")}</h2>
             </div>
             <CategoryTree categories={dataCategories ?? []} />
           </div>
@@ -107,16 +89,13 @@ export default async function page({ searchParams }: Props) {
         <section className="min-w-0">
           <div className="mb-4 flex items-end justify-between gap-3 border-b border-border pb-4">
             <div>
-              <p className="text-[11px] uppercase tracking-[0.24em] text-muted-foreground">
-                best seller
-              </p>
+              <p className="text-[11px] uppercase tracking-[0.24em] text-muted-foreground">{i18nText("AUTO.app.san.pham.line111_11_best_seller")}</p>
               <h2 className="mt-2 text-2xl font-semibold tracking-tight text-foreground">
-                {dataProducts?.title || "Sản phẩm nổi bật"}
+                {dataProducts?.title || i18nText("AUTO.app.san.pham.line114_12_san_pham_noi_bat")}
               </h2>
             </div>
             <div className="text-sm text-muted-foreground">
-              {dataProducts?.items?.length ?? 0} sản phẩm
-            </div>
+              {dataProducts?.items?.length ?? 0}{i18nText("AUTO.app.san.pham.line118_13_san_pham")}</div>
           </div>
 
           {dataProducts?.items && dataProducts.items.length > 0 ? (

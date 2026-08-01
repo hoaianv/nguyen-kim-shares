@@ -1,3 +1,4 @@
+import { i18nText } from "@/lib/i18nText";
 import { logout as logoutApi } from "@/apis/common/auth.apis";
 import {
   AuthItem,
@@ -165,13 +166,13 @@ export const ACCOUNT_LINKS: NavAccountLinkItemI18n[] = [
 ];
 
 export const ORDER_STATUS_LABEL: Record<string, string> = {
-  pending: "Chờ xử lý",
-  payment: "Chờ thanh toán",
-  paid: "Đã thanh toán",
-  delivered: "Đang giao hàng",
-  finished: "Đã hoàn tất",
-  fail: "Đã hủy bỏ",
-  "customer-cancels": "Khách hàng hủy bỏ",
+  pending: i18nText("AUTO.constants.index.extra169_0_xu_ly"),
+  payment: i18nText("AUTO.constants.index.extra170_1_thanh_toan"),
+  paid: i18nText("AUTO.constants.index.extra171_2_da_thanh_toan"),
+  delivered: i18nText("AUTO.constants.index.extra172_3_dang_giao_hang"),
+  finished: i18nText("AUTO.constants.index.extra173_4_da_hoan_tat"),
+  fail: i18nText("AUTO.constants.index.extra174_5_da_huy_bo"),
+  "customer-cancels": i18nText("AUTO.constants.index.extra175_6_khach_hang_huy_bo"),
 };
 
 export const STATUS_STYLE: Record<OrderStatus, string> = {
@@ -187,27 +188,27 @@ export const STATUS_STYLE: Record<OrderStatus, string> = {
 export const configuration = [
   {
     id: 1,
-    title: "Cấu hình 1",
+    title: i18nText("AUTO.constants.index.line190_0_cau_hinh_1"),
   },
   {
     id: 2,
-    title: "Cấu hình 2",
+    title: i18nText("AUTO.constants.index.line194_1_cau_hinh_2"),
   },
   {
     id: 3,
-    title: "Cấu hình 3",
+    title: i18nText("AUTO.constants.index.line198_2_cau_hinh_3"),
   },
 ];
 
 export const sortFilter = [
-  { id: 1, title: "Bán chạy", value: "ASC", key: "view" },
-  { id: 2, title: "Giá tăng dần", value: "ASC", key: "price" },
-  { id: 3, title: "Giá giảm dần", value: "DESC", key: "price" },
+  { id: 1, title: i18nText("AUTO.constants.index.line203_3_chay"), value: "ASC", key: "view" },
+  { id: 2, title: i18nText("AUTO.constants.index.line204_4_gia_tang_dan"), value: "ASC", key: "price" },
+  { id: 3, title: i18nText("AUTO.constants.index.line205_5_gia_giam_dan"), value: "DESC", key: "price" },
 ];
 
 export const metaNotFound = {
-  title: "404 - Not Found",
-  description: "Trang bạn đang tìm không tồn tại hoặc đã bị xóa.",
+  title: i18nText("AUTO.constants.index.line209_6_404_not_found"),
+  description: i18nText("AUTO.constants.index.line210_7_trang_dang_tim_khong_ton"),
   robots: {
     index: false,
     follow: false,
@@ -222,42 +223,9 @@ export const ALLOWED_DOCS = [
 export const ALLOWED_IMAGES = ["image/jpeg", "image/png", "image/gif"];
 export const MAX_5MB = 5 * 1024 * 1024;
 
-export const classPost = `prose 
-    prose-sm sm:prose md:prose-lg
-    !max-w-none
-    prose-headings:text-gray-900
-    prose-p:text-gray-700 prose-p:leading-relaxed
-    prose-img:w-full prose-img:rounded-lg prose-img:shadow-md prose-img:mx-auto
-    prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline
+export const classPost = i18nText("AUTO.constants.index.extra226_7_prose_prose_sm_sm_prose");
 
-    /* Thêm tối ưu gọn */
-    overflow-x-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 hover:scrollbar-thumb-gray-400 md:overflow-visible break-words
-    prose-pre:overflow-x-auto prose-pre:scrollbar-thin prose-pre:scrollbar-thumb-gray-300 prose-pre:scrollbar-track-gray-100 prose-pre:hover:scrollbar-thumb-gray-400
-    [&_table]:w-full [&_table]:min-w-[640px] [&_table]:overflow-x-auto [&_table]:scrollbar-thin [&_table]:scrollbar-thumb-gray-300 [&_table]:scrollbar-track-gray-100 [&_table:hover]:scrollbar-thumb-gray-400 [&_th]:text-left [&_td]:align-top`;
-
-export const classDetailPost = `prose 
-  prose-sm sm:prose md:prose-lg
-  !max-w-none
-  prose-headings:text-gray-900
-  prose-p:text-gray-700 prose-p:leading-relaxed
-
-  /* Ảnh & iframe responsive - ảnh luôn nằm giữa */
-  prose-img:w-full prose-img:h-auto prose-img:rounded-lg prose-img:shadow-md prose-img:mx-auto
-  [&_iframe]:w-full [&_iframe]:h-auto [&_iframe]:aspect-video
-
-  /* Link */
-  prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline
-
-  /* Tối ưu hiển thị & cuộn ngang khi nội dung rộng */
-  break-words
-  prose-pre:overflow-x-auto prose-pre:scrollbar-thin prose-pre:scrollbar-thumb-gray-300 prose-pre:scrollbar-track-gray-100 prose-pre:hover:scrollbar-thumb-gray-400
-
-  /* Table: rộng tối thiểu và cho phép scroll ngang trên màn nhỏ */
-  [&_table]:block [&_table]:w-full [&_table]:min-w-[640px] [&_table]:overflow-x-auto [&_table]:scrollbar-thin [&_table]:scrollbar-thumb-gray-300 [&_table]:scrollbar-track-gray-100 [&_table:hover]:scrollbar-thumb-gray-400
-  [&_th]:text-left [&_td]:align-top
-  [&_th]:p-2 [&_td]:p-2
-  [&_thead]:bg-gray-50 [&_tbody_tr:nth-child(even)]:bg-gray-50/40
-`;
+export const classDetailPost = i18nText("AUTO.constants.index.extra239_8_prose_prose_sm_sm_prose");
 
 export const EMPTY_PAGINATION = {
   currentPage: 1,

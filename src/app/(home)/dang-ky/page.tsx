@@ -1,3 +1,4 @@
+import { i18nText } from "@/lib/i18nText";
 import React from "react";
 import Link from "next/link";
 import RegisterForm from "@/components/register/registerForm";
@@ -26,12 +27,8 @@ export default function RegisterPage() {
               <div className="flex flex-col">
                 <div className="flex-1 p-4 lg:p-8">
                   <div className="mb-4">
-                    <h2 className="text-xl font-bold text-gray-900 lg:text-2xl">
-                      Đăng ký tài khoản
-                    </h2>
-                    <p className="mt-1 text-sm text-gray-600 lg:text-base">
-                      Điền thông tin để trở thành thành viên của chúng tôi
-                    </p>
+                    <h2 className="text-xl font-bold text-gray-900 lg:text-2xl">{i18nText("AUTO.app.dang.ky.line30_0_dang_ky_khoan")}</h2>
+                    <p className="mt-1 text-sm text-gray-600 lg:text-base">{i18nText("AUTO.app.dang.ky.line33_1_dien_thong_tin_tro_thanh")}</p>
                   </div>
 
                   <div>
@@ -45,17 +42,11 @@ export default function RegisterPage() {
 
         {/* Nav dưới cùng */}
         <div className="mt-8 flex flex-wrap items-center justify-center gap-4 text-sm text-gray-600">
-          <Link href="/" className="hover:text-gray-800">
-            Chính sách bảo mật
-          </Link>
+          <Link href="/" className="hover:text-gray-800">{i18nText("AUTO.app.dang.ky.line49_2_chinh_sach_bao_mat")}</Link>
           <span className="text-gray-300">|</span>
-          <Link href="/" className="hover:text-gray-800">
-            Trợ giúp
-          </Link>
+          <Link href="/" className="hover:text-gray-800">{i18nText("AUTO.app.dang.ky.line53_3_tro_giup")}</Link>
           <span className="text-gray-300">|</span>
-          <Link href="/dieu-khoan-su-dung" className="hover:text-gray-800">
-            Điều khoản sử dụng
-          </Link>
+          <Link href="/dieu-khoan-su-dung" className="hover:text-gray-800">{i18nText("AUTO.app.dang.ky.line57_4_dieu_khoan_su_dung")}</Link>
         </div>
       </div>
     </div>

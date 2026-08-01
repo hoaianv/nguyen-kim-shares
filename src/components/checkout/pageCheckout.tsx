@@ -1,5 +1,6 @@
 "use client";
 
+import { i18nText } from "@/lib/i18nText";
 import AddressGrid from "@/components/checkout/AddressGrid";
 import ModalUserInfo from "@/components/checkout/ModalUserInfo";
 import OrderSummary from "@/components/checkout/OrderSummary";
@@ -98,7 +99,7 @@ export default function PageCheckout({
   useEffect(() => {
     if (hasSelectedItems) return;
 
-    toast.warning("Hãy chọn ít nhất 1 sản phẩm trước khi thanh toán.", {
+    toast.warning(i18nText("AUTO.components.checkout.pagecheckout.line101_0_hay_chon_it_nhat_1"), {
       position: "top-center",
     });
     router.replace("/gio-hang");
@@ -145,9 +146,7 @@ export default function PageCheckout({
                 ? "border-b-2 border-amber-500 bg-white text-slate-950"
                 : "text-slate-500 hover:text-slate-900"
                 }`}
-            >
-              Nhận hàng tại nhà
-            </button>
+            >{i18nText("AUTO.components.checkout.pagecheckout.line149_1_nhan_hang_nha")}</button>
 
             <button
               onClick={() =>
@@ -157,15 +156,11 @@ export default function PageCheckout({
                 ? "border-b-2 border-amber-500 bg-white text-slate-950"
                 : "text-slate-500 hover:text-slate-900"
                 }`}
-            >
-              Nhận tại cửa hàng
-            </button>
+            >{i18nText("AUTO.components.checkout.pagecheckout.line161_2_nhan_hang")}</button>
           </div>
 
           <div className="space-y-4 p-4 sm:p-6">
-            <h3 className="text-lg font-semibold text-slate-950">
-              Thông tin nhận hàng
-            </h3>
+            <h3 className="text-lg font-semibold text-slate-950">{i18nText("AUTO.components.checkout.pagecheckout.line167_3_thong_tin_nhan_hang")}</h3>
 
             {payload.shippingMethod !== "delivery" && (
               <motion.div
@@ -198,12 +193,10 @@ export default function PageCheckout({
             />
 
             <div className="space-y-2">
-              <label className="block text-sm font-medium text-slate-700">
-                Ghi chú cho đơn hàng
-              </label>
+              <label className="block text-sm font-medium text-slate-700">{i18nText("AUTO.components.checkout.pagecheckout.line202_4_ghi_chu_don_hang")}</label>
               <TextArea
                 id="note"
-                label="Mô tả"
+                label={i18nText("AUTO.components.checkout.pagecheckout.line206_5_mo_ta")}
                 value={payload.note || ""}
                 onChange={(e) =>
                   setPayload((prev) => ({ ...prev, note: e.target.value }))

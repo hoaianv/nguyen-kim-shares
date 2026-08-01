@@ -1,4 +1,5 @@
 "use client";
+import { i18nText } from "@/lib/i18nText";
 import { getAccessories } from "@/apis/models/buildPc.apis";
 import Button from "@/components/ui/button";
 import InputField from "@/components/ui/input";
@@ -206,7 +207,7 @@ export default function ModalAccessories({
               label: item.title,
             }))}
             value={filter.brand ?? ""}
-            placeholder="Chọn thương hiệu"
+            placeholder={i18nText("AUTO.components.buildpc.modalaccessories.line209_0_chon_thuong_hieu")}
             onChange={(e) =>
               setFilter((prev) => ({ ...prev, brand: e.target.value }))
             }
@@ -358,8 +359,8 @@ export default function ModalAccessories({
                       setBuildConfigs(activeConfig, {
                         [data.url]: { ...item, quantity: 1 },
                       });
-                      toast.success("Đã chọn linh kiện", {
-                        description: `Đã chọn ` + item.name,
+                      toast.success(i18nText("AUTO.components.buildpc.modalaccessories.line361_1_da_chon_linh_kien"), {
+                        description: i18nText("AUTO.components.buildpc.modalaccessories.extra363_0_da_chon") + item.name,
                         position: "top-center",
                       });
                     }}
@@ -399,9 +400,7 @@ export default function ModalAccessories({
               <p
                 className="text-xs font-medium
                 sm:text-sm"
-              >
-                Không có phụ kiện nào
-              </p>
+              >{i18nText("AUTO.components.buildpc.modalaccessories.line403_2_khong_phu_kien_nao")}</p>
             </div>
           </div>
         )}

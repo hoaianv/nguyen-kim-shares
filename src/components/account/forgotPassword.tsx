@@ -1,4 +1,5 @@
 "use client";
+import { i18nText } from "@/lib/i18nText";
 import React, { useState, useTransition } from "react";
 import { X } from "lucide-react";
 import InputField from "@/components/ui/input";
@@ -24,7 +25,7 @@ const ForgotPasswordModal: React.FC<ForgotPasswordModalProps> = ({
     e.preventDefault();
 
     if (!email || !email.includes("@")) {
-      toast.error("Vui lòng nhập email hợp lệ");
+      toast.error(i18nText("AUTO.components.account.forgotpassword.line27_0_vui_long_nhap_email_hop"));
       return;
     }
 
@@ -34,16 +35,16 @@ const ForgotPasswordModal: React.FC<ForgotPasswordModalProps> = ({
       setLoading(false);
 
       if (response?.status && response?.errorCode === 200) {
-        toast.success("Thành công!", {
+        toast.success(i18nText("AUTO.components.account.forgotpassword.line37_1_thanh_cong"), {
           description:
-            "Một email đã được gửi đến mail của bạn. Hãy vào hộp thư thực hiện xác nhận để đổi mật khẩu.",
+            i18nText("AUTO.components.account.forgotpassword.line39_2_mot_email_da_duoc_gui"),
           position: "top-center",
           duration: 5000,
         });
         setEmail("");
         onClose();
       } else {
-        toast.error(response.message || "Có lỗi xảy ra!");
+        toast.error(response.message || i18nText("AUTO.components.account.forgotpassword.extra47_0_loi_xay_ra"));
       }
     });
   };
@@ -67,7 +68,7 @@ const ForgotPasswordModal: React.FC<ForgotPasswordModalProps> = ({
       <div className="relative bg-white rounded-2xl p-6 w-full max-w-md mx-4 shadow-2xl">
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
-          <h3 className="text-xl font-semibold text-gray-900">Quên mật khẩu</h3>
+          <h3 className="text-xl font-semibold text-gray-900">{i18nText("AUTO.components.account.forgotpassword.line70_3_quen_mat_khau")}</h3>
           <button
             onClick={handleClose}
             className="text-gray-400 hover:text-gray-600 transition-colors"
@@ -77,16 +78,14 @@ const ForgotPasswordModal: React.FC<ForgotPasswordModalProps> = ({
         </div>
 
         {/* Content */}
-        <p className="text-sm text-gray-600 mb-6">
-          Nhập email của bạn để nhận link khôi phục mật khẩu
-        </p>
+        <p className="text-sm text-gray-600 mb-6">{i18nText("AUTO.components.account.forgotpassword.line81_4_nhap_email_nhan_link_khoi")}</p>
 
         <form onSubmit={handleSubmit} className="space-y-6">
           <InputField
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             id="forgot-email"
-            label="Email"
+            label={i18nText("AUTO.components.account.forgotpassword.extra88_1_email")}
             type="email"
           />
 
@@ -98,9 +97,7 @@ const ForgotPasswordModal: React.FC<ForgotPasswordModalProps> = ({
               size="md"
               className="flex-1"
               disabled={loading}
-            >
-              Hủy
-            </Button>
+            >{i18nText("AUTO.components.account.forgotpassword.line102_5_huy")}</Button>
 
             <Button
               type="submit"
@@ -109,7 +106,7 @@ const ForgotPasswordModal: React.FC<ForgotPasswordModalProps> = ({
               size="md"
               className="flex-1"
             >
-              {loading ? "Đang gửi..." : "Gửi email"}
+              {loading ? i18nText("AUTO.components.account.forgotpassword.line112_6_dang_gui") : i18nText("AUTO.components.account.forgotpassword.line112_7_gui_email")}
             </Button>
           </div>
         </form>

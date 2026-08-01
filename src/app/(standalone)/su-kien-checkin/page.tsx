@@ -1,5 +1,6 @@
 "use client";
 
+import { i18nText } from "@/lib/i18nText";
 import { ClipboardCheck } from "lucide-react";
 import { useEventCheckin } from "@/hooks/useEventCheckin";
 import EventCheckinStats from "@/components/eventCheckin/EventCheckinStats";
@@ -51,12 +52,8 @@ export default function EventCheckinPage() {
               <ClipboardCheck className="w-5 h-5 text-white" />
             </div>
             <div>
-              <h1 className="text-2xl font-semibold text-gray-900 tracking-tight">
-                Quản lý Check-in Sự kiện
-              </h1>
-              <p className="text-sm text-gray-500">
-                Quản lý danh sách khách mời và trạng thái check-in
-              </p>
+              <h1 className="text-2xl font-semibold text-gray-900 tracking-tight">{i18nText("AUTO.app.standalone.su.kien.checkin.line55_0_quan_ly_check_in_su")}</h1>
+              <p className="text-sm text-gray-500">{i18nText("AUTO.app.standalone.su.kien.checkin.line58_1_quan_ly_danh_sach_khach")}</p>
             </div>
           </div>
         </div>

@@ -1,4 +1,5 @@
 "use client";
+import { i18nText } from "@/lib/i18nText";
 import { ArrowUpRight, Info, Star, ChevronDown, ChevronUp } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { useMemo, useState } from "react";
@@ -138,14 +139,10 @@ export default function CompareProducts({ data }: { data: ICompareProduct[] }) {
           className="grid sticky top-0 z-10 border-b border-gray-200 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/70 min-w-[720px] sm:min-w-[860px] lg:min-w-0"
           style={{ gridTemplateColumns: gridTemplateColumns }}
         >
-          <div className="px-2 py-2 sm:px-3 sm:py-3 text-[11px] sm:text-xs font-semibold uppercase tracking-wide text-gray-600 sticky left-0 bg-inherit">
-            Thông số
-          </div>
+          <div className="px-2 py-2 sm:px-3 sm:py-3 text-[11px] sm:text-xs font-semibold uppercase tracking-wide text-gray-600 sticky left-0 bg-inherit">{i18nText("AUTO.components.product.compareproducts.line142_0_thong_so")}</div>
           {data.map((p) => (
             <div key={`head-${p.id}`} className="px-2 py-2 sm:px-3 sm:py-3">
-              <div className="text-[11px] sm:text-xs text-gray-500">
-                Sản phẩm
-              </div>
+              <div className="text-[11px] sm:text-xs text-gray-500">{i18nText("AUTO.components.product.compareproducts.line147_1_san_pham")}</div>
               <div
                 className="text-[13px] sm:text-sm font-semibold text-gray-900 line-clamp-1"
                 title={p.name}
@@ -166,14 +163,10 @@ export default function CompareProducts({ data }: { data: ICompareProduct[] }) {
             >
               {expanded ? (
                 <>
-                  <ChevronUp className="w-4 h-4" />
-                  Thu gọn
-                </>
+                  <ChevronUp className="w-4 h-4" />{i18nText("AUTO.components.product.compareproducts.line170_2_thu_gon")}</>
               ) : (
                 <>
-                  <ChevronDown className="w-4 h-4" />
-                  Xem thêm {hiddenCount} dòng
-                </>
+                  <ChevronDown className="w-4 h-4" />{i18nText("AUTO.components.product.compareproducts.line175_3_xem_them")}{hiddenCount}{i18nText("AUTO.components.product.compareproducts.line175_4_dong")}</>
               )}
             </button>
           </div>

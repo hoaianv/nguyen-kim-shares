@@ -1,103 +1,1772 @@
 {
   "HEADER": {
-    "product_category": "Danh mục sản phẩm",
-    "promotion_news": "Tin khuyến mãi",
-    "product_page": "Trang sản phẩm",
-    "pc_builder": "Xây dựng cấu hình",
-    "business_solutions": "Giải pháp doanh nghiệp",
-    "tech_news": "Tin công nghệ",
-    "news": "Tin tức",
-    "contact": "Liên hệ kinh doanh",
-    "services": "Dịch vụ",
-    "careers": "Tuyển dụng",
-    "auth": "Đăng ký/ đăng nhập",
-    "notifications": "Thông báo",
-    "cart": "Giỏ hàng",
-    "search_placeholder": "Nhập từ khóa tìm kiếm...",
-    "no_notifications": "Chưa có thông báo nào",
-    "empty_cart": "Giỏ hàng trống",
-    "shop_now": "Mua sắm ngay",
-    "view_cart": "Xem giỏ hàng",
-    "hello": "Chào bạn",
-    "not_updated": "Chưa cập nhật"
+    "product_category": "Product catalog",
+    "promotion_news": "Promotional news",
+    "product_page": "Product page",
+    "pc_builder": "Build configuration",
+    "business_solutions": "Enterprise solutions",
+    "tech_news": "Technology news",
+    "news": "News",
+    "contact": "Business contact",
+    "services": "Service",
+    "careers": "Recruitment",
+    "auth": "Register/log in",
+    "notifications": "Notification",
+    "cart": "Shopping cart",
+    "search_placeholder": "Enter search keyword...",
+    "no_notifications": "There are no announcements yet",
+    "empty_cart": "Cart is empty",
+    "shop_now": "Shop now",
+    "view_cart": "View cart",
+    "hello": "Hello",
+    "not_updated": "Not updated yet"
   },
   "ACCOUNT": {
-    "personal_info": "Thông tin cá nhân",
-    "order_management": "Quản lý đơn hàng",
-    "viewed_products": "Sản phẩm đã xem",
-    "address_book": "Sổ địa chỉ",
-    "favorite_products": "Sản phẩm yêu thích",
-    "account_overview": "Tổng quan tài khoản",
-    "logout": "Đăng xuất"
+    "personal_info": "Personal information",
+    "order_management": "Order management",
+    "viewed_products": "Products viewed",
+    "address_book": "Address book",
+    "favorite_products": "Favorite products",
+    "account_overview": "Account overview",
+    "logout": "Sign out"
   },
   "TITLE": {
-    "featured_categories": "Danh mục nổi bật",
-    "featured_products": "Sản phẩm nổi bật",
-    "you_may_like": "Có thể bạn quan tâm",
-    "latest_posts": "Bài viết mới nhất",
-    "most_viewed": "Xem nhiều nhất"
+    "featured_categories": "Featured categories",
+    "featured_products": "Outstanding product",
+    "you_may_like": "You may be interested",
+    "latest_posts": "Latest article",
+    "most_viewed": "Most viewed"
   },
   "FOOTER": {
-    "support_hotline": "Tổng đài hỗ trợ",
-    "policies_terms": "Chính sách & Điều khoản",
-    "our_location": "Vị trí của chúng tôi",
-    "about_nguyen_kim": "Về Nguyên Kim"
+    "support_hotline": "Support switchboard",
+    "policies_terms": "Policy & Terms",
+    "our_location": "Our location",
+    "about_nguyen_kim": "About Nguyen Kim"
   },
   "COMMON": {
-    "view_all": "Xem tất cả",
-    "in_stock": "Còn hàng",
-    "temporarily_out_of_stock": "Tạm hết hàng",
-    "out_of_stock": "Hết hàng",
-    "contact": "Liên hệ",
-    "add_to_cart": "Thêm vào giỏ",
-    "get_expert_advice": "Nhận tư vấn từ chuyên gia",
+    "view_all": "See all",
+    "in_stock": "In stock",
+    "temporarily_out_of_stock": "Temporarily out of stock",
+    "out_of_stock": "Out of stock",
+    "contact": "Contact",
+    "add_to_cart": "Add to cart",
+    "get_expert_advice": "Get advice from experts",
     "buy_now": "Mua ngay",
-    "brand": "Thương hiệu",
-    "choose": "Chọn",
-    "sort_by": "Sắp xếp theo",
-    "best_selling": "Bán chạy",
-    "price_asc": "Giá tăng dần",
-    "price_desc": "Giá giảm dần",
-    "select_brand": "Chọn thương hiệu",
-    "search": "Tìm kiếm",
-    "search_accessories": "Tìm kiếm phụ kiện",
-    "delete": "Xóa"
+    "brand": "Trademark",
+    "choose": "Select",
+    "sort_by": "Sort by",
+    "best_selling": "Selling well",
+    "price_asc": "Prices gradually increase",
+    "price_desc": "Prices gradually decrease",
+    "select_brand": "Choose brand",
+    "search": "Search",
+    "search_accessories": "Search for accessories",
+    "delete": "Erase"
   },
   "BREADCRUMB": {
-    "home": "Trang chủ"
+    "home": "Home page"
   },
   "PROMOTION": {
-    "ongoing_offers": "Ưu đãi đang diễn ra",
-    "promotion_news": "Tin khuyến mãi",
-    "daily_offers_summary": "Tổng hợp ưu đãi hấp dẫn, cập nhật liên tục mỗi ngày."
+    "ongoing_offers": "Offer ongoing",
+    "promotion_news": "Promotional news",
+    "daily_offers_summary": "Collection of attractive offers, updated continuously every day."
   },
   "BUILD_PC": {
-    "configuration": "Cấu hình",
-    "reload": "Tải lại",
-    "load_configuration": "Tải cấu hình",
-    "estimated_cost": "Chi phí dự tính",
-    "confirm_reload_configuration": "Bạn có chắc chắn muốn tải lại cấu hình này?",
-    "reload_configuration": "Tải lại cấu hình",
-    "select_component": "Chọn linh kiện",
-    "please_select_component": "Vui lòng chọn linh kiện"
+    "configuration": "Configuration",
+    "reload": "Reload",
+    "load_configuration": "Download configuration",
+    "estimated_cost": "Estimated costs",
+    "confirm_reload_configuration": "Are you sure you want to reload this configuration?",
+    "reload_configuration": "Reload configuration",
+    "select_component": "Select components",
+    "please_select_component": "Please select components"
   },
   "NEWS": {
-    "news": "Tin tức"
+    "news": "News"
   },
   "PRODUCT": {
-    "product_code": "Mã sản phẩm",
-    "status": "Tình trạng",
-    "choose_promotion": "Chọn 1 trong những khuyến mãi sau",
-    "gift_included": "Quà tặng đi kèm",
-    "specifications": "Thông số kỹ thuật",
-    "related_products": "Sản phẩm liên quan",
-    "quantity": "Số lượng",
-    "compare_products": "So sánh sản phẩm",
-    "view_more": "Xem thêm",
-    "view_more_content": "Xem thêm nội dung",
-    "apply": "Áp dụng",
-    "view_details": "Xem chi tiết",
-    "show_less": "Ẩn bớt",
-    "remove": "Bỏ chọn"
+    "product_code": "Product code",
+    "status": "Status",
+    "choose_promotion": "Choose 1 of the following promotions",
+    "gift_included": "Gifts included",
+    "specifications": "Specifications",
+    "related_products": "Related products",
+    "quantity": "Quantity",
+    "compare_products": "Compare products",
+    "view_more": "See more",
+    "view_more_content": "See more content",
+    "apply": "Apply",
+    "view_details": "See details",
+    "show_less": "Hide less",
+    "remove": "Deselect"
+  },
+  "AUTO": {
+    "app": {
+      "dang": {
+        "ky": {
+          "line19_4_trai_nghiem_dich_vu_nhan": "to experience the service and receive exclusive offers.",
+          "line17_3_tao_khoan_moi": "Create a new account at",
+          "line15_2_dang_ky": "Register | {value0}",
+          "line10_1_dang_ky_khoan_mua_sam": "{value0} – Register an account to shop for genuine laptops, PCs and technology equipment with many incentives.",
+          "line9_0_dang_ky": "Register | {value0}",
+          "line57_4_dieu_khoan_su_dung": "Terms of use",
+          "line53_3_tro_giup": "Help",
+          "line49_2_chinh_sach_bao_mat": "Privacy policy",
+          "line33_1_dien_thong_tin_tro_thanh": "Fill in the information to become our member",
+          "line30_0_dang_ky_khoan": "Register an account"
+        },
+        "nhap": {
+          "line19_4_quan_ly_don_hang_trai": "to manage orders and experience quick service.",
+          "line17_3_dang_nhap_vao": "Sign in",
+          "line15_2_dang_nhap": "Sign in | {value0}",
+          "line10_1_dang_nhap_khoan_tiep_tuc": "{value0} – Log in to your account to continue shopping for laptops, PCs and genuine technology equipment.",
+          "line9_0_dang_nhap": "Sign in | {value0}",
+          "line120_9_tin_tuc_khuyen_mai_moi": "Latest news & promotions",
+          "line116_8_theo_doi_don_hang_diem": "Track orders & reward points",
+          "line112_7_uu_dai_mua_hang_bao": "Purchase offers & daily quotes",
+          "line107_6_uu_dai_danh_doi_tac": "Incentives for partners",
+          "line94_5_dang_ky_khoan": "Register an account",
+          "line73_4_lien_he_dang_ky_khoan": "Contact us to register for a wholesale account",
+          "line70_3_chua_khoan": "Don't have an account yet?",
+          "line60_2_chao_mung_tro_lai": "Welcome back",
+          "line57_1_dang_nhap": "Log in",
+          "line46_0_banner_login": "Banner login"
+        }
+      },
+      "dich": {
+        "vu": {
+          "line15_1_dich_vu": "Services | {value0}",
+          "line9_0_dich_vu": "Services | {value0}",
+          "line25_0_dich_vu": "Service"
+        }
+      },
+      "doi": {
+        "mat": {
+          "khau": {
+            "line32_1_nhap_email_mat_khau_moi": "Enter your email and new password to change your password",
+            "line29_0_doi_mat_khau": "Change password"
+          }
+        }
+      },
+      "giai": {
+        "phap": {
+          "doanh": {
+            "nghiep": {
+              "line12_3_giai_phap_toan_dien_doanh": "Comprehensive solutions for businesses: Electronics, technology, projects and business gifts from {value0}.",
+              "line11_2_giai_phap_doanh_nghiep": "Solutions for businesses | {value0}",
+              "line6_1_cung_cap_cac_giai_phap": "Providing technology solutions, electrical equipment and professional B2B services for businesses from {value0}. Optimize operations and costs.",
+              "line5_0_giai_phap_doanh_nghiep": "Solutions for businesses | {value0}",
+              "line24_1_cap_nhat_nhung_giai_phap": "Update the latest technology solutions for businesses",
+              "line21_0_giai_phap_doanh_nghiep": "Solutions for businesses"
+            }
+          }
+        }
+      },
+      "gio": {
+        "hang": {
+          "line14_3_gio_hang_mua_sam": "Shopping cart at",
+          "line13_2_gio_hang": "Cart | {value0}",
+          "line7_1_xem_quan_ly_cac_san": "View and manage products in your shopping cart before ordering at",
+          "line5_0_gio_hang": "Cart | {value0}"
+        }
+      },
+      "lien": {
+        "he": {
+          "gop": {
+            "y": {
+              "line20_4_nhan_ho_tro_nhanh_chong": "to receive quick support.",
+              "line18_3_gui_gop_y_hoac_lien": "Send comments or contact directly",
+              "line16_2_lien_he_gop_y": "Contact and suggestions | {value0}",
+              "line11_1_lien_he_qua_hotline_hoac": "Contact {value0} via hotline {value1} or visit {value2} for advice and support.",
+              "line10_0_lien_he_gop_y": "Contact and suggestions | {value0}",
+              "line25_2_xin_chan_thanh_cam_on": "Sincerely thank you for your trust and companionship!",
+              "line21_1_chung_toi_luon_lang_nghe": "We always listen to your opinions. Please leave your information and comments, the customer service department will respond as soon as possible.",
+              "line18_0_lien_he_gop_y": "Contact & Suggestions"
+            }
+          }
+        }
+      },
+      "san": {
+        "pham": {
+          "line15_3_duyet_toan_bo_san_pham": "Browse the entire product and category at {value0}.",
+          "line14_2_tat_ca_san_pham_danh": "All Products & Categories | {value0}",
+          "line11_1_xem_toan_bo_san_pham": "See all products and all categories at {value0}. Good price, fast delivery. Hotline {value1}.",
+          "line10_0_trang_san_pham": "Product page | {value0}",
+          "line118_13_san_pham": "product",
+          "line114_12_san_pham_noi_bat": "Outstanding product",
+          "line111_11_best_seller": "best seller",
+          "line100_10_kham_pha_nhanh": "Quick discovery",
+          "line97_9_danh_muc_phu": "sub category",
+          "line83_8_kham_pha": "Discover",
+          "line69_7_nhom": "group",
+          "line66_6_loi_vao_nhanh": "Quick entrance",
+          "line57_5_tu_khoa": "Keywords:",
+          "line53_4_danh_muc": "category",
+          "line50_3_san_pham": "product",
+          "line44_2_kham_pha_nhom_hang_theo": "Explore product groups in a clear layout, prioritizing the ability to quickly scan products, prices and groupings.",
+          "line41_1_danh_muc_san_pham": "Product catalog",
+          "line38_0_catalog_showroom": "catalog showroom",
+          "extra21_1_danh_muc_san_pham": "product category",
+          "extra21_0_tat_ca_san_pham": "all products"
+        }
+      },
+      "khoan": {
+        "quan": {
+          "ly": {
+            "don": {
+              "line12_3_xem_chi_tiet_quan_ly": "View details and manage your order at",
+              "line11_2_quan_ly_don_hang": "Order management | {value0}",
+              "line6_1_theo_doi_quan_ly_don": "Track and manage orders purchased at {value0}. View your delivery status and shopping history.",
+              "line5_0_quan_ly_don_hang": "Order management | {value0}",
+              "line13_3_thong_tin_chi_tiet_don": "Order details and delivery status at",
+              "line11_2_chi_tiet_don_hang": "Order details | {value0}",
+              "line6_1_xem_chi_tiet_don_hang": "View details of orders purchased at {value0}, including product, price and delivery status.",
+              "line5_0_chi_tiet_don_hang": "Order details | {value0}",
+              "extra25_0_tim_kiem_don_hang": "Search for orders..."
+            }
+          }
+        },
+        "san": {
+          "pham": {
+            "da": {
+              "line12_3_danh_sach_san_pham_da": "List of products you recently viewed at",
+              "line11_2_san_pham_da_xem": "Viewed products | {value0}",
+              "line6_1_xem_lai_cac_san_pham": "Review the technology products you have viewed at {value0}, easily compare and choose to buy.",
+              "line5_0_san_pham_da_xem": "Viewed products | {value0}",
+              "line25_0_san_pham_da_xem": "Products viewed"
+            },
+            "yeu": {
+              "line12_3_danh_sach_san_pham_da": "List of products you have added to favorites at",
+              "line11_2_san_pham_yeu_thich": "Favorite products | {value0}",
+              "line6_1_xem_quan_ly_danh_sach": "View and manage your favorite product list at {value0}, easily shop and track deals.",
+              "line5_0_san_pham_yeu_thich": "Favorite products | {value0}",
+              "line26_0_san_pham_yeu_thich": "Favorite products"
+            }
+          }
+        },
+        "so": {
+          "dia": {
+            "chi": {
+              "line12_3_danh_sach_quan_ly_dia": "List and manage your personal addresses at",
+              "line11_2_so_dia_chi": "Address book | {value0}",
+              "line6_1_quan_ly_cap_nhat_dia": "Manage and update your shipping address and payment address in your account at {value0}.",
+              "line5_0_so_dia_chi": "Address book | {value0}",
+              "line16_0_so_dia_chi": "Address book"
+            }
+          }
+        }
+      },
+      "thanh": {
+        "toan": {
+          "line12_3_trang_thanh_toan_don_hang": "Fast and secure order payment page at",
+          "line11_2_thanh_toan": "Payment | {value0}",
+          "line6_1_hoan_tat_don_hang_thanh": "Complete your order and pay securely at {value0}. Supports many convenient payment methods.",
+          "line5_0_thanh_toan": "Payment | {value0}"
+        }
+      },
+      "tin": {
+        "khuyen": {
+          "mai": {
+            "line12_3_tin_tuc_bai_viet_su": "News, articles and featured events from",
+            "line11_2_tin_tuc": "News | {value0}",
+            "line6_1_cap_nhat_tin_tuc_cong": "Update the latest technology news, promotions and events from {value0}.",
+            "line5_0_tin_tuc": "News | {value0}",
+            "line28_0_tin_khuyen_mai": "Promotional news"
+          }
+        },
+        "tuc": {
+          "line12_3_tin_tuc_bai_viet_su": "News, articles and featured events from",
+          "line11_2_tin_tuc": "News | {value0}",
+          "line6_1_cap_nhat_tin_tuc_cong": "Update the latest technology news, promotions and events from {value0}.",
+          "line5_0_tin_tuc": "News | {value0}"
+        }
+      },
+      "tu": {
+        "van": {
+          "line13_3_chuyen_muc_tu_van_chon": "Consulting section on choosing to buy and use technology products at",
+          "line11_2_tu_van": "Consulting | {value0}",
+          "line6_1_nhan_cac_bai_viet_tu": "Receive advice articles on shopping and using technology equipment from {value0}.",
+          "line5_0_tu_van": "Consulting | {value0}",
+          "line104_2_admin_tra_loi": "Waiting for admin to reply...",
+          "line95_1_admin_tra_loi": "Admin replied",
+          "line88_0_khach_hang_hoi": "Customers asked",
+          "slug": {
+            "line13_3_chuyen_muc_tu_van_chon": "Consulting section on choosing to buy and use technology products at",
+            "line11_2_tu_van": "Consulting | {value0}",
+            "line6_1_nhan_cac_bai_viet_tu": "Receive advice articles on shopping and using technology equipment from {value0}.",
+            "line5_0_tu_van": "Consulting | {value0}",
+            "line137_2_admin_tra_loi": "Waiting for admin to reply...",
+            "line123_1_admin_tra_loi": "Admin replied",
+            "line113_0_khach_hang_hoi": "Customers asked"
+          }
+        }
+      },
+      "tuyen": {
+        "dung": {
+          "line16_3_kham_pha_cac_vi_tri": "Explore attractive vacancies at",
+          "line15_2_tuyen_dung": "Recruitment | {value0}",
+          "line10_1_hoi_viec_lam_linh_vuc": "{value0} – Job opportunity in the technology field, join the team and develop your career together.",
+          "line9_0_tuyen_dung": "Recruitment | {value0}"
+        }
+      },
+      "vai": {
+        "tro": {
+          "line214_16_quay_lai": "← Go back",
+          "line193_15_dang_ky_thanh_vien": "Register as a Member",
+          "line177_14_tham_gia_cac_su_kien": "Participate in member events",
+          "line173_13_uu_dai_giam_gia_dac": "Special offers and discounts",
+          "line169_12_truy_cap_noi_dung_doc": "Access exclusive content",
+          "line160_11_tro_thanh_thanh_vien_nhan": "Become a member to receive special programs, promotional offers just for you, along with a points and promotion system to upgrade to a premium member.",
+          "line148_10_thanh_vien": "Member",
+          "line107_9_dang_ky_doi_tac": "Register Partner",
+          "line93_8_uu_dai_bao_hanh_giam": "Warranty incentives, purchase discounts and service fees",
+          "line88_7_theo_doi_quan_ly_don": "Track order management and purchase reward points",
+          "line84_6_cap_nhat_gia_san_pham": "Update product prices and quotes daily",
+          "line78_5_cap_nhat_thong_tin_san": "Update new product information, technology news, promotional news",
+          "line73_4_duoc_huong_day_du_cac": "Enjoy full purchase incentives",
+          "line64_3_dong_hanh_cung_chung_toi": "Accompany us for breakthrough growth. Become a partner to receive exclusive offers, flexible pricing policies and 24/7 support. Together, we can expand the market sustainably.",
+          "line52_2_doi_tac": "Partner",
+          "line19_1_chon_vai_tro_phu_hop": "Choose the right role to start your journey with us",
+          "line16_0_lua_chon_vai_tro": "Choose your role"
+        }
+      },
+      "xac": {
+        "nhan": {
+          "thanh": {
+            "toan": {
+              "line335_40_quay_lai_trang_chu": "Return to homepage",
+              "line324_39_tong_cong": "Total:",
+              "line315_38_ma_giam_gia": "Discount code (",
+              "line309_37_kinh_doanh_phan_hoi": "Business response",
+              "line307_36_phi_van_chuyen": "Shipping fee:",
+              "line301_35_tam_tinh": "Temporary calculation:",
+              "line294_34_khong_san_pham_nao": "There are no products",
+              "line277_33_so_luong": "Quantity:",
+              "line264_32_san_pham": "Product",
+              "line254_31_danh_sach_san_pham": "Product list",
+              "line244_30_ma_so_thue_da_dang": "Registered tax code",
+              "line241_29_noi_dung_chuyen_khoan": "Transfer content:",
+              "line231_28_qr_code_payment": "QR Code Payment",
+              "line219_27_ghi_chu": "Note",
+              "line208_26_phuong_thuc_van_chuyen": "Shipping method",
+              "line202_25_thanh_toan_chuyen_khoan_truc": "Payment by direct transfer",
+              "line199_24_phuong_thuc_thanh_toan": "Payment method",
+              "line186_23_so_dien_thoai": "Phone number:",
+              "line174_22_dia_chi": "Address:",
+              "line168_21_ho_ten": "Full name:",
+              "line164_20_thong_tin_nhan_hang": "Delivery information",
+              "line156_19_khong": "Do not have",
+              "line154_18_so_dien_thoai_cong_ty": "Company phone number:",
+              "line150_17_khong": "Do not have",
+              "line148_16_email_cong_ty": "Company email:",
+              "line144_15_khong": "Do not have",
+              "line142_14_dia_chi_cong_ty": "Company address:",
+              "line138_13_khong": "Do not have",
+              "line136_12_ten_cong_ty": "Company name:",
+              "line132_11_thong_tin_mua_hang": "Purchase information",
+              "line122_10_xin_vui_long_kiem_tra": "Please check your email.",
+              "line116_9_email_xac_nhan_da_duoc": "Confirmation email has been sent to:",
+              "line113_8_ngay_dat_hang": "Order date:",
+              "line107_7_ma_don_hang": "Order code:",
+              "line104_6_cam_on_quy_khach_da": "Thank you for ordering at Nguyen Kim",
+              "line75_5_quay_lai_trang_chu": "Return to homepage",
+              "line72_4_khong_tim_thay_thong_tin": "Order information not found",
+              "line61_3_dang_thong_tin_don_hang": "Loading order information...",
+              "line47_2_da_xay_ra_loi_khi": "An error occurred while loading order information",
+              "line43_1_khong_thong_tin_don_hang": "Unable to download order information",
+              "line27_0_khong_tim_thay_thong_tin": "Order information not found",
+              "line12_3_don_hang_da_duoc_xac": "The order has been successfully confirmed. Please check your email and make payment according to the instructions at {value0}",
+              "line11_2_xac_nhan_thanh_toan": "Payment confirmation | {value0}",
+              "line6_1_xac_nhan_don_hang_huong": "Confirm order and detailed payment instructions at {value0}. Track order status and receive transfer information.",
+              "line5_0_xac_nhan_thanh_toan": "Payment confirmation | {value0}",
+              "extra166_2_email": "Email:",
+              "extra84_1_nhan_hang": "Pick up in store",
+              "extra84_0_giao_hang_tan_noi": "Delivery to your door"
+            }
+          }
+        }
+      },
+      "xay": {
+        "dung": {
+          "cau": {
+            "hinh": {
+              "line12_3_cong_cu_chon_linh_kien": "Tool for selecting components and assembling PC configuration at",
+              "line11_2_xay_dung_cau_hinh": "Build configuration | {value0}",
+              "line6_1_tu_chon_linh_kien_xay": "Choose your own components and build your PC configuration to suit your needs at {value0}.",
+              "line5_0_xay_dung_cau_hinh": "Build configuration | {value0}"
+            }
+          }
+        }
+      },
+      "yeu": {
+        "cau": {
+          "bao": {
+            "gia": {
+              "line12_3_trang_gui_yeu_cau_bao": "Page sends quote request directly to",
+              "line11_2_yeu_cau_bao_gia": "Request a quote | {value0}",
+              "line6_1_gui_yeu_cau_bao_gia": "Submit a request for a quote for technology products and services at {value0}. Get quick and detailed feedback.",
+              "line5_0_yeu_cau_bao_gia": "Request a quote | {value0}",
+              "line17_1_vui_long_dien_day_du": "Please fill in the information below. We will respond and send you a detailed quote as soon as possible.",
+              "line14_0_yeu_cau_bao_gia": "Request a quote"
+            }
+          }
+        }
+      },
+      "standalone": {
+        "line5_1_quan_ly_check_in_su": "Manage event check-in",
+        "line4_0_admin_check_in": "Admin Check-in",
+        "su": {
+          "kien": {
+            "checkin": {
+              "line58_1_quan_ly_danh_sach_khach": "Manage guest list and check-in status",
+              "line55_0_quan_ly_check_in_su": "Manage Event Check-ins",
+              "line219_14_thu_lai": "Retry",
+              "line199_13_xac_nhan_check_in": "Confirm Check-in",
+              "line178_12_so_dien_thoai": "Phone number",
+              "line168_11_chuc_vu": "Position",
+              "line156_10_cong_ty": "Company",
+              "line145_9_ho_ten": "Full name",
+              "line136_8_thong_tin_khach_moi": "Guest information",
+              "line128_7_he_thong_dang_luu_trang": "The system is saving the check-in status, please wait...",
+              "line119_6_vui_long_kiem_tra_lai": "Please check your guest information again",
+              "line118_5_xac_nhan_thong_tin": "Confirm information",
+              "line111_4_khong_hop_le": "Not valid",
+              "line111_3_that_bai": "Failure",
+              "line104_2_thanh_cong": "Success!",
+              "line96_1_dang_xu_ly": "Processing...",
+              "line96_0_dang_xac_nhan": "Confirming...",
+              "extra183_8_email": "Email",
+              "extra81_7_loi_ket_noi_khi_xac": "Connection error when confirming. Please try again.",
+              "extra77_6_check_in_that_bai_vui": "Check-in failed. Please contact the organizers.",
+              "extra74_5_check_in_thanh_cong_chao": "Check-in successful! Welcome to the event.",
+              "extra54_4_loi_ket_noi_vui_long": "Connection error. Please try again later.",
+              "extra48_3_khong_tim_thay_thong_tin": "No guest information found. Please contact the organizers.",
+              "extra40_2_khach_moi_nay_da_duoc": "This guest has been previously checked in.",
+              "extra24_1_ma_qr_khong_hop_le": "The QR code is invalid or missing identification information.",
+              "extra17_0_dang_thong_tin_khach_moi": "Loading guest information..."
+            }
+          }
+        }
+      },
+      "auth": {
+        "callback": {
+          "line28_5_trang_trung_gian_xac_thuc": "{value0}'s Google authentication intermediary page.",
+          "line27_4_dang_xu_ly_dang_nhap": "Processing Google login | {value0}",
+          "line20_3_trang_trung_gian_xu_ly": "The middle page handles {value0}'s Google authentication.",
+          "line19_2_dang_xu_ly_dang_nhap": "Processing Google login | {value0}",
+          "line10_1_dang_xu_ly_dang_nhap": "{value0} – Processing Google login, please wait a moment...",
+          "line9_0_xu_ly_dang_nhap_google": "Handling Google login | {value0}",
+          "line71_6_da_loi_xay_ra_vui": "An error occurred, please try again or log in with another account.",
+          "line68_5_dang_nhap_that_bai": "Login failed!",
+          "line60_4_he_thong_dang_chuyen_huong": "The system is redirecting you to the home page",
+          "line57_3_dang_nhap_thanh_cong": "Log in successfully!",
+          "line48_2_dang_xac_thuc_khoan": "is authenticating your account.",
+          "line48_1_vui_long_doi_giay_lat": "Please wait a moment, system",
+          "line45_0_dang_xu_ly_dang_nhap": "Processing Google login..."
+        }
+      },
+      "error": {
+        "line96_5_laptop_pc_server_thiet_bi": "Laptops, PCs, Servers, network devices from HP, Dell, Asus, Lenovo",
+        "line94_4_giai_phap_cong_nghe_chinh": "- Genuine technology solutions",
+        "line88_3_quay_lai_trang_truoc": "Return to previous page",
+        "line68_2_ve_trang_chu": "Back to home page",
+        "line45_1_trang_dang_tim_kiem_da": "The page you are looking for has been disconnected or does not exist. Please return to the homepage to explore our genuine technology products",
+        "line42_0_trang_khong_tim_thay": "Page not found"
+      },
+      "line45_1_trang_dang_tim_kiem_khong": "The page you are looking for does not exist. Please check the URL again or return to the home page to continue exploring EcoFlow's energy products and solutions.",
+      "line43_0_page_not_found_404": "Page Not Found - 404",
+      "not": {
+        "found": {
+          "line119_5_kham_pha_giai_phap_cong": "Explore professional information technology solutions",
+          "line117_4_cong_nghe_chinh_hang_dich": "- Genuine technology, dedicated service",
+          "line111_3_san_pham": "Product",
+          "line87_2_ve_trang_chu": "Back to home page",
+          "line62_1_trang_dang_tim_kiem_da": "The page you are looking for has been disconnected or does not exist. Please return to the main page to explore genuine technology solutions of Nguyen Kim Computer.",
+          "line59_0_he_thong_khong_phan_hoi": "The system is not responding"
+        }
+      },
+      "extra91_0_dang_xu_ly": "Processing..."
+    },
+    "components": {
+      "account": {
+        "accountform": {
+          "line271_26_huy_bo": "Cancel",
+          "line260_25_cap_nhat": "Update",
+          "line245_24_email_cong_ty": "Company email",
+          "line239_23_so_dien_thoai_cong_ty": "Company phone number",
+          "line231_22_dia_chi_cong_ty": "Company address",
+          "line223_21_ma_so_thue": "Tax code",
+          "line217_20_ten_cong_ty": "Company name",
+          "line210_19_khong_chinh_sua": "(Cannot be edited)",
+          "line207_18_thong_tin_cong_ty": "Company information",
+          "line193_17_chon_ngay_sinh": "Select date of birth",
+          "line176_16_chon_gioi_tinh": "Choose gender",
+          "line174_15_khac": "Other",
+          "line173_14_nu": "Female",
+          "line137_13_so_dien_thoai": "Phone number",
+          "line124_12_ho_ten": "Full name",
+          "line110_11_ten_dang_nhap": "Login name",
+          "line104_10_thong_tin_ca_nhan": "Personal information",
+          "line97_9_chinh_sua": "Edit",
+          "line92_8_thong_tin_khoan": "Account information",
+          "line82_7_loi_qua_trinh_cap_nhat": "There was an error while updating information",
+          "line77_6_da_cap_nhat_thong_tin": "You have successfully updated your information",
+          "line25_5_gioi_tinh_bat_buoc": "Gender is required",
+          "line23_4_email_bat_buoc": "Email is required",
+          "line23_3_email_khong_hop_le": "Invalid email",
+          "line22_2_so_dien_thoai_khong_hop": "Invalid phone number",
+          "line21_1_so_dien_thoai_bat_buoc": "Phone number is required",
+          "line18_0_ho_ten_bat_buoc": "Full name is required",
+          "extra152_0_email": "Email"
+        },
+        "changepasswordform": {
+          "line221_18_quay_lai_trang_dang_nhap": "Return to the login page",
+          "line209_17_xac_nhan_mat_khau_khop": "Confirm password matches",
+          "line199_16_mat_khau_moi_toi_thieu": "New password (minimum 6 characters)",
+          "line190_15_email_xac_thuc": "Authentication email",
+          "line178_14_dat_lai_mat_khau": "Reset password",
+          "line178_13_dang_dat_lai_mat_khau": "Resetting password...",
+          "line164_12_xac_nhan_mat_khau_moi": "Confirm new password",
+          "line149_11_mat_khau_moi": "New password",
+          "line114_10_vui_long_thu_lai_sau": "Please try again later",
+          "line113_9_loi_xay_ra": "An error occurred!",
+          "line107_8_vui_long_thu_lai_sau": "Please try again later",
+          "line96_7_mat_khau_da_duoc_dat": "Password has been reset successfully!",
+          "line95_6_thanh_cong": "Success!",
+          "line27_5_mat_khau_xac_nhan_khong": "Confirmation password does not match",
+          "line24_4_xac_nhan_mat_khau_bat": "Password confirmation is required",
+          "line23_3_mat_khau_moi_bat_buoc": "New password is required",
+          "line22_2_mat_khau_moi_phai_it": "The new password must have at least 6 characters",
+          "line19_1_email_khong_hop_le": "Invalid email",
+          "line19_0_email_bat_buoc": "Email is required",
+          "extra134_1_email": "Email",
+          "extra107_0_loi_xay_ra": "An error occurred!"
+        },
+        "forgotpassword": {
+          "line112_7_gui_email": "Send email",
+          "line112_6_dang_gui": "Sending...",
+          "line102_5_huy": "Cancel",
+          "line81_4_nhap_email_nhan_link_khoi": "Enter your email to receive a password recovery link",
+          "line70_3_quen_mat_khau": "Forgot password",
+          "line39_2_mot_email_da_duoc_gui": "An email has been sent to your mail. Please go to your inbox and confirm to change your password.",
+          "line37_1_thanh_cong": "Success!",
+          "line27_0_vui_long_nhap_email_hop": "Please enter a valid email",
+          "extra88_1_email": "Email",
+          "extra47_0_loi_xay_ra": "An error occurred!"
+        },
+        "verificationmodal": {
+          "line84_3_bat_dau_dang_nhap": "Start logging in",
+          "line70_2_gio_day_dang_nhap_mua": "You can now log in to shop and experience our full features.",
+          "line67_1_khoan_da_duoc_xac_thuc": "Account has been verified",
+          "line50_0_xac_thuc_thanh_cong": "Authentication successful!"
+        }
+      },
+      "address": {
+        "createaddress": {
+          "line93_6_chac_chan_muon_xoa_dia": "Are you sure you want to delete this address?",
+          "line92_5_xoa_dia_chi": "Delete address",
+          "line80_4_chinh_sua": "Edit",
+          "line67_3_dien_thoai": "Phone:",
+          "line64_2_dia_chi": "Address:",
+          "line59_1_mac_dinh": "Default",
+          "line42_0_them_dia_chi_moi": "Add new address",
+          "extra65_0_email": "Email:"
+        }
+      },
+      "advise": {
+        "emptyadvise": {
+          "line23_3_chung_toi_tu_van_chi": "Our detailed and quick advice ✨",
+          "line23_2_chuyen_gia": "expert",
+          "line22_1_hay_nguoi_dau_tien_gui": "Be the first to submit a question to the team",
+          "line17_0_hien_chua_cau_hoi_tu": "There are currently no consulting questions"
+        },
+        "formadvise": {
+          "line180_14_gui_lien_he": "Send contact",
+          "line168_13_noi_dung_cau_hoi": "Question content",
+          "line156_12_chon_chuyen_muc": "Select category",
+          "line148_11_chuyen_muc": "Category",
+          "line122_10_ho_ten": "Full name",
+          "line112_9_dat_cau_hoi_tu_van": "Ask consulting questions",
+          "line102_8_gui_cau_hoi_ngay": "Submit your question now",
+          "line75_7_vui_long_thu_lai_sau": "Please try again later.",
+          "line74_6_loi_xay_ra": "An error occurred!",
+          "line69_5_van_qua_trinh_gui_tu": "There was a problem sending the consultation.",
+          "line63_4_chung_toi_se_phan_hoi": "We will respond to you as soon as possible.",
+          "line23_3_vui_long_nhap_noi_dung": "Please enter question content",
+          "line22_2_chuyen_muc_bat_buoc": "Category is required",
+          "line21_1_email_khong_hop_le": "Invalid email",
+          "line20_0_ho_ten_bat_buoc": "Full name is required",
+          "extra134_0_email": "Email"
+        }
+      },
+      "buildpc": {
+        "builditem": {
+          "line321_3_chac_chan_muon_xoa_san": "Are you sure you want to delete this product?",
+          "line320_2_xoa_san_pham": "Delete product",
+          "line295_1_tang_so_luong": "Increase quantity",
+          "line263_0_giam_so_luong": "Reduce quantity"
+        },
+        "modalaccessories": {
+          "line403_2_khong_phu_kien_nao": "There are no accessories",
+          "line361_1_da_chon_linh_kien": "Components selected",
+          "line209_0_chon_thuong_hieu": "Choose brand",
+          "extra363_0_da_chon": "Selected"
+        }
+      },
+      "businesssolution": {
+        "businesssolutioncard": {
+          "line58_4_xem_chi_tiet": "See details",
+          "line52_3_luot_xem": "view",
+          "line50_2_luot_xem": "View",
+          "line45_1_ngay_dang": "Date posted",
+          "line32_0_giai_phap": "Solution"
+        },
+        "listbusinesssolutions": {
+          "line22_0_hien_chua_bai_viet_nao": "There are currently no articles in the Business Solutions section."
+        }
+      },
+      "cart": {
+        "cardcart": {
+          "line307_11_thanh_tien": "Make money",
+          "line300_10_tang_so_luong": "Increase quantity",
+          "line290_9_giam_so_luong": "Reduce quantity",
+          "line277_8_don_gia": "Unit price:",
+          "line269_7_xoa_san_pham": "Delete product",
+          "line223_6_thanh_tien": "Make money",
+          "line216_5_tang_so_luong": "Increase quantity",
+          "line208_4_giam_so_luong": "Reduce quantity",
+          "line165_3_xoa_san_pham": "Delete product",
+          "line142_2_xoa_san_pham": "Delete product",
+          "line137_1_xoa_san_pham": "Delete product",
+          "line121_0_so_luong": "Quantity",
+          "extra271_2_chac_chan_muon_xoa_san": "Are you sure you want to delete this product?",
+          "extra167_1_chac_chan_muon_xoa_san": "Are you sure you want to delete this product?",
+          "extra144_0_chac_chan_muon_xoa_san": "Are you sure you want to delete this product?"
+        },
+        "contentcart": {
+          "line280_20_hay_chon_it_nhat_1": "Please select at least 1 product before ordering.",
+          "line275_19_tien_hanh_dat_hang": "Proceed to order",
+          "line271_18_hay_chon_it_nhat_1": "Please select at least 1 product before ordering",
+          "line270_17_tien_hanh_dat_hang": "Proceed to order",
+          "line263_16_tiep_tuc_mua_sam": "Continue shopping",
+          "line254_15_da_bao_gom_vat": "(VAT included)",
+          "line245_14_thanh_tien": "Make money",
+          "line238_13_0d": "0 VND",
+          "line223_12_giam_gia": "Discount:",
+          "line214_11_tong_tam_tinh": "Provisional total",
+          "line208_10_thanh_toan": "Pay",
+          "line181_9_khuyen_mai_ma_giam_gia": "Promotions and discount codes",
+          "line173_8_don_hang_chua_du_dieu": "Orders are not eligible for promotion. Please purchase additional to apply",
+          "line146_7_chon_hoac_nhap_khuyen_mai": "Select or enter a promotion",
+          "line139_6_khuyen_mai": "Promotion",
+          "line122_5_gio_hang": "Cart is empty.",
+          "line114_4_chon_tat_ca": "Select all",
+          "line66_3_xoa_san_pham": "Delete product",
+          "line63_2_xoa_tat_ca": "Delete all",
+          "line57_1_gio_hang": "Shopping Cart (",
+          "line49_0_gio_hang": "Shopping cart",
+          "extra65_6_chac_chan_muon_xoa_san": "Are you sure you want to delete this product?",
+          "extra44_5_xoa": "Erase",
+          "extra43_4_tong": "Total",
+          "extra42_3_so_luong": "Quantity",
+          "extra41_2_gia": "Price",
+          "extra40_1_mo_ta": "Describe",
+          "extra39_0_chon_tat_ca": "Select all"
+        }
+      },
+      "category": {
+        "catalogtoolbar": {
+          "line39_1_bo_loc": "Filter",
+          "line32_0_sap_xep_theo": "Sort by:"
+        },
+        "categorybanners": {
+          "line27_1_banner": "Banner {value0}",
+          "line22_0_banner": "Banner {value0}"
+        },
+        "categoryfilterbar": {
+          "line431_12_xoa_tat_ca": "Delete all",
+          "line391_11_bo_chon": "Deselect",
+          "line344_10_ap_dung_gia": "Prices apply",
+          "line335_9_bo_chon_khoang_gia": "Deselect price range",
+          "line324_8_gia_toi_da": "Maximum price",
+          "line310_7_gia_toi_thieu": "Minimum price",
+          "line275_6_gia_toi_da": "Maximum price",
+          "line260_5_gia_toi_thieu": "Minimum price",
+          "line238_4_muc_gia": "Price level",
+          "line219_3_bo_loc": "Filter",
+          "line215_2_chon_theo_tieu_chi": "Select by criteria",
+          "line117_1_thuong_hieu": "Trademark",
+          "line107_0_nhu_cau": "Demand"
+        },
+        "categoryparenttabs": {
+          "line45_0_danh_muc_noi_bat": "Featured categories"
+        },
+        "filteractivechips": {
+          "line196_5_bo_chon_tat_ca": "Deselect all",
+          "line178_4_xoa_bo_loc": "Remove the {value0} filter",
+          "line153_3_xoa_bo_loc_gia": "Remove price filter",
+          "line147_2_gia_tu": "Prices from {value0} - {value1}",
+          "line137_1_tieu_chi": "criteria",
+          "line137_0_dang_loc_theo": "Filtering by",
+          "extra72_4_sap_xep": "Sort: {value0}",
+          "extra71_3_gia_giam_dan": "Prices gradually decrease",
+          "extra69_2_gia_tang_dan": "Prices gradually increase",
+          "extra64_1_nhu_cau": "Demand: {value0}",
+          "extra57_0_thuong_hieu": "Brand: {value0}"
+        },
+        "filterbrand": {
+          "line27_0_chon_theo_thuong_hieu": "Choose by brand"
+        },
+        "filtercustomerneeds": {
+          "line27_0_chon_theo_nhu_cau": "Choose according to need"
+        },
+        "filterdropdownpanel": {
+          "line82_1_xem_ket_qua": "See results",
+          "line75_0_thiet_lap_lai": "Reset"
+        },
+        "filteroptions": {
+          "line133_1_bo_chon": "Deselect",
+          "line61_0_thuoc_tinh": "Attributes"
+        },
+        "mobilefiltersheet": {
+          "line136_5_xem_ket_qua": "See results",
+          "line129_4_xoa_bo_loc": "Clear filter",
+          "line105_3_dong": "Close",
+          "line89_2_bo_loc": "filter",
+          "line84_1_bo_loc_danh_muc": "Category filter",
+          "line71_0_dong_bo_loc": "Close the filter"
+        },
+        "noproductsfound": {
+          "line27_2_quay_lai_danh_muc": "Back to category",
+          "line20_1_thu_bot_bo_loc_hoac": "Try reducing the filters or going back to the categories to see more options.",
+          "line17_0_khong_san_pham_phu_hop": "There are no products matching the criteria you are selecting"
+        },
+        "pricerangechip": {
+          "line246_9_xem_ket_qua": "See results",
+          "line239_8_dong": "Close",
+          "line226_7_gia_toi_da": "Maximum price",
+          "line212_6_gia_toi_thieu": "Minimum price",
+          "line168_5_toi_da": "Max",
+          "line152_4_toi_thieu": "Minimum",
+          "line134_3_chon_khoang_gia": "Choose a price range",
+          "line128_2_xem_theo_gia": "View by price",
+          "line115_1_bo_chon": "Deselect",
+          "line107_0_muc_gia": "Price level"
+        },
+        "sortbyprice": {
+          "line9_1_gia_giam_dan": "Prices gradually decrease",
+          "line8_0_gia_tang_dan": "Prices gradually increase"
+        }
+      },
+      "checkout": {
+        "addressgrid": {
+          "line67_0_them_dia_chi": "Add address"
+        },
+        "modaluserinfo": {
+          "line243_17_luu_thong_tin": "Save information",
+          "line242_16_cap_nhat": "Update",
+          "line240_15_dang_luu": "Saving...",
+          "line239_14_dang_cap_nhat": "Updating...",
+          "line228_13_huy": "Cancel",
+          "line212_12_dia_chi_mac_dinh": "Default address",
+          "line198_11_so_dien_thoai": "Phone number",
+          "line185_10_dia_chi": "Address",
+          "line156_9_ho_ten": "Full name",
+          "line144_8_thong_tin_nguoi_nhan_hang": "Consignee information",
+          "line143_7_cap_nhat_thong_tin_nguoi": "Update recipient information",
+          "line118_6_vui_long_thu_lai_sau": "Please try again later!",
+          "line117_5_da_xay_ra_loi_he": "A system error has occurred",
+          "line22_4_so_dien_thoai_qua_dai": "Phone number is too long",
+          "line21_3_so_dien_thoai_khong_hop": "Invalid phone number",
+          "line18_2_dia_chi_bat_buoc": "Address is required",
+          "line17_1_email_khong_hop_le": "Invalid email",
+          "line16_0_ho_ten_bat_buoc": "Full name is required",
+          "extra170_4_email": "Email",
+          "extra109_3_tao_dia_chi_that_bai": "Failed to create address, please try again!",
+          "extra108_2_cap_nhat_dia_chi_that": "Address update failed, please try again!",
+          "extra102_1_da_tao_dia_chi_moi": "New address created successfully",
+          "extra101_0_da_cap_nhat_dia_chi": "Address updated successfully"
+        },
+        "ordersummary": {
+          "line272_22_dieu_khoan_dieu_kien": "Terms and Conditions",
+          "line270_21_nhan_thanh_toan_dong_nghia": "Clicking Pay means you have read and agree to comply",
+          "line265_20_hay_chon_it_nhat_1": "Please select at least 1 product in the cart to continue checkout.",
+          "line260_19_thanh_toan": "PAY",
+          "line247_18_da_bao_gom_vat": "(VAT included)",
+          "line242_17_thanh_tien": "Make money",
+          "line235_16_tong_tam_tinh": "Provisional total",
+          "line230_15_kinh_doanh_phan_hoi": "Business response",
+          "line227_14_phi_van_chuyen": "Shipping fee:",
+          "line220_13_0d": "0 VND",
+          "line210_12_giam_gia": "Discount:",
+          "line185_11_khuyen_mai_ma_giam_gia": "Promotions and discount codes",
+          "line177_10_don_hang_chua_du_dieu": "Orders are not eligible for promotion. Please purchase additional to apply",
+          "line150_9_chon_hoac_nhap_khuyen_mai": "Select or enter a promotion",
+          "line143_8_khuyen_mai": "Promotion",
+          "line135_7_khong_san_pham_nao_duoc": "There are no products selected.",
+          "line93_6_chinh_sua": "Edit",
+          "line90_5_thong_tin_don_hang": "Order information",
+          "line77_4_vui_long_thu_lai_sau": "Please try again later!",
+          "line76_3_da_xay_ra_loi_he": "A system error has occurred",
+          "line70_2_thanh_toan_don_hang_khong": "Order payment failed",
+          "line65_1_thanh_toan_don_hang_thanh": "Order payment successful",
+          "line50_0_hay_chon_it_nhat_1": "Please select at least 1 product before payment.",
+          "extra65_0_thanh_toan_thanh_cong": "Payment successful"
+        },
+        "pagecheckout": {
+          "line206_5_mo_ta": "Describe",
+          "line202_4_ghi_chu_don_hang": "Notes for orders",
+          "line167_3_thong_tin_nhan_hang": "Delivery information",
+          "line161_2_nhan_hang": "Pick up in store",
+          "line149_1_nhan_hang_nha": "Receive goods at home",
+          "line101_0_hay_chon_it_nhat_1": "Please select at least 1 product before payment."
+        },
+        "paymentsection": {
+          "line34_4_ho_tro_thanh_toan_qua": "Supports payments via all banks",
+          "line30_3_pho_bien_nhat": "Most popular",
+          "line27_2_thanh_toan_chuyen_khoan_truc": "Payment by direct transfer",
+          "line12_1_thong_tin_thanh_toan_se": "Your payment information will always be kept secure",
+          "line9_0_phuong_thuc_thanh_toan": "Payment method"
+        }
+      },
+      "common": {
+        "notfoundpage": {
+          "line55_3_quay_lai_trang_truoc": "Return to previous page",
+          "line51_2_trang_chu": "Home page",
+          "line39_1_xin_loi_trang_dang_tim": "Sorry, the page you are looking for does not exist or has been deleted.",
+          "line36_0_404_khong_tim_thay_trang": "404 - Page not found"
+        }
+      },
+      "contact": {
+        "contactform": {
+          "line200_17_gui_lien_he": "Send contact",
+          "line187_16_noi_dung_lien_he": "Contact content",
+          "line173_15_tieu_lien_he": "Contact title",
+          "line160_14_chon_bo_phan": "Select department",
+          "line138_13_so_dien_thoai": "Phone number",
+          "line124_12_dia_chi": "Address",
+          "line97_11_ho_ten": "Full name",
+          "line81_10_vui_long_thu_lai_sau": "Please try again later.",
+          "line80_9_loi_xay_ra": "An error occurred!",
+          "line75_8_van_qua_trinh_gui_tu": "There was a problem sending the consultation.",
+          "line69_7_chung_toi_se_phan_hoi": "We will respond to you as soon as possible.",
+          "line28_6_vui_long_nhap_noi_dung": "Please enter contact content",
+          "line27_5_vui_long_nhap_tieu_lien": "Please enter a contact title",
+          "line26_4_vui_long_chon_bo_phan": "Please select a department",
+          "line25_3_so_dien_thoai_qua_dai": "Phone number is too long",
+          "line24_2_so_dien_thoai_khong_hop": "Invalid phone number",
+          "line20_1_email_khong_hop_le": "Invalid email",
+          "line19_0_ho_ten_bat_buoc": "Full name is required",
+          "extra110_0_email": "Email"
+        }
+      },
+      "detailnews": {
+        "news": {
+          "line63_0_luot_xem": "view"
+        }
+      },
+      "eventcheckin": {
+        "eventcheckinfilters": {
+          "line143_12_tim_theo_ten_email_sdt": "Search by name, email, phone number...",
+          "line121_11_export_excel": "Export Excel",
+          "line110_10_huy": "Cancel",
+          "line109_9_xoa_khach": "Delete guest {value0}",
+          "line108_8_chac_muon_xoa_khach_da": "Are you sure you want to delete the selected guest {value0}? This operation cannot be undone.",
+          "line107_7_xac_nhan_xoa_hang_loat": "Confirm bulk deletion",
+          "line104_6_xoa": "Erase (",
+          "line93_5_import_danh_sach": "Import List",
+          "line87_4_them": "More",
+          "line86_3_them_khach": "Add guests",
+          "line16_2_chua_check_in": "Haven't checked in yet",
+          "line15_1_da_check_in": "Checked in",
+          "line14_0_tat_ca": "All"
+        },
+        "eventcheckinstats": {
+          "line58_2_chua_check_in": "Haven't checked in yet",
+          "line51_1_da_check_in": "Checked in",
+          "line44_0_tong_khach_moi": "General guests"
+        },
+        "eventcheckintable": {
+          "line153_10_chac_muon_xoa_khach": "Are you sure you want to delete guest \"{value0}\"?",
+          "line152_9_xac_nhan_xoa": "Confirm deletion",
+          "line142_8_chinh_sua": "Edit",
+          "line131_7_tac_vu": "Task",
+          "line113_6_trang_thai": "Status",
+          "line100_5_ma_qr": "QR code",
+          "line90_4_sale_phu_trach": "Sales is in charge",
+          "line74_3_cong_ty_chuc_vu": "Company / Position",
+          "line55_2_khach_hang": "Client",
+          "line24_1_chua_check_in": "Haven't checked in yet",
+          "line19_0_da_check_in": "Checked in",
+          "extra156_1_huy": "Cancel",
+          "extra155_0_xoa": "Erase"
+        },
+        "guestformmodal": {
+          "line245_13_them_khach": "Add guests",
+          "line245_12_cap_nhat": "Update",
+          "line236_11_huy": "Cancel",
+          "line217_10_trang_thai_check_in": "Check-in status",
+          "line199_9_sale_phu_trach": "Sales is in charge",
+          "line186_8_so_dien_thoai": "Phone number",
+          "line156_7_chuc_vu": "Position",
+          "line139_6_ten_cong_ty": "Company name",
+          "line126_5_ten_khach_hang": "Customer name *",
+          "line112_4_them_khach_moi": "Add guests",
+          "line112_3_chinh_sua_khach_moi": "Edit guests",
+          "line30_2_da_check_in": "Checked in",
+          "line29_1_chua_check_in": "Haven't checked in yet",
+          "line19_0_ten_khach_hang_bat_buoc": "Customer name is required",
+          "extra170_0_email": "Email"
+        },
+        "importguestmodal": {
+          "line178_11_import_du_lieu": "Import data",
+          "line178_10_dang_xu_ly": "Processing...",
+          "line170_9_huy": "Cancel",
+          "line137_8_ho_tro_xls_xlsx_toi": "Support XLS, XLSX (Max 5MB)",
+          "line135_7_nhan_len_hoac_keo_tha": "Click to upload or drag and drop files",
+          "line127_6_xlsx_xls_application_vnd_openxmlformats": ".xlsx, .xls, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel",
+          "line108_5_len_tep_excel_xlsx_xls": "Upload an Excel file (.xlsx, .xls) to add guests en masse to the event.",
+          "line104_4_import_danh_sach_khach_moi": "Import Guest List",
+          "line47_3_kich_thuoc_file_khong_duoc": "File size must not exceed 5MB",
+          "line46_2_file_qua_lon": "File is too large",
+          "line40_1_vui_long_chon_file_excel": "Please select Excel file (.xlsx, .xls)",
+          "line39_0_dinh_dang_file_khong_hop": "Invalid file format"
+        },
+        "qrcodemodal": {
+          "line61_2_ma_qr": "Download QR code",
+          "line44_1_chua_ma_qr": "No QR code yet",
+          "line31_0_ma_qr_check_in": "Check-in QR code"
+        },
+        "qrthumbnail": {
+          "line56_2_qr": "Download QR",
+          "line46_1_xem_qr": "Xem QR",
+          "line28_0_chua_qr": "No QR yet"
+        }
+      },
+      "footer": {
+        "footer": {
+          "line289_13_bo_cong_thuong": "MINISTRY OF INDUSTRY AND TRADE",
+          "line287_12_da_thong_bao": "NOTIFIED",
+          "line280_11_da_thong_bao_bo_cong": "The Ministry of Industry and Trade has been notified",
+          "line258_10_thoi_gian_lam_viec": "Working time:",
+          "line247_9_dia_chi_tru_so_chinh": "Head office address",
+          "line221_8_cong_ty_tnhh_vi_tinh": "Nguyen Kim Computer Company Limited",
+          "line39_7_tu_van_giai_dap_moi": "Consulting and answering all questions",
+          "line38_6_ho_tro_nhiet_tinh": "Enthusiastic support",
+          "line34_5_gia_ca_hop_ly_nhieu": "Reasonable prices, many good incentives",
+          "line33_4_gia_luon_luon_tot_nhat": "Price is always the best",
+          "line29_3_1_doi_1_7_ngay": "1 for 1 within 7 days",
+          "line28_2_doi_tra_dang": "Easy returns",
+          "line24_1_nhan_hang_thanh_toan_nha": "Receive goods and pay at home",
+          "line23_0_chinh_sach_giao_hang": "Delivery policy",
+          "extra265_0_email": "Email:"
+        },
+        "googlemapembed": {
+          "line26_0_do": "{value0} Map"
+        },
+        "socialicons": {
+          "line20_0_theo_doi_chung_toi_tren": "Follow us on {value0}"
+        }
+      },
+      "header": {
+        "cardsearchproduct": {
+          "line105_2_uu_dai_gia": "Price incentives",
+          "line99_1_het_hang": "Out of stock",
+          "line99_0_con_hang": "In stock"
+        },
+        "header": {
+          "line388_13_dong_tim_kiem": "Close search",
+          "line382_12_tim_kiem_san_pham": "Search for products",
+          "line368_11_dong_tim_kiem": "Close search",
+          "line323_10_gio_hang": "Shopping cart",
+          "line299_9_tim_kiem": "Search",
+          "line296_8_tim_kiem": "Search",
+          "line274_7_tim_gi": "What are you looking for...",
+          "line267_6_danh_muc_san_pham": "Product catalog",
+          "line267_5_dong_danh_muc": "Close category",
+          "line258_4_mo_danh_muc_san_pham": "Open the product catalog",
+          "line257_3_dong_danh_muc_san_pham": "Close the product catalog",
+          "line253_2_mo_danh_muc_san_pham": "Open the product catalog",
+          "line252_1_dong_danh_muc_san_pham": "Close the product catalog",
+          "line216_0_mo_menu": "Open the menu"
+        },
+        "itemsheader": {
+          "line72_0_dang_nhap_dang_ky": "Login/Register",
+          "extra68_0_khoan": "Account"
+        },
+        "popupheader": {
+          "line217_10_chua_thong_tin_lien_he": "No contact information yet",
+          "line203_9_xem_gio_hang": "View cart",
+          "line193_8_tong_cong": "Total",
+          "line149_7_xem_gio_hang": "View cart",
+          "line143_6_mua_sam_ngay": "Shop now",
+          "line136_5_gio_hang_dang": "Your shopping cart is empty",
+          "line127_4_san_pham": "product",
+          "line125_3_gio_hang": "Shopping cart",
+          "line111_2_chua_thong_bao_nao": "There are no announcements yet",
+          "line36_1_tao_khoan": "Create an account",
+          "line30_0_dang_nhap": "Log in"
+        },
+        "productssearch": {
+          "line223_10_thu_tim_tu_khoa_khac": "Try searching with another keyword or check the spelling.",
+          "line220_9_khong_tim_thay_san_pham": "No products found",
+          "line207_8_xem_them_ket_qua": "See more results",
+          "line200_7_dang_them": "Loading more...",
+          "line176_6_ket_qua": "Result",
+          "line165_5_thu_lai_tu_khoa_khac": "Try again with another keyword or reopen the search box.",
+          "line153_4_tim_nhanh": "Find quickly",
+          "line148_3_nhap_tu_khoa_xem_ket": "Enter keywords to see results from existing data.",
+          "line145_2_tim_san_pham_danh_muc": "Find products, categories or brands",
+          "line136_1_dang_tim_kiem_san_pham": "Looking for products...",
+          "line59_0_khong_ket_qua_tim_kiem": "Unable to load search results.",
+          "extra119_0_tim_thay_san_pham": "Found the product {value0}"
+        },
+        "promotionbar": {
+          "line58_1_xem_ngay": "Xem ngay",
+          "line54_0_khuyen_mai_uu_dai_cap": "Latest promotions, offers and updates"
+        }
+      },
+      "home": {
+        "banner": {
+          "line199_0_chuyen_den_banner": "Go to the {value0} banner"
+        },
+        "bannerpopup": {
+          "line112_0_dong": "Close"
+        },
+        "featuredcategories": {
+          "line91_1_xem_them": "See more",
+          "line86_0_thu_gon": "Collapse"
+        },
+        "hometrustband": {
+          "line58_8_goi_ngay": "Call now",
+          "line53_7_tong_dai_hang": "Sales switchboard",
+          "line28_6_tu_van_ky_thuat": "Technical consulting",
+          "line23_5_theo_doi_ho_tro_sau": "Post-sale tracking and support",
+          "line22_4_bao_hanh_tan_tam": "Dedicated warranty",
+          "line17_3_quy_trinh_tiep_nhan_minh": "Transparent reception process",
+          "line16_2_doi_tra_linh_hoat": "Flexible returns",
+          "line11_1_nguon_hang_ro_rang_hoa": "Clear source of goods, complete invoice",
+          "line10_0_cam_ket_chinh_hang": "Genuine commitment"
+        },
+        "menucategories": {
+          "line771_13_dieu_huong_nhanh": "Quick navigation",
+          "line676_12_mo": "Open {value0}",
+          "line675_11_dong": "Close {value0}",
+          "line590_10_mo": "Open {value0}",
+          "line589_9_dong": "Close {value0}",
+          "line537_8_quay_lai": "Come back",
+          "line512_7_dong_menu": "Close the menu",
+          "line479_6_danh_muc_san_pham": "Product catalog",
+          "line451_5_dong_danh_muc": "Close category",
+          "line426_4_xem_danh_muc": "View category",
+          "line412_3_danh_muc_nay_hien_chua": "This category currently has no subcategories.",
+          "line184_2_danh_muc_san_pham": "Product catalog",
+          "line143_1_danh_muc_san_pham": "Product catalog",
+          "line121_0_dong_danh_muc_san_pham": "Close the product catalog"
+        },
+        "productcarouselsection": {
+          "line67_1_next_product": "Next product",
+          "line60_0_previous_product": "Previous product"
+        },
+        "promotionlatest": {
+          "line60_2_xem_khuyen_mai_tiep_theo": "See next promotion",
+          "line50_1_xem_khuyen_mai_truoc": "See previous promotions",
+          "line40_0_tong_hop_khuyen_mai": "Summary of promotions",
+          "extra42_0_xem_tat_ca": "See all"
+        }
+      },
+      "login": {
+        "googlelogin": {
+          "line66_3_dang_nhap_google": "Sign in with Google",
+          "line45_2_dang_xu_ly": "Processing...",
+          "line30_1_loi_xay_ra_vui_long": "An error occurred, please try again!",
+          "line25_0_loi_xay_ra_vui_long": "An error occurred, please try again!"
+        },
+        "loginform": {
+          "line112_8_dang_nhap": "Log in",
+          "line112_7_dang_dang_nhap": "Signing in...",
+          "line102_6_quen_mat_khau": "Forgot password?",
+          "line89_5_mat_khau": "Password",
+          "line76_4_ten_khoan": "Account name",
+          "line58_3_khoan_hoac_mat_khau_chua": "Account or password is incorrect!",
+          "line53_2_chao_mung_den_he_thong": "Welcome to the system!",
+          "line17_1_mat_khau_bat_buoc": "Password is required",
+          "line16_0_ten_khoan_bat_buoc": "Account name is required"
+        }
+      },
+      "news": {
+        "listnews": {
+          "line121_0_luot_xem": "view"
+        },
+        "mostviewednews": {
+          "line76_0_hinh_anh": "Image"
+        },
+        "newscard": {
+          "line21_0_hinh_anh": "Image"
+        }
+      },
+      "orderdetail": {
+        "orderdetail": {
+          "line242_18_thong_tin_xuat_hoa_don": "Invoicing information",
+          "line231_17_hang_dang_duoc_giao_vui": "Goods are being delivered. Please keep in touch by phone so the shipper can contact you.",
+          "line216_16_dia_chi_giao": "Delivery address",
+          "line209_15_van_chuyen": "Transport",
+          "line196_14_thanh_tien": "Make money",
+          "line191_13_chua": "Not yet",
+          "line186_12_giam_gia": "Discount",
+          "line182_11_kinh_doanh_phan_hoi": "Business response",
+          "line180_10_phi_van_chuyen": "Shipping fee",
+          "line172_9_tong_tien_hang": "Total cost of goods",
+          "line165_8_tong_ket_thanh_toan": "Payment summary",
+          "line147_7_ghi_chu": "Note",
+          "line133_6_tam_tinh": "Temporary calculation:",
+          "line127_5_x": ": x",
+          "line100_4_ma_don": "Single code:",
+          "line97_3_san_pham": "Product (",
+          "line84_2_mua_lai": "Buy back",
+          "line44_1_ngay_dat": "Booking date:",
+          "line41_0_don_hang": "Order #"
+        }
+      },
+      "ordermanagement": {
+        "ordercolumns": {
+          "line134_8_xem_chi_tiet": "See details",
+          "line131_7_xem_chi_tiet_don_hang": "View order details {value0}",
+          "line125_6_thao_tac": "Operation",
+          "line117_5_trang_thai": "Status",
+          "line109_4_ngay_dat": "Booking date",
+          "line92_3_sdt": "Phone number",
+          "line82_2_dia_chi_giao_hang": "Delivery address",
+          "line75_1_nguoi_nhan": "Receiver",
+          "line60_0_ma_don_hang": "Order code",
+          "extra99_6_email": "Email",
+          "extra41_5_da_huy": "Canceled",
+          "extra39_4_da_giao": "Delivered",
+          "extra37_3_da_gui": "Sent",
+          "extra35_2_dang_xu_ly": "Processing",
+          "extra33_1_da_xac_nhan": "Confirmed",
+          "extra31_0_xu_ly": "Waiting for processing"
+        }
+      },
+      "paymentconfirm": {
+        "emptyorder": {
+          "line13_1_quay_lai_trang_chu": "Return to homepage",
+          "line10_0_khong_tim_thay_thong_tin": "Order information not found"
+        },
+        "paymentconfirmationpage": {
+          "line447_44_ngan_hang": "bank",
+          "line445_43_ma_qr_thong_tin_chuyen": "QR code and transfer information {value0}",
+          "line440_42_ma_qr_thanh_toan": "Payment QR code",
+          "line430_41_tiep_tuc_mua_sam": "Continue shopping",
+          "line416_40_tong_tien": "Total amount",
+          "line407_39_giam_gia": "Discount (",
+          "line399_38_tam_tinh": "Temporarily calculated",
+          "line391_37_khong_san_pham_don_hang": "There are no products in the order.",
+          "line367_36_san_pham": "Product",
+          "line355_35_tom_tat_don_hang": "Order summary",
+          "line342_34_phuong_thuc_van_chuyen": "Shipping method",
+          "line336_33_ghi_chu": "Note",
+          "line334_32_dia_chi": "Address",
+          "line333_31_dien_thoai": "Phone",
+          "line332_30_nguoi_nhan": "Receiver",
+          "line330_29_thong_tin_nhan_hang": "Delivery information",
+          "line326_28_dia_chi": "Address",
+          "line324_27_dien_thoai": "Phone",
+          "line323_26_ten_cong_ty": "Company name",
+          "line321_25_thong_tin_mua_hang": "Purchase information",
+          "line308_24_phong": "Enlarge",
+          "line300_23_ngan_hang": "bank",
+          "line298_22_ma_qr_thong_tin_chuyen": "QR code and transfer information {value0}",
+          "line294_21_phong_ma_qr_thanh_toan": "Zoom in on the payment QR code",
+          "line283_20_chua_qr_thanh_toan_duoc": "There is no payment QR configured for the supporting bank.",
+          "line251_19_danh_sach_cac_ngan_hang": "List of online payment banks",
+          "line244_18_quet_ma_bang_ung_dung": "Scan the code with your banking app to pay for your order.",
+          "line241_17_thanh_toan_chuyen_khoan": "Payment by transfer",
+          "line228_16_chuyen_khoan_ngan_hang": "Bank transfer",
+          "line225_15_phuong_thuc_thanh_toan": "Payment method",
+          "line215_14_trang_thai_don_hang": "Order status",
+          "line207_13_ngay_dat_hang": "Order date",
+          "line200_12_sao_chep_ma_don_hang": "Copy order code",
+          "line194_11_ma_don_hang": "Order code",
+          "line185_10_don_hang_quy_khach_da": "Your order has been successfully recorded. Please scan the QR code to pay by transfer.",
+          "line182_9_cam_on_quy_khach_da": "Thank you for ordering at Nguyen Kim JSC",
+          "line169_8_khong_sao_chep_ma_don": "Order code cannot be copied",
+          "line167_7_da_sao_chep_ma_don": "Order code copied",
+          "line48_6_da_huy": "Canceled",
+          "line46_5_khong_thanh_cong": "Unsuccessful",
+          "line43_4_hoan_tat": "Completed",
+          "line41_3_da_giao_hang": "Delivered",
+          "line38_2_da_thanh_toan": "Paid",
+          "line34_1_thanh_toan": "Wait for payment",
+          "line32_0_xu_ly": "Waiting for processing",
+          "extra311_3_email": "Email",
+          "extra64_2_nhan_hang": "Pick up in store",
+          "extra64_1_giao_hang_tan_noi": "Delivery to your door",
+          "extra57_0_da_ghi_nhan": "Noted"
+        }
+      },
+      "product": {
+        "buttonfavorite": {
+          "line28_0_san_pham": "{value0} product \"{value1}\" {value2}",
+          "extra43_1_loi_xay_ra_khi_cap": "An error occurred while updating favorites",
+          "extra36_0_loi_xay_ra_khi_cap": "An error occurred while updating favorites"
+        },
+        "compareproducts": {
+          "line175_4_dong": "current",
+          "line175_3_xem_them": "See more",
+          "line170_2_thu_gon": "Collapse",
+          "line147_1_san_pham": "Product",
+          "line142_0_thong_so": "Parameter"
+        },
+        "customerreviews": {
+          "line202_13_load_more_reviews": "Load More Reviews",
+          "line187_12_helpful": "Helpful (",
+          "line179_11_photos_attached": "photos attached",
+          "line147_10_verified_buyer": "Verified Buyer",
+          "line97_9_based_on": "Based on",
+          "line75_8_customer_reviews": "Customer Reviews",
+          "line53_7_solid_choice_for_price": "Solid choice for the price",
+          "line47_6_emily_davis": "Emily Davis",
+          "line40_5_perfect_for_content_creation": "Perfect for content creation",
+          "line34_4_mike_rodriguez": "Mike Rodriguez",
+          "line27_3_great_laptop_minor_heating_issues": "Great laptop, minor heating issues",
+          "line21_2_sarah_chen": "Sarah Chen",
+          "line14_1_excellent_gaming_performance": "Excellent gaming performance!",
+          "line8_0_alex_johnson": "Alex Johnson"
+        },
+        "description": {
+          "line32_2_noi_dung_san_pham_se": "Product content will be added as soon as possible.",
+          "line30_1_dang_qua_trinh_cap_nhat": "Updating in progress",
+          "line21_0_mo_ta_san_pham": "Product description"
+        },
+        "inforegisterform": {
+          "line156_14_dang_ky_nhan_thong_tin": "Sign up to receive information",
+          "line156_13_dang_gui": "Sending...",
+          "line142_12_dia_chi": "Address",
+          "line128_11_email_nhan_phan_hoi_qua": "Email (to receive feedback via email)",
+          "line115_10_so_dien_thoai_bat_buoc": "Phone number (required)",
+          "line102_9_ho_ten_bat_buoc": "Full name (required)",
+          "line87_8_dang_ky_nhan_thong_tin": "REGISTER TO RECEIVE INFORMATION",
+          "line72_7_vui_long_thu_lai_hoac": "Please try again or contact hotline for support",
+          "line71_6_gui_dang_ky_that_bai": "Submit registration failed",
+          "line63_5_se_nhan_vien_kinh_doanh": "A sales staff will contact you",
+          "line62_4_dang_ky_nhan_thong_tin": "Sign up to receive information sent",
+          "line19_3_email_khong_hop_le": "Invalid email",
+          "line18_2_so_dien_thoai_phai_dung": "The phone number must have exactly 10 digits",
+          "line17_1_so_dien_thoai_bat_buoc": "Phone number is required",
+          "line14_0_ho_ten_bat_buoc": "Full name is required"
+        },
+        "policiescard": {
+          "line25_6_chinh_sach_mua_hang": "PURCHASE POLICY",
+          "line14_5_huong_dan_mua_hang_online": "Instructions for buying online",
+          "line13_4_quy_dinh_thanh_toan": "Payment regulations",
+          "line12_3_chinh_sach_bao_hanh_doi": "Warranty policy for exchange and return",
+          "line11_2_giao_hang_lap_dat": "Delivery and installation",
+          "line10_1_chinh_sach_bao_mat_tt": "Personal information privacy policy",
+          "line9_0_chinh_sach_cookie": "Cookie policy"
+        },
+        "product": {
+          "line140_4_related_products": "Related products",
+          "line132_3_product_comparison": "Product comparison",
+          "line106_2_product_description_specifications": "Product description and specifications",
+          "line88_1_back_in_stock_registration": "Back in stock registration",
+          "line79_0_product_information": "Product information"
+        },
+        "productgallery": {
+          "line183_11_gia_luon_tot_nhat": "Price is always the best",
+          "line178_10_theo_tieu_chuan_hang": "According to company standards",
+          "line178_9_bao_hanh": "Guarantee:",
+          "line172_8_xem_chi_tiet": "See details",
+          "line167_7_chinh_sach_bao_hanh": "Warranty policy",
+          "line160_6_mo_ta_san_pham": "Product description",
+          "line150_5_thong_so_ky_thuat": "Specifications",
+          "line143_4_san_pham_chua_thong_so": "The product does not have technical specifications yet",
+          "line142_3_xem_thong_so_ky_thuat": "See technical specifications",
+          "line133_2_hinh_anh_noi_bat": "Featured image",
+          "line87_1_hinh": "{value0} - image {value1}",
+          "line74_0_chon_hinh_anh": "Select the {value0} image of {value1}"
+        },
+        "productinfo": {
+          "line211_10_tang_so_luong": "Increase quantity",
+          "line200_9_giam_so_luong": "Reduce quantity",
+          "line186_8_da_bao_gom_vat": "(VAT included)",
+          "line164_7_het_hang": "Out of stock",
+          "line156_6_tinh_trang": "Status:",
+          "line152_5_dang_cap_nhat": "Updating",
+          "line151_4_thuong_hieu": "Trademark:",
+          "line130_3_danh_gia_sao": "Rate {value0} stars",
+          "line120_2_ma_san_pham": "Product code:",
+          "line111_1_chia_se_san_pham": "Share products",
+          "line54_0_sao_chep_thanh_cong": "Copy successfully"
+        },
+        "specificationstable": {
+          "line67_2_thong_so_ky_thuat": "Specifications",
+          "line63_1_xem_them": "See more",
+          "line46_0_thong_so_ky_thuat": "Specifications"
+        }
+      },
+      "products": {
+        "emptyproducts": {
+          "line23_2_quay_lai_trang_chu": "Return to homepage",
+          "line16_1_thu_lai_tu_khoa_khac": "Try again with another keyword or return to the category to see more options.",
+          "line12_0_khong_san_pham_nao_phu": "There are no matching products"
+        },
+        "herobanner": {
+          "line167_1_mini_banner": "Mini Banner {value0}",
+          "line121_0_main_banner": "Main Banner"
+        }
+      },
+      "productsfavorites": {
+        "emptyfavorites": {
+          "line23_2_kham_pha_ngay": "Explore now",
+          "line16_1_hay_them_san_pham_vao": "Please add the product to your favorites list for easy viewing later.",
+          "line13_0_chua_san_pham_yeu_thich": "There are no favorite products yet"
+        }
+      },
+      "productviewed": {
+        "emptyviewed": {
+          "line23_2_tiep_tuc_mua_sam": "Continue shopping",
+          "line16_1_hay_kham_pha_san_pham": "Explore products in store to start your viewing history.",
+          "line13_0_khong_san_pham_nao_da": "There are no products viewed"
+        }
+      },
+      "promotion": {
+        "cardpromotion": {
+          "line99_2_den_ngay": "Come day",
+          "line51_1_het_han": "Expired",
+          "line49_0_da_het_han": "Expired"
+        },
+        "promotionempty": {
+          "line70_6_ve_trang_chu": "Back to home page",
+          "line67_5_quay_ve_trang_chu": "Return to home page",
+          "line61_4_lai": "Reload",
+          "line58_3_lai_danh_sach_khuyen_mai": "Reload promotion list",
+          "line49_2_hien_chua_chuong_trinh_khuyen": "There are currently no promotions. Please come back later or explore other products.",
+          "line44_1_chua_khuyen_mai_nao": "There are no promotions yet",
+          "line30_0_khong_tin_khuyen_mai": "There are no promotional messages"
+        }
+      },
+      "quote": {
+        "quoteform": {
+          "line170_16_gui_yeu_cau_bao_gia": "Submit a quote request",
+          "line158_15_noi_dung": "Content",
+          "line144_14_dia_chi": "Address",
+          "line130_13_ten_cong_ty_khach_le": "Company name / Retail customer",
+          "line100_12_so_dien_thoai": "Phone number",
+          "line88_11_ho_ten": "Full name",
+          "line72_10_vui_long_thu_lai_sau": "Please try again later.",
+          "line71_9_loi_xay_ra": "An error occurred!",
+          "line66_8_van_qua_trinh_gui_tu": "There was a problem sending the consultation.",
+          "line59_7_chung_toi_se_phan_hoi": "We will respond to you as soon as possible.",
+          "line23_6_vui_long_nhap_noi_dung": "Please enter request content",
+          "line22_5_dia_chi_bat_buoc": "Address is required",
+          "line21_4_vui_long_nhap_ten_cong": "Please enter the name of the company or retail customer",
+          "line20_3_email_khong_hop_le": "Invalid email",
+          "line19_2_so_dien_thoai_qua_dai": "Phone number is too long",
+          "line18_1_so_dien_thoai_khong_hop": "Invalid phone number",
+          "line15_0_ho_ten_bat_buoc": "Full name is required",
+          "extra116_0_email": "Email"
+        }
+      },
+      "recruitment": {
+        "jobcard": {
+          "line88_3_ung_tuyen_ngay": "Apply now",
+          "line69_2_han_nop": "Submission deadline:",
+          "line63_1_kinh_nghiem": "Experience:",
+          "line36_0_vi_tri": "location"
+        },
+        "jobgrid": {
+          "line262_11_lam_moi_bo_loc": "Refresh filters",
+          "line255_10_thu_doi_tu_khoa_hoac": "Try changing keywords or choosing another department.",
+          "line252_9_khong_tim_thay_vi_tri": "No suitable location found",
+          "line203_8_xoa_tu_khoa": "Delete keywords",
+          "line183_7_bo_loc_phong": "Remove department filtering",
+          "line161_6_vi_tri_phu_hop": "suitable location",
+          "line153_5_xoa": "Erase",
+          "line150_4_xoa_bo_loc": "Clear filter",
+          "line142_3_chon_phong": "Select department",
+          "line117_2_tim_theo_ten_cong_viec": "Search by job name",
+          "line97_1_tham_gia_doi_ngu_nang": "Join a dynamic team and develop your career with Nguyen Kim",
+          "line89_0_hoi_nghe_nghiep": "Career opportunities"
+        }
+      },
+      "recruitmentdetail": {
+        "downloaddoc": {
+          "line66_2_phieu": "Download coupon",
+          "line66_1_dang": "Loading...",
+          "line46_0_loi_xay_ra_khi_file": "An error occurred while downloading the file.",
+          "extra32_1_khong_file": "Unable to download file",
+          "extra16_0_phieu_dien_thong_tin_ung": "Download the candidate information form"
+        },
+        "formapply": {
+          "line276_38_chung_toi": "our.",
+          "line274_37_chinh_sach_bao_mat": "privacy policy",
+          "line272_36_bang_viec_gui_don_ung": "By submitting your application, you agree to the",
+          "line265_35_gui_don_ung_tuyen": "Submit application",
+          "line265_34_dang_gui": "Sending...",
+          "line251_33_chi_1_file_toi_da": "Only 1 file, maximum 5MB",
+          "line246_32_pdf_doc_docx_jpg_jpeg": ".pdf,.doc,.docx,.jpg,.jpeg,.png,.gif",
+          "line245_31_phieu_thong_tin_ung_vien": "Candidate information sheet *",
+          "line233_30_chap_nhan_pdf_doc_docx": "Accepts PDF, DOC, DOCX (maximum 5MB)",
+          "line228_29_pdf_doc_docx": ".pdf,.doc,.docx",
+          "line227_28_cv_resume": "CV/Resume *",
+          "line213_27_hay_chung_toi_biet_ly": "Tell us why you want to apply for this position...",
+          "line212_26_loi_nhan": "Message *",
+          "line196_25_so_dien_thoai": "Phone number *",
+          "line180_24_email": "Email *",
+          "line165_23_ho_ten": "Full name *",
+          "line151_22_vui_long_dien_day_du": "Please fill in all information so we can contact you.",
+          "line133_21_vui_long_kiem_tra_ket": "Please check your internet connection and try again.",
+          "line132_20_loi_ket_noi": "Connection error",
+          "line126_19_vui_long_kiem_tra_lai": "Please check your information and try again.",
+          "line121_18_chung_toi_se_lien_he": "We will contact you as soon as possible.",
+          "line64_17_loi_nhan_khong_duoc_qua": "Messages must not exceed 1000 characters",
+          "line63_16_loi_nhan_phai_it_nhat": "The message must have at least 10 characters",
+          "line62_15_loi_nhan_bat_buoc": "Message is required",
+          "line58_14_so_dien_thoai_phai_it": "The phone number must have at least 10 digits",
+          "line57_13_so_dien_thoai_khong_hop": "Invalid phone number",
+          "line56_12_so_dien_thoai_bat_buoc": "Phone number is required",
+          "line52_11_email_khong_duoc_qua_100": "Email must not exceed 100 characters",
+          "line51_10_email_khong_hop_le": "Invalid email",
+          "line50_9_email_bat_buoc": "Email is required",
+          "line46_8_ho_ten_khong_duoc_qua": "Full name must not exceed 100 characters",
+          "line45_7_ho_ten_phai_it_nhat": "Full name must have at least 2 characters",
+          "line44_6_ho_ten_bat_buoc": "Full name is required",
+          "line39_5_file_bo_sung_khong_vuot": "Additional files must not exceed 5MB",
+          "line38_4_file_bo_sung_phai_pdf": "Additional files must be PDF, DOC, DOCX, JPG, PNG or GIF",
+          "line33_3_vui_long_nop_phieu_thong": "Please submit the Candidate Information Form: download form, fill out and upload here",
+          "line26_2_kich_thuoc_cv_khong_duoc": "CV size must not exceed 5MB",
+          "line22_1_cv_phai_pdf_doc_hoac": "CV must be PDF, DOC or DOCX",
+          "line19_0_vui_long_len_cv": "Please upload your CV"
+        },
+        "jobdetail": {
+          "line335_19_ung_tuyen_vi_tri": "Apply for position: {value0}",
+          "line282_18_viec_lam_lien_quan": "Related jobs",
+          "line272_17_xem_do": "(See map)",
+          "line262_16_245b_tran_quang_khai_phuong": "245B Tran Quang Khai, Tan Dinh Ward, City. Ho Chi Minh",
+          "line256_15_cong_ty_tnhh_vi_tinh": "Nguyen Kim Computer Company Limited",
+          "line227_14_company_banner": "Company banner",
+          "line206_13_dia_diem_lam_viec": "WORK LOCATION",
+          "line197_12_hinh_thuc": "FORM",
+          "line186_11_kinh_nghiem": "EXPERIENCE",
+          "line175_10_bang_cap": "DEGREE",
+          "line164_9_vi_tri": "LOCATION",
+          "line157_8_thong_tin_tom_tat": "Summary information",
+          "line144_7_chi_tiet_cong_viec": "Job details",
+          "line130_6_ung_tuyen_ngay": "Apply now",
+          "line111_5_han_nop": "Submission deadline",
+          "line102_4_bang_cap": "Degree",
+          "line93_3_hinh_thuc": "Form",
+          "line88_2_nguoi": "People",
+          "line75_1_kinh_nghiem": "Experience",
+          "line66_0_muc_luong": "Salary"
+        }
+      },
+      "register": {
+        "registerform": {
+          "line388_47_dang_nhap": "Log in",
+          "line386_46_da_khoan": "Already have an account?",
+          "line381_45_tao_khoan": "Create an account",
+          "line381_44_dang_xu_ly": "Processing...",
+          "line365_43_chinh_sach_bao_mat_nguyen": "Nguyen Kim's privacy policy",
+          "line361_42_dieu_khoan_su_dung": "Terms of use",
+          "line359_41_toi_da_dong_y": "I agreed",
+          "line336_40_dia_chi_cong_ty": "Company address",
+          "line321_39_so_dien_thoai_cong_ty": "Company phone number",
+          "line308_38_email_cong_ty": "Company email",
+          "line295_37_ma_so_thue": "Tax code",
+          "line282_36_ten_cong_ty": "Company name",
+          "line273_35_thong_tin_cong_ty": "Company information",
+          "line260_34_dia_chi_nhan_hang": "Delivery address",
+          "line247_33_ho_ten_nguoi_nhan": "Recipient's full name",
+          "line238_32_thong_tin_nhan_hang": "Delivery information",
+          "line225_31_so_dien_thoai": "Phone number",
+          "line211_30_xac_nhan_mat_khau": "Confirm password",
+          "line183_29_mat_khau": "Password",
+          "line169_28_ho_ten_nguoi_dai_dien": "Full name of representative",
+          "line155_27_ten_dang_nhap": "Login name",
+          "line146_26_thong_tin_khoan_nguoi_dai": "Account information / Representative",
+          "line131_25_dang_ky_that_bai": "Registration failed",
+          "line126_24_vui_long_kiem_tra_lai": "Please check the information again.",
+          "line120_23_dang_nhap": "Log in",
+          "line117_22_khoan_se_duoc_kich_hoat": "Your account will be activated after verification. You can log in as soon as your account is activated.",
+          "line115_21_dang_ky_thanh_cong": "Registered successfully",
+          "line59_20_mat_khau_xac_nhan_mat": "Password and confirm password do not match",
+          "line51_19_dia_chi_cong_ty_bat": "Company address is required",
+          "line50_18_so_dien_thoai_cong_ty": "Invalid company phone number",
+          "line49_17_so_dien_thoai_cong_ty": "Company phone number is required",
+          "line46_16_email_cong_ty_bat_buoc": "Company email is required",
+          "line45_15_email_cong_ty_khong_hop": "Company email is not valid",
+          "line42_14_ma_so_thue_chi_gom": "Tax code only includes numbers, 10-13 characters",
+          "line41_13_ma_so_thue_tu_10": "Tax code from 10-13 numeric characters",
+          "line40_12_ma_so_thue_tu_10": "Tax code from 10-13 numeric characters",
+          "line37_11_ten_cong_ty_bat_buoc": "Company name is required",
+          "line36_10_dia_chi_nhan_hang_bat": "Delivery address is required",
+          "line35_9_ho_ten_nguoi_nhan_bat": "Recipient's first and last name are required",
+          "line34_8_so_dien_thoai_khong_hop": "Invalid phone number",
+          "line33_7_so_dien_thoai_bat_buoc": "Phone number is required",
+          "line30_6_email_bat_buoc": "Email is required",
+          "line30_5_email_khong_hop_le": "Invalid email",
+          "line29_4_ho_ten_nguoi_dai_dien": "The representative's full name is required",
+          "line27_3_xac_nhan_mat_khau_bat": "Password confirmation is required",
+          "line23_2_mat_khau_phai_chua_it": "Password must contain at least 1 uppercase letter, 1 lowercase letter and 1 number",
+          "line20_1_mat_khau_phai_it_nhat": "Password must have at least 8 characters",
+          "line17_0_ten_dang_nhap_phai_it": "Username must have at least 3 characters",
+          "extra197_3_email": "Email",
+          "extra133_2_vui_long_thu_lai_sau": "Please try again later.",
+          "extra126_1_dang_ky_that_bai": "Registration failed",
+          "extra104_0_vui_long_dong_y_dieu": "Please agree to the Terms of Use and Privacy Policy"
+        }
+      },
+      "service": {
+        "serviceempty": {
+          "line67_6_ve_trang_chu": "Back to home page",
+          "line64_5_quay_ve_trang_chu": "Return to home page",
+          "line58_4_lai": "Reload",
+          "line55_3_lai_danh_sach_dich_vu": "Reload the service list",
+          "line46_2_hien_chua_dich_vu_nao": "There are currently no services provided. Please come back later or explore our other pages.",
+          "line41_1_chua_dich_vu_nao": "There are no services yet",
+          "line27_0_khong_dich_vu": "No service"
+        }
+      },
+      "ui": {
+        "button": {
+          "line198_3_full_width": "Full Width",
+          "line190_2_right_icon": "Right Icon",
+          "line187_1_left_icon": "Left Icon",
+          "line139_0_button_component_demo": "Button Component Demo"
+        },
+        "buttonlogout": {
+          "line47_3_chua_dang_xuat_khoan": "You haven't logged out of your account yet!",
+          "line46_2_dang_xuat_that_bai": "Logout failed",
+          "line41_1_chua_dang_xuat_khoan": "You haven't logged out of your account yet!",
+          "line36_0_da_dang_xuat_khoan": "You have logged out of your account!"
+        },
+        "cardproduct": {
+          "line297_7_dang_cap_nhat": "Updating",
+          "line270_6_bao_hanh": "Guarantee:",
+          "line247_5_muc": "item",
+          "line246_4_thong_so_nhanh": "Quick parameters",
+          "line236_3_text": "Hide",
+          "line234_2_thong_so": "Parameter",
+          "line139_1_so_sanh": "Compare",
+          "line133_0_yeu_thich": "Favourite"
+        },
+        "fileupload": {
+          "line244_5_xoa_file": "Delete files",
+          "line218_4_xoa_tat_ca": "Delete all",
+          "line210_3_file_da_chon": "Selected file (",
+          "line195_2_hoac_keo_tha_vao_day": "or drag and drop here",
+          "line193_1_nhap_chon_file": "Click to select the file",
+          "line189_0_tha_file_vao_day": "Drop files here..."
+        },
+        "languageswitcher": {
+          "line132_1_dang_bo_dich": "Loading translator...",
+          "line66_0_dang_bo_dich": "Loading translator..."
+        },
+        "loading": {
+          "line98_2_logo_loading": "Logo loading",
+          "line68_1_logo_loading": "Logo loading",
+          "line55_0_logo_loading": "Logo loading",
+          "extra16_0_dang": "Loading..."
+        },
+        "modal": {
+          "line129_0_close_modal": "Close modal"
+        },
+        "pagination": {
+          "line149_0_truoc": "Before"
+        },
+        "productcardpopup": {
+          "line94_6_thong_so_san_pham": "Product specifications",
+          "line84_5_lien_he_duoc_ho_tro": "Contact for support",
+          "line77_4_san_sang_giao_ngay": "Ready for immediate delivery",
+          "line73_3_tinh_trang": "Status:",
+          "line63_2_bao_hanh": "Guarantee:",
+          "line54_1_gia_thi_truong": "Market:",
+          "line38_0_da_bao_gom_vat": "(VAT included)"
+        },
+        "scrolltop": {
+          "line60_0_scroll_top": "Scroll to top"
+        },
+        "supportbutton": {
+          "line25_1_ho_tro_khach_hang": "Customer support",
+          "line14_0_ho_tro_khach_hang": "Customer support"
+        },
+        "supportpopup": {
+          "line116_8_phan_hoi_vong_5_phut": "Response within 5 minutes.",
+          "line84_7_tu_van_vien_chuyen_nghiep": "Professional consultant",
+          "line81_6_ho_thi_my_linh": "Ho Thi My Linh",
+          "line78_5_kinh_doanh_online": "Kinh doanh Online",
+          "line64_4_dong": "Close",
+          "line56_3_chung_toi_luon_san_sang": "We are always ready to assist you.",
+          "line53_2_ho_tro_khach_hang": "Customer support",
+          "line37_1_dong_ho_tro_khach_hang": "Close customer support",
+          "line18_0_email_lien_he": "Contact email"
+        },
+        "table": {
+          "line56_0_khong_du_lieu": "No data available",
+          "extra67_0_tim_kiem": "Search..."
+        },
+        "confirmpopover": {
+          "extra28_3_huy": "Cancel",
+          "extra27_2_xoa": "Erase",
+          "extra26_1_chac_chan_muon_xoa_san": "Are you sure you want to remove this product from your cart?",
+          "extra25_0_xac_nhan_xoa": "Confirm deletion"
+        },
+        "datetimepicker": {
+          "extra142_12_thang_12": "December",
+          "extra141_11_thang_11": "November",
+          "extra140_10_thang_10": "October",
+          "extra139_9_thang_9": "September",
+          "extra138_8_thang_8": "August",
+          "extra137_7_thang_7": "July",
+          "extra136_6_thang_6": "June",
+          "extra135_5_thang_5": "May",
+          "extra134_4_thang_4": "April",
+          "extra133_3_thang_3": "March",
+          "extra132_2_thang_2": "February",
+          "extra131_1_thang_1": "January",
+          "extra17_0_chon_ngay": "Select date"
+        },
+        "inputsearch": {
+          "extra21_0_nhap_tu_khoa_tim_kiem": "Enter search keyword..."
+        },
+        "loadingscreen": {
+          "extra14_0_dang": "Loading..."
+        },
+        "richcontent": {
+          "extra26_0_bang_noi_dung": "Table of contents"
+        },
+        "select": {
+          "extra32_0_chon": "Select"
+        }
+      }
+    },
+    "constants": {
+      "index": {
+        "line210_7_trang_dang_tim_khong_ton": "The page you are looking for does not exist or has been deleted.",
+        "line209_6_404_not_found": "404 - Not Found",
+        "line205_5_gia_giam_dan": "Prices gradually decrease",
+        "line204_4_gia_tang_dan": "Prices gradually increase",
+        "line203_3_chay": "Selling well",
+        "line198_2_cau_hinh_3": "Configuration 3",
+        "line194_1_cau_hinh_2": "Configuration 2",
+        "line190_0_cau_hinh_1": "Configuration 1",
+        "extra239_8_prose_prose_sm_sm_prose": "prose prose-sm sm:prose md:prose-lg !max-w-none prose-headings:text-gray-900 prose-p:text-gray-700 prose-p:leading-relaxed /* Responsive images & iframes - images always centered */ prose-img:w-full prose-img:h-auto prose-img:rounded-lg prose-img:shadow-md prose-img:mx-auto [&_iframe]:w-full [&_iframe]:h-auto [&_iframe]:aspect-video /* Link */ prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline /* Optimize display & horizontal scrolling when content is wide */ break-words prose-pre:overflow-x-auto prose-pre:scrollbar-thin prose-pre:scrollbar-thumb-gray-300 prose-pre:scrollbar-track-gray-100 prose-pre:hover:scrollbar-thumb-gray-400 /* Table: minimum width and allows horizontal scrolling on small screens */ [&_table]:block [&_table]:w-full [&_table]:min-w-[640px] [&_table]:overflow-x-auto [&_table]:scrollbar-thin [&_table]:scrollbar-thumb-gray-300 [&_table]:scrollbar-track-gray-100 [&_table:hover]:scrollbar-thumb-gray-400 [&_th]:text-left [&_td]:align-top [&_th]:p-2 [&_td]:p-2 [&_thead]:bg-gray-50 [&_tbody_tr:nth-child(even)]:bg-gray-50/40",
+        "extra226_7_prose_prose_sm_sm_prose": "prose prose-sm sm:prose md:prose-lg !max-w-none prose-headings:text-gray-900 prose-p:text-gray-700 prose-p:leading-relaxed prose-img:w-full prose-img:rounded-lg prose-img:shadow-md prose-img:mx-auto prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline /* Add compact optimization */ overflow-x-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 hover:scrollbar-thumb-gray-400 md:overflow-visible break-words prose-pre:overflow-x-auto prose-pre:scrollbar-thin prose-pre:scrollbar-thumb-gray-300 prose-pre:scrollbar-track-gray-100 prose-pre:hover:scrollbar-thumb-gray-400 [&_table]:w-full [&_table]:min-w-[640px] [&_table]:overflow-x-auto [&_table]:scrollbar-thin [&_table]:scrollbar-thumb-gray-300 [&_table]:scrollbar-track-gray-100 [&_table:hover]:scrollbar-thumb-gray-400 [&_th]:text-left [&_td]:align-top",
+        "extra175_6_khach_hang_huy_bo": "Customer cancels",
+        "extra174_5_da_huy_bo": "Canceled",
+        "extra173_4_da_hoan_tat": "Completed",
+        "extra172_3_dang_giao_hang": "Delivering",
+        "extra171_2_da_thanh_toan": "Paid",
+        "extra170_1_thanh_toan": "Wait for payment",
+        "extra169_0_xu_ly": "Waiting for processing"
+      },
+      "values": {
+        "constant": {
+          "line50_0_tieng_viet": "Vietnamese"
+        }
+      }
+    },
+    "hooks": {
+      "usebuyaction": {
+        "line31_4_da_xay_ra_loi_vui": "An error has occurred. Please try again in a few minutes.",
+        "line30_3_khong_mua_ngay": "Cannot buy immediately",
+        "line24_2_dang_nhap": "Log in",
+        "line21_1_vui_long_dang_nhap_tiep": "Please log in to continue buying now.",
+        "line20_0_mua_ngay_khong_thanh_cong": "Buy now failed"
+      },
+      "usecartactions": {
+        "line204_10_loi_khi_xoa_san_pham": "Error while deleting product.",
+        "line195_9_da_xoa_san_pham_khoi": "Product removed from cart (local).",
+        "line165_8_khong_san_pham_xoa": "There are no products to delete.",
+        "line148_7_loi_khi_cap_nhat_gio": "Error updating cart.",
+        "line139_6_da_cap_nhat_gio_hang": "Updated shopping cart (local).",
+        "line101_5_du_lieu_khong_hop_le": "Invalid data",
+        "line84_4_loi_khi_them_vao_gio": "Error while adding to cart.",
+        "line76_3_da_them_san_pham_vao": "Product added to cart.",
+        "line56_2_tat_ca_san_pham_deu": "All products are out of stock.",
+        "line40_1_khong_san_pham_them": "There are no products to add.",
+        "line31_0_can_dang_nhap_them_san": "You need to log in to add products to cart!",
+        "extra189_3_da_xoa_san_pham_khoi": "Product removed from cart.",
+        "extra180_2_xoa_that_bai": "Delete failed",
+        "extra127_1_cap_nhat_so_luong_thanh": "Updated quantity successfully",
+        "extra117_0_cap_nhat_that_bai": "Update failed"
+      },
+      "useeventcheckin": {
+        "line298_14_vui_long_thu_lai_sau": "Please try again later.",
+        "line297_13_export_that_bai": "Export failed",
+        "line295_12_export_thanh_cong": "Exported successfully",
+        "line260_11_loi_xay_ra": "An error occurred",
+        "line250_10_import_hanh_cong": "Import work",
+        "line237_9_loi_xay_ra": "An error occurred",
+        "line225_8_da_xoa_khach": "Deleted guest {value0}",
+        "line212_7_loi_xay_ra": "An error occurred",
+        "line203_6_xoa_thanh_cong": "Deleted successfully",
+        "line191_5_loi_xay_ra": "An error occurred",
+        "line181_4_cap_nhat_thanh_cong": "Updated successfully",
+        "line169_3_loi_xay_ra": "An error occurred",
+        "line159_2_them_khach_thanh_cong": "Added guests successfully",
+        "line85_1_vui_long_thu_lai_sau": "Please try again later.",
+        "line84_0_khong_du_lieu": "Unable to download data",
+        "extra256_4_import_that_bai": "Import failed",
+        "extra233_3_xoa_that_bai": "Delete failed",
+        "extra208_2_xoa_that_bai": "Delete failed",
+        "extra187_1_cap_nhat_that_bai": "Update failed",
+        "extra165_0_them_khach_that_bai": "Adding guests failed"
+      },
+      "usequoteactions": {
+        "line77_0_quote_failed": "Quote failed"
+      }
+    },
+    "json": {
+      "schemahome": {
+        "line143_6_san_pham": "Product",
+        "line137_5_trang_chu": "Home page",
+        "line77_4_tp_ho_chi_minh": "Ho Chi Minh City",
+        "line76_3_quan_1": "District 1",
+        "line75_2_245b_tran_quang_khai": "245B Tran Quang Khai",
+        "line62_1_ho_tro_ky_thuat": "Technical support",
+        "line48_0_dich_vu_khach_hang": "Customer service"
+      }
+    },
+    "lib": {
+      "utils": {
+        "line126_3_loi_gi_do_vua_xay": "Something went wrong, please try again.",
+        "line125_2_them_vao_gio_that_bai": "Add to cart failed",
+        "line111_1_dang_nhap": "Log in",
+        "line107_0_them_vao_gio_that_bai": "Add to cart failed",
+        "extra100_5_da_them_vao_gio": "Added to cart",
+        "extra100_4_da_them_vao_gio": "Added {value0} to cart",
+        "extra99_3_thanh_cong": "Success",
+        "extra58_2_lien_he": "Contact",
+        "extra29_1_lien_he": "Contact",
+        "extra23_0_lien_he": "Contact"
+      }
+    },
+    "until": {
+      "index": {
+        "extra4_0_lien_he": "Contact"
+      }
+    }
+  },
+  "COMPANY": {
+    "altLogo": "Vi Tinh Nguyen Kim company logo",
+    "jsonHomePrimary": "Vi Tinh Nguyen Kim - Laptop, PC and Technology Equipment Specialist",
+    "jsonHomeSecondary": "Vi Tinh Nguyen Kim - Official technology store with the best prices",
+    "descriptionCompany": "Vi Tinh Nguyen Kim Co., Ltd. was founded in 2004 as a place where technology and people meet, connecting digital innovation with every Vietnamese family.",
+    "description": "Specializing in official laptops, desktop PCs, printers, scanners and technology equipment at competitive prices. Official warranty, trusted service and quality.",
+    "keywords": {
+      "wholesaleComputerComponents": "wholesale computer components",
+      "wholesaleComputerPartsSupplier": "wholesale computer parts supplier",
+      "computerPartsDistributor": "computer parts distributor",
+      "officeComputerWholesaler": "office computer wholesaler",
+      "wholesaleOfficeEquipmentSupplier": "wholesale office equipment supplier",
+      "technologyEquipmentDistributor": "technology equipment distributor",
+      "computerAccessoriesDistributor": "computer accessories distributor",
+      "technologyEquipmentSupplier": "technology equipment supplier",
+      "bulkComputerComponents": "bulk computer components",
+      "wholesalePrintersOfficeEquipment": "wholesale printers and office equipment"
+    }
   }
 }

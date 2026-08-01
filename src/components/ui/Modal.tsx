@@ -1,5 +1,6 @@
 "use client";
 
+import { i18nText } from "@/lib/i18nText";
 import React, { useEffect, useState } from "react";
 import { X } from "lucide-react";
 import Portal from "@/components/ui/Portal";
@@ -126,7 +127,7 @@ const Modal: React.FC<ModalProps> = ({
                   <button
                     onClick={onClose}
                     className="rounded-lg p-2 text-muted-foreground transition hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-                    aria-label="Close modal"
+                    aria-label={i18nText("AUTO.components.ui.modal.line129_0_close_modal")}
                   >
                     <X className="h-5 w-5" />
                   </button>

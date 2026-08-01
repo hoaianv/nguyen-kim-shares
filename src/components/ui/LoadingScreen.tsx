@@ -1,4 +1,5 @@
 "use client";
+import { i18nText } from "@/lib/i18nText";
 
 import Loading from "@/components/ui/loading";
 import { useStateStore } from "@/stores/stateStore";
@@ -11,7 +12,7 @@ interface LoadingScreenProps {
 }
 
 const LoadingScreen: React.FC<LoadingScreenProps> = ({
-  message = "Đang tải...",
+  message = i18nText("AUTO.components.ui.loadingscreen.extra14_0_dang"),
   size = "md",
   variant = "spinner",
 }) => {

@@ -1,5 +1,6 @@
 "use client";
 
+import { i18nText } from "@/lib/i18nText";
 import { bannerKeys } from "@/constants/values.constant";
 import { useStateStore } from "@/stores/stateStore";
 import Image from "next/image";
@@ -51,12 +52,10 @@ const PromotionBar = () => {
           </div>
           <div className="hidden min-w-0 flex-1 justify-center text-center text-xs text-background/90 sm:flex">
             <span className="truncate font-medium">
-              {advertise.title || "Khuyến mãi, ưu đãi và cập nhật mới nhất"}
+              {advertise.title || i18nText("AUTO.components.header.promotionbar.line54_0_khuyen_mai_uu_dai_cap")}
             </span>
           </div>
-          <div className="inline-flex items-center gap-2 border border-background/20 px-2 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-[#ffb716] sm:text-xs">
-            Xem ngay
-          </div>
+          <div className="inline-flex items-center gap-2 border border-background/20 px-2 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-[#ffb716] sm:text-xs">{i18nText("AUTO.components.header.promotionbar.line58_1_xem_ngay")}</div>
         </div>
       </Link>
     </motion.div>

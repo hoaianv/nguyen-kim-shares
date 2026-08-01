@@ -1,3 +1,4 @@
+import { i18nText } from "@/lib/i18nText";
 import Badge from "@/components/ui/Badge";
 import { IProduct } from "@/interfaces/models/IProduct.interface";
 import { calcDiscountPercentage, getMarketPrice, getPrice } from "@/lib/utils";
@@ -96,14 +97,12 @@ const CardSearchProduct: React.FC<CardSearchProductProps> = ({ product }) => {
                   : "bg-rose-50 text-rose-700"
               }`}
             >
-              {product.isInStock ? "Còn hàng" : "Hết hàng"}
+              {product.isInStock ? i18nText("AUTO.components.header.cardsearchproduct.line99_0_con_hang") : i18nText("AUTO.components.header.cardsearchproduct.line99_1_het_hang")}
             </span>
 
             {discount > 0 && (
               <span className="inline-flex items-center gap-1">
-                <Gift className="h-3 w-3" />
-                Ưu đãi giá
-              </span>
+                <Gift className="h-3 w-3" />{i18nText("AUTO.components.header.cardsearchproduct.line105_2_uu_dai_gia")}</span>
             )}
           </div>
         </div>

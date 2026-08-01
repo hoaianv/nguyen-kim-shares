@@ -1,5 +1,6 @@
 "use client";
 
+import { i18nText } from "@/lib/i18nText";
 import { getGoogleAuthUrl } from "@/apis/common/auth.apis";
 import { getValidData } from "@/lib/utils";
 import { useState } from "react";
@@ -21,13 +22,13 @@ export default function GoogleLogin({ className }: { className?: string }) {
         // Redirect user đến Google OAuth
         window.location.href = isValid.url;
       } else {
-        console.error("Không lấy được Google OAuth URL");
-        alert("Có lỗi xảy ra, vui lòng thử lại!");
+        console.error("Could not get Google OAuth URL");
+        alert(i18nText("AUTO.components.login.googlelogin.line25_0_loi_xay_ra_vui_long"));
         setLoading(false);
       }
     } catch (error) {
       console.error("Google login error:", error);
-      alert("Có lỗi xảy ra, vui lòng thử lại!");
+      alert(i18nText("AUTO.components.login.googlelogin.line30_1_loi_xay_ra_vui_long"));
       setLoading(false);
     }
   };
@@ -42,7 +43,7 @@ export default function GoogleLogin({ className }: { className?: string }) {
       }
     >
       {loading ? (
-        <span>Đang xử lý...</span>
+        <span>{i18nText("AUTO.components.login.googlelogin.line45_2_dang_xu_ly")}</span>
       ) : (
         <>
           <svg className="w-5 h-5" viewBox="0 0 24 24">
@@ -63,7 +64,7 @@ export default function GoogleLogin({ className }: { className?: string }) {
               d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
             />
           </svg>
-          <span>Đăng nhập với Google</span>
+          <span>{i18nText("AUTO.components.login.googlelogin.line66_3_dang_nhap_google")}</span>
         </>
       )}
     </button>

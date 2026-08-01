@@ -1,5 +1,6 @@
 "use client";
 
+import { i18nText } from "@/lib/i18nText";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import type { ICategory } from "@/interfaces/models/ICategories.interface";
@@ -42,7 +43,7 @@ export default function CategoryParentTabs({
 
   return (
     <nav
-      aria-label="Danh mục nổi bật"
+      aria-label={i18nText("AUTO.components.category.categoryparenttabs.line45_0_danh_muc_noi_bat")}
       className="overflow-x-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 hover:scrollbar-thumb-gray-400 rounded-xl border border-black bg-white px-2 py-2"
     >
       <div className="flex min-w-max items-center md:w-full">

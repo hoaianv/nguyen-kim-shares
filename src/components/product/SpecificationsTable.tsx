@@ -1,5 +1,6 @@
 "use client";
 
+import { i18nText } from "@/lib/i18nText";
 import { useState } from "react";
 import { Plus } from "lucide-react";
 import { motion } from "motion/react";
@@ -42,9 +43,7 @@ const PropertiesTable = ({ data }: PropertiesProps) => {
         transition={{ duration: 0.8 }}
         className="bg-white"
       >
-        <h2 className="mb-4 text-lg font-extrabold uppercase text-slate-900 sm:text-xl">
-          Thông số kỹ thuật
-        </h2>
+        <h2 className="mb-4 text-lg font-extrabold uppercase text-slate-900 sm:text-xl">{i18nText("AUTO.components.product.specificationstable.line46_0_thong_so_ky_thuat")}</h2>
 
         <div className="relative h-[360px] overflow-hidden lg:h-[420px]">
           <SpecificationsList data={data} />
@@ -59,12 +58,10 @@ const PropertiesTable = ({ data }: PropertiesProps) => {
           onClick={() => setOpen(true)}
           className="mx-auto mt-4 flex w-full max-w-[340px] items-center justify-center gap-1 rounded-sm border border-blue-500 px-4 py-3 text-sm font-medium text-blue-600 transition hover:bg-blue-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
         >
-          <Plus className="h-4 w-4" />
-          Xem thêm
-        </button>
+          <Plus className="h-4 w-4" />{i18nText("AUTO.components.product.specificationstable.line63_1_xem_them")}</button>
       </motion.section>
 
-      <Modal isOpen={open} onClose={() => setOpen(false)} size="xl" title="Thông số kỹ thuật">
+      <Modal isOpen={open} onClose={() => setOpen(false)} size="xl" title={i18nText("AUTO.components.product.specificationstable.line67_2_thong_so_ky_thuat")}>
         <div className="max-h-[70vh] overflow-y-auto p-2 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 hover:scrollbar-thumb-gray-400 sm:max-h-[600px] sm:p-3">
           <SpecificationsList data={data} />
         </div>

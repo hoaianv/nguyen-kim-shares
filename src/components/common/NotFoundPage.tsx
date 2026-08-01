@@ -1,5 +1,6 @@
 "use client";
 
+import { i18nText } from "@/lib/i18nText";
 import type React from "react";
 import { Home, ShoppingBag } from "lucide-react";
 import Button from "@/components/ui/button";
@@ -32,12 +33,8 @@ export default function NotFoundPage() {
 
           {/* Message Section */}
           <div className="mb-8">
-            <h1 className="text-3xl md:text-4xl font-bold text-[#111827] mb-4">
-              404 - Không tìm thấy trang
-            </h1>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-              Xin lỗi, trang bạn đang tìm kiếm không tồn tại hoặc đã bị xóa.
-            </p>
+            <h1 className="text-3xl md:text-4xl font-bold text-[#111827] mb-4">{i18nText("AUTO.components.common.notfoundpage.line36_0_404_khong_tim_thay_trang")}</h1>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">{i18nText("AUTO.components.common.notfoundpage.line39_1_xin_loi_trang_dang_tim")}</p>
           </div>
 
           {/* Search Bar */}
@@ -48,12 +45,10 @@ export default function NotFoundPage() {
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <Button variant="warning" icon={Home}>
-              <Link href="/">Trang Chủ</Link>
+              <Link href="/">{i18nText("AUTO.components.common.notfoundpage.line51_2_trang_chu")}</Link>
             </Button>
 
-            <Button variant="outline" icon={ShoppingBag} onClick={handleGoBack}>
-              Quay lại trang trước
-            </Button>
+            <Button variant="outline" icon={ShoppingBag} onClick={handleGoBack}>{i18nText("AUTO.components.common.notfoundpage.line55_3_quay_lai_trang_truoc")}</Button>
           </div>
         </div>
       </main>

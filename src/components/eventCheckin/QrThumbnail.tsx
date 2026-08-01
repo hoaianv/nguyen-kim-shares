@@ -1,5 +1,6 @@
 "use client";
 
+import { i18nText } from "@/lib/i18nText";
 import { Eye, Download } from "lucide-react";
 
 interface QrThumbnailProps {
@@ -25,7 +26,7 @@ export default function QrThumbnail({
 
   if (!qrData) {
     return (
-      <span className="text-xs text-gray-400 italic">Chưa có QR</span>
+      <span className="text-xs text-gray-400 italic">{i18nText("AUTO.components.eventcheckin.qrthumbnail.line28_0_chua_qr")}</span>
     );
   }
 
@@ -43,7 +44,7 @@ export default function QrThumbnail({
             onView();
           }}
           className="p-1 rounded hover:bg-gray-100 text-gray-500 hover:text-gray-700 transition-colors"
-          title="Xem QR"
+          title={i18nText("AUTO.components.eventcheckin.qrthumbnail.line46_1_xem_qr")}
         >
           <Eye className="w-3.5 h-3.5" />
         </button>
@@ -53,7 +54,7 @@ export default function QrThumbnail({
             handleDownload();
           }}
           className="p-1 rounded hover:bg-gray-100 text-gray-500 hover:text-gray-700 transition-colors"
-          title="Tải QR"
+          title={i18nText("AUTO.components.eventcheckin.qrthumbnail.line56_2_qr")}
         >
           <Download className="w-3.5 h-3.5" />
         </button>

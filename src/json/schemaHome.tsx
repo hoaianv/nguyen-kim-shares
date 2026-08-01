@@ -1,3 +1,4 @@
+import { i18nText } from "@/lib/i18nText";
 import {
   altLogo,
   description,
@@ -45,7 +46,7 @@ export default function JsonldHome() {
           {
             "@type": "ContactPoint",
             telephone: "+84-933-808-837",
-            contactType: "Dịch vụ khách hàng",
+            contactType: i18nText("AUTO.json.schemahome.line48_0_dich_vu_khach_hang"),
             contactOption: "TollFree",
             areaServed: "VN",
             availableLanguage: [
@@ -59,7 +60,7 @@ export default function JsonldHome() {
           {
             "@type": "ContactPoint",
             telephone: "+84-933-808-837",
-            contactType: "Hỗ trợ kỹ thuật",
+            contactType: i18nText("AUTO.json.schemahome.line62_1_ho_tro_ky_thuat"),
             areaServed: "VN",
             availableLanguage: [
               {
@@ -72,9 +73,9 @@ export default function JsonldHome() {
         ],
         address: {
           "@type": "PostalAddress",
-          streetAddress: "245B Trần Quang Khải",
-          addressLocality: "Quận 1",
-          addressRegion: "TP Hồ Chí Minh",
+          streetAddress: i18nText("AUTO.json.schemahome.line75_2_245b_tran_quang_khai"),
+          addressLocality: i18nText("AUTO.json.schemahome.line76_3_quan_1"),
+          addressRegion: i18nText("AUTO.json.schemahome.line77_4_tp_ho_chi_minh"),
           postalCode: "700000",
           addressCountry: {
             "@type": "Country",
@@ -134,13 +135,13 @@ export default function JsonldHome() {
           {
             "@type": "ListItem",
             position: 1,
-            name: "Trang chủ",
+            name: i18nText("AUTO.json.schemahome.line137_5_trang_chu"),
             item: url,
           },
           {
             "@type": "ListItem",
             position: 2,
-            name: "Sản phẩm",
+            name: i18nText("AUTO.json.schemahome.line143_6_san_pham"),
             item: url + "/san-pham",
           },
         ],

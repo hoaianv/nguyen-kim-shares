@@ -1,3 +1,4 @@
+import { i18nText } from "@/lib/i18nText";
 import { SocialIcon } from "@/interfaces/models/IFooter.interface";
 import Image from "next/image";
 import Link from "next/link";
@@ -17,7 +18,7 @@ const SocialIcons: React.FC<SocialIconsProps> = ({ socialMedia }) => {
             href={social.url}
             target={social?.target}
             rel="noopener noreferrer"
-            aria-label={`Theo dõi chúng tôi trên ${social.title}`}
+            aria-label={i18nText("AUTO.components.footer.socialicons.line20_0_theo_doi_chung_toi_tren", { value0: social.title })}
             className="group inline-flex items-center justify-center"
           >
             <div className="relative h-10 w-10 overflow-hidden rounded-sm border border-slate-200 bg-white transition duration-200 group-hover:border-[#ffb716] group-hover:bg-[#fff7da]">

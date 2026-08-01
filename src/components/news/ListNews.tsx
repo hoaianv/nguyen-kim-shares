@@ -1,4 +1,5 @@
 "use client";
+import { i18nText } from "@/lib/i18nText";
 import PaginationDynamic from "@/components/ui/PaginationDynamic";
 import { IPagination } from "@/interfaces/common";
 import { INews } from "@/interfaces/models/INews.interface";
@@ -118,8 +119,7 @@ export default function ListNews({ data }: { data?: ListNewsData }) {
                       strokeWidth={1.5}
                       className="sm:w-4 sm:h-4"
                     />
-                    {item.views} lượt xem
-                  </span>
+                    {item.views}{i18nText("AUTO.components.news.listnews.line121_0_luot_xem")}</span>
                   <span>•</span>
                   <span>{item.createdAt}</span>
                 </div>

@@ -1,4 +1,5 @@
 "use client";
+import { i18nText } from "@/lib/i18nText";
 import React, { useTransition } from "react";
 import { useForm, Controller } from "react-hook-form";
 import { z } from "zod";
@@ -12,15 +13,15 @@ import { create } from "@/apis/models/quote.apis";
 import TextArea from "@/components/ui/TextArea";
 
 const requestSchema = z.object({
-  name: z.string().min(1, "Họ tên là bắt buộc"),
+  name: z.string().min(1, i18nText("AUTO.components.quote.quoteform.line15_0_ho_ten_bat_buoc")),
   phone: z
     .string()
-    .min(8, "Số điện thoại không hợp lệ")
-    .max(15, "Số điện thoại quá dài"),
-  email: z.string().email("Email không hợp lệ"),
-  company: z.string().min(1, "Vui lòng nhập tên công ty hoặc khách lẻ"),
-  address: z.string().min(1, "Địa chỉ là bắt buộc"),
-  content: z.string().min(1, "Vui lòng nhập nội dung yêu cầu"),
+    .min(8, i18nText("AUTO.components.quote.quoteform.line18_1_so_dien_thoai_khong_hop"))
+    .max(15, i18nText("AUTO.components.quote.quoteform.line19_2_so_dien_thoai_qua_dai")),
+  email: z.string().email(i18nText("AUTO.components.quote.quoteform.line20_3_email_khong_hop_le")),
+  company: z.string().min(1, i18nText("AUTO.components.quote.quoteform.line21_4_vui_long_nhap_ten_cong")),
+  address: z.string().min(1, i18nText("AUTO.components.quote.quoteform.line22_5_dia_chi_bat_buoc")),
+  content: z.string().min(1, i18nText("AUTO.components.quote.quoteform.line23_6_vui_long_nhap_noi_dung")),
 });
 
 type RequestFormData = z.infer<typeof requestSchema>;
@@ -56,20 +57,20 @@ const QuoteForm = () => {
 
         if (getValidData(response)) {
           toast.success(response.message, {
-            description: "Chúng tôi sẽ phản hồi bạn sớm nhất.",
+            description: i18nText("AUTO.components.quote.quoteform.line59_7_chung_toi_se_phan_hoi"),
 
             position: "top-center",
           });
           reset();
         } else {
           toast.success(response.message, {
-            description: "Có vấn đề trong quá trình gửi tư vấn.",
+            description: i18nText("AUTO.components.quote.quoteform.line66_8_van_qua_trinh_gui_tu"),
             position: "top-center",
           });
         }
       } catch (err) {
-        toast.error("Có lỗi xảy ra!", {
-          description: "Vui lòng thử lại sau.",
+        toast.error(i18nText("AUTO.components.quote.quoteform.line71_9_loi_xay_ra"), {
+          description: i18nText("AUTO.components.quote.quoteform.line72_10_vui_long_thu_lai_sau"),
           position: "top-center",
         });
       } finally {
@@ -85,7 +86,7 @@ const QuoteForm = () => {
         name="name"
         control={control}
         render={({ field }) => (
-          <InputField {...field} id="name" label="Họ tên" error={errors.name} />
+          <InputField {...field} id="name" label={i18nText("AUTO.components.quote.quoteform.line88_11_ho_ten")} error={errors.name} />
         )}
       />
 
@@ -97,7 +98,7 @@ const QuoteForm = () => {
           <InputField
             {...field}
             id="phone"
-            label="Số điện thoại"
+            label={i18nText("AUTO.components.quote.quoteform.line100_12_so_dien_thoai")}
             type="tel"
             error={errors.phone}
           />
@@ -112,7 +113,7 @@ const QuoteForm = () => {
           <InputField
             {...field}
             id="email"
-            label="Email"
+            label={i18nText("AUTO.components.quote.quoteform.extra116_0_email")}
             type="email"
             error={errors.email}
           />
@@ -127,7 +128,7 @@ const QuoteForm = () => {
           <InputField
             {...field}
             id="company"
-            label="Tên công ty / Khách lẻ"
+            label={i18nText("AUTO.components.quote.quoteform.line130_13_ten_cong_ty_khach_le")}
             error={errors.company}
           />
         )}
@@ -141,7 +142,7 @@ const QuoteForm = () => {
           <InputField
             {...field}
             id="address"
-            label="Địa chỉ"
+            label={i18nText("AUTO.components.quote.quoteform.line144_14_dia_chi")}
             error={errors.address}
           />
         )}
@@ -155,7 +156,7 @@ const QuoteForm = () => {
           <TextArea
             {...field}
             id="content"
-            label="Nội dung"
+            label={i18nText("AUTO.components.quote.quoteform.line158_15_noi_dung")}
             error={errors.content}
           />
         )}
@@ -166,9 +167,7 @@ const QuoteForm = () => {
         variant="success"
         size="md"
         className="mt-3"
-      >
-        Gửi yêu cầu báo giá
-      </Button>
+      >{i18nText("AUTO.components.quote.quoteform.line170_16_gui_yeu_cau_bao_gia")}</Button>
     </form>
   );
 };

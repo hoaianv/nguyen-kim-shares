@@ -1,5 +1,6 @@
 "use client";
 
+import { i18nText } from "@/lib/i18nText";
 import React, {
   useMemo,
   useState,
@@ -85,17 +86,13 @@ export default function JobGrid({
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.35 }}
             className="text-4xl md:text-5xl font-bold text-foreground text-balance"
-          >
-            Cơ hội nghề nghiệp
-          </motion.h2>
+          >{i18nText("AUTO.components.recruitment.jobgrid.line89_0_hoi_nghe_nghiep")}</motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 6 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.35, delay: 0.05 }}
             className="mt-3 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto text-pretty"
-          >
-            Tham gia đội ngũ năng động và phát triển sự nghiệp cùng Nguyên Kim
-          </motion.p>
+          >{i18nText("AUTO.components.recruitment.jobgrid.line97_1_tham_gia_doi_ngu_nang")}</motion.p>
         </div>
 
         <motion.div
@@ -114,7 +111,7 @@ export default function JobGrid({
                     <InputField
                       classProps="mb-0"
                       id="search"
-                      label="Tìm theo tên công việc"
+                      label={i18nText("AUTO.components.recruitment.jobgrid.line117_2_tim_theo_ten_cong_viec")}
                       value={search}
                       onChange={(e) => {
                         const val = e.target.value;
@@ -139,7 +136,7 @@ export default function JobGrid({
                     value: String(c.url),
                     label: c.name,
                   }))}
-                  placeholder="Chọn phòng ban"
+                  placeholder={i18nText("AUTO.components.recruitment.jobgrid.line142_3_chon_phong")}
                 />
               </div>
 
@@ -147,10 +144,10 @@ export default function JobGrid({
                 <div
                   onClick={handleClear}
                   className="w-full cursor-pointer h-[52px] md:h-[52px] rounded-lg border border-gray-300 hover:border-gray-400 bg-white text-gray-700 text-sm font-medium inline-flex items-center justify-center gap-2 transition-transform active:scale-[0.98]"
-                  aria-label="Xóa bộ lọc"
+                  aria-label={i18nText("AUTO.components.recruitment.jobgrid.line150_4_xoa_bo_loc")}
                 >
                   <X className="h-4 w-4 text-[#999]" />
-                  <span className="hidden text-[#999]  lg:inline">Xóa</span>
+                  <span className="hidden text-[#999]  lg:inline">{i18nText("AUTO.components.recruitment.jobgrid.line153_5_xoa")}</span>
                 </div>
               </div>
             </div>
@@ -158,8 +155,7 @@ export default function JobGrid({
             <div className="px-4 md:px-5 pb-4 -mt-2">
               <div className="flex flex-wrap items-center gap-2 text-sm">
                 <span className="text-gray-500">
-                  {items.length} vị trí phù hợp
-                </span>
+                  {items.length}{i18nText("AUTO.components.recruitment.jobgrid.line161_6_vi_tri_phu_hop")}</span>
 
                 <AnimatePresence>
                   {category && (
@@ -180,7 +176,7 @@ export default function JobGrid({
                           handleSetParams(PARAMS_RECRUITMENT.CATEGORY, "")
                         }
                         className="ml-1 hover:opacity-80 transition cursor-pointer"
-                        aria-label="Bỏ lọc phòng ban"
+                        aria-label={i18nText("AUTO.components.recruitment.jobgrid.line183_7_bo_loc_phong")}
                       >
                         <X className="h-4 w-4" />
                       </div>
@@ -200,7 +196,7 @@ export default function JobGrid({
                           setSearch("");
                         }}
                         className="ml-1 hover:opacity-80 transition"
-                        aria-label="Xóa từ khóa"
+                        aria-label={i18nText("AUTO.components.recruitment.jobgrid.line203_8_xoa_tu_khoa")}
                       >
                         <X className="h-4 w-4" />
                       </div>
@@ -248,19 +244,13 @@ export default function JobGrid({
               className="col-span-full text-center text-muted-foreground py-16"
             >
               <div className="mx-auto max-w-md">
-                <div className="text-2xl font-semibold mb-2">
-                  Không tìm thấy vị trí phù hợp
-                </div>
-                <p className="mb-6">
-                  Thử đổi từ khóa hoặc chọn phòng ban khác nhé.
-                </p>
+                <div className="text-2xl font-semibold mb-2">{i18nText("AUTO.components.recruitment.jobgrid.line252_9_khong_tim_thay_vi_tri")}</div>
+                <p className="mb-6">{i18nText("AUTO.components.recruitment.jobgrid.line255_10_thu_doi_tu_khoa_hoac")}</p>
                 <div
                   onClick={handleClear}
                   className="inline-flex cursor-pointer items-center gap-2 rounded-lg px-4 py-2 border border-gray-300 bg-white hover:border-gray-400 active:scale-[0.98] transition"
                 >
-                  <Search className="h-4 w-4" />
-                  Làm mới bộ lọc
-                </div>
+                  <Search className="h-4 w-4" />{i18nText("AUTO.components.recruitment.jobgrid.line262_11_lam_moi_bo_loc")}</div>
               </div>
             </motion.div>
           )}

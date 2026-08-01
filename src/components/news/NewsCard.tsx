@@ -1,3 +1,4 @@
+import { i18nText } from "@/lib/i18nText";
 import { INews } from "@/interfaces/models/INews.interface";
 import Image from "next/image";
 import Link from "next/link";
@@ -18,7 +19,7 @@ function NewsCard({ item, sizes, priority = false }: CardProps) {
       >
         <ImageWithFallback
           src={item?.picture || ""}
-          alt={item?.title || "Hình ảnh"}
+          alt={item?.title || i18nText("AUTO.components.news.newscard.line21_0_hinh_anh")}
           fill
           className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
           sizes={sizes}

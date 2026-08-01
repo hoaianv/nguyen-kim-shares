@@ -1,4 +1,5 @@
 "use client";
+import { i18nText } from "@/lib/i18nText";
 import React, { useTransition, useEffect } from "react";
 import { useForm, Controller } from "react-hook-form";
 import { z } from "zod";
@@ -13,13 +14,13 @@ import { toast } from "sonner";
 import { IAddress } from "@/interfaces/models/IAddress.interface";
 
 const userInfoSchema = z.object({
-  name: z.string().min(1, "Họ và tên là bắt buộc"),
-  email: z.string().email("Email không hợp lệ"),
-  address: z.string().min(1, "Địa chỉ là bắt buộc"),
+  name: z.string().min(1, i18nText("AUTO.components.checkout.modaluserinfo.line16_0_ho_ten_bat_buoc")),
+  email: z.string().email(i18nText("AUTO.components.checkout.modaluserinfo.line17_1_email_khong_hop_le")),
+  address: z.string().min(1, i18nText("AUTO.components.checkout.modaluserinfo.line18_2_dia_chi_bat_buoc")),
   phone: z
     .string()
-    .min(8, "Số điện thoại không hợp lệ")
-    .max(15, "Số điện thoại quá dài"),
+    .min(8, i18nText("AUTO.components.checkout.modaluserinfo.line21_3_so_dien_thoai_khong_hop"))
+    .max(15, i18nText("AUTO.components.checkout.modaluserinfo.line22_4_so_dien_thoai_qua_dai")),
   isDefault: z.boolean(),
 });
 
@@ -97,15 +98,15 @@ const ModalUserInfo = ({
         if (getValidData(response)) {
           toast.success(response.message, {
             description: isEditing
-              ? "Đã cập nhật địa chỉ thành công"
-              : "Đã tạo địa chỉ mới thành công",
+              ? i18nText("AUTO.components.checkout.modaluserinfo.extra101_0_da_cap_nhat_dia_chi")
+              : i18nText("AUTO.components.checkout.modaluserinfo.extra102_1_da_tao_dia_chi_moi"),
             position: "top-center",
           });
         } else {
           toast.error(response.message, {
             description: isEditing
-              ? "Cập nhật địa chỉ thất bại, vui lòng thử lại!"
-              : "Tạo địa chỉ thất bại, vui lòng thử lại!",
+              ? i18nText("AUTO.components.checkout.modaluserinfo.extra108_2_cap_nhat_dia_chi_that")
+              : i18nText("AUTO.components.checkout.modaluserinfo.extra109_3_tao_dia_chi_that_bai"),
             position: "top-center",
           });
         }
@@ -114,8 +115,8 @@ const ModalUserInfo = ({
           `${isEditing ? "Update" : "Create"} address error:`,
           error
         );
-        toast.error("Đã xảy ra lỗi hệ thống", {
-          description: "Vui lòng thử lại sau!",
+        toast.error(i18nText("AUTO.components.checkout.modaluserinfo.line117_5_da_xay_ra_loi_he"), {
+          description: i18nText("AUTO.components.checkout.modaluserinfo.line118_6_vui_long_thu_lai_sau"),
           position: "top-center",
         });
       } finally {
@@ -140,8 +141,8 @@ const ModalUserInfo = ({
       size="md"
       title={
         isEditing
-          ? "Cập nhật thông tin người nhận"
-          : "Thông tin người nhận hàng"
+          ? i18nText("AUTO.components.checkout.modaluserinfo.line143_7_cap_nhat_thong_tin_nguoi")
+          : i18nText("AUTO.components.checkout.modaluserinfo.line144_8_thong_tin_nguoi_nhan_hang")
       }
     >
       <form onSubmit={handleSubmit(onSubmit)} className="">
@@ -153,7 +154,7 @@ const ModalUserInfo = ({
               <InputField
                 {...field}
                 id="name"
-                label="Họ và tên"
+                label={i18nText("AUTO.components.checkout.modaluserinfo.line156_9_ho_ten")}
                 error={errors.name}
               />
             )}
@@ -166,7 +167,7 @@ const ModalUserInfo = ({
               <InputField
                 {...field}
                 id="email"
-                label="Email"
+                label={i18nText("AUTO.components.checkout.modaluserinfo.extra170_4_email")}
                 type="email"
                 error={errors.email}
               />
@@ -182,7 +183,7 @@ const ModalUserInfo = ({
               <InputField
                 {...field}
                 id="address"
-                label="Địa chỉ"
+                label={i18nText("AUTO.components.checkout.modaluserinfo.line185_10_dia_chi")}
                 error={errors.address}
               />
             )}
@@ -195,7 +196,7 @@ const ModalUserInfo = ({
               <InputField
                 {...field}
                 id="phone"
-                label="Số điện thoại"
+                label={i18nText("AUTO.components.checkout.modaluserinfo.line198_11_so_dien_thoai")}
                 type="tel"
                 error={errors.phone}
               />
@@ -209,7 +210,7 @@ const ModalUserInfo = ({
           render={({ field }) => (
             <Switch
               id="isDefault"
-              label="Địa chỉ mặc định"
+              label={i18nText("AUTO.components.checkout.modaluserinfo.line212_12_dia_chi_mac_dinh")}
               checked={field.value}
               onChange={field.onChange}
               error={errors.isDefault}
@@ -224,9 +225,7 @@ const ModalUserInfo = ({
             variant="secondary"
             size="md"
             disabled={loading}
-          >
-            Hủy
-          </Button>
+          >{i18nText("AUTO.components.checkout.modaluserinfo.line228_13_huy")}</Button>
 
           <Button
             disabled={!isValid || loading}
@@ -236,11 +235,11 @@ const ModalUserInfo = ({
           >
             {loading
               ? isEditing
-                ? "Đang cập nhật..."
-                : "Đang lưu..."
+                ? i18nText("AUTO.components.checkout.modaluserinfo.line239_14_dang_cap_nhat")
+                : i18nText("AUTO.components.checkout.modaluserinfo.line240_15_dang_luu")
               : isEditing
-              ? "Cập nhật"
-              : "Lưu thông tin"}
+              ? i18nText("AUTO.components.checkout.modaluserinfo.line242_16_cap_nhat")
+              : i18nText("AUTO.components.checkout.modaluserinfo.line243_17_luu_thong_tin")}
           </Button>
         </div>
       </form>

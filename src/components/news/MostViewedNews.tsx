@@ -1,3 +1,4 @@
+import { i18nText } from "@/lib/i18nText";
 import { INews } from "@/interfaces/models/INews.interface";
 import { Calendar, Eye } from "lucide-react";
 import { useTranslations } from "next-intl";
@@ -73,7 +74,7 @@ const MostViewedNews = ({ data }: { data: INews[] }) => {
                   >
                     <ImageWithFallback
                       src={item?.picture || ""}
-                      alt={item?.title || "Hình ảnh"}
+                      alt={item?.title || i18nText("AUTO.components.news.mostviewednews.line76_0_hinh_anh")}
                       fill
                       className="object-cover 
                         transition-transform 

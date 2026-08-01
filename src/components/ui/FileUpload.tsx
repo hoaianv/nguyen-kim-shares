@@ -1,5 +1,6 @@
 // FileUpload.tsx
 "use client";
+import { i18nText } from "@/lib/i18nText";
 import React, { useRef, useState, useCallback, useEffect } from "react";
 import { Upload, X, FileText, Image as ImageIcon, File } from "lucide-react";
 
@@ -186,14 +187,10 @@ const FileUpload: React.FC<FileUploadProps> = ({
           <div>
             <p className="text-sm text-gray-600">
               {isDragOver ? (
-                "Thả file vào đây..."
+                i18nText("AUTO.components.ui.fileupload.line189_0_tha_file_vao_day")
               ) : (
                 <>
-                  <span className="font-medium text-blue-600 hover:text-blue-500">
-                    Nhấp để chọn file
-                  </span>{" "}
-                  hoặc kéo thả vào đây
-                </>
+                  <span className="font-medium text-blue-600 hover:text-blue-500">{i18nText("AUTO.components.ui.fileupload.line193_1_nhap_chon_file")}</span>{" "}{i18nText("AUTO.components.ui.fileupload.line195_2_hoac_keo_tha_vao_day")}</>
               )}
             </p>
             {helperText && (
@@ -206,17 +203,14 @@ const FileUpload: React.FC<FileUploadProps> = ({
       {selectedFiles.length > 0 && (
         <div className="space-y-2">
           <div className="flex items-center justify-between">
-            <h4 className="text-sm font-medium text-gray-700">
-              File đã chọn ({selectedFiles.length})
+            <h4 className="text-sm font-medium text-gray-700">{i18nText("AUTO.components.ui.fileupload.line210_3_file_da_chon")}{selectedFiles.length})
             </h4>
             {selectedFiles.length > 1 && (
               <button
                 type="button"
                 onClick={clearAllFiles}
                 className="text-xs text-red-600 hover:text-red-800 font-medium"
-              >
-                Xóa tất cả
-              </button>
+              >{i18nText("AUTO.components.ui.fileupload.line218_4_xoa_tat_ca")}</button>
             )}
           </div>
 
@@ -241,7 +235,7 @@ const FileUpload: React.FC<FileUploadProps> = ({
                   type="button"
                   onClick={() => removeFile(index)}
                   className="flex-shrink-0 p-1 text-gray-400 hover:text-red-500 transition-colors"
-                  title="Xóa file"
+                  title={i18nText("AUTO.components.ui.fileupload.line244_5_xoa_file")}
                 >
                   <X className="w-4 h-4" />
                 </button>

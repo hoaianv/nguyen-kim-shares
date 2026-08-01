@@ -1,4 +1,5 @@
 "use client";
+import { i18nText } from "@/lib/i18nText";
 import React from "react";
 import { ShoppingCart, CheckCircle, X } from "lucide-react";
 
@@ -47,7 +48,7 @@ const VerificationModal: React.FC<VerificationModalProps> = ({
             <div className="p-2 bg-white/20 rounded-full">
               <CheckCircle size={24} className="text-white" />
             </div>
-            <h3 className="text-xl font-bold">Xác thực thành công!</h3>
+            <h3 className="text-xl font-bold">{i18nText("AUTO.components.account.verificationmodal.line50_0_xac_thuc_thanh_cong")}</h3>
           </div>
 
           {/* Decorative elements */}
@@ -63,13 +64,8 @@ const VerificationModal: React.FC<VerificationModalProps> = ({
             </div>
 
             <div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">
-                Tài khoản đã được xác thực
-              </h4>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                Giờ đây bạn có thể đăng nhập để mua hàng và trải nghiệm đầy đủ
-                các tính năng của chúng tôi.
-              </p>
+              <h4 className="text-lg font-semibold text-gray-900 mb-2">{i18nText("AUTO.components.account.verificationmodal.line67_1_khoan_da_duoc_xac_thuc")}</h4>
+              <p className="text-gray-600 text-sm leading-relaxed">{i18nText("AUTO.components.account.verificationmodal.line70_2_gio_day_dang_nhap_mua")}</p>
             </div>
           </div>
         </div>
@@ -80,9 +76,7 @@ const VerificationModal: React.FC<VerificationModalProps> = ({
             onClick={onClose}
             className="w-full bg-gradient-to-r from-green-500 via-emerald-500 to-green-600 text-white py-3 px-4 rounded-xl font-semibold hover:from-green-600 hover:via-emerald-600 hover:to-green-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 active:scale-95"
             type="button"
-          >
-            Bắt đầu đăng nhập
-          </button>
+          >{i18nText("AUTO.components.account.verificationmodal.line84_3_bat_dau_dang_nhap")}</button>
         </div>
       </div>
     </div>

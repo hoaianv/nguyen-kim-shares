@@ -1,3 +1,4 @@
+import { i18nText } from "@/lib/i18nText";
 import {
   descriptionCompany,
   name,
@@ -6,8 +7,8 @@ import {
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: `Xử lý đăng nhập Google | ${name}`,
-  description: `${descriptionCompany} – Đang xử lý đăng nhập Google, vui lòng đợi trong giây lát...`,
+  title: i18nText("AUTO.app.auth.callback.line9_0_xu_ly_dang_nhap_google", { value0: name }),
+  description: i18nText("AUTO.app.auth.callback.line10_1_dang_xu_ly_dang_nhap", { value0: descriptionCompany }),
   alternates: {
     canonical: `${urlWebsite}auth/google/callback`,
   },
@@ -16,16 +17,16 @@ export const metadata: Metadata = {
     follow: false,
   },
   openGraph: {
-    title: `Đang xử lý đăng nhập Google | ${name}`,
-    description: `Trang trung gian xử lý xác thực Google của ${name}.`,
+    title: i18nText("AUTO.app.auth.callback.line19_2_dang_xu_ly_dang_nhap", { value0: name }),
+    description: i18nText("AUTO.app.auth.callback.line20_3_trang_trung_gian_xu_ly", { value0: name }),
     url: `${urlWebsite}auth/google/callback`,
     siteName: name,
     type: "website",
   },
   twitter: {
     card: "summary",
-    title: `Đang xử lý đăng nhập Google | ${name}`,
-    description: `Trang trung gian xác thực Google của ${name}.`,
+    title: i18nText("AUTO.app.auth.callback.line27_4_dang_xu_ly_dang_nhap", { value0: name }),
+    description: i18nText("AUTO.app.auth.callback.line28_5_trang_trung_gian_xac_thuc", { value0: name }),
   },
 };
 export default function RootLayout({

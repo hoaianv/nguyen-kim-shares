@@ -1,5 +1,6 @@
 "use client";
 
+import { i18nText } from "@/lib/i18nText";
 import { useEffect, useRef, useState } from "react";
 
 import { bannerKeys } from "@/constants/values.constant";
@@ -196,7 +197,7 @@ export default function Banner() {
                 <button
                   type="button"
                   onClick={() => handleTabClick(index)}
-                  aria-label={`Chuyển đến banner ${item.title}`}
+                  aria-label={i18nText("AUTO.components.home.banner.line199_0_chuyen_den_banner", { value0: item.title })}
                   aria-current={isActive ? "true" : undefined}
                   className={[
                     "relative flex min-h-[82px] w-full flex-col items-center justify-center px-4 py-3 text-center",

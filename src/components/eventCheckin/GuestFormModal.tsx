@@ -1,5 +1,6 @@
 "use client";
 
+import { i18nText } from "@/lib/i18nText";
 import { useEffect, useState } from "react";
 import { useForm, Controller } from "react-hook-form";
 import { z } from "zod";
@@ -16,7 +17,7 @@ import {
 
 // ═══ ZOD SCHEMA (inline theo convention project) ═══
 const guestFormSchema = z.object({
-  name: z.string().min(1, "Tên khách hàng là bắt buộc"),
+  name: z.string().min(1, i18nText("AUTO.components.eventcheckin.guestformmodal.line19_0_ten_khach_hang_bat_buoc")),
   companyName: z.string().optional(),
   position: z.string().optional(),
   email: z.string().optional(),
@@ -26,8 +27,8 @@ const guestFormSchema = z.object({
 });
 
 const STATUS_OPTIONS = [
-  { value: ECheckinStatus.NotChecked, label: "Chưa check-in" },
-  { value: ECheckinStatus.Checked, label: "Đã check-in" },
+  { value: ECheckinStatus.NotChecked, label: i18nText("AUTO.components.eventcheckin.guestformmodal.line29_1_chua_check_in") },
+  { value: ECheckinStatus.Checked, label: i18nText("AUTO.components.eventcheckin.guestformmodal.line30_2_da_check_in") },
 ];
 
 type GuestFormData = z.infer<typeof guestFormSchema>;
@@ -109,7 +110,7 @@ export default function GuestFormModal({
     <Modal
       isOpen={isOpen}
       onClose={onClose}
-      title={isEditMode ? "Chỉnh sửa khách mời" : "Thêm khách mời"}
+      title={isEditMode ? i18nText("AUTO.components.eventcheckin.guestformmodal.line112_3_chinh_sua_khach_moi") : i18nText("AUTO.components.eventcheckin.guestformmodal.line112_4_them_khach_moi")}
       size="lg"
       closeOnOverlayClick={!submitting}
       closeOnEscape={!submitting}
@@ -123,7 +124,7 @@ export default function GuestFormModal({
             render={({ field }) => (
               <InputField
                 id="guest-name"
-                label="Tên khách hàng *"
+                label={i18nText("AUTO.components.eventcheckin.guestformmodal.line126_5_ten_khach_hang")}
                 value={field.value}
                 onChange={field.onChange}
                 error={errors.name}
@@ -136,7 +137,7 @@ export default function GuestFormModal({
             render={({ field }) => (
               <InputField
                 id="guest-companyName"
-                label="Tên công ty"
+                label={i18nText("AUTO.components.eventcheckin.guestformmodal.line139_6_ten_cong_ty")}
                 value={field.value}
                 onChange={field.onChange}
                 error={errors.companyName}
@@ -153,7 +154,7 @@ export default function GuestFormModal({
             render={({ field }) => (
               <InputField
                 id="guest-position"
-                label="Chức vụ"
+                label={i18nText("AUTO.components.eventcheckin.guestformmodal.line156_7_chuc_vu")}
                 value={field.value ?? ""}
                 onChange={field.onChange}
                 error={errors.position}
@@ -166,7 +167,7 @@ export default function GuestFormModal({
             render={({ field }) => (
               <InputField
                 id="guest-email"
-                label="Email"
+                label={i18nText("AUTO.components.eventcheckin.guestformmodal.extra170_0_email")}
                 value={field.value}
                 onChange={field.onChange}
                 error={errors.email}
@@ -183,7 +184,7 @@ export default function GuestFormModal({
             render={({ field }) => (
               <InputField
                 id="guest-phone"
-                label="Số điện thoại"
+                label={i18nText("AUTO.components.eventcheckin.guestformmodal.line186_8_so_dien_thoai")}
                 value={field.value}
                 onChange={field.onChange}
                 error={errors.phone}
@@ -196,7 +197,7 @@ export default function GuestFormModal({
             render={({ field }) => (
               <InputField
                 id="guest-saleName"
-                label="Sale phụ trách"
+                label={i18nText("AUTO.components.eventcheckin.guestformmodal.line199_9_sale_phu_trach")}
                 value={field.value ?? ""}
                 onChange={field.onChange}
                 error={errors.saleName}
@@ -214,7 +215,7 @@ export default function GuestFormModal({
               render={({ field }) => (
                 <SelectField
                   id="guest-status"
-                  label="Trạng thái check-in"
+                  label={i18nText("AUTO.components.eventcheckin.guestformmodal.line217_10_trang_thai_check_in")}
                   options={STATUS_OPTIONS}
                   value={field.value ?? ""}
                   onChange={(e) => field.onChange(e.target.value)}
@@ -232,9 +233,7 @@ export default function GuestFormModal({
             onClick={onClose}
             disabled={submitting}
             className="px-4 py-2.5 text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 border border-gray-300 rounded-lg transition-colors disabled:opacity-50"
-          >
-            Hủy
-          </button>
+          >{i18nText("AUTO.components.eventcheckin.guestformmodal.line236_11_huy")}</button>
           <Button
             type="submit"
             variant="primary"
@@ -242,7 +241,7 @@ export default function GuestFormModal({
             disabled={submitting}
             loading={submitting}
           >
-            {isEditMode ? "Cập nhật" : "Thêm khách"}
+            {isEditMode ? i18nText("AUTO.components.eventcheckin.guestformmodal.line245_12_cap_nhat") : i18nText("AUTO.components.eventcheckin.guestformmodal.line245_13_them_khach")}
           </Button>
         </div>
       </form>

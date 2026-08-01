@@ -1,3 +1,4 @@
+import { i18nText } from "@/lib/i18nText";
 import { useCallback, useEffect, useMemo, useRef } from "react";
 import debounce from "lodash/debounce";
 import { useCartStore } from "@/stores/useCartStore";
@@ -74,7 +75,7 @@ export const useQuoteActions = () => {
       return {
         status: false,
         errorCode: 500,
-        message: "Quote failed",
+        message: i18nText("AUTO.hooks.usequoteactions.line77_0_quote_failed"),
         data: null,
       };
     } finally {

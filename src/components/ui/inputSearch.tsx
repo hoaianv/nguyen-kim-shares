@@ -1,3 +1,4 @@
+import { i18nText } from "@/lib/i18nText";
 import { Search } from "lucide-react";
 import React, { forwardRef } from "react";
 
@@ -18,7 +19,7 @@ const InputSearch = forwardRef<HTMLInputElement, InputSearchProps>(
   (
     {
       id = "search",
-      placeholder = "Nhập từ khóa tìm kiếm...",
+      placeholder = i18nText("AUTO.components.ui.inputsearch.extra21_0_nhap_tu_khoa_tim_kiem"),
       value,
       onChange,
       onFocus,

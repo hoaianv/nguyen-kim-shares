@@ -1,3 +1,4 @@
+import { i18nText } from "@/lib/i18nText";
 import { getAll, findOne } from "@/apis/models/advise.apis";
 import Breadcrumb from "@/components/ui/breadcrumb";
 import { Props } from "@/interfaces/common";
@@ -109,9 +110,7 @@ export default async function page({ params, searchParams }: Props) {
                 >
                   {/* Câu hỏi của khách */}
                   <div className="px-3 py-2.5 sm:px-4 sm:py-3 border-b border-gray-100 bg-gray-50 rounded-t-lg">
-                    <span className="block text-xs sm:text-sm font-medium text-gray-500 mb-1">
-                      Khách hàng hỏi
-                    </span>
+                    <span className="block text-xs sm:text-sm font-medium text-gray-500 mb-1">{i18nText("AUTO.app.tu.van.slug.line113_0_khach_hang_hoi")}</span>
                     <h2 className="text-gray-900 font-semibold text-sm sm:text-base leading-snug">
                       {item.title}
                     </h2>
@@ -119,9 +118,7 @@ export default async function page({ params, searchParams }: Props) {
 
                   {/* Trả lời của admin */}
                   <div className="px-3 py-2.5 sm:px-4 sm:py-3">
-                    <span className="block text-xs sm:text-sm font-medium text-gray-500 mb-1">
-                      Admin trả lời
-                    </span>
+                    <span className="block text-xs sm:text-sm font-medium text-gray-500 mb-1">{i18nText("AUTO.app.tu.van.slug.line123_1_admin_tra_loi")}</span>
                     {item.description ? (
                       <div
                         className="
@@ -133,9 +130,7 @@ export default async function page({ params, searchParams }: Props) {
                         dangerouslySetInnerHTML={{ __html: item?.description }}
                       />
                     ) : (
-                      <p className="text-gray-800 leading-relaxed text-sm sm:text-base">
-                        Chờ admin trả lời...
-                      </p>
+                      <p className="text-gray-800 leading-relaxed text-sm sm:text-base">{i18nText("AUTO.app.tu.van.slug.line137_2_admin_tra_loi")}</p>
                     )}
                   </div>
                 </div>

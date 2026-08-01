@@ -1,4 +1,5 @@
 "use client";
+import { i18nText } from "@/lib/i18nText";
 import React, { useTransition } from "react";
 import { useForm, Controller } from "react-hook-form";
 import { z } from "zod";
@@ -16,52 +17,52 @@ import { useParams } from "next/navigation";
 
 const CvFileSchema = z
   .any()
-  .refine((v) => v instanceof FileList && v.length === 1, "Vui lòng tải lên CV")
+  .refine((v) => v instanceof FileList && v.length === 1, i18nText("AUTO.components.recruitmentdetail.formapply.line19_0_vui_long_len_cv"))
   .refine(
     (v) => ALLOWED_DOCS.includes(v?.[0]?.type),
-    "CV phải là PDF, DOC hoặc DOCX"
+    i18nText("AUTO.components.recruitmentdetail.formapply.line22_1_cv_phai_pdf_doc_hoac")
   )
   .refine(
     (v) => v?.[0]?.size <= MAX_5MB,
-    "Kích thước CV không được vượt quá 5MB"
+    i18nText("AUTO.components.recruitmentdetail.formapply.line26_2_kich_thuoc_cv_khong_duoc")
   );
 
 const ExtraFileSchema = z
   .any()
   .refine(
     (v) => v instanceof FileList && v.length === 1,
-    "Vui lòng nộp Phiếu thông tin ứng viên: tải mẫu, điền và tải lên tại đây"
+    i18nText("AUTO.components.recruitmentdetail.formapply.line33_3_vui_long_nop_phieu_thong")
   )
   .refine((v) => {
     const t = v?.[0]?.type;
     return [...ALLOWED_DOCS, ...ALLOWED_IMAGES].includes(t);
-  }, "File bổ sung phải là PDF, DOC, DOCX, JPG, PNG hoặc GIF")
-  .refine((v) => v?.[0]?.size <= MAX_5MB, "File bổ sung không vượt quá 5MB");
+  }, i18nText("AUTO.components.recruitmentdetail.formapply.line38_4_file_bo_sung_phai_pdf"))
+  .refine((v) => v?.[0]?.size <= MAX_5MB, i18nText("AUTO.components.recruitmentdetail.formapply.line39_5_file_bo_sung_khong_vuot"));
 
 const FormApplySchema = z.object({
   name: z
     .string()
-    .min(1, "Họ và tên là bắt buộc")
-    .min(2, "Họ và tên phải có ít nhất 2 ký tự")
-    .max(100, "Họ và tên không được quá 100 ký tự"),
+    .min(1, i18nText("AUTO.components.recruitmentdetail.formapply.line44_6_ho_ten_bat_buoc"))
+    .min(2, i18nText("AUTO.components.recruitmentdetail.formapply.line45_7_ho_ten_phai_it_nhat"))
+    .max(100, i18nText("AUTO.components.recruitmentdetail.formapply.line46_8_ho_ten_khong_duoc_qua")),
 
   email: z
     .string()
-    .min(1, "Email là bắt buộc")
-    .email("Email không hợp lệ")
-    .max(100, "Email không được quá 100 ký tự"),
+    .min(1, i18nText("AUTO.components.recruitmentdetail.formapply.line50_9_email_bat_buoc"))
+    .email(i18nText("AUTO.components.recruitmentdetail.formapply.line51_10_email_khong_hop_le"))
+    .max(100, i18nText("AUTO.components.recruitmentdetail.formapply.line52_11_email_khong_duoc_qua_100")),
 
   phone: z
     .string()
-    .min(1, "Số điện thoại là bắt buộc")
-    .regex(/^[0-9+\-\s\(\)]{10,15}$/, "Số điện thoại không hợp lệ")
-    .min(10, "Số điện thoại phải có ít nhất 10 số"),
+    .min(1, i18nText("AUTO.components.recruitmentdetail.formapply.line56_12_so_dien_thoai_bat_buoc"))
+    .regex(/^[0-9+\-\s\(\)]{10,15}$/, i18nText("AUTO.components.recruitmentdetail.formapply.line57_13_so_dien_thoai_khong_hop"))
+    .min(10, i18nText("AUTO.components.recruitmentdetail.formapply.line58_14_so_dien_thoai_phai_it")),
 
   message: z
     .string()
-    .min(1, "Lời nhắn là bắt buộc")
-    .min(10, "Lời nhắn phải có ít nhất 10 ký tự")
-    .max(1000, "Lời nhắn không được quá 1000 ký tự"),
+    .min(1, i18nText("AUTO.components.recruitmentdetail.formapply.line62_15_loi_nhan_bat_buoc"))
+    .min(10, i18nText("AUTO.components.recruitmentdetail.formapply.line63_16_loi_nhan_phai_it_nhat"))
+    .max(1000, i18nText("AUTO.components.recruitmentdetail.formapply.line64_17_loi_nhan_khong_duoc_qua")),
 
   cv: CvFileSchema,
   fileInfo: ExtraFileSchema,
@@ -118,19 +119,19 @@ const FormApply = () => {
         if (getValidData(response)) {
           reset();
           toast.success(response.message, {
-            description: "Chúng tôi sẽ liên hệ với bạn sớm nhất có thể.",
+            description: i18nText("AUTO.components.recruitmentdetail.formapply.line121_18_chung_toi_se_lien_he"),
             position: "top-center",
           });
         } else {
           toast.error(response.message, {
-            description: "Vui lòng kiểm tra lại thông tin và thử lại.",
+            description: i18nText("AUTO.components.recruitmentdetail.formapply.line126_19_vui_long_kiem_tra_lai"),
             position: "top-center",
           });
         }
       } catch (error) {
         console.error("Error submitting job application:", error);
-        toast.error("Lỗi kết nối", {
-          description: "Vui lòng kiểm tra kết nối internet và thử lại.",
+        toast.error(i18nText("AUTO.components.recruitmentdetail.formapply.line132_20_loi_ket_noi"), {
+          description: i18nText("AUTO.components.recruitmentdetail.formapply.line133_21_vui_long_kiem_tra_ket"),
           position: "top-center",
         });
       } finally {
@@ -147,9 +148,7 @@ const FormApply = () => {
                hover:scrollbar-thumb-gray-400"
       >
         <div className="mb-6">
-          <p className="text-gray-600">
-            Vui lòng điền đầy đủ thông tin để chúng tôi có thể liên hệ với bạn.
-          </p>
+          <p className="text-gray-600">{i18nText("AUTO.components.recruitmentdetail.formapply.line151_22_vui_long_dien_day_du")}</p>
         </div>
 
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
@@ -162,7 +161,7 @@ const FormApply = () => {
                 onChange={field.onChange}
                 value={field.value}
                 id="name"
-                label="Họ và tên *"
+                label={i18nText("AUTO.components.recruitmentdetail.formapply.line165_23_ho_ten")}
                 error={errors.name}
               />
             )}
@@ -177,7 +176,7 @@ const FormApply = () => {
                 onChange={field.onChange}
                 value={field.value}
                 id="email"
-                label="Email *"
+                label={i18nText("AUTO.components.recruitmentdetail.formapply.line180_24_email")}
                 type="email"
                 error={errors.email}
               />
@@ -193,7 +192,7 @@ const FormApply = () => {
                 onChange={field.onChange}
                 value={field.value}
                 id="phone"
-                label="Số điện thoại *"
+                label={i18nText("AUTO.components.recruitmentdetail.formapply.line196_25_so_dien_thoai")}
                 type="tel"
                 error={errors.phone}
               />
@@ -209,8 +208,8 @@ const FormApply = () => {
                 onChange={field.onChange}
                 value={field.value}
                 id="message"
-                label="Lời nhắn *"
-                placeholder="Hãy cho chúng tôi biết lý do bạn muốn ứng tuyển vị trí này..."
+                label={i18nText("AUTO.components.recruitmentdetail.formapply.line212_26_loi_nhan")}
+                placeholder={i18nText("AUTO.components.recruitmentdetail.formapply.line213_27_hay_chung_toi_biet_ly")}
                 rows={4}
                 error={errors.message}
               />
@@ -224,13 +223,13 @@ const FormApply = () => {
             render={({ field }) => (
               <FileUpload
                 id="cv"
-                label="CV/Resume *"
-                accept=".pdf,.doc,.docx"
+                label={i18nText("AUTO.components.recruitmentdetail.formapply.line227_28_cv_resume")}
+                accept={i18nText("AUTO.components.recruitmentdetail.formapply.line228_29_pdf_doc_docx")}
                 multiple={false}
                 value={field.value ?? null}
                 onChange={field.onChange}
                 error={errors.cv}
-                helperText="Chấp nhận PDF, DOC, DOCX (tối đa 5MB)"
+                helperText={i18nText("AUTO.components.recruitmentdetail.formapply.line233_30_chap_nhan_pdf_doc_docx")}
               />
             )}
           />
@@ -242,13 +241,13 @@ const FormApply = () => {
             render={({ field }) => (
               <FileUpload
                 id="fileInfo"
-                label="Phiếu thông tin ứng viên *"
-                accept=".pdf,.doc,.docx,.jpg,.jpeg,.png,.gif"
+                label={i18nText("AUTO.components.recruitmentdetail.formapply.line245_31_phieu_thong_tin_ung_vien")}
+                accept={i18nText("AUTO.components.recruitmentdetail.formapply.line246_32_pdf_doc_docx_jpg_jpeg")}
                 multiple={false}
                 value={field.value ?? null}
                 onChange={field.onChange}
                 error={errors.fileInfo}
-                helperText="Chỉ 1 file, tối đa 5MB"
+                helperText={i18nText("AUTO.components.recruitmentdetail.formapply.line251_33_chi_1_file_toi_da")}
               />
             )}
           />
@@ -262,19 +261,14 @@ const FormApply = () => {
               size="lg"
               className="w-full"
             >
-              {loading ? "Đang gửi..." : "Gửi đơn ứng tuyển"}
+              {loading ? i18nText("AUTO.components.recruitmentdetail.formapply.line265_34_dang_gui") : i18nText("AUTO.components.recruitmentdetail.formapply.line265_35_gui_don_ung_tuyen")}
             </Button>
           </div>
 
           {/* Disclaimer */}
           <div className="text-center text-sm text-gray-500">
-            <p>
-              Bằng việc gửi đơn ứng tuyển, bạn đồng ý với{" "}
-              <a href="/privacy" className="text-blue-600 hover:underline">
-                chính sách bảo mật
-              </a>{" "}
-              của chúng tôi.
-            </p>
+            <p>{i18nText("AUTO.components.recruitmentdetail.formapply.line272_36_bang_viec_gui_don_ung")}{" "}
+              <a href="/privacy" className="text-blue-600 hover:underline">{i18nText("AUTO.components.recruitmentdetail.formapply.line274_37_chinh_sach_bao_mat")}</a>{" "}{i18nText("AUTO.components.recruitmentdetail.formapply.line276_38_chung_toi")}</p>
           </div>
         </form>
       </div>

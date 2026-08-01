@@ -1,5 +1,6 @@
 "use client";
 
+import { i18nText } from "@/lib/i18nText";
 import ButtonLogout from "@/components/ui/ButtonLogout";
 import GoogleLogin from "@/components/login/GoogleLogin";
 import { ACCOUNT_LINKS, ICONS } from "@/constants";
@@ -26,15 +27,11 @@ export function AuthPopup() {
           <Link
             href="/dang-nhap"
             className="flex h-10 w-full items-center justify-center rounded-md bg-brand px-3 text-sm font-semibold text-slate-950 transition hover:opacity-95"
-          >
-            Đăng nhập
-          </Link>
+          >{i18nText("AUTO.components.header.popupheader.line30_0_dang_nhap")}</Link>
           <Link
             href="/dang-ky"
             className="flex h-10 w-full items-center justify-center rounded-md bg-brand px-3 text-sm font-semibold text-slate-950 transition hover:opacity-95"
-          >
-            Tạo tài khoản
-          </Link>
+          >{i18nText("AUTO.components.header.popupheader.line36_1_tao_khoan")}</Link>
           <GoogleLogin className="flex h-10 w-full items-center justify-center gap-2 rounded-md bg-slate-100 px-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-200 disabled:opacity-50" />
         </div>
       </div>
@@ -107,9 +104,7 @@ export function NotificationPopup() {
         <div className="text-sm font-semibold text-foreground">
           {t("HEADER.notifications")}
         </div>
-        <div className="mt-2 border border-dashed border-border bg-muted/30 p-3 text-sm text-muted-foreground">
-          Chưa có thông báo nào
-        </div>
+        <div className="mt-2 border border-dashed border-border bg-muted/30 p-3 text-sm text-muted-foreground">{i18nText("AUTO.components.header.popupheader.line111_2_chua_thong_bao_nao")}</div>
       </div>
     </div>
   );
@@ -122,10 +117,9 @@ export function CartPopup() {
   return (
     <div className="-mx-3 -my-2 w-[360px] rounded-lg bg-white p-4 md:w-[380px]">
       <div className="flex items-center justify-between border-b border-slate-200 pb-3">
-        <h3 className="text-base font-semibold text-slate-900">Giỏ hàng</h3>
+        <h3 className="text-base font-semibold text-slate-900">{i18nText("AUTO.components.header.popupheader.line125_3_gio_hang")}</h3>
         <span className="rounded-full bg-brand-soft px-2.5 py-1 text-xs font-semibold text-brand-deep">
-          {cart.totalItem} sản phẩm
-        </span>
+          {cart.totalItem}{i18nText("AUTO.components.header.popupheader.line127_4_san_pham")}</span>
       </div>
 
       {isEmpty ? (
@@ -133,21 +127,17 @@ export function CartPopup() {
           <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full border border-slate-200 bg-slate-50 text-slate-500">
             <ShoppingBag className="h-6 w-6" />
           </div>
-          <p className="text-sm text-slate-500">Giỏ hàng của bạn đang trống</p>
+          <p className="text-sm text-slate-500">{i18nText("AUTO.components.header.popupheader.line136_5_gio_hang_dang")}</p>
 
           <div className="mt-5 grid grid-cols-2 gap-2.5">
             <Link
               href="/san-pham"
               className="rounded-md bg-brand px-3 py-2.5 text-center text-sm font-semibold text-slate-950 transition hover:opacity-95"
-            >
-              Mua sắm ngay
-            </Link>
+            >{i18nText("AUTO.components.header.popupheader.line143_6_mua_sam_ngay")}</Link>
             <Link
               href="/gio-hang"
               className="rounded-md border border-slate-200 bg-white px-3 py-2.5 text-center text-sm font-semibold text-slate-700 transition hover:border-brand hover:text-brand"
-            >
-              Xem giỏ hàng
-            </Link>
+            >{i18nText("AUTO.components.header.popupheader.line149_7_xem_gio_hang")}</Link>
           </div>
         </div>
       ) : (
@@ -190,7 +180,7 @@ export function CartPopup() {
           </div>
 
           <div className="mt-3 flex items-center justify-between rounded-md bg-slate-50 px-3 py-3 text-sm">
-            <span className="text-slate-500">Tổng cộng</span>
+            <span className="text-slate-500">{i18nText("AUTO.components.header.popupheader.line193_8_tong_cong")}</span>
             <span className="font-semibold text-slate-900">
               {formatPrice(cart.totalPrice)}
             </span>
@@ -199,9 +189,7 @@ export function CartPopup() {
           <Link
             href="/gio-hang"
             className="mt-3 flex w-full items-center justify-center rounded-md bg-brand px-4 py-2.5 text-sm font-semibold text-slate-950 transition hover:opacity-95"
-          >
-            Xem giỏ hàng
-          </Link>
+          >{i18nText("AUTO.components.header.popupheader.line203_9_xem_gio_hang")}</Link>
         </>
       )}
     </div>
@@ -213,9 +201,7 @@ export function ContactPopup() {
 
   if (!support || Object.keys(support).length === 0) {
     return (
-      <p className="px-3 py-2 text-sm text-muted-foreground">
-        Chưa có thông tin liên hệ
-      </p>
+      <p className="px-3 py-2 text-sm text-muted-foreground">{i18nText("AUTO.components.header.popupheader.line217_10_chua_thong_tin_lien_he")}</p>
     );
   }
 

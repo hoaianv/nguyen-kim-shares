@@ -1,3 +1,4 @@
+import { i18nText } from "@/lib/i18nText";
 import { getAll, getList } from "@/apis/models/advise.apis";
 
 import Breadcrumb from "@/components/ui/breadcrumb";
@@ -84,16 +85,12 @@ export default async function page({ params, searchParams }: Props) {
               >
                 {/* Câu hỏi của khách */}
                 <div className="px-4 py-3 border-b border-gray-100 bg-gray-50 rounded-t-lg">
-                  <span className="block text-sm font-medium text-gray-500 mb-1">
-                    Khách hàng hỏi
-                  </span>
+                  <span className="block text-sm font-medium text-gray-500 mb-1">{i18nText("AUTO.app.tu.van.line88_0_khach_hang_hoi")}</span>
                   <h2 className="text-gray-900 font-semibold">{item.title}</h2>
                 </div>
 
                 <div className="px-4 py-3">
-                  <span className="block text-sm font-medium text-gray-500 mb-1">
-                    Admin trả lời
-                  </span>
+                  <span className="block text-sm font-medium text-gray-500 mb-1">{i18nText("AUTO.app.tu.van.line95_1_admin_tra_loi")}</span>
                   {item.description ? (
                     <h2
                       className="prose prose-sm sm:prose md:prose-lg max-w-none overflow-x-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 hover:scrollbar-thumb-gray-400 prose-img:w-full [&_table]:min-w-[640px] [&_table]:w-full [&_th]:text-left [&_td]:align-top"
@@ -101,7 +98,7 @@ export default async function page({ params, searchParams }: Props) {
                     />
                   ) : (
                     <p className={"text-gray-800 leading-relaxed"}>
-                      {"Chờ admin trả lời..."}
+                      {i18nText("AUTO.app.tu.van.line104_2_admin_tra_loi")}
                     </p>
                   )}
                 </div>

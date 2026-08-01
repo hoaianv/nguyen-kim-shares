@@ -1,5 +1,6 @@
 "use client";
 
+import { i18nText } from "@/lib/i18nText";
 import { FileText } from "lucide-react";
 import { motion } from "motion/react";
 import { IDescription } from "@/interfaces/models/IProduct.interface";
@@ -17,9 +18,7 @@ const Description = ({ data }: DescriptionProps) => {
       transition={{ duration: 0.8 }}
       className="bg-white"
     >
-      <h2 className="mb-4 text-lg font-extrabold uppercase text-slate-900 sm:text-xl">
-        Mô tả sản phẩm
-      </h2>
+      <h2 className="mb-4 text-lg font-extrabold uppercase text-slate-900 sm:text-xl">{i18nText("AUTO.components.product.description.line21_0_mo_ta_san_pham")}</h2>
 
       {!data?.description ? (
         <div className="flex h-[360px] flex-col items-center justify-center gap-4 border border-slate-200 p-8 text-center lg:h-[420px]">
@@ -27,10 +26,8 @@ const Description = ({ data }: DescriptionProps) => {
             <FileText className="h-7 w-7" />
           </div>
           <div>
-            <p className="font-medium text-slate-800">Đang trong quá trình cập nhật</p>
-            <p className="mt-1 text-sm text-slate-500">
-              Nội dung sản phẩm sẽ được bổ sung sớm nhất.
-            </p>
+            <p className="font-medium text-slate-800">{i18nText("AUTO.components.product.description.line30_1_dang_qua_trinh_cap_nhat")}</p>
+            <p className="mt-1 text-sm text-slate-500">{i18nText("AUTO.components.product.description.line32_2_noi_dung_san_pham_se")}</p>
           </div>
         </div>
       ) : (

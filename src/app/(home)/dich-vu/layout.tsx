@@ -1,3 +1,4 @@
+import { i18nText } from "@/lib/i18nText";
 import {
   descriptionCompany,
   name,
@@ -6,13 +7,13 @@ import {
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: `Dịch vụ | ${name}`,
+  title: i18nText("AUTO.app.dich.vu.line9_0_dich_vu", { value0: name }),
   description: descriptionCompany,
   alternates: {
     canonical: `${urlWebsite}dich-vu`,
   },
   openGraph: {
-    title: `Dịch vụ | ${name}`,
+    title: i18nText("AUTO.app.dich.vu.line15_1_dich_vu", { value0: name }),
     description: descriptionCompany,
     url: `${urlWebsite}dich-vu`,
     siteName: name,

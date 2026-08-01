@@ -1,4 +1,5 @@
 "use client";
+import { i18nText } from "@/lib/i18nText";
 
 import { useState, useRef, useEffect, useId, useCallback } from "react";
 
@@ -22,10 +23,10 @@ interface ConfirmPopoverProps {
 
 export default function ConfirmPopover({
   trigger,
-  title = "Xác nhận xóa",
-  description = "Bạn có chắc chắn muốn xóa sản phẩm này khỏi giỏ hàng?",
-  confirmText = "Xóa",
-  cancelText = "Hủy",
+  title = i18nText("AUTO.components.ui.confirmpopover.extra25_0_xac_nhan_xoa"),
+  description = i18nText("AUTO.components.ui.confirmpopover.extra26_1_chac_chan_muon_xoa_san"),
+  confirmText = i18nText("AUTO.components.ui.confirmpopover.extra27_2_xoa"),
+  cancelText = i18nText("AUTO.components.ui.confirmpopover.extra28_3_huy"),
   position = "bottom",
   offset = 8,
   onConfirm,

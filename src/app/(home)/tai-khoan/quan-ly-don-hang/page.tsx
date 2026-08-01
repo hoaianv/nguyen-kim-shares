@@ -1,3 +1,4 @@
+import { i18nText } from "@/lib/i18nText";
 import { getAll } from "@/apis/models/order.apis";
 import { orderColumns } from "@/components/orderManagement/orderColumns";
 import OrderStatusTabs from "@/components/orderManagement/orderStatusTabs";
@@ -22,7 +23,7 @@ export default async function Page({
           columns={orderColumns}
           rowKey="orderCode"
           showSearch={false}
-          searchPlaceholder="Tìm kiếm đơn hàng..."
+          searchPlaceholder={i18nText("AUTO.app.khoan.quan.ly.don.extra25_0_tim_kiem_don_hang")}
         />
       </div>
     </div>

@@ -1,4 +1,5 @@
 "use client";
+import { i18nText } from "@/lib/i18nText";
 import React, { useState } from "react";
 import { Heart } from "lucide-react";
 
@@ -25,23 +26,21 @@ const ButtonFavorite = ({ id, favorite, name }: FavoriteProps) => {
       const isValid = getValidData(response);
       if (isValid) {
         toast.success(response.message, {
-          description: `${isValid ? "Đã thêm" : "Đã bỏ"} sản phẩm "${name}" ${
-            isValid ? "vào danh sách yêu thích" : "khỏi danh sách yêu thích"
-          }`,
+          description: i18nText("AUTO.components.product.buttonfavorite.line28_0_san_pham", { value0: isValid ? "Đã thêm" : "Đã bỏ", value1: name, value2: isValid ? "vào danh sách yêu thích" : "khỏi danh sách yêu thích" }),
           position: "top-center",
         });
 
         setIsFavorite(isValid.isFavorite);
       } else {
         toast.error(
-          response.message ?? "Có lỗi xảy ra khi cập nhật yêu thích",
+          response.message ?? i18nText("AUTO.components.product.buttonfavorite.extra36_0_loi_xay_ra_khi_cap"),
           {
             position: "top-center",
           }
         );
       }
     } catch (error: any) {
-      toast.error(error?.message ?? "Có lỗi xảy ra khi cập nhật yêu thích", {
+      toast.error(error?.message ?? i18nText("AUTO.components.product.buttonfavorite.extra43_1_loi_xay_ra_khi_cap"), {
         position: "top-center",
       });
     } finally {

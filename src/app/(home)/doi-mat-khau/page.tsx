@@ -1,3 +1,4 @@
+import { i18nText } from "@/lib/i18nText";
 import React from "react";
 import Link from "next/link";
 import ChangePasswordForm from "@/components/account/changePasswordForm";
@@ -25,12 +26,8 @@ export default function ChangePasswordPage() {
               <div className="flex flex-col justify-center">
                 <div className="p-4 lg:p-8">
                   <div className="mb-4">
-                    <h2 className="text-xl font-bold text-gray-900 lg:text-2xl">
-                      Đổi mật khẩu
-                    </h2>
-                    <p className="mt-1 text-sm text-gray-600 lg:text-base">
-                      Nhập email và mật khẩu mới để thay đổi mật khẩu
-                    </p>
+                    <h2 className="text-xl font-bold text-gray-900 lg:text-2xl">{i18nText("AUTO.app.doi.mat.khau.line29_0_doi_mat_khau")}</h2>
+                    <p className="mt-1 text-sm text-gray-600 lg:text-base">{i18nText("AUTO.app.doi.mat.khau.line32_1_nhap_email_mat_khau_moi")}</p>
                   </div>
 
                   <div>

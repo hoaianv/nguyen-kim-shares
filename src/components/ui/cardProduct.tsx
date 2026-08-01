@@ -1,5 +1,6 @@
 "use client";
 
+import { i18nText } from "@/lib/i18nText";
 import { useCartActions } from "@/hooks/useCartActions";
 import { useBuyAction } from "@/hooks/useBuyAction";
 import { IProduct } from "@/interfaces/models/IProduct.interface";
@@ -129,15 +130,11 @@ const CardProduct = ({ item }: { item: IProduct }) => {
             <div className="absolute left-2 top-2 flex flex-wrap gap-1">
               {item.isFavorite ? (
                 <span className="inline-flex h-6 items-center gap-1 rounded-full border border-rose-200 bg-rose-50 px-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-rose-700">
-                  <Heart className="h-3 w-3" />
-                  Yêu thích
-                </span>
+                  <Heart className="h-3 w-3" />{i18nText("AUTO.components.ui.cardproduct.line133_0_yeu_thich")}</span>
               ) : null}
               {item.isCompare ? (
                 <span className="inline-flex h-6 items-center gap-1 rounded-full border border-sky-200 bg-sky-50 px-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-sky-700">
-                  <Shuffle className="h-3 w-3" />
-                  So sánh
-                </span>
+                  <Shuffle className="h-3 w-3" />{i18nText("AUTO.components.ui.cardproduct.line139_1_so_sanh")}</span>
               ) : null}
             </div>
 
@@ -231,9 +228,9 @@ const CardProduct = ({ item }: { item: IProduct }) => {
                 aria-expanded={mobileSpecsOpen}
                 aria-controls={`mobile-specs-${item.id}`}
               >
-                <span>Thông số</span>
+                <span>{i18nText("AUTO.components.ui.cardproduct.line234_2_thong_so")}</span>
                 <span className="text-xs text-muted-foreground">
-                  {mobileSpecsOpen ? "Ẩn" : "Xem"}
+                  {mobileSpecsOpen ? i18nText("AUTO.components.ui.cardproduct.line236_3_text") : "Xem"}
                 </span>
               </button>
 
@@ -243,8 +240,8 @@ const CardProduct = ({ item }: { item: IProduct }) => {
                   className="mt-2 rounded-lg border border-border bg-muted/20 p-3"
                 >
                   <div className="mb-2 flex items-center justify-between text-[11px] uppercase tracking-[0.16em] text-muted-foreground">
-                    <span>Thông số nhanh</span>
-                    <span>{specs.length} mục</span>
+                    <span>{i18nText("AUTO.components.ui.cardproduct.line246_4_thong_so_nhanh")}</span>
+                    <span>{specs.length}{i18nText("AUTO.components.ui.cardproduct.line247_5_muc")}</span>
                   </div>
 
                   <div className="space-y-2">
@@ -266,9 +263,7 @@ const CardProduct = ({ item }: { item: IProduct }) => {
 
                   {item.warranty ? (
                     <div className="mt-3 border-t border-border pt-3 text-xs text-muted-foreground">
-                      <span className="font-medium text-foreground">
-                        Bảo hành:
-                      </span>{" "}
+                      <span className="font-medium text-foreground">{i18nText("AUTO.components.ui.cardproduct.line270_6_bao_hanh")}</span>{" "}
                       <span
                         dangerouslySetInnerHTML={{ __html: item.warranty }}
                       />
@@ -294,7 +289,7 @@ const CardProduct = ({ item }: { item: IProduct }) => {
               <ProductCardPopup
                 data={item}
                 specs={item.technology ?? []}
-                warranty={item.warranty ?? "Đang cập nhật"}
+                warranty={item.warranty ?? i18nText("AUTO.components.ui.cardproduct.line297_7_dang_cap_nhat")}
               />
             </div>
           </div>

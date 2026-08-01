@@ -1,16 +1,17 @@
+import { i18nText } from "@/lib/i18nText";
 import { name, urlWebsite } from "@/constants/company.constant";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: `Chi tiết đơn hàng | ${name}`,
-  description: `Xem chi tiết đơn hàng đã mua tại ${name}, bao gồm sản phẩm, giá và trạng thái giao hàng.`,
+  title: i18nText("AUTO.app.khoan.quan.ly.don.line5_0_chi_tiet_don_hang", { value0: name }),
+  description: i18nText("AUTO.app.khoan.quan.ly.don.line6_1_xem_chi_tiet_don_hang", { value0: name }),
   alternates: {
     canonical: `${urlWebsite}chi-tiet-don-hang`,
   },
   openGraph: {
-    title: `Chi tiết đơn hàng | ${name}`,
+    title: i18nText("AUTO.app.khoan.quan.ly.don.line11_2_chi_tiet_don_hang", { value0: name }),
     description:
-      "Thông tin chi tiết đơn hàng và trạng thái giao hàng tại " + name,
+      i18nText("AUTO.app.khoan.quan.ly.don.line13_3_thong_tin_chi_tiet_don") + name,
     url: `${urlWebsite}chi-tiet-don-hang`,
     siteName: name,
     type: "website",

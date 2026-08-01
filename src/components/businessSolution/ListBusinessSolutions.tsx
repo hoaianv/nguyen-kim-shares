@@ -1,4 +1,5 @@
 "use client";
+import { i18nText } from "@/lib/i18nText";
 import React from "react";
 import BusinessSolutionCard from "./BusinessSolutionCard";
 import PaginationDynamic from "@/components/ui/PaginationDynamic";
@@ -19,7 +20,7 @@ export default function ListBusinessSolutions({
   if (!items || items.length === 0) {
     return (
       <div className="mx-auto w-full max-w-7xl 2xl:max-w-[1520px] px-4 sm:px-6 lg:px-8 xl:px-16 2xl:px-20 py-10 text-center text-gray-500">
-        <p>Hiện chưa có bài viết nào trong mục Giải pháp doanh nghiệp.</p>
+        <p>{i18nText("AUTO.components.businesssolution.listbusinesssolutions.line22_0_hien_chua_bai_viet_nao")}</p>
       </div>
     );
   }

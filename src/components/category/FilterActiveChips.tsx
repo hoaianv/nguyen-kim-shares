@@ -1,5 +1,6 @@
 "use client";
 
+import { getCurrentLocale, i18nText } from "@/lib/i18nText";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { X } from "lucide-react";
 import type {
@@ -53,22 +54,22 @@ export default function FilterActiveChips({
           String(brandItem.slug ?? brandItem.title).toLowerCase() ===
           filterValue.toLowerCase()
       );
-      return brand && `Thương hiệu: ${brand.title}`;
+      return brand && i18nText("AUTO.components.category.filteractivechips.extra57_0_thuong_hieu", { value0: brand.title });
     }
 
     if (filterKey === ESlugType.Demand) {
       const need = (customerNeeds || []).find(
         (needItem) => String(needItem.url).toLowerCase() === filterValue.toLowerCase()
       );
-      return need && `Nhu cầu: ${need.title}`;
+      return need && i18nText("AUTO.components.category.filteractivechips.extra64_1_nhu_cau", { value0: need.title });
     }
 
     if (filterKey === ESlugType.Sort) {
       return filterValue?.toUpperCase() === "ASC"
-        ? "Giá tăng dần"
+        ? i18nText("AUTO.components.category.filteractivechips.extra69_2_gia_tang_dan")
         : filterValue?.toUpperCase() === "DESC"
-        ? "Giá giảm dần"
-        : `Sắp xếp: ${filterValue}`;
+        ? i18nText("AUTO.components.category.filteractivechips.extra71_3_gia_giam_dan")
+        : i18nText("AUTO.components.category.filteractivechips.extra72_4_sap_xep", { value0: filterValue });
     }
 
     const option = options.find((optionItem) => optionItem.slug === filterKey);
@@ -107,7 +108,11 @@ export default function FilterActiveChips({
     : activeFilters;
 
   const formatVND = (value: number) =>
-    new Intl.NumberFormat("en-US").format(Math.max(0, Math.floor(value))) + "đ";
+    new Intl.NumberFormat(getCurrentLocale() === "en" ? "en-US" : "vi-VN", {
+      style: "currency",
+      currency: "VND",
+      maximumFractionDigits: 0,
+    }).format(Math.max(0, Math.floor(value)));
 
   const handleClearBothPrice = () => {
     const nextParams = new URLSearchParams(searchParamsHook.toString());
@@ -133,9 +138,7 @@ export default function FilterActiveChips({
 
   return (
     <div className="space-y-2">
-      <div className="text-sm font-medium text-slate-600">
-        Đang lọc theo {activeFilters.length} tiêu chí
-      </div>
+      <div className="text-sm font-medium text-slate-600">{i18nText("AUTO.components.category.filteractivechips.line137_0_dang_loc_theo")}{activeFilters.length}{i18nText("AUTO.components.category.filteractivechips.line137_1_tieu_chi")}</div>
 
       <div className="flex gap-2 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 hover:scrollbar-thumb-gray-400 pb-1 lg:flex-wrap lg:overflow-visible lg:pb-0">
         {hasBothPrice ? (
@@ -144,13 +147,13 @@ export default function FilterActiveChips({
             role="status"
           >
             <span className="max-w-[14rem] truncate text-sm leading-5">
-              {`Giá từ ${formatVND(minPrice as number)} - ${formatVND(
+              {i18nText("AUTO.components.category.filteractivechips.line147_2_gia_tu", { value0: formatVND(minPrice as number), value1: formatVND(
                 maxPrice as number
-              )}`}
+              ) })}
             </span>
             <button
               type="button"
-              aria-label="Xóa bộ lọc giá"
+              aria-label={i18nText("AUTO.components.category.filteractivechips.line153_3_xoa_bo_loc_gia")}
               onClick={(e) => {
                 e.stopPropagation();
                 handleClearBothPrice();
@@ -175,7 +178,7 @@ export default function FilterActiveChips({
               </span>
               <button
                 type="button"
-                aria-label={`Xóa bộ lọc ${label}`}
+                aria-label={i18nText("AUTO.components.category.filteractivechips.line178_4_xoa_bo_loc", { value0: label })}
                 onClick={(e) => {
                   e.stopPropagation();
                   handleRemoveFilter(key);
@@ -192,9 +195,7 @@ export default function FilterActiveChips({
           type="button"
           onClick={handleClearAll}
           className="ml-1 inline-flex h-9 shrink-0 items-center rounded-md border border-slate-200 bg-white px-3 text-sm font-medium text-slate-600 transition hover:border-brand hover:bg-brand-soft hover:text-brand-deep"
-        >
-          Bỏ chọn tất cả
-        </button>
+        >{i18nText("AUTO.components.category.filteractivechips.line196_5_bo_chon_tat_ca")}</button>
       </div>
     </div>
   );

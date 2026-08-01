@@ -1,5 +1,6 @@
 "use client";
 
+import { i18nText } from "@/lib/i18nText";
 import Link from "next/link";
 import { useState } from "react";
 import {
@@ -71,7 +72,7 @@ const ProductGallery = ({
                 <button
                   type="button"
                   onClick={() => setIndex(idx)}
-                  aria-label={`Chọn hình ảnh ${idx + 1} của ${nameProduct}`}
+                  aria-label={i18nText("AUTO.components.product.productgallery.line74_0_chon_hinh_anh", { value0: idx + 1, value1: nameProduct })}
                   aria-current={index === idx ? "true" : undefined}
                   className={`flex h-full w-full items-center justify-center rounded-sm border p-1 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 ${
                     index === idx
@@ -84,7 +85,7 @@ const ProductGallery = ({
                     src={item.src}
                     width={86}
                     height={86}
-                    alt={`${nameProduct} - hình ${idx + 1}`}
+                    alt={i18nText("AUTO.components.product.productgallery.line87_1_hinh", { value0: nameProduct, value1: idx + 1 })}
                     className="object-contain"
                   />
                 </button>
@@ -130,7 +131,7 @@ const ProductGallery = ({
           <span className="inline-flex h-14 w-14 items-center justify-center border border-slate-300 bg-white transition hover:border-brand">
             <Images className="h-5 w-5" aria-hidden="true" />
           </span>
-          <span className="mt-1">Hình ảnh nổi bật</span>
+          <span className="mt-1">{i18nText("AUTO.components.product.productgallery.line133_2_hinh_anh_noi_bat")}</span>
         </button>
         <button
           type="button"
@@ -139,15 +140,15 @@ const ProductGallery = ({
           aria-disabled={!hasSpecifications}
           title={
             hasSpecifications
-              ? "Xem thông số kỹ thuật"
-              : "Sản phẩm chưa có thông số kỹ thuật"
+              ? i18nText("AUTO.components.product.productgallery.line142_3_xem_thong_so_ky_thuat")
+              : i18nText("AUTO.components.product.productgallery.line143_4_san_pham_chua_thong_so")
           }
           className="inline-flex w-[72px] flex-col items-center text-center text-xs leading-tight text-slate-700 transition hover:text-slate-950 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:text-slate-400"
         >
           <span className="inline-flex h-14 w-14 items-center justify-center border border-slate-300 bg-white transition hover:border-brand">
             <ListTree className="h-5 w-5" aria-hidden="true" />
           </span>
-          <span className="mt-1">Thông số kỹ thuật</span>
+          <span className="mt-1">{i18nText("AUTO.components.product.productgallery.line150_5_thong_so_ky_thuat")}</span>
         </button>
         <button
           type="button"
@@ -157,30 +158,27 @@ const ProductGallery = ({
           <span className="inline-flex h-14 w-14 items-center justify-center border border-slate-300 bg-white transition hover:border-brand">
             <FileText className="h-5 w-5" aria-hidden="true" />
           </span>
-          <span className="mt-1">Mô tả sản phẩm</span>
+          <span className="mt-1">{i18nText("AUTO.components.product.productgallery.line160_6_mo_ta_san_pham")}</span>
         </button>
       </div>
 
       <div className="mt-5 grid grid-cols-1 border-y border-slate-200 text-sm sm:grid-cols-2">
         <div className="flex items-center gap-2 border-b border-slate-200 px-1 py-3 sm:border-r">
           <Truck className="h-6 w-6 shrink-0 rounded-full bg-teal-600 p-1 text-white" />
-          <span className="text-slate-700">Chính sách bảo hành</span>
+          <span className="text-slate-700">{i18nText("AUTO.components.product.productgallery.line167_7_chinh_sach_bao_hanh")}</span>
           <Link
             href="/chinh-sach/bao-hanh-doi-tra"
             className="text-brand-strong underline-offset-2 hover:underline"
-          >
-            Xem chi tiết
-          </Link>
+          >{i18nText("AUTO.components.product.productgallery.line172_8_xem_chi_tiet")}</Link>
         </div>
         <div className="flex items-center gap-2 border-b border-slate-200 px-1 py-3 sm:pl-4">
           <ShieldCheck className="h-6 w-6 shrink-0 rounded-full bg-teal-600 p-1 text-white" />
-          <span className="text-slate-700">
-            Bảo hành: {warranty?.trim() || "Theo tiêu chuẩn hãng"}
+          <span className="text-slate-700">{i18nText("AUTO.components.product.productgallery.line178_9_bao_hanh")}{warranty?.trim() || i18nText("AUTO.components.product.productgallery.line178_10_theo_tieu_chuan_hang")}
           </span>
         </div>
         <div className="flex items-center gap-2 border-b border-slate-200 px-1 py-3 sm:border-b-0 sm:border-r">
           <BadgeCheck className="h-6 w-6 shrink-0 rounded-full bg-teal-600 p-1 text-white" />
-          <span className="text-slate-700">Giá luôn tốt nhất</span>
+          <span className="text-slate-700">{i18nText("AUTO.components.product.productgallery.line183_11_gia_luon_tot_nhat")}</span>
         </div>
         <a
           href={`tel:${hotline}`}

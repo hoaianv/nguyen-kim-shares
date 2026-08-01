@@ -1,5 +1,6 @@
 "use client";
 
+import { i18nText } from "@/lib/i18nText";
 import { hotline, technicalHotline } from "@/constants/company.constant";
 import { BadgeCheck, Headset, RefreshCcw, ShieldCheck } from "lucide-react";
 import { motion, useReducedMotion } from "motion/react";
@@ -7,25 +8,25 @@ import Link from "next/link";
 
 const trustItems = [
   {
-    title: "Cam kết chính hãng",
-    description: "Nguồn hàng rõ ràng, hóa đơn đầy đủ",
+    title: i18nText("AUTO.components.home.hometrustband.line10_0_cam_ket_chinh_hang"),
+    description: i18nText("AUTO.components.home.hometrustband.line11_1_nguon_hang_ro_rang_hoa"),
     icon: BadgeCheck,
     href: "/chinh-sach",
   },
   {
-    title: "Đổi trả linh hoạt",
-    description: "Quy trình tiếp nhận minh bạch",
+    title: i18nText("AUTO.components.home.hometrustband.line16_2_doi_tra_linh_hoat"),
+    description: i18nText("AUTO.components.home.hometrustband.line17_3_quy_trinh_tiep_nhan_minh"),
     icon: RefreshCcw,
     href: "/chinh-sach",
   },
   {
-    title: "Bảo hành tận tâm",
-    description: "Theo dõi và hỗ trợ sau bán",
+    title: i18nText("AUTO.components.home.hometrustband.line22_4_bao_hanh_tan_tam"),
+    description: i18nText("AUTO.components.home.hometrustband.line23_5_theo_doi_ho_tro_sau"),
     icon: ShieldCheck,
     href: "/chinh-sach",
   },
   {
-    title: "Tư vấn kỹ thuật",
+    title: i18nText("AUTO.components.home.hometrustband.line28_6_tu_van_ky_thuat"),
     description: technicalHotline,
     icon: Headset,
     href: `tel:${technicalHotline}`,
@@ -49,14 +50,10 @@ export default function HomeTrustBand() {
           className="flex items-center justify-between gap-4 bg-[#ffb716] px-5 py-4 text-slate-950"
         >
           <div>
-            <p className="text-xs font-bold uppercase text-slate-800/70">
-              Tổng đài bán hàng
-            </p>
+            <p className="text-xs font-bold uppercase text-slate-800/70">{i18nText("AUTO.components.home.hometrustband.line53_7_tong_dai_hang")}</p>
             <p className="mt-1 text-2xl font-extrabold leading-none">{hotline}</p>
           </div>
-          <span className="rounded bg-white/70 px-3 py-2 text-xs font-semibold uppercase text-slate-950">
-            Gọi ngay
-          </span>
+          <span className="rounded bg-white/70 px-3 py-2 text-xs font-semibold uppercase text-slate-950">{i18nText("AUTO.components.home.hometrustband.line58_8_goi_ngay")}</span>
         </Link>
 
         {trustItems.map((item) => {

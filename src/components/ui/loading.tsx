@@ -1,5 +1,6 @@
 "use client";
 
+import { i18nText } from "@/lib/i18nText";
 import Image from "next/image";
 import React from "react";
 
@@ -12,7 +13,7 @@ interface LoadingProps {
 }
 
 const Loading: React.FC<LoadingProps> = ({
-  message = "Đang tải...",
+  message = i18nText("AUTO.components.ui.loading.extra16_0_dang"),
   size = "md",
   variant = "spinner",
   showMessage = true,
@@ -52,7 +53,7 @@ const Loading: React.FC<LoadingProps> = ({
           src="/images/logo.png"
           width={getLogoSize().width}
           height={getLogoSize().height}
-          alt="Logo loading"
+          alt={i18nText("AUTO.components.ui.loading.line55_0_logo_loading")}
           className="rounded-lg"
         />
       </div>
@@ -65,7 +66,7 @@ const Loading: React.FC<LoadingProps> = ({
         src="/images/logo.png"
         width={getLogoSize().width}
         height={getLogoSize().height}
-        alt="Logo loading"
+        alt={i18nText("AUTO.components.ui.loading.line68_1_logo_loading")}
         className="rounded-lg"
       />
       <div className="flex space-x-1">
@@ -95,7 +96,7 @@ const Loading: React.FC<LoadingProps> = ({
           src="/images/logo.png"
           width={getLogoSize().width}
           height={getLogoSize().height}
-          alt="Logo loading"
+          alt={i18nText("AUTO.components.ui.loading.line98_2_logo_loading")}
           className="rounded-lg"
         />
       </div>

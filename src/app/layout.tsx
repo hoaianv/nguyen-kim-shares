@@ -1,3 +1,4 @@
+import { i18nText } from "@/lib/i18nText";
 import "./globals.css";
 import type { Metadata } from "next";
 import { AuthInitializer } from "@/init/AuthInitializer";
@@ -17,6 +18,7 @@ import { FooterInitializer } from "@/init/FooterInitializer";
 import { CompanyAddressInitializer } from "@/init/CompanyAddressInitializer";
 import { getAll as getAllCompanyAddresses } from "@/apis/common/company-address.apis";
 import { NextIntlClientProvider } from "next-intl";
+import { cookies } from "next/headers";
 
 import dynamic from "next/dynamic";
 import JsonldHome from "@/json/schemaHome";
@@ -24,6 +26,7 @@ import { CategoriesInitializer } from "@/init/CategoriesInitializer";
 import { getAll as getAllMenu } from "@/apis/models/menu.apis";
 import GTMScript from "@/components/analytics/GTMScript";
 import GTMNoScript from "@/components/analytics/GTMNoScript";
+import { CONST_VALUES } from "@/constants/values.constant";
 
 const SupportInitializer = dynamic(() => import("@/init/SupportInitializer"), {
   ssr: false,
@@ -40,9 +43,9 @@ const PageTransition = dynamic(() => import("@/components/ui/PageTransition"), {
 });
 
 export const metadata: Metadata = {
-  title: "Page Not Found - 404",
+  title: i18nText("AUTO.app.line43_0_page_not_found_404"),
   description:
-    "Trang bạn đang tìm kiếm không tồn tại. Vui lòng kiểm tra lại URL hoặc quay lại trang chủ để tiếp tục khám phá các sản phẩm và giải pháp năng lượng của EcoFlow.",
+    i18nText("AUTO.app.line45_1_trang_dang_tim_kiem_khong"),
 };
 
 export default async function RootLayout({
@@ -69,9 +72,11 @@ export default async function RootLayout({
     getAllCompanyAddresses(),
     getAllMenu(),
   ]);
+  const locale =
+    cookies().get(CONST_VALUES.LANGUAGES_CODE)?.value === "en" ? "en" : "vi";
 
   return (
-    <html lang="vi" suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning>
       <head>
         {/* Google Tag Manager */}
         <GTMScript />
@@ -83,7 +88,7 @@ export default async function RootLayout({
         <GTMNoScript />
         <JsonldHome />
         <Toaster />
-        <LoadingScreen message="Đang xử lý..." variant="spinner" size="lg" />
+        <LoadingScreen message={i18nText("AUTO.app.extra91_0_dang_xu_ly")} variant="spinner" size="lg" />
         <ProgressBar />
 
         {/* Initializers - render trên server */}

@@ -1,4 +1,5 @@
 "use client";
+import { i18nText } from "@/lib/i18nText";
 import Button from "@/components/ui/button";
 import { name } from "@/constants/company.constant";
 import Link from "next/link";
@@ -38,12 +39,8 @@ export default function NotFound() {
           <h1 className="mb-4 text-6xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-blue-600">
             404
           </h1>
-          <h2 className="mb-4 text-2xl font-semibold text-slate-800">
-            Trang không tìm thấy
-          </h2>
-          <p className="mb-6 leading-relaxed text-slate-600">
-            Trang bạn đang tìm kiếm đã bị ngắt kết nối hoặc không tồn tại. Hãy quay
-            về trang chủ để khám phá các sản phẩm công nghệ chính hãng của {name}.
+          <h2 className="mb-4 text-2xl font-semibold text-slate-800">{i18nText("AUTO.app.error.line42_0_trang_khong_tim_thay")}</h2>
+          <p className="mb-6 leading-relaxed text-slate-600">{i18nText("AUTO.app.error.line45_1_trang_dang_tim_kiem_da")}{name}.
           </p>
         </div>
 
@@ -64,9 +61,7 @@ export default function NotFound() {
                 strokeWidth={2}
                 d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
               />
-            </svg>
-            Về trang chủ
-          </Link>
+            </svg>{i18nText("AUTO.app.error.line68_2_ve_trang_chu")}</Link>
 
           <Button
             onClick={handleGoBack}
@@ -84,16 +79,13 @@ export default function NotFound() {
                 strokeWidth={2}
                 d="M10 19l-7-7m0 0l7-7m-7 7h18"
               />
-            </svg>
-            Quay lại trang trước
-          </Button>
+            </svg>{i18nText("AUTO.app.error.line88_3_quay_lai_trang_truoc")}</Button>
         </div>
 
         <div className="text-sm text-slate-500">
           <p className="mb-1 font-medium text-yellow-600">
-            {name} - Giải pháp công nghệ chính hãng
-          </p>
-          <p>Laptop, PC, Server, thiết bị mạng từ HP, Dell, Asus, Lenovo</p>
+            {name}{i18nText("AUTO.app.error.line94_4_giai_phap_cong_nghe_chinh")}</p>
+          <p>{i18nText("AUTO.app.error.line96_5_laptop_pc_server_thiet_bi")}</p>
         </div>
       </div>
     </div>

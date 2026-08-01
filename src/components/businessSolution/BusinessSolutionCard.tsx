@@ -1,3 +1,4 @@
+import { i18nText } from "@/lib/i18nText";
 import React from "react";
 import Link from "next/link";
 import { INews } from "@/interfaces/models/INews.interface";
@@ -29,7 +30,7 @@ const BusinessSolutionCard = ({ item }: IProps) => {
         {/* Category */}
         <div className="mb-2">
           <span className="uppercase text-blue-600 text-xs font-bold bg-blue-50 px-2 py-1 rounded inline-block">
-            {item.categoryName || "Giải pháp"}
+            {item.categoryName || i18nText("AUTO.components.businesssolution.businesssolutioncard.line32_0_giai_phap")}
           </span>
         </div>
 
@@ -42,21 +43,19 @@ const BusinessSolutionCard = ({ item }: IProps) => {
 
         {/* Meta Info (Date & Views) */}
         <div className="mb-3 flex flex-wrap items-center gap-4 text-sm text-gray-600">
-          <div className="flex items-center gap-1.5" title="Ngày đăng">
+          <div className="flex items-center gap-1.5" title={i18nText("AUTO.components.businesssolution.businesssolutioncard.line45_1_ngay_dang")}>
             <Calendar className="w-4 h-4 text-gray-400" />
             <span>{item.createdAt ? item.createdAt : ""}</span>
           </div>
 
-          <div className="flex items-center gap-1.5" title="Lượt xem">
+          <div className="flex items-center gap-1.5" title={i18nText("AUTO.components.businesssolution.businesssolutioncard.line50_2_luot_xem")}>
             <Eye className="w-4 h-4 text-gray-400" />
-            <span>{item.views ?? 0} lượt xem</span>
+            <span>{item.views ?? 0}{i18nText("AUTO.components.businesssolution.businesssolutioncard.line52_3_luot_xem")}</span>
           </div>
         </div>
 
         <div className="mt-auto pt-4 border-t border-gray-50">
-          <div className="text-sm font-medium text-blue-600 group-hover:underline flex items-center gap-1">
-            Xem chi tiết
-            <ArrowRight className="w-4 h-4" />
+          <div className="text-sm font-medium text-blue-600 group-hover:underline flex items-center gap-1">{i18nText("AUTO.components.businesssolution.businesssolutioncard.line58_4_xem_chi_tiet")}<ArrowRight className="w-4 h-4" />
           </div>
         </div>
       </div>

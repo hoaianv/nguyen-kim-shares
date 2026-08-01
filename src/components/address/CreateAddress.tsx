@@ -1,5 +1,6 @@
 "use client";
 
+import { i18nText } from "@/lib/i18nText";
 import { remove } from "@/apis/models/address.apis";
 import ModalUserInfo from "@/components/checkout/ModalUserInfo";
 import ConfirmPopover from "@/components/ui/ConfirmPopover";
@@ -38,9 +39,7 @@ export default function CreateAddress({ data }: AddressProps) {
         >
           <Plus className="text-gray-600" size={20} strokeWidth={1.75} />
           <span className="text-blue-500 text-sm sm:text-base">
-            {" "}
-            Thêm địa chỉ mới
-          </span>
+            {" "}{i18nText("AUTO.components.address.createaddress.line42_0_them_dia_chi_moi")}</span>
         </div>
 
         {data?.map((item) => (
@@ -55,19 +54,14 @@ export default function CreateAddress({ data }: AddressProps) {
                   {item.name}
                 </span>
                 {item.isDefault && (
-                  <span className="text-xs text-[#1230B0] p-1 bg-blue-200 rounded-lg whitespace-nowrap">
-                    Mặc định
-                  </span>
+                  <span className="text-xs text-[#1230B0] p-1 bg-blue-200 rounded-lg whitespace-nowrap">{i18nText("AUTO.components.address.createaddress.line59_1_mac_dinh")}</span>
                 )}
               </div>
-              <span className="text-[#82869E] text-xs sm:text-sm break-words">
-                Địa chỉ: {item.address}
+              <span className="text-[#82869E] text-xs sm:text-sm break-words">{i18nText("AUTO.components.address.createaddress.line64_2_dia_chi")}{item.address}
               </span>
-              <span className="text-[#82869E] text-xs sm:text-sm">
-                Điện thoại: {item.phone}
+              <span className="text-[#82869E] text-xs sm:text-sm">{i18nText("AUTO.components.address.createaddress.line67_3_dien_thoai")}{item.phone}
               </span>
-              <span className="text-[#82869E] text-xs sm:text-sm break-words">
-                Email: {item.email}
+              <span className="text-[#82869E] text-xs sm:text-sm break-words">{i18nText("AUTO.components.address.createaddress.extra65_0_email")}{item.email}
               </span>
             </div>
             <div className="w-full sm:w-[15%] mt-3 sm:mt-0">
@@ -76,9 +70,7 @@ export default function CreateAddress({ data }: AddressProps) {
                   onClick={() => handleEdit(item)}
                   className="p-1 px-2 sm:px-1 cursor-pointer border-[1.5px] border-[#DA4343] rounded-lg"
                 >
-                  <span className="text-[#DA4343] text-xs sm:text-sm">
-                    Chỉnh sửa
-                  </span>
+                  <span className="text-[#DA4343] text-xs sm:text-sm">{i18nText("AUTO.components.address.createaddress.line80_4_chinh_sua")}</span>
                 </div>
                 {!item.isDefault && (
                   <ConfirmPopover
@@ -89,8 +81,8 @@ export default function CreateAddress({ data }: AddressProps) {
                         </span>
                       </div>
                     }
-                    title="Xóa địa chỉ"
-                    description="Bạn có chắc chắn muốn xóa địa chỉ này?"
+                    title={i18nText("AUTO.components.address.createaddress.line92_5_xoa_dia_chi")}
+                    description={i18nText("AUTO.components.address.createaddress.line93_6_chac_chan_muon_xoa_dia")}
                     onConfirm={() => remove(item.id)}
                     position="bottom"
                   />

@@ -1,5 +1,6 @@
 "use client";
 
+import { i18nText } from "@/lib/i18nText";
 import InputSearch from "@/components/ui/inputSearch";
 import Popover from "@/components/ui/Popover";
 import { ContactPopup } from "@/components/header/PopupHeader";
@@ -213,7 +214,7 @@ const Header = () => {
               setMobileSearchOpen(false);
             }}
             className="inline-flex h-10 w-10 items-center justify-center rounded-sm border border-slate-200 bg-white text-slate-900 lg:hidden"
-            aria-label="Mở menu"
+            aria-label={i18nText("AUTO.components.header.header.line216_0_mo_menu")}
           >
             {mobileDrawerOpen ? (
               <X className="h-5 w-5" />
@@ -249,13 +250,13 @@ const Header = () => {
             aria-controls="desktop-category-panel"
             aria-label={
               desktopMenuOpen
-                ? "Đóng danh mục sản phẩm"
-                : "Mở danh mục sản phẩm"
+                ? i18nText("AUTO.components.header.header.line252_1_dong_danh_muc_san_pham")
+                : i18nText("AUTO.components.header.header.line253_2_mo_danh_muc_san_pham")
             }
             title={
               desktopMenuOpen
-                ? "Đóng danh mục sản phẩm"
-                : "Mở danh mục sản phẩm"
+                ? i18nText("AUTO.components.header.header.line257_3_dong_danh_muc_san_pham")
+                : i18nText("AUTO.components.header.header.line258_4_mo_danh_muc_san_pham")
             }
           >
             {desktopMenuOpen ? (
@@ -264,14 +265,14 @@ const Header = () => {
               <Menu className="h-4 w-4" />
             )}
             <span className="whitespace-nowrap">
-              {desktopMenuOpen ? "Đóng danh mục" : "Danh mục sản phẩm"}
+              {desktopMenuOpen ? i18nText("AUTO.components.header.header.line267_5_dong_danh_muc") : i18nText("AUTO.components.header.header.line267_6_danh_muc_san_pham")}
             </span>
           </button>
 
           <div className="relative col-span-3 order-3 min-w-0 lg:col-span-1 lg:order-none">
             <div className="relative">
               <InputSearch
-                placeholder="Bạn tìm gì..."
+                placeholder={i18nText("AUTO.components.header.header.line274_7_tim_gi")}
                 onClick={() => {
                   setMobileSearchOpen(false);
                   setDesktopMenuOpen(false);
@@ -293,10 +294,10 @@ const Header = () => {
                 type="button"
                 onClick={() => handleSearch(searchValue)}
                 className="absolute right-0 top-0 inline-flex h-11 w-[94px] items-center justify-center rounded-sm bg-brand text-sm font-semibold text-slate-950 transition hover:opacity-95"
-                aria-label="Tìm kiếm"
+                aria-label={i18nText("AUTO.components.header.header.line296_8_tim_kiem")}
               >
                 <Search className="mr-1.5 h-[18px] w-[18px]" />
-                <span className="hidden sm:inline">Tìm kiếm</span>
+                <span className="hidden sm:inline">{i18nText("AUTO.components.header.header.line299_9_tim_kiem")}</span>
               </button>
             </div>
 
@@ -320,7 +321,7 @@ const Header = () => {
             <Link
               href="/gio-hang"
               className="inline-flex h-10 w-10 items-center justify-center rounded-sm border border-slate-200 text-slate-900 lg:hidden"
-              aria-label="Giỏ hàng"
+              aria-label={i18nText("AUTO.components.header.header.line323_10_gio_hang")}
             >
               <ShoppingCart className="h-5 w-5" />
             </Link>
@@ -365,7 +366,7 @@ const Header = () => {
           >
             <button
               type="button"
-              aria-label="Đóng tìm kiếm"
+              aria-label={i18nText("AUTO.components.header.header.line368_11_dong_tim_kiem")}
               className="absolute inset-0 bg-white/94"
               onClick={() => setMobileSearchOpen(false)}
             />
@@ -378,14 +379,12 @@ const Header = () => {
               className="absolute inset-x-0 top-0 mx-auto flex h-full max-w-[1370px] flex-col bg-white px-4 py-4"
             >
               <div className="flex items-center justify-between gap-3 border-b border-slate-100 pb-3">
-                <h2 className="text-base font-bold text-slate-950">
-                  Tìm kiếm sản phẩm
-                </h2>
+                <h2 className="text-base font-bold text-slate-950">{i18nText("AUTO.components.header.header.line382_12_tim_kiem_san_pham")}</h2>
                 <button
                   type="button"
                   onClick={() => setMobileSearchOpen(false)}
                   className="inline-flex h-10 w-10 items-center justify-center rounded-sm border border-slate-200 bg-white text-slate-900"
-                  aria-label="Đóng tìm kiếm"
+                  aria-label={i18nText("AUTO.components.header.header.line388_13_dong_tim_kiem")}
                 >
                   <X className="h-5 w-5" />
                 </button>

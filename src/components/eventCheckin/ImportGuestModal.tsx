@@ -1,5 +1,6 @@
 "use client";
 
+import { i18nText } from "@/lib/i18nText";
 import { useState, useRef } from "react";
 import { UploadCloud, X, FileSpreadsheet, Loader2 } from "lucide-react";
 import Modal from "@/components/ui/Modal";
@@ -36,15 +37,15 @@ export default function ImportGuestModal({
       !selectedFile.name.endsWith(".xlsx") &&
       !selectedFile.name.endsWith(".xls")
     ) {
-      toast.error("Định dạng file không hợp lệ", {
-        description: "Vui lòng chọn file Excel (.xlsx, .xls)",
+      toast.error(i18nText("AUTO.components.eventcheckin.importguestmodal.line39_0_dinh_dang_file_khong_hop"), {
+        description: i18nText("AUTO.components.eventcheckin.importguestmodal.line40_1_vui_long_chon_file_excel"),
         position: "top-center",
       });
       return;
     }
     if (selectedFile.size > 5 * 1024 * 1024) {
-      toast.error("File quá lớn", {
-        description: "Kích thước file không được vượt quá 5MB",
+      toast.error(i18nText("AUTO.components.eventcheckin.importguestmodal.line46_2_file_qua_lon"), {
+        description: i18nText("AUTO.components.eventcheckin.importguestmodal.line47_3_kich_thuoc_file_khong_duoc"),
         position: "top-center",
       });
       return;
@@ -101,12 +102,10 @@ export default function ImportGuestModal({
           setTimeout(handleRemoveFile, 300);
         }
       }}
-      title="Import Danh sách Khách mời"
+      title={i18nText("AUTO.components.eventcheckin.importguestmodal.line104_4_import_danh_sach_khach_moi")}
     >
       <div className="p-6">
-        <p className="text-sm text-gray-500 mb-4">
-          Tải lên tệp Excel (.xlsx, .xls) để thêm khách mời hàng loạt vào sự kiện.
-        </p>
+        <p className="text-sm text-gray-500 mb-4">{i18nText("AUTO.components.eventcheckin.importguestmodal.line108_5_len_tep_excel_xlsx_xls")}</p>
 
         {!file ? (
           <div
@@ -124,17 +123,15 @@ export default function ImportGuestModal({
             <input
               ref={fileInputRef}
               type="file"
-              accept=".xlsx, .xls, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"
+              accept={i18nText("AUTO.components.eventcheckin.importguestmodal.line127_6_xlsx_xls_application_vnd_openxmlformats")}
               className="hidden"
               onChange={handleChange}
             />
             <div className="w-12 h-12 bg-white rounded-full shadow-sm flex items-center justify-center mb-4">
               <UploadCloud className="w-6 h-6 text-gray-600" />
             </div>
-            <p className="text-sm font-medium text-gray-900 mb-1">
-              Nhấn để tải lên hoặc kéo thả file
-            </p>
-            <p className="text-xs text-gray-500">Hỗ trợ XLS, XLSX (Tối đa 5MB)</p>
+            <p className="text-sm font-medium text-gray-900 mb-1">{i18nText("AUTO.components.eventcheckin.importguestmodal.line135_7_nhan_len_hoac_keo_tha")}</p>
+            <p className="text-xs text-gray-500">{i18nText("AUTO.components.eventcheckin.importguestmodal.line137_8_ho_tro_xls_xlsx_toi")}</p>
           </div>
         ) : (
           <div className="border border-gray-200 rounded-xl p-4 flex items-center justify-between bg-white shadow-sm">
@@ -166,16 +163,14 @@ export default function ImportGuestModal({
             onClick={onClose}
             disabled={importing}
             className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-          >
-            Hủy
-          </button>
+          >{i18nText("AUTO.components.eventcheckin.importguestmodal.line170_9_huy")}</button>
           <button
             onClick={handleSubmit}
             disabled={!file || importing}
             className="px-4 py-2 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-lg hover:bg-blue-700 shadow-sm focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center"
           >
             {importing && <Loader2 className="w-4 h-4 mr-2 animate-spin" />}
-            {importing ? "Đang xử lý..." : "Import dữ liệu"}
+            {importing ? i18nText("AUTO.components.eventcheckin.importguestmodal.line178_10_dang_xu_ly") : i18nText("AUTO.components.eventcheckin.importguestmodal.line178_11_import_du_lieu")}
           </button>
         </div>
       </div>

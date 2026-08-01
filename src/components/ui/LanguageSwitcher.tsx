@@ -3,18 +3,24 @@
 import { useState, useMemo, useEffect } from "react";
 import { Globe, Check } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
-import { LANGUAGES } from "@/constants/values.constant";
-import { useGoogleTranslateEngine, type Lang } from "@/components/GoogleTranslate";
+import { CONST_VALUES, LANGUAGES } from "@/constants/values.constant";
 
-function readGoogTransToLang(): Lang | null {
-  const m = document.cookie.match(/(?:^|;\s*)googtrans=([^;]+)/);
+type Lang = "vi" | "en";
+
+function setCookie(name: string, value: string, days = 365) {
+  const expires = new Date(Date.now() + days * 864e5).toUTCString();
+  document.cookie = `${name}=${value}; expires=${expires}; path=/; SameSite=Lax`;
+}
+
+function readLocaleCookie(): Lang | null {
+  const m = document.cookie.match(
+    new RegExp(`(?:^|;\\s*)${CONST_VALUES.LANGUAGES_CODE}=([^;]+)`),
+  );
   if (!m) return null;
 
   try {
     const value = decodeURIComponent(m[1]);
-    const parts = value.split("/");
-    const to = parts[2] as Lang | undefined;
-    return to === "vi" || to === "en" ? to : null;
+    return value === "vi" || value === "en" ? value : null;
   } catch {
     return null;
   }
@@ -26,13 +32,12 @@ export default function LanguageSwitcher({
   currentLocale?: Lang;
 }) {
   const [isOpen, setIsOpen] = useState(false);
-  const { switchTo, isReady } = useGoogleTranslateEngine("vi");
 
   const initialLocale: Lang = currentLocale === "en" ? "en" : "vi";
   const [activeLocale, setActiveLocale] = useState<Lang>(initialLocale);
 
   useEffect(() => {
-    const cookieLang = readGoogTransToLang();
+    const cookieLang = readLocaleCookie();
     if (cookieLang) setActiveLocale(cookieLang);
   }, []);
 
@@ -47,8 +52,9 @@ export default function LanguageSwitcher({
 
     if (next === activeLocale) return;
 
-    switchTo(next);
+    setCookie(CONST_VALUES.LANGUAGES_CODE, next);
     setActiveLocale(next);
+    window.location.reload();
   };
 
   const optionClass = (isActive: boolean) =>
@@ -63,7 +69,6 @@ export default function LanguageSwitcher({
         <button
           onClick={() => setIsOpen((v) => !v)}
           className="nk-focus-ring inline-flex items-center gap-2 rounded-lg border border-border bg-background px-3 py-2 text-sm font-medium text-foreground transition-all duration-200 hover:border-foreground/15 hover:bg-muted/60"
-          title={!isReady() ? "Đang tải bộ dịch..." : ""}
           type="button"
         >
           <Globe size={16} className="text-muted-foreground" />
@@ -129,7 +134,6 @@ export default function LanguageSwitcher({
         <button
           onClick={() => setIsOpen((v) => !v)}
           className="nk-focus-ring inline-flex items-center gap-2 rounded-lg border border-border bg-background p-2 text-foreground transition-colors duration-200 hover:border-foreground/15 hover:bg-muted/60"
-          title={!isReady() ? "Đang tải bộ dịch..." : ""}
           type="button"
         >
           <span className="text-lg">{currentLanguage.flag}</span>

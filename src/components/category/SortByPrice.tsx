@@ -1,12 +1,13 @@
 "use client";
 
+import { i18nText } from "@/lib/i18nText";
 import { ArrowDownWideNarrow, ArrowUpWideNarrow } from "lucide-react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { ESlugType } from "@/interfaces/models/ISlug.interface";
 
 const SORT_OPTIONS = [
-  { label: "Giá tăng dần", value: "ASC" as const, icon: ArrowUpWideNarrow },
-  { label: "Giá giảm dần", value: "DESC" as const, icon: ArrowDownWideNarrow },
+  { label: i18nText("AUTO.components.category.sortbyprice.line8_0_gia_tang_dan"), value: "ASC" as const, icon: ArrowUpWideNarrow },
+  { label: i18nText("AUTO.components.category.sortbyprice.line9_1_gia_giam_dan"), value: "DESC" as const, icon: ArrowDownWideNarrow },
 ];
 
 export default function SortByPrice() {

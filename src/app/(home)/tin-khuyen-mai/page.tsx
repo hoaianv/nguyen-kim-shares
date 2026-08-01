@@ -1,3 +1,4 @@
+import { i18nText } from "@/lib/i18nText";
 import { getListPromotion } from "@/apis/models/promotion.apis";
 import CardPromotion from "@/components/promotion/cardPromotion";
 import HeadPromotion from "@/components/promotion/HeadPromotion";
@@ -14,7 +15,7 @@ export default async function page({ searchParams }: PageProps) {
   const page = searchParams["page"] ?? "1";
 
   const response = await getListPromotion(page);
-  const data = getValidData(response);
+  const data = getValidData(response) as any;
 
   return (
     <div className="">
@@ -25,7 +26,7 @@ px-4 sm:px-6 lg:px-8 xl:px-16 2xl:px-20"
         {/* Breadcrumb */}
         <div className="pt-2">
           <Breadcrumb
-            items={[{ name: "Tin khuyến mãi", url: "/tin-khuyen-mai" }]}
+            items={[{ name: i18nText("AUTO.app.tin.khuyen.mai.line28_0_tin_khuyen_mai"), url: "/tin-khuyen-mai" }]}
           />
         </div>
 

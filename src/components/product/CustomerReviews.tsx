@@ -1,3 +1,4 @@
+import { i18nText } from "@/lib/i18nText";
 import React from "react";
 import { Star, ThumbsUp, Shield, User } from "lucide-react";
 
@@ -5,52 +6,52 @@ const CustomerReviews = () => {
   const reviews = [
     {
       id: 1,
-      name: "Alex Johnson",
+      name: i18nText("AUTO.components.product.customerreviews.line8_0_alex_johnson"),
       avatar: "AJ",
       rating: 5,
       date: "2024-01-15",
       verified: true,
       helpful: 23,
-      title: "Excellent gaming performance!",
+      title: i18nText("AUTO.components.product.customerreviews.line14_1_excellent_gaming_performance"),
       content:
         "This laptop exceeded my expectations. The RTX 3060 handles all modern games at high settings with great frame rates. The 144Hz display is smooth and the build quality feels premium. Highly recommended for gaming enthusiasts.",
       images: 2,
     },
     {
       id: 2,
-      name: "Sarah Chen",
+      name: i18nText("AUTO.components.product.customerreviews.line21_2_sarah_chen"),
       avatar: "SC",
       rating: 4,
       date: "2024-01-10",
       verified: true,
       helpful: 18,
-      title: "Great laptop, minor heating issues",
+      title: i18nText("AUTO.components.product.customerreviews.line27_3_great_laptop_minor_heating_issues"),
       content:
         "Overall very satisfied with this purchase. Performance is outstanding for both gaming and work. The keyboard feels great and the RGB lighting is customizable. Only downside is it can get warm during intensive gaming sessions.",
       images: 0,
     },
     {
       id: 3,
-      name: "Mike Rodriguez",
+      name: i18nText("AUTO.components.product.customerreviews.line34_4_mike_rodriguez"),
       avatar: "MR",
       rating: 5,
       date: "2024-01-05",
       verified: true,
       helpful: 31,
-      title: "Perfect for content creation",
+      title: i18nText("AUTO.components.product.customerreviews.line40_5_perfect_for_content_creation"),
       content:
         "As a video editor, I need powerful hardware that can handle 4K rendering. This laptop delivers excellent performance with the Ryzen 7 and RTX 3060 combo. The display quality is fantastic and color accuracy is impressive.",
       images: 1,
     },
     {
       id: 4,
-      name: "Emily Davis",
+      name: i18nText("AUTO.components.product.customerreviews.line47_6_emily_davis"),
       avatar: "ED",
       rating: 4,
       date: "2024-01-02",
       verified: false,
       helpful: 12,
-      title: "Solid choice for the price",
+      title: i18nText("AUTO.components.product.customerreviews.line53_7_solid_choice_for_price"),
       content:
         "Good value for money. The performance is reliable and it handles multitasking well. Battery life could be better for non-gaming use, but that's expected with gaming laptops. The design looks sleek and professional.",
       images: 0,
@@ -71,9 +72,7 @@ const CustomerReviews = () => {
   return (
     <div className="bg-white  rounded-lg shadow-sm">
       <div className="border-b border-gray-200 p-6">
-        <h3 className="text-xl font-semibold text-[#111827] mb-6">
-          Customer Reviews
-        </h3>
+        <h3 className="text-xl font-semibold text-[#111827] mb-6">{i18nText("AUTO.components.product.customerreviews.line75_8_customer_reviews")}</h3>
 
         {/* Rating Summary */}
         <div className="grid md:grid-cols-2 gap-8 mb-6">
@@ -94,7 +93,7 @@ const CustomerReviews = () => {
                 />
               ))}
             </div>
-            <p className="text-gray-600">Based on {totalReviews} reviews</p>
+            <p className="text-gray-600">{i18nText("AUTO.components.product.customerreviews.line97_9_based_on")}{totalReviews} reviews</p>
           </div>
 
           {/* Rating Distribution */}
@@ -144,7 +143,7 @@ const CustomerReviews = () => {
                   {review.verified && (
                     <div className="flex items-center space-x-1 text-[#16A34A] text-sm">
                       <Shield className="h-4 w-4" />
-                      <span>Verified Buyer</span>
+                      <span>{i18nText("AUTO.components.product.customerreviews.line147_10_verified_buyer")}</span>
                     </div>
                   )}
                 </div>
@@ -176,15 +175,14 @@ const CustomerReviews = () => {
                   <div className="flex items-center space-x-2 mb-3">
                     <User className="h-4 w-4 text-gray-400" />
                     <span className="text-sm text-gray-500">
-                      {review.images} photos attached
-                    </span>
+                      {review.images}{i18nText("AUTO.components.product.customerreviews.line179_11_photos_attached")}</span>
                   </div>
                 )}
 
                 <div className="flex items-center justify-between text-sm">
                   <button className="flex items-center space-x-1 text-gray-500 hover:text-[#1435C3] transition-colors">
                     <ThumbsUp className="h-4 w-4" />
-                    <span>Helpful ({review.helpful})</span>
+                    <span>{i18nText("AUTO.components.product.customerreviews.line187_12_helpful")}{review.helpful})</span>
                   </button>
 
                   <button className="text-gray-500 hover:text-[#1435C3] transition-colors">
@@ -198,9 +196,7 @@ const CustomerReviews = () => {
 
         {/* Load More Button */}
         <div className="text-center pt-4">
-          <button className="bg-gray-100 hover:bg-gray-200 text-gray-700 px-6 py-2  rounded-lg  transition-colors">
-            Load More Reviews
-          </button>
+          <button className="bg-gray-100 hover:bg-gray-200 text-gray-700 px-6 py-2  rounded-lg  transition-colors">{i18nText("AUTO.components.product.customerreviews.line202_13_load_more_reviews")}</button>
         </div>
       </div>
     </div>

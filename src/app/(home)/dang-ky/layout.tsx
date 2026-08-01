@@ -1,3 +1,4 @@
+import { i18nText } from "@/lib/i18nText";
 import {
   descriptionCompany,
   name,
@@ -6,17 +7,17 @@ import {
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: `Đăng ký | ${name}`,
-  description: `${descriptionCompany} – Đăng ký tài khoản để mua sắm laptop, PC và thiết bị công nghệ chính hãng với nhiều ưu đãi.`,
+  title: i18nText("AUTO.app.dang.ky.line9_0_dang_ky", { value0: name }),
+  description: i18nText("AUTO.app.dang.ky.line10_1_dang_ky_khoan_mua_sam", { value0: descriptionCompany }),
   alternates: {
     canonical: `${urlWebsite}dang-ky`,
   },
   openGraph: {
-    title: `Đăng ký | ${name}`,
+    title: i18nText("AUTO.app.dang.ky.line15_2_dang_ky", { value0: name }),
     description:
-      "Tạo tài khoản mới tại " +
+      i18nText("AUTO.app.dang.ky.line17_3_tao_khoan_moi") +
       name +
-      " để trải nghiệm dịch vụ và nhận ưu đãi độc quyền.",
+      i18nText("AUTO.app.dang.ky.line19_4_trai_nghiem_dich_vu_nhan"),
     url: `${urlWebsite}dang-ky`,
     siteName: name,
     type: "website",
