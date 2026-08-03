@@ -30,6 +30,6 @@ export const keywords = [
   i18nText("COMPANY.keywords.wholesalePrintersOfficeEquipment"),
 ];
 
-export const logo = "https://media.vitinhnguyenkim.vn/uploads/logo.png";
+export const logo = "https://media.vitinhnguyenkim.vn/uploads/advertises/2026-07/20260729_032613_wcU6TgyF30.png";
 export const hotline = "19006739";
 export const technicalHotline = "0948275005";
