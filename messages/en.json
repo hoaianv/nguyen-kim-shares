@@ -51,7 +51,7 @@
     "contact": "Contact",
     "add_to_cart": "Add to cart",
     "get_expert_advice": "Get advice from experts",
-    "buy_now": "Mua ngay",
+    "buy_now": "Buy now",
     "brand": "Trademark",
     "choose": "Select",
     "sort_by": "Sort by",
@@ -939,7 +939,7 @@
         },
         "qrthumbnail": {
           "line56_2_qr": "Download QR",
-          "line46_1_xem_qr": "Xem QR",
+          "line46_1_xem_qr": "View QR",
           "line28_0_chua_qr": "No QR yet"
         }
       },
@@ -1022,7 +1022,7 @@
           "extra119_0_tim_thay_san_pham": "Found the product {value0}"
         },
         "promotionbar": {
-          "line58_1_xem_ngay": "Xem ngay",
+          "line58_1_xem_ngay": "View now",
           "line54_0_khuyen_mai_uu_dai_cap": "Latest promotions, offers and updates"
         }
       },
@@ -1596,7 +1596,7 @@
           "line116_8_phan_hoi_vong_5_phut": "Response within 5 minutes.",
           "line84_7_tu_van_vien_chuyen_nghiep": "Professional consultant",
           "line81_6_ho_thi_my_linh": "Ho Thi My Linh",
-          "line78_5_kinh_doanh_online": "Kinh doanh Online",
+          "line78_5_kinh_doanh_online": "Online Sales",
           "line64_4_dong": "Close",
           "line56_3_chung_toi_luon_san_sang": "We are always ready to assist you.",
           "line53_2_ho_tro_khach_hang": "Customer support",

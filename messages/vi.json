@@ -1751,22 +1751,22 @@
     }
   },
   "COMPANY": {
-    "altLogo": "Logo C?ng ty Vi T?nh Nguy?n Kim",
-    "jsonHomePrimary": "Vi T?nh Nguy?n Kim - Chuy?n Laptop, PC & Thi?t B? C?ng Ngh?",
-    "jsonHomeSecondary": "Vi T?nh Nguy?n Kim - C?a h?ng c?ng ngh? ch?nh h?ng v?i gi? t?t nh?t",
-    "descriptionCompany": "C?ng ty TNHH Vi T?nh Nguy?n Kim ???c th?p l?n t? n?m 2004, l? n?i giao thoa gi?a c?ng ngh? v? con ng??i, l? c?u n?i ??a nh?ng tinh hoa k? thu?t s? ??n v?i m?i gia ??nh Vi?t.",
-    "description": "Chuy?n cung c?p laptop, m?y t?nh PC, m?y in, m?y scan v? c?c thi?t b? c?ng ngh? ch?nh h?ng v?i gi? t?t nh?t th? tr??ng. B?o h?nh ch?nh h?ng, uy t?n, ch?t l??ng.",
+    "altLogo": "Logo Công ty Vi Tính Nguyên Kim",
+    "jsonHomePrimary": "Vi Tính Nguyên Kim - Chuyên Laptop, PC & Thiết Bị Công Nghệ",
+    "jsonHomeSecondary": "Vi Tính Nguyên Kim - Cửa hàng công nghệ chính hãng với giá tốt nhất",
+    "descriptionCompany": "Công ty TNHH Vi Tính Nguyên Kim được thành lập từ năm 2004, là nơi giao thoa giữa công nghệ và con người, là cầu nối đưa những tinh hoa kỹ thuật số đến với mọi gia đình Việt.",
+    "description": "Chuyên cung cấp laptop, máy tính PC, máy in, máy scan và các thiết bị công nghệ chính hãng với giá tốt nhất thị trường. Bảo hành chính hãng, uy tín, chất lượng.",
     "keywords": {
-      "wholesaleComputerComponents": "b?n s? linh ki?n m?y t?nh",
-      "wholesaleComputerPartsSupplier": "cung c?p linh ki?n m?y t?nh gi? s?",
-      "computerPartsDistributor": "ph?n ph?i linh ki?n m?y t?nh",
-      "officeComputerWholesaler": "b?n bu?n m?y t?nh v?n ph?ng",
-      "wholesaleOfficeEquipmentSupplier": "cung c?p thi?t b? v?n ph?ng gi? s?",
-      "technologyEquipmentDistributor": "??i l? ph?n ph?i thi?t b? c?ng ngh?",
-      "computerAccessoriesDistributor": "ph?n ph?i ph? ki?n m?y t?nh",
-      "technologyEquipmentSupplier": "nh? cung c?p thi?t b? c?ng ngh?",
-      "bulkComputerComponents": "linh ki?n m?y t?nh s? l??ng l?n",
-      "wholesalePrintersOfficeEquipment": "b?n s? m?y in & thi?t b? v?n ph?ng"
+      "wholesaleComputerComponents": "bán sỉ linh kiện máy tính",
+      "wholesaleComputerPartsSupplier": "cung cấp linh kiện máy tính giá sỉ",
+      "computerPartsDistributor": "phân phối linh kiện máy tính",
+      "officeComputerWholesaler": "bán buôn máy tính văn phòng",
+      "wholesaleOfficeEquipmentSupplier": "cung cấp thiết bị văn phòng giá sỉ",
+      "technologyEquipmentDistributor": "đại lý phân phối thiết bị công nghệ",
+      "computerAccessoriesDistributor": "phân phối phụ kiện máy tính",
+      "technologyEquipmentSupplier": "nhà cung cấp thiết bị công nghệ",
+      "bulkComputerComponents": "linh kiện máy tính số lượng lớn",
+      "wholesalePrintersOfficeEquipment": "bán sỉ máy in & thiết bị văn phòng"
     }
   }
 }
