@@ -210,16 +210,16 @@ export function ContactPopup() {
       initial={{ opacity: 0, y: 12, scale: 0.98 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ duration: 0.22, ease: "easeOut" }}
-      className="w-[min(320px,calc(100vw-2rem))] text-slate-900 sm:w-[520px] lg:w-[620px]"
+      className="w-[min(440px,calc(100vw-2rem))] text-slate-900 sm:w-[680px] lg:w-[820px]"
     >
-      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+      <div className="grid grid-cols-1 items-start gap-3 sm:grid-cols-2">
         {Object.entries(support).map(([group, members], groupIndex) => (
           <motion.div
             key={group}
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: groupIndex * 0.05 }}
-            className="rounded-lg bg-white p-4 shadow-2xl border border-gray-100"
+            className="rounded-lg border border-gray-100 bg-white p-4 shadow-2xl"
           >
             <h4 className="mb-4 flex items-center gap-2 text-sm font-bold text-slate-950">
               <span
@@ -228,13 +228,25 @@ export function ContactPopup() {
               />
               {group}
             </h4>
-            <ul className="space-y-6">
+            <ul className="grid grid-cols-1 gap-x-2 gap-y-2 sm:grid-cols-2">
               {members.map((m) => (
-                <li key={m.id} className="flex flex-col text-sm">
+                <li key={m.id} className="min-w-0 text-sm">
                   <div className="order-1 text-sm font-bold uppercase tracking-wide text-slate-500">
                     {m.title}
                   </div>
-                  <div className="order-2 mt-1 flex items-center gap-1.5 text-xs text-slate-600 sm:order-3 sm:mt-1.5">
+                  <div className="mt-1.5 flex items-center gap-2">
+                    <Phone
+                      size={16}
+                      className="shrink-0 text-brand-deep"
+                    />
+                    <a
+                      href={`tel:${m.phone}`}
+                      className="min-w-0 text-base font-bold tracking-wide text-slate-950 transition hover:text-brand-strong hover:underline"
+                    >
+                      {m.phone}
+                    </a>
+                  </div>
+                  <div className="mt-1.5 flex items-center gap-1.5 text-xs text-slate-600">
                     <Mail
                       size={14}
                       className="shrink-0 text-brand-deep"
@@ -244,18 +256,6 @@ export function ContactPopup() {
                       className="truncate transition hover:text-brand-strong hover:underline"
                     >
                       {m.email}
-                    </a>
-                  </div>
-                  <div className="order-3 mt-3 flex items-center gap-2 rounded-md bg-slate-50 px-3 py-2 sm:order-2 sm:mt-1.5 sm:bg-transparent sm:p-0">
-                    <Phone
-                      size={16}
-                      className="shrink-0 text-brand-deep"
-                    />
-                    <a
-                      href={`tel:${m.phone}`}
-                      className="text-base font-bold tracking-wide text-slate-950 transition hover:text-brand-strong hover:underline"
-                    >
-                      {m.phone}
                     </a>
                   </div>
                 </li>

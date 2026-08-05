@@ -6,10 +6,10 @@ export const jsonHome = [
   i18nText("COMPANY.jsonHomeSecondary"),
 ];
 export const address =
-  "245B Trần Quang Khải, phường Tân Định, Thành phố Hồ Chí Minh, Việt Nam";
+  "P1901, Tầng 19, Saigon Trade Center, 37 Tôn Đức  Thắng, phường Sài Gòn, TP. Hồ Chí Minh";
 
-export const name = "Vi Tính Nguyên Kim";
-export const nameCompany = "Công ty TNHH Vi Tính Nguyên Kim";
+export const name = "Công Ty Cổ Phần Công Nghệ Vi Tính Nguyên Kim";
+export const nameCompany = "Công Ty Cổ Phần Công Nghệ Vi Tính Nguyên Kim";
 export const descriptionCompany = i18nText("COMPANY.descriptionCompany");
 export const nameSite = "Nguyên Kim";
 export const nameSiteUpcase = "NGUYÊN KIM";

@@ -19,12 +19,11 @@ export default function ProductCardPopup({
 }: ProductPopupProps) {
   return (
     <div
-      className={`w-[360px] overflow-hidden rounded-lg border border-border bg-background shadow-[0_18px_48px_-34px_rgba(15,23,42,0.48)] ${
-        className || ""
-      }`}
+      className={`w-[360px] overflow-hidden rounded-lg border border-border bg-background shadow-[0_18px_48px_-34px_rgba(15,23,42,0.48)] ${className || ""
+        }`}
     >
-      <div className="border-b border-border bg-slate-950 px-4 py-3">
-        <h3 className="text-sm font-semibold uppercase leading-tight text-white">
+      <div className="border-b border-border bg-[#ffb716] px-4 py-3">
+        <h3 className="text-base font-bold uppercase leading-tight text-white">
           {data.name}
         </h3>
       </div>

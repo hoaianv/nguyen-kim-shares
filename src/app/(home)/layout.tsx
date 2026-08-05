@@ -9,7 +9,6 @@ import {
 import { domain } from "@/constants/routes";
 import { Metadata } from "next";
 import ScrollTop from "@/components/ui/ScrollTop";
-import LanguageSwitcher from "@/components/ui/LanguageSwitcher";
 import { cookies } from "next/headers";
 import { CONST_VALUES } from "@/constants/values.constant";
 

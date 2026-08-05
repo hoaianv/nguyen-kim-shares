@@ -2,7 +2,6 @@ import {
   getCategoriesProducts,
   getProductsFlashSale,
   getProductsHot,
-  getProductsRecommend,
 } from "@/apis/models/products.apis";
 import { getListPromotionHome } from "@/apis/models/promotion.apis";
 import BannerLeftRight from "@/components/home/BannerLeftRight";

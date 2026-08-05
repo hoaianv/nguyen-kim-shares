@@ -41,7 +41,6 @@ const Toaster = dynamic(() => import("@/components/ui/sonner"), { ssr: false });
 const PageTransition = dynamic(() => import("@/components/ui/PageTransition"), {
   ssr: false,
 });
-
 export const metadata: Metadata = {
   title: i18nText("AUTO.app.line43_0_page_not_found_404"),
   description:

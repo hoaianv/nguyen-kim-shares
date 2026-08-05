@@ -83,7 +83,7 @@ export default function Banner() {
 
   return (
     <motion.section
-      className="mx-auto mt-3 w-full max-w-[1520px] px-3 sm:px-4 lg:px-6"
+      className="mx-auto pt-3 w-full max-w-[1520px] px-3 sm:px-4 lg:px-6"
       initial={reduceMotion ? false : { opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{

@@ -481,7 +481,7 @@
           "line117_4_cong_nghe_chinh_hang_dich": "- Công nghệ chính hãng, Dịch vụ tận tâm",
           "line111_3_san_pham": "Sản phẩm",
           "line87_2_ve_trang_chu": "Về trang chủ",
-          "line62_1_trang_dang_tim_kiem_da": "Trang bạn đang tìm kiếm đã ngắt kết nối hoặc không tồn tại. Hãy quay về trang chính để khám phá các giải pháp công nghệ chính hãng của Vi Tính Nguyên Kim.",
+          "line62_1_trang_dang_tim_kiem_da": "Trang bạn đang tìm kiếm đã ngắt kết nối hoặc không tồn tại. Hãy quay về trang chính để khám phá các giải pháp công nghệ chính hãng của Công Ty Cổ Phần Công Nghệ Vi Tính Nguyên Kim.",
           "line59_0_he_thong_khong_phan_hoi": "Hệ thống không phản hồi"
         }
       },
@@ -950,7 +950,7 @@
           "line280_11_da_thong_bao_bo_cong": "Đã thông báo Bộ Công Thương",
           "line258_10_thoi_gian_lam_viec": "Thời gian làm việc:",
           "line247_9_dia_chi_tru_so_chinh": "Địa chỉ trụ sở chính",
-          "line221_8_cong_ty_tnhh_vi_tinh": "Công ty TNHH Vi tính Nguyên Kim",
+          "line221_8_cong_ty_tnhh_vi_tinh": "Công ty TNHH Công Ty Cổ Phần Công Nghệ Vi Tính Nguyên Kim",
           "line39_7_tu_van_giai_dap_moi": "Tư vấn, giải đáp mọi thắc mắc",
           "line38_6_ho_tro_nhiet_tinh": "Hỗ trợ nhiệt tình",
           "line34_5_gia_ca_hop_ly_nhieu": "Giá cả hợp lý, nhiều ưu đãi tốt",
@@ -1444,7 +1444,7 @@
           "line282_18_viec_lam_lien_quan": "Việc làm liên quan",
           "line272_17_xem_do": "(Xem bản đồ)",
           "line262_16_245b_tran_quang_khai_phuong": "245B Trần Quang Khải, Phường Tân Định, TP. Hồ Chí Minh",
-          "line256_15_cong_ty_tnhh_vi_tinh": "Công ty TNHH Vi tính Nguyên Kim",
+          "line256_15_cong_ty_tnhh_vi_tinh": "Công ty TNHH Công Ty Cổ Phần Công Nghệ Vi Tính Nguyên Kim",
           "line227_14_company_banner": "Company banner",
           "line206_13_dia_diem_lam_viec": "ĐỊA ĐIỂM LÀM VIỆC",
           "line197_12_hinh_thuc": "HÌNH THỨC",
@@ -1751,10 +1751,10 @@
     }
   },
   "COMPANY": {
-    "altLogo": "Logo Công ty Vi Tính Nguyên Kim",
-    "jsonHomePrimary": "Vi Tính Nguyên Kim - Chuyên Laptop, PC & Thiết Bị Công Nghệ",
-    "jsonHomeSecondary": "Vi Tính Nguyên Kim - Cửa hàng công nghệ chính hãng với giá tốt nhất",
-    "descriptionCompany": "Công ty TNHH Vi Tính Nguyên Kim được thành lập từ năm 2004, là nơi giao thoa giữa công nghệ và con người, là cầu nối đưa những tinh hoa kỹ thuật số đến với mọi gia đình Việt.",
+    "altLogo": "Logo Công ty Công Ty Cổ Phần Công Nghệ Vi Tính Nguyên Kim",
+    "jsonHomePrimary": "Công Ty Cổ Phần Công Nghệ Vi Tính Nguyên Kim - Chuyên Laptop, PC & Thiết Bị Công Nghệ",
+    "jsonHomeSecondary": "Công Ty Cổ Phần Công Nghệ Vi Tính Nguyên Kim - Cửa hàng công nghệ chính hãng với giá tốt nhất",
+    "descriptionCompany": "Công ty TNHH Công Ty Cổ Phần Công Nghệ Vi Tính Nguyên Kim được thành lập từ năm 2026, là nơi giao thoa giữa công nghệ và con người, là cầu nối đưa những tinh hoa kỹ thuật số đến với mọi gia đình Việt.",
     "description": "Chuyên cung cấp laptop, máy tính PC, máy in, máy scan và các thiết bị công nghệ chính hãng với giá tốt nhất thị trường. Bảo hành chính hãng, uy tín, chất lượng.",
     "keywords": {
       "wholesaleComputerComponents": "bán sỉ linh kiện máy tính",
