@@ -5,6 +5,12 @@ import { bannerKeys } from "@/constants/values.constant";
 import Image from "next/image";
 import Link from "next/link";
 
+const sideBannerClassName =
+  "fixed top-[28%] z-10 hidden [--side-banner-width:120px] min-[1824px]:block min-[1920px]:[--side-banner-width:160px]";
+
+const sideBannerOffset =
+  "calc((100vw - 1520px) / 2 - var(--side-banner-width) - 16px)";
+
 export default function BannerLeftRight() {
   const { banner } = useStateStore();
   const bannerLeft = banner[bannerKeys.bannerLeftScreen]?.advertises[0];
@@ -17,11 +23,11 @@ export default function BannerLeftRight() {
       {/* Banner Left */}
       {bannerLeft && (
         <motion.div
-          className="fixed left-2 top-[28%] z-10 hidden xl:block 2xl:left-4"
+          className={sideBannerClassName}
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          style={{ position: "fixed" }}
+          style={{ left: sideBannerOffset }}
         >
           <Link
             href={bannerLeft.link || "#"}
@@ -34,7 +40,7 @@ export default function BannerLeftRight() {
               alt={bannerLeft.title}
               width={bannerLeft.width}
               height={bannerLeft.height}
-              className="rounded-lg shadow-lg w-[100px] h-auto xl:w-[120px] 2xl:w-[160px]"
+              className="h-auto w-[var(--side-banner-width)] rounded-lg shadow-lg"
               priority
             />
           </Link>
@@ -44,11 +50,11 @@ export default function BannerLeftRight() {
       {/* Banner Right */}
       {bannerRight && (
         <motion.div
-          className="fixed right-2 top-[28%] z-10 hidden xl:block 2xl:right-4"
+          className={sideBannerClassName}
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          style={{ position: "fixed" }}
+          style={{ right: sideBannerOffset }}
         >
           <Link
             href={bannerRight.link}
@@ -61,7 +67,7 @@ export default function BannerLeftRight() {
               alt={bannerRight.title}
               width={bannerRight.width}
               height={bannerRight.height}
-              className="rounded-lg shadow-lg w-[100px] h-auto xl:w-[120px] 2xl:w-[160px]"
+              className="h-auto w-[var(--side-banner-width)] rounded-lg shadow-lg"
               priority
             />
           </Link>
