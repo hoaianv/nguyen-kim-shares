@@ -30,15 +30,8 @@ const CategoriesProducts = dynamic(
   { loading: () => <SkeletonLoader height="h-48" />, ssr: false }
 );
 
-const TopSellingProducts = dynamic(
-  () => import("@/components/home/topSellingProducts"),
-  { loading: () => <SkeletonLoader height="h-48" />, ssr: false }
-);
 
-const HomeTrustBand = dynamic(() => import("@/components/home/HomeTrustBand"), {
-  ssr: false,
-  loading: () => <SkeletonLoader height="h-24" />,
-});
+
 
 
 
@@ -53,18 +46,23 @@ export default async function Home() {
 
   return (
     <>
-      <div className="theme-page pb-8">
+      <div className="  pb-8">
         <Banner />
         <LazySection>
           <GroupBanner bannerKey="bannerBottom" columns={4} gap={3} />
         </LazySection>
 
-        <LazySection>
-          <HomeTrustBand />
-        </LazySection>
+
 
         <LazySection height="h-48">
-          <TopSellingProducts data={getValidData(productsHot) ?? []} />
+
+
+
+          <ProductCarouselSection
+
+            data={getValidData(productsHot) ?? []}
+            bannerKey={bannerKeys.bannerTopSellingHome}
+          />
         </LazySection>
 
         <LazySection height="h-48">

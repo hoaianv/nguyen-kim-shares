@@ -77,13 +77,13 @@ const CategoriesProductsSection = ({
         text-sm font-semibold
         transition-colors duration-200
         ${isActive
-                        ? "bg-[var(--item-color)] text-white shadow-[0_6px_18px_rgba(15,23,42,0.06)] ring-1 ring-white/70"
+                        ? "bg-[var(--item-color)] text-[#ea6158] shadow-[0_6px_18px_rgba(15,23,42,0.06)] ring-1 ring-white/70"
                         : "bg-white/85 text-[#ea6158] hover:bg-[var(--item-color)] hover:text-white"
                       }
       `}
                   >
-                    <span className="truncate text-base font-bold">
-                      {need.title}
+                    <span className="truncate text-sm font-bold">
+                      {need.title?.toUpperCase()}
                     </span>
                   </button>
                 );

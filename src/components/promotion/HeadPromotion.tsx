@@ -9,7 +9,7 @@ export default function HeadPromotion() {
         <span className="h-2.5 w-2.5 rounded-full bg-emerald-500 animate-pulse" />
         {t("PROMOTION.ongoing_offers")}
       </div>
-      <h1 className="mt-2 text-lg sm:text-2xl font-semibold tracking-tight text-zinc-900">
+      <h1 className="mt-2 text-lg sm:text-2xl font-semibold  text-zinc-900">
         {t("PROMOTION.promotion_news")}
       </h1>
       <p className="mt-1 text-xs sm:text-sm text-zinc-600">

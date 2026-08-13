@@ -24,7 +24,7 @@ const navBase =
 
 export default function ProductCarouselSection({
   data,
-  bannerKey = bannerKeys.bannerTopSellingHome,
+  bannerKey = "",
 }: ProductCarouselSectionProps) {
   const reduceMotion = useReducedMotion();
   const { banner } = useStateStore();

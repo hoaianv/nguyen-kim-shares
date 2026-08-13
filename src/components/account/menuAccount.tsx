@@ -19,7 +19,7 @@ export default function MenuAccount() {
       <div className="p-3 pb-2">
         <div className="mb-3 h-1.5 w-full rounded-full bg-gradient-to-r from-amber-400 via-orange-400 to-rose-400" />
         <div className="flex items-center gap-2">
-          <span className="text-lg font-semibold tracking-tight text-slate-950">
+          <span className="text-lg font-semibold  text-slate-950">
             {t("ACCOUNT.account_overview")}
           </span>
         </div>

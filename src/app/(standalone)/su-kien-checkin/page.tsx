@@ -52,7 +52,7 @@ export default function EventCheckinPage() {
               <ClipboardCheck className="w-5 h-5 text-white" />
             </div>
             <div>
-              <h1 className="text-2xl font-semibold text-gray-900 tracking-tight">{i18nText("AUTO.app.standalone.su.kien.checkin.line55_0_quan_ly_check_in_su")}</h1>
+              <h1 className="text-2xl font-semibold text-gray-900 ">{i18nText("AUTO.app.standalone.su.kien.checkin.line55_0_quan_ly_check_in_su")}</h1>
               <p className="text-sm text-gray-500">{i18nText("AUTO.app.standalone.su.kien.checkin.line58_1_quan_ly_danh_sach_khach")}</p>
             </div>
           </div>

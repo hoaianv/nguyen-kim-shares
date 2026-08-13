@@ -28,7 +28,7 @@ const CategoryItem: React.FC<CategoryItemProps> = ({ category, level }) => {
   return (
     <div aria-level={level + 1} aria-expanded={hasChildren ? open : undefined}>
       <div
-        className="flex items-center gap-3 border-b border-border px-3 py-3 transition hover:bg-muted/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500/20"
+        className="flex items-center bg-white gap-3 border-b border-border px-3 py-3 transition hover:bg-muted/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500/20"
         style={{ paddingLeft: 12 + level * INDENT }}
         onClick={toggle}
         onKeyDown={onKey}
@@ -42,12 +42,15 @@ const CategoryItem: React.FC<CategoryItemProps> = ({ category, level }) => {
               <ChevronRight className="h-4 w-4" />
             )
           ) : (
-            <span className="inline-block h-4 w-4" />
+            <div>
+
+              <span className="inline-block h-1 w-1 bg-black rounded-full" />
+            </div>
           )}
         </span>
 
         {category.picture ? (
-          <span className="flex h-10 w-10 shrink-0 items-center justify-center border border-border bg-background">
+          <span className="flex h-10 w-10 shrink-0 items-center justify-center border border-border bg-background rounded-md">
             <Image
               width={40}
               height={40}
@@ -68,7 +71,7 @@ const CategoryItem: React.FC<CategoryItemProps> = ({ category, level }) => {
       </div>
 
       {hasChildren && open && (
-        <div className="border-l border-border">
+        <div className="">
           {(category.children ?? []).map((child) => (
             <CategoryItem key={child.id} category={child} level={level + 1} />
           ))}
@@ -80,7 +83,7 @@ const CategoryItem: React.FC<CategoryItemProps> = ({ category, level }) => {
 
 const CategoryTree: React.FC<CategoryTreeProps> = ({ categories }) => {
   return (
-    <div className="overflow-hidden border border-border bg-background" role="tree">
+    <div className="overflow-hidden bg-background" role="tree">
       {(categories ?? []).map((item) => (
         <CategoryItem key={item.id} category={item} level={0} />
       ))}

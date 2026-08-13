@@ -31,12 +31,12 @@ export default async function page({ searchParams }: Props) {
   const dataProducts = getValidData(products);
 
   return (
-    <main className="mx-auto mt-3 h-full w-full max-w-7xl px-4 sm:px-6 lg:px-8 xl:px-16 2xl:max-w-[1520px] 2xl:px-20">
-      <section className="border border-border bg-background p-4 sm:p-5">
+    <main className="mx-auto pt-3 h-full w-full max-w-7xl px-4 sm:px-6 lg:px-8 xl:px-16 2xl:max-w-[1520px] 2xl:px-20">
+      <section className=" bg-white p-4 sm:p-5 shadow-lg rounded-md">
         <div className="grid gap-4 lg:grid-cols-[minmax(0,1.3fr)_minmax(280px,0.7fr)]">
           <div className="space-y-3">
             <p className="text-[11px] uppercase tracking-[0.28em] text-muted-foreground">{i18nText("AUTO.app.san.pham.line38_0_catalog_showroom")}</p>
-            <h1 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">{i18nText("AUTO.app.san.pham.line41_1_danh_muc_san_pham")}</h1>
+            <h1 className="text-3xl font-semibold  text-foreground sm:text-4xl">{i18nText("AUTO.app.san.pham.line41_1_danh_muc_san_pham")}</h1>
             <p className="max-w-2xl text-sm leading-6 text-muted-foreground">{i18nText("AUTO.app.san.pham.line44_2_kham_pha_nhom_hang_theo")}</p>
 
             <div className="flex flex-wrap gap-2 pt-1">
@@ -51,18 +51,18 @@ export default async function page({ searchParams }: Props) {
             </div>
           </div>
 
-          <div className="border border-border bg-muted/20 p-3">
+          <div className="border border-border bg-muted/20 p-3 rounded-md">
             <div className="mb-3 flex items-center justify-between">
               <p className="text-[11px] uppercase tracking-[0.24em] text-muted-foreground">{i18nText("AUTO.app.san.pham.line66_6_loi_vao_nhanh")}</p>
               <p className="text-xs text-muted-foreground">
-                {dataCategories?.length ?? 0}{i18nText("AUTO.app.san.pham.line69_7_nhom")}</p>
+                {dataCategories?.length ?? 0} {i18nText("AUTO.app.san.pham.line69_7_nhom")}</p>
             </div>
             <div className="grid grid-cols-2 gap-2">
               {(dataCategories ?? []).slice(0, 4).map((item) => (
                 <Link
                   key={item.id}
                   href={`/${item.url}`}
-                  className="group flex min-h-20 flex-col justify-between border border-border bg-background p-3 transition hover:border-amber-300 hover:bg-amber-50/40"
+                  className="group flex min-h-20 bg-white flex-col justify-between border border-border rounded-md bg-background p-3 transition hover:border-amber-300 hover:bg-amber-50/40"
                 >
                   <span className="line-clamp-2 text-sm font-medium text-foreground">
                     {item.title}
@@ -77,10 +77,10 @@ export default async function page({ searchParams }: Props) {
 
       <div className="mt-4 grid gap-4 lg:grid-cols-[300px_minmax(0,1fr)]">
         <aside className="hidden lg:block">
-          <div className="sticky top-24 border border-border bg-background p-3">
+          <div className="sticky top-24  bg-background p-3 bg-white rounded-md shadow-lg">
             <div className="mb-3 border-b border-border pb-3">
               <p className="text-[11px] uppercase tracking-[0.24em] text-muted-foreground">{i18nText("AUTO.app.san.pham.line97_9_danh_muc_phu")}</p>
-              <h2 className="mt-1 text-lg font-semibold tracking-tight text-foreground">{i18nText("AUTO.app.san.pham.line100_10_kham_pha_nhanh")}</h2>
+              <h2 className="mt-1 text-lg font-semibold  text-foreground">{i18nText("AUTO.app.san.pham.line100_10_kham_pha_nhanh")}</h2>
             </div>
             <CategoryTree categories={dataCategories ?? []} />
           </div>
@@ -90,7 +90,7 @@ export default async function page({ searchParams }: Props) {
           <div className="mb-4 flex items-end justify-between gap-3 border-b border-border pb-4">
             <div>
               <p className="text-[11px] uppercase tracking-[0.24em] text-muted-foreground">{i18nText("AUTO.app.san.pham.line111_11_best_seller")}</p>
-              <h2 className="mt-2 text-2xl font-semibold tracking-tight text-foreground">
+              <h2 className="mt-2 text-2xl font-semibold  text-foreground">
                 {dataProducts?.title || i18nText("AUTO.app.san.pham.line114_12_san_pham_noi_bat")}
               </h2>
             </div>

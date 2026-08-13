@@ -155,7 +155,7 @@ const CardProduct = ({ item }: { item: IProduct }) => {
           </Link>
           <div className="flex items-center justify-center gap-3 min-h-12">
             <div className="min-w-0 flex items-center gap-2 justify-center">
-              <div className="theme-price text-base font-bold tracking-tight md:text-[1.05rem]">
+              <div className="theme-price text-base font-bold  md:text-[1.05rem]">
                 {getPrice(item)}
               </div>
               {getMarketPrice(item) ? (

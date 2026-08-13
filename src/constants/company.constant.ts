@@ -31,5 +31,5 @@ export const keywords = [
 ];
 
 export const logo = "https://media.vitinhnguyenkim.vn/uploads/advertises/2026-07/20260729_032613_wcU6TgyF30.png";
-export const hotline = "19006739";
+export const hotline = "1900 88 88 77";
 export const technicalHotline = "0948275005";

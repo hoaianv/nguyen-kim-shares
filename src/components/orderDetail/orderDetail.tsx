@@ -38,15 +38,14 @@ export default function OrderDetail({ order }: { order: IOrderDetail }) {
     <div className="mx-auto  col-span-8 px-3 py-4 md:py-6">
       <div className="mb-4 flex flex-col gap-2 md:mb-6 md:flex-row md:items-center md:justify-between">
         <div>
-          <h1 className="text-xl font-bold tracking-tight text-gray-900 dark:text-gray-100 md:text-2xl">{i18nText("AUTO.components.orderdetail.orderdetail.line41_0_don_hang")}{order.orderCode}
+          <h1 className="text-xl font-bold  text-gray-900 dark:text-gray-100 md:text-2xl">{i18nText("AUTO.components.orderdetail.orderdetail.line41_0_don_hang")}{order.orderCode}
           </h1>
           <div className="mt-1 flex flex-wrap items-center gap-2 text-sm text-gray-500">
             <span>{i18nText("AUTO.components.orderdetail.orderdetail.line44_1_ngay_dat")}{order.dateOrder}</span>
             <span className="hidden md:inline">·</span>
             <span
-              className={`inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-medium ring-1 ${
-                STATUS_STYLE[order.status]
-              }`}
+              className={`inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-medium ring-1 ${STATUS_STYLE[order.status]
+                }`}
             >
               {order.status === "pending" && <Clock className="h-3.5 w-3.5" />}
               {order.status === "payment" && (

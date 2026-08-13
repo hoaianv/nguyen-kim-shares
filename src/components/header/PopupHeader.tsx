@@ -29,7 +29,7 @@ export function AuthPopup() {
             className="flex h-10 w-full items-center justify-center rounded-md bg-brand px-3 text-sm font-semibold text-slate-950 transition hover:opacity-95"
           >{i18nText("AUTO.components.header.popupheader.line30_0_dang_nhap")}</Link>
           <Link
-            href="/dang-ky"
+            href="/vai-tro"
             className="flex h-10 w-full items-center justify-center rounded-md bg-brand px-3 text-sm font-semibold text-slate-950 transition hover:opacity-95"
           >{i18nText("AUTO.components.header.popupheader.line36_1_tao_khoan")}</Link>
           <GoogleLogin className="flex h-10 w-full items-center justify-center gap-2 rounded-md bg-slate-100 px-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-200 disabled:opacity-50" />

@@ -38,9 +38,8 @@ export const CardTitle = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <h3
     ref={ref}
-    className={`nk-section-title text-xl font-medium leading-none tracking-tight ${
-      className || ""
-    }`}
+    className={`nk-section-title text-xl font-medium leading-none  ${className || ""
+      }`}
     {...props}
   />
 ));
