@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next dev -p 4002",
     "build": "next build",
-    "start": "next start",
+    "start": "NODE_ENV=production node --max-old-space-size=512 server.js",
     "lint": "next lint"
   },
   "dependencies": {
