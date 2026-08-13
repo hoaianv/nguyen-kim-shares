@@ -85,11 +85,10 @@ const OrderSummary = ({ payload }: { payload: IPayloadOrder }) => {
   };
 
   return (
-    <div className="relative overflow-hidden rounded-[28px] border theme-border bg-[var(--theme-section-bg)]/95 p-4 shadow-sm sm:p-6">
-      <span className="theme-corner-decor -right-5 -top-5 h-20 w-20 rotate-90" />
+    <div className="overflow-hidden rounded-[28px] border border-slate-200/80 bg-white/90 p-4 shadow-sm sm:p-6">
       <div className="mb-4 flex items-center justify-between">
         <h3 className="text-base font-semibold text-slate-950 sm:text-lg">{i18nText("AUTO.components.checkout.ordersummary.line90_5_thong_tin_don_hang")}</h3>
-        <Link href="/gio-hang" className="text-xs font-medium text-[var(--brand-primary-strong)] hover:underline sm:text-sm">{i18nText("AUTO.components.checkout.ordersummary.line93_6_chinh_sua")}</Link>
+        <Link href="/gio-hang" className="text-xs font-medium text-amber-700 hover:underline sm:text-sm">{i18nText("AUTO.components.checkout.ordersummary.line93_6_chinh_sua")}</Link>
       </div>
 
       <div className="mb-4 flex max-h-[clamp(220px,28vh,360px)] flex-col gap-3 overflow-y-auto pr-1 scrollbar-thin scrollbar-track-gray-100 scrollbar-thumb-gray-300 hover:scrollbar-thumb-gray-400">
@@ -97,7 +96,7 @@ const OrderSummary = ({ payload }: { payload: IPayloadOrder }) => {
           items.map((product) => (
             <div
               key={product.id}
-              className="flex items-start gap-3 rounded-[20px] border theme-border bg-[var(--theme-section-soft)] p-3"
+              className="flex items-start gap-3 rounded-[20px] border border-slate-200/80 bg-slate-50/80 p-3"
             >
               <div className="h-16 w-16 flex-shrink-0 overflow-hidden rounded-[16px] border border-slate-200 bg-white p-1 sm:h-20 sm:w-20">
                 <Image
@@ -116,7 +115,7 @@ const OrderSummary = ({ payload }: { payload: IPayloadOrder }) => {
                   {t("PRODUCT.quantity")}: {product.quantity}
                 </p>
                 <div className="mt-1 flex items-center gap-2">
-                  <span className="theme-price text-sm font-semibold">
+                  <span className="text-sm font-semibold text-rose-600">
                     {getPrice(product)}
                   </span>
                   {getMarketPrice(product) && (
@@ -139,7 +138,7 @@ const OrderSummary = ({ payload }: { payload: IPayloadOrder }) => {
           <button
             disabled={!quote?.coupon?.length}
             onClick={() => setOpen(true)}
-            className="text-xs font-medium text-[var(--brand-primary-strong)] hover:underline disabled:text-slate-400 sm:text-sm"
+            className="text-xs font-medium text-amber-700 hover:underline disabled:text-slate-400 sm:text-sm"
           >{i18nText("AUTO.components.checkout.ordersummary.line150_9_chon_hoac_nhap_khuyen_mai")}</button>
         </div>
 
@@ -200,8 +199,8 @@ const OrderSummary = ({ payload }: { payload: IPayloadOrder }) => {
           <span className="text-sm font-medium sm:text-base">
             {couponCode ? (
               <div className="flex items-center gap-2">
-                <div className="flex w-fit items-center justify-center rounded-full border border-[var(--brand-primary)] bg-[var(--theme-section-soft)] px-2 py-1">
-                  <span className="text-xs text-[var(--brand-primary-strong)]">{couponCode}</span>
+                <div className="flex w-fit items-center justify-center rounded-full border border-amber-200 bg-amber-50 px-2 py-1">
+                  <span className="text-xs text-amber-700">{couponCode}</span>
                 </div>
                 <span>{formatPrice(couponActive?.value)}</span>
               </div>
@@ -226,7 +225,7 @@ const OrderSummary = ({ payload }: { payload: IPayloadOrder }) => {
         <div className="flex items-end justify-between border-t border-slate-200/80 pt-3">
           <span className="text-lg font-semibold text-slate-950">{i18nText("AUTO.components.checkout.ordersummary.line242_17_thanh_tien")}</span>
           <div className="text-right">
-            <div className="theme-price text-2xl font-bold">
+            <div className="text-2xl font-bold text-rose-600">
               {formatPrice(quote?.finalPrice)}
             </div>
             <div className="text-xs text-slate-500">{i18nText("AUTO.components.checkout.ordersummary.line247_18_da_bao_gom_vat")}</div>
@@ -239,7 +238,7 @@ const OrderSummary = ({ payload }: { payload: IPayloadOrder }) => {
           fullWidth
           variant="primary"
           size="md"
-          className="theme-cta mt-4 py-3 text-sm sm:py-4 sm:text-base"
+          className="mt-4 py-3 text-sm sm:py-4 sm:text-base"
           disabled={loading || !hasSelectedItems}
         >{i18nText("AUTO.components.checkout.ordersummary.line260_19_thanh_toan")}</Button>
 
@@ -248,7 +247,7 @@ const OrderSummary = ({ payload }: { payload: IPayloadOrder }) => {
       ) : null}
 
       <p className="mt-4 text-xs leading-relaxed text-slate-500">{i18nText("AUTO.components.checkout.ordersummary.line270_21_nhan_thanh_toan_dong_nghia")}{" "}
-        <Link href={"/"} className="text-[var(--brand-primary-strong)] hover:underline">{i18nText("AUTO.components.checkout.ordersummary.line272_22_dieu_khoan_dieu_kien")}</Link>
+        <Link href={"/"} className="text-amber-700 hover:underline">{i18nText("AUTO.components.checkout.ordersummary.line272_22_dieu_khoan_dieu_kien")}</Link>
       </p>
     </div>
   );

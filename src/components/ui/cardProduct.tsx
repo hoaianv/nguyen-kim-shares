@@ -112,13 +112,12 @@ const CardProduct = ({ item }: { item: IProduct }) => {
     <>
       <div
         ref={cardRef}
-        className="group theme-card relative flex h-full w-full flex-col overflow-hidden border shadow-lg transition duration-200 hover:-translate-y-0.5 hover:border-[var(--brand-primary)]"
+        className="group relative flex h-full w-full flex-col overflow-hidden  shadow-lg bg-white transition duration-200 hover:-translate-y-0.5 hover:border-amber-300"
         onMouseEnter={() => supportsHover && setIsHovered(true)}
         onMouseLeave={() => supportsHover && setIsHovered(false)}
       >
         <Link href={`/${item.url}`} className="block">
           <div className="relative aspect-[16/10] overflow-hidden bg-muted/20 p-1.5 sm:p-2.5">
-            <span className="theme-corner-decor -left-5 -top-5 h-16 w-16" />
             <ImageWithFallback
               loading="lazy"
               width={280}
@@ -140,7 +139,7 @@ const CardProduct = ({ item }: { item: IProduct }) => {
             </div>
 
             {hasDiscount ? (
-              <span className="theme-badge absolute right-2 top-2 inline-flex h-6 items-center rounded-full border px-2 text-[10px] font-semibold">
+              <span className="absolute right-2 top-2 inline-flex h-6 items-center rounded-full border border-rose-200 bg-rose-50 px-2 text-[10px] font-semibold text-rose-700">
                 -{calcDiscountPercentage(item.price, item.marketPrice!)}%
               </span>
             ) : null}
@@ -155,7 +154,7 @@ const CardProduct = ({ item }: { item: IProduct }) => {
           </Link>
           <div className="flex items-center justify-center gap-3 min-h-12">
             <div className="min-w-0 flex items-center gap-2 justify-center">
-              <div className="theme-price text-base font-bold  md:text-[1.05rem]">
+              <div className="text-base font-bold tracking-tight text-rose-600 md:text-[1.05rem]">
                 {getPrice(item)}
               </div>
               {getMarketPrice(item) ? (
@@ -169,7 +168,7 @@ const CardProduct = ({ item }: { item: IProduct }) => {
           </div>
 
 
-          <div className="mt-auto space-y-2 border-t theme-border pt-3">
+          <div className="mt-auto space-y-2 border-t border-border pt-3">
 
 
             {item.isInStock ? (
@@ -186,7 +185,7 @@ const CardProduct = ({ item }: { item: IProduct }) => {
                     cartToast(res, router);
                   }}
                   className={`inline-flex h-10 w-fit  px-4 items-center justify-center gap-2 rounded-lg border  text-sm font-semibold transition ${item.isInStock
-                    ? "theme-cta-outline"
+                    ? "border-amber-300   text-amber-800 hover:bg-amber-100"
                     : "cursor-not-allowed border-border bg-muted/50 text-muted-foreground"
                     }`}
                 >
@@ -197,7 +196,7 @@ const CardProduct = ({ item }: { item: IProduct }) => {
                   type="button"
                   onClick={buyNow(item)}
                   className={`inline-flex h-10 flex-1 items-center justify-center gap-2 rounded-lg border px-3 text-sm font-semibold transition ${item.isInStock
-                    ? "theme-cta"
+                    ? "border-amber-300 bg-[#ffb716] text-white hover:bg-amber-100"
                     : "cursor-not-allowed border-border bg-muted/50 text-muted-foreground"
                     }`}
                 >
@@ -213,9 +212,9 @@ const CardProduct = ({ item }: { item: IProduct }) => {
                 onClick={() => {
                   window.location.href = `tel:${config.hotline ?? "#"}`;
                 }}
-                className="theme-cta inline-flex h-11 w-full items-center justify-center gap-2 rounded-lg border px-3 text-sm font-semibold transition"
+                className="inline-flex h-11 w-full items-center justify-center  bg-[#ffb716] gap-2 rounded-lg border border-amber-300   px-3 text-sm font-semibold text-slate-700 transition hover:border-amber-300 hover:bg-amber-50 hover:text-amber-800"
               >
-                <span className="whitespace-nowrap font-bold">{t("COMMON.contact").toUpperCase()}</span>
+                <span className="whitespace-nowrap font-bold text-white">{t("COMMON.contact").toUpperCase()}</span>
               </button>
             )}
           </div>
@@ -225,7 +224,7 @@ const CardProduct = ({ item }: { item: IProduct }) => {
               <button
                 type="button"
                 onClick={() => setMobileSpecsOpen((prev) => !prev)}
-                className="inline-flex h-10 w-full items-center justify-center gap-2 rounded-lg border border-border bg-background px-3 text-sm font-medium text-foreground transition hover:border-[var(--brand-primary)] hover:bg-[var(--theme-section-soft)]"
+                className="inline-flex h-10 w-full items-center justify-center gap-2 rounded-lg border border-border bg-background px-3 text-sm font-medium text-foreground transition hover:border-amber-300 hover:bg-amber-50"
                 aria-expanded={mobileSpecsOpen}
                 aria-controls={`mobile-specs-${item.id}`}
               >

@@ -161,15 +161,15 @@ const Header = () => {
 
   return (
     <header
-      className={`sticky top-0 bg-[var(--theme-nav-bg)] text-[var(--theme-nav-text)] shadow-sm ${desktopMenuOpen ? "z-[90]" : "z-50"
+      className={`sticky top-0 bg-white text-slate-950 shadow-sm ${desktopMenuOpen ? "z-[90]" : "z-50"
         }`}
     >
-      <div className="theme-topbar bg-primary text-primary-foreground">
+      <div className="bg-brand text-slate-950">
         <div className="mx-auto flex h-9 max-w-[1370px] items-center justify-start gap-5 overflow-x-auto px-3 text-sm font-medium sm:px-4 lg:justify-center lg:gap-8 lg:overflow-visible">
           {utilityLinks.map((item) => {
             const Icon = item.icon;
             const triggerClassName =
-              "inline-flex shrink-0 items-center gap-1.5 transition hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-primary";
+              "inline-flex shrink-0 items-center gap-1.5 text-slate-950 transition hover:text-slate-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950/70 focus-visible:ring-offset-2 focus-visible:ring-offset-brand";
 
             if (item.value === "contact") {
               return (
@@ -204,7 +204,7 @@ const Header = () => {
         </div>
       </div>
 
-      <div className="border-b theme-border bg-[var(--theme-nav-bg)]">
+      <div className="border-b border-slate-100 bg-white">
         <div className="mx-auto grid max-w-[1370px] grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-3 px-3 py-3 sm:px-4 lg:grid-cols-[180px_176px_minmax(0,1fr)_auto] lg:gap-5 lg:py-3.5">
           <button
             type="button"
@@ -213,7 +213,7 @@ const Header = () => {
               closeDesktopMenu();
               setMobileSearchOpen(false);
             }}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-sm border theme-border bg-[var(--theme-section-bg)] text-[var(--theme-text)] lg:hidden"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-sm border border-slate-200 bg-white text-slate-900 lg:hidden"
             aria-label={i18nText("AUTO.components.header.header.line216_0_mo_menu")}
           >
             {mobileDrawerOpen ? (
@@ -223,8 +223,7 @@ const Header = () => {
             )}
           </button>
 
-          <Link href="/" className="relative block w-[144px] shrink-0 lg:w-[180px]">
-            <span className="theme-corner-decor -left-7 top-7 h-12 w-12" />
+          <Link href="/" className="block w-[144px] shrink-0 lg:w-[180px]">
             {headerLogo?.picture ? (
               <Image
                 src={headerLogo.picture}
@@ -244,8 +243,8 @@ const Header = () => {
               desktopMenuOpen ? closeDesktopMenu() : openDesktopMenu()
             }
             className={`relative z-[100] hidden h-8 items-center justify-center gap-2 rounded-sm border px-3 text-sm font-semibold transition lg:inline-flex ${desktopMenuOpen
-                ? "border-[var(--brand-primary)] bg-[var(--brand-primary-soft)] text-[var(--brand-primary-strong)] shadow-sm"
-                : "theme-border bg-[var(--theme-section-bg)] text-[var(--theme-text)] hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary-strong)]"
+                ? "border-brand bg-brand-soft text-brand shadow-sm"
+                : "border-slate-200 bg-white text-slate-800 hover:border-brand hover:text-brand"
               }`}
             aria-expanded={desktopMenuOpen}
             aria-controls="desktop-category-panel"
@@ -288,13 +287,13 @@ const Header = () => {
                 }}
                 onKeyDown={handleSearchKeyDown}
                 showSearchIcon={false}
-                className="h-11 rounded-sm border border-[var(--theme-border)] bg-[var(--theme-section-bg)] pl-4 pr-[102px] text-base placeholder:text-[var(--theme-muted-text)] hover:border-[var(--brand-primary)] focus:border-[var(--brand-primary)]"
+                className="h-11 rounded-sm border-transparent bg-[#f1f1f1] pl-4 pr-[102px] text-base placeholder:text-slate-500 hover:border-transparent focus:border-transparent"
               />
 
               <button
                 type="button"
                 onClick={() => handleSearch(searchValue)}
-                className="theme-cta absolute right-0 top-0 inline-flex h-11 w-[94px] items-center justify-center rounded-sm text-sm font-semibold transition"
+                className="absolute right-0 top-0 inline-flex h-11 w-[94px] items-center justify-center rounded-sm bg-brand text-sm font-semibold text-slate-950 transition hover:opacity-95"
                 aria-label={i18nText("AUTO.components.header.header.line296_8_tim_kiem")}
               >
                 <Search className="mr-1.5 h-[18px] w-[18px]" />
@@ -307,7 +306,7 @@ const Header = () => {
                 <Link
                   key={keyword}
                   href={`/san-pham?keyword=${encodeURIComponent(keyword)}`}
-                  className="transition hover:text-[var(--brand-primary-strong)]"
+                  className="transition hover:text-brand"
                 >
                   {keyword}
                 </Link>
@@ -321,7 +320,7 @@ const Header = () => {
             </div>
             <Link
               href="/gio-hang"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-sm border theme-border text-[var(--theme-text)] lg:hidden"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-sm border border-slate-200 text-slate-900 lg:hidden"
               aria-label={i18nText("AUTO.components.header.header.line323_10_gio_hang")}
             >
               <ShoppingCart className="h-5 w-5" />
@@ -330,7 +329,7 @@ const Header = () => {
         </div>
       </div>
 
-      <div className="border-b theme-border bg-[var(--theme-nav-bg)] lg:hidden">
+      <div className="border-b border-slate-100 bg-white lg:hidden">
         <div className="mx-auto flex max-w-[1370px] items-center gap-4 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 hover:scrollbar-thumb-gray-400 px-3 pb-3 text-sm text-slate-700 sm:px-4">
           {hotKeywords.map((keyword) => (
             <Link
@@ -368,7 +367,7 @@ const Header = () => {
             <button
               type="button"
               aria-label={i18nText("AUTO.components.header.header.line368_11_dong_tim_kiem")}
-            className="absolute inset-0 bg-[var(--theme-section-bg)]/95"
+              className="absolute inset-0 bg-white/94"
               onClick={() => setMobileSearchOpen(false)}
             />
 
@@ -377,14 +376,14 @@ const Header = () => {
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: 12, opacity: 0 }}
               transition={{ duration: 0.2, ease: "easeOut" }}
-              className="absolute inset-x-0 top-0 mx-auto flex h-full max-w-[1370px] flex-col bg-[var(--theme-section-bg)] px-4 py-4"
+              className="absolute inset-x-0 top-0 mx-auto flex h-full max-w-[1370px] flex-col bg-white px-4 py-4"
             >
-              <div className="flex items-center justify-between gap-3 border-b theme-border pb-3">
-                <h2 className="text-base font-bold text-[var(--theme-text)]">{i18nText("AUTO.components.header.header.line382_12_tim_kiem_san_pham")}</h2>
+              <div className="flex items-center justify-between gap-3 border-b border-slate-100 pb-3">
+                <h2 className="text-base font-bold text-slate-950">{i18nText("AUTO.components.header.header.line382_12_tim_kiem_san_pham")}</h2>
                 <button
                   type="button"
                   onClick={() => setMobileSearchOpen(false)}
-                  className="inline-flex h-10 w-10 items-center justify-center rounded-sm border theme-border bg-[var(--theme-section-bg)] text-[var(--theme-text)]"
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-sm border border-slate-200 bg-white text-slate-900"
                   aria-label={i18nText("AUTO.components.header.header.line388_13_dong_tim_kiem")}
                 >
                   <X className="h-5 w-5" />
@@ -401,7 +400,7 @@ const Header = () => {
                     debouncedChange(value);
                   }}
                   onKeyDown={handleSearchKeyDown}
-                  className="h-11 rounded-sm border-[var(--theme-border)] bg-[var(--theme-section-bg)] pl-4 pr-4 text-sm"
+                  className="h-11 rounded-sm border-slate-200 bg-white pl-4 pr-4 text-sm"
                 />
               </div>
             </motion.div>

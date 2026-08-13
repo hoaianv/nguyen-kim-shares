@@ -19,10 +19,10 @@ const Promotions = ({ data }: PromotionProps) => {
       transition={{ duration: 0.8 }}
       className="mb-8"
     >
-      <div className="rounded-lg border theme-border bg-[var(--theme-section-bg)] p-3 shadow-sm">
-        <h2 className="mb-2 flex items-center gap-2 line-clamp-1 text-lg font-semibold text-[var(--theme-text)]">
-          <div className="rounded-lg bg-[var(--theme-section-soft)] p-2">
-            <Gift className="h-6 w-6 text-[var(--brand-primary-strong)]" />
+      <div className=" bg-white  rounded-lg  border  p-3 shadow-sm">
+        <h2 className="text-lg font-semibold text-[#111827] line-clamp-1  mb-2 flex gap-2 items-center">
+          <div className="p-2 bg-[#FFD400]/10  rounded-lg ">
+            <Gift className="h-6 w-6 text-[#FFD400]" />
           </div>
           {t("PRODUCT.gift_included")}
         </h2>

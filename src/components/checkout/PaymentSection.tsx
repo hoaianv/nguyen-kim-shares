@@ -5,11 +5,11 @@ import { Check } from "lucide-react";
 
 const PaymentSection: React.FC<{}> = ({}) => {
   return (
-    <div className="rounded-[28px] border theme-border bg-[var(--theme-section-bg)]/95 p-4 shadow-sm sm:p-6">
+    <div className="rounded-[28px] border border-slate-200/80 bg-white/90 p-4 shadow-sm sm:p-6">
       <h3 className="mb-1 text-base font-semibold text-slate-950 sm:text-lg">{i18nText("AUTO.components.checkout.paymentsection.line9_0_phuong_thuc_thanh_toan")}</h3>
       <p className="mb-4 text-xs text-slate-500 sm:text-sm">{i18nText("AUTO.components.checkout.paymentsection.line12_1_thong_tin_thanh_toan_se")}</p>
 
-      <div className="relative overflow-hidden rounded-[24px] border border-[var(--brand-primary)] bg-[var(--theme-section-soft)] p-4">
+      <div className="relative overflow-hidden rounded-[24px] border border-amber-200 bg-amber-50/70 p-4">
         <div className="absolute right-0 top-0 h-0 w-0 border-t-0 border-r-[30px] border-b-[30px] border-l-0 border-solid border-transparent border-r-amber-400 sm:border-r-[36px] sm:border-b-[36px]" />
 
         <Check

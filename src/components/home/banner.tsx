@@ -8,7 +8,6 @@ import { useStateStore } from "@/stores/stateStore";
 import { motion, useReducedMotion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
-import ThemeAsset from "@/components/theme/ThemeAsset";
 import type { Swiper as SwiperType } from "swiper";
 import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -92,10 +91,8 @@ export default function Banner() {
         ease: "easeOut",
       }}
     >
-      <div className="relative min-w-0 overflow-hidden rounded-md border theme-border bg-[var(--theme-section-bg)] shadow-md">
-        <span className="theme-corner-decor left-0 top-0" />
-        <span className="theme-corner-decor bottom-0 right-0 rotate-180" />
-        <div className="relative aspect-[16/7] w-full overflow-hidden bg-muted sm:aspect-[3/1]">
+      <div className="min-w-0 overflow-hidden rounded-md bg-white shadow-md">
+        <div className="relative aspect-[16/7] w-full overflow-hidden bg-slate-100 sm:aspect-[3/1]">
           <Swiper
             modules={[Autoplay, Navigation]}
             onSwiper={(swiper) => {
@@ -151,26 +148,15 @@ export default function Banner() {
                   }
                   className="group relative block h-full w-full overflow-hidden"
                 >
-                  {index === 0 ? (
-                    <ThemeAsset
-                      slot="homeHeroDesktop"
-                      fallback={item}
-                      priority
-                      linked={false}
-                      sizes="(max-width: 640px) 100vw, (max-width: 1520px) calc(100vw - 48px), 1520px"
-                      imageClassName="object-cover transition-transform duration-700 group-hover:scale-[1.01]"
-                    />
-                  ) : (
-                    <Image
-                      priority={false}
-                      src={item.picture}
-                      alt={item.title}
-                      fill
-                      quality={92}
-                      sizes="(max-width: 640px) 100vw, (max-width: 1520px) calc(100vw - 48px), 1520px"
-                      className="object-cover transition-transform duration-700 group-hover:scale-[1.01]"
-                    />
-                  )}
+                  <Image
+                    priority={index === 0}
+                    src={item.picture}
+                    alt={item.title}
+                    fill
+                    quality={92}
+                    sizes="(max-width: 640px) 100vw, (max-width: 1520px) calc(100vw - 48px), 1520px"
+                    className="object-cover transition-transform duration-700 group-hover:scale-[1.01]"
+                  />
                 </Link>
               </SwiperSlide>
             ))}
@@ -198,7 +184,7 @@ export default function Banner() {
               slidesPerView: 5,
             },
           }}
-          className="w-full border-t theme-border bg-[var(--theme-section-bg)]"
+          className="w-full border-t border-slate-100 bg-white"
         >
           {mainAds.map((item, index) => {
             const isActive = activeIndex === index;
@@ -206,7 +192,7 @@ export default function Banner() {
             return (
               <SwiperSlide
                 key={item.id}
-                className="h-auto border-r theme-border last:border-r-0"
+                className="h-auto border-r border-slate-100 last:border-r-0"
               >
                 <button
                   type="button"
@@ -216,18 +202,18 @@ export default function Banner() {
                   className={[
                     "relative flex min-h-[82px] w-full flex-col items-center justify-center px-4 py-3 text-center",
                     "transition-colors duration-200",
-                    "hover:bg-[var(--theme-section-soft)]",
+                    "hover:bg-slate-50",
                     "focus-visible:z-10 focus-visible:outline-none",
-                    "focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-ring",
-                    isActive ? "bg-[var(--theme-section-soft)]" : "bg-[var(--theme-section-bg)]",
+                    "focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#ffb716]",
+                    isActive ? "bg-slate-50" : "bg-white",
                   ].join(" ")}
                 >
                   <span
                     className={[
                       "w-full truncate text-xs uppercase leading-5 sm:text-sm",
                       isActive
-                        ? "font-bold text-[var(--theme-text)]"
-                        : "font-medium theme-muted",
+                        ? "font-bold text-slate-950"
+                        : "font-medium text-slate-700",
                     ].join(" ")}
                   >
                     {item.title}
@@ -237,7 +223,7 @@ export default function Banner() {
 
                   <span
                     className={[
-                      "absolute inset-x-0 bottom-0 h-0.5 origin-center bg-[var(--brand-primary)] transition-transform duration-300",
+                      "absolute inset-x-0 bottom-0 h-0.5 origin-center bg-[#ffb716] transition-transform duration-300",
                       isActive ? "scale-x-100" : "scale-x-0",
                     ].join(" ")}
                   />

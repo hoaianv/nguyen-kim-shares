@@ -19,7 +19,6 @@ import { CompanyAddressInitializer } from "@/init/CompanyAddressInitializer";
 import { getAll as getAllCompanyAddresses } from "@/apis/common/company-address.apis";
 import { NextIntlClientProvider } from "next-intl";
 import { cookies } from "next/headers";
-import { Suspense } from "react";
 
 import dynamic from "next/dynamic";
 import JsonldHome from "@/json/schemaHome";
@@ -28,10 +27,6 @@ import { getAll as getAllMenu } from "@/apis/models/menu.apis";
 import GTMScript from "@/components/analytics/GTMScript";
 import GTMNoScript from "@/components/analytics/GTMNoScript";
 import { CONST_VALUES } from "@/constants/values.constant";
-import { ThemeInitializer } from "@/init/ThemeInitializer";
-import { resolveThemeFromCookies } from "@/theme/themeResolver";
-import { getThemeCssVariables } from "@/theme/themeCssVariables";
-import ChristmasEffects from "@/components/theme/ChristmasEffects";
 
 const SupportInitializer = dynamic(() => import("@/init/SupportInitializer"), {
   ssr: false,
@@ -78,7 +73,6 @@ export default async function RootLayout({
   ]);
   const locale =
     cookies().get(CONST_VALUES.LANGUAGES_CODE)?.value === "en" ? "en" : "vi";
-  const activeTheme = resolveThemeFromCookies(cookies());
 
   return (
     <html lang={locale} suppressHydrationWarning>
@@ -88,11 +82,7 @@ export default async function RootLayout({
 
         <meta name="google" content="notranslate" />
       </head>
-      <body
-        data-theme={activeTheme.key}
-        style={getThemeCssVariables(activeTheme)}
-        suppressHydrationWarning
-      >
+      <body suppressHydrationWarning>
         {/* Google Tag Manager (noscript) */}
         <GTMNoScript />
         <JsonldHome />
@@ -110,12 +100,8 @@ export default async function RootLayout({
         <ConfigInitializer data={getValidData(config)} />
         <FooterInitializer data={getValidData(footerSections)} />
         <CompanyAddressInitializer data={getValidData(companyAddresses)} />
-        <Suspense fallback={null}>
-          <ThemeInitializer theme={activeTheme} />
-        </Suspense>
 
         <NextIntlClientProvider>
-          <ChristmasEffects />
           <PageTransition>{children}</PageTransition>
         </NextIntlClientProvider>
       </body>

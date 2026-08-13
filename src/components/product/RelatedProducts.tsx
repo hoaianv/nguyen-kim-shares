@@ -24,8 +24,8 @@ const RelatedProducts = ({ data }: ProductsProps) => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
     >
-      <div className="border-b theme-border p-2 sm:p-3">
-        <h3 className="text-lg font-bold text-[var(--theme-text)] sm:text-xl">
+      <div className="p-2 sm:p-3 border-b border-gray-200">
+        <h3 className="text-lg font-bold sm:text-xl text-[#111827]">
           {t("PRODUCT.related_products")}
         </h3>
       </div>
@@ -80,14 +80,14 @@ const RelatedProducts = ({ data }: ProductsProps) => {
             ))}
         </Swiper>
 
-        <div className="nav-button--prev absolute left-1 top-1/2 z-20 flex h-[40px] w-[40px] -translate-y-1/2 items-center justify-center rounded-lg bg-[var(--theme-section-soft)] sm:left-0 sm:h-[50px] sm:w-[50px]">
+        <div className="absolute left-1 sm:left-0 top-1/2 -translate-y-1/2 w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] bg-[#A8A8A84D] flex items-center justify-center z-20 rounded-lg nav-button--prev">
           <ArrowLeft
             size={20}
             className="sm:w-[25px] sm:h-[25px]"
             strokeWidth={1.75}
           />
         </div>
-        <div className="nav-button--next absolute right-1 top-1/2 z-20 flex h-[40px] w-[40px] -translate-y-1/2 items-center justify-center rounded-lg bg-[var(--theme-section-soft)] sm:right-0 sm:h-[50px] sm:w-[50px]">
+        <div className="absolute right-1 sm:right-0 top-1/2 -translate-y-1/2 w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] flex items-center justify-center z-20 bg-[#A8A8A84D] rounded-lg nav-button--next">
           <ArrowRight
             size={20}
             className="sm:w-[25px] sm:h-[25px]"

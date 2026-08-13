@@ -5,7 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { bannerKeys } from "@/constants/values.constant";
 import { useStateStore } from "@/stores/stateStore";
-import ThemeAsset from "@/components/theme/ThemeAsset";
 
 export default function CategoryBanners() {
   const { banner } = useStateStore();
@@ -20,28 +19,17 @@ export default function CategoryBanners() {
         <Link
           key={bannerItem.id}
           href={bannerItem.link || "#"}
-          className="block min-w-[86%] overflow-hidden rounded-sm border theme-border bg-[var(--theme-section-bg)] md:min-w-0"
+          className="block min-w-[86%] overflow-hidden rounded-sm md:min-w-0"
           aria-label={bannerItem.title ?? i18nText("AUTO.components.category.categorybanners.line22_0_banner", { value0: index + 1 })}
         >
-          <div className="relative aspect-[24/8] overflow-hidden bg-muted md:aspect-[7/1]">
-            <span className="theme-corner-decor left-0 top-0 h-14 w-14" />
-            {index === 0 ? (
-              <ThemeAsset
-                slot="categoryHero"
-                fallback={bannerItem}
-                linked={false}
-                imageClassName="object-cover"
-                sizes="(min-width: 1024px) 50vw, (min-width: 768px) 50vw, 100vw"
-              />
-            ) : (
-              <Image
-                src={bannerItem.picture}
-                alt={bannerItem.title ?? i18nText("AUTO.components.category.categorybanners.line27_1_banner", { value0: index + 1 })}
-                fill
-                className="object-cover"
-                sizes="(min-width: 1024px) 50vw, (min-width: 768px) 50vw, 100vw"
-              />
-            )}
+          <div className="relative aspect-[24/8] overflow-hidden md:aspect-[7/1]">
+            <Image
+              src={bannerItem.picture}
+              alt={bannerItem.title ?? i18nText("AUTO.components.category.categorybanners.line27_1_banner", { value0: index + 1 })}
+              fill
+              className="object-cover"
+              sizes="(min-width: 1024px) 50vw, (min-width: 768px) 50vw, 100vw"
+            />
           </div>
         </Link>
       ))}

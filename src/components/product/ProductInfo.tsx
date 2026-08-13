@@ -71,10 +71,9 @@ const ProductInfo = ({ data, hasSpecifications }: ProductsProps) => {
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
-      className="grid grid-cols-1 overflow-hidden border theme-border bg-[var(--theme-section-bg)] lg:grid-cols-10 lg:items-start"
+      className="grid grid-cols-1 overflow-hidden bg-white lg:grid-cols-10 lg:items-start"
     >
-      <div className="relative bg-[var(--theme-section-bg)] lg:col-span-5 lg:self-start">
-        <span className="theme-corner-decor left-0 top-0 h-20 w-20" />
+      <div className="bg-white lg:col-span-5 lg:self-start">
         <ProductGallery
           nameProduct={data.name}
           data={data.images ?? []}
@@ -90,7 +89,7 @@ const ProductInfo = ({ data, hasSpecifications }: ProductsProps) => {
           <div className="space-y-3">
             <div className="flex items-start justify-between gap-5">
               <div className="min-w-0">
-                <h1 className="text-xl font-extrabold leading-snug text-[var(--theme-text)] sm:text-2xl">
+                <h1 className="text-xl font-extrabold leading-snug text-slate-950 sm:text-2xl">
                   {data.name}
                 </h1>
                 {data.name2 ? (
@@ -109,7 +108,7 @@ const ProductInfo = ({ data, hasSpecifications }: ProductsProps) => {
                 <button
                   type="button"
                   onClick={handleCopy}
-                  className="inline-flex h-9 w-9 items-center justify-center rounded-sm border theme-border bg-[var(--theme-section-bg)] theme-muted transition hover:border-[var(--brand-primary)] hover:text-[var(--theme-text)]"
+                  className="inline-flex h-9 w-9 items-center justify-center rounded-sm border border-slate-200 bg-white text-slate-500 transition hover:border-brand hover:text-slate-950"
                   aria-label={i18nText("AUTO.components.product.productinfo.line111_1_chia_se_san_pham")}
                 >
                   <Share2 className="h-4 w-4" />
@@ -135,9 +134,9 @@ const ProductInfo = ({ data, hasSpecifications }: ProductsProps) => {
                     key={i}
                     className={`h-4 w-4 ${
                       i + 1 <= Math.floor(data.rating ?? 0)
-                    ? "fill-[var(--brand-primary-glow)] text-[var(--brand-primary-glow)]"
-                    : i < (data.rating ?? 0)
-                          ? "fill-[var(--brand-primary-glow)] text-[var(--brand-primary-glow)] opacity-50"
+                        ? "fill-brand text-brand"
+                        : i < (data.rating ?? 0)
+                          ? "fill-brand text-brand opacity-50"
                           : "text-slate-300"
                     }`}
                   />
@@ -169,7 +168,7 @@ const ProductInfo = ({ data, hasSpecifications }: ProductsProps) => {
 
           <div className="border-y border-slate-200 py-4">
             <div className="flex flex-wrap items-baseline gap-x-4 gap-y-2">
-              <span className="theme-price text-3xl font-extrabold sm:text-4xl">
+              <span className="text-3xl font-extrabold text-rose-600 sm:text-4xl">
                 {getPrice(data, couponActive?.value)}
               </span>
               {marketPrice ? (
@@ -178,7 +177,7 @@ const ProductInfo = ({ data, hasSpecifications }: ProductsProps) => {
                 </span>
               ) : null}
               {discount > 0 ? (
-                <span className="theme-badge inline-flex rounded-sm border px-2 py-0.5 text-sm font-extrabold">
+                <span className="text-sm font-extrabold text-rose-600">
                   -{discount}%
                 </span>
               ) : null}
@@ -220,7 +219,7 @@ const ProductInfo = ({ data, hasSpecifications }: ProductsProps) => {
                   <Button
                     variant="outline"
                     icon={ShoppingCart}
-                    className="theme-cta-outline w-full rounded-sm py-3 text-sm font-extrabold uppercase"
+                    className="w-full rounded-sm border-rose-600 py-3 text-sm font-extrabold uppercase text-rose-600 hover:bg-rose-50"
                     onClick={async () => {
                       const res = await addToCart([
                         { product: data, quantity },
@@ -233,7 +232,7 @@ const ProductInfo = ({ data, hasSpecifications }: ProductsProps) => {
                   <Button
                     variant="danger"
                     icon={Zap}
-                    className="theme-cta w-full rounded-sm py-3 text-sm font-extrabold uppercase"
+                    className="w-full rounded-sm py-3 text-sm font-extrabold uppercase"
                     onClick={buyNow(data, quantity)}
                   >
                     {t("COMMON.buy_now")}

@@ -10,7 +10,7 @@ import { IProduct } from "@/interfaces/models/IProduct.interface";
 import { useStateStore } from "@/stores/stateStore";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { motion, useReducedMotion } from "motion/react";
-import ThemeAsset from "@/components/theme/ThemeAsset";
+import Image from "next/image";
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -20,7 +20,7 @@ export interface ProductCarouselSectionProps {
 }
 
 const navBase =
-  "flex h-9 w-9 items-center justify-center rounded bg-white/55 text-[var(--theme-text)] transition hover:bg-white hover:text-[var(--brand-primary-strong)]";
+  "flex h-9 w-9 items-center justify-center rounded bg-white/35 text-slate-950 transition hover:bg-white hover:text-[#e6a414]";
 
 export default function ProductCarouselSection({
   data,
@@ -40,15 +40,15 @@ export default function ProductCarouselSection({
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.32, ease: "easeOut" }}
     >
-      <div className="overflow-hidden rounded-md border theme-border bg-[var(--theme-section-bg)] shadow-sm">
+      <div className="overflow-hidden rounded-md bg-white shadow-sm">
         {bannerItem ? (
           <div className="relative mb-4 h-28 overflow-hidden">
-            <ThemeAsset
-              slot="homeMidCampaign"
-              fallback={bannerItem}
-              linked={false}
+            <Image
+              alt={bannerItem.title}
+              src={bannerItem.picture}
+              fill
               sizes="(max-width: 768px) 100vw, 1520px"
-              imageClassName="object-cover"
+              className="object-cover"
             />
           </div>
         ) : null}

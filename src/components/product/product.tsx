@@ -70,7 +70,7 @@ export default async function Product({ data, slug }: ProductProps) {
       <Schema data={getValidData(schema) || null} />
 
       <div className="mx-auto w-full max-w-[1520px] space-y-3 px-3 sm:space-y-4 sm:px-4 lg:px-6">
-        <div className="rounded-sm border theme-border bg-[var(--theme-section-soft)] px-3 py-2 shadow-sm sm:px-4">
+        <div className="bg-[#f5f5f5] rounded-sm px-3 py-2 shadow-sm sm:px-4">
           <Breadcrumb
             items={breadcrumb ?? []}
             className="text-xs text-slate-500 sm:text-sm"

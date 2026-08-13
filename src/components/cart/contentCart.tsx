@@ -45,8 +45,7 @@ export default function ContentCart() {
   ];
 
   return (
-    <div className="relative">
-      <span className="theme-corner-decor -left-8 bottom-4 h-24 w-24" />
+    <div>
       <div className="pt-2">
         <Breadcrumb items={[{ name: i18nText("AUTO.components.cart.contentcart.line49_0_gio_hang"), url: "/cart" }]} />
       </div>
@@ -69,8 +68,8 @@ export default function ContentCart() {
               />
             </div>
 
-            <div className="rounded-lg border theme-border bg-[var(--theme-section-bg)]">
-              <div className="hidden rounded-t-md border-y theme-border bg-[var(--theme-section-soft)] md:block">
+            <div className="rounded-lg bg-white">
+              <div className="hidden rounded-t-md border-y border-gray-200 bg-gray-50 md:block">
                 <div className="grid grid-cols-[120px_minmax(0,2fr)_minmax(140px,1fr)_120px_140px_56px] gap-3 px-4 py-3">
                   {invoiceTableHeaders.map((item) =>
                     item.id === 1 ? (
@@ -82,7 +81,7 @@ export default function ContentCart() {
                             isAllSelected ? clearSelected() : selectAll()
                           }
                         />
-                        <span className="text-sm font-medium text-[var(--theme-text)]">
+                        <span className="text-sm font-medium text-gray-700">
                           {item.text}
                         </span>
                       </div>
@@ -91,7 +90,7 @@ export default function ContentCart() {
                         key={item.id}
                         className="flex items-center justify-center"
                       >
-                        <span className="text-sm font-medium text-[var(--theme-text)]">
+                        <span className="text-sm font-medium text-gray-700">
                           {item.text}
                         </span>
                       </div>
@@ -100,7 +99,7 @@ export default function ContentCart() {
                 </div>
               </div>
 
-              <div className="rounded-t-md border-b theme-border bg-[var(--theme-section-soft)] px-3 py-3 md:hidden">
+              <div className="rounded-t-md border-b border-gray-200 bg-gray-50 px-3 py-3 md:hidden">
                 <div className="flex items-center gap-2">
                   <CheckboxField
                     id="checkbox-all-mobile"
@@ -109,7 +108,7 @@ export default function ContentCart() {
                       isAllSelected ? clearSelected() : selectAll()
                     }
                   />
-                  <span className="text-sm font-medium text-[var(--theme-text)]">{i18nText("AUTO.components.cart.contentcart.line114_4_chon_tat_ca")}</span>
+                  <span className="text-sm font-medium text-gray-700">{i18nText("AUTO.components.cart.contentcart.line114_4_chon_tat_ca")}</span>
                 </div>
               </div>
 
@@ -117,7 +116,7 @@ export default function ContentCart() {
                 {cart.items.length === 0 ? (
                   <p className="py-8 text-center text-sm text-gray-600">{i18nText("AUTO.components.cart.contentcart.line122_5_gio_hang")}</p>
                 ) : (
-                  <div className="divide-y divide-[var(--theme-border)] md:max-h-[calc(100vh-340px)] md:overflow-y-auto md:pr-1 scrollbar-thin scrollbar-track-gray-100 scrollbar-thumb-gray-300 hover:scrollbar-thumb-gray-400">
+                  <div className="divide-y divide-gray-100 md:max-h-[calc(100vh-340px)] md:overflow-y-auto md:pr-1 scrollbar-thin scrollbar-track-gray-100 scrollbar-thumb-gray-300 hover:scrollbar-thumb-gray-400">
                     {cart.items.map((item) => (
                       <CardCart key={item.id} id={item.id} />
                     ))}
@@ -128,13 +127,13 @@ export default function ContentCart() {
           </div>
 
           <div className="space-y-4 lg:col-span-4">
-            <div className="rounded-lg border theme-border bg-[var(--theme-section-bg)] p-3 sm:p-4">
+            <div className="rounded-lg bg-white p-3 sm:p-4">
               <div className="mb-3 flex items-center justify-between">
                 <span className="text-sm font-semibold sm:text-base">{i18nText("AUTO.components.cart.contentcart.line139_6_khuyen_mai")}</span>
                 <button
                   disabled={!quote?.coupon?.length}
                   onClick={() => setOpen(true)}
-                  className="text-xs text-[var(--brand-primary-strong)] hover:underline disabled:text-gray-400 sm:text-sm"
+                  className="text-xs text-blue-600 hover:underline disabled:text-gray-400 sm:text-sm"
                 >{i18nText("AUTO.components.cart.contentcart.line146_7_chon_hoac_nhap_khuyen_mai")}</button>
               </div>
 
@@ -191,8 +190,7 @@ export default function ContentCart() {
               )}
             </div>
 
-            <div className="relative rounded-lg border theme-border bg-[var(--theme-section-bg)] p-3 sm:p-4">
-              <span className="theme-corner-decor -right-4 -top-4 h-16 w-16 rotate-90" />
+            <div className="rounded-lg border-t border-gray-200 bg-white p-3 sm:p-4">
               <span className="mb-3 block text-sm font-semibold sm:text-base">{i18nText("AUTO.components.cart.contentcart.line208_10_thanh_toan")}</span>
 
               <div className="space-y-2">
@@ -208,8 +206,8 @@ export default function ContentCart() {
                   <span className="font-medium">
                     {couponCode ? (
                       <div className="flex items-center gap-2">
-                        <div className="flex w-fit items-center justify-center rounded-lg border border-[var(--brand-primary)] p-1">
-                          <span className="text-xs text-[var(--brand-primary-strong)]">
+                        <div className="flex w-fit items-center justify-center rounded-lg border border-[#1230B0] p-1">
+                          <span className="text-xs text-[#1230B0]">
                             {couponCode}
                           </span>
                         </div>
@@ -225,7 +223,7 @@ export default function ContentCart() {
 
                 <div className="flex items-center justify-between border-t border-gray-100 pt-2">
                   <span className="text-xs text-gray-600 sm:text-sm">{i18nText("AUTO.components.cart.contentcart.line245_14_thanh_tien")}</span>
-                  <span className="theme-price text-base font-semibold sm:text-lg">
+                  <span className="text-base font-semibold text-gray-900 sm:text-lg">
                     {formatPrice(quote?.finalPrice)}
                   </span>
                 </div>
@@ -237,7 +235,7 @@ export default function ContentCart() {
                 <div className="flex items-center gap-1 pt-3">
                   <button
                     onClick={() => router.push("/san-pham")}
-                    className="theme-cta-outline w-full cursor-pointer rounded-lg border px-4 py-2.5 text-center text-xs font-bold transition-colors duration-200 sm:py-2 sm:text-sm"
+                    className="w-full cursor-pointer rounded-lg border border-amber-300 px-4 py-2.5 text-center text-xs font-bold text-amber-800 transition-colors duration-200 sm:py-2 sm:text-sm"
                   >{i18nText("AUTO.components.cart.contentcart.line263_16_tiep_tuc_mua_sam")}</button>
                   <button
                     disabled={!hasSelectedItems}
@@ -247,7 +245,7 @@ export default function ContentCart() {
                         ? i18nText("AUTO.components.cart.contentcart.line270_17_tien_hanh_dat_hang")
                         : i18nText("AUTO.components.cart.contentcart.line271_18_hay_chon_it_nhat_1")
                     }
-                    className="theme-cta w-full cursor-pointer rounded-lg border px-4 py-2.5 font-bold transition-colors duration-200 disabled:cursor-not-allowed disabled:border-gray-200 disabled:bg-gray-200 disabled:text-gray-500 sm:py-2 sm:text-sm"
+                    className="w-full cursor-pointer rounded-lg border border-amber-300 bg-[#ffb716] px-4 py-2.5 font-bold text-white transition-colors duration-200 hover:bg-amber-100 disabled:cursor-not-allowed disabled:border-gray-200 disabled:bg-gray-200 disabled:text-gray-500 sm:py-2 sm:text-sm"
                   >{i18nText("AUTO.components.cart.contentcart.line275_19_tien_hanh_dat_hang")}</button>
                 </div>
                 {!hasSelectedItems ? (
