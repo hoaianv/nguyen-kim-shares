@@ -217,7 +217,7 @@ export default function CategoryFilterBar({
       ref={containerRef}
       className="hidden space-y-3 lg:block"
     >
-      <h2 className="text-xl font-bold text-slate-900">{i18nText("AUTO.components.category.categoryfilterbar.line215_2_chon_theo_tieu_chi")}</h2>
+      <h2 className="text-xl font-bold text-[var(--theme-text)]">{i18nText("AUTO.components.category.categoryfilterbar.line215_2_chon_theo_tieu_chi")}</h2>
       <div className="flex flex-wrap items-center gap-2">
         <div className="mr-1 inline-flex h-10 items-center gap-2 text-sm font-semibold text-foreground">
           <SlidersHorizontal className="h-4 w-4 text-muted-foreground" />{i18nText("AUTO.components.category.categoryfilterbar.line219_3_bo_loc")}</div>
@@ -228,8 +228,8 @@ export default function CategoryFilterBar({
             onClick={() => setOpenKey((prev) => (prev === "price" ? null : "price"))}
             className={`inline-flex h-10 items-center gap-2 rounded-md border px-3 text-sm font-medium transition ${
               isPriceActive
-                ? "border-brand bg-brand-soft text-brand-deep"
-                : "border-border/60 bg-white text-foreground hover:border-brand hover:bg-brand-soft"
+                ? "border-[var(--brand-primary)] bg-[var(--theme-section-soft)] text-[var(--brand-primary-strong)]"
+                : "border-border/60 bg-[var(--theme-section-bg)] text-foreground hover:border-[var(--brand-primary)] hover:bg-[var(--theme-section-soft)]"
             }`}
             aria-expanded={openKey === "price"}
           >
@@ -247,7 +247,7 @@ export default function CategoryFilterBar({
           </button>
 
           {openKey === "price" ? (
-            <div className="absolute left-0 top-full z-30 mt-2 w-[320px] rounded-md border border-border/60 bg-white p-3 shadow-lg">
+            <div className="absolute left-0 top-full z-30 mt-2 w-[320px] rounded-md border theme-border bg-[var(--theme-section-bg)] p-3 shadow-lg">
               <div className="grid grid-cols-2 gap-2">
                 <label>
                   <input
@@ -261,7 +261,7 @@ export default function CategoryFilterBar({
                       if (event.key === "Enter") event.currentTarget.blur();
                     }}
                     aria-label={i18nText("AUTO.components.category.categoryfilterbar.line260_5_gia_toi_thieu")}
-                    className="h-10 w-full rounded-md border border-slate-200 bg-white px-3 text-sm text-slate-500 outline-none transition focus:border-brand focus:ring-2 focus:ring-brand/20"
+                    className="h-10 w-full rounded-md border theme-border bg-[var(--theme-section-bg)] px-3 text-sm theme-muted outline-none transition focus:border-[var(--brand-primary)] focus:ring-2 focus:ring-ring/20"
                   />
                 </label>
                 <label>
@@ -276,7 +276,7 @@ export default function CategoryFilterBar({
                       if (event.key === "Enter") event.currentTarget.blur();
                     }}
                     aria-label={i18nText("AUTO.components.category.categoryfilterbar.line275_6_gia_toi_da")}
-                    className="h-10 w-full rounded-md border border-slate-200 bg-white px-3 text-sm text-slate-500 outline-none transition focus:border-brand focus:ring-2 focus:ring-brand/20"
+                    className="h-10 w-full rounded-md border theme-border bg-[var(--theme-section-bg)] px-3 text-sm theme-muted outline-none transition focus:border-[var(--brand-primary)] focus:ring-2 focus:ring-ring/20"
                   />
                 </label>
               </div>
@@ -284,7 +284,7 @@ export default function CategoryFilterBar({
               <div className="nk-range relative mt-5 h-5">
                 <div className="absolute inset-x-0 top-1/2 h-1 -translate-y-1/2 rounded-full bg-slate-200" />
                 <div
-                  className="absolute top-1/2 h-1 -translate-y-1/2 rounded-full bg-brand"
+                  className="absolute top-1/2 h-1 -translate-y-1/2 rounded-full bg-[var(--brand-primary)]"
                   style={{
                     left: `${
                       ((Math.min(currentMinPrice, currentMaxPrice) - rangePrice.minPrice) /
@@ -333,14 +333,14 @@ export default function CategoryFilterBar({
                 <button
                   type="button"
                   onClick={clearPriceRange}
-                  className="mt-3 text-xs font-medium text-brand-strong hover:text-brand-deep"
+                  className="mt-3 text-xs font-medium text-[var(--brand-primary-strong)] hover:text-[var(--brand-primary-deep)]"
                 >{i18nText("AUTO.components.category.categoryfilterbar.line335_9_bo_chon_khoang_gia")}</button>
               ) : null}
 
               <button
                 type="button"
                 onClick={() => applyPriceRange()}
-                className="mt-3 inline-flex h-10 w-full items-center justify-center rounded-md border border-brand bg-brand px-3 text-sm font-semibold text-slate-950 transition hover:bg-brand-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
+                className="theme-cta mt-3 inline-flex h-10 w-full items-center justify-center rounded-md border px-3 text-sm font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
               >{i18nText("AUTO.components.category.categoryfilterbar.line344_10_ap_dung_gia")}</button>
             </div>
           ) : null}
@@ -360,8 +360,8 @@ export default function CategoryFilterBar({
                 onClick={() => setOpenKey((prev) => (prev === group.key ? null : group.key))}
                 className={`inline-flex h-10 max-w-[220px] items-center gap-2 rounded-md border px-3 text-sm font-medium transition ${
                   selectedValue
-                    ? "border-amber-300 bg-amber-50 text-amber-800"
-                    : "border-border/60 bg-white text-foreground hover:border-amber-300 hover:bg-amber-50/70"
+                    ? "border-[var(--brand-primary)] bg-[var(--theme-section-soft)] text-[var(--brand-primary-strong)]"
+                    : "border-border/60 bg-[var(--theme-section-bg)] text-foreground hover:border-[var(--brand-primary)] hover:bg-[var(--theme-section-soft)]"
                 }`}
                 aria-expanded={isOpen}
                 title={selectedLabel ? `${group.title}: ${selectedLabel}` : group.title}
@@ -377,7 +377,7 @@ export default function CategoryFilterBar({
               </button>
 
               {isOpen ? (
-                <div className="absolute left-0 top-full z-30 mt-2 w-[320px] rounded-md border border-border/60 bg-white p-3 shadow-lg xl:w-[380px]">
+                <div className="absolute left-0 top-full z-30 mt-2 w-[320px] rounded-md border theme-border bg-[var(--theme-section-bg)] p-3 shadow-lg xl:w-[380px]">
                   <div className="mb-3 flex items-center justify-between gap-2">
                     <p className="text-sm font-semibold text-foreground">{group.title}</p>
                     {selectedValue ? (
@@ -402,8 +402,8 @@ export default function CategoryFilterBar({
                           }
                           className={`min-h-10 rounded-md border px-3 py-2 text-left text-sm transition ${
                             isSelected
-                              ? "border-amber-300 bg-amber-50 text-amber-800"
-                              : "border-border/60 bg-white text-foreground hover:border-amber-300 hover:bg-amber-50/70"
+                              ? "border-[var(--brand-primary)] bg-[var(--theme-section-soft)] text-[var(--brand-primary-strong)]"
+                              : "border-border/60 bg-[var(--theme-section-bg)] text-foreground hover:border-[var(--brand-primary)] hover:bg-[var(--theme-section-soft)]"
                           }`}
                           aria-pressed={isSelected}
                           title={item.label}
@@ -423,7 +423,7 @@ export default function CategoryFilterBar({
           <button
             type="button"
             onClick={onResetAll}
-            className="ml-auto inline-flex h-10 items-center rounded-md border border-border/60 bg-white px-3 text-sm font-medium text-muted-foreground transition hover:border-amber-300 hover:bg-amber-50/70 hover:text-foreground"
+            className="ml-auto inline-flex h-10 items-center rounded-md border border-border/60 bg-[var(--theme-section-bg)] px-3 text-sm font-medium text-muted-foreground transition hover:border-[var(--brand-primary)] hover:bg-[var(--theme-section-soft)] hover:text-foreground"
           >{i18nText("AUTO.components.category.categoryfilterbar.line431_12_xoa_tat_ca")}</button>
         ) : null}
       </div>

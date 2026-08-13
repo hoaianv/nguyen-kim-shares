@@ -39,8 +39,8 @@ export const FeaturedCategories = () => {
     >
 
 
-      <div className="overflow-hidden rounded-md shadow-sm">
-        <div className="bg-white rounded-md">
+      <div className="overflow-hidden rounded-md border theme-border shadow-sm">
+        <div className="rounded-md bg-[var(--theme-section-bg)]">
           <HomeSectionHeader
             title={t("TITLE.featured_categories")}
             actionLabel={t("COMMON.view_all")}
@@ -48,12 +48,12 @@ export const FeaturedCategories = () => {
           />
 
         </div>
-        <div className="grid grid-cols-2 gap-[2px] bg-slate-200 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-7">
+        <div className="grid grid-cols-2 gap-[2px] bg-[var(--theme-border)] sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-7">
           {visibleCategories.map((item) => (
             <Link
               key={item.id}
               href={`/${item.url}`}
-              className="group flex min-h-[132px] flex-col items-center justify-center bg-white p-3 text-center transition hover:bg-[#fff7da]"
+              className="group flex min-h-[132px] flex-col items-center justify-center bg-[var(--theme-section-bg)] p-3 text-center transition hover:bg-[var(--theme-section-soft)]"
             >
               <span className="relative h-[101px] w-[182px] shrink-0 overflow-hidden rounded transition group-hover:bg-white">
                 {item.picture ? (
@@ -66,7 +66,7 @@ export const FeaturedCategories = () => {
                   />
                 ) : null}
               </span>
-              <span className="mt-3 line-clamp-2 min-h-[2.25rem] text-sm font-bold leading-snug text-slate-900 group-hover:text-[#e6a414]">
+              <span className="mt-3 line-clamp-2 min-h-[2.25rem] text-sm font-bold leading-snug text-[var(--theme-text)] group-hover:text-[var(--brand-primary-strong)]">
                 {item.title}
               </span>
 
@@ -75,12 +75,12 @@ export const FeaturedCategories = () => {
         </div>
 
         {hasMoreCategories ? (
-          <div className="bg-slate-200 px-3 pb-3 pt-2">
+          <div className="bg-[var(--theme-border)] px-3 pb-3 pt-2">
             <button
               type="button"
               aria-expanded={expanded}
               onClick={() => setExpanded((value) => !value)}
-              className="mx-auto inline-flex h-9 items-center gap-1.5 rounded-md border border-slate-300 bg-white px-4 text-sm font-semibold text-slate-700 transition hover:border-[#e6a414] hover:bg-[#fff7da] hover:text-slate-900"
+              className="mx-auto inline-flex h-9 items-center gap-1.5 rounded-md border theme-border bg-[var(--theme-section-bg)] px-4 text-sm font-semibold theme-muted transition hover:border-[var(--brand-primary)] hover:bg-[var(--theme-section-soft)] hover:text-[var(--theme-text)]"
             >
               {expanded ? (
                 <>{i18nText("AUTO.components.home.featuredcategories.line86_0_thu_gon")}<ChevronUp className="h-4 w-4" />

@@ -88,7 +88,7 @@ export default async function RootLayout({
       </div> */}
       <ScrollTop />
       <Header />
-      <main className="min-h-screen bg-white">{children}</main>
+      <main className="min-h-screen theme-page">{children}</main>
       <Footer />
       <SupportWidget />
     </>

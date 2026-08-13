@@ -11,6 +11,25 @@
   --brand-primary-strong: #7a6300;
   --brand-primary-deep: #493b00;
   --brand-primary-glow: #fde68a;
+  --theme-page-bg: #f1f8fe;
+  --theme-page-bg-rgb: 241, 248, 254;
+  --theme-section-bg: #ffffff;
+  --theme-section-soft: #fff9dd;
+  --theme-surface: #ffffff;
+  --theme-text: #1e293b;
+  --theme-muted-text: #64748b;
+  --theme-border: #e2e8f0;
+  --theme-price: #dc2626;
+  --theme-cta: #fed41b;
+  --theme-cta-hover: #e2b90a;
+  --theme-cta-foreground: #0f172a;
+  --theme-badge-bg: #fff9dd;
+  --theme-badge-text: #7a6300;
+  --theme-badge-border: #fed41b;
+  --theme-nav-bg: #ffffff;
+  --theme-nav-text: #0f172a;
+  --theme-footer-bg: #ffffff;
+  --theme-footer-text: #0f172a;
   --foreground-rgb: 30, 41, 59;
   --background-start-rgb: 244, 248, 253;
   --background-end-rgb: 255, 255, 255;
@@ -108,7 +127,7 @@
 }
 
 [class~="bg-[#FFD400]/10"] {
-  background-color: rgb(254 212 27 / 0.1) !important;
+  background-color: color-mix(in srgb, var(--brand-primary) 12%, transparent) !important;
 }
 
 [class~="bg-[#fff7da]"] {
@@ -275,7 +294,7 @@
     min-height: 100vh;
     background: linear-gradient(
       180deg,
-      rgb(var(--background-start-rgb)) 0%,
+      rgb(var(--theme-page-bg-rgb)) 0%,
       rgb(var(--background-end-rgb)) 100%
     );
   }
@@ -365,6 +384,143 @@
 }
 
 @layer utilities {
+  .theme-page {
+    background:
+      radial-gradient(circle at top left, color-mix(in srgb, var(--brand-primary-glow) 15%, transparent), transparent 26%),
+      linear-gradient(180deg, var(--theme-page-bg) 0%, #ffffff 100%);
+  }
+
+  .theme-section {
+    border-color: var(--theme-border);
+    background-color: var(--theme-section-bg);
+  }
+
+  .theme-section-soft {
+    border-color: var(--theme-border);
+    background-color: var(--theme-section-soft);
+  }
+
+  .theme-card {
+    border-color: var(--theme-border);
+    background-color: var(--theme-section-bg);
+    color: var(--theme-text);
+  }
+
+  .theme-price {
+    color: var(--theme-price);
+  }
+
+  .theme-cta {
+    border-color: var(--theme-cta);
+    background: linear-gradient(180deg, var(--theme-cta) 0%, var(--theme-cta-hover) 100%);
+    color: var(--theme-cta-foreground);
+  }
+
+  .theme-cta:hover {
+    background: linear-gradient(180deg, var(--theme-cta-hover) 0%, var(--theme-cta) 100%);
+  }
+
+  .theme-cta-outline {
+    border-color: color-mix(in srgb, var(--theme-cta) 72%, #ffffff);
+    color: var(--theme-cta);
+  }
+
+  .theme-cta-outline:hover {
+    background-color: var(--theme-section-soft);
+  }
+
+  .theme-badge {
+    border-color: var(--theme-badge-border);
+    background-color: var(--theme-badge-bg);
+    color: var(--theme-badge-text);
+  }
+
+  .theme-border {
+    border-color: var(--theme-border);
+  }
+
+  .theme-muted {
+    color: var(--theme-muted-text);
+  }
+
+  .theme-link {
+    color: var(--brand-primary-strong);
+  }
+
+  .theme-link:hover {
+    color: var(--brand-primary);
+  }
+
+  .theme-topbar {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .theme-topbar::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+      radial-gradient(circle at 8% 50%, color-mix(in srgb, var(--brand-primary-glow) 55%, transparent) 0 2px, transparent 3px),
+      radial-gradient(circle at 88% 48%, color-mix(in srgb, var(--brand-primary-glow) 42%, transparent) 0 2px, transparent 3px);
+    opacity: 0;
+  }
+
+  [data-theme="christmas"] .theme-topbar::before {
+    opacity: 1;
+  }
+
+  .theme-corner-decor {
+    pointer-events: none;
+    position: absolute;
+    z-index: 1;
+    display: none;
+    height: 86px;
+    width: 86px;
+    opacity: 0.95;
+  }
+
+  [data-theme="christmas"] .theme-corner-decor {
+    display: block;
+  }
+
+  .theme-corner-decor::before,
+  .theme-corner-decor::after {
+    content: "";
+    position: absolute;
+    border-radius: 9999px;
+  }
+
+  .theme-corner-decor::before {
+    inset: 14px 12px auto auto;
+    height: 42px;
+    width: 42px;
+    background:
+      radial-gradient(circle at 34% 30%, #ffffff 0 10%, transparent 12%),
+      radial-gradient(circle, var(--brand-primary) 0 55%, var(--brand-primary-hover) 56% 100%);
+    box-shadow:
+      -30px 22px 0 -13px var(--brand-primary-strong),
+      -14px 36px 0 -11px var(--brand-primary-glow);
+  }
+
+  .theme-corner-decor::after {
+    inset: 2px auto auto 5px;
+    height: 58px;
+    width: 58px;
+    border-radius: 0;
+    background:
+      linear-gradient(135deg, transparent 48%, var(--brand-primary-strong) 49% 58%, transparent 59%),
+      linear-gradient(45deg, transparent 48%, var(--brand-primary-strong) 49% 58%, transparent 59%);
+    transform: rotate(-18deg);
+  }
+
+  @media (max-width: 767px) {
+    .theme-corner-decor {
+      display: none !important;
+    }
+  }
+
   .font-medium {
     font-weight: 450;
   }
@@ -379,6 +535,61 @@
 
   .font-extrabold {
     font-weight: 700;
+  }
+}
+
+[data-theme="christmas"] {
+  --background-start-rgb: var(--theme-page-bg-rgb);
+  --background-end-rgb: 255, 255, 255;
+}
+
+[data-theme="christmas"] body,
+body[data-theme="christmas"] {
+  background:
+    radial-gradient(circle at 12% 18%, rgba(212, 175, 55, 0.14), transparent 20%),
+    radial-gradient(circle at 88% 6%, rgba(183, 28, 28, 0.08), transparent 18%),
+    linear-gradient(180deg, var(--theme-page-bg) 0%, #ffffff 100%);
+}
+
+[data-theme="christmas"] .christmas-snow {
+  position: absolute;
+  inset: -20% 0 auto 0;
+  height: 140%;
+  background-image:
+    radial-gradient(circle, rgba(255, 255, 255, 0.85) 0 1.5px, transparent 1.8px),
+    radial-gradient(circle, rgba(212, 175, 55, 0.25) 0 1px, transparent 1.4px);
+  background-size: 92px 92px, 137px 137px;
+  animation: christmasSnow 18s linear infinite;
+}
+
+[data-theme="christmas"] .christmas-snow--two {
+  opacity: 0.58;
+  background-size: 128px 128px, 180px 180px;
+  animation-duration: 26s;
+  animation-delay: -8s;
+}
+
+[data-theme="christmas"] .christmas-snow--three {
+  opacity: 0.42;
+  background-size: 180px 180px, 240px 240px;
+  animation-duration: 34s;
+  animation-delay: -14s;
+}
+
+@keyframes christmasSnow {
+  from {
+    transform: translate3d(0, -8%, 0);
+  }
+  to {
+    transform: translate3d(0, 10%, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .christmas-effects,
+  .christmas-snow {
+    display: none !important;
+    animation: none !important;
   }
 }
 

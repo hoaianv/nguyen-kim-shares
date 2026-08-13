@@ -49,7 +49,7 @@ const CardCart = memo(function CardCart({ id }: Props) {
   return (
     <>
       <div className="hidden md:block px-2">
-        <div className="grid grid-cols-[120px_minmax(0,2fr)_minmax(140px,1fr)_120px_140px_56px] gap-3 rounded-lg py-4 hover:bg-gray-50">
+        <div className="grid grid-cols-[120px_minmax(0,2fr)_minmax(140px,1fr)_120px_140px_56px] gap-3 rounded-lg py-4 hover:bg-[var(--theme-section-soft)]">
           <div className="flex items-center gap-3">
             <CheckboxField
               id={`checkbox-${id}`}
@@ -91,7 +91,7 @@ const CardCart = memo(function CardCart({ id }: Props) {
           </div>
 
           <div className="flex flex-col items-center justify-center">
-            <span className="text-sm font-semibold text-rose-600">
+            <span className="theme-price text-sm font-semibold">
               {getPrice(item)}
             </span>
             {marketPrice ? (
@@ -118,7 +118,7 @@ const CardCart = memo(function CardCart({ id }: Props) {
                   event.currentTarget.blur();
                 }
               }}
-              className="h-10 w-14 rounded border border-gray-300 text-center text-sm outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+              className="h-10 w-14 rounded border theme-border text-center text-sm outline-none transition focus:border-[var(--brand-primary)] focus:ring-2 focus:ring-ring/20"
               aria-label={i18nText("AUTO.components.cart.cardcart.line121_0_so_luong")}
             />
           </div>
@@ -150,7 +150,7 @@ const CardCart = memo(function CardCart({ id }: Props) {
       </div>
 
       <div className="md:hidden px-2 py-3">
-        <div className="rounded-lg border border-gray-100 bg-white p-3">
+        <div className="rounded-lg border theme-border bg-[var(--theme-section-bg)] p-3">
           <div className="mb-3 flex items-center justify-between">
             <CheckboxField
               id={`checkbox-mobile-${id}`}
@@ -199,7 +199,7 @@ const CardCart = memo(function CardCart({ id }: Props) {
           </div>
 
           <div className="mt-4 flex items-center justify-between">
-            <div className="inline-flex items-center rounded-lg border border-gray-300">
+            <div className="inline-flex items-center rounded-lg border theme-border">
               <button
                 disabled={item.quantity <= 1}
                 onClick={() => updateCart(id, item.quantity - 1)}
@@ -231,7 +231,7 @@ const CardCart = memo(function CardCart({ id }: Props) {
       </div>
 
       <div className="hidden px-2 sm:block md:hidden">
-        <div className="border-b border-gray-100 py-3 last:border-b-0">
+        <div className="border-b theme-border py-3 last:border-b-0">
           <div className="flex gap-3">
             <div className="flex items-start pt-2">
               <CheckboxField
@@ -278,7 +278,7 @@ const CardCart = memo(function CardCart({ id }: Props) {
               </div>
 
               <div className="mt-3 flex items-center justify-between">
-                <div className="inline-flex items-center rounded-lg border border-gray-300">
+                <div className="inline-flex items-center rounded-lg border theme-border">
                   <button
                     disabled={item.quantity <= 1}
                     onClick={() => updateCart(id, item.quantity - 1)}

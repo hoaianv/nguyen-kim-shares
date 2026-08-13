@@ -17,12 +17,12 @@ const CouponSection = ({ data }: CouponProps) => {
   if (!data || data.length <= 0) return null;
 
   return (
-    <div className="bg-white  rounded-lg   p-3 shadow-sm">
+    <div className="rounded-lg border theme-border bg-[var(--theme-section-bg)] p-3 shadow-sm">
       <div className="flex items-center space-x-2 mb-4">
-        <div className="p-2 bg-[#FFD400]/10  rounded-lg ">
-          <Ticket className="h-6 w-6 text-[#FFD400]" />
+        <div className="rounded-lg bg-[var(--theme-section-soft)] p-2">
+          <Ticket className="h-6 w-6 text-[var(--brand-primary-strong)]" />
         </div>
-        <h3 className="text-base sm:text-lg md:text-xl font-semibold text-[#111827] line-clamp-1">
+        <h3 className="line-clamp-1 text-base font-semibold text-[var(--theme-text)] sm:text-lg md:text-xl">
           {t("PRODUCT.choose_promotion")}
         </h3>
       </div>

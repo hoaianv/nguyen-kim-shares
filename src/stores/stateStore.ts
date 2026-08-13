@@ -8,6 +8,7 @@ import {
   FooterSection,
   IFooter,
 } from "@/interfaces/models/IFooter.interface";
+import type { ThemeConfig } from "@/theme/types";
 
 interface SearchState {
   search: ISearch;
@@ -26,6 +27,8 @@ interface SearchState {
   setFooterSections: (footerSections: FooterSection[]) => void;
   companyAddress: CompanyAddress | null;
   setCompanyAddress: (companyAddress: CompanyAddress | null) => void;
+  theme: ThemeConfig | null;
+  setTheme: (theme: ThemeConfig) => void;
 }
 
 export const useStateStore = create<SearchState>((set) => ({
@@ -46,6 +49,8 @@ export const useStateStore = create<SearchState>((set) => ({
   setFooterSections: (footerSections) => set({ footerSections }),
   companyAddress: null,
   setCompanyAddress: (companyAddress) => set({ companyAddress }),
+  theme: null,
+  setTheme: (theme) => set({ theme }),
   banner: {},
   setBanner: (banner) => set({ banner }),
 

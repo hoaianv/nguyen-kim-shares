@@ -47,17 +47,15 @@ export const GroupBanner = ({
       <div className="mx-auto mt-3 w-full max-w-[1520px] px-3 sm:px-4 lg:px-6">
 
 
-        <div
-          className={`grid gap-3 rounded-b-md    shadow-sm ${GRID_CLASSES[columns]}`}
-        >
+        <div className={`grid gap-3 rounded-b-md shadow-sm ${GRID_CLASSES[columns]}`}>
           {advertises.slice(0, columns).map((item) => (
             <Link
               key={item.id}
               href={item.link || "#"}
               target={item.target}
-              className="group block overflow-hidden rounded-sm border border-slate-200 bg-white transition hover:border-[#ffb716]"
+              className="group block overflow-hidden rounded-sm border theme-border bg-[var(--theme-section-bg)] transition hover:border-[var(--brand-primary)]"
             >
-              <div className="relative aspect-[16/7.8] overflow-hidden bg-slate-100">
+              <div className="relative aspect-[16/7.8] overflow-hidden bg-muted">
                 <Image
                   src={item.picture}
                   alt={item.title}

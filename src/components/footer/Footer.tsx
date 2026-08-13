@@ -118,7 +118,9 @@ export default function Footer() {
   const bankSection = sectionByKey.get("online_bank");
 
   return (
-    <footer className="border-t border-slate-200 bg-white text-slate-900">
+    <footer className="relative overflow-hidden border-t theme-border bg-[var(--theme-footer-bg)] text-[var(--theme-footer-text)]">
+      <span className="theme-corner-decor bottom-0 left-0 h-28 w-28" />
+      <span className="theme-corner-decor bottom-0 right-0 h-28 w-28 rotate-180" />
       <section>
         <div className="mx-auto grid w-full max-w-[1520px] gap-7 px-3 py-6 sm:grid-cols-2 sm:px-4 lg:grid-cols-4 lg:px-6">
           {serviceItems.map((item) => {
@@ -126,12 +128,12 @@ export default function Footer() {
 
             return (
               <div key={item.title} className="flex items-center gap-4">
-                <Icon className="h-8 w-8 shrink-0 text-brand-hover sm:h-9 sm:w-9" />
+                <Icon className="h-8 w-8 shrink-0 text-[var(--brand-primary)] sm:h-9 sm:w-9" />
                 <div>
-                  <p className="text-base font-bold uppercase leading-tight text-slate-950">
+                  <p className="text-base font-bold uppercase leading-tight text-[var(--theme-text)]">
                     {item.title}
                   </p>
-                  <p className="mt-1 text-sm leading-5 text-slate-500">
+                  <p className="mt-1 text-sm leading-5 theme-muted">
                     {item.description}
                   </p>
                 </div>
@@ -162,7 +164,7 @@ export default function Footer() {
           ) : null}
 
           {paymentSection || bankSection ? (
-            <div className="mt-8 grid gap-8 border-t border-slate-200 pt-6 lg:grid-cols-[minmax(280px,0.8fr)_minmax(0,1.7fr)]">
+            <div className="mt-8 grid gap-8 border-t theme-border pt-6 lg:grid-cols-[minmax(280px,0.8fr)_minmax(0,1.7fr)]">
               {paymentSection ? (
                 <div>
                   <h3 className="text-sm font-bold uppercase text-slate-950">
@@ -215,7 +217,7 @@ export default function Footer() {
         </section>
       )}
 
-      <section className="bg-slate-200/70">
+      <section className="bg-[var(--theme-section-soft)]">
         <div className="mx-auto grid w-full max-w-[1520px] gap-6 px-3 py-8 text-sm text-slate-700 sm:px-4 md:grid-cols-2 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)_180px] lg:px-6">
           <div>
             <h3 className="text-sm font-bold uppercase text-slate-950">

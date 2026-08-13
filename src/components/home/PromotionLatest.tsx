@@ -19,7 +19,7 @@ type PromotionLatestProps = {
 };
 
 const navBase =
-  "flex h-8 w-8 items-center justify-center rounded-full bg-[#ffb716] text-slate-950 shadow-sm transition hover:bg-[#e6a414] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ffb716]/40 sm:h-10 sm:w-10";
+  "flex h-8 w-8 items-center justify-center rounded-full bg-[var(--brand-primary)] text-primary-foreground shadow-sm transition hover:bg-[var(--brand-primary-hover)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring sm:h-10 sm:w-10";
 
 export default function PromotionLatest({ data }: PromotionLatestProps) {
   const reduceMotion = useReducedMotion();
@@ -36,7 +36,7 @@ export default function PromotionLatest({ data }: PromotionLatestProps) {
       viewport={{ once: true, amount: 0.18 }}
       transition={{ duration: 0.4, ease: "easeOut" }}
     >
-      <div className="overflow-hidden rounded-md bg-white shadow-sm ring-1 ring-slate-200/70">
+      <div className="overflow-hidden rounded-md border theme-border bg-[var(--theme-section-bg)] shadow-sm">
         <HomeSectionHeader
           title={i18nText("AUTO.components.home.promotionlatest.line40_0_tong_hop_khuyen_mai")}
           actionLabel={i18nText("AUTO.components.home.promotionlatest.extra42_0_xem_tat_ca")}

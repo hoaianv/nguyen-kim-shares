@@ -134,16 +134,17 @@ export default function PageCheckout({
   }
 
   return (
-    <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 pt-3">
+    <div className="relative grid grid-cols-1 gap-4 pt-3 lg:grid-cols-3">
+      <span className="theme-corner-decor -left-8 top-8 h-24 w-24" />
       <div className="order-2 space-y-4 lg:order-1 lg:col-span-2">
-        <div className="overflow-hidden rounded-[28px] border border-slate-200/80 bg-white/90 shadow-sm ring-1 ring-white/60 backdrop-blur">
-          <div className="flex overflow-x-auto border-b border-slate-200/80 bg-slate-50/80 scrollbar-thin scrollbar-track-gray-100 scrollbar-thumb-gray-300 hover:scrollbar-thumb-gray-400">
+        <div className="overflow-hidden rounded-[28px] border theme-border bg-[var(--theme-section-bg)]/95 shadow-sm ring-1 ring-white/60 backdrop-blur">
+          <div className="flex overflow-x-auto border-b theme-border bg-[var(--theme-section-soft)] scrollbar-thin scrollbar-track-gray-100 scrollbar-thumb-gray-300 hover:scrollbar-thumb-gray-400">
             <button
               onClick={() =>
                 setPayload((prev) => ({ ...prev, shippingMethod: "delivery" }))
               }
               className={`flex-1 px-4 py-3 text-center text-sm font-medium transition sm:px-6 sm:py-4 sm:text-base ${payload.shippingMethod === "delivery"
-                ? "border-b-2 border-amber-500 bg-white text-slate-950"
+                ? "border-b-2 border-[var(--brand-primary)] bg-[var(--theme-section-bg)] text-[var(--theme-text)]"
                 : "text-slate-500 hover:text-slate-900"
                 }`}
             >{i18nText("AUTO.components.checkout.pagecheckout.line149_1_nhan_hang_nha")}</button>
@@ -153,7 +154,7 @@ export default function PageCheckout({
                 setPayload((prev) => ({ ...prev, shippingMethod: "pickup" }))
               }
               className={`flex-1 px-4 py-3 text-center text-sm font-medium transition sm:px-6 sm:py-4 sm:text-base ${payload.shippingMethod === "pickup"
-                ? "border-b-2 border-amber-500 bg-white text-slate-950"
+                ? "border-b-2 border-[var(--brand-primary)] bg-[var(--theme-section-bg)] text-[var(--theme-text)]"
                 : "text-slate-500 hover:text-slate-900"
                 }`}
             >{i18nText("AUTO.components.checkout.pagecheckout.line161_2_nhan_hang")}</button>
@@ -167,12 +168,12 @@ export default function PageCheckout({
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, ease: "easeOut" }}
-                className="flex items-start gap-3 rounded-[20px] border border-amber-200 bg-amber-50/80 p-4"
+                className="flex items-start gap-3 rounded-[20px] border border-[var(--brand-primary)] bg-[var(--theme-section-soft)] p-4"
               >
                 <MapPinHouse
                   size={18}
                   strokeWidth={1.75}
-                  className="mt-1 flex-shrink-0 text-amber-600"
+                  className="mt-1 flex-shrink-0 text-[var(--brand-primary-strong)]"
                 />
                 <span className="text-sm font-medium leading-relaxed text-slate-700 sm:text-base">
                   {address}
@@ -213,7 +214,7 @@ export default function PageCheckout({
           />
         </div>
 
-        <div className="overflow-hidden rounded-[28px] border border-slate-200/80 bg-white/90 shadow-sm">
+        <div className="overflow-hidden rounded-[28px] border theme-border bg-[var(--theme-section-bg)]/95 shadow-sm">
           <PaymentSection />
         </div>
       </div>
