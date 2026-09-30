@@ -1,6 +1,7 @@
 "use client";
 
 import { bannerKeys } from "@/constants/values.constant";
+import { normalizeRecruitmentCompanyName } from "@/lib/recruitmentCompanyName";
 import { useStateStore } from "@/stores/stateStore";
 import Image from "next/image";
 
@@ -18,10 +19,10 @@ export default function CompanyIntro() {
           <div>
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 text-balance">
-                {bannerCompany.title}
+                {normalizeRecruitmentCompanyName(bannerCompany.title)}
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
-                {bannerCompany.description}
+                {normalizeRecruitmentCompanyName(bannerCompany.description)}
               </p>
             </div>
 
@@ -37,7 +38,7 @@ export default function CompanyIntro() {
                 >
                   <Image
                     src={item.picture}
-                    alt={item.title}
+                    alt={normalizeRecruitmentCompanyName(item.title)}
                     width={item.width}
                     height={item.height}
                     quality={100}
@@ -73,7 +74,7 @@ export default function CompanyIntro() {
               src={bannerPartner.picture}
               width={bannerPartner.width}
               height={bannerPartner.height}
-              alt={bannerPartner.title}
+              alt={normalizeRecruitmentCompanyName(bannerPartner.title)}
               loading="lazy"
               quality={100}
               className="

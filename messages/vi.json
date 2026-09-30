@@ -1386,7 +1386,7 @@
           "line150_4_xoa_bo_loc": "Xóa bộ lọc",
           "line142_3_chon_phong": "Chọn phòng ban",
           "line117_2_tim_theo_ten_cong_viec": "Tìm theo tên công việc",
-          "line97_1_tham_gia_doi_ngu_nang": "Tham gia đội ngũ năng động và phát triển sự nghiệp cùng Nguyên Kim",
+          "line97_1_tham_gia_doi_ngu_nang": "Tham gia đội ngũ năng động và phát triển sự nghiệp cùng {value0}",
           "line89_0_hoi_nghe_nghiep": "Cơ hội nghề nghiệp"
         }
       },

@@ -2,23 +2,27 @@ import {
   getCategoriesProducts,
   getProductsFlashSale,
   getProductsHot,
+  getProductsRecommend,
 } from "@/apis/models/products.apis";
 import { getListPromotionHome } from "@/apis/models/promotion.apis";
 import BannerLeftRight from "@/components/home/BannerLeftRight";
 import BannerPopup from "@/components/home/BannerPopup";
-import { FeaturedCategories } from "@/components/home/featuredCategories";
 import { GroupBanner } from "@/components/home/groupBanner";
 import ProductCarouselSection from "@/components/home/ProductCarouselSection";
+import ProductsRecommend from "@/components/home/productsRecommend";
 import { LazySection } from "@/components/ui/lazySection";
 import { SkeletonLoader } from "@/components/ui/skeletonLoader";
 import { bannerKeys } from "@/constants/values.constant";
 import { getValidData } from "@/lib/utils";
 import dynamic from "next/dynamic";
 
-const PromotionLatest = dynamic(() => import("@/components/home/PromotionLatest"), {
-  ssr: false,
-  loading: () => <SkeletonLoader height="h-64" />,
-});
+const PromotionLatest = dynamic(
+  () => import("@/components/home/PromotionLatest"),
+  {
+    ssr: false,
+    loading: () => <SkeletonLoader height="h-64" />,
+  },
+);
 
 const Banner = dynamic(() => import("@/components/home/banner"), {
   ssr: false,
@@ -27,39 +31,37 @@ const Banner = dynamic(() => import("@/components/home/banner"), {
 
 const CategoriesProducts = dynamic(
   () => import("@/components/home/categoriesProducts"),
-  { loading: () => <SkeletonLoader height="h-48" />, ssr: false }
+  { loading: () => <SkeletonLoader height="h-48" />, ssr: false },
 );
 
-
-
-
-
-
 export default async function Home() {
-  const [productsHot, categoriesProducts, promotionLatest, productsFlashSale] =
-    await Promise.all([
-      getProductsHot(),
-      getCategoriesProducts(),
-      getListPromotionHome(),
-      getProductsFlashSale(),
-    ]);
+  const [
+    productsHot,
+    categoriesProducts,
+    promotionLatest,
+    productsFlashSale,
+    productsRecommend,
+  ] = await Promise.all([
+    getProductsHot(),
+    getCategoriesProducts(),
+    getListPromotionHome(),
+    getProductsFlashSale(),
+    getProductsRecommend().catch(() => undefined),
+  ]);
+
+  const recommendedProducts = getValidData(productsRecommend) ?? [];
 
   return (
     <>
-      <div className="  pb-8">
+      <div className="relative pb-8">
+        <BannerLeftRight />
         <Banner />
         <LazySection>
           <GroupBanner bannerKey="bannerBottom" columns={4} gap={3} />
         </LazySection>
 
-
-
         <LazySection height="h-48">
-
-
-
           <ProductCarouselSection
-
             data={getValidData(productsHot) ?? []}
             bannerKey={bannerKeys.bannerTopSellingHome}
           />
@@ -72,7 +74,6 @@ export default async function Home() {
           />
         </LazySection>
 
-
         <LazySection height="h-48">
           <CategoriesProducts data={getValidData(categoriesProducts) ?? []} />
         </LazySection>
@@ -81,14 +82,9 @@ export default async function Home() {
           <GroupBanner bannerKey="bannerMiddle" columns={3} gap={3} />
         </LazySection>
 
-        {/* <LazySection height="h-48">
-          <ProductsRecommend data={getValidData(productsRecommend) ?? []} />
-        </LazySection> */}
-
-        <FeaturedCategories />
-
-        <LazySection>
-          <BannerLeftRight />
+        {/* <FeaturedCategories /> */}
+        <LazySection height="h-48">
+          <ProductsRecommend data={recommendedProducts} />
         </LazySection>
 
         <LazySection height="h-48">

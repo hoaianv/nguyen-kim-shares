@@ -1,6 +1,7 @@
 "use client";
 
 import { bannerKeys } from "@/constants/values.constant";
+import { normalizeRecruitmentCompanyName } from "@/lib/recruitmentCompanyName";
 import { useStateStore } from "@/stores/stateStore";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
@@ -32,7 +33,7 @@ export default function HeroSection() {
                     <Image
                       priority
                       src={picture}
-                      alt={title}
+                      alt={normalizeRecruitmentCompanyName(title)}
                       fill
                       quality={100}
                       className="object-cover"
@@ -45,11 +46,11 @@ export default function HeroSection() {
   bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(255,255,255,0.4)]
   "
                       >
-                        {title}
+                        {normalizeRecruitmentCompanyName(title)}
                       </h1>
 
                       <p className="mt-4 text-lg md:text-xl text-gray-200 max-w-2xl  nk-delay-300">
-                        {description}
+                        {normalizeRecruitmentCompanyName(description)}
                       </p>
                     </div>
                   </div>

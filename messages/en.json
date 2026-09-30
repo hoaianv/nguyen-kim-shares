@@ -1386,7 +1386,7 @@
           "line150_4_xoa_bo_loc": "Clear filter",
           "line142_3_chon_phong": "Select department",
           "line117_2_tim_theo_ten_cong_viec": "Search by job name",
-          "line97_1_tham_gia_doi_ngu_nang": "Join a dynamic team and develop your career with Nguyen Kim",
+          "line97_1_tham_gia_doi_ngu_nang": "Join a dynamic team and develop your career with {value0}",
           "line89_0_hoi_nghe_nghiep": "Career opportunities"
         }
       },
