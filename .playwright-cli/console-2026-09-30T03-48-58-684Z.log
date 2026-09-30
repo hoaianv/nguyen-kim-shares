@@ -1,0 +1,24 @@
+[    1320ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:38559
+[    2628ms] [WARNING] Image with src "https://media.vitinhnguyenkim.vn/uploads/advertises/2026-07/20260729_032613_wcU6TgyF30.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio. @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[   13554ms] [ERROR] Failed to load resource: net::ERR_QUIC_PROTOCOL_ERROR @ https://media.vitinhnguyenkim.vn/uploads/advertises/2026-08/20260805_040840_S4xQHbodDA.png:0
+[   13555ms] [ERROR] Failed to load resource: net::ERR_QUIC_PROTOCOL_ERROR @ https://media.vitinhnguyenkim.vn/uploads/advertises/2026-08/20260804_034132_QNIYwNNE2U.png:0
+[   13555ms] [ERROR] Failed to load resource: net::ERR_QUIC_PROTOCOL_ERROR @ https://media.vitinhnguyenkim.vn/uploads/product/linh-kien/Mainboard/Mainboard-Gigabyte-H310M-M2-2.png:0
+[   13556ms] [ERROR] Failed to load resource: net::ERR_QUIC_PROTOCOL_ERROR @ https://media.vitinhnguyenkim.vn/uploads/advertise/2025-09/68cb91ff26b9f.png:0
+[   13556ms] [ERROR] Failed to load resource: net::ERR_QUIC_PROTOCOL_ERROR @ https://media.vitinhnguyenkim.vn/uploads/advertises/2026-08/20260804_043217_efbc5hDmFw.png:0
+[   13556ms] [ERROR] Failed to load resource: net::ERR_QUIC_PROTOCOL_ERROR @ https://media.vitinhnguyenkim.vn/uploads/advertises/2026-08/20260804_034213_C4yf2Ytoff.png:0
+[   13557ms] [ERROR] Failed to load resource: net::ERR_QUIC_PROTOCOL_ERROR @ https://media.vitinhnguyenkim.vn/uploads/background/6abb8e8d960d6.png:0
+[   13557ms] [ERROR] Failed to load resource: net::ERR_QUIC_PROTOCOL_ERROR @ https://media.vitinhnguyenkim.vn/uploads/advertises/2026-08/20260804_034119_rhJsWrU2U3.png:0
+[   13558ms] [ERROR] Failed to load resource: net::ERR_QUIC_PROTOCOL_ERROR @ https://media.vitinhnguyenkim.vn/uploads/product/linh-kien/Mainboard/GIGABYTE-B760M-DS3H-DDR4.png:0
+[   13558ms] [ERROR] Failed to load resource: net::ERR_QUIC_PROTOCOL_ERROR @ https://media.vitinhnguyenkim.vn/uploads/background/6abb8bab1c8bf.png:0
+[   13559ms] [ERROR] Failed to load resource: net::ERR_QUIC_PROTOCOL_ERROR @ https://media.vitinhnguyenkim.vn/uploads/advertises/2026-08/20260805_042531_lrEeArLo4p.png:0
+[   13559ms] [ERROR] Failed to load resource: net::ERR_QUIC_PROTOCOL_ERROR @ https://media.vitinhnguyenkim.vn/uploads/background/6abb8ea796335.png:0
+[   13559ms] [ERROR] Failed to load resource: net::ERR_QUIC_PROTOCOL_ERROR @ https://media.vitinhnguyenkim.vn/uploads/advertises/2026-08/20260804_034158_EfweoA4Bv3.png:0
+[   13559ms] [ERROR] Failed to load resource: net::ERR_QUIC_PROTOCOL_ERROR @ https://media.vitinhnguyenkim.vn/uploads/advertises/2026-08/20260804_045856_FMuzi0frEv.png:0
+[   14216ms] [WARNING] Image with src "https://media.vitinhnguyenkim.vn/uploads/advertises/2026-08/20260805_040817_y6kBaXqdlK.png" was detected as the Largest Contentful Paint (LCP). Please add the "priority" property if this image is above the fold.
+Read more: https://nextjs.org/docs/api-reference/next/image#priority @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[   84796ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:186
+[   86520ms] [LOG] [Fast Refresh] done in 1724ms @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:43
+[   93982ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:38559
+[   94901ms] [WARNING] Image with src "https://media.vitinhnguyenkim.vn/uploads/advertises/2026-07/20260729_032613_wcU6TgyF30.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio. @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[  110782ms] [WARNING] Image with src "https://media.vitinhnguyenkim.vn/uploads/advertises/2026-08/20260805_030859_jRYlkT8wxs.png" was detected as the Largest Contentful Paint (LCP). Please add the "priority" property if this image is above the fold.
+Read more: https://nextjs.org/docs/api-reference/next/image#priority @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15

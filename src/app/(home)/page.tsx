@@ -7,9 +7,9 @@ import {
 import { getListPromotionHome } from "@/apis/models/promotion.apis";
 import BannerLeftRight from "@/components/home/BannerLeftRight";
 import BannerPopup from "@/components/home/BannerPopup";
-import { FeaturedCategories } from "@/components/home/featuredCategories";
 import { GroupBanner } from "@/components/home/groupBanner";
 import ProductCarouselSection from "@/components/home/ProductCarouselSection";
+import ProductsRecommend from "@/components/home/productsRecommend";
 import { LazySection } from "@/components/ui/lazySection";
 import { SkeletonLoader } from "@/components/ui/skeletonLoader";
 import { bannerKeys } from "@/constants/values.constant";
@@ -39,17 +39,21 @@ const TopSellingProducts = dynamic(
 
 
 export default async function Home() {
-  const [productsHot, categoriesProducts, promotionLatest, productsFlashSale] =
+  const [productsHot, categoriesProducts, promotionLatest, productsFlashSale, productsRecommend] =
     await Promise.all([
       getProductsHot(),
       getCategoriesProducts(),
       getListPromotionHome(),
       getProductsFlashSale(),
+      getProductsRecommend().catch(() => undefined),
     ]);
+
+  const recommendedProducts = getValidData(productsRecommend) ?? [];
 
   return (
     <>
-      <div className="bg-[#F1F8FE] pb-8">
+      <div className="relative bg-[#F1F8FE] pb-8">
+        <BannerLeftRight />
         <Banner />
         <LazySection>
           <GroupBanner bannerKey="bannerBottom" columns={4} gap={3} />
@@ -79,14 +83,9 @@ export default async function Home() {
           <GroupBanner bannerKey="bannerMiddle" columns={3} gap={3} />
         </LazySection>
 
-        {/* <LazySection height="h-48">
-          <ProductsRecommend data={getValidData(productsRecommend) ?? []} />
-        </LazySection> */}
-
-        <FeaturedCategories />
-
-        <LazySection>
-          <BannerLeftRight />
+        {/* <FeaturedCategories /> */}
+        <LazySection height="h-48">
+          <ProductsRecommend data={recommendedProducts} />
         </LazySection>
 
         <LazySection height="h-48">

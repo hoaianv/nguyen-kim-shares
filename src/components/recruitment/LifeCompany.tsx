@@ -1,6 +1,7 @@
 "use client";
 
 import { bannerKeys } from "@/constants/values.constant";
+import { normalizeRecruitmentCompanyName } from "@/lib/recruitmentCompanyName";
 import { useStateStore } from "@/stores/stateStore";
 import Image from "next/image";
 import { useState } from "react";
@@ -55,10 +56,10 @@ export default function LifeCompany() {
         <div className="mx-auto 2xl:max-w-[1520px] xl:max-w-6xl lg:max-w-4xl md:max-w-lg sm:max-w-md max-w-sm">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 text-balance">
-              {banners.title}
+              {normalizeRecruitmentCompanyName(banners.title)}
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
-              {banners.description}
+              {normalizeRecruitmentCompanyName(banners.description)}
             </p>
           </div>
 
@@ -70,7 +71,7 @@ export default function LifeCompany() {
               photos={
                 banners?.advertises.map((item) => ({
                   src: item.picture,
-                  alt: item.title,
+                  alt: normalizeRecruitmentCompanyName(item.title),
                   width: 1600,
                   height: 900,
                 })) ?? []
@@ -93,7 +94,7 @@ export default function LifeCompany() {
           slides={
             banners?.advertises.map((item) => ({
               src: item.picture,
-              alt: item.title,
+              alt: normalizeRecruitmentCompanyName(item.title),
             })) ?? []
           }
           open={index >= 0}

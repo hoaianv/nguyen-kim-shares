@@ -1,0 +1,1708 @@
+- generic [active] [ref=e1]:
+  - alert [ref=e2]
+  - region "Notifications alt+T"
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - generic [ref=e6]:
+        - link "Tin khuyến mãi" [ref=e7] [cursor=pointer]:
+          - /url: /tin-khuyen-mai
+        - link "Xây dựng cấu hình" [ref=e11] [cursor=pointer]:
+          - /url: /xay-dung-cau-hinh
+        - link "Giải pháp doanh nghiệp" [ref=e15] [cursor=pointer]:
+          - /url: /giai-phap-cho-doanh-nghiep
+        - link "Tin tức" [ref=e19] [cursor=pointer]:
+          - /url: /tin-tuc
+        - button [ref=e24] [cursor=pointer]:
+          - button "Liên hệ kinh doanh" [ref=e25]
+        - link "Tuyển dụng" [ref=e30] [cursor=pointer]:
+          - /url: /tuyen-dung
+      - generic [ref=e35]:
+        - link [ref=e36] [cursor=pointer]:
+          - /url: /
+          - img "Vi Tính Nguyên Kim" [ref=e37]
+        - button "Mở danh mục sản phẩm" [ref=e38] [cursor=pointer]:
+          - generic [ref=e40]: Danh mục sản phẩm
+        - generic [ref=e41]:
+          - generic [ref=e42]:
+            - textbox "Bạn tìm gì..." [ref=e44]
+            - button "Tìm kiếm" [ref=e45] [cursor=pointer]
+          - navigation [ref=e50]:
+            - link "PC Gaming" [ref=e51] [cursor=pointer]:
+              - /url: /san-pham?keyword=PC%20Gaming
+            - link "Laptop" [ref=e52] [cursor=pointer]:
+              - /url: /san-pham?keyword=Laptop
+            - link "CPU" [ref=e53] [cursor=pointer]:
+              - /url: /san-pham?keyword=CPU
+            - link "VGA" [ref=e54] [cursor=pointer]:
+              - /url: /san-pham?keyword=VGA
+            - link "RAM" [ref=e55] [cursor=pointer]:
+              - /url: /san-pham?keyword=RAM
+            - link "Mainboard" [ref=e56] [cursor=pointer]:
+              - /url: /san-pham?keyword=Mainboard
+        - generic [ref=e58]:
+          - button [ref=e60] [cursor=pointer]:
+            - link [ref=e61]:
+              - /url: /dang-nhap
+              - button "Tài khoản" [ref=e62]:
+                - generic [ref=e67]:
+                  - generic [ref=e68]: Đăng nhập/Đăng ký
+                  - generic [ref=e69]: Tài khoản
+          - button [ref=e73] [cursor=pointer]:
+            - link [ref=e74]:
+              - /url: /gio-hang
+              - button "Giỏ hàng" [ref=e75]:
+                - generic [ref=e76]: "0"
+    - main [ref=e84]:
+      - generic [ref=e85]:
+        - generic:
+          - generic:
+            - link [ref=e87] [cursor=pointer]:
+              - /url: /
+              - img "Banner bên phải màn hình" [ref=e88]
+            - link [ref=e90] [cursor=pointer]:
+              - /url: https://nguyenkimcomputer.vn/laptop-dell
+              - img "Banner bên phải màn hình" [ref=e91]
+        - generic [ref=e93]:
+          - generic [ref=e95]:
+            - generic [ref=e96]:
+              - link [ref=e98] [cursor=pointer]:
+                - /url: /
+                - img "Back to school" [ref=e99]
+              - link [ref=e101] [cursor=pointer]:
+                - /url: https://nguyenkimcomputer.vn/936-b0a811-412-may-tinh-de-ban-mini-pc-msi-cubi-5-12m-412bvni5-1235uwfbtnonos3yden-black-cubi-b0a8
+                - img "MSI Mini CUBI NUC" [ref=e102]
+              - link [ref=e104] [cursor=pointer]:
+                - /url: "#"
+                - img "LINH KIỆN GIÁ TỐT" [ref=e105]
+              - link [ref=e107] [cursor=pointer]:
+                - /url: https://nguyenkimcomputer.vn/man-hinh-vi-tinh-samsung-ls24f320gaexxv
+                - img "Máy in & mực in chính hãng" [ref=e108]
+              - link [ref=e110] [cursor=pointer]:
+                - /url: https://nguyenkimcomputer.vn/pc-mini-asus-rnuc13anhh500000i-intel-core-i5-13420h-adaptor-khong-co-o-cung-ram-va-man-hinh
+                - img "PC mini asus" [ref=e111]
+              - link [ref=e113] [cursor=pointer]:
+                - /url: https://nguyenkimcomputer.vn/man-hinh-may-tinh-asus-vz249hg
+                - img "Màn hình chính hãng ASUS" [ref=e114]
+              - link [ref=e116] [cursor=pointer]:
+                - /url: /
+                - img "Phụ kiện chính hãng" [ref=e117]
+              - link [ref=e119] [cursor=pointer]:
+                - /url: https://nguyenkimcomputer.vn/pc-mini-asus-rnuc13anhi300000i-barebone-onboard-intel-core-i3-co-adapter
+                - img "ASUS NUC 13 PRO TALL RNUC13ANHI300000I" [ref=e120]
+              - link [ref=e122] [cursor=pointer]:
+                - /url: https://nguyenkimcomputer.vn/laptop-dell
+                - img "MÀN HÌNH DELL SE2726H" [ref=e123]
+              - link [ref=e125] [cursor=pointer]:
+                - /url: https://nguyenkimcomputer.vn/man-hinh-dell-ultrasharp-u2724de-27inch-qhd-120-hz
+                - img "Màn hình Đồ họa Dell 27 inch (U2724DE)" [ref=e126]
+              - link [ref=e128] [cursor=pointer]:
+                - /url: /
+                - img "ASUS ProArt PA279CV" [ref=e129]
+            - generic [ref=e130] [cursor=pointer]: prev
+            - generic [ref=e131] [cursor=pointer]: next
+          - generic [ref=e133]:
+            - button "Chuyển đến banner Back to school" [ref=e135] [cursor=pointer]:
+              - generic [ref=e136]: Back to school
+              - generic [ref=e137]: TestSlide
+            - button "Chuyển đến banner MSI Mini CUBI NUC" [ref=e140] [cursor=pointer]:
+              - generic [ref=e141]: MSI Mini CUBI NUC
+              - generic [ref=e142]: "0"
+            - button "Chuyển đến banner LINH KIỆN GIÁ TỐT" [ref=e145] [cursor=pointer]:
+              - generic [ref=e146]: LINH KIỆN GIÁ TỐT
+              - generic [ref=e147]: "0"
+            - button "Chuyển đến banner Máy in & mực in chính hãng" [ref=e149] [cursor=pointer]:
+              - generic [ref=e150]: Máy in & mực in chính hãng
+              - generic [ref=e151]: "0"
+            - button "Chuyển đến banner PC mini asus" [ref=e153] [cursor=pointer]:
+              - generic [ref=e154]: PC mini asus
+            - button "Chuyển đến banner Màn hình chính hãng ASUS" [ref=e156] [cursor=pointer]:
+              - generic [ref=e157]: Màn hình chính hãng ASUS
+            - button "Chuyển đến banner Phụ kiện chính hãng" [ref=e159] [cursor=pointer]:
+              - generic [ref=e160]: Phụ kiện chính hãng
+            - button "Chuyển đến banner ASUS NUC 13 PRO TALL RNUC13ANHI300000I" [ref=e162] [cursor=pointer]:
+              - generic [ref=e163]: ASUS NUC 13 PRO TALL RNUC13ANHI300000I
+            - button "Chuyển đến banner MÀN HÌNH DELL SE2726H" [ref=e165] [cursor=pointer]:
+              - generic [ref=e166]: MÀN HÌNH DELL SE2726H
+            - button "Chuyển đến banner Màn hình Đồ họa Dell 27 inch (U2724DE)" [ref=e168] [cursor=pointer]:
+              - generic [ref=e169]: Màn hình Đồ họa Dell 27 inch (U2724DE)
+            - button "Chuyển đến banner ASUS ProArt PA279CV" [ref=e171] [cursor=pointer]:
+              - generic [ref=e172]: ASUS ProArt PA279CV
+        - generic [ref=e175]:
+          - link [ref=e176] [cursor=pointer]:
+            - /url: https://nguyenkimcomputer.vn/may-tinh-de-ban
+            - img "banner bottom 1" [ref=e178]
+          - link [ref=e179] [cursor=pointer]:
+            - /url: https://nguyenkimcomputer.vn/may-in
+            - img "banner bottom 2" [ref=e181]
+          - link [ref=e182] [cursor=pointer]:
+            - /url: https://nguyenkimcomputer.vn/phu-kien
+            - img "banner bottom 3" [ref=e184]
+          - link [ref=e185] [cursor=pointer]:
+            - /url: https://vitinhnguyenkim.vn/laptop
+            - img "banner bottom 4" [ref=e187]
+        - generic [ref=e189]:
+          - button "CPU" [ref=e193] [cursor=pointer]
+          - generic [ref=e195]:
+            - link [ref=e196] [cursor=pointer]:
+              - /url: cpu
+              - img "CPU" [ref=e197]
+            - generic [ref=e201]:
+              - generic [ref=e203]:
+                - link [ref=e204] [cursor=pointer]:
+                  - /url: /bo-vi-xu-ly-vi-tinh-intel-core-i9-14900
+                  - img "CPU Intel Core i9-14900 - 24N 32L, 5.8GHz, Socket LGA1700 (Tray)" [ref=e206]
+                - generic [ref=e207]:
+                  - link [ref=e208] [cursor=pointer]:
+                    - /url: /bo-vi-xu-ly-vi-tinh-intel-core-i9-14900
+                    - heading "CPU Intel Core i9-14900 - 24N 32L, 5.8GHz, Socket LGA1700 (Tray)" [level=3] [ref=e209]
+                  - generic [ref=e210]: 17.280.000 ₫
+                  - generic [ref=e214]:
+                    - button [ref=e215] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e220] [cursor=pointer]
+              - generic [ref=e225]:
+                - link [ref=e226] [cursor=pointer]:
+                  - /url: /bo-vi-xu-ly-vi-tinh-intel-core-i7-14700-bx8071514700srn40-quat
+                  - img "CPU Intel Core i7-14700 - 20N 28L, 5.4GHz, Socket LGA1700" [ref=e228]
+                - generic [ref=e229]:
+                  - link [ref=e230] [cursor=pointer]:
+                    - /url: /bo-vi-xu-ly-vi-tinh-intel-core-i7-14700-bx8071514700srn40-quat
+                    - heading "CPU Intel Core i7-14700 - 20N 28L, 5.4GHz, Socket LGA1700" [level=3] [ref=e231]
+                  - generic [ref=e232]: 10.638.000 ₫
+                  - generic [ref=e236]:
+                    - button [ref=e237] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e242] [cursor=pointer]
+              - generic [ref=e247]:
+                - link [ref=e248] [cursor=pointer]:
+                  - /url: /bo-vi-xu-ly-vi-tinh-intel-core-i7-14700f-bx8071514700fsrn3z-quat
+                  - img "CPU Intel Core i7-14700F - 20N 28L, 5.4GHz, Socket LGA1700" [ref=e250]
+                - generic [ref=e251]:
+                  - link [ref=e252] [cursor=pointer]:
+                    - /url: /bo-vi-xu-ly-vi-tinh-intel-core-i7-14700f-bx8071514700fsrn3z-quat
+                    - heading "CPU Intel Core i7-14700F - 20N 28L, 5.4GHz, Socket LGA1700" [level=3] [ref=e253]
+                  - generic [ref=e254]: 9.720.000 ₫
+                  - generic [ref=e258]:
+                    - button [ref=e259] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e264] [cursor=pointer]
+              - generic [ref=e269]:
+                - link [ref=e270] [cursor=pointer]:
+                  - /url: /bo-vi-xu-ly-vi-tinh-intel-core-i7-12700
+                  - img "CPU Intel Core i7-12700 - 12N 20L, 4.9GHz, Socket LGA1700 (Tray)" [ref=e272]
+                - generic [ref=e273]:
+                  - link [ref=e274] [cursor=pointer]:
+                    - /url: /bo-vi-xu-ly-vi-tinh-intel-core-i7-12700
+                    - heading "CPU Intel Core i7-12700 - 12N 20L, 4.9GHz, Socket LGA1700 (Tray)" [level=3] [ref=e275]
+                  - generic [ref=e276]: 8.532.000 ₫
+                  - generic [ref=e280]:
+                    - button [ref=e281] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e286] [cursor=pointer]
+              - generic [ref=e291]:
+                - link [ref=e292] [cursor=pointer]:
+                  - /url: /bo-vi-xu-ly-vi-tinh-intel-core-i5-14400-bx8071514400srn46-quat
+                  - img "CPU Intel Core i5-14400 - 10N 16L, 4.7GHz, Socket LGA1700" [ref=e294]
+                - generic [ref=e295]:
+                  - link [ref=e296] [cursor=pointer]:
+                    - /url: /bo-vi-xu-ly-vi-tinh-intel-core-i5-14400-bx8071514400srn46-quat
+                    - heading "CPU Intel Core i5-14400 - 10N 16L, 4.7GHz, Socket LGA1700" [level=3] [ref=e297]
+                  - generic [ref=e298]: 6.048.000 ₫
+                  - generic [ref=e302]:
+                    - button [ref=e303] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e308] [cursor=pointer]
+              - generic [ref=e313]:
+                - link [ref=e314] [cursor=pointer]:
+                  - /url: /bo-vi-xu-ly-vi-tinh-intel-core-i5-1-4400-tray-250-ghz-20mb-c-m8071504821112s-rn46-01
+                  - img "BỘ VI XỬ LÝ VI TÍNH INTEL CORE I5-14400, TRAY, 2.50 GHZ, 20MB_CM8071504821112S RN46" [ref=e316]
+                - generic [ref=e317]:
+                  - link [ref=e318] [cursor=pointer]:
+                    - /url: /bo-vi-xu-ly-vi-tinh-intel-core-i5-1-4400-tray-250-ghz-20mb-c-m8071504821112s-rn46-01
+                    - heading "BỘ VI XỬ LÝ VI TÍNH INTEL CORE I5-14400, TRAY, 2.50 GHZ, 20MB_CM8071504821112S RN46" [level=3] [ref=e319]
+                  - generic [ref=e320]: 5.076.000 ₫
+                  - generic [ref=e324]:
+                    - button [ref=e325] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e330] [cursor=pointer]
+              - generic [ref=e335]:
+                - link [ref=e336] [cursor=pointer]:
+                  - /url: /bo-vi-xu-ly-vi-tinh-intel-core-i5-14400f-cm8071505093011srn3r-tray
+                  - img "Bộ vi xử lý vi tính Intel Core i5-14400F (CM8071505093011SRN3R) - Tray" [ref=e338]
+                - generic [ref=e339]:
+                  - link [ref=e340] [cursor=pointer]:
+                    - /url: /bo-vi-xu-ly-vi-tinh-intel-core-i5-14400f-cm8071505093011srn3r-tray
+                    - heading "Bộ vi xử lý vi tính Intel Core i5-14400F (CM8071505093011SRN3R) - Tray" [level=3] [ref=e341]
+                  - generic [ref=e342]: 4.212.000 ₫
+                  - generic [ref=e346]:
+                    - button [ref=e347] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e352] [cursor=pointer]
+              - generic [ref=e357]:
+                - link [ref=e358] [cursor=pointer]:
+                  - /url: /cpu-intel-core-i5-12400f-bx8071512400fsrl4w-quat
+                  - img "CPU Intel Core i5-12400F - 6N 12L, 4.4GHz, Socket LGA1700" [ref=e360]
+                - generic [ref=e361]:
+                  - link [ref=e362] [cursor=pointer]:
+                    - /url: /cpu-intel-core-i5-12400f-bx8071512400fsrl4w-quat
+                    - heading "CPU Intel Core i5-12400F - 6N 12L, 4.4GHz, Socket LGA1700" [level=3] [ref=e363]
+                  - generic [ref=e364]: 3.942.000 ₫
+                  - generic [ref=e368]:
+                    - button [ref=e369] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e374] [cursor=pointer]
+              - generic [ref=e379]:
+                - link [ref=e380] [cursor=pointer]:
+                  - /url: /cpu-intel-core-i3-12m-cache-up-to-4-70-ghz-quat
+                  - img "CPU Intel Core i3-14100 - 4N 8L, 4.7GHz, Socket LGA1700" [ref=e382]
+                - generic [ref=e383]:
+                  - link [ref=e384] [cursor=pointer]:
+                    - /url: /cpu-intel-core-i3-12m-cache-up-to-4-70-ghz-quat
+                    - heading "CPU Intel Core i3-14100 - 4N 8L, 4.7GHz, Socket LGA1700" [level=3] [ref=e385]
+                  - generic [ref=e386]: 3.780.000 ₫
+                  - generic [ref=e390]:
+                    - button [ref=e391] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e396] [cursor=pointer]
+              - generic [ref=e401]:
+                - link [ref=e402] [cursor=pointer]:
+                  - /url: /bo-vi-xu-ly-vi-tinh-intel
+                  - img "CPU Intel Core i3-14100 - 4N 8L, 4.7GHz, Socket LGA1700 (Tray)" [ref=e404]
+                - generic [ref=e405]:
+                  - link [ref=e406] [cursor=pointer]:
+                    - /url: /bo-vi-xu-ly-vi-tinh-intel
+                    - heading "CPU Intel Core i3-14100 - 4N 8L, 4.7GHz, Socket LGA1700 (Tray)" [level=3] [ref=e407]
+                  - generic [ref=e408]: 3.672.000 ₫
+                  - generic [ref=e412]:
+                    - button [ref=e413] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e418] [cursor=pointer]
+        - generic [ref=e429]:
+          - button "Mainboard" [ref=e433] [cursor=pointer]
+          - generic [ref=e435]:
+            - link [ref=e436] [cursor=pointer]:
+              - /url: mainboard
+              - img "Mainboard" [ref=e437]
+            - generic [ref=e441]:
+              - generic [ref=e443]:
+                - link [ref=e444] [cursor=pointer]:
+                  - /url: /mach-chinh-vi-tinh-gigabyte-z890-a-elite-wifi7
+                  - img "Mainboard Gigabyte Z890 A ELITE WIFI7" [ref=e446]
+                - generic [ref=e447]:
+                  - link [ref=e448] [cursor=pointer]:
+                    - /url: /mach-chinh-vi-tinh-gigabyte-z890-a-elite-wifi7
+                    - heading "Mainboard Gigabyte Z890 A ELITE WIFI7" [level=3] [ref=e449]
+                  - generic [ref=e450]: 7.614.000 ₫
+                  - generic [ref=e454]:
+                    - button [ref=e455] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e460] [cursor=pointer]
+              - generic [ref=e465]:
+                - link [ref=e466] [cursor=pointer]:
+                  - /url: /mainboard-gigabyte-b760m-ds3h-ddr4
+                  - img "Mainboard Gigabyte B760M DS3H DDR4 - Socket LGA1700, B760" [ref=e468]
+                - generic [ref=e469]:
+                  - link [ref=e470] [cursor=pointer]:
+                    - /url: /mainboard-gigabyte-b760m-ds3h-ddr4
+                    - heading "Mainboard Gigabyte B760M DS3H DDR4 - Socket LGA1700, B760" [level=3] [ref=e471]
+                  - generic [ref=e472]: 2.678.000 ₫
+                  - generic [ref=e476]:
+                    - button [ref=e477] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e482] [cursor=pointer]
+              - generic [ref=e487]:
+                - link [ref=e488] [cursor=pointer]:
+                  - /url: /mach-chinh-vi-tinh-gigabyte-b760m-d-ddr4
+                  - img "Mainboard Gigabyte B760M GAMING DDR4 - Socket LGA1700, B760" [ref=e490]
+                - generic [ref=e491]:
+                  - link [ref=e492] [cursor=pointer]:
+                    - /url: /mach-chinh-vi-tinh-gigabyte-b760m-d-ddr4
+                    - heading "Mainboard Gigabyte B760M GAMING DDR4 - Socket LGA1700, B760" [level=3] [ref=e493]
+                  - generic [ref=e494]: 2.236.000 ₫
+                  - generic [ref=e498]:
+                    - button [ref=e499] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e504] [cursor=pointer]
+              - generic [ref=e509]:
+                - link [ref=e510] [cursor=pointer]:
+                  - /url: /mach-chinh-vi-tinh-gigabyte-h610m-h-v3-ddr4
+                  - img "Mainboard Gigabyte H610M H V3 DDR4 - Socket LGA1700, H610" [ref=e512]
+                - generic [ref=e513]:
+                  - link [ref=e514] [cursor=pointer]:
+                    - /url: /mach-chinh-vi-tinh-gigabyte-h610m-h-v3-ddr4
+                    - heading "Mainboard Gigabyte H610M H V3 DDR4 - Socket LGA1700, H610" [level=3] [ref=e515]
+                  - generic [ref=e516]: 1.620.000 ₫
+                  - generic [ref=e520]:
+                    - button [ref=e521] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e526] [cursor=pointer]
+              - generic [ref=e531]:
+                - link [ref=e532] [cursor=pointer]:
+                  - /url: /mainboard-gigabyte-h310m-m-2-2-0
+                  - img "Mainboard Gigabyte H310M M.2 DDR4 - Socket LGA1151, H310" [ref=e534]
+                - generic [ref=e535]:
+                  - link [ref=e536] [cursor=pointer]:
+                    - /url: /mainboard-gigabyte-h310m-m-2-2-0
+                    - heading "Mainboard Gigabyte H310M M.2 DDR4 - Socket LGA1151, H310" [level=3] [ref=e537]
+                  - generic [ref=e538]: 1.598.000 ₫
+                  - generic [ref=e542]:
+                    - button [ref=e543] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e548] [cursor=pointer]
+        - generic [ref=e559]:
+          - button "Ram PC" [ref=e563] [cursor=pointer]
+          - generic [ref=e565]:
+            - link [ref=e566] [cursor=pointer]:
+              - /url: ram-pc
+              - img "Ram PC" [ref=e567]
+            - generic [ref=e571]:
+              - generic [ref=e573]:
+                - link [ref=e574] [cursor=pointer]:
+                  - /url: /bo-nho-ram-kingston-32gb-d5-480r40-2rx8haitmi-pn-ksm48r40bd8tmi-32hai
+                  - img "RAM Server Kingston 32GB DDR5 4800MHz ECC (KSM48R40BD8TMI-32)" [ref=e576]
+                - generic [ref=e577]:
+                  - link [ref=e578] [cursor=pointer]:
+                    - /url: /bo-nho-ram-kingston-32gb-d5-480r40-2rx8haitmi-pn-ksm48r40bd8tmi-32hai
+                    - heading "RAM Server Kingston 32GB DDR5 4800MHz ECC (KSM48R40BD8TMI-32)" [level=3] [ref=e579]
+                  - generic [ref=e580]: 9.000.000 ₫
+                  - generic [ref=e584]:
+                    - button [ref=e585] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e590] [cursor=pointer]
+              - generic [ref=e595]:
+                - link [ref=e596] [cursor=pointer]:
+                  - /url: /sp016gblvu560f02-ram-silicon-dram-module-ddr5-5600cl46udimm16gb
+                  - img "RAM PC Silicon Power 16GB DDR5 5600MHz" [ref=e598]
+                - generic [ref=e599]:
+                  - link [ref=e600] [cursor=pointer]:
+                    - /url: /sp016gblvu560f02-ram-silicon-dram-module-ddr5-5600cl46udimm16gb
+                    - heading "RAM PC Silicon Power 16GB DDR5 5600MHz" [level=3] [ref=e601]
+                  - generic [ref=e602]: 6.690.000 ₫
+                  - generic [ref=e606]:
+                    - button [ref=e607] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e612] [cursor=pointer]
+              - generic [ref=e617]:
+                - link [ref=e618] [cursor=pointer]:
+                  - /url: /ram-silicon-dram-module-xpower-pulse-gaming-ddr4-3200c16oc-udimm-16gb-sp016gxlzu320bsi
+                  - img "RAM PC SP XPOWER Zenith 16GB DDR4 3200MHz (Tản nhiệt)" [ref=e620]
+                - generic [ref=e621]:
+                  - link [ref=e622] [cursor=pointer]:
+                    - /url: /ram-silicon-dram-module-xpower-pulse-gaming-ddr4-3200c16oc-udimm-16gb-sp016gxlzu320bsi
+                    - heading "RAM PC SP XPOWER Zenith 16GB DDR4 3200MHz (Tản nhiệt)" [level=3] [ref=e623]
+                  - generic [ref=e624]: 3.304.000 ₫
+                  - generic [ref=e628]:
+                    - button [ref=e629] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e634] [cursor=pointer]
+              - generic [ref=e639]:
+                - link [ref=e640] [cursor=pointer]:
+                  - /url: /silicon-power-ddr4-16gb-bus-2666mhz-pc
+                  - img "RAM PC Silicon Power 16GB DDR4 2666MHz" [ref=e642]
+                - generic [ref=e643]:
+                  - link [ref=e644] [cursor=pointer]:
+                    - /url: /silicon-power-ddr4-16gb-bus-2666mhz-pc
+                    - heading "RAM PC Silicon Power 16GB DDR4 2666MHz" [level=3] [ref=e645]
+                  - generic [ref=e646]: 3.024.000 ₫
+                  - generic [ref=e650]:
+                    - button [ref=e651] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e656] [cursor=pointer]
+              - generic [ref=e661]:
+                - link [ref=e662] [cursor=pointer]:
+                  - /url: /ram-pc-silicon-power-16gb-ddr4-3200-sp016gblfu320f02
+                  - img "RAM PC Silicon Power 16GB DDR4 3200MHz" [ref=e664]
+                - generic [ref=e665]:
+                  - link [ref=e666] [cursor=pointer]:
+                    - /url: /ram-pc-silicon-power-16gb-ddr4-3200-sp016gblfu320f02
+                    - heading "RAM PC Silicon Power 16GB DDR4 3200MHz" [level=3] [ref=e667]
+                  - generic [ref=e668]: 3.024.000 ₫
+                  - generic [ref=e672]:
+                    - button [ref=e673] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e678] [cursor=pointer]
+              - generic [ref=e683]:
+                - link [ref=e684] [cursor=pointer]:
+                  - /url: /silicon-power-ddr4-8gb-bus-2400mhz-pc
+                  - img "RAM PC Silicon Power 8GB DDR4 2400MHz" [ref=e686]
+                - generic [ref=e687]:
+                  - link [ref=e688] [cursor=pointer]:
+                    - /url: /silicon-power-ddr4-8gb-bus-2400mhz-pc
+                    - heading "RAM PC Silicon Power 8GB DDR4 2400MHz" [level=3] [ref=e689]
+                  - generic [ref=e690]: 2.744.000 ₫
+                  - generic [ref=e694]:
+                    - button [ref=e695] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e700] [cursor=pointer]
+              - generic [ref=e705]:
+                - link [ref=e706] [cursor=pointer]:
+                  - /url: /ram-silicon-dram-module-xpower-pulse-gaming-ddr4-3200c16oc-udimm8gb-sp008gxlzu320bsi
+                  - img "RAM PC SP XPOWER Zenith 8GB DDR4 3200MHz (Tản nhiệt OC)" [ref=e708]
+                - generic [ref=e709]:
+                  - link [ref=e710] [cursor=pointer]:
+                    - /url: /ram-silicon-dram-module-xpower-pulse-gaming-ddr4-3200c16oc-udimm8gb-sp008gxlzu320bsi
+                    - heading "RAM PC SP XPOWER Zenith 8GB DDR4 3200MHz (Tản nhiệt OC)" [level=3] [ref=e711]
+                  - generic [ref=e712]: 1.893.000 ₫
+                  - generic [ref=e716]:
+                    - button [ref=e717] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e722] [cursor=pointer]
+              - generic [ref=e727]:
+                - link [ref=e728] [cursor=pointer]:
+                  - /url: /ram-pc-silicon-power-8gb-ddr4-bus-3200-sp008gblfu320b02
+                  - img "RAM PC Silicon Power 8GB DDR4 3200MHz" [ref=e730]
+                - generic [ref=e731]:
+                  - link [ref=e732] [cursor=pointer]:
+                    - /url: /ram-pc-silicon-power-8gb-ddr4-bus-3200-sp008gblfu320b02
+                    - heading "RAM PC Silicon Power 8GB DDR4 3200MHz" [level=3] [ref=e733]
+                  - generic [ref=e734]: 1.826.000 ₫
+                  - generic [ref=e738]:
+                    - button [ref=e739] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e744] [cursor=pointer]
+              - generic [ref=e749]:
+                - link [ref=e750] [cursor=pointer]:
+                  - /url: /silicon-power-ddr4-8gb-bus-2666mhz
+                  - img "RAM PC Silicon Power 8GB DDR4 2666MHz" [ref=e752]
+                - generic [ref=e753]:
+                  - link [ref=e754] [cursor=pointer]:
+                    - /url: /silicon-power-ddr4-8gb-bus-2666mhz
+                    - heading "RAM PC Silicon Power 8GB DDR4 2666MHz" [level=3] [ref=e755]
+                  - generic [ref=e756]: 1.800.000 ₫
+                  - generic [ref=e760]:
+                    - button [ref=e761] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e766] [cursor=pointer]
+              - generic [ref=e771]:
+                - link [ref=e772] [cursor=pointer]:
+                  - /url: /bo-nho-may-tinh-lenovo-4gb-ddr4-2400mhz-udimm-memory-4x70m60571
+                  - img "RAM PC Lenovo 4GB DDR4 2400MHz (4X70M60571)" [ref=e774]
+                - generic [ref=e775]:
+                  - link [ref=e776] [cursor=pointer]:
+                    - /url: /bo-nho-may-tinh-lenovo-4gb-ddr4-2400mhz-udimm-memory-4x70m60571
+                    - heading "RAM PC Lenovo 4GB DDR4 2400MHz (4X70M60571)" [level=3] [ref=e777]
+                  - generic [ref=e778]: 930.000 ₫
+                  - generic [ref=e782]:
+                    - button [ref=e783] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e788] [cursor=pointer]
+              - generic [ref=e793]:
+                - link [ref=e794] [cursor=pointer]:
+                  - /url: /s2p1a-ram-silicon-ddr2-2gb800-pc-sp002gblru800s0216-chip
+                  - img "RAM PC Silicon Power 2GB DDR2 800MHz" [ref=e796]
+                - generic [ref=e797]:
+                  - link [ref=e798] [cursor=pointer]:
+                    - /url: /s2p1a-ram-silicon-ddr2-2gb800-pc-sp002gblru800s0216-chip
+                    - heading "RAM PC Silicon Power 2GB DDR2 800MHz" [level=3] [ref=e799]
+                  - generic [ref=e800]: 448.000 ₫
+                  - generic [ref=e804]:
+                    - button [ref=e805] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e810] [cursor=pointer]
+              - generic [ref=e815]:
+                - link [ref=e816] [cursor=pointer]:
+                  - /url: /silicon-power-ddr3-2gb-bus-1600mhz
+                  - img "RAM PC Silicon Power 2GB DDR3 1600MHz" [ref=e818]
+                - generic [ref=e819]:
+                  - link [ref=e820] [cursor=pointer]:
+                    - /url: /silicon-power-ddr3-2gb-bus-1600mhz
+                    - heading "RAM PC Silicon Power 2GB DDR3 1600MHz" [level=3] [ref=e821]
+                  - generic [ref=e822]: 448.000 ₫
+                  - generic [ref=e826]:
+                    - button [ref=e827] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e832] [cursor=pointer]
+        - generic [ref=e843]:
+          - generic [ref=e846]:
+            - button "Tất cả" [ref=e847] [cursor=pointer]
+            - button "Card VGA ASUS" [ref=e849] [cursor=pointer]
+            - button "Card VGA GIGABYTE" [ref=e851] [cursor=pointer]
+            - button "Card VGA NVIDIA" [ref=e853] [cursor=pointer]
+          - generic [ref=e855]:
+            - link [ref=e856] [cursor=pointer]:
+              - /url: card-do-hoa-vga
+              - img "Card đồ họa VGA" [ref=e857]
+            - generic [ref=e861]:
+              - generic [ref=e863]:
+                - link [ref=e864] [cursor=pointer]:
+                  - /url: /vga-leadtek-nvidia-a1000-8gb-gddr6
+                  - img "VGA Leadtek NVIDIA RTX A1000 8GB GDDR6" [ref=e866]
+                - generic [ref=e867]:
+                  - link [ref=e868] [cursor=pointer]:
+                    - /url: /vga-leadtek-nvidia-a1000-8gb-gddr6
+                    - heading "VGA Leadtek NVIDIA RTX A1000 8GB GDDR6" [level=3] [ref=e869]
+                  - generic [ref=e870]: 16.200.000 ₫
+                  - generic [ref=e874]:
+                    - button [ref=e875] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e880] [cursor=pointer]
+              - generic [ref=e885]:
+                - link [ref=e886] [cursor=pointer]:
+                  - /url: /vga-gigabyte-rtx-3060-winforce-oc-v2-12gb-gddr6-n3060wf2oc-12gd
+                  - img "VGA Gigabyte RTX 3060 Windforce OC V2 12GB GDDR6" [ref=e888]
+                - generic [ref=e889]:
+                  - link [ref=e890] [cursor=pointer]:
+                    - /url: /vga-gigabyte-rtx-3060-winforce-oc-v2-12gb-gddr6-n3060wf2oc-12gd
+                    - heading "VGA Gigabyte RTX 3060 Windforce OC V2 12GB GDDR6" [level=3] [ref=e891]
+                  - generic [ref=e892]: 13.495.000 ₫
+                  - generic [ref=e896]:
+                    - button [ref=e897] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e902] [cursor=pointer]
+              - generic [ref=e907]:
+                - link [ref=e908] [cursor=pointer]:
+                  - /url: /vga-gigabyte-rtx-3050-winforce-oc-v2-6gb-gddr6-n3050wf2ocv2-6gd
+                  - img "VGA Gigabyte RTX 3050 Windforce OC V2 6GB GDDR6" [ref=e910]
+                - generic [ref=e911]:
+                  - link [ref=e912] [cursor=pointer]:
+                    - /url: /vga-gigabyte-rtx-3050-winforce-oc-v2-6gb-gddr6-n3050wf2ocv2-6gd
+                    - heading "VGA Gigabyte RTX 3050 Windforce OC V2 6GB GDDR6" [level=3] [ref=e913]
+                  - generic [ref=e914]: 5.940.000 ₫
+                  - generic [ref=e918]:
+                    - button [ref=e919] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e924] [cursor=pointer]
+              - generic [ref=e929]:
+                - link [ref=e930] [cursor=pointer]:
+                  - /url: /vga-asus-gt730-sl-2gd5-brk-2gb-gddr5
+                  - img "VGA Asus GeForce GT 730 2GB GDDR5 (Passive)" [ref=e932]
+                - generic [ref=e933]:
+                  - link [ref=e934] [cursor=pointer]:
+                    - /url: /vga-asus-gt730-sl-2gd5-brk-2gb-gddr5
+                    - heading "VGA Asus GeForce GT 730 2GB GDDR5 (Passive)" [level=3] [ref=e935]
+                  - generic [ref=e936]: 1.696.000 ₫
+                  - generic [ref=e940]:
+                    - button [ref=e941] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e946] [cursor=pointer]
+        - generic [ref=e951]:
+          - button "Nguồn PC" [ref=e955] [cursor=pointer]
+          - generic [ref=e957]:
+            - link [ref=e958] [cursor=pointer]:
+              - /url: nguon-pc
+              - img "Nguồn PC" [ref=e959]
+            - generic [ref=e963]:
+              - generic [ref=e965]:
+                - link [ref=e966] [cursor=pointer]:
+                  - /url: /nguon-cooler-master-elite-nex-pn700
+                  - img "Nguồn máy tính Cooler Master Elite PN700 700W" [ref=e968]
+                - generic [ref=e969]:
+                  - link [ref=e970] [cursor=pointer]:
+                    - /url: /nguon-cooler-master-elite-nex-pn700
+                    - heading "Nguồn máy tính Cooler Master Elite PN700 700W" [level=3] [ref=e971]
+                  - generic [ref=e972]: 972.000 ₫
+                  - generic [ref=e976]:
+                    - button [ref=e977] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e982] [cursor=pointer]
+              - generic [ref=e987]:
+                - link [ref=e988] [cursor=pointer]:
+                  - /url: /nguon-may-tinh-cooler-master-elite-nex-230v-pn600
+                  - img "Nguồn máy tính Cooler Master Elite PN600 600W" [ref=e990]
+                - generic [ref=e991]:
+                  - link [ref=e992] [cursor=pointer]:
+                    - /url: /nguon-may-tinh-cooler-master-elite-nex-230v-pn600
+                    - heading "Nguồn máy tính Cooler Master Elite PN600 600W" [level=3] [ref=e993]
+                  - generic [ref=e994]: 886.000 ₫
+                  - generic [ref=e998]:
+                    - button [ref=e999] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e1004] [cursor=pointer]
+              - generic [ref=e1009]:
+                - link [ref=e1010] [cursor=pointer]:
+                  - /url: /nguon-cooler-master-elite-nex-pn500
+                  - img "Nguồn máy tính Cooler Master Elite PN500 500W" [ref=e1012]
+                - generic [ref=e1013]:
+                  - link [ref=e1014] [cursor=pointer]:
+                    - /url: /nguon-cooler-master-elite-nex-pn500
+                    - heading "Nguồn máy tính Cooler Master Elite PN500 500W" [level=3] [ref=e1015]
+                  - generic [ref=e1016]: 788.000 ₫
+                  - generic [ref=e1020]:
+                    - button [ref=e1021] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e1026] [cursor=pointer]
+              - generic [ref=e1031]:
+                - link [ref=e1032] [cursor=pointer]:
+                  - /url: /nguon-may-tinh-sama-tank-435-300w
+                  - img "Nguồn máy tính SAMA Tank 435 300W" [ref=e1034]
+                - generic [ref=e1035]:
+                  - link [ref=e1036] [cursor=pointer]:
+                    - /url: /nguon-may-tinh-sama-tank-435-300w
+                    - heading "Nguồn máy tính SAMA Tank 435 300W" [level=3] [ref=e1037]
+                  - generic [ref=e1038]: 464.000 ₫
+                  - generic [ref=e1042]:
+                    - button [ref=e1043] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e1048] [cursor=pointer]
+              - generic [ref=e1053]:
+                - link [ref=e1054] [cursor=pointer]:
+                  - /url: /nguon-arrow-550-fan-12cm
+                  - img "Nguồn máy tính Arrow 550W" [ref=e1056]
+                - generic [ref=e1057]:
+                  - link [ref=e1058] [cursor=pointer]:
+                    - /url: /nguon-arrow-550-fan-12cm
+                    - heading "Nguồn máy tính Arrow 550W" [level=3] [ref=e1059]
+                  - generic [ref=e1060]: 356.000 ₫
+                  - generic [ref=e1064]:
+                    - button [ref=e1065] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e1070] [cursor=pointer]
+              - generic [ref=e1075]:
+                - link [ref=e1076] [cursor=pointer]:
+                  - /url: /nguon-arrow-500-fan-12cm
+                  - img "Nguồn máy tính Arrow 500W" [ref=e1078]
+                - generic [ref=e1079]:
+                  - link [ref=e1080] [cursor=pointer]:
+                    - /url: /nguon-arrow-500-fan-12cm
+                    - heading "Nguồn máy tính Arrow 500W" [level=3] [ref=e1081]
+                  - generic [ref=e1082]: 292.000 ₫
+                  - generic [ref=e1086]:
+                    - button [ref=e1087] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e1092] [cursor=pointer]
+        - generic [ref=e1103]:
+          - generic [ref=e1106]:
+            - button "Tất cả" [ref=e1107] [cursor=pointer]
+            - button "Combo chuột và bàn phím" [ref=e1109] [cursor=pointer]
+            - button "Chuột không dây" [ref=e1111] [cursor=pointer]
+            - button "Chuột có dây" [ref=e1113] [cursor=pointer]
+            - button "Bàn phím không dây" [ref=e1115] [cursor=pointer]
+            - button "Bàn phím có dây" [ref=e1117] [cursor=pointer]
+          - generic [ref=e1119]:
+            - link [ref=e1120] [cursor=pointer]:
+              - /url: ban-phim-chuot
+              - img "Bàn phím/ Chuột" [ref=e1121]
+            - generic [ref=e1125]:
+              - generic [ref=e1127]:
+                - link [ref=e1128] [cursor=pointer]:
+                  - /url: /chuot-logitech-gaming-pro-x-superlight-2-mau-den-910-006632
+                  - img "Chuột không dây Logitech Signature M650L - Trái (910-006632)" [ref=e1130]
+                - generic [ref=e1131]:
+                  - link [ref=e1132] [cursor=pointer]:
+                    - /url: /chuot-logitech-gaming-pro-x-superlight-2-mau-den-910-006632
+                    - heading "Chuột không dây Logitech Signature M650L - Trái (910-006632)" [level=3] [ref=e1133]
+                  - generic [ref=e1134]: 3.456.000 ₫
+                  - generic [ref=e1138]:
+                    - button [ref=e1139] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e1144] [cursor=pointer]
+              - generic [ref=e1149]:
+                - link [ref=e1150] [cursor=pointer]:
+                  - /url: /chuot-khong-day-logitech-mx-master-3s-pale-gray-910-006562
+                  - img "Chuột không dây Logitech MX Master 3S - Xám (910-006562)" [ref=e1152]
+                - generic [ref=e1153]:
+                  - link [ref=e1154] [cursor=pointer]:
+                    - /url: /chuot-khong-day-logitech-mx-master-3s-pale-gray-910-006562
+                    - heading "Chuột không dây Logitech MX Master 3S - Xám (910-006562)" [level=3] [ref=e1155]
+                  - generic [ref=e1156]: 2.344.000 ₫
+                  - generic [ref=e1160]:
+                    - button [ref=e1161] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e1166] [cursor=pointer]
+              - generic [ref=e1171]:
+                - link [ref=e1172] [cursor=pointer]:
+                  - /url: /chuot-mx-anywhere-3s-910-006932
+                  - img "Chuột không dây Logitech MX Anywhere 3S" [ref=e1174]
+                - generic [ref=e1175]:
+                  - link [ref=e1176] [cursor=pointer]:
+                    - /url: /chuot-mx-anywhere-3s-910-006932
+                    - heading "Chuột không dây Logitech MX Anywhere 3S" [level=3] [ref=e1177]
+                  - generic [ref=e1178]: 1.555.000 ₫
+                  - generic [ref=e1182]:
+                    - button [ref=e1183] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e1188] [cursor=pointer]
+              - generic [ref=e1193]:
+                - link [ref=e1194] [cursor=pointer]:
+                  - /url: /chuot-vi-tinh-mouse-logitech-lift-vertical-ergonomic-wireless-bluetooth-den-graphite-910-006479
+                  - img "Chuột không dây Logitech Lift Vertical Ergonomic - Đen (910-006479)" [ref=e1196]
+                - generic [ref=e1197]:
+                  - link [ref=e1198] [cursor=pointer]:
+                    - /url: /chuot-vi-tinh-mouse-logitech-lift-vertical-ergonomic-wireless-bluetooth-den-graphite-910-006479
+                    - heading "Chuột không dây Logitech Lift Vertical Ergonomic - Đen (910-006479)" [level=3] [ref=e1199]
+                  - generic [ref=e1200]: 1.274.000 ₫
+                  - generic [ref=e1204]:
+                    - button [ref=e1205] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e1210] [cursor=pointer]
+              - generic [ref=e1215]:
+                - link [ref=e1216] [cursor=pointer]:
+                  - /url: /combo-logitech-mk470-den
+                  - img "Combo không dây Logitech MK470 Slim (920-009184)" [ref=e1218]
+                - generic [ref=e1219]:
+                  - link [ref=e1220] [cursor=pointer]:
+                    - /url: /combo-logitech-mk470-den
+                    - heading "Combo không dây Logitech MK470 Slim (920-009184)" [level=3] [ref=e1221]
+                  - generic [ref=e1222]: 1.183.000 ₫
+                  - generic [ref=e1226]:
+                    - button [ref=e1227] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e1232] [cursor=pointer]
+              - generic [ref=e1237]:
+                - link [ref=e1238] [cursor=pointer]:
+                  - /url: /bo-ban-phim-chuot-mkb-logitech-mk540-wirelessden-black920-008682
+                  - img "Combo không dây Logitech MK540 Advanced - Đen (920-008682)" [ref=e1240]
+                - generic [ref=e1241]:
+                  - link [ref=e1242] [cursor=pointer]:
+                    - /url: /bo-ban-phim-chuot-mkb-logitech-mk540-wirelessden-black920-008682
+                    - heading "Combo không dây Logitech MK540 Advanced - Đen (920-008682)" [level=3] [ref=e1243]
+                  - generic [ref=e1244]: 1.080.000 ₫
+                  - generic [ref=e1248]:
+                    - button [ref=e1249] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e1254] [cursor=pointer]
+              - generic [ref=e1259]:
+                - link [ref=e1260] [cursor=pointer]:
+                  - /url: /ban-phim-logitech-khong-day-k650-signature-mau-than-chi-920-010955-
+                  - img "Bàn phím không dây Logitech Signature K650 - ĐEN" [ref=e1262]
+                - generic [ref=e1263]:
+                  - link [ref=e1264] [cursor=pointer]:
+                    - /url: /ban-phim-logitech-khong-day-k650-signature-mau-than-chi-920-010955-
+                    - heading "Bàn phím không dây Logitech Signature K650 - ĐEN" [level=3] [ref=e1265]
+                  - generic [ref=e1266]: 1.015.000 ₫
+                  - generic [ref=e1270]:
+                    - button [ref=e1271] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e1276] [cursor=pointer]
+              - generic [ref=e1281]:
+                - link [ref=e1282] [cursor=pointer]:
+                  - /url: /ban-phim-logitech-k580-den
+                  - img "Bàn phím không dây Logitech K580 Slim Multi-Device - Đen" [ref=e1284]
+                - generic [ref=e1285]:
+                  - link [ref=e1286] [cursor=pointer]:
+                    - /url: /ban-phim-logitech-k580-den
+                    - heading "Bàn phím không dây Logitech K580 Slim Multi-Device - Đen" [level=3] [ref=e1287]
+                  - generic [ref=e1288]: 956.000 ₫
+                  - generic [ref=e1292]:
+                    - button [ref=e1293] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e1298] [cursor=pointer]
+              - generic [ref=e1303]:
+                - link [ref=e1304] [cursor=pointer]:
+                  - /url: /chuot-vi-tinh-logitech-g304-lightspeed-wireless-gaming-mouse-910-005284
+                  - img "Chuột gaming không dây Logitech G304 Lightspeed - Đen" [ref=e1306]
+                - generic [ref=e1307]:
+                  - link [ref=e1308] [cursor=pointer]:
+                    - /url: /chuot-vi-tinh-logitech-g304-lightspeed-wireless-gaming-mouse-910-005284
+                    - heading "Chuột gaming không dây Logitech G304 Lightspeed - Đen" [level=3] [ref=e1309]
+                  - generic [ref=e1310]: 756.000 ₫
+                  - generic [ref=e1314]:
+                    - button [ref=e1315] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e1320] [cursor=pointer]
+              - generic [ref=e1325]:
+                - link [ref=e1326] [cursor=pointer]:
+                  - /url: /ban-phim-khong-day-logitech-pebble-keys-2-k380s-mau-den
+                  - img "Bàn phím không dây Logitech K380s Bluetooth - Đen (920-011753)" [ref=e1328]
+                - generic [ref=e1329]:
+                  - link [ref=e1330] [cursor=pointer]:
+                    - /url: /ban-phim-khong-day-logitech-pebble-keys-2-k380s-mau-den
+                    - heading "Bàn phím không dây Logitech K380s Bluetooth - Đen (920-011753)" [level=3] [ref=e1331]
+                  - generic [ref=e1332]: 740.000 ₫
+                  - generic [ref=e1336]:
+                    - button [ref=e1337] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e1342] [cursor=pointer]
+              - generic [ref=e1347]:
+                - link [ref=e1348] [cursor=pointer]:
+                  - /url: /keyboard-logitech-k400-plus
+                  - img "Bàn phím không dây Logitech K400 Plus - Tích hợp Touchpad" [ref=e1350]
+                - generic [ref=e1351]:
+                  - link [ref=e1352] [cursor=pointer]:
+                    - /url: /keyboard-logitech-k400-plus
+                    - heading "Bàn phím không dây Logitech K400 Plus - Tích hợp Touchpad" [level=3] [ref=e1353]
+                  - generic [ref=e1354]: 697.000 ₫
+                  - generic [ref=e1358]:
+                    - button [ref=e1359] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e1364] [cursor=pointer]
+              - generic [ref=e1369]:
+                - link [ref=e1370] [cursor=pointer]:
+                  - /url: /chuot-khong-day-logitech-m650-hong-910-006263
+                  - img "Chuột không dây Logitech Signature M650 - Hồng (910-006263)" [ref=e1372]
+                - generic [ref=e1373]:
+                  - link [ref=e1374] [cursor=pointer]:
+                    - /url: /chuot-khong-day-logitech-m650-hong-910-006263
+                    - heading "Chuột không dây Logitech Signature M650 - Hồng (910-006263)" [level=3] [ref=e1375]
+                  - generic [ref=e1376]: 643.000 ₫
+                  - generic [ref=e1380]:
+                    - button [ref=e1381] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e1386] [cursor=pointer]
+        - generic [ref=e1397]:
+          - generic [ref=e1400]:
+            - button "Tất cả" [ref=e1401] [cursor=pointer]
+            - button "SSD M2 PCIE" [ref=e1403] [cursor=pointer]
+            - button "SSD SATA" [ref=e1405] [cursor=pointer]
+            - button "HDD gắn trong" [ref=e1407] [cursor=pointer]
+          - generic [ref=e1409]:
+            - link [ref=e1410] [cursor=pointer]:
+              - /url: hard-ware
+              - img "Ổ cứng" [ref=e1411]
+            - generic [ref=e1415]:
+              - generic [ref=e1417]:
+                - link [ref=e1418] [cursor=pointer]:
+                  - /url: /o-cung-silicon-solid-state-diskm2-2280-pcie-ssdud902tb
+                  - img "Ổ CỨNG SILICON (SOLID STATE DISK)M.2 2280 PCIE SSD,UD90,2TB" [ref=e1420]
+                - generic [ref=e1421]:
+                  - link [ref=e1422] [cursor=pointer]:
+                    - /url: /o-cung-silicon-solid-state-diskm2-2280-pcie-ssdud902tb
+                    - heading "Ổ CỨNG SILICON (SOLID STATE DISK)M.2 2280 PCIE SSD,UD90,2TB" [level=3] [ref=e1423]
+                  - generic [ref=e1424]: 9.296.000 ₫
+                  - generic [ref=e1428]:
+                    - button [ref=e1429] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e1434] [cursor=pointer]
+              - generic [ref=e1439]:
+                - link [ref=e1440] [cursor=pointer]:
+                  - /url: /o-cung-ssd-silicon-solid-state-diskm2-2280-pcie-ssda602tb-sp002tbp34a60m28
+                  - img "SSD Silicon Power A60 2TB M.2 NVMe Gen3" [ref=e1442]
+                - generic [ref=e1443]:
+                  - link [ref=e1444] [cursor=pointer]:
+                    - /url: /o-cung-ssd-silicon-solid-state-diskm2-2280-pcie-ssda602tb-sp002tbp34a60m28
+                    - heading "SSD Silicon Power A60 2TB M.2 NVMe Gen3" [level=3] [ref=e1445]
+                  - generic [ref=e1446]: 7.728.000 ₫
+                  - generic [ref=e1450]:
+                    - button [ref=e1451] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e1456] [cursor=pointer]
+              - generic [ref=e1461]:
+                - link [ref=e1462] [cursor=pointer]:
+                  - /url: /o-cung-siliconsolid-state-disk25sata-ssda552tb
+                  - img "Ổ CỨNG SILICON(SOLID STATE DISK)2.5\"SATA SSD,A55,2TB" [ref=e1464]
+                - generic [ref=e1465]:
+                  - link [ref=e1466] [cursor=pointer]:
+                    - /url: /o-cung-siliconsolid-state-disk25sata-ssda552tb
+                    - heading "Ổ CỨNG SILICON(SOLID STATE DISK)2.5\"SATA SSD,A55,2TB" [level=3] [ref=e1467]
+                  - generic [ref=e1468]: 7.392.000 ₫
+                  - generic [ref=e1472]:
+                    - button [ref=e1473] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e1478] [cursor=pointer]
+              - generic [ref=e1483]:
+                - link [ref=e1484] [cursor=pointer]:
+                  - /url: /o-cung-gan-trong-desktop-wd-blue-4tb-sata-35-128mb-rpm-5400-wd40ezzx
+                  - img "Ổ cứng gắn trong DESKTOP WD Blue™ 4TB, SATA 3.5, 128MB, RPM 5400_WD40EZZX" [ref=e1486]
+                - generic [ref=e1487]:
+                  - link [ref=e1488] [cursor=pointer]:
+                    - /url: /o-cung-gan-trong-desktop-wd-blue-4tb-sata-35-128mb-rpm-5400-wd40ezzx
+                    - heading "Ổ cứng gắn trong DESKTOP WD Blue™ 4TB, SATA 3.5, 128MB, RPM 5400_WD40EZZX" [level=3] [ref=e1489]
+                  - generic [ref=e1490]: 5.076.000 ₫
+                  - generic [ref=e1494]:
+                    - button [ref=e1495] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e1500] [cursor=pointer]
+              - generic [ref=e1505]:
+                - link [ref=e1506] [cursor=pointer]:
+                  - /url: /o-cung-gan-trong-ssd-wd-blue-sn5100-nvme-ssd-1tb-pcie-gen-40-5y-wty-wds100t5b0e-00cpe0
+                  - img "SSD WD Blue SN5100 1TB NVMe PCIe Gen4 (WDS100T5B0E-00CPE0)" [ref=e1508]
+                - generic [ref=e1509]:
+                  - link [ref=e1510] [cursor=pointer]:
+                    - /url: /o-cung-gan-trong-ssd-wd-blue-sn5100-nvme-ssd-1tb-pcie-gen-40-5y-wty-wds100t5b0e-00cpe0
+                    - heading "SSD WD Blue SN5100 1TB NVMe PCIe Gen4 (WDS100T5B0E-00CPE0)" [level=3] [ref=e1511]
+                  - generic [ref=e1512]: 4.644.000 ₫
+                  - generic [ref=e1516]:
+                    - button [ref=e1517] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e1522] [cursor=pointer]
+              - generic [ref=e1527]:
+                - link [ref=e1528] [cursor=pointer]:
+                  - /url: /o-cung-ssd-silicon-power-ud85-m-2-pcie-gen-4x4-1tb-sp01kgbp44ud8505
+                  - img "SSD Silicon Power UD85 1TB M.2 NVMe Gen4" [ref=e1530]
+                - generic [ref=e1531]:
+                  - link [ref=e1532] [cursor=pointer]:
+                    - /url: /o-cung-ssd-silicon-power-ud85-m-2-pcie-gen-4x4-1tb-sp01kgbp44ud8505
+                    - heading "SSD Silicon Power UD85 1TB M.2 NVMe Gen4" [level=3] [ref=e1533]
+                  - generic [ref=e1534]: 4.368.000 ₫
+                  - generic [ref=e1538]:
+                    - button [ref=e1539] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e1544] [cursor=pointer]
+              - generic [ref=e1549]:
+                - link [ref=e1550] [cursor=pointer]:
+                  - /url: /ssd-silicon-power-a55-1tb
+                  - img "SSD gắn trong Silicon Power A55 1TB SATA3" [ref=e1552]
+                - generic [ref=e1553]:
+                  - link [ref=e1554] [cursor=pointer]:
+                    - /url: /ssd-silicon-power-a55-1tb
+                    - heading "SSD gắn trong Silicon Power A55 1TB SATA3" [level=3] [ref=e1555]
+                  - generic [ref=e1556]: 4.032.000 ₫
+                  - generic [ref=e1560]:
+                    - button [ref=e1561] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e1566] [cursor=pointer]
+              - generic [ref=e1571]:
+                - link [ref=e1572] [cursor=pointer]:
+                  - /url: /o-cung-may-vi-tinh-ssd-hieu-western-digital-wds500g5b0e-00cpe0-500gb
+                  - img "Ổ cứng máy vi tính SSD hiệu WESTERN DIGITAL WDS500G5B0E-00CPE0, 500GB" [ref=e1574]
+                - generic [ref=e1575]:
+                  - link [ref=e1576] [cursor=pointer]:
+                    - /url: /o-cung-may-vi-tinh-ssd-hieu-western-digital-wds500g5b0e-00cpe0-500gb
+                    - heading "Ổ cứng máy vi tính SSD hiệu WESTERN DIGITAL WDS500G5B0E-00CPE0, 500GB" [level=3] [ref=e1577]
+                  - generic [ref=e1578]: 2.970.000 ₫
+                  - generic [ref=e1582]:
+                    - button [ref=e1583] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e1588] [cursor=pointer]
+              - generic [ref=e1593]:
+                - link [ref=e1594] [cursor=pointer]:
+                  - /url: /o-cung-ssd-silicon-power-ud85-m-2-pcie-gen-4x4-500gb-sp500gbp44ud8505
+                  - img "SSD Silicon Power UD85 500GB M.2 NVMe Gen4" [ref=e1596]
+                - generic [ref=e1597]:
+                  - link [ref=e1598] [cursor=pointer]:
+                    - /url: /o-cung-ssd-silicon-power-ud85-m-2-pcie-gen-4x4-500gb-sp500gbp44ud8505
+                    - heading "SSD Silicon Power UD85 500GB M.2 NVMe Gen4" [level=3] [ref=e1599]
+                  - generic [ref=e1600]: 2.744.000 ₫
+                  - generic [ref=e1604]:
+                    - button [ref=e1605] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e1610] [cursor=pointer]
+              - generic [ref=e1615]:
+                - link [ref=e1616] [cursor=pointer]:
+                  - /url: /o-cung-the-ran-ssd-nhan-hieu-silicon-power-512gb-ec
+                  - img "SSD gắn trong Silicon Power Ace A55 512GB 2.5 inch SATA III" [ref=e1618]
+                - generic [ref=e1619]:
+                  - link [ref=e1620] [cursor=pointer]:
+                    - /url: /o-cung-the-ran-ssd-nhan-hieu-silicon-power-512gb-ec
+                    - heading "SSD gắn trong Silicon Power Ace A55 512GB 2.5 inch SATA III" [level=3] [ref=e1621]
+                  - generic [ref=e1622]: 2.128.000 ₫
+                  - generic [ref=e1626]:
+                    - button [ref=e1627] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e1632] [cursor=pointer]
+              - generic [ref=e1637]:
+                - link [ref=e1638] [cursor=pointer]:
+                  - /url: /ssd-silicon-power-a60-256gb-sp256gbp34a60m28
+                  - img "SSD Silicon Power A60 256GB M.2 NVMe Gen3" [ref=e1640]
+                - generic [ref=e1641]:
+                  - link [ref=e1642] [cursor=pointer]:
+                    - /url: /ssd-silicon-power-a60-256gb-sp256gbp34a60m28
+                    - heading "SSD Silicon Power A60 256GB M.2 NVMe Gen3" [level=3] [ref=e1643]
+                  - generic [ref=e1644]: 1.624.000 ₫
+                  - generic [ref=e1648]:
+                    - button [ref=e1649] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e1654] [cursor=pointer]
+              - generic [ref=e1659]:
+                - link [ref=e1660] [cursor=pointer]:
+                  - /url: /ssd-silicon-power-a55-256gb
+                  - img "SSD gắn trong Silicon Power A55 256GB SATA3" [ref=e1662]
+                - generic [ref=e1663]:
+                  - link [ref=e1664] [cursor=pointer]:
+                    - /url: /ssd-silicon-power-a55-256gb
+                    - heading "SSD gắn trong Silicon Power A55 256GB SATA3" [level=3] [ref=e1665]
+                  - generic [ref=e1666]: 1.350.000 ₫
+                  - generic [ref=e1670]:
+                    - button [ref=e1671] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e1676] [cursor=pointer]
+        - generic [ref=e1687]:
+          - button "Thùng máy tính case" [ref=e1691] [cursor=pointer]
+          - generic [ref=e1693]:
+            - link [ref=e1694] [cursor=pointer]:
+              - /url: thung-may-tinh-case
+              - img "Thùng máy tính case" [ref=e1695]
+            - generic [ref=e1699]:
+              - generic [ref=e1701]:
+                - link [ref=e1702] [cursor=pointer]:
+                  - /url: /vo-may-vi-tinh-cm-masterbox-mb600l-v2-steel-panel
+                  - img "Case máy tính Cooler Master MasterBox MB600L V2 - Hỗ trợ ATX" [ref=e1704]
+                - generic [ref=e1705]:
+                  - link [ref=e1706] [cursor=pointer]:
+                    - /url: /vo-may-vi-tinh-cm-masterbox-mb600l-v2-steel-panel
+                    - heading "Case máy tính Cooler Master MasterBox MB600L V2 - Hỗ trợ ATX" [level=3] [ref=e1707]
+                  - generic [ref=e1708]: 972.000 ₫
+                  - generic [ref=e1712]:
+                    - button [ref=e1713] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e1718] [cursor=pointer]
+              - generic [ref=e1723]:
+                - link [ref=e1724] [cursor=pointer]:
+                  - /url: /vo-case-sama-s5
+                  - img "Case máy tính SAMA S5 - Hỗ trợ ATX, M-ATX" [ref=e1726]
+                - generic [ref=e1727]:
+                  - link [ref=e1728] [cursor=pointer]:
+                    - /url: /vo-case-sama-s5
+                    - heading "Case máy tính SAMA S5 - Hỗ trợ ATX, M-ATX" [level=3] [ref=e1729]
+                  - generic [ref=e1730]: 432.000 ₫
+                  - generic [ref=e1734]:
+                    - button [ref=e1735] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e1740] [cursor=pointer]
+              - generic [ref=e1745]:
+                - link [ref=e1746] [cursor=pointer]:
+                  - /url: /case-sama-m1
+                  - img "Case máy tính SAMA M1 - Hỗ trợ ATX, M-ATX" [ref=e1748]
+                - generic [ref=e1749]:
+                  - link [ref=e1750] [cursor=pointer]:
+                    - /url: /case-sama-m1
+                    - heading "Case máy tính SAMA M1 - Hỗ trợ ATX, M-ATX" [level=3] [ref=e1751]
+                  - generic [ref=e1752]: 362.000 ₫
+                  - generic [ref=e1756]:
+                    - button [ref=e1757] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e1762] [cursor=pointer]
+              - generic [ref=e1767]:
+                - link [ref=e1768] [cursor=pointer]:
+                  - /url: /vo-may-vi-tinh-sama-a302
+                  - img "Case máy tính SAMA A302 - Hỗ trợ ATX, M-ATX" [ref=e1770]
+                - generic [ref=e1771]:
+                  - link [ref=e1772] [cursor=pointer]:
+                    - /url: /vo-may-vi-tinh-sama-a302
+                    - heading "Case máy tính SAMA A302 - Hỗ trợ ATX, M-ATX" [level=3] [ref=e1773]
+                  - generic [ref=e1774]: 281.000 ₫
+                  - generic [ref=e1778]:
+                    - button [ref=e1779] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e1784] [cursor=pointer]
+              - generic [ref=e1789]:
+                - link [ref=e1790] [cursor=pointer]:
+                  - /url: /case-sama-a301
+                  - img "Case máy tính SAMA A301 - Hỗ trợ ATX, M-ATX" [ref=e1792]
+                - generic [ref=e1793]:
+                  - link [ref=e1794] [cursor=pointer]:
+                    - /url: /case-sama-a301
+                    - heading "Case máy tính SAMA A301 - Hỗ trợ ATX, M-ATX" [level=3] [ref=e1795]
+                  - generic [ref=e1796]: 281.000 ₫
+                  - generic [ref=e1800]:
+                    - button [ref=e1801] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e1806] [cursor=pointer]
+        - generic [ref=e1817]:
+          - button "Combo chuột và bàn phím" [ref=e1821] [cursor=pointer]
+          - generic [ref=e1823]:
+            - link [ref=e1824] [cursor=pointer]:
+              - /url: combo-chuot-va-ban-phim
+              - img "Combo chuột và bàn phím" [ref=e1825]
+            - generic [ref=e1829]:
+              - generic [ref=e1831]:
+                - link [ref=e1832] [cursor=pointer]:
+                  - /url: /combo-logitech-mk470-den
+                  - img "Combo không dây Logitech MK470 Slim (920-009184)" [ref=e1834]
+                - generic [ref=e1835]:
+                  - link [ref=e1836] [cursor=pointer]:
+                    - /url: /combo-logitech-mk470-den
+                    - heading "Combo không dây Logitech MK470 Slim (920-009184)" [level=3] [ref=e1837]
+                  - generic [ref=e1838]: 1.183.000 ₫
+                  - generic [ref=e1842]:
+                    - button [ref=e1843] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e1848] [cursor=pointer]
+              - generic [ref=e1853]:
+                - link [ref=e1854] [cursor=pointer]:
+                  - /url: /bo-ban-phim-chuot-mkb-logitech-mk540-wirelessden-black920-008682
+                  - img "Combo không dây Logitech MK540 Advanced - Đen (920-008682)" [ref=e1856]
+                - generic [ref=e1857]:
+                  - link [ref=e1858] [cursor=pointer]:
+                    - /url: /bo-ban-phim-chuot-mkb-logitech-mk540-wirelessden-black920-008682
+                    - heading "Combo không dây Logitech MK540 Advanced - Đen (920-008682)" [level=3] [ref=e1859]
+                  - generic [ref=e1860]: 1.080.000 ₫
+                  - generic [ref=e1864]:
+                    - button [ref=e1865] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e1870] [cursor=pointer]
+              - generic [ref=e1875]:
+                - link [ref=e1876] [cursor=pointer]:
+                  - /url: /combo-logitech-mk345
+                  - img "Combo không dây Logitech MK345 (920-006491)" [ref=e1878]
+                - generic [ref=e1879]:
+                  - link [ref=e1880] [cursor=pointer]:
+                    - /url: /combo-logitech-mk345
+                    - heading "Combo không dây Logitech MK345 (920-006491)" [level=3] [ref=e1881]
+                  - generic [ref=e1882]: 632.000 ₫
+                  - generic [ref=e1886]:
+                    - button [ref=e1887] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e1892] [cursor=pointer]
+              - generic [ref=e1897]:
+                - link [ref=e1898] [cursor=pointer]:
+                  - /url: /bo-ban-phim-chuot-mkb-logitech-02
+                  - img "BỘ BÀN PHÍM-CHUỘT (M&KB) LOGITECH" [ref=e1900]
+                - generic [ref=e1901]:
+                  - link [ref=e1902] [cursor=pointer]:
+                    - /url: /bo-ban-phim-chuot-mkb-logitech-02
+                    - heading "BỘ BÀN PHÍM-CHUỘT (M&KB) LOGITECH" [level=3] [ref=e1903]
+                  - generic [ref=e1904]: 578.000 ₫
+                  - generic [ref=e1908]:
+                    - button [ref=e1909] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e1914] [cursor=pointer]
+              - generic [ref=e1919]:
+                - link [ref=e1920] [cursor=pointer]:
+                  - /url: /combo-logitech-mk270
+                  - img "Combo không dây Logitech MK270" [ref=e1922]
+                - generic [ref=e1923]:
+                  - link [ref=e1924] [cursor=pointer]:
+                    - /url: /combo-logitech-mk270
+                    - heading "Combo không dây Logitech MK270" [level=3] [ref=e1925]
+                  - generic [ref=e1926]: 529.000 ₫
+                  - generic [ref=e1930]:
+                    - button [ref=e1931] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e1936] [cursor=pointer]
+              - generic [ref=e1941]:
+                - link [ref=e1942] [cursor=pointer]:
+                  - /url: /combo-logitech-mk235
+                  - img "Combo không dây Logitech MK235 (920-007937)" [ref=e1944]
+                - generic [ref=e1945]:
+                  - link [ref=e1946] [cursor=pointer]:
+                    - /url: /combo-logitech-mk235
+                    - heading "Combo không dây Logitech MK235 (920-007937)" [level=3] [ref=e1947]
+                  - generic [ref=e1948]: 491.000 ₫
+                  - generic [ref=e1952]:
+                    - button [ref=e1953] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e1958] [cursor=pointer]
+              - generic [ref=e1963]:
+                - link [ref=e1964] [cursor=pointer]:
+                  - /url: /combo-logitech-mk240
+                  - img "Combo không dây Logitech MK240 Nano" [ref=e1966]
+                - generic [ref=e1967]:
+                  - link [ref=e1968] [cursor=pointer]:
+                    - /url: /combo-logitech-mk240
+                    - heading "Combo không dây Logitech MK240 Nano" [level=3] [ref=e1969]
+                  - generic [ref=e1970]: 486.000 ₫
+                  - generic [ref=e1974]:
+                    - button [ref=e1975] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e1980] [cursor=pointer]
+              - generic [ref=e1985]:
+                - link [ref=e1986] [cursor=pointer]:
+                  - /url: /bo-ban-phim-va-chuot-khong-day-dell-km3322w-trung-01
+                  - img "Combo không dây Dell KM3322W" [ref=e1988]
+                - generic [ref=e1989]:
+                  - link [ref=e1990] [cursor=pointer]:
+                    - /url: /bo-ban-phim-va-chuot-khong-day-dell-km3322w-trung-01
+                    - heading "Combo không dây Dell KM3322W" [level=3] [ref=e1991]
+                  - generic [ref=e1992]: 450.000 ₫
+                  - generic [ref=e1996]:
+                    - button [ref=e1997] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e2002] [cursor=pointer]
+              - generic [ref=e2007]:
+                - link [ref=e2008] [cursor=pointer]:
+                  - /url: /combo-logitech-mk220
+                  - img "Combo không dây Logitech MK220 (920-003554)" [ref=e2010]
+                - generic [ref=e2011]:
+                  - link [ref=e2012] [cursor=pointer]:
+                    - /url: /combo-logitech-mk220
+                    - heading "Combo không dây Logitech MK220 (920-003554)" [level=3] [ref=e2013]
+                  - generic [ref=e2014]: 410.000 ₫
+                  - generic [ref=e2018]:
+                    - button [ref=e2019] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e2024] [cursor=pointer]
+              - generic [ref=e2029]:
+                - link [ref=e2030] [cursor=pointer]:
+                  - /url: /combo-logitech-mk200
+                  - img "Combo có dây Logitech MK200" [ref=e2032]
+                - generic [ref=e2033]:
+                  - link [ref=e2034] [cursor=pointer]:
+                    - /url: /combo-logitech-mk200
+                    - heading "Combo có dây Logitech MK200" [level=3] [ref=e2035]
+                  - generic [ref=e2036]: 340.000 ₫
+                  - generic [ref=e2040]:
+                    - button [ref=e2041] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e2046] [cursor=pointer]
+              - generic [ref=e2051]:
+                - link [ref=e2052] [cursor=pointer]:
+                  - /url: /combo-logitech-mk120
+                  - img "Combo có dây Logitech MK120 (920-002565)" [ref=e2054]
+                - generic [ref=e2055]:
+                  - link [ref=e2056] [cursor=pointer]:
+                    - /url: /combo-logitech-mk120
+                    - heading "Combo có dây Logitech MK120 (920-002565)" [level=3] [ref=e2057]
+                  - generic [ref=e2058]: 238.000 ₫
+                  - generic [ref=e2062]:
+                    - button [ref=e2063] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e2068] [cursor=pointer]
+        - generic [ref=e2079]:
+          - button "Chuột không dây" [ref=e2083] [cursor=pointer]
+          - generic [ref=e2085]:
+            - link [ref=e2086] [cursor=pointer]:
+              - /url: chuot-khong-day
+              - img "Chuột không dây" [ref=e2087]
+            - generic [ref=e2091]:
+              - generic [ref=e2093]:
+                - link [ref=e2094] [cursor=pointer]:
+                  - /url: /chuot-logitech-gaming-pro-x-superlight-2-mau-den-910-006632
+                  - img "Chuột không dây Logitech Signature M650L - Trái (910-006632)" [ref=e2096]
+                - generic [ref=e2097]:
+                  - link [ref=e2098] [cursor=pointer]:
+                    - /url: /chuot-logitech-gaming-pro-x-superlight-2-mau-den-910-006632
+                    - heading "Chuột không dây Logitech Signature M650L - Trái (910-006632)" [level=3] [ref=e2099]
+                  - generic [ref=e2100]: 3.456.000 ₫
+                  - generic [ref=e2104]:
+                    - button [ref=e2105] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e2110] [cursor=pointer]
+              - generic [ref=e2115]:
+                - link [ref=e2116] [cursor=pointer]:
+                  - /url: /chuot-khong-day-logitech-mx-master-3s-pale-gray-910-006562
+                  - img "Chuột không dây Logitech MX Master 3S - Xám (910-006562)" [ref=e2118]
+                - generic [ref=e2119]:
+                  - link [ref=e2120] [cursor=pointer]:
+                    - /url: /chuot-khong-day-logitech-mx-master-3s-pale-gray-910-006562
+                    - heading "Chuột không dây Logitech MX Master 3S - Xám (910-006562)" [level=3] [ref=e2121]
+                  - generic [ref=e2122]: 2.344.000 ₫
+                  - generic [ref=e2126]:
+                    - button [ref=e2127] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e2132] [cursor=pointer]
+              - generic [ref=e2137]:
+                - link [ref=e2138] [cursor=pointer]:
+                  - /url: /chuot-mx-anywhere-3s-910-006932
+                  - img "Chuột không dây Logitech MX Anywhere 3S" [ref=e2140]
+                - generic [ref=e2141]:
+                  - link [ref=e2142] [cursor=pointer]:
+                    - /url: /chuot-mx-anywhere-3s-910-006932
+                    - heading "Chuột không dây Logitech MX Anywhere 3S" [level=3] [ref=e2143]
+                  - generic [ref=e2144]: 1.555.000 ₫
+                  - generic [ref=e2148]:
+                    - button [ref=e2149] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e2154] [cursor=pointer]
+              - generic [ref=e2159]:
+                - link [ref=e2160] [cursor=pointer]:
+                  - /url: /chuot-vi-tinh-mouse-logitech-lift-vertical-ergonomic-wireless-bluetooth-den-graphite-910-006479
+                  - img "Chuột không dây Logitech Lift Vertical Ergonomic - Đen (910-006479)" [ref=e2162]
+                - generic [ref=e2163]:
+                  - link [ref=e2164] [cursor=pointer]:
+                    - /url: /chuot-vi-tinh-mouse-logitech-lift-vertical-ergonomic-wireless-bluetooth-den-graphite-910-006479
+                    - heading "Chuột không dây Logitech Lift Vertical Ergonomic - Đen (910-006479)" [level=3] [ref=e2165]
+                  - generic [ref=e2166]: 1.274.000 ₫
+                  - generic [ref=e2170]:
+                    - button [ref=e2171] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e2176] [cursor=pointer]
+              - generic [ref=e2181]:
+                - link [ref=e2182] [cursor=pointer]:
+                  - /url: /chuot-vi-tinh-logitech-g304-lightspeed-wireless-gaming-mouse-910-005284
+                  - img "Chuột gaming không dây Logitech G304 Lightspeed - Đen" [ref=e2184]
+                - generic [ref=e2185]:
+                  - link [ref=e2186] [cursor=pointer]:
+                    - /url: /chuot-vi-tinh-logitech-g304-lightspeed-wireless-gaming-mouse-910-005284
+                    - heading "Chuột gaming không dây Logitech G304 Lightspeed - Đen" [level=3] [ref=e2187]
+                  - generic [ref=e2188]: 756.000 ₫
+                  - generic [ref=e2192]:
+                    - button [ref=e2193] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e2198] [cursor=pointer]
+              - generic [ref=e2203]:
+                - link [ref=e2204] [cursor=pointer]:
+                  - /url: /chuot-khong-day-logitech-m650-hong-910-006263
+                  - img "Chuột không dây Logitech Signature M650 - Hồng (910-006263)" [ref=e2206]
+                - generic [ref=e2207]:
+                  - link [ref=e2208] [cursor=pointer]:
+                    - /url: /chuot-khong-day-logitech-m650-hong-910-006263
+                    - heading "Chuột không dây Logitech Signature M650 - Hồng (910-006263)" [level=3] [ref=e2209]
+                  - generic [ref=e2210]: 643.000 ₫
+                  - generic [ref=e2214]:
+                    - button [ref=e2215] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e2220] [cursor=pointer]
+              - generic [ref=e2225]:
+                - link [ref=e2226] [cursor=pointer]:
+                  - /url: /chuot-khong-day-logitech-m650-den-910-006262
+                  - img "Chuột không dây Logitech Signature M650 (910-006262)" [ref=e2228]
+                - generic [ref=e2229]:
+                  - link [ref=e2230] [cursor=pointer]:
+                    - /url: /chuot-khong-day-logitech-m650-den-910-006262
+                    - heading "Chuột không dây Logitech Signature M650 (910-006262)" [level=3] [ref=e2231]
+                  - generic [ref=e2232]: 643.000 ₫
+                  - generic [ref=e2236]:
+                    - button [ref=e2237] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e2242] [cursor=pointer]
+              - generic [ref=e2247]:
+                - link [ref=e2248] [cursor=pointer]:
+                  - /url: /chuot-khong-day-logitech-m650l-den
+                  - img "Chuột không dây Logitech Signature M650L (Large)" [ref=e2250]
+                - generic [ref=e2251]:
+                  - link [ref=e2252] [cursor=pointer]:
+                    - /url: /chuot-khong-day-logitech-m650l-den
+                    - heading "Chuột không dây Logitech Signature M650L (Large)" [level=3] [ref=e2253]
+                  - generic [ref=e2254]: 616.000 ₫
+                  - generic [ref=e2258]:
+                    - button [ref=e2259] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e2264] [cursor=pointer]
+              - generic [ref=e2269]:
+                - link [ref=e2270] [cursor=pointer]:
+                  - /url: /chuot-khong-day-logitech-pebble-mouse-2-m350s-den
+                  - img "Chuột không dây Logitech Pebble 2 M350s Bluetooth - Đen" [ref=e2272]
+                - generic [ref=e2273]:
+                  - link [ref=e2274] [cursor=pointer]:
+                    - /url: /chuot-khong-day-logitech-pebble-mouse-2-m350s-den
+                    - heading "Chuột không dây Logitech Pebble 2 M350s Bluetooth - Đen" [level=3] [ref=e2275]
+                  - generic [ref=e2276]: 468.000 ₫
+                  - generic [ref=e2280]:
+                    - button [ref=e2281] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e2286] [cursor=pointer]
+              - generic [ref=e2291]:
+                - link [ref=e2292] [cursor=pointer]:
+                  - /url: /mouse-logitech-wireless-m331
+                  - img "Chuột không dây Logitech M331 Silent Plus" [ref=e2294]
+                - generic [ref=e2295]:
+                  - link [ref=e2296] [cursor=pointer]:
+                    - /url: /mouse-logitech-wireless-m331
+                    - heading "Chuột không dây Logitech M331 Silent Plus" [level=3] [ref=e2297]
+                  - generic [ref=e2298]: 329.000 ₫
+                  - generic [ref=e2302]:
+                    - button [ref=e2303] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e2308] [cursor=pointer]
+              - generic [ref=e2313]:
+                - link [ref=e2314] [cursor=pointer]:
+                  - /url: /chuot-khong-day-bluetooth-logitech-m240
+                  - img "Chuột không dây Logitech M240 Silent Bluetooth - Đen" [ref=e2316]
+                - generic [ref=e2317]:
+                  - link [ref=e2318] [cursor=pointer]:
+                    - /url: /chuot-khong-day-bluetooth-logitech-m240
+                    - heading "Chuột không dây Logitech M240 Silent Bluetooth - Đen" [level=3] [ref=e2319]
+                  - generic [ref=e2320]: 323.000 ₫
+                  - generic [ref=e2324]:
+                    - button [ref=e2325] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e2330] [cursor=pointer]
+              - generic [ref=e2335]:
+                - link [ref=e2336] [cursor=pointer]:
+                  - /url: /mouse-logitech-m221-silent-mouse
+                  - img "Chuột không dây Logitech M221 Silent - Xám (910-004882)" [ref=e2338]
+                - generic [ref=e2339]:
+                  - link [ref=e2340] [cursor=pointer]:
+                    - /url: /mouse-logitech-m221-silent-mouse
+                    - heading "Chuột không dây Logitech M221 Silent - Xám (910-004882)" [level=3] [ref=e2341]
+                  - generic [ref=e2342]: 232.000 ₫
+                  - generic [ref=e2346]:
+                    - button [ref=e2347] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e2352] [cursor=pointer]
+        - generic [ref=e2363]:
+          - button "Chuột có dây" [ref=e2367] [cursor=pointer]
+          - generic [ref=e2369]:
+            - link [ref=e2370] [cursor=pointer]:
+              - /url: chuot-co-day
+              - img "Chuột có dây" [ref=e2371]
+            - generic [ref=e2375]:
+              - generic [ref=e2377]:
+                - link [ref=e2378] [cursor=pointer]:
+                  - /url: /chuot-gaming-logitech-g102-gen2
+                  - img "Chuột gaming Logitech G102 Lightsync - 8000 DPI, RGB" [ref=e2380]
+                - generic [ref=e2381]:
+                  - link [ref=e2382] [cursor=pointer]:
+                    - /url: /chuot-gaming-logitech-g102-gen2
+                    - heading "Chuột gaming Logitech G102 Lightsync - 8000 DPI, RGB" [level=3] [ref=e2383]
+                  - generic [ref=e2384]: 400.000 ₫
+                  - generic [ref=e2388]:
+                    - button [ref=e2389] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e2394] [cursor=pointer]
+              - generic [ref=e2399]:
+                - link [ref=e2400] [cursor=pointer]:
+                  - /url: /mouse-logitech-m100r
+                  - img "Chuột có dây Logitech M100r" [ref=e2402]
+                - generic [ref=e2403]:
+                  - link [ref=e2404] [cursor=pointer]:
+                    - /url: /mouse-logitech-m100r
+                    - heading "Chuột có dây Logitech M100r" [level=3] [ref=e2405]
+                  - generic [ref=e2406]: 110.000 ₫
+                  - generic [ref=e2410]:
+                    - button [ref=e2411] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e2416] [cursor=pointer]
+              - generic [ref=e2421]:
+                - link [ref=e2422] [cursor=pointer]:
+                  - /url: /mouse-dell-ms116
+                  - img "Chuột có dây Dell MS116" [ref=e2424]
+                - generic [ref=e2425]:
+                  - link [ref=e2426] [cursor=pointer]:
+                    - /url: /mouse-dell-ms116
+                    - heading "Chuột có dây Dell MS116" [level=3] [ref=e2427]
+                  - generic [ref=e2428]: 100.000 ₫
+                  - generic [ref=e2432]:
+                    - button [ref=e2433] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e2438] [cursor=pointer]
+              - generic [ref=e2443]:
+                - link [ref=e2444] [cursor=pointer]:
+                  - /url: /mouse-logitech-b100
+                  - img "Chuột có dây Logitech B100" [ref=e2446]
+                - generic [ref=e2447]:
+                  - link [ref=e2448] [cursor=pointer]:
+                    - /url: /mouse-logitech-b100
+                    - heading "Chuột có dây Logitech B100" [level=3] [ref=e2449]
+                  - generic [ref=e2450]: 73.000 ₫
+                  - generic [ref=e2454]:
+                    - button [ref=e2455] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e2460] [cursor=pointer]
+        - generic [ref=e2465]:
+          - button "Bàn phím không dây" [ref=e2469] [cursor=pointer]
+          - generic [ref=e2471]:
+            - link [ref=e2472] [cursor=pointer]:
+              - /url: keyboard-khong-day
+              - img "Bàn phím không dây" [ref=e2473]
+            - generic [ref=e2477]:
+              - generic [ref=e2479]:
+                - link [ref=e2480] [cursor=pointer]:
+                  - /url: /ban-phim-logitech-khong-day-k650-signature-mau-than-chi-920-010955-
+                  - img "Bàn phím không dây Logitech Signature K650 - ĐEN" [ref=e2482]
+                - generic [ref=e2483]:
+                  - link [ref=e2484] [cursor=pointer]:
+                    - /url: /ban-phim-logitech-khong-day-k650-signature-mau-than-chi-920-010955-
+                    - heading "Bàn phím không dây Logitech Signature K650 - ĐEN" [level=3] [ref=e2485]
+                  - generic [ref=e2486]: 1.015.000 ₫
+                  - generic [ref=e2490]:
+                    - button [ref=e2491] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e2496] [cursor=pointer]
+              - generic [ref=e2501]:
+                - link [ref=e2502] [cursor=pointer]:
+                  - /url: /ban-phim-logitech-k580-den
+                  - img "Bàn phím không dây Logitech K580 Slim Multi-Device - Đen" [ref=e2504]
+                - generic [ref=e2505]:
+                  - link [ref=e2506] [cursor=pointer]:
+                    - /url: /ban-phim-logitech-k580-den
+                    - heading "Bàn phím không dây Logitech K580 Slim Multi-Device - Đen" [level=3] [ref=e2507]
+                  - generic [ref=e2508]: 956.000 ₫
+                  - generic [ref=e2512]:
+                    - button [ref=e2513] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e2518] [cursor=pointer]
+              - generic [ref=e2523]:
+                - link [ref=e2524] [cursor=pointer]:
+                  - /url: /ban-phim-khong-day-logitech-pebble-keys-2-k380s-mau-den
+                  - img "Bàn phím không dây Logitech K380s Bluetooth - Đen (920-011753)" [ref=e2526]
+                - generic [ref=e2527]:
+                  - link [ref=e2528] [cursor=pointer]:
+                    - /url: /ban-phim-khong-day-logitech-pebble-keys-2-k380s-mau-den
+                    - heading "Bàn phím không dây Logitech K380s Bluetooth - Đen (920-011753)" [level=3] [ref=e2529]
+                  - generic [ref=e2530]: 740.000 ₫
+                  - generic [ref=e2534]:
+                    - button [ref=e2535] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e2540] [cursor=pointer]
+              - generic [ref=e2545]:
+                - link [ref=e2546] [cursor=pointer]:
+                  - /url: /keyboard-logitech-k400-plus
+                  - img "Bàn phím không dây Logitech K400 Plus - Tích hợp Touchpad" [ref=e2548]
+                - generic [ref=e2549]:
+                  - link [ref=e2550] [cursor=pointer]:
+                    - /url: /keyboard-logitech-k400-plus
+                    - heading "Bàn phím không dây Logitech K400 Plus - Tích hợp Touchpad" [level=3] [ref=e2551]
+                  - generic [ref=e2552]: 697.000 ₫
+                  - generic [ref=e2556]:
+                    - button [ref=e2557] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e2562] [cursor=pointer]
+              - generic [ref=e2567]:
+                - link [ref=e2568] [cursor=pointer]:
+                  - /url: /combo-logitech-mk240
+                  - img "Combo không dây Logitech MK240 Nano" [ref=e2570]
+                - generic [ref=e2571]:
+                  - link [ref=e2572] [cursor=pointer]:
+                    - /url: /combo-logitech-mk240
+                    - heading "Combo không dây Logitech MK240 Nano" [level=3] [ref=e2573]
+                  - generic [ref=e2574]: 486.000 ₫
+                  - generic [ref=e2578]:
+                    - button [ref=e2579] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e2584] [cursor=pointer]
+              - generic [ref=e2589]:
+                - link [ref=e2590] [cursor=pointer]:
+                  - /url: /keyboard-logitech-k270
+                  - img "Bàn phím không dây Logitech K270" [ref=e2592]
+                - generic [ref=e2593]:
+                  - link [ref=e2594] [cursor=pointer]:
+                    - /url: /keyboard-logitech-k270
+                    - heading "Bàn phím không dây Logitech K270" [level=3] [ref=e2595]
+                  - generic [ref=e2596]: 421.000 ₫
+                  - generic [ref=e2600]:
+                    - button [ref=e2601] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e2606] [cursor=pointer]
+        - generic [ref=e2617]:
+          - button "Bàn phím có dây" [ref=e2621] [cursor=pointer]
+          - generic [ref=e2623]:
+            - link [ref=e2624] [cursor=pointer]:
+              - /url: keyboard-co-day
+              - img "Bàn phím có dây" [ref=e2625]
+            - generic [ref=e2629]:
+              - generic [ref=e2631]:
+                - link [ref=e2632] [cursor=pointer]:
+                  - /url: /ban-phim-cong-usb-vi-tinh-00am600
+                  - img "Bàn phím có dây Lenovo Preferred Pro II (00AM600)" [ref=e2634]
+                - generic [ref=e2635]:
+                  - link [ref=e2636] [cursor=pointer]:
+                    - /url: /ban-phim-cong-usb-vi-tinh-00am600
+                    - heading "Bàn phím có dây Lenovo Preferred Pro II (00AM600)" [level=3] [ref=e2637]
+                  - generic [ref=e2638]: 520.000 ₫
+                  - generic [ref=e2642]:
+                    - button [ref=e2643] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e2648] [cursor=pointer]
+              - generic [ref=e2653]:
+                - link [ref=e2654] [cursor=pointer]:
+                  - /url: /keyboard-dell-kb216
+                  - img "Bàn phím có dây Dell KB216" [ref=e2656]
+                - generic [ref=e2657]:
+                  - link [ref=e2658] [cursor=pointer]:
+                    - /url: /keyboard-dell-kb216
+                    - heading "Bàn phím có dây Dell KB216" [level=3] [ref=e2659]
+                  - generic [ref=e2660]: 180.000 ₫
+                  - generic [ref=e2664]:
+                    - button [ref=e2665] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e2670] [cursor=pointer]
+              - generic [ref=e2675]:
+                - link [ref=e2676] [cursor=pointer]:
+                  - /url: /keyboard-logitech-k120
+                  - img "Bàn phím có dây Logitech K120" [ref=e2678]
+                - generic [ref=e2679]:
+                  - link [ref=e2680] [cursor=pointer]:
+                    - /url: /keyboard-logitech-k120
+                    - heading "Bàn phím có dây Logitech K120" [level=3] [ref=e2681]
+                  - generic [ref=e2682]: 153.000 ₫
+                  - generic [ref=e2686]:
+                    - button [ref=e2687] [cursor=pointer]
+                    - button "MUA NGAY" [ref=e2692] [cursor=pointer]
+        - generic [ref=e2698]:
+          - link [ref=e2699] [cursor=pointer]:
+            - /url: "#"
+            - img "banner middle 1" [ref=e2701]
+          - link [ref=e2702] [cursor=pointer]:
+            - /url: "#"
+            - img "banner middle 2" [ref=e2704]
+          - link [ref=e2705] [cursor=pointer]:
+            - /url: "#"
+            - img "banner middle 3" [ref=e2707]
+        - generic [ref=e2709]:
+          - generic [ref=e2710]: Có thể bạn quan tâm
+          - generic [ref=e2713]:
+            - link "SSD gắn trong Silicon Power A55 256GB SATA3 SSD gắn trong Silicon Power A55 256GB SATA3 1.350.000 ₫ Còn hàng Đánh giá 5 trên 5 sao" [ref=e2714] [cursor=pointer]:
+              - /url: /ssd-silicon-power-a55-256gb
+              - img "SSD gắn trong Silicon Power A55 256GB SATA3" [ref=e2716]
+              - generic [ref=e2717]:
+                - generic [ref=e2718]: SSD gắn trong Silicon Power A55 256GB SATA3
+                - generic [ref=e2719]: 1.350.000 ₫
+                - generic [ref=e2720]:
+                  - generic [ref=e2721]: ● Còn hàng
+                  - generic "Đánh giá 5 trên 5 sao" [ref=e2722]: ★★★★★
+            - link "Bàn phím không dây Logitech K400 Plus - Tích hợp Touchpad Bàn phím không dây Logitech K400 Plus - Tích hợp Touchpad 697.000 ₫ Còn hàng Đánh giá 5 trên 5 sao" [ref=e2723] [cursor=pointer]:
+              - /url: /keyboard-logitech-k400-plus
+              - img "Bàn phím không dây Logitech K400 Plus - Tích hợp Touchpad" [ref=e2725]
+              - generic [ref=e2726]:
+                - generic [ref=e2727]: Bàn phím không dây Logitech K400 Plus - Tích hợp Touchpad
+                - generic [ref=e2728]: 697.000 ₫
+                - generic [ref=e2729]:
+                  - generic [ref=e2730]: ● Còn hàng
+                  - generic "Đánh giá 5 trên 5 sao" [ref=e2731]: ★★★★★
+            - link "Bàn phím có dây Logitech K120 Bàn phím có dây Logitech K120 153.000 ₫ Còn hàng Đánh giá 5 trên 5 sao" [ref=e2732] [cursor=pointer]:
+              - /url: /keyboard-logitech-k120
+              - img "Bàn phím có dây Logitech K120" [ref=e2734]
+              - generic [ref=e2735]:
+                - generic [ref=e2736]: Bàn phím có dây Logitech K120
+                - generic [ref=e2737]: 153.000 ₫
+                - generic [ref=e2738]:
+                  - generic [ref=e2739]: ● Còn hàng
+                  - generic "Đánh giá 5 trên 5 sao" [ref=e2740]: ★★★★★
+            - link "SSD gắn trong Silicon Power A55 128GB SATA3 SSD gắn trong Silicon Power A55 128GB SATA3 952.000 ₫ Còn hàng Đánh giá 5 trên 5 sao" [ref=e2741] [cursor=pointer]:
+              - /url: /ssd-silicon-power-a55-128gb
+              - img "SSD gắn trong Silicon Power A55 128GB SATA3" [ref=e2743]
+              - generic [ref=e2744]:
+                - generic [ref=e2745]: SSD gắn trong Silicon Power A55 128GB SATA3
+                - generic [ref=e2746]: 952.000 ₫
+                - generic [ref=e2747]:
+                  - generic [ref=e2748]: ● Còn hàng
+                  - generic "Đánh giá 5 trên 5 sao" [ref=e2749]: ★★★★★
+            - link "Chuột gaming Logitech G102 Lightsync - 8000 DPI, RGB Chuột gaming Logitech G102 Lightsync - 8000 DPI, RGB 400.000 ₫ Còn hàng Đánh giá 0 trên 5 sao" [ref=e2750] [cursor=pointer]:
+              - /url: /chuot-gaming-logitech-g102-gen2
+              - img "Chuột gaming Logitech G102 Lightsync - 8000 DPI, RGB" [ref=e2752]
+              - generic [ref=e2753]:
+                - generic [ref=e2754]: Chuột gaming Logitech G102 Lightsync - 8000 DPI, RGB
+                - generic [ref=e2755]: 400.000 ₫
+                - generic [ref=e2756]:
+                  - generic [ref=e2757]: ● Còn hàng
+                  - generic "Đánh giá 0 trên 5 sao" [ref=e2758]: ★★★★★
+            - link "SSD Silicon Power A60 256GB M.2 NVMe Gen3 SSD Silicon Power A60 256GB M.2 NVMe Gen3 1.624.000 ₫ Còn hàng Đánh giá 4 trên 5 sao" [ref=e2759] [cursor=pointer]:
+              - /url: /ssd-silicon-power-a60-256gb-sp256gbp34a60m28
+              - img "SSD Silicon Power A60 256GB M.2 NVMe Gen3" [ref=e2761]
+              - generic [ref=e2762]:
+                - generic [ref=e2763]: SSD Silicon Power A60 256GB M.2 NVMe Gen3
+                - generic [ref=e2764]: 1.624.000 ₫
+                - generic [ref=e2765]:
+                  - generic [ref=e2766]: ● Còn hàng
+                  - generic "Đánh giá 4 trên 5 sao" [ref=e2767]: ★★★★★
+            - link "Chuột có dây Logitech B100 Chuột có dây Logitech B100 73.000 ₫ Còn hàng Đánh giá 0 trên 5 sao" [ref=e2768] [cursor=pointer]:
+              - /url: /mouse-logitech-b100
+              - img "Chuột có dây Logitech B100" [ref=e2770]
+              - generic [ref=e2771]:
+                - generic [ref=e2772]: Chuột có dây Logitech B100
+                - generic [ref=e2773]: 73.000 ₫
+                - generic [ref=e2774]:
+                  - generic [ref=e2775]: ● Còn hàng
+                  - generic "Đánh giá 0 trên 5 sao" [ref=e2776]: ★★★★★
+            - link "SSD gắn trong Silicon Power A55 1TB SATA3 SSD gắn trong Silicon Power A55 1TB SATA3 4.032.000 ₫ Còn hàng Đánh giá 5 trên 5 sao" [ref=e2777] [cursor=pointer]:
+              - /url: /ssd-silicon-power-a55-1tb
+              - img "SSD gắn trong Silicon Power A55 1TB SATA3" [ref=e2779]
+              - generic [ref=e2780]:
+                - generic [ref=e2781]: SSD gắn trong Silicon Power A55 1TB SATA3
+                - generic [ref=e2782]: 4.032.000 ₫
+                - generic [ref=e2783]:
+                  - generic [ref=e2784]: ● Còn hàng
+                  - generic "Đánh giá 5 trên 5 sao" [ref=e2785]: ★★★★★
+            - link "RAM Laptop Silicon Power 8GB DDR4 3200MHz RAM Laptop Silicon Power 8GB DDR4 3200MHz 1.848.000 ₫ Còn hàng Đánh giá 0 trên 5 sao" [ref=e2786] [cursor=pointer]:
+              - /url: /silicon-power-ddr4-8gb-bus-3200-b02
+              - img "RAM Laptop Silicon Power 8GB DDR4 3200MHz" [ref=e2788]
+              - generic [ref=e2789]:
+                - generic [ref=e2790]: RAM Laptop Silicon Power 8GB DDR4 3200MHz
+                - generic [ref=e2791]: 1.848.000 ₫
+                - generic [ref=e2792]:
+                  - generic [ref=e2793]: ● Còn hàng
+                  - generic "Đánh giá 0 trên 5 sao" [ref=e2794]: ★★★★★
+            - link "Chuột không dây Logitech M185 - Xám (910-002255) Chuột không dây Logitech M185 - Xám (910-002255) 194.000 ₫ Còn hàng Đánh giá 0 trên 5 sao" [ref=e2795] [cursor=pointer]:
+              - /url: /mouse-logitech-m185
+              - img "Chuột không dây Logitech M185 - Xám (910-002255)" [ref=e2797]
+              - generic [ref=e2798]:
+                - generic [ref=e2799]: Chuột không dây Logitech M185 - Xám (910-002255)
+                - generic [ref=e2800]: 194.000 ₫
+                - generic [ref=e2801]:
+                  - generic [ref=e2802]: ● Còn hàng
+                  - generic "Đánh giá 0 trên 5 sao" [ref=e2803]: ★★★★★
+            - link "SSD Silicon Power A60 128GB M.2 NVMe Gen3 SSD Silicon Power A60 128GB M.2 NVMe Gen3 997.000 ₫ Còn hàng Đánh giá 4 trên 5 sao" [ref=e2804] [cursor=pointer]:
+              - /url: /ssd-silicon-power-a60-128gb-sp128gbp34a60m28
+              - img "SSD Silicon Power A60 128GB M.2 NVMe Gen3" [ref=e2806]
+              - generic [ref=e2807]:
+                - generic [ref=e2808]: SSD Silicon Power A60 128GB M.2 NVMe Gen3
+                - generic [ref=e2809]: 997.000 ₫
+                - generic [ref=e2810]:
+                  - generic [ref=e2811]: ● Còn hàng
+                  - generic "Đánh giá 4 trên 5 sao" [ref=e2812]: ★★★★★
+            - link "Combo không dây Logitech MK240 Nano Combo không dây Logitech MK240 Nano 486.000 ₫ Còn hàng Đánh giá 0 trên 5 sao" [ref=e2813] [cursor=pointer]:
+              - /url: /combo-logitech-mk240
+              - img "Combo không dây Logitech MK240 Nano" [ref=e2815]
+              - generic [ref=e2816]:
+                - generic [ref=e2817]: Combo không dây Logitech MK240 Nano
+                - generic [ref=e2818]: 486.000 ₫
+                - generic [ref=e2819]:
+                  - generic [ref=e2820]: ● Còn hàng
+                  - generic "Đánh giá 0 trên 5 sao" [ref=e2821]: ★★★★★
+      - dialog [ref=e2822]:
+        - generic [ref=e2824]:
+          - button "Đóng" [ref=e2825] [cursor=pointer]
+          - link [ref=e2829] [cursor=pointer]:
+            - /url: "#"
+            - img "Banner popup cho trang chủ" [ref=e2831]
+    - contentinfo [ref=e2832]:
+      - generic [ref=e2834]:
+        - generic [ref=e2841]:
+          - paragraph [ref=e2842]: Chính sách giao hàng
+          - paragraph [ref=e2843]: Nhận hàng và thanh toán tại nhà
+        - generic [ref=e2850]:
+          - paragraph [ref=e2851]: Đổi trả dễ dàng
+          - paragraph [ref=e2852]: 1 đổi 1 trong 7 ngày
+        - generic [ref=e2857]:
+          - paragraph [ref=e2858]: Giá luôn luôn tốt nhất
+          - paragraph [ref=e2859]: Giá cả hợp lý, nhiều ưu đãi tốt
+        - generic [ref=e2864]:
+          - paragraph [ref=e2865]: Hỗ trợ nhiệt tình
+          - paragraph [ref=e2866]: Tư vấn, giải đáp mọi thắc mắc
+      - generic [ref=e2867]:
+        - generic [ref=e2868]:
+          - generic [ref=e2869]:
+            - heading "Về chúng tôi" [level=3] [ref=e2870]
+            - generic [ref=e2873]:
+              - link "Giới thiệu công ty" [ref=e2874] [cursor=pointer]:
+                - /url: /gioi-thieu/gioi-thieu-ve-cong-ty
+              - link "Tư vấn hỏi đáp" [ref=e2876] [cursor=pointer]:
+                - /url: /tu-van
+              - link "Liên hệ và góp ý" [ref=e2878] [cursor=pointer]:
+                - /url: /lien-he-gop-y
+              - link "Yêu cầu báo giá" [ref=e2880] [cursor=pointer]:
+                - /url: /yeu-cau-bao-gia
+          - generic [ref=e2882]:
+            - heading "Chính sách & điều khoản" [level=3] [ref=e2883]
+            - generic [ref=e2886]:
+              - link "Hướng dẫn gửi bảo hành" [ref=e2887] [cursor=pointer]:
+                - /url: /chinh-sach/huong-dan-gui-bao-hanh
+              - link "Chính sách bảo mật TT cá nhân" [ref=e2889] [cursor=pointer]:
+                - /url: /chinh-sach/chinh-sach-bao-mat-thong-tin-ca-nhan
+              - link "Chính sách giao hàng" [ref=e2891] [cursor=pointer]:
+                - /url: /chinh-sach/chinh-sach-giao-hang
+              - link "Chính sách bảo hành" [ref=e2893] [cursor=pointer]:
+                - /url: /chinh-sach/chinh-sach-bao-hanh
+              - link "Quy định thanh toán" [ref=e2895] [cursor=pointer]:
+                - /url: /chinh-sach/quy-dinh-thanh-toan
+              - link "Chính sách hoàn tiền" [ref=e2897] [cursor=pointer]:
+                - /url: /chinh-sach/chinh-sach-hoan-tien
+              - link "Chính sách đổi sản phẩm" [ref=e2899] [cursor=pointer]:
+                - /url: /chinh-sach/chinh-sach-doi-san-pham
+              - link "Chính sách kiểm hàng" [ref=e2901] [cursor=pointer]:
+                - /url: /chinh-sach/chinh-sach-kiem-hang
+          - generic [ref=e2903]:
+            - heading "Thông tin" [level=3] [ref=e2904]
+            - generic [ref=e2907]:
+              - link "Tuyển dụng" [ref=e2908] [cursor=pointer]:
+                - /url: /tuyen-dung
+              - link "Tin tức công nghệ" [ref=e2910] [cursor=pointer]:
+                - /url: /tin-tuc
+              - link "Tin khuyến mãi" [ref=e2912] [cursor=pointer]:
+                - /url: /tin-khuyen-mai
+              - link "Giải pháp cho doanh nghiệp" [ref=e2914] [cursor=pointer]:
+                - /url: /giai-phap-cho-doanh-nghiep
+              - link "Xây dựng cấu hình" [ref=e2916] [cursor=pointer]:
+                - /url: /xay-dung-cau-hinh
+          - generic [ref=e2918]:
+            - heading "Tổng đài hỗ trợ" [level=3] [ref=e2919]
+            - generic [ref=e2922]:
+              - paragraph [ref=e2923]:
+                - generic [ref=e2924]: "Hotline: 1900 88 88 77"
+              - paragraph [ref=e2925]:
+                - generic [ref=e2926]: "CSKH: 0949.56.94.94"
+              - paragraph [ref=e2927]:
+                - generic [ref=e2928]: "Kỹ thuật: 0933.808.960"
+              - paragraph [ref=e2929]:
+                - generic [ref=e2930]: "ĐT bàn: 282 247 247 2"
+              - 'link "Email: cskh@nguyenkimcomputer.vn" [ref=e2931] [cursor=pointer]':
+                - /url: mailto:cskh@nguyenkimcomputer.vn
+          - generic [ref=e2933]:
+            - heading "Cộng đồng Nguyên Kim Computer" [level=3] [ref=e2934]
+            - generic [ref=e2937]:
+              - link "Youtube" [ref=e2938] [cursor=pointer]:
+                - /url: https://www.youtube.com/
+              - link "Facebook" [ref=e2940] [cursor=pointer]:
+                - /url: https://www.facebook.com/
+        - generic [ref=e2942]:
+          - generic [ref=e2943]:
+            - heading "Phương thức thanh toán" [level=3] [ref=e2944]
+            - generic [ref=e2945]:
+              - generic [ref=e2946]: QR Code
+              - generic [ref=e2954]: Tiền mặt
+              - generic [ref=e2959]: Trả góp
+              - generic [ref=e2964]: Internet Banking
+          - generic [ref=e2968]:
+            - heading "Danh sách các ngân hàng thanh toán online" [level=3] [ref=e2969]
+            - generic [ref=e2970]:
+              - img "ACB" [ref=e2972]
+              - img "Vietcombank" [ref=e2974]
+              - img "VietinBank" [ref=e2976]
+      - generic [ref=e2978]:
+        - generic [ref=e2979]:
+          - heading "Công ty Cổ phần Công nghệ Vi tính Nguyên Kim (NGUYEN KIM COMPUTER JSC)" [level=3] [ref=e2980]
+          - paragraph [ref=e2982]: Giấy chứng nhận đăng ký kinh doanh số 0318933086 do Sở kế hoạch và đầu tư Tp. HCM cấp ngày 28/04/2026.
+          - paragraph [ref=e2984]: "CSKH: 0949 56 94 94 - Mã Số Thuế: 0318933086"
+          - paragraph [ref=e2985]: "Website: https://nguyenkimcomputer.vn"
+        - generic [ref=e2986]:
+          - heading "Địa chỉ trụ sở chính" [level=3] [ref=e2987]
+          - paragraph [ref=e2989]: P1901, Tầng 19, Saigon Trade Center, 37 Tôn Đức Thắng, phường Sài Gòn, TP. Hồ Chí Minh
+          - paragraph [ref=e2990]:
+            - generic [ref=e2991]: "Thời gian làm việc:"
+            - text: "8h - 17h45 (Từ thứ Hai đến thứ Sáu), Thứ 7: 8h - 16h"
+          - paragraph [ref=e2992]: "Email: cskh@nguyenkimcomputer.vn"
+        - link [ref=e2994] [cursor=pointer]:
+          - /url: http://online.gov.vn/Website/chi-tiet-129562?AspxAutoDetectCookieSupport=1
+          - img "Ảnh bộ công thương" [ref=e2995]
+    - button "Hỗ trợ khách hàng" [ref=e2996] [cursor=pointer]

@@ -1,0 +1,257 @@
+- generic [active] [ref=e1]:
+  - alert [ref=e2]
+  - region "Notifications alt+T"
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - generic [ref=e6]:
+        - link "Tin khuyến mãi" [ref=e7] [cursor=pointer]:
+          - /url: /tin-khuyen-mai
+        - link "Xây dựng cấu hình" [ref=e11] [cursor=pointer]:
+          - /url: /xay-dung-cau-hinh
+        - link "Giải pháp doanh nghiệp" [ref=e15] [cursor=pointer]:
+          - /url: /giai-phap-cho-doanh-nghiep
+        - link "Tin tức" [ref=e19] [cursor=pointer]:
+          - /url: /tin-tuc
+        - button [ref=e24] [cursor=pointer]:
+          - button "Liên hệ kinh doanh" [ref=e25]
+        - link "Tuyển dụng" [ref=e30] [cursor=pointer]:
+          - /url: /tuyen-dung
+      - generic [ref=e35]:
+        - link [ref=e36] [cursor=pointer]:
+          - /url: /
+          - img "Vi Tính Nguyên Kim" [ref=e37]
+        - button "Mở danh mục sản phẩm" [ref=e38] [cursor=pointer]:
+          - generic [ref=e40]: Danh mục sản phẩm
+        - generic [ref=e41]:
+          - generic [ref=e42]:
+            - textbox "Bạn tìm gì..." [ref=e44]
+            - button "Tìm kiếm" [ref=e45] [cursor=pointer]
+          - navigation [ref=e50]:
+            - link "PC Gaming" [ref=e51] [cursor=pointer]:
+              - /url: /san-pham?keyword=PC%20Gaming
+            - link "Laptop" [ref=e52] [cursor=pointer]:
+              - /url: /san-pham?keyword=Laptop
+            - link "CPU" [ref=e53] [cursor=pointer]:
+              - /url: /san-pham?keyword=CPU
+            - link "VGA" [ref=e54] [cursor=pointer]:
+              - /url: /san-pham?keyword=VGA
+            - link "RAM" [ref=e55] [cursor=pointer]:
+              - /url: /san-pham?keyword=RAM
+            - link "Mainboard" [ref=e56] [cursor=pointer]:
+              - /url: /san-pham?keyword=Mainboard
+        - generic [ref=e58]:
+          - button [ref=e60] [cursor=pointer]:
+            - link [ref=e61]:
+              - /url: /dang-nhap
+              - button "Tài khoản" [ref=e62]:
+                - generic [ref=e67]:
+                  - generic [ref=e68]: Đăng nhập/Đăng ký
+                  - generic [ref=e69]: Tài khoản
+          - button [ref=e73] [cursor=pointer]:
+            - link [ref=e74]:
+              - /url: /gio-hang
+              - button "Giỏ hàng" [ref=e75]:
+                - generic [ref=e76]: "0"
+    - main [ref=e84]:
+      - main [ref=e86]:
+        - generic [ref=e88]:
+          - generic [ref=e89]:
+            - link [ref=e91] [cursor=pointer]:
+              - /url: /
+              - generic [ref=e92]:
+                - img "Tập thể đội ngũ nhân viên Nguyên Kim chụp ảnh lưu niệm" [ref=e93]
+                - generic [ref=e94]:
+                  - heading "Tập thể đội ngũ nhân viên Nguyên Kim chụp ảnh lưu niệm" [level=1] [ref=e95]
+                  - paragraph [ref=e96]: Ảnh tập thể nhân viên Công ty TNHH Vi Tính Nguyên Kim – đội ngũ trẻ trung, chuyên nghiệp tại văn phòng TP.HCM
+            - link [ref=e98] [cursor=pointer]:
+              - /url: /
+              - generic [ref=e99]:
+                - img "Team Công ty Nguyên Kim – Công nghệ thông tin & phân phối thiết bị tin học" [ref=e100]
+                - generic [ref=e101]:
+                  - heading "Team Công ty Nguyên Kim – Công nghệ thông tin & phân phối thiết bị tin học" [level=1] [ref=e102]
+                  - paragraph [ref=e103]: Team Công ty Nguyên Kim – Công nghệ thông tin & phân phối thiết bị tin học, đội ngũ năng động và tận tâm phục vụ khách hàng
+            - link [ref=e105] [cursor=pointer]:
+              - /url: /
+              - generic [ref=e106]:
+                - img "Ảnh team building Công ty Nguyên Kim – tập thể nhân viên vui chơi gắn kết trong chuyến du lịch" [ref=e107]
+                - generic [ref=e108]:
+                  - heading "Ảnh team building Công ty Nguyên Kim – tập thể nhân viên vui chơi gắn kết trong chuyến du lịch" [level=1] [ref=e109]
+                  - paragraph [ref=e110]: Tập thể nhân viên Công ty TNHH Vi Tính Nguyên Kim trong chuyến du lịch team building, cùng nhau tham gia các hoạt động ngoài trời, tăng cường tinh thần đoàn kết và gắn kết đội ngũ.
+          - generic [ref=e111]:
+            - generic [ref=e112] [cursor=pointer]
+            - generic [ref=e113] [cursor=pointer]
+            - generic [ref=e114] [cursor=pointer]
+        - generic [ref=e118]:
+          - heading "Về Nguyên Kim" [level=2] [ref=e119]
+          - paragraph [ref=e120]: Công ty TNHH Công Ty Cổ Phần Công Nghệ Vi Tính Nguyên Kim - Nhà phân phối chính thức các thương hiệu công nghệ hàng đầu thế giới
+        - generic [ref=e128]:
+          - generic [ref=e129]:
+            - heading "Cơ hội nghề nghiệp" [level=2] [ref=e130]
+            - paragraph [ref=e131]: Tham gia đội ngũ năng động và phát triển sự nghiệp cùng Nguyên Kim
+          - generic [ref=e133]:
+            - generic [ref=e134]:
+              - generic [ref=e138]:
+                - generic [ref=e139]: Tìm theo tên công việc
+                - textbox [ref=e140]
+              - combobox [ref=e144] [cursor=pointer]:
+                - option "Chọn phòng ban" [disabled] [selected]
+                - option "Hành Chính Nhân Sự"
+                - option "CNTT - Phần cứng/ Mạng"
+                - option "CNTT - Phần mềm"
+                - option "Kế toán/ Kiểm toán"
+                - option "Vận chuyển/ Giao nhận/ Kho vận"
+                - option "Bán hàng/ Kinh doanh"
+                - option "Bán lẻ/ Bán sỉ"
+              - generic "Xóa bộ lọc" [ref=e146] [cursor=pointer]: Xóa
+            - generic [ref=e151]: 0 vị trí phù hợp
+          - generic [ref=e155]:
+            - generic [ref=e156]: Không tìm thấy vị trí phù hợp
+            - paragraph [ref=e157]: Thử đổi từ khóa hoặc chọn phòng ban khác nhé.
+            - generic [ref=e158] [cursor=pointer]: Làm mới bộ lọc
+        - generic [ref=e163]:
+          - generic [ref=e164]:
+            - heading "Life at Nguyên Kim" [level=2] [ref=e165]
+            - paragraph [ref=e166]: Môi trường làm việc năng động, sáng tạo và đầy cảm hứng
+          - group "Photo album" [ref=e168]:
+            - generic [ref=e169]:
+              - button [ref=e170] [cursor=pointer]:
+                - img "Team Building Nguyên Kim – Sức trẻ và tinh thần đồng đội bùng nổ trên bãi biển" [ref=e172]
+              - button [ref=e173] [cursor=pointer]
+              - button [ref=e175] [cursor=pointer]
+              - button [ref=e177] [cursor=pointer]
+            - generic [ref=e179]:
+              - button [ref=e180] [cursor=pointer]
+              - button [ref=e182] [cursor=pointer]
+              - button [ref=e184] [cursor=pointer]
+              - button [ref=e186] [cursor=pointer]
+            - generic [ref=e188]:
+              - button [ref=e189] [cursor=pointer]
+              - button [ref=e191] [cursor=pointer]
+              - button [ref=e193] [cursor=pointer]
+              - button [ref=e195] [cursor=pointer]
+            - generic [ref=e197]:
+              - button [ref=e198] [cursor=pointer]
+              - button [ref=e200] [cursor=pointer]
+              - button [ref=e202] [cursor=pointer]
+              - button [ref=e204] [cursor=pointer]
+            - generic [ref=e206]:
+              - button [ref=e207] [cursor=pointer]
+              - button [ref=e209] [cursor=pointer]
+              - button [ref=e211] [cursor=pointer]
+              - button [ref=e213] [cursor=pointer]
+            - generic [ref=e215]:
+              - button [ref=e216] [cursor=pointer]
+              - button [ref=e218] [cursor=pointer]
+              - button [ref=e220] [cursor=pointer]
+              - button [ref=e222] [cursor=pointer]
+        - img "Banner test" [ref=e227]
+    - contentinfo [ref=e228]:
+      - generic [ref=e230]:
+        - generic [ref=e237]:
+          - paragraph [ref=e238]: Chính sách giao hàng
+          - paragraph [ref=e239]: Nhận hàng và thanh toán tại nhà
+        - generic [ref=e246]:
+          - paragraph [ref=e247]: Đổi trả dễ dàng
+          - paragraph [ref=e248]: 1 đổi 1 trong 7 ngày
+        - generic [ref=e253]:
+          - paragraph [ref=e254]: Giá luôn luôn tốt nhất
+          - paragraph [ref=e255]: Giá cả hợp lý, nhiều ưu đãi tốt
+        - generic [ref=e260]:
+          - paragraph [ref=e261]: Hỗ trợ nhiệt tình
+          - paragraph [ref=e262]: Tư vấn, giải đáp mọi thắc mắc
+      - generic [ref=e263]:
+        - generic [ref=e264]:
+          - generic [ref=e265]:
+            - heading "Về chúng tôi" [level=3] [ref=e266]
+            - generic [ref=e269]:
+              - link "Giới thiệu công ty" [ref=e270] [cursor=pointer]:
+                - /url: /gioi-thieu/gioi-thieu-ve-cong-ty
+              - link "Tư vấn hỏi đáp" [ref=e272] [cursor=pointer]:
+                - /url: /tu-van
+              - link "Liên hệ và góp ý" [ref=e274] [cursor=pointer]:
+                - /url: /lien-he-gop-y
+              - link "Yêu cầu báo giá" [ref=e276] [cursor=pointer]:
+                - /url: /yeu-cau-bao-gia
+          - generic [ref=e278]:
+            - heading "Chính sách & điều khoản" [level=3] [ref=e279]
+            - generic [ref=e282]:
+              - link "Hướng dẫn gửi bảo hành" [ref=e283] [cursor=pointer]:
+                - /url: /chinh-sach/huong-dan-gui-bao-hanh
+              - link "Chính sách bảo mật TT cá nhân" [ref=e285] [cursor=pointer]:
+                - /url: /chinh-sach/chinh-sach-bao-mat-thong-tin-ca-nhan
+              - link "Chính sách giao hàng" [ref=e287] [cursor=pointer]:
+                - /url: /chinh-sach/chinh-sach-giao-hang
+              - link "Chính sách bảo hành" [ref=e289] [cursor=pointer]:
+                - /url: /chinh-sach/chinh-sach-bao-hanh
+              - link "Quy định thanh toán" [ref=e291] [cursor=pointer]:
+                - /url: /chinh-sach/quy-dinh-thanh-toan
+              - link "Chính sách hoàn tiền" [ref=e293] [cursor=pointer]:
+                - /url: /chinh-sach/chinh-sach-hoan-tien
+              - link "Chính sách đổi sản phẩm" [ref=e295] [cursor=pointer]:
+                - /url: /chinh-sach/chinh-sach-doi-san-pham
+              - link "Chính sách kiểm hàng" [ref=e297] [cursor=pointer]:
+                - /url: /chinh-sach/chinh-sach-kiem-hang
+          - generic [ref=e299]:
+            - heading "Thông tin" [level=3] [ref=e300]
+            - generic [ref=e303]:
+              - link "Tuyển dụng" [ref=e304] [cursor=pointer]:
+                - /url: /tuyen-dung
+              - link "Tin tức công nghệ" [ref=e306] [cursor=pointer]:
+                - /url: /tin-tuc
+              - link "Tin khuyến mãi" [ref=e308] [cursor=pointer]:
+                - /url: /tin-khuyen-mai
+              - link "Giải pháp cho doanh nghiệp" [ref=e310] [cursor=pointer]:
+                - /url: /giai-phap-cho-doanh-nghiep
+              - link "Xây dựng cấu hình" [ref=e312] [cursor=pointer]:
+                - /url: /xay-dung-cau-hinh
+          - generic [ref=e314]:
+            - heading "Tổng đài hỗ trợ" [level=3] [ref=e315]
+            - generic [ref=e318]:
+              - paragraph [ref=e319]:
+                - generic [ref=e320]: "Hotline: 1900 88 88 77"
+              - paragraph [ref=e321]:
+                - generic [ref=e322]: "CSKH: 0949.56.94.94"
+              - paragraph [ref=e323]:
+                - generic [ref=e324]: "Kỹ thuật: 0933.808.960"
+              - paragraph [ref=e325]:
+                - generic [ref=e326]: "ĐT bàn: 282 247 247 2"
+              - 'link "Email: cskh@nguyenkimcomputer.vn" [ref=e327] [cursor=pointer]':
+                - /url: mailto:cskh@nguyenkimcomputer.vn
+          - generic [ref=e329]:
+            - heading "Cộng đồng Nguyên Kim Computer" [level=3] [ref=e330]
+            - generic [ref=e333]:
+              - link "Youtube" [ref=e334] [cursor=pointer]:
+                - /url: https://www.youtube.com/
+              - link "Facebook" [ref=e336] [cursor=pointer]:
+                - /url: https://www.facebook.com/
+        - generic [ref=e338]:
+          - generic [ref=e339]:
+            - heading "Phương thức thanh toán" [level=3] [ref=e340]
+            - generic [ref=e341]:
+              - generic [ref=e342]: QR Code
+              - generic [ref=e350]: Tiền mặt
+              - generic [ref=e355]: Trả góp
+              - generic [ref=e360]: Internet Banking
+          - generic [ref=e364]:
+            - heading "Danh sách các ngân hàng thanh toán online" [level=3] [ref=e365]
+            - generic [ref=e366]:
+              - img "ACB" [ref=e368]
+              - img "Vietcombank" [ref=e370]
+              - img "VietinBank" [ref=e372]
+      - generic [ref=e374]:
+        - generic [ref=e375]:
+          - heading "Công ty Cổ phần Công nghệ Vi tính Nguyên Kim (NGUYEN KIM COMPUTER JSC)" [level=3] [ref=e376]
+          - paragraph [ref=e378]: Giấy chứng nhận đăng ký kinh doanh số 0318933086 do Sở kế hoạch và đầu tư Tp. HCM cấp ngày 28/04/2026.
+          - paragraph [ref=e380]: "CSKH: 0949 56 94 94 - Mã Số Thuế: 0318933086"
+          - paragraph [ref=e381]: "Website: https://nguyenkimcomputer.vn"
+        - generic [ref=e382]:
+          - heading "Địa chỉ trụ sở chính" [level=3] [ref=e383]
+          - paragraph [ref=e385]: P1901, Tầng 19, Saigon Trade Center, 37 Tôn Đức Thắng, phường Sài Gòn, TP. Hồ Chí Minh
+          - paragraph [ref=e386]:
+            - generic [ref=e387]: "Thời gian làm việc:"
+            - text: "8h - 17h45 (Từ thứ Hai đến thứ Sáu), Thứ 7: 8h - 16h"
+          - paragraph [ref=e388]: "Email: cskh@nguyenkimcomputer.vn"
+        - link [ref=e390] [cursor=pointer]:
+          - /url: http://online.gov.vn/Website/chi-tiet-129562?AspxAutoDetectCookieSupport=1
+          - img "Ảnh bộ công thương" [ref=e391]
+    - button "Hỗ trợ khách hàng" [ref=e392] [cursor=pointer]

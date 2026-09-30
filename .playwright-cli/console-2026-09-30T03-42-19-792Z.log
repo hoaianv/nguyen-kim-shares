@@ -1,0 +1,16 @@
+[   18879ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:38559
+[   20549ms] [WARNING] Image with src "https://media.vitinhnguyenkim.vn/uploads/advertises/2026-07/20260729_032613_wcU6TgyF30.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio. @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/shared/lib/utils/warn-once.js:15
+[   27381ms] [ERROR] Failed to load resource: net::ERR_QUIC_PROTOCOL_ERROR @ https://media.vitinhnguyenkim.vn/uploads/background/6abb8bab1c8bf.png:0
+[   27382ms] [ERROR] Failed to load resource: net::ERR_QUIC_PROTOCOL_ERROR @ https://media.vitinhnguyenkim.vn/uploads/advertises/2026-08/20260804_034158_EfweoA4Bv3.png:0
+[   27382ms] [ERROR] Failed to load resource: net::ERR_QUIC_PROTOCOL_ERROR @ https://media.vitinhnguyenkim.vn/uploads/product/linh-kien/Mainboard/GIGABYTE-B760M-DS3H-DDR4.png:0
+[   27382ms] [ERROR] Failed to load resource: net::ERR_QUIC_PROTOCOL_ERROR @ https://media.vitinhnguyenkim.vn/uploads/background/6abb8ea796335.png:0
+[   27382ms] [ERROR] Failed to load resource: net::ERR_QUIC_PROTOCOL_ERROR @ https://media.vitinhnguyenkim.vn/uploads/product/2025-11/ABGI_H610M_H_V3/6908348fa396b.png:0
+[   27382ms] [ERROR] Failed to load resource: net::ERR_QUIC_PROTOCOL_ERROR @ https://media.vitinhnguyenkim.vn/uploads/product/6773a015f27de.png:0
+[   27382ms] [ERROR] Failed to load resource: net::ERR_QUIC_PROTOCOL_ERROR @ https://media.vitinhnguyenkim.vn/uploads/advertises/2026-08/20260805_040840_S4xQHbodDA.png:0
+[   27383ms] [ERROR] Failed to load resource: net::ERR_QUIC_PROTOCOL_ERROR @ https://media.vitinhnguyenkim.vn/uploads/advertises/2026-08/20260804_034132_QNIYwNNE2U.png:0
+[   27383ms] [ERROR] Failed to load resource: net::ERR_QUIC_PROTOCOL_ERROR @ https://media.vitinhnguyenkim.vn/uploads/product/linh-kien/Mainboard/Mainboard-Gigabyte-H310M-M2-2.png:0
+[   27383ms] [ERROR] Failed to load resource: net::ERR_QUIC_PROTOCOL_ERROR @ https://media.vitinhnguyenkim.vn/uploads/background/6abb8e8d960d6.png:0
+[   27383ms] [ERROR] Failed to load resource: net::ERR_QUIC_PROTOCOL_ERROR @ https://media.vitinhnguyenkim.vn/uploads/advertises/2026-08/20260804_034213_C4yf2Ytoff.png:0
+[   27383ms] [ERROR] Failed to load resource: net::ERR_QUIC_PROTOCOL_ERROR @ https://media.vitinhnguyenkim.vn/uploads/advertises/2026-08/20260804_034119_rhJsWrU2U3.png:0
+[   97600ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:186
+[  100201ms] [LOG] [Fast Refresh] done in 2602ms @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:43

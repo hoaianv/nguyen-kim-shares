@@ -19,6 +19,7 @@ import PaginationDynamic from "@/components/ui/PaginationDynamic";
 import { useRouter, useSearchParams } from "next/navigation";
 import { debounce } from "lodash";
 import { PARAMS_RECRUITMENT } from "@/constants/values.constant";
+import { recruitmentCompanyName } from "@/lib/recruitmentCompanyName";
 
 type RecruitmentList = {
   items: IHirePost[];
@@ -94,7 +95,7 @@ export default function JobGrid({
             transition={{ duration: 0.35, delay: 0.05 }}
             className="mt-3 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto text-pretty"
           >
-            Tham gia đội ngũ năng động và phát triển sự nghiệp cùng Nguyên Kim
+            Tham gia đội ngũ năng động và phát triển sự nghiệp cùng {recruitmentCompanyName}
           </motion.p>
         </div>
 

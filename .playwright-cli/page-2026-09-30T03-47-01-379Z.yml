@@ -1,0 +1,498 @@
+- generic [active] [ref=e1]:
+  - alert [ref=e2]
+  - region "Notifications alt+T"
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - generic [ref=e6]:
+        - link "Tin khuyến mãi" [ref=e7] [cursor=pointer]:
+          - /url: /tin-khuyen-mai
+        - link "Xây dựng cấu hình" [ref=e11] [cursor=pointer]:
+          - /url: /xay-dung-cau-hinh
+        - link "Giải pháp doanh nghiệp" [ref=e15] [cursor=pointer]:
+          - /url: /giai-phap-cho-doanh-nghiep
+        - link "Tin tức" [ref=e19] [cursor=pointer]:
+          - /url: /tin-tuc
+        - button [ref=e24] [cursor=pointer]:
+          - button "Liên hệ kinh doanh" [ref=e25]
+        - link "Tuyển dụng" [ref=e30] [cursor=pointer]:
+          - /url: /tuyen-dung
+      - generic [ref=e35]:
+        - link [ref=e36] [cursor=pointer]:
+          - /url: /
+          - img "Vi Tính Nguyên Kim" [ref=e37]
+        - button "Mở danh mục sản phẩm" [ref=e38] [cursor=pointer]:
+          - generic [ref=e40]: Danh mục sản phẩm
+        - generic [ref=e41]:
+          - generic [ref=e42]:
+            - textbox "Bạn tìm gì..." [ref=e44]
+            - button "Tìm kiếm" [ref=e45] [cursor=pointer]
+          - navigation [ref=e50]:
+            - link "PC Gaming" [ref=e51] [cursor=pointer]:
+              - /url: /san-pham?keyword=PC%20Gaming
+            - link "Laptop" [ref=e52] [cursor=pointer]:
+              - /url: /san-pham?keyword=Laptop
+            - link "CPU" [ref=e53] [cursor=pointer]:
+              - /url: /san-pham?keyword=CPU
+            - link "VGA" [ref=e54] [cursor=pointer]:
+              - /url: /san-pham?keyword=VGA
+            - link "RAM" [ref=e55] [cursor=pointer]:
+              - /url: /san-pham?keyword=RAM
+            - link "Mainboard" [ref=e56] [cursor=pointer]:
+              - /url: /san-pham?keyword=Mainboard
+        - generic [ref=e58]:
+          - button [ref=e60] [cursor=pointer]:
+            - link [ref=e61]:
+              - /url: /dang-nhap
+              - button "Tài khoản" [ref=e62]:
+                - generic [ref=e67]:
+                  - generic [ref=e68]: Đăng nhập/Đăng ký
+                  - generic [ref=e69]: Tài khoản
+          - button [ref=e73] [cursor=pointer]:
+            - link [ref=e74]:
+              - /url: /gio-hang
+              - button "Giỏ hàng" [ref=e75]:
+                - generic [ref=e76]: "0"
+    - main [ref=e84]:
+      - main [ref=e87]:
+        - generic [ref=e88]:
+          - navigation [ref=e90]:
+            - link "Trang chủ" [ref=e92] [cursor=pointer]:
+              - /url: /
+            - generic [ref=e93]:
+              - generic [ref=e94]: /
+              - link "Linh kiện PC" [ref=e95] [cursor=pointer]:
+                - /url: linh-kien
+            - generic [ref=e96]:
+              - generic [ref=e97]: /
+              - link "Bàn phím/ Chuột" [ref=e98] [cursor=pointer]:
+                - /url: ban-phim-chuot
+            - generic [ref=e99]:
+              - generic [ref=e100]: /
+              - generic "Bàn phím có dây" [ref=e101]
+          - region "Product information" [ref=e102]:
+            - generic [ref=e103]:
+              - generic [ref=e105]:
+                - generic [ref=e106]:
+                  - button "Chọn hình ảnh 1 của Bàn phím có dây Dell KB216" [ref=e111] [cursor=pointer]:
+                    - img "Bàn phím có dây Dell KB216 - hình 1" [ref=e112]
+                  - generic [ref=e115]:
+                    - region "Photo gallery" [ref=e116]:
+                      - group "1 of 1" [ref=e117]
+                      - group "1 of 1" [ref=e118]
+                      - group "1 of 1" [ref=e119]
+                    - button "Previous" [ref=e121] [cursor=pointer]
+                    - button "Next" [ref=e126] [cursor=pointer]
+                - generic [ref=e131]:
+                  - button "Hình ảnh nổi bật" [ref=e132] [cursor=pointer]
+                  - button "Thông số kỹ thuật" [disabled] [ref=e140]
+                  - button "Mô tả sản phẩm" [ref=e146] [cursor=pointer]
+                - generic [ref=e152]:
+                  - generic [ref=e153]:
+                    - generic [ref=e159]: Chính sách bảo hành
+                    - link "Xem chi tiết" [ref=e160] [cursor=pointer]:
+                      - /url: /chinh-sach/bao-hanh-doi-tra
+                  - generic [ref=e161]: "Bảo hành: 12 tháng chính hãng"
+                  - generic [ref=e166]: Giá luôn tốt nhất
+                  - link "19006739" [ref=e171] [cursor=pointer]:
+                    - /url: tel:19006739
+              - generic [ref=e178]:
+                - generic [ref=e179]:
+                  - generic [ref=e180]:
+                    - heading "Bàn phím có dây Dell KB216" [level=1] [ref=e182]
+                    - generic [ref=e183]:
+                      - button [ref=e184] [cursor=pointer]
+                      - button "Chia sẻ sản phẩm" [ref=e187] [cursor=pointer]
+                  - generic [ref=e194]:
+                    - generic [ref=e195]: "Mã sản phẩm: CKDE_KB216"
+                    - generic [aria-hidden] [ref=e196]: "|"
+                    - generic "Đánh giá 5 sao" [ref=e197]
+                    - generic [ref=e208]: "5"
+                  - generic [ref=e209]: "Thương hiệu: Dell"
+                  - generic [ref=e210]:
+                    - generic [ref=e211]: "Tình trạng:"
+                    - generic [ref=e212]: Còn hàng
+                - generic [ref=e213]:
+                  - generic [ref=e214]: 180.000 ₫
+                  - generic [ref=e216]: (Đã bao gồm VAT)
+                - generic [ref=e217]:
+                  - generic [ref=e218]:
+                    - generic [ref=e219]: "Số lượng:"
+                    - generic [ref=e220]:
+                      - button "Giảm số lượng" [ref=e221] [cursor=pointer]: "-"
+                      - generic [ref=e222]: "1"
+                      - button "Tăng số lượng" [ref=e223] [cursor=pointer]: +
+                  - generic [ref=e224]:
+                    - button "Thêm vào giỏ" [ref=e225] [cursor=pointer]
+                    - button "Mua ngay" [ref=e230] [cursor=pointer]
+          - region "Product description and specifications" [ref=e233]:
+            - generic [ref=e236]:
+              - heading "Mô tả sản phẩm" [level=2] [ref=e237]
+              - generic [ref=e238]:
+                - paragraph [ref=e239]:
+                  - strong [ref=e240]: BÀN PHÍM CÓ DÂY DELL KB216 (USB, Chiclet, Full-size)
+                  - text: Giải Pháp Gõ Phím Tin Cậy, Êm Ái và Bền Bỉ Cho Công Việc và Học Tập Hàng Ngày
+                - paragraph [ref=e241]:
+                  - text: Khi bạn cần một chiếc bàn phím đáng tin cậy, thiết kế tối giản, mang lại trải nghiệm gõ phím thoải mái cho công việc văn phòng, học tập hay sử dụng tại nhà hàng ngày,
+                  - strong [ref=e242]: BÀN PHÍM CÓ DÂY DELL KB216
+                  - text: "chính là lựa chọn hoàn hảo. Được thiết kế bởi thương hiệu Dell danh tiếng, KB216 tập trung vào những yếu tố cốt lõi: hiệu quả, độ bền và sự thoải mái, đáp ứng xuất sắc mọi nhu cầu cơ bản của người dùng."
+                - paragraph [ref=e243]:
+                  - strong [ref=e244]: "Giá Trị Nổi Bật và Lợi Ích Toàn Diện Của Dell KB216:"
+                - list [ref=e245]:
+                  - listitem [ref=e246]:
+                    - paragraph [ref=e247]:
+                      - strong [ref=e248]: "Thiết Kế Full-size Tiện Dụng Với Bàn Phím Số Riêng Biệt:"
+                      - text: Dell KB216 có bố cục đầy đủ (full-size) bao gồm cả cụm phím số (numpad) riêng biệt, giúp việc nhập liệu số, tính toán trên bảng tính Excel hoặc các phần mềm kế toán trở nên nhanh chóng và hiệu quả hơn rất nhiều so với các bàn phím rút gọn.
+                  - listitem [ref=e249]:
+                    - paragraph [ref=e250]:
+                      - strong [ref=e251]: "Trải Nghiệm Gõ Phím Êm Ái và Thoải Mái:"
+                      - text: Với thiết kế phím chiclet hiện đại, hành trình phím ngắn và độ nảy tốt, KB216 mang lại cảm giác gõ êm ái, chính xác và giảm thiểu tiếng ồn. Điều này làm cho nó trở thành lựa chọn lý tưởng cho môi trường văn phòng yên tĩnh hoặc không gian làm việc chung.
+                  - listitem [ref=e252]:
+                    - paragraph [ref=e253]:
+                      - strong [ref=e254]: "Thiết Kế Bền Bỉ, Chống Tràn Nước Tiện Lợi:"
+                      - text: Được chế tạo từ vật liệu chất lượng cao, Dell KB216 có độ bền vượt trội, sẵn sàng cho việc sử dụng hàng ngày trong thời gian dài. Đặc biệt, thiết kế chống tràn nước giúp bảo vệ bàn phím khỏi những sự cố vô tình làm đổ chất lỏng như cà phê hay nước, mang lại sự an tâm tuyệt đối.
+                  - listitem [ref=e255]:
+                    - paragraph [ref=e256]:
+                      - strong [ref=e257]: "Kết Nối USB Plug-and-Play Đơn Giản, Ổn Định:"
+                      - text: Chỉ cần cắm vào cổng USB của máy tính để bàn hoặc laptop là bạn có thể sử dụng ngay lập tức mà không cần cài đặt phần mềm hay driver phức tạp. Kết nối có dây đảm bảo tín hiệu luôn ổn định, không có độ trễ và không bao giờ phải lo lắng về việc thay pin.
+                  - listitem [ref=e258]:
+                    - paragraph [ref=e259]:
+                      - strong [ref=e260]: "Tích Hợp Các Phím Media Tiện Ích:"
+                      - text: Bàn phím được trang bị các phím chức năng media (truy cập qua phím Fn), cho phép bạn dễ dàng điều chỉnh âm lượng, phát/dừng nhạc, hoặc truy cập nhanh các ứng dụng khác, giúp tối ưu hóa quy trình làm việc và giải trí.
+                  - listitem [ref=e261]:
+                    - paragraph [ref=e262]:
+                      - strong [ref=e263]: "Thiết Kế Mỏng Nhẹ, Thanh Lịch:"
+                      - text: Dell KB216 có thiết kế mỏng, hiện đại và tối giản, phù hợp với mọi không gian làm việc từ văn phòng chuyên nghiệp đến góc học tập tại nhà.
+                  - listitem [ref=e264]:
+                    - paragraph [ref=e265]:
+                      - strong [ref=e266]: "Chất Lượng và Độ Tin Cậy Từ Thương Hiệu Dell:"
+                      - text: Dell là thương hiệu hàng đầu thế giới về máy tính và phụ kiện. Lựa chọn KB216 là bạn đang đầu tư vào một sản phẩm có chất lượng được đảm bảo, hoạt động ổn định và bền bỉ theo thời gian.
+                - paragraph [ref=e267]
+                - paragraph [ref=e268]:
+                  - strong [ref=e269]: "Đối Tượng Khách Hàng Lý Tưởng:"
+                - list [ref=e270]:
+                  - listitem [ref=e271]:
+                    - paragraph [ref=e272]:
+                      - strong [ref=e273]: "Doanh nghiệp và văn phòng:"
+                      - text: Cần trang bị số lượng lớn bàn phím đồng bộ, bền bỉ, dễ sử dụng và có chi phí hợp lý cho nhân viên.
+                  - listitem [ref=e274]:
+                    - paragraph [ref=e275]:
+                      - strong [ref=e276]: "Học sinh, sinh viên:"
+                      - text: Cần một bàn phím đáng tin cậy cho việc học tập, làm bài tập và giải trí.
+                  - listitem [ref=e277]:
+                    - paragraph [ref=e278]:
+                      - strong [ref=e279]: "Người dùng gia đình:"
+                      - text: Tìm kiếm một bàn phím đơn giản, hiệu quả cho các tác vụ hàng ngày như lướt web, soạn thảo email.
+                  - listitem [ref=e280]:
+                    - paragraph [ref=e281]:
+                      - strong [ref=e282]: "Các phòng máy tính, trường học, trung tâm đào tạo:"
+                      - text: Yêu cầu thiết bị có độ bền cao, dễ dàng triển khai và thay thế.
+                  - listitem [ref=e283]:
+                    - paragraph [ref=e284]:
+                      - strong [ref=e285]: Bất kỳ ai cần một bàn phím thay thế chất lượng, giá cả phải chăng và hoạt động ngay lập tức.
+                - paragraph [ref=e286]:
+                  - strong [ref=e287]: "Lời Kết:"
+                - paragraph [ref=e288]: Bàn phím có dây Dell KB216 không phải là một chiếc bàn phím cầu kỳ với những tính năng phức tạp, mà là một công cụ làm việc hiệu quả, đáng tin cậy và bền bỉ. Với trải nghiệm gõ phím êm ái, thiết kế full-size tiện dụng và chất lượng đã được khẳng định từ Dell, KB216 là sự lựa chọn thông minh và kinh tế cho mọi nhu cầu làm việc và học tập hàng ngày, giúp bạn hoàn thành công việc một cách dễ dàng và thoải mái.
+          - region "Product comparison" [ref=e289]:
+            - generic [ref=e290]:
+              - heading "So sánh sản phẩm" [level=1] [ref=e293]
+              - generic [ref=e294]:
+                - generic [ref=e295]:
+                  - generic [ref=e296]:
+                    - img "Bàn phím có dây Lenovo Preferred Pro II (00AM600)" [ref=e298]
+                    - generic [ref=e299]:
+                      - generic [ref=e300]:
+                        - generic [ref=e301]: Lenovo
+                        - button [ref=e302] [cursor=pointer]
+                      - heading "Bàn phím có dây Lenovo Preferred Pro II (00AM600)" [level=3] [ref=e305]
+                      - generic [ref=e306]: 520.000 ₫
+                      - generic [ref=e308]: Còn hàng
+                  - generic [ref=e320]:
+                    - link "Xem chi tiết" [ref=e321] [cursor=pointer]:
+                      - /url: /ban-phim-cong-usb-vi-tinh-00am600
+                    - generic [ref=e325]: "Mã sản phẩm: CKIB_00AM600"
+                - generic [ref=e326]:
+                  - generic [ref=e327]:
+                    - img "Chuột có dây Dell MS116" [ref=e329]
+                    - generic [ref=e330]:
+                      - generic [ref=e331]:
+                        - generic [ref=e332]: Dell
+                        - button [ref=e333] [cursor=pointer]
+                      - heading "Chuột có dây Dell MS116" [level=3] [ref=e336]
+                      - generic [ref=e337]: 100.000 ₫
+                      - generic [ref=e339]: Còn hàng
+                  - generic [ref=e351]:
+                    - link "Xem chi tiết" [ref=e352] [cursor=pointer]:
+                      - /url: /mouse-dell-ms116
+                    - generic [ref=e356]: "Mã sản phẩm: CMDE_MS116"
+              - generic [ref=e357]:
+                - generic [ref=e358]:
+                  - generic [ref=e359]: Thông số
+                  - generic [ref=e360]:
+                    - generic [ref=e361]: Sản phẩm
+                    - generic "Bàn phím có dây Lenovo Preferred Pro II (00AM600)" [ref=e362]
+                  - generic [ref=e363]:
+                    - generic [ref=e364]: Sản phẩm
+                    - generic "Chuột có dây Dell MS116" [ref=e365]
+                - button "Xem thêm 15 dòng" [ref=e367] [cursor=pointer]
+                - generic [ref=e370]:
+                  - generic [ref=e371]: Part number
+                  - generic [ref=e377]: 00AM600
+                  - generic [ref=e378]: "-"
+                - generic [ref=e379]:
+                  - generic [ref=e380]: Hãng sản xuất
+                  - generic [ref=e386]: LENOVO
+                  - generic [ref=e387]: DELL
+                - generic [ref=e388]:
+                  - generic [ref=e389]: Bảo hành
+                  - generic [ref=e395]: Liên hệ
+                  - generic [ref=e396]: "-"
+                - generic [ref=e397]:
+                  - generic [ref=e398]: Nhu cầu
+                  - generic [ref=e404]: VĂN PHÒNG
+                  - generic [ref=e405]: Văn phòng
+                - generic [ref=e406]:
+                  - generic [ref=e407]: Màu sắc
+                  - generic [ref=e413]: Đen
+                  - generic [ref=e414]: Đen
+          - region "Related products" [ref=e415]:
+            - generic [ref=e416]:
+              - heading "Sản phẩm liên quan" [level=3] [ref=e418]
+              - generic [ref=e421]:
+                - generic [ref=e423]:
+                  - link [ref=e424] [cursor=pointer]:
+                    - /url: /keyboard-logitech-k120
+                    - img "Bàn phím có dây Logitech K120" [ref=e426]
+                  - generic [ref=e427]:
+                    - link [ref=e428] [cursor=pointer]:
+                      - /url: /keyboard-logitech-k120
+                      - heading "Bàn phím có dây Logitech K120" [level=3] [ref=e429]
+                    - generic [ref=e430]: 153.000 ₫
+                    - generic [ref=e434]:
+                      - button [ref=e435] [cursor=pointer]
+                      - button "MUA NGAY" [ref=e440] [cursor=pointer]
+                - generic [ref=e445]:
+                  - link [ref=e446] [cursor=pointer]:
+                    - /url: /keyboard-hp-g4
+                    - img "Bàn phím có dây HP G4" [ref=e448]
+                  - generic [ref=e449]:
+                    - link [ref=e450] [cursor=pointer]:
+                      - /url: /keyboard-hp-g4
+                      - heading "Bàn phím có dây HP G4" [level=3] [ref=e451]
+                    - generic [ref=e452]: 200.000 ₫
+                    - generic [ref=e456]:
+                      - button [ref=e457] [cursor=pointer]
+                      - button "MUA NGAY" [ref=e462] [cursor=pointer]
+                - generic [ref=e467]:
+                  - link [ref=e468] [cursor=pointer]:
+                    - /url: /mouse-logitech-b175
+                    - img "Chuột không dây Logitech B175" [ref=e470]
+                  - generic [ref=e471]:
+                    - link [ref=e472] [cursor=pointer]:
+                      - /url: /mouse-logitech-b175
+                      - heading "Chuột không dây Logitech B175" [level=3] [ref=e473]
+                    - generic [ref=e474]: 176.000 ₫
+                    - generic [ref=e478]:
+                      - button [ref=e479] [cursor=pointer]
+                      - button "MUA NGAY" [ref=e484] [cursor=pointer]
+                - generic [ref=e489]:
+                  - link [ref=e490] [cursor=pointer]:
+                    - /url: /mouse-logitech-m185
+                    - img "Chuột không dây Logitech M185 - Xám (910-002255)" [ref=e492]
+                  - generic [ref=e493]:
+                    - link [ref=e494] [cursor=pointer]:
+                      - /url: /mouse-logitech-m185
+                      - heading "Chuột không dây Logitech M185 - Xám (910-002255)" [level=3] [ref=e495]
+                    - generic [ref=e496]: 194.000 ₫
+                    - generic [ref=e500]:
+                      - button [ref=e501] [cursor=pointer]
+                      - button "MUA NGAY" [ref=e506] [cursor=pointer]
+                - generic [ref=e511]:
+                  - link [ref=e512] [cursor=pointer]:
+                    - /url: /chuot-may-tinh-khong-day-newmen-e500
+                    - img "CHUỘT MÁY TÍNH KHÔNG DÂY NEWMEN E500" [ref=e514]
+                  - generic [ref=e515]:
+                    - link [ref=e516] [cursor=pointer]:
+                      - /url: /chuot-may-tinh-khong-day-newmen-e500
+                      - heading "CHUỘT MÁY TÍNH KHÔNG DÂY NEWMEN E500" [level=3] [ref=e517]
+                    - generic [ref=e518]: Liên hệ
+                    - button "LIÊN HỆ" [ref=e522] [cursor=pointer]
+                - generic [ref=e525]:
+                  - link [ref=e526] [cursor=pointer]:
+                    - /url: /m99-chuot-may-tinh-co-day-msi-gaming-m99-pro-box
+                    - img "Chuột gaming MSI Clutch GM08 - 4200 DPI" [ref=e528]
+                  - generic [ref=e529]:
+                    - link [ref=e530] [cursor=pointer]:
+                      - /url: /m99-chuot-may-tinh-co-day-msi-gaming-m99-pro-box
+                      - heading "Chuột gaming MSI Clutch GM08 - 4200 DPI" [level=3] [ref=e531]
+                    - generic [ref=e532]: Liên hệ
+                    - button "LIÊN HỆ" [ref=e536] [cursor=pointer]
+                - generic [ref=e539]:
+                  - link [ref=e540] [cursor=pointer]:
+                    - /url: /mouse-hp-z3700
+                    - img "Chuột không dây HP Z3700" [ref=e542]
+                  - generic [ref=e543]:
+                    - link [ref=e544] [cursor=pointer]:
+                      - /url: /mouse-hp-z3700
+                      - heading "Chuột không dây HP Z3700" [level=3] [ref=e545]
+                    - generic [ref=e546]: Liên hệ
+                    - button "LIÊN HỆ" [ref=e550] [cursor=pointer]
+                - generic [ref=e553]:
+                  - link [ref=e554] [cursor=pointer]:
+                    - /url: /mouse-logitech-m171-mau-xam
+                    - img "Chuột không dây Logitech M171 - Xám (910-004655)" [ref=e556]
+                  - generic [ref=e557]:
+                    - link [ref=e558] [cursor=pointer]:
+                      - /url: /mouse-logitech-m171-mau-xam
+                      - heading "Chuột không dây Logitech M171 - Xám (910-004655)" [level=3] [ref=e559]
+                    - generic [ref=e560]: Liên hệ
+                    - button "LIÊN HỆ" [ref=e564] [cursor=pointer]
+                - generic [ref=e567]:
+                  - link [ref=e568] [cursor=pointer]:
+                    - /url: /chuot-khong-day-logitech-m171-xanh
+                    - img "Chuột không dây Logitech M171 - Xanh (910-004656)" [ref=e570]
+                  - generic [ref=e571]:
+                    - link [ref=e572] [cursor=pointer]:
+                      - /url: /chuot-khong-day-logitech-m171-xanh
+                      - heading "Chuột không dây Logitech M171 - Xanh (910-004656)" [level=3] [ref=e573]
+                    - generic [ref=e574]: Liên hệ
+                    - button "LIÊN HỆ" [ref=e578] [cursor=pointer]
+                - generic [ref=e581]:
+                  - link [ref=e582] [cursor=pointer]:
+                    - /url: /bo-combo-key-mouse-day-usb-newmen-t007
+                    - img "Combo có dây Newmen T007" [ref=e584]
+                  - generic [ref=e585]:
+                    - link [ref=e586] [cursor=pointer]:
+                      - /url: /bo-combo-key-mouse-day-usb-newmen-t007
+                      - heading "Combo có dây Newmen T007" [level=3] [ref=e587]
+                    - generic [ref=e588]: Liên hệ
+                    - button "LIÊN HỆ" [ref=e592] [cursor=pointer]
+                - generic [ref=e595]:
+                  - link [ref=e596] [cursor=pointer]:
+                    - /url: /mouse-logitech-m185-red-910-002503
+                    - img "Chuột không dây Logitech M185 - Đỏ (910-002503)" [ref=e598]
+                  - generic [ref=e599]:
+                    - link [ref=e600] [cursor=pointer]:
+                      - /url: /mouse-logitech-m185-red-910-002503
+                      - heading "Chuột không dây Logitech M185 - Đỏ (910-002503)" [level=3] [ref=e601]
+                    - generic [ref=e602]: Liên hệ
+                    - button "LIÊN HỆ" [ref=e606] [cursor=pointer]
+                - generic [ref=e609]:
+                  - link [ref=e610] [cursor=pointer]:
+                    - /url: /bo-nho-trong-cua-may-vi-tinh-4gb-hieu-g-skill-f3-1600c-11s-4grsl
+                    - img "RAM Laptop G.Skill 4GB DDR3L 1600MHz" [ref=e612]
+                  - generic [ref=e613]:
+                    - link [ref=e614] [cursor=pointer]:
+                      - /url: /bo-nho-trong-cua-may-vi-tinh-4gb-hieu-g-skill-f3-1600c-11s-4grsl
+                      - heading "RAM Laptop G.Skill 4GB DDR3L 1600MHz" [level=3] [ref=e615]
+                    - generic [ref=e616]: Liên hệ
+                    - button "LIÊN HỆ" [ref=e620] [cursor=pointer]
+    - contentinfo [ref=e628]:
+      - generic [ref=e630]:
+        - generic [ref=e637]:
+          - paragraph [ref=e638]: Chính sách giao hàng
+          - paragraph [ref=e639]: Nhận hàng và thanh toán tại nhà
+        - generic [ref=e646]:
+          - paragraph [ref=e647]: Đổi trả dễ dàng
+          - paragraph [ref=e648]: 1 đổi 1 trong 7 ngày
+        - generic [ref=e653]:
+          - paragraph [ref=e654]: Giá luôn luôn tốt nhất
+          - paragraph [ref=e655]: Giá cả hợp lý, nhiều ưu đãi tốt
+        - generic [ref=e660]:
+          - paragraph [ref=e661]: Hỗ trợ nhiệt tình
+          - paragraph [ref=e662]: Tư vấn, giải đáp mọi thắc mắc
+      - generic [ref=e663]:
+        - generic [ref=e664]:
+          - generic [ref=e665]:
+            - heading "Về chúng tôi" [level=3] [ref=e666]
+            - generic [ref=e669]:
+              - link "Giới thiệu công ty" [ref=e670] [cursor=pointer]:
+                - /url: /gioi-thieu/gioi-thieu-ve-cong-ty
+              - link "Tư vấn hỏi đáp" [ref=e672] [cursor=pointer]:
+                - /url: /tu-van
+              - link "Liên hệ và góp ý" [ref=e674] [cursor=pointer]:
+                - /url: /lien-he-gop-y
+              - link "Yêu cầu báo giá" [ref=e676] [cursor=pointer]:
+                - /url: /yeu-cau-bao-gia
+          - generic [ref=e678]:
+            - heading "Chính sách & điều khoản" [level=3] [ref=e679]
+            - generic [ref=e682]:
+              - link "Hướng dẫn gửi bảo hành" [ref=e683] [cursor=pointer]:
+                - /url: /chinh-sach/huong-dan-gui-bao-hanh
+              - link "Chính sách bảo mật TT cá nhân" [ref=e685] [cursor=pointer]:
+                - /url: /chinh-sach/chinh-sach-bao-mat-thong-tin-ca-nhan
+              - link "Chính sách giao hàng" [ref=e687] [cursor=pointer]:
+                - /url: /chinh-sach/chinh-sach-giao-hang
+              - link "Chính sách bảo hành" [ref=e689] [cursor=pointer]:
+                - /url: /chinh-sach/chinh-sach-bao-hanh
+              - link "Quy định thanh toán" [ref=e691] [cursor=pointer]:
+                - /url: /chinh-sach/quy-dinh-thanh-toan
+              - link "Chính sách hoàn tiền" [ref=e693] [cursor=pointer]:
+                - /url: /chinh-sach/chinh-sach-hoan-tien
+              - link "Chính sách đổi sản phẩm" [ref=e695] [cursor=pointer]:
+                - /url: /chinh-sach/chinh-sach-doi-san-pham
+              - link "Chính sách kiểm hàng" [ref=e697] [cursor=pointer]:
+                - /url: /chinh-sach/chinh-sach-kiem-hang
+          - generic [ref=e699]:
+            - heading "Thông tin" [level=3] [ref=e700]
+            - generic [ref=e703]:
+              - link "Tuyển dụng" [ref=e704] [cursor=pointer]:
+                - /url: /tuyen-dung
+              - link "Tin tức công nghệ" [ref=e706] [cursor=pointer]:
+                - /url: /tin-tuc
+              - link "Tin khuyến mãi" [ref=e708] [cursor=pointer]:
+                - /url: /tin-khuyen-mai
+              - link "Giải pháp cho doanh nghiệp" [ref=e710] [cursor=pointer]:
+                - /url: /giai-phap-cho-doanh-nghiep
+              - link "Xây dựng cấu hình" [ref=e712] [cursor=pointer]:
+                - /url: /xay-dung-cau-hinh
+          - generic [ref=e714]:
+            - heading "Tổng đài hỗ trợ" [level=3] [ref=e715]
+            - generic [ref=e718]:
+              - paragraph [ref=e719]:
+                - generic [ref=e720]: "Hotline: 1900 88 88 77"
+              - paragraph [ref=e721]:
+                - generic [ref=e722]: "CSKH: 0949.56.94.94"
+              - paragraph [ref=e723]:
+                - generic [ref=e724]: "Kỹ thuật: 0933.808.960"
+              - paragraph [ref=e725]:
+                - generic [ref=e726]: "ĐT bàn: 282 247 247 2"
+              - 'link "Email: cskh@nguyenkimcomputer.vn" [ref=e727] [cursor=pointer]':
+                - /url: mailto:cskh@nguyenkimcomputer.vn
+          - generic [ref=e729]:
+            - heading "Cộng đồng Nguyên Kim Computer" [level=3] [ref=e730]
+            - generic [ref=e733]:
+              - link "Youtube" [ref=e734] [cursor=pointer]:
+                - /url: https://www.youtube.com/
+              - link "Facebook" [ref=e736] [cursor=pointer]:
+                - /url: https://www.facebook.com/
+        - generic [ref=e738]:
+          - generic [ref=e739]:
+            - heading "Phương thức thanh toán" [level=3] [ref=e740]
+            - generic [ref=e741]:
+              - generic [ref=e742]: QR Code
+              - generic [ref=e750]: Tiền mặt
+              - generic [ref=e755]: Trả góp
+              - generic [ref=e760]: Internet Banking
+          - generic [ref=e764]:
+            - heading "Danh sách các ngân hàng thanh toán online" [level=3] [ref=e765]
+            - generic [ref=e766]:
+              - img "ACB" [ref=e768]
+              - img "Vietcombank" [ref=e770]
+              - img "VietinBank" [ref=e772]
+      - generic [ref=e774]:
+        - generic [ref=e775]:
+          - heading "Công ty Cổ phần Công nghệ Vi tính Nguyên Kim (NGUYEN KIM COMPUTER JSC)" [level=3] [ref=e776]
+          - paragraph [ref=e778]: Giấy chứng nhận đăng ký kinh doanh số 0318933086 do Sở kế hoạch và đầu tư Tp. HCM cấp ngày 28/04/2026.
+          - paragraph [ref=e780]: "CSKH: 0949 56 94 94 - Mã Số Thuế: 0318933086"
+          - paragraph [ref=e781]: "Website: https://nguyenkimcomputer.vn"
+        - generic [ref=e782]:
+          - heading "Địa chỉ trụ sở chính" [level=3] [ref=e783]
+          - paragraph [ref=e785]: P1901, Tầng 19, Saigon Trade Center, 37 Tôn Đức Thắng, phường Sài Gòn, TP. Hồ Chí Minh
+          - paragraph [ref=e786]:
+            - generic [ref=e787]: "Thời gian làm việc:"
+            - text: "8h - 17h45 (Từ thứ Hai đến thứ Sáu), Thứ 7: 8h - 16h"
+          - paragraph [ref=e788]: "Email: cskh@nguyenkimcomputer.vn"
+        - link [ref=e790] [cursor=pointer]:
+          - /url: http://online.gov.vn/Website/chi-tiet-129562?AspxAutoDetectCookieSupport=1
+          - img "Ảnh bộ công thương" [ref=e791]
+    - button "Hỗ trợ khách hàng" [ref=e792] [cursor=pointer]

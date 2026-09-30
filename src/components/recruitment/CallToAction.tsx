@@ -1,6 +1,7 @@
 "use client";
 
 import { bannerKeys } from "@/constants/values.constant";
+import { normalizeRecruitmentCompanyName } from "@/lib/recruitmentCompanyName";
 import { useStateStore } from "@/stores/stateStore";
 import Image from "next/image";
 
@@ -18,7 +19,7 @@ export default function CallToAction() {
               src={banners[0]?.picture}
               width={banners[0]?.width}
               height={banners[0]?.height}
-              alt={banners[0]?.title}
+              alt={normalizeRecruitmentCompanyName(banners[0]?.title)}
               className="w-full h-full"
               quality={100}
             />

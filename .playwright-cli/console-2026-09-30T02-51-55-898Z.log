@@ -1,0 +1,10 @@
+[    4202ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:4002/_next/static/css/app/layout.css?v=1790736715928:0
+[    4330ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:4002/_next/static/css/app/(home)/page.css?v=1790736715928:0
+[    4388ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:4002/_next/static/chunks/webpack.js?v=1790736715928:0
+[    5516ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:4002/_next/static/chunks/main-app.js?v=1790736715928:0
+[    5707ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:4002/_next/static/chunks/app-pages-internals.js:0
+[    6272ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:4002/_next/static/chunks/app/(home)/layout.js:0
+[    6402ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:4002/_next/static/chunks/app/layout.js:0
+[    6482ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:4002/_next/static/chunks/app/error.js:0
+[    6539ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:4002/_next/static/chunks/app/not-found.js:0
+[   13021ms] [WARNING] The resource http://localhost:4002/_next/static/css/app/(home)/page.css?v=1790736715928 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:4002/:0
