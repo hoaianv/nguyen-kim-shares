@@ -21,7 +21,13 @@ import Portal from "./Portal";
 import ImageWithFallback from "@/components/ImageWithFallback";
 import ProductCardPopup from "@/components/ui/ProductCardPopup";
 
-const CardProduct = ({ item }: { item: IProduct }) => {
+const CardProduct = ({
+  item,
+  variant = "default",
+}: {
+  item: IProduct;
+  variant?: "default" | "category";
+}) => {
   const { addToCart } = useCartActions();
   const { setSelectedIds } = useCartStore();
   const { buyNow } = useBuyAction(setSelectedIds);
@@ -105,19 +111,19 @@ const CardProduct = ({ item }: { item: IProduct }) => {
     item.marketPrice !== undefined &&
     item.marketPrice > item.price &&
     calcDiscountPercentage(item.price, item.marketPrice) > 0;
-  const showDesktopPopup = supportsHover && isHovered && specs.length > 0;
-  const showMobileSpecs = !supportsHover && specs.length > 0;
+  const showDesktopPopup = variant !== "category" && supportsHover && isHovered && specs.length > 0;
+  const showMobileSpecs = variant !== "category" && !supportsHover && specs.length > 0;
 
   return (
     <>
       <div
         ref={cardRef}
-        className="group relative flex h-full w-full flex-col overflow-hidden  shadow-lg bg-white transition duration-200 hover:-translate-y-0.5 hover:border-amber-300"
+        className={`group relative flex h-full w-full flex-col overflow-hidden bg-white transition duration-200 hover:-translate-y-0.5 ${variant === "category" ? "min-h-[490px] shadow-sm" : "shadow-lg hover:border-amber-300"}`}
         onMouseEnter={() => supportsHover && setIsHovered(true)}
         onMouseLeave={() => supportsHover && setIsHovered(false)}
       >
         <Link href={`/${item.url}`} className="block">
-          <div className="relative aspect-[16/10] overflow-hidden bg-muted/20 p-1.5 sm:p-2.5">
+          <div className={`relative overflow-hidden bg-muted/20 ${variant === "category" ? "aspect-square p-2" : "aspect-[16/10] p-1.5 sm:p-2.5"}`}>
             <ImageWithFallback
               loading="lazy"
               width={280}

@@ -17,15 +17,16 @@ import {
 type ProductProps = {
   data: IProduct[];
   id?: number;
+  variant?: "default" | "category";
 };
 
 const navBase =
   "absolute z-10 top-1/2 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-slate-950/55 text-white shadow-md backdrop-blur-sm transition-colors hover:bg-slate-950/75 md:flex";
 
-function SwiperProducts({ data, id }: ProductProps) {
+function SwiperProducts({ data, id, variant = "default" }: ProductProps) {
   const { ref, width } = useElementWidth<HTMLDivElement>();
   const slidesPerView = getResponsiveColumnCount(width, {
-    minWidth: 190,
+    minWidth: variant === "category" ? 205 : 190,
     maxColumns: 5,
     gap: 12,
     fallback: 1,
@@ -49,7 +50,7 @@ function SwiperProducts({ data, id }: ProductProps) {
         {data?.length > 0
           ? data.map((item) => (
               <SwiperSlide key={item.id} className="h-auto">
-                <CardProduct item={item} />
+                <CardProduct item={item} variant={variant} />
               </SwiperSlide>
             ))
           : null}

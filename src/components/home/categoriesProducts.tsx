@@ -5,7 +5,7 @@ import { motion, useReducedMotion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import SwiperProducts from "@/components/home/swiperProducts";
 import {
@@ -19,13 +19,11 @@ type CategoriesProductsProps = {
 
 type CategoriesProductsSectionProps = {
   item: ICategoriesProducts;
-  index: number;
   reduceMotion: boolean;
 };
 
 const CategoriesProductsSection = ({
   item,
-  index,
   reduceMotion,
 }: CategoriesProductsSectionProps) => {
   const t = useTranslations();
@@ -34,97 +32,98 @@ const CategoriesProductsSection = ({
     needs[0]?.id ?? null,
   );
 
-  useEffect(() => {
-    setActiveNeedId(needs[0]?.id ?? null);
-  }, [item.id, item.customerNeeds]);
-
   const activeNeed =
     needs.find((need) => need.id === activeNeedId) ?? needs[0] ?? null;
+  const hasTabs = needs.length > 1;
+  const viewAllHref = activeNeed?.url || item.url || "/san-pham";
+  const sectionColor = item.color
+    ? `#${item.color.replace(/^#/, "")}`
+    : "#e1f1ff";
 
   if (!needs.length || !activeNeed) return null;
 
   return (
     <motion.section
-      className="mx-auto mt-3 w-full max-w-[1520px] px-3 sm:px-4 lg:px-6"
+      className="mx-auto mt-4 w-full max-w-[1520px] px-3 sm:px-4 lg:px-6"
       initial={reduceMotion ? { opacity: 0 } : { opacity: 0, y: 10 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.18 }}
       transition={{ duration: 0.32, ease: "easeOut" }}
     >
-      <div className="overflow-hidden rounded-md bg-[#f5efff] shadow-sm ring-1 ring-white/60">
-        <div className=" bg-white/70 ">
-          <div className="overflow-x-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 hover:scrollbar-thumb-gray-400">
-            <div className="grid min-w-max grid-flow-col auto-cols-[minmax(140px,1fr)] lg:min-w-0 lg:auto-cols-fr">
+      <div className="overflow-hidden rounded-xl border border-slate-200/80 bg-white shadow-sm">
+        {hasTabs ? (
+          <div className="overflow-x-auto bg-white scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 hover:scrollbar-thumb-gray-400">
+            <div className="grid min-w-max grid-flow-col auto-cols-[minmax(170px,1fr)] lg:min-w-0 lg:auto-cols-fr">
               {needs.map((need: ICategoryCustomerNeed) => {
                 const isActive = need.id === activeNeed.id;
-
-                const itemColor = item?.color
-                  ? `#${item.color.replace(/^#/, "")}`
-                  : "#f5efff";
-
                 return (
                   <button
                     key={need.id}
                     type="button"
                     onClick={() => setActiveNeedId(need.id)}
-                    style={
-                      {
-                        "--item-color": itemColor,
-                      } as React.CSSProperties
-                    }
-                    className={`
-        relative flex h-11 items-center justify-center px-4
-        text-sm font-semibold
-        transition-colors duration-200
-        ${isActive
-                        ? "bg-[var(--item-color)] text-[#ea6158] shadow-[0_6px_18px_rgba(15,23,42,0.06)] ring-1 ring-white/70"
-                        : "bg-white/85 text-[#ea6158] hover:bg-[var(--item-color)] hover:text-white"
-                      }
-      `}
+                    style={{ "--item-color": sectionColor } as React.CSSProperties}
+                    className={`relative flex min-h-[64px] items-center justify-center px-4 py-2 text-center transition-colors duration-200 sm:min-h-[70px] ${isActive
+                      ? "rounded-t-lg bg-[var(--item-color)] text-red-600"
+                      : "bg-white text-red-600 hover:bg-[var(--item-color)]"
+                      }`}
                   >
-                    <span className="truncate text-sm font-bold">
-                      {need.title?.toUpperCase()}
+                    <span className="line-clamp-2 text-[15px] font-bold leading-tight sm:text-[17px]">
+                      {need.title}
                     </span>
                   </button>
                 );
               })}
             </div>
           </div>
-
-          {/* <div className="flex justify-end pb-1">
+        ) : (
+          <div className="flex min-h-[64px] items-stretch justify-between bg-white sm:min-h-[70px]">
+            <div
+              style={{ backgroundColor: sectionColor }}
+              className="flex w-[46%] max-w-[280px] items-center justify-center rounded-t-lg px-3 py-2 text-center text-[15px] font-bold leading-tight text-red-600 sm:text-[17px]"
+            >
+              {item.title}
+            </div>
             <Link
-              href={activeNeed.url || item.url || "/san-pham"}
-              className="inline-flex items-center gap-1 text-sm font-medium text-slate-950 transition hover:text-[#e33b2f]"
+              href={viewAllHref}
+              className="inline-flex items-center gap-1 whitespace-nowrap px-4 text-sm font-medium text-slate-900 transition hover:text-red-600"
             >
               {t("COMMON.view_all")}
               <ChevronRight className="h-4 w-4" />
             </Link>
-          </div> */}
-        </div>
+          </div>
+        )}
 
         <div
-          style={{
-            backgroundColor: item?.color
-              ? `#${item.color.replace(/^#/, "")}`
-              : "#f5efff",
-          }}
-          className="grid items-center gap-3 p-3 sm:p-4 lg:grid-cols-[220px_minmax(0,1fr)] xl:grid-cols-[230px_minmax(0,1fr)]"
+          style={{ backgroundColor: sectionColor }}
+          className="p-3 sm:p-4"
         >
-          <Link
-            href={item.url || "#"}
-            className="group relative hidden min-h-[408px] overflow-hidden rounded-md  bg-slate-950 lg:block lg:self-center h-full"
-          >
-            <Image
-              src={item.banner || item.picture}
-              alt={item.title}
-              fill
-              sizes="230px"
-              className="object-cover h-full opacity-95 transition duration-300 group-hover:scale-[1.03]"
-            />
-          </Link>
-
-          <div className="min-w-0 lg:self-center">
-            <SwiperProducts data={activeNeed.items} id={item.id} />
+          {hasTabs ? (
+            <div className="mb-3 flex justify-end">
+              <Link
+                href={viewAllHref}
+                className="inline-flex items-center gap-1 text-sm font-medium text-slate-900 transition hover:text-red-600"
+              >
+                {t("COMMON.view_all")}
+                <ChevronRight className="h-4 w-4" />
+              </Link>
+            </div>
+          ) : null}
+          <div className="grid gap-3 lg:grid-cols-[220px_minmax(0,1fr)] xl:grid-cols-[265px_minmax(0,1fr)]">
+            <Link
+              href={item.url || "/san-pham"}
+              className="group relative hidden min-h-[490px] overflow-hidden rounded-2xl bg-white lg:block"
+            >
+              <Image
+                src={item.banner || item.picture}
+                alt={item.title}
+                fill
+                sizes="(max-width: 1280px) 220px, 265px"
+                className="object-cover transition duration-300 group-hover:scale-[1.03]"
+              />
+            </Link>
+            <div className="min-w-0">
+              <SwiperProducts data={activeNeed.items} id={item.id} variant="category" />
+            </div>
           </div>
         </div>
       </div>
@@ -137,11 +136,10 @@ const CategoriesProducts = ({ data }: CategoriesProductsProps) => {
 
   return (
     <>
-      {data.map((item, index) => (
+      {data.map((item) => (
         <CategoriesProductsSection
           key={item.id}
           item={item}
-          index={index}
           reduceMotion={reduceMotion}
         />
       ))}

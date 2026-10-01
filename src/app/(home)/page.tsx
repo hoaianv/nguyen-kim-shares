@@ -53,7 +53,7 @@ export default async function Home() {
 
   return (
     <>
-      <div className="relative pb-8">
+      <div className="relative min-h-screen bg-[#f4f8fa] pb-8">
         <BannerLeftRight />
         <Banner />
         <LazySection>
